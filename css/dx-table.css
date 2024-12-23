@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/** style.css - .table th 참조 */
+.dx-header-row > td > .dx-datagrid-text-content {
+    font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-weight: normal;
+    vertical-align: middle;
+}
+.dx-datagrid-content .dx-datagrid-table .dx-row > td{
+    vertical-align: middle;
+    /* border-bottom: 1px solid #ddd; */
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>전화권유판매 수신거부 등록&lt;서비스 사례&lt;적용사례&lt;디지털서비스개방</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/swiper.11.0.6-bundle.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aos.css">
+    <link rel="stylesheet" type="text/css" href="../css/fontset.css" />
+    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../css/nav.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style_promotion.css" />
+
+    <!-- 파비콘 적용 -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">  
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/swiper-5.4.3.min.js"></script>
+    <script src="../js/aos.js"></script>  
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/service.js"></script>
+    <script src="../js/service_case.js"></script>
+    <script src="../js/case_detail_cont.js"></script>
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper sub_pages">
+        <!-- 바로가기 메뉴 -->
+        <nav id="skip"></nav>
+        <header id="header" class="header main_header"></header>
+
+        <!-- 메인  -->
+        <main class="">
+
+            <!-- 본문 외부 영역 -->
+            <section id="content" class="rep_case">
+
+                <!-- 본문 -->
+                <article class="page page_rep_case page_case_noTeleSale">                
+                    <!-- 브레드크럼 -->
+                    <div class="wrap_breadcrumb_fotal">
+                        <ul class="breadcrumbs">
+                            <li class="breadcrumbs_item cat_home"><a href="main.html" class="home" title="메인 페이지 이동"></a></li>
+                            <li class="breadcrumbs_item"><a href="forestryWelfare.html">적용사례</a></li>
+                            <li class="breadcrumbs_item current_page">서비스 사례</li>          
+                        </ul>
+                    </div>
+
+                    <div class="page_content">
+                        <!-- 컨텐츠 탑 소개 -->
+                        <div class="wrap_article article01">
+                            <article class="page_title_rep_case contents_wrap">
+                            </article>
+                        </div>
+
+                        <!-- 서비스별 선택 영역 -->
+                        <div class="wrap_article article02">
+                            <div class="wrap_slide wrap_slide_service page_rep_case_list only_pc"></div>
+                            <!-- 모바일 버전: 서비스 목록 콤보박스 -->    
+                            <div class="select_area page_rep_case_list_mob only_mob"></div>
+                        </div>
+
+                        <!-- 개방서비스별 대표 사례 나열 case_detail_cont.js --> 
+                        <!-- 전화권유판매 수신거부 등록 - 카카오페이 -->
+                        <div class="wrap_article article05 contents_noTeleSale_kakaopay example_noTeleSale_kakaopay" id="noTeleSale_kakaopay" data-aos="fade-up"></div>
+                    </div>
+                <!-- 본문 end  -->
+                </article>         
+            </section>
+            <!-- 본문 외부 영역 end-->
+        </main>
+        <!-- 전체 영역 end  -->
+        <footer id="footer" class="footer"></footer>
+    </div>
+
+    <!-- 팝업 배경 dim 처리 -->
+    <div class="popup_mask"></div>   
+
+    <!-- 팝업 본문 :  콘텐츠 준비중 알림 팝업 -->
+    <div class="prepare_alertPop"></div> 
+
+    <script>     
+        AOS.init();   
+
+        window.onload = function() {
+            // 페이지 로드 후 200px 위로 스크롤
+            window.scrollBy(0, -250);
+        };
+    </script>
+</body>
+
+</html>

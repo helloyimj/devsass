@@ -1,0 +1,165 @@
+@charset "UTF-8";
+.dx-texteditor.dx-state-readonly{
+    border-style: solid;
+}
+p .dx-texteditor.dx-state-readonly, p .dx-texteditor.dx-state-readonly:hover{
+    border: none;
+}
+p .dx-texteditor-input:read-only{
+    padding: 0;
+}
+.dx-selectbox .dx-texteditor-input:read-only{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* background-color: #f5f5f5; */
+    /* background-color: #fff; */
+}
+/** SelectBox Border Radius 제거 */
+/** style.css - select 참조 */
+.dx-selectbox.dx-editor-outlined {
+    border-radius: 0px; /** SelectBox Border Radius 제거 */
+    width: 16rem; /** style.css - select 참조 */
+}
+
+/** TextBox Border Radius 제거 */
+.dx-texteditor.dx-editor-outlined {
+    border-radius: 0px;
+    outline: 0em;
+}
+
+/** style.css - select 참조 */
+.dx-texteditor-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /*width: 16rem;*/ /** 화살표 지워짐 */
+    /* height: 3.6rem; */
+    background-color: #f1f1f1;
+    /*padding: 0 2.7rem 0 1.5rem;*/
+    resize: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    color: #222;
+    font-size: 1.6rem;
+}
+
+/** SelectBox는 좀더 높아서 0.2rem 줄임 */
+.dx-selectbox-container .dx-texteditor-input {
+    height: 3.4rem;
+}
+
+.dx-texteditor.dx-state-focused.dx-editor-outlined {
+    /* outline: 1px solid black; */
+    border-color: #0289ce;
+    /* border-radius: 0.2em; */
+}
+/* .dx-texteditor.dx-state-hover{
+    border:1px solid #ddd
+} */
+
+
+.dx-texteditor-input { 
+    background-color: #f1f1f1; 
+    color: #222; font-size: 1.6rem;  padding: 0 1rem; position: relative; }
+
+td .dx-selectbox.dx-editor-outlined{
+    width:100%;
+}
+
+.dx-numberbox-spin-container{
+    width:28px
+}
+
+.dx-popup-wrapper .dx-calendar .dx-calendar-caption-button{
+    width: auto;
+    background-color: transparent;
+}
+.dx-calendar-cell.dx-calendar-contoured-date:not(.dx-calendar-empty-cell) {
+    box-shadow: none;
+  }
+  .dx-calendar-cell.dx-state-active:not(.dx-calendar-empty-cell):not(.dx-calendar-selected-date) {
+    box-shadow: none;
+  }
+  .dx-calendar-cell.dx-state-hover {
+    box-shadow: none;
+  }
+
+  /* .dx-popup-content .dx-popup-bottom.dx-toolbar {
+    margin-top: 15px;
+  } */
+
+  /* .dx-toolbar-item.dx-toolbar-button   .dx-item-content.dx-toolbar-item-content{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  } */
+  .dx-toolbar-item.dx-toolbar-button .dx-button-content {
+    color: #fff;
+  }
+  /* .dx-toolbar-item.dx-datebox-wrapper .dx-popup-bottom .dx-button .dx-state-active {
+      color: #fff;
+    } */
+    /* .dx-toolbar-item.dx-toolbar-button .dx-button-content:hover { */
+
+.dx-toolbar-item.dx-toolbar-button .dx-button-content:hover {
+    /* color: #222; */
+    color: #fff;
+} 
+.dx-toolbar-item.dx-toolbar-button .dx-button-content:active {
+    color: #fff;
+} 
+.dx-dropdowneditor-icon {
+    cursor: pointer;
+}
+/* .dx-button-mode-contained, .dx-button-mode-contained.dx-state-hover {
+    color: #fff;
+  }
+.dx-button-mode-contained, .dx-button-mode-contained.dx-state-hover {
+      color: #222;
+  } */
+
+  /* .dx-toolbar-item.dx-toolbar-button .dx-button-mode-contained.dx-state-hover {
+    color: #222;
+  } */
+
+.dx-dropdownlist-popup-wrapper .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item-content {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /*width: 16rem;*/ /** 화살표 지워짐 */
+    height: 26px;
+    /*padding: 0 2.7rem 0 1.5rem;*/
+    resize: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    font-size: 1.6rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* .dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-list-item-selected.dx-state-hover:not(.dx-state-focused){
+    background-color:rgb(118, 118, 118);
+    color:white
+}
+.dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-state-hover{
+    background-color:rgb(118, 118, 118);
+    color:white
+}
+.dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-state-active{
+    background-color:rgb(118, 118, 118);
+    color:white
+} */
+
+.dx-dropdownlist-popup-wrapper.dx-popup-wrapper .dx-overlay-content{
+    transform: translate(0px, 40.5px) !important;
+}
+
+.dx-popup-wrapper > .dx-overlay-content{
+    border-radius: 0px;
+    box-shadow:1px 3px 7px 0px rgba(0,0,0,0.3);
+}
+.dx-datagrid.dx-gridbase-container:not(.dx-datagrid-borders) {
+    border-top: 1px solid #ddd;
+  }
