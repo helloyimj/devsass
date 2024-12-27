@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import "../css/theme.base.css";
-@import "../css/theme.additional.css";
 .flex_center {
   position: relative;
   display: -webkit-box;
@@ -75,6 +73,11 @@ body,
   vertical-align: top;
   border-bottom: 1px solid #ddd;
   margin-bottom: 2rem;
+}
+.page_title.page_title_sub {
+  text-align: left;
+  height: 48px;
+  margin-bottom: 2.4rem;
 }
 
 .page_content {

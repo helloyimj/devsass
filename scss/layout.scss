@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import "../scss/mixset.scss";
-@import "../css/theme.base.css";
-@import "../css/theme.additional.css";
+
 // body {
 //     padding-top: 153px;
 // }
@@ -90,6 +89,15 @@ body,
         border-bottom: 1px solid $color_ddd;
         margin-bottom: 2rem;
     }
+    &.page_title_sub {
+        // 서브페이지 
+        text-align: left;
+        height: 48px;
+        // display: inline-block;
+        // vertical-align: top;
+        margin-bottom: 2.4rem;
+    }
+
 }
 
 .page_content {
