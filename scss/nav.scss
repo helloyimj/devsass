@@ -670,10 +670,12 @@ sans-serif;
         position: relative;
         width: 100%;           
         height: 100%;
-        // height: 7rem;
+        // height: 5.6rem;
         margin: 0 auto;
         background-color: $color_white;
-        padding-top: 32px;
+        // padding-top: 33px;
+        // border-bottom: 1px solid #ededed;
+
 
         &::before {
             content: '';
@@ -692,20 +694,21 @@ sans-serif;
             padding: 0 4rem;
             margin: 0 auto;    
             justify-content: space-between;    
+            background-color: #fff;
 
             .logo {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 70px;
-                margin-right: 10.8rem;
+                // height: 36px;
+                // margin-right: 10.8rem;
 
                 .logo_anchor {
                     display: inline-block;
-                    width: 20.8rem;
-                    height: 3rem;
+                    width: 22.3rem;
+                    height: 3.6rem;
                     vertical-align: middle;
-                    background-image: url("https://saas.go.kr//static/media/logo_big.05f05bdc389c9469d02b.png");
+                    background-image: url("../img/logo/logo_saas.svg");
                     
 
                     background-position: center left;
@@ -714,11 +717,11 @@ sans-serif;
                     object-fit: contain;
                     
                     &.gnb_scroll_change {
-                        background-image: url("../img/logo/logo_openservice_white.png");
+                        background-image: url("../img/logo/logo_saas.svg");
                     }
 
                     &.on {
-                        background-image: url("https://saas.go.kr//static/media/logo_big.05f05bdc389c9469d02b.png");
+                        background-image: url("../img/logo/logo_saas.svg");
                     }
                 }
             }
@@ -1118,6 +1121,7 @@ sans-serif;
         align-items: center;
         width: 100%;
         border-bottom: 1px solid #ddd;          
+        
 
         .area_menu_inner {
             // position: relative;
@@ -1129,7 +1133,6 @@ sans-serif;
             // height: 8.3rem;
             height: 5.1rem;
             padding: 1.4rem 1.8rem;
-            background-color: $color_white;              
         }
 
         .logo {

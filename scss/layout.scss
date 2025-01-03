@@ -68,37 +68,29 @@ body,
     }
 }
 
-.page {
-    margin-top: 4rem;
-    padding-bottom: 4rem;
-}
+// .page {
+//     margin-top: 4rem;
+//     margin-bottom: 8rem;
+// }
 
-.page_title {
-    width: 100%;
-    color: $color_111;
-    font-family: $font_bold;
-    font-size: 3.2rem;
-    display: block;
-    text-align: center;
+// .page_title {
+//     width: 100%;
+//     color: $color_111;
+//     font-family: $font_bold;
+//     font-size: 3.2rem;
+//     display: block;
+//     // text-align: center;
 
-    &.page_title_list {
-        //  목록페이지 page_title_list
-        height: 51px;
-        display: inline-block;
-        vertical-align: top;
-        border-bottom: 1px solid $color_ddd;
-        margin-bottom: 2rem;
-    }
-    &.page_title_sub {
-        // 서브페이지 
-        text-align: left;
-        height: 48px;
-        // display: inline-block;
-        // vertical-align: top;
-        margin-bottom: 2.4rem;
-    }
+//     &.page_title_list {
+//         //  목록페이지 page_title_list
+//         height: 51px;
+//         display: inline-block;
+//         vertical-align: top;
+//         border-bottom: 1px solid $color_ddd;
+//         margin-bottom: 2rem;
+//     }
+// }
 
-}
 
 .page_content {
     word-break: keep-all;
@@ -318,6 +310,8 @@ body,
 
         .wrap_logo {
             display: flex;
+            // justify-content: center;
+            align-items: center;
             // width: 100%;
             max-height: 41px;
             gap: 2.5rem;
@@ -374,7 +368,8 @@ body,
 
             .rel_link {
                 position: relative;
-                padding-right: 34px;
+                margin-right: 16px;
+                margin-left: 16px;
 
                 &::after   {
                     content: '';
@@ -383,10 +378,13 @@ body,
                     background-color: $color_555;
                     width: 1px;
                     height: 13px;
-                    right: 16px;
+                    right: -16px;
                     top: 50%;
                     transform: translateY(-50%);
                 }
+                &:first-of-type {
+                    margin-left: 0;
+                }   
                 &:last-of-type {
                     &::after   {
                         display: none;
@@ -1251,3 +1249,13 @@ body,
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
+/// 
+.page_inner {
+
+width: 1400px;
+margin: 0 auto;
+}
+
+// .select_searchbar {
+
+// }

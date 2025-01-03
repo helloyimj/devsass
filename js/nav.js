@@ -87,7 +87,8 @@ header +=                               '<li class="depth01">'
 header +=                                   '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">사용자 지원</a></div>'
 header +=                                   '<ul class="depth02" style="display: none; height: 140.087px; padding-top: 21px; margin-top: 0px; padding-bottom: 40px; margin-bottom: 0px;">'
 header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">자주묻는 질문</a></li>'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">자료실</a></li>'
+header +=                                       '<li class="depth02_item"><a href="" class="depth02_item_anchor" target="_self" tabindex="0">자료실</a></li>'
+header +=                                       '<li class="depth02_item"><a href="__notice.html" class="depth02_item_anchor" target="_self" tabindex="0">공지사항항</a></li>'
 header +=                                   '</ul>'
 header +=                               '</li>'
 header +=                           '</ul>'
@@ -113,179 +114,66 @@ header +=       '</div>'
 header +=   '</div>'
 header +=   '</div>'
 
-
-
-
-// <div class="header_inner">
-// <div class="nav_dim pc_dim"></div>
-// <div class="wrap_gnb main_only">
-//     <div class="area_top">
-//         <div class="area_top_inner">
-//             <div class="top_line_bnr">
-//                 <div class="top_link_wrap top_link_wrap_inner">
-//                     <div class="top_inner">
-//                         <div class="top_flag_wrap">
-//                             <p class="top_flag_in">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
-//                         </div>
-//                         <!-- 최상단 로그인 화면크기 조절 버튼 -->
-//                         <ul class="box_btns">
-//                             <li><a href="sitemap.html" target="_self" class="user_anchor" title="누리집안내지도 페이지로 이동">누리집안내지도</a></li>
-//                             <li class="box_btn_zoom">
-//                                 <span>화면크기</span>
-//                                 <button onclick="javascript:zoomControl.zoomIn()" class="btn_zoom in" title="화면 확대"></button>
-//                                 <button onclick="javascript:zoomControl.zoomOut()" class="btn_zoom out" title="화면 축소"></button>
-//                                 <button onclick="javascript:zoomControl.zoomReset()" class="btn_zoom reset" title="화면크기 초기화"></button>
-//                             </li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//                 <div class="chk_nuri_addr_bnr" style="display: none;" id="chk_nuri">
-//                     <div class="top_inner">
-//                         <strong>공식 누리집 주소 확인하기</strong>
-//                         <p>go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다. <br>
-//                             이 밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요.<br>
-//                             <a href="https://uiux.egovframe.go.kr/search.do" target="_blank" title="새창으로">운영중인 공식 누리집보기</a>
-//                         </p>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="area_menu">
-//         <div class="area_menu_inner">
-//             <h1 class="logo">
-//                 <span class="sr_only">디지털서비스개방 로고</span>
-//                 <a href="main.html" target="_self" class="logo_anchor" title="메인 페이지 이동"></a>
-//             </h1>
-//             <div class="wrap_menus">
-//                 <!-- 모바일 상단 로그인 상태창 -->
-//                 <div class="area_state">
-//                     <button type="button" class="btn_close_menu" title="메뉴 닫기"></button>
-//                     <div class="user_info">
-//                         <div class="logo_lnb">
-//                             <img src="../img/logo/logo_openservice_main.png" alt="디지털서비스개방로고">
-//                         </div>
-//                         <div class="box_state state_login_before">
-//                             <div class="user_info">
-//                                 <p class="greeting">디지털서비스개방에 <br /> 오신 것을 환영합니다.</p>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 </div>
-//                 <nav id="gnb" class="wrap_group menu_text on">
-//                     <div class="lnb_drop_menu">
-//                         <h2 class="sr_only">주메뉴</h2>
-//                         <ul class="lnb_list">
-//                             <li class="depth01">
-//                                 <div class="depth01_item"><a href="javascript:;" target="_self" class="depth01_item_anchor" title="디지털서비스개방 정책 소개 페이지로 이동">디지털서비스개방 소개</a></div>
-//                                 <ul class="depth02">
-//                                     <li class="depth02_item"><a href="javascript:;" target="_self" class="depth02_item_anchor" title="디지털서비스개방 정책 소개 페이지로 이동">정책 소개</a></li>
-//                                     <li class="depth02_item"><a href="javascript:;" target="_self" class="depth02_item_anchor" title="디지털서비스개방 BI 소개 페이지로 이동">BI 소개</a></li>
-//                                 </ul>
-//                             </li>
-//                             <li class="depth01">
-//                                 <div class="depth01_item"><a href="javascript:;" target="_self" class="depth01_item_anchor" title="개방서비스 청년 카테고리 페이지로 이동">개방서비스</a></div>
-//                                 <ul class="depth02 column_2">
-//                                     <li class="depth02_item">
-//                                         <a href="javascript:;" target="_self" class="depth02_item_anchor" title="개방서비스 청년 카테고리 소개 페이지로 이동">청년</a>
-//                                     </li>
-//                                     <li class="depth02_item">
-//                                         <a href="javascript:;" target="_self" class="depth02_item_anchor" title="개방서비스 임신, 육아 카테고리 소개 페이지로 이동">임신·육아</a>
-//                                     </li>
-//                                     <li class="depth02_item">
-//                                         <a href="javascript:;" target="_self" class="depth02_item_anchor" title="개방서비스 교통 카테고리 소개 페이지로 이동">교통</a>
-//                                     </li>
-//                                     <li class="depth02_item">
-//                                         <a href="javascript:;" target="_self" class="depth02_item_anchor" title="개방서비스 바우처·자격 카테고리 소개 페이지로 이동">바우처·자격</a>
-//                                     </li>
-//                                     <li class="depth02_item">
-//                                         <a href="javascript:;" target="_self" class="depth02_item_anchor" title="개방서비스 안전 카테고리 소개 페이지로 이동">안전</a>
-//                                     </li>
-//                                     <li class="depth02_item">
-//                                         <a href="javascript:;" target="_self" class="depth02_item_anchor" title="개방서비스 디지털지갑 카테고리 소개 페이지로 이동">디지털지갑</a>
-//                                     </li>
-//                                     <li class="depth02_item">
-//                                         <a href="javascript:;" target="_self" class="depth02_item_anchor" title="개방서비스 여행 카테고리 소개 페이지로 이동">여행</a>
-//                                     </li>
-//                                     <li class="depth02_item">
-//                                         <a href="javascript:;" target="_self" class="depth02_item_anchor" title="개방서비스 발급 카테고리 소개 페이지로 이동">발급</a>
-//                                     </li>
-//                                 </ul>
-//                             </li>
-//                             <li class="depth01">
-//                                 <div class="depth01_item"><a href="javascript:;" target="_self" class="depth01_item_anchor" title="서비스 사례 소개 페이지로 이동">적용사례</a></div>
-//                                 <ul class="depth02">
-//                                     <li class="depth02_item">
-//                                         <a href="javascript:;" target="_self" class="depth02_item_anchor" title="서비스 사례 소개 페이지로 이동">서비스 사례</a>
-//                                     </li>
-//                                     <li class="depth02_item">
-//                                         <a href="javascript:;" target="_self" class="depth02_item_anchor" title="기업별 사례 소개 페이지로 이동">기업별 사례</a>
-//                                     </li>
-//                                 </ul>
-//                             </li>
-//                             <li class="depth01">
-//                                 <div class="depth01_item"><a href="javascript:;" target="_self" class="depth01_item_anchor" title="서비스 개방 절차 안내 페이지로 이동">이용 안내</a></div>
-//                                 <ul class="depth02">
-//                                     <li class="depth02_item"><a href="javascript:;" target="_self" class="depth02_item_anchor" title="서비스 개방 절차 안내 페이지로 이동">서비스 개방 절차</a></li>
-//                                     <li class="depth02_item"><a href="javascript:;" target="_self" class="depth02_item_anchor" title="디지털서비스개방 수시신청 페이지로 이동">수시신청</a></li>
-//                                 </ul>
-//                             </li>
-//                         </ul>
-//                     </div>
-//                 </nav>
-//             </div>
-//             <!-- mob 햄버거 메뉴 버튼 -->
-//             <div class="box_btn_util">
-//                 <div class="box_btn_item">
-//                     <button type="button" class="btn_util_ham" title="gnb 메뉴 열기"></button>
-//                 </div>
-//             </div>
-//         </div>
-//         <div class="lnb_drop_menu_back"></div>
-//     </div>
-// </div>
-// </div>
-
-
-
 let footer = "";
-footer +=  		'<div class="inner">'
-footer +=  				'<div class="area_open_logo">'
-footer +=  						'<img src="../img/logo/logo_openservice_gray.png" alt="디지털서비스개방">'
-footer +=  				'</div>'
-footer +=  				'<div class="area_address">'
-footer +=  						'<ul class="list_address">'
-footer +=  								'<li class="list_address_item">30112 세종특별자치시 도움6로 42(어진동)</li>'
-footer +=  								'<li class="list_address_item">1551-0627 (월~금 09:00~18:00 / 토, 일, 공휴일 휴무)</li>'
-footer +=  						'</ul>'
-footer +=  						'<p>© Ministry of the Interior and Safety. <br class="only_mob">All rights reserved.</p>'
-footer +=  				'</div>'
-footer +=  				'<div class="area_sites">'
-footer +=  			    	'<div class="wrap_select_family">'
-footer +=  			    		'<a href="javascript:;" class="rel_link_sel" title="관련기관 누리집 목록 열기">관련기관 누리집</a>'
-footer +=                        '<ul>'
-footer +=                            '<li><a href="https://www.gov.kr/portal/main/nologin" target="_blank" title="새 창 열림- 정부24">정부24</a></li>'
-footer +=                            '<li><a href="https://www.ips.go.kr/pot/forwardMain.do" target="_blank" title="새 창 열림- 국민비서">국민비서</a></li>'
-footer +=                            '<li><a href="https://www.nia.or.kr/site/nia_kor/main.do" target="_blank" title="새 창 열림- 한국지능정보사회진흥원">한국지능정보사회진흥원</a></li>'
-footer +=                            '<li><a href="https://www.dpg.go.kr/DPG/main/index.do" target="_blank" title="새 창 열림- 디지털플랫폼정부위원회">디지털플랫폼정부위원회</a></li>'
-footer +=                            '<li><a href="https://www.mois.go.kr/frt/a01/frtMain.do" target="_blank" title="새 창 열림- 행정안전부">행정안전부</a></li>'
-footer +=  			             '</ul>'
-footer +=  		    		     '</div>'
-footer +=  						 '<div class="area_other_logo only_pc">'
-footer +=  								'<img src="../img/logo/logo_nia.png" alt="한국지능정보사회진흥원 로고">'
-footer +=  								'<a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" title="국가 공인 인증기관 : 웹와치" target="_blank">'
-footer +=  								 '<img src="../img/logo/logo_wa.svg" border="0" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)"/>'
-footer +=  								'</a>'
-footer +=  						  '</div>'
-footer +=  		   	    '</div>'
-footer +=  				'<div class="area_other_logo only_mob">'
-footer +=  					'<img src="../img/logo/logo_nia.png" alt="한국지능정보사회진흥원 로고">'
-footer +=  					'<a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" title="국가 공인 인증기관 : 웹와치" target="_blank">'
-footer +=  					    '<img src="../img/logo/logo_wa.svg" border="0" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)"/>'
-footer +=  					'</a>'
-footer +=  				'</div>'
-footer +=  				'</div>'
-footer +=  		'</div>'
+footer +=  		'<footer id="footer" class="footer">';
+footer +=  		        '<div class="area_sites">';
+footer +=  		            '<div class="inner">';
+footer +=  		                '<div class="wrap_select_family">';
+footer +=  		                    '<a href="javascript:;" class="rel_link_sel" title="관련기관 목록 열기">관련기관</a>';
+footer +=  		                    '<ul>';
+footer +=  		                        '<li><a href="https://www.gov.kr/portal/main/nologin" target="_blank" title="새 창 열림- 정부24">정부24</a></li>';
+footer +=  		                        '<li><a href="https://www.ips.go.kr/pot/forwardMain.do" target="_blank" title="새 창 열림- 국민비서">국민비서</a></li>';
+footer +=  		                        '<li><a href="https://www.nia.or.kr/site/nia_kor/main.do" target="_blank" title="새 창 열림- ';'한국지능정보사회진흥원">한국지능정보사회진흥원</a></li>';
+footer +=  		                        '<li><a href="https://www.dpg.go.kr/DPG/main/index.do" target="_blank" title="새 창 열림- ';'디지털플랫폼정부위원회">디지털플랫폼정부위원회</a></li>';
+footer +=  		                        '<li><a href="https://www.mois.go.kr/frt/a01/frtMain.do" target="_blank" title="새 창 열림- 행정안전부">행정안전부</a></li>';
+footer +=  		                    '</ul>';
+footer +=  		                '</div>';
+footer +=  		            '</div>';
+footer +=  		        '</div>';
+footer +=  		        '<div class="area_info">';
+footer +=  		            '<div class="inner">';
+footer +=  		                '<div class="wrap_logo">';
+footer +=  		                    '<img src="../img/logo/Ministry_of_the_Interior_and_Safety_of_the_Republic_of_Korea_Logo_(horizontal).png" alt="행정안전부">';
+footer +=  		                    '<img src="../img/logo/logo_nia_2.png" alt="한국지능정보사회진흥원">';
+footer +=  		                '</div>';
+footer +=  		                '<div class="wrap_address">';
+footer +=  		                    '<ul class="list_address">';
+footer +=  		                        '<li class="list_address_item">(30112) 세종특별자치시 도움6로 42</li>';
+footer +=  		                        '<li class="list_address_item">문의 070-7893-5158 (월~금 09:00~17:00 / 토,일 공휴일 휴무)</li>';
+footer +=  		                    '</ul>';
+footer +=  		                '</div>';
+footer +=  		            '</div>';
+footer +=  		        '</div>';
+footer +=  		        '<div class="area_links">';
+footer +=  		            '<div class="inner">';
+footer +=  		                '<div class="wrap_links">';
+footer +=  		                    '<a href="javascript:;" class="rel_link" target="_blank" title="새 창 열림-포털 이용약관">포털 이용약관</a>';
+footer +=  		                    '<a href="javascript:;" class="rel_link color_blue_light" target="_blank" title="새 창 열림-개인정보처리방침">개인정보처리방침</a>';
+footer +=  		                    '<a href="javascript:;" class="rel_link" target="_blank" title="새 창 열림-웹 접근성 품질인증 마크 획득">웹 접근성 품질인증 마크 획득</a>';
+footer +=  		                '</div>';
+footer +=  		                '<div class="wrap_copyright">';
+footer +=  		                    '<p>© Ministry of the Interior and Safety. All rights reserved.</p>';
+footer +=  		                '</div>';
+footer +=  		            '</div>';
+footer +=  		        '</div>';
+footer +=  		        '</div>';
+footer +=  		    '</footer>';
+
+// <!-- 
+// <div class="area_other_logo only_pc">
+//     <img src="../img/logo/logo_nia.png" alt="한국지능정보사회진흥원 로고">
+//     <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" title="국가 공인 인증기관 : 웹와치" target="_blank">
+//         <img src="../img/logo/logo_wa.svg" style="border: 0;" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" />
+//     </a>
+// </div> -->
+
+// <!-- <div class="area_other_logo only_mob">
+//     <img src="../img/logo/logo_nia.png" alt="한국지능정보사회진흥원 로고">
+//     <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" title="국가 공인 인증기관 : 웹와치" target="_blank">
+//         <img src="../img/logo/logo_wa.svg" style="border: 0;" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" />
+//     </a>
+// </div> -->
+
 
 let skip = "";
 skip += '<nav id="skip" class="skip">'

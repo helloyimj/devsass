@@ -191,7 +191,6 @@
   height: 100%;
   margin: 0 auto;
   background-color: #fff;
-  padding-top: 32px;
 }
 .gnb_pc .area_menu::before {
   content: "";
@@ -213,6 +212,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #fff;
 }
 .gnb_pc .area_menu .area_menu_inner .logo {
   display: -webkit-box;
@@ -224,15 +224,13 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 70px;
-  margin-right: 10.8rem;
 }
 .gnb_pc .area_menu .area_menu_inner .logo .logo_anchor {
   display: inline-block;
-  width: 20.8rem;
-  height: 3rem;
+  width: 22.3rem;
+  height: 3.6rem;
   vertical-align: middle;
-  background-image: url("https://saas.go.kr//static/media/logo_big.05f05bdc389c9469d02b.png");
+  background-image: url("../img/logo/logo_saas.svg");
   background-position: center left;
   background-repeat: no-repeat;
   background-size: 100% 3rem;
@@ -240,10 +238,10 @@
      object-fit: contain;
 }
 .gnb_pc .area_menu .area_menu_inner .logo .logo_anchor.gnb_scroll_change {
-  background-image: url("../img/logo/logo_openservice_white.png");
+  background-image: url("../img/logo/logo_saas.svg");
 }
 .gnb_pc .area_menu .area_menu_inner .logo .logo_anchor.on {
-  background-image: url("https://saas.go.kr//static/media/logo_big.05f05bdc389c9469d02b.png");
+  background-image: url("../img/logo/logo_saas.svg");
 }
 .gnb_pc .area_menu.gnb_scroll_change {
   background-color: rgba(0, 0, 0, 0.3);
@@ -542,7 +540,6 @@
   width: 100%;
   height: 5.1rem;
   padding: 1.4rem 1.8rem;
-  background-color: #fff;
 }
 .gnb_mo .area_menu .logo {
   display: -webkit-box;

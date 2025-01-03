@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/* opacity color */
+/* font color */
+/* Bg, border color */
 .flex_center {
   position: relative;
   display: -webkit-box;
@@ -96,6 +99,10 @@ caption {
   color: #005bff !important;
 }
 
+.color_blue_light {
+  color: #558cf1;
+}
+
 /* Color admin */
 .color_mainA_indigo {
   color: #005bff !important;
@@ -121,6 +128,18 @@ caption {
 
 .font_bold {
   font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.font_suit_regular {
+  font-family: "SUITRegular", "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.font_suit_medium {
+  font-family: "SUITMedium", "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.font_suit_bold {
+  font-family: "SUITBold", "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 .text_left {
@@ -691,6 +710,11 @@ button:disabled {
   border-radius: 0.8rem;
   text-align: center;
 }
+.btn_submit.filled_blue {
+  background-color: #0f174d;
+  font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #fff;
+}
 .btn_submit.disabled {
   color: #fff;
   background-color: #7aa9ff !important;
@@ -747,7 +771,7 @@ button:disabled {
 .btn_submit.btn_download::after {
   display: block;
   content: "";
-  background-image: url("../../public/img/icons/icon_download.png");
+  background-image: url("../../public/img/icon/icon_download.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -758,6 +782,71 @@ button:disabled {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+.btn_submit.btn_user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  width: 11rem;
+  padding: 0 2rem;
+  color: #fff;
+  background-color: #1b31b7;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #1b31b7), color-stop(50%, #625bf2));
+  background-image: linear-gradient(90deg, #1b31b7 50%, #625bf2 50%);
+  border: 1px solid #ccc;
+  padding: 0 1.6rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.btn_submit.btn_user::after {
+  display: block;
+  content: "";
+  background-image: url("../../public/img/icon/icon_user.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 1.6rem;
+  height: 1.4rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.btn_submit.btn_search {
+  position: relative;
+  cursor: pointer;
+  background-color: #0f174d;
+  color: #fff;
+  width: 11.4rem;
+  height: 5rem;
+  z-index: 1;
+  text-indent: 32px;
+  font-size: 2rem;
+}
+.btn_submit.btn_search::before {
+  background-image: url("../../public/img/icon/icon_search.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 2.2rem;
+  top: 1.5rem;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+.btn_submit.btn_sort {
+  cursor: pointer;
+  background-color: #0f174d;
+  color: #fff;
+  width: 12rem;
+  height: 3.4rem;
+  z-index: 1;
+  font-size: 1.4rem;
+  border-radius: 17px;
 }
 .btn_submit.btn_all {
   /* md 일괄 등록 */
@@ -791,7 +880,7 @@ button:disabled {
   width: 0.8rem;
   height: 1.2rem;
   position: absolute;
-  background-image: url("../../public/img/icons/icon_chevron_right_wt.png");
+  background-image: url("../../public/img/icon/icon_chevron_right_wt.png");
   background-repeat: no-repeat;
   background-size: contain;
   right: 1.9rem;
@@ -823,7 +912,7 @@ button:disabled {
   width: 1.2rem;
   height: 0.8rem;
   position: absolute;
-  background-image: url("../../public/img/icons/icon_chevron_up_blue.png");
+  background-image: url("../../public/img/icon/icon_chevron_up_blue.png");
   background-repeat: no-repeat;
   background-size: contain;
   right: 1.4rem;
@@ -837,25 +926,22 @@ button:disabled {
 }
 
 .btn_inline {
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
-  height: 3.6rem;
-  border-radius: 0.8rem;
   position: relative;
+  width: 11.2rem;
+  height: 3.5rem;
+  line-height: 3.3rem;
+  border-radius: 0.7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  width: auto;
+  padding-left: 1.6rem;
   font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1;
+  color: #555;
+  border: 1px solid #ccc;
+  font-size: 1.6rem;
 }
 .btn_inline.sm {
   /* 검색 */
@@ -872,7 +958,6 @@ button:disabled {
   padding: 0 1.9rem;
 }
 .btn_inline.view {
-  /* 미리보기 */
   color: #fff;
   background-color: #005bff;
   border: 1px solid #ccc;
@@ -889,12 +974,42 @@ button:disabled {
   content: "";
   width: 1.9rem;
   height: 1.8rem;
-  background-image: url("../../public/img/icons/icon_view.png");
+  background-image: url("../../public/img/icon/icon_view.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
   left: 1.9rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.btn_inline.btn_attached_view::after {
+  content: "";
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url("../../public/img/icon/icon_link_grey.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.btn_inline.btn_attached_download::after {
+  display: block;
+  content: "";
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url("../../public/img/icon/icon_download_grey.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  right: 1.6rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1335,107 +1450,6 @@ button:disabled {
 }
 
 /* Button System - pagenation */
-.wrap_pagenation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  width: 100%;
-  margin-top: 3rem;
-}
-
-.pagenation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1rem;
-  font-weight: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-.pagenation li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.pagenation a {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  width: 2.8rem;
-  height: 2.8rem;
-  line-height: 2.8rem;
-  font-size: 1.8rem;
-  color: #111;
-}
-.pagenation a.currently {
-  font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-.pagenation a.currently::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  display: block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border: 1px solid #111;
-  width: 2.8rem;
-  height: 2.8rem;
-  border-radius: 0.8rem;
-}
-.pagenation a.first::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../public/img/icons/icon_chevron_bl_edge.png");
-  background-repeat: no-repeat;
-  background-size: 1.2rem 1.6rem;
-  background-position: center;
-}
-.pagenation a.prev::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../public/img/icons/icon_chevron_bl.png");
-  background-repeat: no-repeat;
-  background-size: 1rem 1.6rem;
-  background-position: center;
-}
-.pagenation a.next::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../public/img/icons/icon_chevron_bl.png");
-  background-repeat: no-repeat;
-  background-size: 1rem 1.6rem;
-  background-position: center;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.pagenation a.last::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-image: url("../../public/img/icons/icon_chevron_bl_edge.png");
-  background-repeat: no-repeat;
-  background-size: 1.2rem 1.6rem;
-  background-position: center;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
 /* pagenation end */
 /* Icon System - badge */
 .badge {
@@ -1453,25 +1467,25 @@ button:disabled {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  border-radius: 0.4rem;
-  font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  border-radius: 1.6rem;
   font-size: 1.4rem;
-  height: 2.4rem;
+  height: 3.4rem;
+  width: 8rem;
   line-height: 1;
+  font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   text-align: center;
-  width: 4.4rem;
 }
 .badge.lined {
   /* 공지, new, 대기 */
   color: #fff;
   background-color: #005bff;
   border: 1px solid #ccc;
+  border-color: #333c98;
 }
 .badge.lined.category {
   /* 기타,웹사이트 등, 카테고리 */
-  color: #fff;
-  background-color: #005bff;
-  border: 1px solid #ccc;
+  border-color: #333c98;
+  background-color: #333c98;
   width: unset;
   min-width: 7rem;
   padding: 0 8px;
@@ -1479,8 +1493,9 @@ button:disabled {
 }
 .badge.filled {
   /* top, status */
+  background-color: #333c98;
+  border-color: #333c98;
   color: #fff;
-  background-color: #005bff;
 }
 .badge.sm {
   color: #fff;
@@ -1530,18 +1545,10 @@ button:disabled {
   height: 100%;
   padding-right: 0;
   border-radius: 0;
-  background-image: url("../../public/img/icons/icon_lock.png");
+  background-image: url("../../public/img/icon/icon_lock.png");
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 1.6rem 1.8rem;
-}
-
-td .badge {
-  margin: auto;
-  width: unset;
-  min-width: 4.4rem;
-  padding: 0 8px;
-  text-indent: 0;
 }
 
 td.text_left .badge {
@@ -1822,7 +1829,7 @@ td .box_radio {
           transform: translate(-50%, -50%);
   width: 1.2rem;
   height: 1rem;
-  background-image: url("../../public/img/icons/checked.png");
+  background-image: url("../../public/img/icon/checked.png");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -1875,7 +1882,7 @@ td .box_radio {
   height: 1rem;
   color: #005bff;
   text-align: center;
-  background-image: url("../../public/img/icons/checked.png");
+  background-image: url("../../public/img/icon/checked.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -2056,7 +2063,7 @@ input[type=time] {
   z-index: 1;
 }
 .box_search button::after {
-  background-image: url("../../public/img/icons/icon_search.png");
+  background-image: url("../../public/img/icon/icon_search.svg");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -2173,15 +2180,6 @@ input[type=time] {
 .table .td_sm input[type=text] {
   margin-right: 10px;
   width: 28rem;
-}
-
-.wrap_table {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 96rem;
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
 }
 
 /* 총 게시물 갯수 표시 - 목록 페이지 상단  */
@@ -2442,7 +2440,7 @@ input[type=number]::-webkit-inner-spin-button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("../../public/img/icons/icon_attach.png");
+  background-image: url("../../public/img/icon/icon_attach.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -2694,7 +2692,7 @@ input[type=number]::-webkit-inner-spin-button {
         height: 5.4rem;
 
         &::after {
-            background-image: url("../../public/img/icons/icon_x.png");
+            background-image: url("../../public/img/icon/icon_x.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: 1.6rem 1.6rem;
@@ -2837,7 +2835,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 /* 이용 제한 안내 팝업  */
 .popup_layer .box_warning {
-  background-image: url("../../public/img/icons/icon_warning.png");
+  background-image: url("../../public/img/icon/icon_warning.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 8rem 8rem;
@@ -2994,34 +2992,29 @@ input[type=number]::-webkit-inner-spin-button {
 .article_post .post_head {
   position: relative;
   width: 100%;
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #212121;
+  border-bottom: 1px solid #212121;
 }
 .article_post .post_head .tit {
+  width: 100%;
   font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  padding: 3rem 0 2.9rem;
-  font-size: 20px;
+  padding: 2.4rem 0;
+  font-size: 2.4rem;
 }
 .article_post .post_head .badge {
-  margin-top: 2rem;
+  margin-right: 1.3rem;
 }
 .article_post .post_head .post_info_list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 3rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 2.8rem;
 }
 .article_post .post_head .post_info_list .post_info_item {
-  position: relative;
-  display: inline-block;
-  padding-right: 2rem;
-  padding-left: 2rem;
   color: #777;
-  border-left: 1px solid #ddd;
-}
-.article_post .post_head .post_info_list .post_info_item:nth-of-type(1) {
-  padding-left: 0;
-  border-left: none;
 }
 .article_post .post_head .post_info_list .post_info_item.answered {
   color: #005bff;
@@ -3039,8 +3032,8 @@ input[type=number]::-webkit-inner-spin-button {
   max-width: 100%;
 }
 .article_post .post_body .txt {
-  min-height: 26.4rem;
-  padding: 3rem 0;
+  min-height: 40.8rem;
+  padding: 5.9rem 0;
   line-height: 1.5;
 }
 .article_post .post_body .txt img {
@@ -3087,10 +3080,11 @@ input[type=number]::-webkit-inner-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 2.6rem;
+  padding-left: 4.8rem;
+  padding-right: 3rem;
 }
 .attached_file_viewer .attached_file_list .attached_file_item:not(:nth-last-of-type(1)) {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
 }
 .attached_file_viewer .attached_file_list .attached_file_item::before {
   content: "";
@@ -3100,7 +3094,7 @@ input[type=number]::-webkit-inner-spin-button {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../public/img/icons/icon_attach.png");
+  background-image: url("../../public/img/icon/icon_attach.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -3119,7 +3113,7 @@ input[type=number]::-webkit-inner-spin-button {
   cursor: pointer;
   width: 2rem;
   height: 2rem;
-  background-image: url("../../public/img/icons/icon_attach_delete.png");
+  background-image: url("../../public/img/icon/icon_attach_delete.png");
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 2rem 2rem;
@@ -3132,16 +3126,16 @@ input[type=number]::-webkit-inner-spin-button {
   display: flex;
   width: 100%;
   margin-bottom: 3rem;
-  padding: 2rem 2rem 0;
+  padding: 1.8rem 0;
   border-radius: 5px;
-  background-color: #f5f5f5;
+  background-color: #f8f8f8;
 }
 .attached_download_viewer .attached_file_counter {
   color: #111;
   width: 15.2rem;
 }
 .attached_download_viewer .attached_file_list {
-  width: calc(100% - 15.2rem);
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3158,10 +3152,11 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   height: unset;
-  margin-bottom: 2rem;
-  padding-left: 2.6rem;
 }
 .attached_download_viewer .attached_file_list .attached_file_item::before {
   content: "";
@@ -3171,24 +3166,33 @@ input[type=number]::-webkit-inner-spin-button {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../public/img/icons/icon_attach.png");
+  background-image: url("../../public/img/icon/icon_attach.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.attached_download_viewer .btn_attached_download {
-  line-height: 1.25;
-  word-break: break-all;
+.attached_download_viewer .attached_file_list .attached_file_txt,
+.attached_download_viewer .attached_file_list .attached_file_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
 }
-.attached_download_viewer .btn_attached_download:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+.attached_download_viewer .attached_file_list .attached_file_txt {
+  width: calc(100% - 23rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* 이전글 다음글 ( 상세페이지 게시물 하단 ) */
 .post_prev_next {
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #212121;
+  position: relative;
 }
 .post_prev_next dl {
   overflow: hidden;
@@ -3199,30 +3203,46 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 17px 0;
-  border-bottom: 1px solid #ddd;
+  padding: 2.2rem 3rem 2.2rem 0;
+  border-bottom: 1px solid #ccc;
+}
+.post_prev_next dl:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.post_prev_next .prev dt span::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 48px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+  height: 9px;
+  background: url("../img/icon/icon_chevron_up_black.svg") no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+.post_prev_next .next dt span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 48px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 15px;
+  height: 9px;
+  background: url("../img/icon/icon_chevron_down_black.svg") no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 .post_prev_next dt {
   position: relative;
-  width: 8rem;
+  width: 18.3rem;
 }
-.post_prev_next dt::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: 13px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 12px;
-  height: 8px;
-  background: url("../../public/img/icons/icon_chevron_up_bl.png") no-repeat;
-  background-position: center;
-  background-size: 100%;
-}
-.post_prev_next .next dt:after {
-  background: url("../../public/img/icons/icon_chevron_down_bl.png") no-repeat;
-  background-position: center;
-  background-size: 100%;
+.post_prev_next dt span {
+  padding-left: 8rem;
 }
 .post_prev_next dd {
   position: relative;
@@ -3249,8 +3269,9 @@ input[type=number]::-webkit-inner-spin-button {
 .post_answer .post_answer_head {
   padding-top: 2.2rem;
   padding-bottom: 2.2rem;
-  padding-left: 2.6rem;
-  background-image: url("../../public/img/icons/icon_reply.png");
+  padding-left: 4.6rem;
+  padding-right: 3rem;
+  background-image: url("../../public/img/icon/icon_reply.png");
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
   background-position: left center;
@@ -3404,7 +3425,7 @@ input[type=number]::-webkit-inner-spin-button {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.type_post.type_post_thumb .area_content {
+.type_post.type_post_thumb .article_content {
   width: calc(100% - 21rem);
 }
 
@@ -3444,7 +3465,7 @@ input[type=number]::-webkit-inner-spin-button {
   left: 0;
   width: 14px;
   height: 14px;
-  background-image: url("../../public/img/icons/icon_home.png");
+  background-image: url("../../public/img/icon/icon_home.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -3604,7 +3625,7 @@ input[type=number]::-webkit-inner-spin-button {
     -o-object-fit: contain;
        object-fit: contain;
   }
-  .type_post.type_post_thumb .area_content {
+  .type_post.type_post_thumb .article_content {
     width: calc(80% - 1.5rem);
   }
   /* 통합검색  게시글 하단 브레드크럼 */
@@ -3970,9 +3991,6 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 1.5rem 0;
     font-size: 16px;
   }
-  .article_post .post_head .badge {
-    margin-top: 2rem;
-  }
   .article_post .post_head .post_info_list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4040,7 +4058,6 @@ input[type=number]::-webkit-inner-spin-button {
   }
   /*  첨부 파일 수정 */
   .attached_file_viewer .attached_file_list .attached_file_item {
-    padding-left: 1.6rem;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -4078,6 +4095,9 @@ input[type=number]::-webkit-inner-spin-button {
     height: 1.5rem;
   }
   /* 이전글 다음글 (게시물 하단 ) */
+  .post_prev_next {
+    font-size: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
   .post_prev_next dl {
     padding: 15px 0;
   }
