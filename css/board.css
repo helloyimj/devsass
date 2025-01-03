@@ -603,3 +603,14 @@
 .wrap_box_info .box_info .box_bottom .box_time h3 {
   font-size: 2.4rem;
 }
+
+.page_answer.page {
+  padding-bottom: 16rem;
+}
+.page_answer .table tbody tr td {
+  font-size: 17px;
+  color: #111;
+}
+.page_answer .wrap_box_info {
+  margin-top: 19rem;
+}

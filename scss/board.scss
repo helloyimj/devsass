@@ -817,3 +817,20 @@ padding-top: 64px;
 		}
 	}
 }
+
+// 사용자 지원_자주 묻는 질문
+.page_answer {
+	&.page {
+		padding-bottom: 16rem;
+	}
+	.table tbody tr td {
+		font-size: 17px;
+		color: $color_111;
+
+	}
+
+	.wrap_box_info {
+		margin-top: 19rem;
+
+	}
+}
