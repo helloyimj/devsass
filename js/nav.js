@@ -88,7 +88,7 @@ header +=                                   '<div class="depth01_item"><a class=
 header +=                                   '<ul class="depth02" style="display: none; height: 140.087px; padding-top: 21px; margin-top: 0px; padding-bottom: 40px; margin-bottom: 0px;">'
 header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">자주묻는 질문</a></li>'
 header +=                                       '<li class="depth02_item"><a href="" class="depth02_item_anchor" target="_self" tabindex="0">자료실</a></li>'
-header +=                                       '<li class="depth02_item"><a href="__notice.html" class="depth02_item_anchor" target="_self" tabindex="0">공지사항항</a></li>'
+header +=                                       '<li class="depth02_item"><a href="__notice.html" class="depth02_item_anchor" target="_self" tabindex="0">공지사항</a></li>'
 header +=                                   '</ul>'
 header +=                               '</li>'
 header +=                           '</ul>'
@@ -98,7 +98,7 @@ header +=               '</div>'
 header +=               '<div class="wrap_user_info">'
 header +=                   '<div class="user_info">'
 header +=                       '<div class="user_btns">'
-header +=                         '<a href="javascript:;" class="btn_submit btn_user>로그인</a>'
+header +=                         '<a href="javascript:;" class="btn_submit btn_user">로그인</a>'
 header +=                        '<a href="javascript:;" class="btn_submit btn_user">회원가입</a>'
 header +=                       '</div>'
 header +=                   '</div>'
@@ -167,7 +167,7 @@ footer +=  		    '</footer>';
 //     </a>
 // </div> -->
 
-// <!-- <div class="area_other_logo only_mob">
+// <!-- <div class="area_other_logo only_mob">header
 //     <img src="../img/logo/logo_nia.png" alt="한국지능정보사회진흥원 로고">
 //     <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" title="국가 공인 인증기관 : 웹와치" target="_blank">
 //         <img src="../img/logo/logo_wa.svg" style="border: 0;" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" />

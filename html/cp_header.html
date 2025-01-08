@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title></title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/total_cp.css" />
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/swiper-5.4.3.min.js"></script>
+    <!-- <script src="../js/aos.js"></script> -->
+    <!-- <script src="../js/nav.js"></script> -->
+    <script src="../js/app.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper sub_pages">
+        <!-- 바로가기 메뉴 -->
+        <nav id="skip" class="skip">
+            <a href="#content" class="skip_anchor">본문 바로가기</a>
+        </nav>
+
+        <!-- 헤더 -->
+        <header id="header" class="header gnb_pc">
+            <div class="header_inner">
+                <div class="nav_dim"></div>
+                <div class="wrap_gnb">
+                    <div class="area_top">
+                        <div class="area_top_inner">
+                            <div class="top_line_bnr">
+                                <div class="top_link_wrap top_link_wrap_inner">
+                                    <div class="top_inner">
+                                        <div class="top_flag_wrap"><p class="top_flag_in">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 로그인 화면크기 조절 버튼 -->
+                            <ul class="box_btns">
+                                <li><a href="sitemap.html" target="_self" class="user_anchor" title="누리집안내지도 페이지로 이동">누리집안내지도</a></li>
+                                <li class="box_btn_zoom"><span>화면크기</span>
+                                    <button onclick="javascript:zoomControl.zoomIn()" class="btn_zoom in" title="화면 확대"></button>
+                                    <button onclick="javascript:zoomControl.zoomOut()" class="btn_zoom out" title="화면 축소"></button>
+                                    <button onclick="javascript:zoomControl.zoomReset()" class="btn_zoom reset" title="화면크기 초기화"></button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="area_menu">
+                        <div class="area_menu_inner">
+                            <div class="wrap_logo">
+                                <div class="logo"><a class="logo_anchor" aria-label="메인페이지 이동" href=""></a></div>
+                            </div>
+                            <div class="wrap_menus">
+                                <div class="area_state">
+                                    <button type="button" class="btn_close_menu" aria-label="메뉴 닫기"></button>
+                                    <div class="user_info">
+                                        <div class="logo_lnb"><img src="https://saas.go.kr/static/media/logo_big.05f05bdc389c9469d02b.png" alt="민간 SaaS 연계공통기반 통합관리포털 플랫폼 로고"></div>
+                                        <div class="box_state state_login_before">
+                                            <div class="user_info"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <nav id="gnb" class="wrap_group menu_text">
+                                    <div class="lnb_drop_menu">
+                                        <h2 class="sr_only">주메뉴</h2>
+                                        <ul class="lnb_list">
+                                            <li class="depth01">
+                                                <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">센터 소개</a></div>
+                                                <div class="depth02_content">
+                                                    <ul class="depth02">
+                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">1</a></li>
+                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">2</a></li>
+                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth01">
+                                                <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">전환사업 소개</a></div>
+                                                <div class="depth02_content">
+                                                    <ul class="depth02">
+                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">1</a></li>
+                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">2</a></li>
+                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">3</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="depth01">
+                                                <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">커뮤니티</a></div>
+                                                <div class="depth02_content">
+                                                    <ul class="depth02">
+                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">4</a></li>
+                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">1</a></li>
+                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">2</a></li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- 메인  -->
+        <main class="">
+
+            <!-- 본문 외부 영역 -->
+            <section id="content" class="">
+                <div class="page_inner">
+
+                    <!-- 본문 -->
+                    <article class="page page_saas_serach">
+                        <!-- 브레드크럼 -->
+                        <div class="wrap_breadcrumb">
+                            <ul class="breadcrumbs">
+                                <li class="breadcrumbs_item cat_home"><a href="main.html" class="home" title="메인 페이지 이동"></a></li>
+                                <li class="breadcrumbs_item"><a href=".html">커뮤니티</a></li>
+                            </ul>
+                        </div>
+
+                    </article>
+                </div>
+
+                <!-- 본문 end  -->
+            </section>
+            <!-- 본문 외부 영역 end-->
+        </main>
+        <!-- 전체 영역 end  -->
+
+        <footer id="footer" class="footer">
+            <div class="area_info">
+                <div class="inner">
+                    <div class="wrap_logo">
+                        <img src="../img/logo/logo_cpcp.png" alt="행정·공공기관 클라우드 전환센터">
+                    </div>
+                    <div class="wrap_address">
+                        <ul class="list_address">
+                            <li class="list_address_item">(41068) 대구광역시 동구 첨단로 53</li>
+                        </ul>
+                        <a href="javascript:;" class="link_map" target="_blank" title="새 창 열림-찾아오시는 길">찾아오시는 길</a>
+                    </div>
+                    <div class="wrap_address wrap_address02">
+                        <ul class="list_address">
+                            <li class="list_address_item">대표전화 : 1522-0089</li>
+                            <li class="list_address_item">이메일 : cpcp@nia.or.kr</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="area_links ">
+                <div class="inner">
+                    <div class="wrap_links">
+                        <a href="javascript:;" class="rel_link" target="_blank" title="새 창 열림-웹 접근성 품질인증 마크 획득">웹 접근성 품질인증 마크 획득</a>
+                    </div>
+                    <div class="wrap_copyright">
+                        <p>Copyright@ 한국지능정보사회진흥원 All Rtights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // $("header.header").html(header);
+            // $("footer.footer").html(footer);
+
+            // $(".footer .wrap_select_family").on("click", function() {
+            //     $(".footer .wrap_select_family ul").slideToggle(200);
+            //     $(".footer .wrap_select_family").toggleClass('toggle');
+            //     if ($(this).hasClass("toggle") === true) {
+            //         $(this).children(".rel_link_sel").attr("title", "관련기관 누리집 목록 열림");
+            //     } else {
+            //         $(this).children(".rel_link_sel").attr("title", "관련기관 누리집 목록 닫힘");
+            //     }
+            // });
+
+            // 접근성 관련 
+            // 접근성 - 스킵 메뉴
+            $(".wrapper").prepend(skip);
+            $(".skip .skip_anchor").on("focus", function() {
+                $(this).parent(".skip").addClass("on");
+                $(this).parent(".skip").stop().css({
+                    top: 0
+                });
+            });
+            $(".skip .skip_anchor").on("click", function() {
+                $(this).parent(".skip").removeClass("on");
+                $(this).parent(".skip").stop().animate({
+                    top: "-40px"
+                });
+            });
+            $(".skip .skip_anchor").on("focusout", function() {
+                $(this).parent(".skip").removeClass("on");
+                $(this).parent(".skip").stop().animate({
+                    top: "-40px"
+                });
+            });
+
+            // focus events
+            // 디바이스 사이즈 체크
+            let w1100 = window.matchMedia("(max-width: 1100px)");
+            if (w1100.matches) {
+                $(".header").removeClass("gnb_pc");
+                $(".header").addClass("gnb_mo");
+            } else {
+                $(".header").removeClass("gnb_mo");
+                $(".header").addClass("gnb_pc");
+            }
+
+        });
+
+        // 창 크기 변경 시 헤더 스타일 변경 1025px 까지 gnb_wide
+        $(window).on("resize", function() {
+            $("html").removeClass("open_lnb");
+            $(".header").removeClass("on");
+
+            // submenu 모두 닫기  
+            $(".header .depth01").removeClass("on");
+
+            let w1100 = window.matchMedia("(max-width: 1100px)");
+            if (w1100.matches) {
+                $(".header").removeClass("gnb_pc");
+                $(".header").addClass("gnb_mo");
+            } else {
+                $(".header").removeClass("gnb_mo");
+                $(".header").addClass("gnb_pc");
+            }
+        });
+
+
+
+        // area_top 화면크기 조절
+        let nowZoom = 100;
+        let zoomControl = {
+            zoomOut: function() {
+                nowZoom = nowZoom - 5;
+                if (nowZoom <= 90) nowZoom = 90;
+                zoomControl.zooms();
+                // $(".box_btn_zoom .btn_zoom").text(nowZoom + '%")
+            },
+            zoomIn: function() {
+                nowZoom = nowZoom + 5;
+                if (nowZoom >= 120) nowZoom = 120;
+                zoomControl.zooms();
+                // $(".box_btn_zoom .btn_zoom").text(nowZoom + '%")
+            },
+            zoomReset: function() {
+                nowZoom = 100;
+                zoomControl.zooms();
+                // $(".box_btn_zoom .btn_zoom").text(nowZoom + '%")
+            },
+            zooms: function() {
+                let aUserAgent = navigator.userAgent.toLowerCase();
+
+                if (aUserAgent.indexOf("firefox") >= 0) {
+                    $("body").css("-moz-transform", "scale(" + nowZoom + "%)");
+                    $("body").css("-moz-transform-origin", "0 0");
+                } else {
+                    document.body.style.zoom = nowZoom + "%";
+                }
+                if (nowZoom == 90) {
+                    // 최소 배율 설정
+                    alert("더 이상 축소할 수 없습니다.");
+                }
+                if (nowZoom == 120) {
+                    // 최대 배율 설정
+                    alert("더 이상 확대할 수 없습니다.");
+                }
+            },
+        };
+        //////////////////////////////////////////////////////////////
+        // //header gnb_wide
+
+
+        // $(document).ready(function() {
+        //     // // PC 버전 GNB 마우스 클릭 이벤트
+        //     // $(document).on("click", ".header.gnb_pc .lnb_list .depth01", function () {
+        //     //     $("html").addClass("open_lnb");
+        //     // 		$(this).toggleClass("on");
+        //     //     $(".gnb_pc .lnb_list.on .depth02_content").stop().slideDown(200);
+        //     //     $(".lnb_drop_menu_back").stop().slideDown(200);
+        //     //     // $(".area_top, .area_top_inner p, .box_btns li, .box_btns .btn_zoom.in, .box_btns .btn_zoom.out, .box_btns .btn_zoom.reset, .area_menu, .area_menu, .lnb_list, .depth01, .depth01_item, .depth01_item_anchor, .area_menu .area_menu_inner .logo .logo_anchor, .area_top_inner").addClass("on");
+        //     // });
+
+        // });
+
+        // $(document).on("click", ".header.gnb_pc .lnb_list .depth01", function() {
+        //     $(".header.gnb_pc .lnb_list .depth01").removeClass("on");
+        //     $(".gnb_pc .depth01 .depth02_content").stop().fadeOut(200);
+        //      // 클릭된 요소에만 'on' 추가
+        // 		$(this).addClass("on");
+        // 		// 클릭된 요소의 depth02_content만 보이기
+        // 		$(this).find(".depth02_content").stop().fadeIn(200);
+
+        //     // // 'on' 클래스가 있을 때만 실행
+        //     // if ($(".header.gnb_pc .lnb_list .depth01").hasClass("on")) {
+        //     //     $(".gnb_pc .depth01.on .depth02_content").stop().slideDown(200);
+        //     //     $(".lnb_drop_menu_back").stop().slideDown(200);
+        //     // } else {
+        //     //     // $(".gnb_pc .depth01 .depth02_content").stop().fadeOut(200);
+        //     //     $(".lnb_drop_menu_back").stop().slideUp(200);
+        //     // }
+        // });
+
+        $(document).on("click", ".header.gnb_pc .lnb_list .depth01", function(e) {
+            e.stopPropagation(); // 이벤트 전파 방지
+            $(".header.gnb_pc .depth02_content").stop().slideUp(200);
+
+            if ($(this).hasClass("on")) {
+                // 이미 열려 있으면 닫기
+                $(this).removeClass("on");
+                $(this).find(".header.gnb_pc .depth02_content").stop().slideUp(200);
+            } else {
+                // 다른 모든 요소 닫기
+                $(".header.gnb_pc .lnb_list .depth01").removeClass("on");
+                $(".header.gnb_pc .lnb_list .depth02_content").stop().slideUp(200);
+                $(".header.gnb_pc .lnb_list .depth02_content").stop().slideUp(200);
+
+                // 클릭된 요소 열기
+                $(this).addClass("on");
+                $(this).find(".depth02_content").stop().slideDown(200);
+            }
+        });
+
+
+        // 스크롤 시 메인 비주얼 영역을 벗어나면 헤더 배경색 바뀜
+        $(document).ready(function() {
+            // Apply .gnb_scroll_change class immediately on page load only for #page_main
+            if ($("#page_main").length > 0) {
+                $(".area_top, .area_top_inner p, .box_btns li, .box_btns .btn_zoom.in, .box_btns .btn_zoom.out, .box_btns .btn_zoom.reset, .area_menu, .area_menu .depth01_item, .area_menu .area_menu_inner .logo .logo_anchor, .area_top_inner").addClass("gnb_scroll_change");
+            }
+
+            $(window).scroll(function() {
+                if ($("#page_main").length > 0) {
+                    // Get the scroll position
+                    var scrollPosition = $(this).scrollTop();
+                    var sectionAppPosition = $("#section_app").offset().top - 100;
+
+                    if (scrollPosition < sectionAppPosition) {
+                        $(".area_top, .area_top_inner p, .box_btns li, .box_btns .btn_zoom.in, .box_btns .btn_zoom.out, .box_btns .btn_zoom.reset, .area_menu, .area_menu .depth01_item, .area_menu .area_menu_inner .logo .logo_anchor, .area_top_inner").addClass("gnb_scroll_change");
+                    } else {
+                        $(".area_top, .area_top_inner p, .box_btns li, .box_btns .btn_zoom.in, .box_btns .btn_zoom.out, .box_btns .btn_zoom.reset, .area_menu, .area_menu .depth01_item, .area_menu .area_menu_inner .logo .logo_anchor, .area_top_inner").removeClass("gnb_scroll_change");
+                    }
+                }
+            });
+        });
+
+
+        // // nav_dim 클릭 시 메뉴 닫기
+        $(document).on("click", ".header .nav_dim", function(e) {
+            e.stopPropagation();
+            $("html").removeClass("open_lnb");
+            $(".gnb_pc .lnb_list").removeClass("on");
+            $(".header.gnb_mo").removeClass("on");
+            $(".gnb_pc .menu_text .depth02").stop().slideUp(200);
+            $(".header.gnb_mo .btn_util_ham").removeClass("on");
+            $(".header .menu_search").removeClass("on");
+        });
+
+
+        //////////////////////////////////////////////////////////////
+        // 모바일 헤더 gnb_mob - 1025px 미만 
+
+        // 터치디바이스 - wrap_menus 외 영역 터치 시 메뉴 닫기
+
+        $("html").on("touchend", function(e) {
+            if (!$(e.target).is(".header.gnb_mo .wrap_menus") && $(e.target).is(".nav_dim")) {
+                e.stopPropagation();
+                $("html").removeClass("open_lnb");
+                $(".header.gnb_mo .btn_util_ham").removeClass("on");
+                $(".header .menu_search").removeClass("on");
+                $(".header.gnb_mo").removeClass("on");
+                $(".header.gnb_mo").removeClass("open_search");
+            }
+        });
+
+
+        // 햄버거 메뉴 열기 버튼 클릭 시 
+        $(document).on("click", ".gnb_mo .btn_util_ham", function() {
+            $(this).toggleClass("on");
+
+            if ($(this).hasClass("on") === true) {
+                $("html").addClass("open_lnb");
+                $(".header.gnb_mo").addClass("on");
+            } else {
+                $("html").removeClass("open_lnb");
+                $(".header.gnb_mo").removeClass("on");
+            }
+        });
+
+
+        // 햄버거 메뉴 닫기 버튼 클릭 시 
+        $(document).on("click", ".header.gnb_mo .btn_close_menu", function() {
+
+            $(".header.gnb_mo").removeClass("on");
+            $(".header.gnb_mo .btn_util_ham").removeClass("on");
+            $(".gnb_mo .depth02").stop().slideUp(200);
+            $(".depth01").removeClass("on");
+
+            if ($(".menu_search").hasClass("on") === true) {
+
+            } else {
+                $("html").removeClass("open_lnb");
+            }
+        });
+
+
+        // 모바일에서 뎁스 1 클릭 시 링크 이동 금지
+        $(document).ready(function() {
+            // .header의 클래스에 따라 이벤트 리스너를 바인딩합니다.
+            if ($('.header').hasClass('gnb_mo')) {
+                // gnb_mo 클래스가 있는 경우에만 이벤트 리스너를 바인딩합니다.
+                $('.header.gnb_mo .depth01_item_anchor').on('click', function(event) {
+                    event.preventDefault(); // 링크 이동 기본 동작 막기
+                    // 이벤트 핸들러 내용 추가
+                });
+            }
+        });
+
+
+
+
+        $(document).ready(function() {
+            var isGnbOpen = $(".header.gnb_mo").hasClass("on"); // 페이지 로드 시 GNB가 열려있는지 여부를 확인하여 isGnbOpen 변수 설정
+            var isDepth02Open = false; // .depth02가 열려있는지 여부를 추적하는 변수
+
+            $(".header.gnb_mo .btn_util_ham").click(function() {
+                // 버튼 클릭 시 GNB가 열렸다면 isGnbOpen 변수 값을 true로 설정
+                isGnbOpen = true;
+
+                if ($(this).hasClass("on")) {
+                    // GNB 열기 로직
+                    $("html").addClass("open_lnb");
+                    $(".header.gnb_mo").addClass("on");
+                    // .depth02가 열려있는 상태 초기화
+                    isDepth02Open = false;
+                } else {
+                    // GNB 닫기 로직
+                    $("html").removeClass("open_lnb");
+                    $(".header.gnb_mo").removeClass("on");
+                }
+            });
+
+            // GNB 뎁스 1 클릭 시 뎁스 2 열림
+            $(".header.gnb_mo .depth01").click(function(event) {
+                $(this).toggleClass("on");
+
+                if ($(this).hasClass("on")) {
+                    // GNB가 열린 경우
+                    isGnbOpen = true;
+                    // 다른 요소들의 ".depth02_wrap"을 숨김
+                    $(".header.gnb_mo .depth01").not(this).removeClass("on");
+                    $(".header.gnb_mo .depth02").stop().slideUp(200); // 다른 서브메뉴 닫기
+                    $(this).children(".header.gnb_mo .depth02").stop().slideDown(200);
+                    // .depth02가 열려있다는 상태 업데이트
+                    isDepth02Open = true;
+                } else {
+                    // GNB가 닫힌 경우
+                    isGnbOpen = false;
+                    // 모든 요소들의 "on" 클래스를 제거하고 서브메뉴를 닫음
+                    $(".header.gnb_mo .depth01").removeClass("on");
+                    $(".header.gnb_mo .depth02").stop().slideUp(200);
+                    // .depth02가 닫혔다는 상태 업데이트
+                    isDepth02Open = false;
+                }
+            });
+
+
+            // 윈도우 리사이즈 이벤트 핸들러
+            $(window).resize(function() {
+                var windowWidth = $(window).width();
+
+                if (windowWidth < 1100 && isGnbOpen && isDepth02Open) {
+                    // 브라우저 창의 너비가 1100px 미만이고 GNB가 열려있고, 이전에 열었던 .depth02가 열려있는 경우
+                    // .depth02를 닫음
+                    $(".header.gnb_mo .depth02").stop().slideUp(200);
+                    // .depth02가 닫혔다는 상태 업데이트
+                    isDepth02Open = false;
+
+                    // GNB 메뉴 초기화
+                    $(".wrap_gnb.gnb_mo").hide();
+                    $("html").removeClass("open_lnb");
+                    $(".header.gnb_mo").removeClass("on");
+                    $(".header.gnb_mo .depth01").removeClass("on");
+                } else if (windowWidth < 1100 && isGnbOpen && !isDepth02Open) {
+                    // 브라우저 창의 너비가 1100px 미만이고 GNB가 열려있지만 .depth02가 열려있지 않은 경우
+                    // GNB 메뉴만 초기화
+                    $(".wrap_gnb.gnb_mo").hide();
+                    $("html").removeClass("open_lnb");
+                    $(".header.gnb_mo").removeClass("on");
+                }
+            });
+
+        });
+    </script>
+
+
+    <!-- 팝업 배경 dim 처리 -->
+    <!-- <div class="popup_mask"></div> -->
+
+    <!-- 팝업 본문 :  콘텐츠 준비중 알림 팝업 -->
+    <!-- <div class="prepare_alertPop"></div> -->
+
+    <!-- <script>
+        AOS.init();
+    </script> -->
+    <!-- <script>
+			$(document).ready(function () {
+					$(".checkbox").change(function () {
+							const selectedId = $(this).attr("id");
+							const selectedLabel = $(`label[for="${selectedId}"]`).text();
+	
+							if ($(this).is(":checked")) {
+									if ($(`.selected_filters ul li[data-id="${selectedId}"]`).length === 0) {
+											$(".selected_filters ul").append(
+													`<li data-id="${selectedId}">${selectedLabel} <button class="btn_remove_filter" data-id="${selectedId}">x</button></li>`
+											);
+									}
+							} else {
+									$(`.selected_filters ul li[data-id="${selectedId}"]`).remove();
+							}
+					});
+	
+					$(".selected_filters").on("click", ".btn_remove_filter", function () {
+							const id = $(this).data("id");
+							$(`#${id}`).prop("checked", false);
+							$(this).parent().remove();
+					});
+	
+					$(".btn_clear_filter").click(function () {
+							$(".checkbox").prop("checked", false);
+							$(".selected_filters ul").empty();
+					});
+			}); -->
+    <!-- </script> -->
+
+    <!-- <script>
+    $(document).ready(function () {
+        function updateFilterCount() {
+            const count = $(".selected_filters ul li").length;
+            $(".selected_filters h3 span").text(count);
+        }
+
+        $(".checkbox").change(function () {
+            const selectedId = $(this).attr("id");
+            const selectedLabel = $(`label[for="${selectedId}"]`).text();
+
+            if ($(this).is(":checked")) {
+                if ($(`.selected_filters ul li[data-id="${selectedId}"]`).length === 0) {
+                    $(".selected_filters ul").append(
+                        `<li data-id="${selectedId}">${selectedLabel} <button class="btn_remove_filter" data-id="${selectedId}">x</button></li>`
+                    );
+                }
+            } else {
+                $(`.selected_filters ul li[data-id="${selectedId}"]`).remove();
+            }
+
+            updateFilterCount();
+        });
+
+        $(".selected_filters").on("click", ".btn_remove_filter", function () {
+            const id = $(this).data("id");
+            $(`#${id}`).prop("checked", false);
+            $(this).parent().remove();
+            updateFilterCount();
+        });
+
+        $(".btn_clear_filter").click(function () {
+            $(".checkbox").prop("checked", false);
+            $(".selected_filters ul").empty();
+            updateFilterCount();
+        });
+
+				$(".btn_toggle").click(function () {
+            $(".wrap_radio").slideToggle();
+        });
+    });
+</script> -->
+
+    <!-- <script>
+	$(document).ready(function () {
+			function updateFilterCount() {
+					const count = $(".list_selected_filters .item_selected_filter").length;
+					$(".selected_filters h3 span").text(count);
+			}
+
+			$(".checkbox").change(function () {
+					const selectedId = $(this).attr("id");
+					const selectedLabel = $(`label[for="${selectedId}"]`).text();
+
+					if ($(this).is(":checked")) {
+							if ($(`.list_selected_filters .item_selected_filter[data-id="${selectedId}"]`).length === 0) {
+									$(".list_selected_filters").append(
+											`<li class="item_selected_filter" data-id="${selectedId}">${selectedLabel} <button class="btn_remove_filter" data-id="${selectedId}"></button></li>`
+									);
+							}
+					} else {
+							$(`.list_selected_filters .item_selected_filter[data-id="${selectedId}"]`).remove();
+					}
+
+					updateFilterCount();
+			});
+
+			$(".list_selected_filters").on("click", ".btn_remove_filter", function () {
+					const id = $(this).data("id");
+					$(`#${id}`).prop("checked", false);
+					$(this).parent().remove();
+					updateFilterCount();
+			});
+
+			$(".btn_clear_filter").click(function () {
+					$(".checkbox").prop("checked", false);
+					$(".list_selected_filters").empty();
+					updateFilterCount();
+			});
+
+			$(".btn_toggle").click(function () {
+					$(".wrap_radio").slideToggle();
+			});
+	}); -->
+    <!-- </script> -->
+
+
+    <!-- <script>
+	$(document).ready(function () {
+			function updateFilterCount() {
+					const count = $(".list_selected_filters .item_selected_filter").length;
+					$(".selected_filters h3 span").text(count);
+			}
+
+			$(".checkbox").change(function () {
+					const selectedId = $(this).attr("id");
+					const selectedLabel = $(`label[for="${selectedId}"]`).text();
+
+					if ($(this).is(":checked")) {
+							if ($(`.list_selected_filters .item_selected_filter[data-id="${selectedId}"]`).length === 0) {
+									$(".list_selected_filters").append(
+											`<li class="item_selected_filter" data-id="${selectedId}">${selectedLabel} <button class="btn_remove_filter" data-id="${selectedId}"></button></li>`
+									);
+							}
+					} else {
+							$(`.list_selected_filters .item_selected_filter[data-id="${selectedId}"]`).remove();
+					}
+
+					updateFilterCount();
+			});
+
+			$(".list_selected_filters").on("click", ".btn_remove_filter", function () {
+					const id = $(this).data("id");
+					$(`#${id}`).prop("checked", false);
+					$(this).parent().remove();
+					updateFilterCount();
+			});
+
+			$(".btn_clear_filter").click(function () {
+					$(".checkbox").prop("checked", false);
+					$(".list_selected_filters").empty();
+					updateFilterCount();
+			});
+
+			$(".btn_toggle").click(function () {
+					$(".wrap_radio").slideToggle();
+			});
+	});
+</script> -->
+
+</body>
+
+</html>

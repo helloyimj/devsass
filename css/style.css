@@ -999,6 +999,36 @@ button:disabled {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+.btn_inline.btn_attached_view.lined_blue {
+  width: 10.2rem;
+  height: 3.4rem;
+  line-height: 3.2rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 1.4rem;
+  color: #333c98;
+  border-color: #333c98;
+  border-radius: 1.6rem;
+  padding-left: 1.6rem;
+  text-align: left;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.btn_inline.btn_attached_view.lined_blue::after {
+  content: "";
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-image: url("../../public/img/icon/icon_link_blue.svg");
+  background-size: 100%;
+  position: absolute;
+  right: 1.6rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
 .btn_inline.btn_attached_download::after {
   display: block;
   content: "";
@@ -1707,16 +1737,9 @@ td select {
   display: -ms-flexbox;
   display: flex;
   gap: 3rem;
-  height: 3.6rem;
 }
 
 .box_radio {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -1732,33 +1755,30 @@ td .box_radio {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  height: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
+  height: 2.6rem;
+  width: 2.6rem;
   position: relative;
-  width: 2rem;
   margin: 0;
   background-color: #fff;
   cursor: pointer;
 }
 .rdobtn + label {
   cursor: pointer;
-  line-height: 2rem;
-  text-indent: 1rem;
+  line-height: 2.4rem;
+  text-indent: 1.2rem;
 }
 .rdobtn::after {
-  border-radius: 50%;
-  border-radius: 100%;
   content: "";
   display: none;
-  height: 1rem;
-  left: 0.4rem;
+  border-radius: 0.6rem;
+  height: 2.6rem;
+  width: 2.6rem;
   position: absolute;
-  top: 0.4rem;
-  width: 1rem;
 }
 .rdobtn:checked::after {
-  background-color: #005bff;
+  background-color: #333c98;
   display: block;
 }
 .rdobtn:disabled {
@@ -1795,44 +1815,53 @@ td .box_radio {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border: 1px solid #ddd;
-  height: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.6rem;
+  height: 2.6rem;
+  width: 2.6rem;
   position: relative;
-  width: 2rem;
+  margin: 0;
+  background-color: #fff;
   cursor: pointer;
 }
 .checkbox + label {
   cursor: pointer;
-  line-height: 2rem;
-  text-indent: 1rem;
+  line-height: 2.4rem;
+  text-indent: 1.2rem;
 }
 .checkbox::after {
   content: "";
-  display: none;
-  height: 1.8rem;
-  left: 0;
+  border-radius: 0.6rem;
+  height: 2.6rem;
+  width: 2.6rem;
   position: absolute;
-  top: 0;
+  background-image: url("../../public/img/icon/icon_check_grey.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 1.8rem;
+  height: 1.3rem;
+}
+.checkbox:checked {
+  background-color: #333c98;
 }
 .checkbox:checked::after {
-  color: #005bff;
   content: "";
   display: block;
-  font-size: 2rem;
-  line-height: 1.8rem;
+  background-color: #333c98;
+  line-height: 2.4rem;
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 1.2rem;
-  height: 1rem;
-  background-image: url("../../public/img/icon/checked.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+  background-image: url("../../public/img/icon/icon_check_white.svg");
 }
 .checkbox:disabled {
   border: 1px solid #eee;
@@ -3300,17 +3329,18 @@ input[type=number]::-webkit-inner-spin-button {
 .post_title.post_top {
   font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
+.post_title .post_title_anchor {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .post_title .post_title_item {
   position: relative;
   display: inline-block;
   text-align: left;
   max-width: 100%;
-}
-.post_title .post_title_item .post_title_anchor {
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .post_title .post_title_item.locked .post_title_anchor {
   padding-right: 2.6rem;

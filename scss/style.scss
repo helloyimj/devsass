@@ -1101,6 +1101,37 @@ button {
             top: 50%;
             transform: translateY(-50%);
         }
+
+        &.lined_blue {
+            width: 10.2rem;
+            height: 3.4rem;
+            line-height: 3.2rem;
+            // padding: 0 1.9rem;
+            justify-content: flex-end;
+            font-size: 1.4rem;
+            color: #333c98;
+            border-color: #333c98;
+            border-radius: 1.6rem;
+            padding-left: 1.6rem;
+            text-align: left;
+            justify-content: flex-start;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 1.4rem;
+                height: 1.4rem;
+                background-image: url("../../public/img/icon/icon_link_blue.svg");
+
+                background-size: 100%;
+                position: absolute;
+                right: 1.6rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+        
+        }
     }
 
     &.btn_attached_download {
@@ -1976,12 +2007,12 @@ td select {
     // margin-left: auto;
     display: flex;
     gap: 3rem;
-    height: 3.6rem;
+    // height: 3.6rem;
 }
 
 .box_radio {
-    align-items: center;
-    display: flex;
+    // align-items: center;
+    // display: flex;
     position: relative;
     flex-shrink: 0;
 }
@@ -1992,37 +2023,35 @@ td .box_radio {
 
 .rdobtn {
     appearance: none;
-    border: 1px solid $color_ddd;
-    border-radius: 50%;
-    height: 2rem;
+    border: 1px solid $color_ccc;
+    border-radius: .6rem;
+    height: 2.6rem;
+    width: 2.6rem;
     position: relative;
-    width: 2rem;
     margin: 0;
     background-color: $color_white;
     cursor: pointer;
 
     +label {
         cursor: pointer;
-        line-height: 2rem;
-        text-indent: 1rem;
+        line-height: 2.4rem;
+        text-indent: 1.2rem;
     }
 
     &::after {
-        border-radius: 50%;
-        border-radius: 100%;
         content: "";
         display: none;
-        height: 1rem;
-        left: 0.4rem;
-        // background: $color_white;
+        border-radius: .6rem;
+        height: 2.6rem;
+        width: 2.6rem;
         position: absolute;
-        top: 0.4rem;
-        width: 1rem;
+        // left: 0.4rem;
+        // top: 0.4rem;
     }
 
     &:checked {
         &::after {
-            background-color: $color_brand_main;
+            background-color: #333c98;
             display: block;
         }
 
@@ -2059,38 +2088,53 @@ td .box_radio {
 
 .checkbox {
     appearance: none;
-    border: 1px solid $color_ddd;
-    height: 2rem;
+    border: 1px solid $color_ccc;
+    border-radius: .6rem;
+    height: 2.6rem;
+    width: 2.6rem;
     position: relative;
-    width: 2rem;
+    margin: 0;
+    background-color: $color_white;
     cursor: pointer;
 
     +label {
         cursor: pointer;
-        line-height: 2rem;
-        text-indent: 1rem;
+        line-height: 2.4rem;
+        text-indent: 1.2rem;
     }
 
     &::after {
         content: "";
-        display: none;
-        height: 1.8rem;
-        left: 0;
-        // background: $color_white;
+        border-radius: .6rem;
+        height: 2.6rem;
+        width: 2.6rem;
         position: absolute;
-        top: 0;
+        background-image: url("../../public/img/icon/icon_check_grey.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
         width: 1.8rem;
+        height: 1.3rem;
+
     }
 
     &:checked {
-        &::after {
-            color: $color_brand_main;
+        background-color: #333c98;
+
+        &::after {            
             // content: "✔";
             content: "";
-            // background-color: $color_brand_main;
             display: block;
-            font-size: 2rem;
-            line-height: 1.8rem;
+            background-color: #333c98;
+            
+            // font-size: 2rem;
+            line-height: 2.4rem;
             text-align: center;
 
             position: absolute;
@@ -2098,13 +2142,7 @@ td .box_radio {
             left: 50%;
             transform: translate(-50%, -50%);
 
-            width: 1.2rem;
-            height: 1rem;
-
-            background-image: url("../../public/img/icon/checked.png");
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-position: center;
+            background-image: url("../../public/img/icon/icon_check_white.svg");
         }
 
         // + label {
@@ -4144,22 +4182,23 @@ input[type=number]::-webkit-inner-spin-button {
         font-family: $font_bold;
     }
 
+    .post_title_anchor {
+        // 뱃지 없을 때 (default)
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        // font-size: 1.6rem;
+        // color: $color_111;
+        // margin-right: 0.4rem;          
+    }
+
     .post_title_item {
         position: relative;
         display: inline-block;
         text-align: left;
         max-width: 100%;
-
-        .post_title_anchor {
-            // 뱃지 없을 때 (default)
-            width: 100%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            // font-size: 1.6rem;
-            // color: $color_111;
-            // margin-right: 0.4rem;          
-        }
 
         &.locked {
             // display: inline-block;
