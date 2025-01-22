@@ -566,9 +566,6 @@
   color: #fff;
   border-right: 1px solid #fff;
 }
-.gnb_pc .box_btns li.on {
-  border-right: 1px solid #111;
-}
 .gnb_pc .box_btns li:last-of-type {
   border-right: none;
 }

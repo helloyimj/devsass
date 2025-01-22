@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>통합검색&lt;민간 Sass 연계공통기반 통합관리포털</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+
+    <!-- JS -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/swiper-5.4.3.min.js"></script>
+    <script src="../js/nav.js"></script>
+    
+
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper sub_pages">
+        <!-- 바로가기 메뉴 -->
+        <nav id="skip"></nav>
+
+        <!-- 헤더 -->
+        <header id="header" class="header"></header>
+
+        <!-- 메인  -->
+        <main class="">
+
+            <!-- 본문 외부 영역 -->
+            <section id="content" class="">
+                <div class="page_inner">
+
+                    <!-- 본문 -->
+                    <article class="page page_notice">
+                        <!-- 브레드크럼 -->
+                        <div class="wrap_breadcrumb">
+                            <ul class="breadcrumbs">
+                                <li class="breadcrumbs_item cat_home"><a href="main.html" class="home" title="메인 페이지 이동"></a></li>
+                                <li class="breadcrumbs_item"><a href=".html">통합검색</a></li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="page_content">
+                            <!-- <div class="wrap_article"> -->
+                            <div class="article_title">
+                                <article class="page_title_area">
+                                    <h2 class="page_title">통합검색</h2>
+                                </article>
+                            </div>
+
+                            <div class="article_content">
+
+                                <!-- 검색 필터  -->
+                                <div class="wrap_search_filter">
+                                    <div class="box_input">
+                                        <input type="text" class="input_text input_searchbar" placeholder="검색어를 입력해주세요.">
+                                    </div>
+                                    <button type="submit" class="btn_submit btn_search">검색</button>
+                                </div>
+
+                                <!-- 검색 결과 -->
+                                <div class="wrap_result_table">
+
+                                    <!-- 테이블 상단 -->
+                                    <div class="box_table_top">
+                                        <div class="area_left">
+                                            <div class="result_word">
+                                                <p>적용된 검색어 “<span>협업</span>”       /       </p>
+                                            </div>
+                                            <div class="result_num">
+                                                <p>총 <span>0</span>건이 조회되었습니다.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--table -->
+                                    <div class="wrap_table">
+                                        <table class="table table_user_manage">
+                                            <caption>사용자 목록</caption>
+                                            <colgroup>
+                                                <col style="width: 155px;">
+                                                <col style="width: auto;">
+                                                <col style="width: 180px;">
+                                                <col style="width: 155px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">번호</th>
+                                                    <th scope="col">제목</th>
+                                                    <th scope="col">첨부</th>
+                                                    <th scope="col">등록일</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- 검색 결과가 없을 때 result_search_none 클래스 추가 -->
+                                                <tr class="result_search_none">
+                                                    <td colspan="4">
+                                                        <div class="result_search_none_text">
+                                                            <p>검색어 ‘그룹웨어’에 대한 검색 결과가 없습니다.<br></p>
+                                                            <span>철자나 맞춤법 오류가 있는지 확인해 주세요.</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- pagenation -->
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+
+                    </article>
+                </div>
+            </section>
+            <!-- 본문 외부 영역 end-->
+        </main>
+        <!-- 전체 영역 end  -->
+
+        <footer id="footer" class="footer"></footer>
+    </div>
+
+    <!-- 팝업 배경 dim 처리 -->
+    <!-- <div class="popup_mask"></div> -->
+
+    <!-- 팝업 본문 :  콘텐츠 준비중 알림 팝업 -->
+    <!-- <div class="prepare_alertPop"></div> -->
+
+    <!-- <script>
+        AOS.init();
+    </script> -->
+</body>
+
+</html>

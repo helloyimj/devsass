@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+/* 본고딕 */
+@font-face{
+	font-family: 'NotoKr';
+	font-weight: 400;
+	src: url("../font2/SpoqaHanSans-Regular.woff2") format('woff2'),
+	url("../font2/SpoqaHanSans-Regular.woff") format('woff');
+}
+@font-face{
+	font-family: 'NotoKr';
+	font-weight: 600;
+	src: url("../font2/SpoqaHanSans-Bold.woff2") format('woff2'),
+	url("../font2/SpoqaHanSans-Bold.woff") format('woff');
+}
+
+/* 에스코어드림 */
+@font-face{
+	font-family: 'SCDream';
+	src: url("../font2/SCDream-Regular.woff2") format('woff2'),
+	url("../font2/SCDream-Regular.woff") format('woff');
+}
+@font-face{
+	font-family: 'SCDream';
+	font-weight: 500;
+	src: url("../font2/SCDream-Medium.woff2") format('woff2'),
+	url("../font2/SCDream-Medium.woff") format('woff');
+}
+@font-face{
+	font-family: 'SCDream';
+	font-weight: 600;
+	src: url("../font2/SCDream-Bold.woff2") format('woff2'),
+	url("../font2/SCDream-Bold.woff") format('woff');
+}
+
+/* G마켓 */
+@font-face{
+	font-family: 'GmarketSans';
+	font-weight: 200;
+	src: url("../font2/GmarketSans-Light.woff2") format('woff2'),
+	url("../font2/GmarketSans-Light.woff") format('woff');
+}
+@font-face{
+	font-family: 'GmarketSans';
+	font-weight: 500;
+	src: url("../font2/GmarketSans-Medium.woff2") format('woff2'),
+	url("../font2/GmarketSans-Medium.woff") format('woff');
+}
+@font-face{
+	font-family: 'GmarketSans';
+	font-weight: 600;
+	src: url("../font2/GmarketSans-Bold.woff2") format('woff2'),
+	url("../font2/GmarketSans-Bold.woff") format('woff');
+}

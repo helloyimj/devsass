@@ -31,7 +31,7 @@ header +=                   '<div class="wrap_menus">';
 header +=                       '<div class="area_state">';
 header +=                           '<button type="button" class="btn_close_menu" aria-label="메뉴 닫기"></button>';
 header +=                           '<div class="user_info">';
-header +=                               header +=   '<div class="logo_lnb"><img src="https://saas.go.kr/static/media/logo_big.05f05bdc389c9469d02b.png" alt="민간 SaaS ';'연계공통기반 통합관리포털 플랫폼 로고"></div>';
+header +=                               '<div class="logo_lnb"><img src="../img/logo/logo_saas.svg" alt="민간 SaaS ';'연계공통기반 통합관리포털 플랫폼 로고"></div>';
 header +=                               '<div class="box_state state_login_before">';
 header +=                                   '<div class="user_info"></div>';
 header +=                               '</div>';

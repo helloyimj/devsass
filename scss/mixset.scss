@@ -1,7 +1,6 @@
 @charset "UTF-8";
 // @import "mixset.scss";
 //  Color System common $SCSS
-$color_white: #fff;
 $color_111: #111;
 $color_333: #333;
 $color_555: #555;
@@ -23,9 +22,9 @@ $color_blue_01: rgb(57 145 254 / 10%);
 $color_blue_02: rgb(57 145 254 / 20%);
 
 /* font color */
-$color_black: #3a3a3a;
+$color_white: #fff;
+$color_black: #111;
 $color_light_black: #383838;
-$color_777: #777; 
 
 /* Bg, border color */
 $color_aaa: #aaa;
@@ -72,9 +71,10 @@ $color_ft_aaa: #aaa;
 $color_ft_white: #fff;
 $color_ft_lightblue: #7aa9ff;
 
-
 $color_red: #f00;
-$color_brand_main: #005bff;
+$color_brand_main: #1953d5;
+$color_deepblue: #0f174d;
+
 // $color_blue_disabled: #a3baee;
 
 
@@ -148,25 +148,25 @@ $font_suit_bold : 'SUITBold', 'NotoSansRegular', '나눔바른고딕', 'NanumBar
 // /*  button style */
 @mixin filled_brand_main {
     color: $color_white;
-    background-color: $color_brand_main;
+    background-color: $color_deepblue;
 }
 
 @mixin lined_brand_main {
-    color: $color_brand_main;
+    color: $color_deepblue;
     background-color: $color_white;
-    border: 1px solid $color_brand_main;
+    border: 1px solid $color_deepblue;
 }
 
 @mixin filled_brand_main_lined {
     color: $color_white;
-    background-color: $color_brand_main;
-    border: 1px solid $color_ccc;
+    background-color: $color_deepblue;
+    border: 1px solid $color_deepblue;
 }
 
 @mixin filled_white_lined {
-    color: $color_brand_main;
+    color: $color_deepblue;
     background-color: $color_white;
-    border: 1px solid $color_ccc;
+    border: 1px solid $color_deepblue;
 }
 
 @mixin filled_white_font_black {
@@ -345,24 +345,24 @@ $font_suit_bold : 'SUITBold', 'NotoSansRegular', '나눔바른고딕', 'NanumBar
 }
 
 // 멀티라인 말줄임 표시
-// $line-cnt : 라인 수
-// $line-height : line-height값
 // 사용법 : @include ellipsis(3, 1.6em);
-// @mixin ellipsis_multi($line-cnt, $line-height) {
-// 	overflow: hidden;
-// 	text-overflow: ellipsis;
-// 	// display: -webkit-box;
-// 	// -webkit-line-clamp: $line-cnt;
-// 	// /* 라인수 */
-// 	// -webkit-box-orient: vertical;
-// 	display: flex;
-// 	-webkit-line-clamp: $line-cnt;
-// 	/* 라인수 */
-// 	word-wrap: break-word;
-// 	line-height: $line-height;
-// 	height: $line-height * $line-cnt;
-// 	/* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
-// }
+$line-cnt : 2;
+$line-height : 1.5;
+@mixin ellipsis_multi($line-cnt, $line-height) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	// display: -webkit-box;
+	// -webkit-line-clamp: $line-cnt;
+	// /* 라인수 */
+	// -webkit-box-orient: vertical;
+	display: flex;
+	-webkit-line-clamp: $line-cnt;
+	/* 라인수 */
+	word-wrap: break-word;
+	line-height: $line-height;
+	height: $line-height * $line-cnt;
+	/* line-height 가 1.2em 이고 3라인을 자르기 때문에 height는 1.2em * 3 = 3.6em */
+}
 
 @mixin ellipsis_multi {
     display: block;

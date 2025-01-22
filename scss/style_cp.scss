@@ -1986,7 +1986,7 @@ select {
     background-position: center right 3rem;
     background-repeat: no-repeat;
     background-size: 2rem 1rem;
-    color: $color_111;
+    color: #1d1d1d;
     border: 1px solid $color_ccc;
     border-radius: 1rem;
 
@@ -4187,9 +4187,11 @@ input[type=number]::-webkit-inner-spin-button {
     width: 100%;
     max-width: 100%;
     text-align: left;
+    display: flex;
+    gap: 1.2rem;
 
     &.post_top {
-        font-family: $font_bold;
+        font-family: $font_medium;
     }
 
     .post_title_anchor {
@@ -4208,9 +4210,7 @@ input[type=number]::-webkit-inner-spin-button {
         position: relative;
         display: inline-block;
         text-align: left;
-        max-width: 100%;
-
-       
+        width: 100%;
 
         &.locked {
             // display: inline-block;
@@ -4241,6 +4241,9 @@ input[type=number]::-webkit-inner-spin-button {
             right: 0;
         }
 
+    }
+    .post_num + .post_title_item {
+        width: calc(100% - 6rem);
     }
 }
 
@@ -4287,7 +4290,6 @@ input[type=number]::-webkit-inner-spin-button {
 
     .post_txt {
         width: 100%;
-        margin-top: 1.65rem;
         font-size: 14px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -4345,7 +4347,6 @@ input[type=number]::-webkit-inner-spin-button {
         }
     }
 
-    // &.type_post_txt {}
 
 }
 
@@ -4397,127 +4398,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 
-.section.customer {
-
-    /*  모바일 table_list -> card list type  */
-
-    .wrap_board_list {
-        border-top: 1px solid $color_111;
-        border-bottom: 1px solid $color_111;
-
-        .board_list {
-            display: flex;
-            flex-direction: column;
-
-
-            .board_item {
-                padding: 1.5rem 0;
-                width: 100%;
-
-                &:not(:nth-last-of-type(1)) {
-                    @include bb_ddd();
-                }
-            }
-
-            // .post_anchor {}
-        }
-
-
-        .post_title_item {
-
-            &.new {
-                .post_title_anchor {
-
-                    padding-right: 4.8rem;
-
-                }
-            }
-        }
-
-        .post_title_anchor {
-            text-indent: 0 !important;
-
-            .badge.lined {
-                // position: static;
-                margin-left: 10px;
-            }
-        }
-
-        .post_title {
-            margin-bottom: 1.5rem;
-
-        }
-    }
-
-    .type_board_post {
-        display: flex;
-        width: 100%;
-        gap: 1.5rem;
-        // flex-wrap: wrap;
-        // padding: 1.5rem 0;
-
-        .post_num {
-            display: flex;
-            justify-content: center;
-            width: 12%;
-            min-width: 40px;
-            height: 100%;
-            font-size: 14px;
-        }
-
-        .board_cnt {
-            display: flex;
-            flex-direction: column;
-            width: calc(88% - 15px);
-        }
-
-        .post_date {
-            color: $color_ft_777;
-            font-size: 12px;
-        }
-
-        .post_txt {
-            margin-top: 1.5rem;
-        }
-
-        .board_category {
-            margin-bottom: 1rem;
-        }
-
-        .post_info_list {
-            display: flex;
-
-            // width: 100%;
-            // overflow: hidden;
-            // text-overflow: ellipsis;
-            // white-space: nowrap;
-            .post_info_item {
-                position: relative;
-                display: inline-block;
-                padding-right: 14px;
-                padding-left: 14px;
-                color: $color_ft_777;
-                border-left: 1px solid $color_ddd;
-                font-size: 12px;
-
-                &:nth-of-type(1) {
-                    padding-left: 0;
-                    border-left: none;
-                }
-
-                // &.answered {
-                //     color: $color_brand_main;
-                // }
-
-                // &.noanswer {
-                //     color: $color_red;
-                // }
-
-            }
-        }
-    }
-
-}
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -4585,7 +4465,6 @@ input[type=number]::-webkit-inner-spin-button {
 
         .post_txt {
             font-size: 12px;
-            margin-top: 1.5rem;
             // width: 100%;
             // overflow: hidden;
             // text-overflow: ellipsis;
@@ -5356,6 +5235,34 @@ input[type=number]::-webkit-inner-spin-button {
     }
 
 
+
+
+
+
+
+    select {
+        // appearance: none;
+        // width: 16rem;
+        // height: 4.8rem;
+        // background-color: $color_white;
+        padding: 0 3rem 0 1.4rem;
+        // resize: none;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+        // vertical-align: middle;
+        // font-size: inherit;
+        // background-image: url("../img/icon/icon_chevron_down_black.svg");
+        // background-position: center right 3rem;
+        // background-repeat: no-repeat;
+        background-size: .9rem .6rem;
+        border-radius: .4rem;
+        border-color: #c6c6c6;
+    
+        // &:focus {
+        //     border-color: $color_brand_main;
+        // }
+    }
 
 }
 

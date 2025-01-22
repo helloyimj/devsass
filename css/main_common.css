@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* opacity color */
+/* font color */
+/* Bg, border color */
+.flex_center {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+/* font size */
+/* 메인페이지 공통 사항  */
+.page_main {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+}
+.page_main .swiper-pagination {
+  background-color: #accdec;
+}
+.page_main .swiper img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+}
+.page_main .inner {
+  width: 122rem;
+  margin: 0 auto;
+  height: 100%;
+  padding-top: 22.5rem;
+}
+.page_main section {
+  width: 100%;
+  min-height: 96rem;
+  max-height: 99rem;
+  position: relative;
+}
+.page_main section .wrap_section_title {
+  width: 100%;
+  position: relative;
+}
+.page_main section .wrap_section_title .wrap_title_text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+.page_main section .wrap_section_title .wrap_title_text::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background-color: #005bff;
+  border-radius: 3px;
+  top: -3.6rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.page_main section .wrap_section_title .wrap_title_text h4 {
+  font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 4.8rem;
+  margin-bottom: 3rem;
+}
+.page_main section .wrap_section_title .wrap_title_text p {
+  font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 2rem;
+  color: #777;
+  line-height: 1.5;
+}
+.page_main section .wrap_section_title .btn_action {
+  position: absolute;
+  right: 0;
+  bottom: 0.6rem;
+}
+.page_main .btn_round {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 16rem;
+  height: 4.8rem;
+  font-size: 1.8rem;
+  border-radius: 2.5rem;
+  font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.page_main .only_mob {
+  display: none;
+}
+.page_main .only_pc {
+  display: block;
+}

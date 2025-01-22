@@ -1,118 +1,106 @@
 let header = "";
-header +=   '<div class="header_inner">'
-header +=   '<div class="nav_dim"></div>'
-header +=   '<div class="wrap_gnb">'
-
-header +=        '<div class="area_top">';
-header +=                '<div class="area_top_inner">';
-header +=                    '<div class="top_line_bnr">';
-header +=                        '<div class="top_link_wrap top_link_wrap_inner">';
-header +=                            '<div class="top_inner">';
-header +=                                '<div class="top_flag_wrap">';
-header +=                                    '<p class="top_flag_in">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>';
-// header +=                                    '<button class="top_flag_info" id="top_flag" onclick="fntopFlag();">공식 누리집 확인방법<span class="sr_only">열림</span>';
-// header +=                                    '</button>';
-header +=                                '</div>';
-header +=                            '</div>';
-header +=                            '</div>';
-
-header +=                            '<div class="chk_nuri_addr_bnr" style="display: none;" id="chk_nuri">';
-header +=                                '<div class="top_inner">';
-header +=                                    '<strong>공식 누리집 주소 확인하기</strong>';
-header +=                                    '<p>go.kr 주소를 사용하는 누리집은 대한민국 정부기관이 관리하는 누리집입니다. <br>';
-header +=                                        '이 밖에 or.kr 또는 .kr등 다른 도메인 주소를 사용하고 있다면 아래 URL에서 도메인 주소를 확인해 보세요.<br>';
-header +=                                        '<a href="https://uiux.egovframe.go.kr/search.do" target="_blank" title="새창으로">운영중인 공식 누리집보기</a>';
-header +=                                    '</p>';
-header +=                                '</div>';
-header +=                            '</div>';
-header +=                        '</div>';
-header +=                    '</div>';
-
-header +=                            '<div class="top_inner">';
-header +=                                '<!-- 최상단 로그인 화면크기 조절 버튼 -->';
-header +=                                '<ul class="box_btns">';
-header +=                                    '<li><a href="login.html" target="_self" class="user_anchor" title="로그인 페이지로 이동">로그인</a></li>';
-header +=                                    '<li><a href="join.html" target="_self" class="user_anchor" title="회원가입 페이지로 이동">회원가입</a></li>';
-header +=                                    '<li><a href="sitemap.html" target="_self" class="user_anchor" title="누리집안내지도 페이지로 이동">누리집안내지도</a></li>';
-header +=                                    '<li class="box_btn_zoom">';
-header +=                                        '<span>화면크기</span>';
-header +=                                        '<button onclick="javascript:zoomControl.zoomIn()" class="btn_zoom in" title="화면 확대"></button>';
-header +=                                        '<button onclick="javascript:zoomControl.zoomOut()" class="btn_zoom out" title="화면 축소"></button>';
-header +=                                        '<button onclick="javascript:zoomControl.zoomReset()" class="btn_zoom reset" title="화면크기 초기화"></button>';
-header +=                                    '</li>';
-header +=                                '</ul>';
-header +=                            '</div>';
-header +=                '</div>';
-
-header +=       '<div class="area_menu">'
-header +=           '<div class="area_menu_inner"><span class="logo"><a class="logo_anchor" aria-label="메인페이지 이동" href="https://saas.go.kr/userpage" style="color: rgba(255, 255, 255, 0);"></a></span>'
-header +=               '<div class="wrap_menus">'
-header +=                   '<div class="area_state">'
-header +=                       '<button type="button" class="btn_close_menu" aria-label="메뉴 닫기"></button>'
-header +=                       '<div class="user_info">'
-header +=                           '<div class="logo_lnb"><img src="https://saas.go.kr/static/media/logo_big.05f05bdc389c9469d02b.png" alt="민간 SaaS 연계공통기반 통합관리포털 플랫폼 로고" /></div>'
-header +=                           '<div class="box_state state_login_before">'
-header +=                               '<div class="user_info"></div>'
-header +=                           '</div>'
-header +=                       '</div>'
-header +=                   '</div>'
-header +=                   '<nav id="gnb" class="wrap_group menu_text">'
-header +=                       '<div class="lnb_drop_menu"><h2 class="sr_only">주메뉴</h2>'
-header +=                           '<ul class="lnb_list">'
-header +=                               '<li class="depth01">'
-header +=                                   '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">소개</a></div>'
-header +=                                   '<ul class="depth02" style="display: none; height: 239.08px; padding-top: 21px; margin-top: 0px; padding-bottom: 40px; margin-bottom: 0px;">'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">민간 SaaS 연계공통기반 통합관리포털이란?</a></li>'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">전자정부 연계 SaaS 이용 절차</a></li>'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부 공통시스템과 연계된 민간 SaaS 목록</a></li>'
-header +=                                   '</ul>'
-header +=                               '</li>'
-header +=                               '<li class="depth01">'
-header +=                                   '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">전자정부 연계 SaaS</a></div>'
-header +=                                   '<ul class="depth02" style="display: none; height: 179.08px; padding-top: 21px; margin-top: 0px; padding-bottom: 40px; margin-bottom: 0px;">'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">모바일공무원증</a></li>'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부디렉터리 (LDAP)</a></li>'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">행정표준코드</a></li>'
-header +=                                   '</ul>'
-header +=                               '</li>'
-header +=                               '<li class="depth01">'
-header +=                                   '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">공공용 민간 SaaS</a></div>'
-header +=                                   '<ul class="depth02" style="display: none; height: 179.08px; padding-top: 21px; margin-top: 0px; padding-bottom: 40px; margin-bottom: 0px;">'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">모바일공무원증</a></li>'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부디렉터리 (LDAP)</a></li>'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">행정표준코드</a></li>'
-header +=                                   '</ul>'
-header +=                               '</li>'
-header +=                               '<li class="depth01">'
-header +=                                   '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">사용자 지원</a></div>'
-header +=                                   '<ul class="depth02" style="display: none; height: 140.087px; padding-top: 21px; margin-top: 0px; padding-bottom: 40px; margin-bottom: 0px;">'
-header +=                                       '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">자주묻는 질문</a></li>'
-header +=                                       '<li class="depth02_item"><a href="" class="depth02_item_anchor" target="_self" tabindex="0">자료실</a></li>'
-header +=                                       '<li class="depth02_item"><a href="__notice.html" class="depth02_item_anchor" target="_self" tabindex="0">공지사항</a></li>'
-header +=                                   '</ul>'
-header +=                               '</li>'
-header +=                           '</ul>'
-header +=                       '</div>'
-header +=                   '</nav>'
-header +=               '</div>'
-header +=               '<div class="wrap_user_info">'
-header +=                   '<div class="user_info">'
-header +=                       '<div class="user_btns">'
-header +=                         '<a href="javascript:;" class="btn_submit btn_user">로그인</a>'
-header +=                        '<a href="javascript:;" class="btn_submit btn_user">회원가입</a>'
-header +=                       '</div>'
-header +=                   '</div>'
-// header +=                   '<div class="user_info">'
-// header +=                     '<div class="user_btns">'
-// header +=                       '<a href="javascript:;" class="btn_type white">마이페이지</a>'
-// header +=                       '<a href="javascript:;" class="btn_type outline">로그아웃</a>'
-// header +=                    '</div>'
-// header +=                   '</div>'
-header +=               '</div>'
-header +=           '</div>'
-header +=       '</div>'
-header +=   '</div>'
-header +=   '</div>'
+header +=    '<div class="header_inner">';
+header +=       '<header id="header" class="header gnb_pc">';
+header +=       '<div class="header_inner">';
+header +=           '<div class="nav_dim"></div>';
+header +=           '<div class="wrap_gnb">';
+header +=               '<div class="area_top">';
+header +=                   '<div class="area_top_inner">';
+header +=                       '<div class="top_line_bnr">';
+header +=                           '<div class="top_link_wrap top_link_wrap_inner">';
+header +=                               '<div class="top_inner">';
+header +=                                   '<div class="top_flag_wrap"><p class="top_flag_in">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div>';
+header +=                               '</div>';
+header +=                           '</div>';
+header +=                       '</div>';
+header +=                       '<ul class="box_btns">';
+header +=                           '<li><a href="login.html" target="_self" class="user_anchor" title="로그인 페이지로 이동">로그인</a></li>';
+header +=                           '<li><a href="join.html" target="_self" class="user_anchor" title="회원가입 페이지로 이동">회원가입</a></li>';
+header +=                           '<li><a href="sitemap.html" target="_self" class="user_anchor" title="누리집안내지도 페이지로 이동">누리집안내지도</a></li>';
+header +=                           '<li class="box_btn_zoom"><span>화면크기</span>';
+header +=                               '<button onclick="javascript:zoomControl.zoomIn()" class="btn_zoom in" title="화면 확대"></button>';
+header +=                               '<button onclick="javascript:zoomControl.zoomOut()" class="btn_zoom out" title="화면 축소"></button>';
+header +=                               '<button onclick="javascript:zoomControl.zoomReset()" class="btn_zoom reset" title="화면크기 초기화"></button>';
+header +=                           '</li>';
+header +=                       '</ul>';
+header +=                   '</div>';
+header +=               '</div>';
+header +=               '<div class="area_menu">';
+header +=                   '<div class="area_menu_inner">';
+header +=                       '<div class="wrap_logo">';
+header +=                           '<div class="logo"><a class="logo_anchor" aria-label="메인페이지 이동" href="https://saas.go.kr/userpage"></a></div>';
+header +=                       '</div>';
+header +=                       '<div class="wrap_menus">';
+header +=                           '<div class="area_state">';
+header +=                               '<button type="button" class="btn_close_menu" aria-label="메뉴 닫기"></button>';
+header +=                               '<div class="user_info">';
+header +=                                   '<div class="logo_lnb"><img src="../img/logo/logo_saas.svg" alt="민간 SaaS 연계공통기반 통합관리포털 플랫폼 로고"></div>';
+header +=                                   '<div class="box_state state_login_before">';
+header +=                                       '<div class="user_info"></div>';
+header +=                                   '</div>';
+header +=                               '</div>';
+header +=                           '</div>';
+header +=                           '<nav id="gnb" class="wrap_group menu_text">';
+header +=                               '<div class="lnb_drop_menu">';
+header +=                                   '<h2 class="sr_only">주메뉴</h2>';
+header +=                                   '<ul class="lnb_list">';
+header +=                                       '<li class="depth01">';
+header +=                                           '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">소개</a></div>';
+header +=                                           '<div class="depth02_content">';
+header +=                                               '<ul class="depth02">';
+header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">민간 SaaS 연계공통기반 통합관리포털이란?</a></li>';
+header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">전자정부 연계 SaaS 이용 절차</a></li>';
+header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부 공통시스템과 연계된 민간 SaaS 목록</a></li>';
+header +=                                               '</ul>';
+header +=                                           '</div>';
+header +=                                       '</li>';
+header +=                                       '<li class="depth01">';
+header +=                                           '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">전자정부 연계 SaaS</a></div>';
+header +=                                           '<div class="depth02_content">';
+header +=                                               '<ul class="depth02">';
+header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">모바일공무원증</a></li>';
+header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부디렉터리 (LDAP)</a></li>';
+header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">행정표준코드</a></li>';
+header +=                                               '</ul>';
+header +=                                           '</div>';
+header +=                                       '</li>';
+header +=                                       '<li class="depth01">';
+header +=                                           '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">공공용 민간 SaaS</a></div>';
+header +=                                           '<div class="depth02_content">';
+header +=                                               '<ul class="depth02">';
+header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">모바일공무원증</a></li>';
+header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부디렉터리 (LDAP)</a></li>';
+header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">행정표준코드</a></li>';
+header +=                                               '</ul>';
+header +=                                           '</div>';
+header +=                                       '</li>';
+header +=                                       '<li class="depth01">';
+header +=                                           '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">사용자 지원</a></div>';
+header +=                                           '<div class="depth02_content">';
+header +=                                               '<ul class="depth02">';
+header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">자주묻는 질문</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="" class="depth02_item_anchor" target="_self" tabindex="0">자료실</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="__notice.html" class="depth02_item_anchor" target="_self" tabindex="0">공지사항항</a></li>';
+header +=                                               '</ul>';
+header +=                                           '</div>';
+header +=                                       '</li>';
+header +=                                   '</ul>';
+header +=                               '</div>';
+header +=                           '</nav>';
+header +=                       '</div>';
+header +=                       '<div class="wrap_search">';
+header +=                           '<form name="" id="" method="" action="" class="search_form">';
+header +=                               '<fieldset class="search_fieldset">';
+header +=                                   '<legend>검색</legend>';
+header +=                                   '<input type="search" name="" id="" class="search_input" title="검색어입력창" placeholder="검색어를 입력해보세요.">';
+header +=                                   '<button type="submit" class="search_submit" title="검색"></button>';
+header +=                               '</fieldset>';
+header +=                           '</form>';
+header +=                       '</div>';
+header +=                   '</div>';
+header +=               '</div>';
+header +=           '</div>';
+header +=       '</div>';
 
 let footer = "";
 footer +=  		'<footer id="footer" class="footer">';

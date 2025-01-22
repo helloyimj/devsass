@@ -114,8 +114,11 @@ body,
     // text-align: center;
     margin-top: 0;
     padding-top: 12.6rem;
-    padding-bottom: 23rem;
-  
+    padding-bottom: 23rem;  
+    }
+    .page_inner {
+    width: 1400px;
+    margin: 0 auto;
     }
     
       // 메인 페이지 타이틀 */
@@ -712,7 +715,7 @@ body,
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%); 
-            background-image: url('../img/icon/icon_set.png');
+            background-image: url('../img/icon/icon_set.svg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: 3rem;
@@ -742,7 +745,7 @@ body,
     }
     .btn_side_sup02 {
         &::after {
-        background-image: url('../img/icon/icon_ai.png');
+        background-image: url('../img/icon/icon_ai.svg');
         }
 
     }
@@ -971,6 +974,21 @@ body,
         bottom: 4rem; 
         z-index: 100;   
     }
+
+
+
+
+
+
+
+
+
+
+    // 250110
+    .page_inner {
+        width: 100%;
+        padding: 0 2%;
+    }
 }
 
 //////////////////////////////////////////////////////////////////////////////
@@ -1065,7 +1083,7 @@ body,
                 position: absolute;
                 width: 4.5rem;
                 height: 4.5rem;       
-                background-image: url('../img/icon/icon_top.png');
+                background-image: url('../img/icon/icon_top.svg');
                 background-repeat: no-repeat;
                 background-position: center;
                 background-size: auto;
@@ -1229,6 +1247,9 @@ body,
   // body {
   //     background-color: crimson;
   // }
+  .only_wide {
+    display: none;
+}
 
     .only_mob {
         display: block;
@@ -1257,15 +1278,23 @@ body,
     }
 
     .page {
-        padding-bottom: 5.5rem;
+        padding-bottom: 12.5rem;
     }
-
+    // 250110
+    .page_inner {
+        padding: 0 1.4rem;
+    }
 
   /* 푸터 영역  */
     .footer {
         font-size: 14px;
         height: unset;
 
+        .footer .area_info {
+            padding-top: 4.7rem;
+            padding-bottom: 5.5rem;
+        }
+        
         .inner {
             width: 100%;
             padding: 2.4rem 1.5rem 5rem;
@@ -1344,6 +1373,40 @@ body,
         }
     }
 
+
+    
+
+    .btn_submit {
+        // height: 3.4rem;
+        max-width: 8rem;
+        border-radius: .4rem;
+
+        // text-indent: 32px;
+        // font-size: 1.4rem;
+        &.btn_search {
+        max-width: 7.8rem;
+            width: 7.8rem;
+            height: 3.4rem;
+            text-indent: 32px;
+            font-size: 1.4rem;
+            
+        &::before {
+            width: 1.2rem;
+            height: 1.2rem;
+            position: absolute;
+            left: 1.8rem;
+            top: 1.2rem;
+            // background-position-x: 2rem;
+            // background-position: 2rem;
+        }
+
+
+    }
+}
+
+
+
+
 }
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -1394,7 +1457,7 @@ body,
 
     .page {
         margin-top: 0;
-        padding-bottom: 5.5rem;
+        // padding-bottom: 5.5rem;
     }
 
     .page_title {
@@ -1533,13 +1596,10 @@ body,
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
-/// 
-.page_inner {
+// /// 
 
-width: 1400px;
-margin: 0 auto;
-}
 
 // .select_searchbar {
 
 // }
+

@@ -85,6 +85,11 @@ body,
   padding-bottom: 23rem;
 }
 
+.page_inner {
+  width: 1400px;
+  margin: 0 auto;
+}
+
 .main .page_title {
   width: 100%;
   color: #111;
@@ -615,7 +620,7 @@ body,
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("../img/icon/icon_set.png");
+  background-image: url("../img/icon/icon_set.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 3rem;
@@ -636,7 +641,7 @@ body,
   font-size: 1.8rem;
 }
 .wrap_side_btn .btn_side_sup02::after {
-  background-image: url("../img/icon/icon_ai.png");
+  background-image: url("../img/icon/icon_ai.svg");
 }
 
 .bar_dash::after {
@@ -844,6 +849,10 @@ body,
     bottom: 4rem;
     z-index: 100;
   }
+  .page_inner {
+    width: 100%;
+    padding: 0 2%;
+  }
 }
 @media all and (max-width: 1120px) {
   .footer .wrap_address {
@@ -913,7 +922,7 @@ body,
     position: absolute;
     width: 4.5rem;
     height: 4.5rem;
-    background-image: url("../img/icon/icon_top.png");
+    background-image: url("../img/icon/icon_top.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
@@ -1069,6 +1078,9 @@ body,
   }
 }
 @media all and (max-width: 769px) {
+  .only_wide {
+    display: none;
+  }
   .only_mob {
     display: block;
   }
@@ -1090,12 +1102,19 @@ body,
     font-size: 28px;
   }
   .page {
-    padding-bottom: 5.5rem;
+    padding-bottom: 12.5rem;
+  }
+  .page_inner {
+    padding: 0 1.4rem;
   }
   /* 푸터 영역  */
   .footer {
     font-size: 14px;
     height: unset;
+  }
+  .footer .footer .area_info {
+    padding-top: 4.7rem;
+    padding-bottom: 5.5rem;
   }
   .footer .inner {
     width: 100%;
@@ -1162,6 +1181,24 @@ body,
   .page_content .wrap_table {
     max-width: 100%;
   }
+  .btn_submit {
+    max-width: 8rem;
+    border-radius: 0.4rem;
+  }
+  .btn_submit.btn_search {
+    max-width: 7.8rem;
+    width: 7.8rem;
+    height: 3.4rem;
+    text-indent: 32px;
+    font-size: 1.4rem;
+  }
+  .btn_submit.btn_search::before {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    left: 1.8rem;
+    top: 1.2rem;
+  }
 }
 /* mobile 규격  ( 모바일 기기 _ 실 사이즈 480px 미만의 모든 디바이스 ) */
 @media all and (max-width: 481px) {
@@ -1196,7 +1233,6 @@ body,
   }
   .page {
     margin-top: 0;
-    padding-bottom: 5.5rem;
   }
   .page_title {
     word-break: keep-all;
@@ -1290,8 +1326,4 @@ body,
   .footer {
     font-size: 0.9em;
   }
-}
-.page_inner {
-  width: 1400px;
-  margin: 0 auto;
 }

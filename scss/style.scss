@@ -1248,15 +1248,15 @@ button {
 
 .btn_action,
 .btn_link {
-    height: 4.5rem;
-    border-radius: 2.3rem;   
+    height: 3.4rem;
+    border-radius: 1.7rem;   
     font-size: 1.6rem;
     font-family: $font_medium;
-    text-indent: 2.4rem;
+    text-indent: 1.9rem;
     position: relative;
     display: flex;
     align-items: center;
-    line-height: 4.5rem;
+    line-height: 3.2rem;
 
     /* 버튼 색상 */
 
@@ -1266,7 +1266,7 @@ button {
         transition: all 0.1s;
 
         &:hover {        
-            @include filled_black;
+            @include filled_white_lined;
         }
     }
 
@@ -1344,19 +1344,22 @@ button {
     }
 
     &.link_in_white {
-        width: 20rem;
-
+        width: 13rem;
         &::after {
             content: "";
             position: absolute;
-            right: 1.6rem;
+            right: 1.8rem;
             top: 50%;
             transform: translateY(-50%);
-            width: 0.9rem;
-            height: 1.6rem;
+            width: 0.7rem;
+            height: 1.2rem;
             background-image: url("../img/icon/icon_chevron_right_white.svg");
             background-repeat: no-repeat;
             background-size: contain;
+        }
+
+        &:hover::after {
+            background-image: url("../img/icon/icon_chevron_right_navy.svg");
         }
     }
 
@@ -4422,7 +4425,7 @@ input[type=number]::-webkit-inner-spin-button {
             }
         }
 
-        .post_title_anchor {
+        .post_title_txt {
             text-indent: 0 !important;
 
             .badge.lined {
