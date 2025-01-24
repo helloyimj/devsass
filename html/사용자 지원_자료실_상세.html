@@ -12,9 +12,10 @@
     <!-- JS -->
     <script src="../js/jquery-3.6.3/jquery.min.js"></script>
     <script src="../js/swiper-5.4.3.min.js"></script>
+    <script src="../js/aos.js"></script>
     <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
     
-
 </head>
 
 <body>
@@ -38,14 +39,14 @@
                         <div class="wrap_breadcrumb">
                             <ul class="breadcrumbs">
                                 <li class="breadcrumbs_item cat_home"><a href="main.html" class="home" title="메인 페이지 이동"></a></li>
-                                <li class="breadcrumbs_item"><a href=".html">사용자 지원</a></li>
+                                <li class="breadcrumbs_item"><a href="사용자 지원_공지사항.html">사용자 지원</a></li>
                                 
                             </ul>
                         </div>
 
                         <div class="page_content">
                             <!-- <div class="wrap_article"> -->
-                            <div class="article_title">
+                            <div class="article_title" data-aos="fade-up">
                                 <article class="page_title_area">
                                     <h2 class="page_title">자료실</h2>
                                     <h3 class="page_title_sub">민간 SaaS 연계공통기반과 클라우드 정책에 관련된 자료를 공유합니다.</h3>
@@ -81,7 +82,7 @@
                                             <li class="attached_file_item">
                                                 <div class="attached_file_txt">
                                                     <i class="thumb">
-                                                        <img src="../img/thumb/file_thumb_pdf.svg" alt="" class="file_thumb_pdf">
+                                                        <img src="../img/thumb/pdf.svg" alt="" class="file_thumb_pdf">
                                                     </i>
                                                     <p>CSAP 인증을 받은 SaaS 목록 안내(‘24.10)<span class="txtByte"> [pdf, 328kb]</span></p>
                                                 </div>
@@ -93,7 +94,7 @@
                                             <li class="attached_file_item">
                                                 <div class="attached_file_txt">
                                                     <i class="thumb">
-                                                        <img src="../img/thumb/file_thumb_pdf.svg" alt="" class="file_thumb_pdf">
+                                                        <img src="../img/thumb/pdf.svg" alt="" class="file_thumb_pdf">
                                                     </i>
                                                     <p>CSAP 인증을 받은 SaaS 목록 안내(‘24.10)<span class="txtByte"> [pdf, 328kb]</span></p>
                                                 </div>
@@ -135,15 +136,9 @@
         <footer id="footer" class="footer"></footer>
     </div>
 
-    <!-- 팝업 배경 dim 처리 -->
-    <!-- <div class="popup_mask"></div> -->
-
-    <!-- 팝업 본문 :  콘텐츠 준비중 알림 팝업 -->
-    <!-- <div class="prepare_alertPop"></div> -->
-
-    <!-- <script>
+  <script>
         AOS.init();
-    </script> -->
+    </script>
 </body>
 
 </html>

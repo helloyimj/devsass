@@ -13,8 +13,8 @@
     <!-- JS -->
     <script src="../js/jquery-3.6.3/jquery.min.js"></script>
     <script src="../js/swiper-5.4.3.min.js"></script>
-    <script src="../js/header.js"></script>
-    
+    <!-- <script src="../js/header.js"></script> -->
+
 
 </head>
 
@@ -25,7 +25,7 @@
             <a href="#content" class="skip_anchor">본문 바로가기</a>
         </nav>
 
-        <!-- 헤더 --> 
+        <!-- 헤더 -->
         <header id="header" class="header main_header">
             <div class="header_inner">
                 <div class="nav_dim"></div>
@@ -54,13 +54,13 @@
                     <div class="area_menu">
                         <div class="area_menu_inner">
                             <div class="wrap_logo">
-                                <div class="logo"><a class="logo_anchor" aria-label="메인페이지 이동" href="https://saas.go.kr/userpage"></a></div>
+                                <div class="logo"><a class="logo_anchor" aria-label="메인페이지 이동" href="main.html"></a></div>
                             </div>
                             <div class="wrap_menus">
                                 <div class="area_state">
                                     <button type="button" class="btn_close_menu" aria-label="메뉴 닫기"></button>
                                     <div class="user_info">
-                                        <div class="logo_lnb"><img src="../img/logo/logo_saas.svg" alt="민간 SaaS 연계공통기반 통합관리포털 플랫폼 로고"></div>
+                                        <div class="logo_lnb"><img src="../img/logo/logo_saas.png" alt="민간 SaaS 연계공통기반 통합관리포털 플랫폼 로고"></div>
                                         <div class="box_state state_login_before">
                                             <div class="user_info"></div>
                                         </div>
@@ -71,50 +71,71 @@
                                         <h2 class="sr_only">주메뉴</h2>
                                         <ul class="lnb_list">
                                             <li class="depth01">
-                                                <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">소개</a></div>
+                                                <div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">소개</a></div>
                                                 <div class="depth02_content">
-                                                    <ul class="depth02">
-                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">민간 SaaS 연계공통기반 통합관리포털이란?</a></li>
-                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">전자정부 연계 SaaS 이용 절차</a></li>
-                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부 공통시스템과 연계된 민간 SaaS 목록</a></li>
-                                                    </ul>
+                                                    <div class="depth02_inner">
+                                                        <div class="depth02_title">
+                                                            <h3>소개</h3>
+                                                        </div>
+                                                        <ul class="depth02">
+                                                            <li class="depth02_item"><a href="소개_민간SaaS연계공통기반이란.html" class="depth02_item_anchor" target="_self">민간 SaaS 연계공통기반이란?</a></li>
+                                                            <li class="depth02_item"><a href="소개_연계한 민간 SaaS.html" class="depth02_item_anchor" target="_self">연계한 민간 SaaS</a></li>
+                                                            <li class="depth02_item"><a href="소개_통합관리포털소개.html" class="depth02_item_anchor" target="_self">통합관리포털 소개</a></li>
+                                                            <li class="depth02_item"><a href="소개_이용절차.html" class="depth02_item_anchor" target="_self">이용 절차</a></li>
+                                                            <li class="depth02_item"><a href="소개_이용신청.html" class="depth02_item_anchor" target="_self">이용 신청</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li class="depth01">
-                                                <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">전자정부 연계 SaaS</a></div>
+                                                <div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">전자정부 연계 SaaS</a></div>
                                                 <div class="depth02_content">
-                                                    <ul class="depth02">
-                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">모바일공무원증</a></li>
-                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부디렉터리 (LDAP)</a></li>
-                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">행정표준코드</a></li>
-                                                    </ul>
+                                                    <div class="depth02_inner">
+                                                        <div class="depth02_title">
+                                                            <h3>전자정부 연계 SaaS</h3>
+                                                        </div>
+                                                        <ul class="depth02">
+                                                            <li class="depth02_item"><a href="전자정부 연계 SaaS_모바일 공무원증.html" class="depth02_item_anchor" target="_self">모바일공무원증</a></li>
+                                                            <li class="depth02_item"><a href="전자정부 연계 SaaS_정부디렉터리LDAP.html" class="depth02_item_anchor" target="_self">정부디렉터리 (LDAP)</a></li>
+                                                            <li class="depth02_item"><a href="전자정부 연계 SaaS_행정표준코드.html" class="depth02_item_anchor" target="_self">행정표준코드</a></li>
+                                                            <li class="depth02_item"><a href="전자정부 연계 SaaS_행정전자서명(GPKI).html" class="depth02_item_anchor" target="_self">행정전자서명(GPKI)</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li class="depth01">
-                                                <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">공공용 민간 SaaS</a></div>
+                                                <div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">공공용 민간 SaaS</a></div>
                                                 <div class="depth02_content">
-                                                    <ul class="depth02">
-                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">모바일공무원증</a></li>
-                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부디렉터리 (LDAP)</a></li>
-                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">행정표준코드</a></li>
-                                                    </ul>
+                                                    <div class="depth02_inner">
+                                                        <div class="depth02_title">
+                                                            <h3>공공용 민간 SaaS</h3>
+                                                        </div>
+                                                        <ul class="depth02">
+                                                            <li class="depth02_item"><a href="공공용 민간 SaaS.html" class="depth02_item_anchor" target="_self">공공용 민간 SaaS</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </li>
                                             <li class="depth01">
-                                                <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">사용자 지원</a></div>
+                                                <div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">사용자 지원</a></div>
                                                 <div class="depth02_content">
-                                                    <ul class="depth02">
-                                                        <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">자주묻는 질문</a></li>
-                                                        <li class="depth02_item"><a href="" class="depth02_item_anchor" target="_self" tabindex="0">자료실</a></li>
-                                                        <li class="depth02_item"><a href="__notice.html" class="depth02_item_anchor" target="_self" tabindex="0">공지사항항</a></li>
-                                                    </ul>
+                                                    <div class="depth02_inner">
+                                                        <div class="depth02_title">
+                                                            <h3>사용자 지원</h3>
+                                                        </div>
+                                                        <ul class="depth02">
+                                                            <li class="depth02_item"><a href="사용자 지원_공지사항.html" class="depth02_item_anchor" target="_self">공지사항</a></li>
+                                                            <li class="depth02_item"><a href="사용자 지원_자주 묻는 질문.html" class="depth02_item_anchor" target="_self">자주묻는 질문</a></li>
+                                                            <li class="depth02_item"><a href="자료실.html" class="depth02_item_anchor" target="_self">자료실</a></li>
+                                                            <li class="depth02_item"><a href="사용자 지원_기술지원.html" class="depth02_item_anchor" target="_self">기술지원</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </li>
                                         </ul>
                                     </div>
                                 </nav>
                             </div>
-                            
                             <div class="box_btn_util">
                                 <div class="box_btn_item">
                                     <button type="button" id="btn_util_search" class="btn_util_search" aria-label="홈페이지 내 검색 열기"></button>
@@ -138,17 +159,18 @@
                                 </form>
                             </div>
                         </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </header>
+
+
         <!-- 메인  -->
         <main class="">
 
             <!-- 본문 외부 영역 -->
             <section id="content" class="">
-                <div class="page_inner">
+                <div class="page_inner" style="background-color: red;">
 
                     <!-- 본문 -->
                     <article class="page page_saas_serach">
@@ -217,6 +239,7 @@
             </div>
     </div>
     </footer>
+
     </div>
 
     <script>
@@ -364,8 +387,8 @@
 
         $(document).on("click", ".header.gnb_pc .lnb_list .depth01", function(e) {
             e.stopPropagation(); // 이벤트 전파 방지
-						$(".header.gnb_pc .depth02_content").stop().slideUp(200);
-						
+            $(".header.gnb_pc .depth02_content").stop().slideUp(200);
+
             if ($(this).hasClass("on")) {
                 // 이미 열려 있으면 닫기
                 $(this).removeClass("on");
@@ -555,15 +578,9 @@
     </script>
 
 
-    <!-- 팝업 배경 dim 처리 -->
-    <!-- <div class="popup_mask"></div> -->
-
-    <!-- 팝업 본문 :  콘텐츠 준비중 알림 팝업 -->
-    <!-- <div class="prepare_alertPop"></div> -->
-
-    <!-- <script>
+    <script>
         AOS.init();
-    </script> -->
+    </script>
     <!-- <script>
 			$(document).ready(function () {
 					$(".checkbox").change(function () {
@@ -765,36 +782,36 @@
                             <div class="lnb_drop_menu"><h2 class="sr_only">주메뉴</h2>
                                 <ul class="lnb_list">
                                     <li class="depth01">
-                                        <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">소개</a></div>
+                                        <div class="depth01_item"><a class="depth01_item_anchor" target="_self">소개</a></div>
                                         <ul class="depth02" style="display: none; height: 239.08px; padding-top: 21px; margin-top: 0px; padding-bottom: 40px; margin-bottom: 0px;">
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">민간 SaaS 연계공통기반 통합관리포털이란?</a></li>
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">전자정부 연계 SaaS 이용 절차</a></li>
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부 공통시스템과 연계된 민간 SaaS 목록</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">민간 SaaS 연계공통기반 통합관리포털이란?</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">전자정부 연계 SaaS 이용 절차</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">정부 공통시스템과 연계된 민간 SaaS 목록</a></li>
                                         </ul>
                                     </li>
                                     <li class="depth01">
-                                        <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">서비스</a></div>
+                                        <div class="depth01_item"><a class="depth01_item_anchor" target="_self">서비스</a></div>
                                         <ul class="depth02" style="display: none; height: 179.08px; padding-top: 21px; margin-top: 0px; padding-bottom: 40px; margin-bottom: 0px;">
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">모바일공무원증</a></li>
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부디렉터리 (LDAP)</a></li>
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">행정표준코드</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">모바일공무원증</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">정부디렉터리 (LDAP)</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">행정표준코드</a></li>
                                         </ul>
                                     </li>
                                     <li class="depth01">
-                                        <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">행정·공공기관 클라우드 전환</a></div>
+                                        <div class="depth01_item"><a class="depth01_item_anchor" target="_self">행정·공공기관 클라우드 전환</a></div>
                                         <ul class="depth02" style="display: none; height: 278.073px; padding-top: 21px; margin-top: 0px; padding-bottom: 40px; margin-bottom: 0px;">
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">공공부문 클라우드 전환정책</a></li>
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">행정·공공기관 클라우드 전환사업</a></li>
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">클라우드컴퓨팅서비스 활용모델 사업</a></li>
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">민간 SaaS 활용 촉진</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">공공부문 클라우드 전환정책</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">행정·공공기관 클라우드 전환사업</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">클라우드컴퓨팅서비스 활용모델 사업</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">민간 SaaS 활용 촉진</a></li>
                                         </ul>
                                     </li>
                                     <li class="depth01">
-                                        <div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">운영지원센터</a></div>
+                                        <div class="depth01_item"><a class="depth01_item_anchor" target="_self">운영지원센터</a></div>
                                         <ul class="depth02" style="display: none; height: 179.08px; padding-top: 21px; margin-top: 0px; padding-bottom: 40px; margin-bottom: 0px;">
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">공지사항</a></li>
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">자료실</a></li>
-                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">자주묻는 질문</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">공지사항</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">자료실</a></li>
+                                            <li class="depth02_item"><a class="depth02_item_anchor" target="_self">자주묻는 질문</a></li>
                                         </ul>
                                     </li>
                                 </ul>

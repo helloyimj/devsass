@@ -1,106 +1,141 @@
 let header = "";
-header +=    '<div class="header_inner">';
-header +=       '<header id="header" class="header gnb_pc">';
+
 header +=       '<div class="header_inner">';
-header +=           '<div class="nav_dim"></div>';
-header +=           '<div class="wrap_gnb">';
-header +=               '<div class="area_top">';
-header +=                   '<div class="area_top_inner">';
-header +=                       '<div class="top_line_bnr">';
-header +=                           '<div class="top_link_wrap top_link_wrap_inner">';
-header +=                               '<div class="top_inner">';
-header +=                                   '<div class="top_flag_wrap"><p class="top_flag_in">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div>';
-header +=                               '</div>';
+// header +=       '<div class="nav_dim"></div>';
+header +=       '<div class="wrap_gnb">';
+header +=           '<div class="area_top">';
+header +=               '<div class="area_top_inner">';
+header +=                   '<div class="top_line_bnr">';
+header +=                       '<div class="top_link_wrap top_link_wrap_inner">';
+header +=                           '<div class="top_inner">';
+header +=                               '<div class="top_flag_wrap"><p class="top_flag_in">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div>';
 header +=                           '</div>';
 header +=                       '</div>';
-header +=                       '<ul class="box_btns">';
-header +=                           '<li><a href="login.html" target="_self" class="user_anchor" title="로그인 페이지로 이동">로그인</a></li>';
-header +=                           '<li><a href="join.html" target="_self" class="user_anchor" title="회원가입 페이지로 이동">회원가입</a></li>';
-header +=                           '<li><a href="sitemap.html" target="_self" class="user_anchor" title="누리집안내지도 페이지로 이동">누리집안내지도</a></li>';
-header +=                           '<li class="box_btn_zoom"><span>화면크기</span>';
-header +=                               '<button onclick="javascript:zoomControl.zoomIn()" class="btn_zoom in" title="화면 확대"></button>';
-header +=                               '<button onclick="javascript:zoomControl.zoomOut()" class="btn_zoom out" title="화면 축소"></button>';
-header +=                               '<button onclick="javascript:zoomControl.zoomReset()" class="btn_zoom reset" title="화면크기 초기화"></button>';
-header +=                           '</li>';
-header +=                       '</ul>';
 header +=                   '</div>';
+header +=                   '<ul class="box_btns">';
+header +=                       '<li><a href="login.html" target="_self" class="user_anchor" title="로그인 페이지로 이동">로그인</a></li>';
+header +=                       '<li><a href="join.html" target="_self" class="user_anchor" title="회원가입 페이지로 이동">회원가입</a></li>';
+header +=                       '<li><a href="sitemap.html" target="_self" class="user_anchor" title="누리집안내지도 페이지로 이동">누리집안내지도</a></li>';
+header +=                       '<li class="box_btn_zoom"><span>화면크기</span>';
+header +=                           '<button onclick="javascript:zoomControl.zoomIn()" class="btn_zoom in" title="화면 확대"></button>';
+header +=                           '<button onclick="javascript:zoomControl.zoomOut()" class="btn_zoom out" title="화면 축소"></button>';
+header +=                           '<button onclick="javascript:zoomControl.zoomReset()" class="btn_zoom reset" title="화면크기 초기화"></button>';
+header +=                       '</li>';
+header +=                   '</ul>';
 header +=               '</div>';
-header +=               '<div class="area_menu">';
-header +=                   '<div class="area_menu_inner">';
-header +=                       '<div class="wrap_logo">';
-header +=                           '<div class="logo"><a class="logo_anchor" aria-label="메인페이지 이동" href="https://saas.go.kr/userpage"></a></div>';
-header +=                       '</div>';
-header +=                       '<div class="wrap_menus">';
-header +=                           '<div class="area_state">';
-header +=                               '<button type="button" class="btn_close_menu" aria-label="메뉴 닫기"></button>';
-header +=                               '<div class="user_info">';
-header +=                                   '<div class="logo_lnb"><img src="../img/logo/logo_saas.svg" alt="민간 SaaS 연계공통기반 통합관리포털 플랫폼 로고"></div>';
-header +=                                   '<div class="box_state state_login_before">';
-header +=                                       '<div class="user_info"></div>';
-header +=                                   '</div>';
+header +=           '</div>';
+header +=           '<div class="area_menu">';
+header +=               '<div class="area_menu_inner">';
+header +=                   '<div class="wrap_logo">';
+header +=                       '<div class="logo"><a class="logo_anchor" aria-label="메인페이지 이동" href="main.html"></a></div>';
+header +=                   '</div>';
+header +=                   '<div class="wrap_menus">';
+header +=                       '<div class="area_state">';
+header +=                           '<button type="button" class="btn_close_menu" aria-label="메뉴 닫기"></button>';
+header +=                           '<div class="user_info">';
+header +=                               '<div class="logo_lnb"><img src="../img/logo/logo_saas.png" alt="민간 SaaS 연계공통기반 통합관리포털 플랫폼 로고" /></div>';
+header +=                               '<div class="box_state state_login_before">';
+header +=                                   '<div class="user_info"></div>';
 header +=                               '</div>';
 header +=                           '</div>';
-header +=                           '<nav id="gnb" class="wrap_group menu_text">';
-header +=                               '<div class="lnb_drop_menu">';
-header +=                                   '<h2 class="sr_only">주메뉴</h2>';
-header +=                                   '<ul class="lnb_list">';
-header +=                                       '<li class="depth01">';
-header +=                                           '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">소개</a></div>';
-header +=                                           '<div class="depth02_content">';
-header +=                                               '<ul class="depth02">';
-header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">민간 SaaS 연계공통기반 통합관리포털이란?</a></li>';
-header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">전자정부 연계 SaaS 이용 절차</a></li>';
-header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부 공통시스템과 연계된 민간 SaaS 목록</a></li>';
-header +=                                               '</ul>';
-header +=                                           '</div>';
-header +=                                       '</li>';
-header +=                                       '<li class="depth01">';
-header +=                                           '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">전자정부 연계 SaaS</a></div>';
-header +=                                           '<div class="depth02_content">';
-header +=                                               '<ul class="depth02">';
-header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">모바일공무원증</a></li>';
-header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부디렉터리 (LDAP)</a></li>';
-header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">행정표준코드</a></li>';
-header +=                                               '</ul>';
-header +=                                           '</div>';
-header +=                                       '</li>';
-header +=                                       '<li class="depth01">';
-header +=                                           '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">공공용 민간 SaaS</a></div>';
-header +=                                           '<div class="depth02_content">';
-header +=                                               '<ul class="depth02">';
-header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">모바일공무원증</a></li>';
-header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">정부디렉터리 (LDAP)</a></li>';
-header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">행정표준코드</a></li>';
-header +=                                               '</ul>';
-header +=                                           '</div>';
-header +=                                       '</li>';
-header +=                                       '<li class="depth01">';
-header +=                                           '<div class="depth01_item"><a class="depth01_item_anchor" target="_self" tabindex="0">사용자 지원</a></div>';
-header +=                                           '<div class="depth02_content">';
-header +=                                               '<ul class="depth02">';
-header +=                                                   '<li class="depth02_item"><a class="depth02_item_anchor" target="_self" tabindex="0">자주묻는 질문</a></li>';
-header +=                                                   '<li class="depth02_item"><a href="" class="depth02_item_anchor" target="_self" tabindex="0">자료실</a></li>';
-header +=                                                   '<li class="depth02_item"><a href="__notice.html" class="depth02_item_anchor" target="_self" tabindex="0">공지사항항</a></li>';
-header +=                                               '</ul>';
-header +=                                           '</div>';
-header +=                                       '</li>';
-header +=                                   '</ul>';
-header +=                               '</div>';
-header +=                           '</nav>';
 header +=                       '</div>';
-header +=                       '<div class="wrap_search">';
-header +=                           '<form name="" id="" method="" action="" class="search_form">';
-header +=                               '<fieldset class="search_fieldset">';
-header +=                                   '<legend>검색</legend>';
-header +=                                   '<input type="search" name="" id="" class="search_input" title="검색어입력창" placeholder="검색어를 입력해보세요.">';
-header +=                                   '<button type="submit" class="search_submit" title="검색"></button>';
-header +=                               '</fieldset>';
-header +=                           '</form>';
+header +=                       '<nav id="gnb" class="wrap_group menu_text">';
+header +=                           '<div class="lnb_drop_menu">';
+header +=                               '<h2 class="sr_only">주메뉴</h2>';
+header +=                               '<ul class="lnb_list">';
+header +=                                   '<li class="depth01">';
+header +=                                       '<div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">소개</a></div>';
+header +=                                       '<div class="depth02_content">';
+header +=                                           '<div class="depth02_inner">';
+header +=                                               '<div class="depth02_title">';
+header +=                                                   '<h3>소개</h3>';
+header +=                                               '</div>';
+header +=                                               '<ul class="depth02">';
+header +=                                                   '<li class="depth02_item"><a href="소개_민간SaaS연계공통기반이란.html" class="depth02_item_anchor" target="_self">민간 SaaS 연계공통기반이란?</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="소개_연계한 민간 SaaS.html" class="depth02_item_anchor" target="_self">연계한 민간 SaaS</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="소개_통합관리포털소개.html" class="depth02_item_anchor" target="_self">통합관리포털 소개</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="소개_이용절차.html" class="depth02_item_anchor" target="_self">이용 절차</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="소개_이용신청.html" class="depth02_item_anchor" target="_self">이용 신청</a></li>';
+header +=                                               '</ul>';
+header +=                                           '</div>';
+header +=                                       '</div>';
+header +=                                   '</li>';
+header +=                                   '<li class="depth01">';
+header +=                                       '<div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">전자정부 연계 SaaS</a></div>';
+header +=                                       '<div class="depth02_content">';
+header +=                                           '<div class="depth02_inner">';
+header +=                                               '<div class="depth02_title">';
+header +=                                                   '<h3>전자정부 연계 SaaS</h3>';
+header +=                                               '</div>';
+header +=                                               '<ul class="depth02">';
+header +=                                                   '<li class="depth02_item"><a href="전자정부 연계 SaaS_모바일 공무원증.html" class="depth02_item_anchor" target="_self">모바일공무원증</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="전자정부 연계 SaaS_정부디렉터리LDAP.html" class="depth02_item_anchor" target="_self">정부디렉터리 (LDAP)</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="전자정부 연계 SaaS_행정표준코드.html" class="depth02_item_anchor" target="_self">행정표준코드</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="전자정부 연계 SaaS_행정전자서명(GPKI).html" class="depth02_item_anchor" target="_self">행정전자서명(GPKI)</a></li>';
+header +=                                               '</ul>';
+header +=                                           '</div>';
+header +=                                       '</div>';
+header +=                                   '</li>';
+header +=                                   '<li class="depth01">';
+header +=                                       '<div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">공공용 민간 SaaS</a></div>';
+header +=                                       '<div class="depth02_content">';
+header +=                                           '<div class="depth02_inner">';
+header +=                                               '<div class="depth02_title">';
+header +=                                                   '<h3>공공용 민간 SaaS</h3>';
+header +=                                               '</div>';
+header +=                                               '<ul class="depth02">';
+header +=                                                   '<li class="depth02_item"><a href="공공용 민간 SaaS.html" class="depth02_item_anchor" target="_self">공공용 민간 SaaS</a></li>';
+header +=                                               '</ul>';
+header +=                                           '</div>';
+header +=                                       '</div>';
+header +=                                   '</li>';
+header +=                                   '<li class="depth01">';
+header +=                                       '<div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">사용자 지원</a></div>';
+header +=                                       '<div class="depth02_content">';
+header +=                                           '<div class="depth02_inner">';
+header +=                                               '<div class="depth02_title">';
+header +=                                                   '<h3>사용자 지원</h3>';
+header +=                                               '</div>';
+header +=                                               '<ul class="depth02">';
+header +=                                                   '<li class="depth02_item"><a href="사용자 지원_공지사항.html" class="depth02_item_anchor" target="_self">공지사항</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="사용자 지원_자주 묻는 질문.html" class="depth02_item_anchor" target="_self">자주묻는 질문</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="자료실.html" class="depth02_item_anchor" target="_self">자료실</a></li>';
+header +=                                                   '<li class="depth02_item"><a href="사용자 지원_기술지원.html" class="depth02_item_anchor" target="_self">기술지원</a></li>';
+header +=                                               '</ul>';
+header +=                                           '</div>';
+header +=                                       '</div>';
+header +=                                   '</li>';
+header +=                               '</ul>';
+header +=                           '</div>';
+header +=                       '</nav>';
+header +=                   '</div>';
+header +=                   '<div class="box_btn_util">';
+header +=                       '<div class="box_btn_item">';
+header +=                           '<button type="button" id="btn_util_search" class="btn_util_search" aria-label="홈페이지 내 검색 열기"></button>';
 header +=                       '</div>';
+header +=                       '<div class="box_btn_item"><a class="btn_util_ham" aria-label="메뉴 열기"></a></div>';
+header +=                   '</div>';
+header +=                   '<!-- <div class="wrap_gnb_search">';
+header +=                       '<div class="gnb_search">';
+header +=                           '<input type="text" name="searchWord" class="input_search_gnb" placeholder="검색어를 입력해 주세요." aria-label="검색어" title="통합 검색어를 입력해주세요." value="">';
+header +=                           '<button type="submit" class="btn_search_gnb" aria-label="홈페이지 내 검색"></button>';
+header +=                       '</div>';
+header +=                   '</div> -->';
+header +=                   '<div class="wrap_search">';
+header +=                       '<form name="" id="" method="" action="" class="search_form">';
+header +=                           '<fieldset class="search_fieldset">';
+header +=                               '<legend>통합검색</legend>';
+header +=                               '<p>검색어를 입력해 주세요.</p>';
+header +=                               '<input type="search" name="" id="" class="search_input" title="검색어입력창" placeholder="검색어를 입력해보세요.">';
+header +=                               '<button type="submit" class="search_submit" aria-label="홈페이지 내 검색"></button>';
+header +=                           '</fieldset>';
+header +=                       '</form>';
 header +=                   '</div>';
 header +=               '</div>';
 header +=           '</div>';
 header +=       '</div>';
+header +=       '</div>';
+
 
 let footer = "";
 footer +=  		'<footer id="footer" class="footer">';
@@ -177,15 +212,15 @@ $(document).ready(function () {
     $("header.header").html(header);
     $("footer.footer").html(footer);
     
-    $(".footer .wrap_select_family").on("click", function(){
-        $(".footer .wrap_select_family ul").slideToggle(200);
-        $(".footer .wrap_select_family").toggleClass('toggle');
-        if ($(this).hasClass("toggle") === true) {
-            $(this).children(".rel_link_sel").attr("title","관련기관 누리집 목록 열림");
-        } else {
-            $(this).children(".rel_link_sel").attr("title","관련기관 누리집 목록 닫힘");
-        }
-    });
+    // $(".footer .wrap_select_family").on("click", function(){
+    //     $(".footer .wrap_select_family ul").slideToggle(200);
+    //     $(".footer .wrap_select_family").toggleClass('toggle');
+    //     if ($(this).hasClass("toggle") === true) {
+    //         $(this).children(".rel_link_sel").attr("title","관련기관 누리집 목록 열림");
+    //     } else {
+    //         $(this).children(".rel_link_sel").attr("title","관련기관 누리집 목록 닫힘");
+    //     }
+    // });
     
     // 접근성 관련 
     // 접근성 - 스킵 메뉴
@@ -216,24 +251,23 @@ $(document).ready(function () {
 
 });
 
-// 창 크기 변경 시 헤더 스타일 변경 1025px 까지 gnb_wide
-$(window).on("resize", function () {
-    $("html").removeClass("open_lnb");
-    $(".header").removeClass("on");
+// // 창 크기 변경 시 헤더 스타일 변경 1025px 까지 gnb_wide
+// $(window).on("resize", function () {
+//     $("html").removeClass("open_lnb");
+//     $(".header").removeClass("on");
     
-    // submenu 모두 닫기  
-    $(".header .depth01").removeClass("on");  
+//     // submenu 모두 닫기  
+//     $(".header .depth01").removeClass("on");  
 
-    let w1100 = window.matchMedia("(max-width: 1100px)");
-    if (w1100.matches) {
-        $(".header").removeClass("gnb_pc");
-        $(".header").addClass("gnb_mo");
-    } else {
-        $(".header").removeClass("gnb_mo");
-        $(".header").addClass("gnb_pc");
-    }
-});
-
+//     let w1100 = window.matchMedia("(max-width: 1100px)");
+//     if (w1100.matches) {
+//         $(".header").removeClass("gnb_pc");
+//         $(".header").addClass("gnb_mo");
+//     } else {
+//         $(".header").removeClass("gnb_mo");
+//         $(".header").addClass("gnb_pc");
+//     }
+// });
 
 
 // area_top 화면크기 조절
@@ -280,13 +314,40 @@ let zoomControl = {
 
 
 $(document).ready(function() {
-    // PC 버전 GNB 마우스 클릭 이벤트
-    $(document).on("click", ".header.gnb_pc .lnb_list .depth01", function () {
-        $("html").addClass("open_lnb");
-        $(".gnb_pc .lnb_list .depth02").stop().slideDown(200);
-        $(".lnb_drop_menu_back").stop().slideDown(200);
-        $(".area_top, .area_top_inner p, .box_btns li, .box_btns .btn_zoom.in, .box_btns .btn_zoom.out, .box_btns .btn_zoom.reset, .area_menu, .area_menu, .lnb_list, .depth01, .depth01_item, .depth01_item_anchor, .area_menu .area_menu_inner .logo .logo_anchor, .area_top_inner").addClass("on");
+    // // PC 버전 GNB 마우스 클릭 이벤트
+
+    
+    $(document).on("click", ".header.gnb_pc .lnb_list .depth01", function(e) {
+        e.stopPropagation(); // 이벤트 전파 방지
+        $(".header.gnb_pc .depth02_content").stop().slideUp(200);
+
+        if ($(this).hasClass("on")) {
+            // 이미 열려 있으면 닫기
+            $(this).removeClass("on");
+            $(this).find(".header.gnb_pc .depth02_content").stop().slideUp(200);
+        } else {
+            // 다른 모든 요소 닫기
+            $(".header.gnb_pc .lnb_list .depth01").removeClass("on");
+            $(".header.gnb_pc .lnb_list .depth02_content").stop().slideUp(200);
+            $(".header.gnb_pc .lnb_list .depth02_content").stop().slideUp(200);
+
+            // 클릭된 요소 열기
+            $(this).addClass("on");
+            $(this).find(".depth02_content").stop().slideDown(200);
+        }
     });
+
+
+    // $(document).on("click", ".header.gnb_pc .lnb_list .depth01", function () {
+    //     $("html").addClass("open_lnb");
+    //     $(".gnb_pc .lnb_list .depth02").stop().slideDown(200);
+    //     $(".lnb_drop_menu").stop().slideDown(200);
+    //     $(this).children(".depth02_content").stop().slideDown(200);
+    //     $(this).children(".depth01_item_anchor").addClass("on");
+
+    //     $(".area_top, .area_top_inner p, .box_btns li, .box_btns .btn_zoom.in, .box_btns .btn_zoom.out, .box_btns .btn_zoom.reset, .area_menu, .area_menu, .lnb_list, .depth01, .depth01_item, .depth01_item_anchor, .area_menu .area_menu_inner .logo .logo_anchor, .area_top_inner").addClass("on");
+    // });
+    
 
     // $(document).on("click", ".header.gnb_pc .lnb_list .depth01", function () {
     //     $("html").removeClass("open_lnb");
@@ -296,42 +357,16 @@ $(document).ready(function() {
     // });
 });  
 
-
-
-
-// 스크롤 시 메인 비주얼 영역을 벗어나면 헤더 배경색 바뀜
-$(document).ready(function() {
-    // Apply .gnb_scroll_change class immediately on page load only for #page_main
-    if ($("#page_main").length > 0) {
-        $(".area_top, .area_top_inner p, .box_btns li, .box_btns .btn_zoom.in, .box_btns .btn_zoom.out, .box_btns .btn_zoom.reset, .area_menu, .area_menu .depth01_item, .area_menu .area_menu_inner .logo .logo_anchor, .area_top_inner").addClass("gnb_scroll_change");
-    }
-
-    $(window).scroll(function() {
-        if ($("#page_main").length > 0) {
-            // Get the scroll position
-            var scrollPosition = $(this).scrollTop();      
-            var sectionAppPosition = $("#section_app").offset().top - 100;      
-
-            if (scrollPosition < sectionAppPosition) {
-                $(".area_top, .area_top_inner p, .box_btns li, .box_btns .btn_zoom.in, .box_btns .btn_zoom.out, .box_btns .btn_zoom.reset, .area_menu, .area_menu .depth01_item, .area_menu .area_menu_inner .logo .logo_anchor, .area_top_inner").addClass("gnb_scroll_change");
-            } else {    
-                $(".area_top, .area_top_inner p, .box_btns li, .box_btns .btn_zoom.in, .box_btns .btn_zoom.out, .box_btns .btn_zoom.reset, .area_menu, .area_menu .depth01_item, .area_menu .area_menu_inner .logo .logo_anchor, .area_top_inner").removeClass("gnb_scroll_change");
-            }
-        }
-    });
+// // nav_dim 클릭 시 메뉴 닫기
+$(document).on("click", ".header .nav_dim", function(e) {
+    e.stopPropagation();
+    $("html").removeClass("open_lnb");
+    $(".gnb_pc .lnb_list").removeClass("on");
+    $(".header.gnb_mo").removeClass("on");
+    $(".gnb_pc .menu_text .depth02").stop().slideUp(200);
+    $(".header.gnb_mo .btn_util_ham").removeClass("on");
+    $(".header .menu_search").removeClass("on");
 });
-
-
-  // // nav_dim 클릭 시 메뉴 닫기
-    $(document).on("click", ".header .nav_dim", function(e) {
-        e.stopPropagation();
-        $("html").removeClass("open_lnb");
-        $(".gnb_pc .lnb_list").removeClass("on");
-        $(".header.gnb_mo").removeClass("on");
-        $(".gnb_pc .menu_text .depth02").stop().slideUp(200);
-        $(".header.gnb_mo .btn_util_ham").removeClass("on");
-        $(".header .menu_search").removeClass("on");
-    });
 
 
 //////////////////////////////////////////////////////////////
@@ -392,8 +427,6 @@ $(document).ready(function() {
         });
     }
 }); 
-
-
 
 
 $(document).ready(function() {

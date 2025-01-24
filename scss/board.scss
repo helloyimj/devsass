@@ -114,16 +114,6 @@ padding-top: 64px;
 			background-position: right 16px center;
 		}
 
-			.btn_user {
-				width: 140px;
-				height: 40px;
-				text-indent: 23px;
-				background-image: url("../img/icon/icon_plus.svg");
-				background-position: left 20px center;
-				background-repeat: no-repeat;
-				background-size: 15px 15px;
-			}
-
 			.btn_download {
 				width: 140px;
 				height: 40px;
@@ -229,30 +219,6 @@ padding-top: 64px;
 					line-height: 1.5;
 				}
 
-				// .btn_username {
-				//   position: relative;
-				//   display: flex;
-				//   align-items: center;
-				//   justify-content: center;
-				//   width: 32px;
-				//   height: 32px;
-				//   margin-left: auto;
-				//   border-radius: 8px;
-				//   background-color: $color_white;
-				//   color: $color_blue_admin;
-				//   border: 1px solid $color_blue_admin;
-
-				//   &::before {
-				//     content: "";
-				//     display: block;
-				//     background-repeat: no-repeat;
-				//     background-position: center;
-				//     background-size: 100%;
-				//     width: 16px;
-				//     height: 16px;
-				//     background-image: url("../img/icon/icon_pen.svg");
-				//   }
-				// }
 			}
 						
 			thead {

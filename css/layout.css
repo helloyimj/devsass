@@ -106,6 +106,7 @@ body,
   margin-bottom: 2.4rem;
   margin-top: 4rem;
   line-height: 1;
+  text-align: center;
 }
 .page_title_area .page_title .page_title_sub {
   text-align: left;
@@ -113,6 +114,7 @@ body,
   font-family: "NotoSansLight", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 .page_title_area .page_title + h3 {
+  text-align: center;
   font-family: "NotoSansLight", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1.8rem;
 }
@@ -120,7 +122,7 @@ body,
   width: 146px;
   height: 10px;
   border-radius: 5px;
-  background-color: #005bff;
+  background-color: #1953d5;
   position: absolute;
   content: "";
   bottom: 0;
@@ -150,7 +152,7 @@ body,
   width: 48px;
   height: 8px;
   border-radius: 4px;
-  background-color: #005bff;
+  background-color: #1953d5;
   position: absolute;
   content: "";
   top: 0;
@@ -184,7 +186,7 @@ body,
 .page_title_area .swiper-pagination .swiper-pagination-bullet-active,
 .page_title_area .swiper-pagination_ .swiper-pagination-bullet-active {
   width: 2.4rem;
-  background: #005bff;
+  background: #1953d5;
 }
 
 .wrap_img {
@@ -216,12 +218,12 @@ body,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 1.6rem;
+  gap: 4rem;
 }
 .wrap_breadcrumb .breadcrumbs .breadcrumbs_item {
   width: auto;
-  padding-right: 2rem;
   position: relative;
+  font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1.4rem;
 }
 .wrap_breadcrumb .breadcrumbs .breadcrumbs_item::after {
@@ -242,12 +244,11 @@ body,
   content: none;
 }
 .wrap_breadcrumb .breadcrumbs .breadcrumbs_item.current_page {
-  color: #005bff;
+  color: #1953d5;
 }
 .wrap_breadcrumb .breadcrumbs .breadcrumbs_item.cat_home {
   width: 16px;
-  height: 27px;
-  margin-right: 2rem;
+  height: 18px;
   background-image: url(../img/icon/icon_home.svg);
   background-size: 16px 18px;
   background-position: center;
@@ -256,12 +257,12 @@ body,
 .wrap_breadcrumb .breadcrumbs .breadcrumbs_item.cat_home::after {
   content: "";
   position: absolute;
-  width: 8px;
+  width: 7px;
   height: 12px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: -28px;
+  right: -24px;
   background-image: url(../img/icon/icon_chevron_right_black.svg);
   background-size: 100%;
   background-position: center;
@@ -319,58 +320,6 @@ body,
   height: 2px;
   background-color: #111;
   bottom: 0;
-}
-.inner_aside .aside_lnb {
-  word-break: keep-all;
-}
-.inner_aside .aside_lnb .depth01 {
-  padding-top: 0.7rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
-}
-.inner_aside .aside_lnb .depth01 .depth01_item {
-  position: relative;
-  width: 100%;
-  font-size: 16px;
-}
-.inner_aside .aside_lnb .depth01 .depth01_item:not(:nth-of-type(1)) {
-  margin-top: 0.9rem;
-}
-.inner_aside .aside_lnb .depth01 .depth01_item .currently {
-  width: 100%;
-  height: 100%;
-  background-color: #edf2fc;
-  border-radius: 6px;
-  font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-.inner_aside .aside_lnb .depth01 .depth01_item .currently::after {
-  position: absolute;
-  content: "";
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 2rem;
-  width: 0.6rem;
-  height: 1rem;
-  background: url("../../public/img/icons/icon_chevron_right_bl.png");
-  background-size: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.inner_aside .aside_lnb .depth01 .depth01_item a {
-  width: 100%;
-  height: 100%;
-  line-height: 1.5;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 1rem;
-  padding-right: 4rem;
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
 }
 
 /* footer  */
@@ -453,9 +402,8 @@ body,
   background: #333;
   border: 1px solid #555;
   border-bottom: 0;
-  bottom: 40px;
+  bottom: 60px;
   left: 0;
-  padding: 10px 0;
   position: absolute;
   width: 100%;
   z-index: 1;
@@ -463,6 +411,7 @@ body,
 }
 .footer .area_sites .wrap_select_family ul li {
   margin-bottom: 10px;
+  border-bottom: 1px solid #555;
 }
 .footer .area_sites .wrap_select_family ul li:last-child {
   margin-bottom: 0;
@@ -563,12 +512,13 @@ body,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 0.6rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.6rem;
-  z-index: 100;
+  z-index: 1000;
+  display: none;
 }
 .wrap_side_btn .btn_side_sup {
   position: relative;
@@ -576,6 +526,7 @@ body,
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
+  margin-top: 0.6rem;
 }
 .wrap_side_btn .btn_side_sup::after {
   content: "";
@@ -596,13 +547,23 @@ body,
 .wrap_side_btn .btn_side_sup p {
   position: absolute;
   right: 0;
-  z-index: 80;
+  z-index: 800;
   width: 22rem;
   height: 6rem;
-  background-color: #1954d6;
+  background-color: #fff;
+  border: 1px solid #4068d8;
+  font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
   color: #fff;
-  padding: 2rem 2.4rem;
+  padding: 2rem 7.6rem;
   font-size: 1.8rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.wrap_side_btn .btn_side_sup:hover p, .wrap_side_btn .btn_side_sup.active p {
+  display: block;
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 .wrap_side_btn .btn_side_sup02 {
   background: linear-gradient(45deg, #1a7395, #0db5bd);
@@ -718,67 +679,6 @@ body,
             transform: rotate(-45deg) translate(-20px, 20px);
     opacity: 0;
   }
-}
-
-.section {
-  /* 서비스 본문 영역 */
-}
-.section.service {
-  /* 상단 따옴표 */
-}
-.section.service .wrap_page_title_quot {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-  margin-bottom: 5.2rem;
-  word-break: keep-all;
-}
-.section.service .wrap_page_title_quot .page_title_quot {
-  line-height: 1.5;
-  color: #111;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  text-align: center;
-  font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: 3.2rem;
-  padding: 0 6rem;
-  position: relative;
-}
-.section.service .wrap_page_title_quot .page_title_quot::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  width: 4.1rem;
-  height: 3.7rem;
-  background-image: url("../../public/img/icons/quot.png");
-}
-.section.service .wrap_page_title_quot .page_title_quot::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  width: 4.1rem;
-  height: 3.7rem;
-  background-image: url("../../public/img/icons/quot.png");
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 @media all and (max-width: 1421px) {

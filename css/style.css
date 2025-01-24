@@ -771,7 +771,7 @@ button:disabled {
 .btn_submit.btn_download::after {
   display: block;
   content: "";
-  background-image: url("../../public/img/icon/icon_download.png");
+  background-image: url("../img/icon/icon_download.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -803,7 +803,7 @@ button:disabled {
 .btn_submit.btn_user::after {
   display: block;
   content: "";
-  background-image: url("../../public/img/icon/icon_user.png");
+  background-image: url("../img/icon/icon_user.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -827,7 +827,7 @@ button:disabled {
   font-size: 2rem;
 }
 .btn_submit.btn_search::before {
-  background-image: url("../../public/img/icon/icon_search.svg");
+  background-image: url("../img/icon/icon_search.svg");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -880,7 +880,7 @@ button:disabled {
   width: 0.8rem;
   height: 1.2rem;
   position: absolute;
-  background-image: url("../../public/img/icon/icon_chevron_right_wt.png");
+  background-image: url("../img/icon/icon_chevron_right_wt.png");
   background-repeat: no-repeat;
   background-size: contain;
   right: 1.9rem;
@@ -912,7 +912,7 @@ button:disabled {
   width: 1.2rem;
   height: 0.8rem;
   position: absolute;
-  background-image: url("../../public/img/icon/icon_chevron_up_blue.png");
+  background-image: url("../img/icon/icon_chevron_up_blue.png");
   background-repeat: no-repeat;
   background-size: contain;
   right: 1.4rem;
@@ -974,7 +974,7 @@ button:disabled {
   content: "";
   width: 1.9rem;
   height: 1.8rem;
-  background-image: url("../../public/img/icon/icon_view.png");
+  background-image: url("../img/icon/icon_view.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -989,7 +989,7 @@ button:disabled {
   display: block;
   width: 1.8rem;
   height: 1.8rem;
-  background-image: url("../../public/img/icon/icon_link_grey.svg");
+  background-image: url("../img/icon/icon_link_grey.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1021,7 +1021,7 @@ button:disabled {
   display: block;
   width: 1.4rem;
   height: 1.4rem;
-  background-image: url("../../public/img/icon/icon_link_blue.svg");
+  background-image: url("../img/icon/icon_link_blue.svg");
   background-size: 100%;
   position: absolute;
   right: 1.6rem;
@@ -1034,7 +1034,7 @@ button:disabled {
   content: "";
   width: 1.8rem;
   height: 1.8rem;
-  background-image: url("../../public/img/icon/icon_download_grey.svg");
+  background-image: url("../img/icon/icon_download_grey.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1580,7 +1580,7 @@ button:disabled {
   height: 100%;
   padding-right: 0;
   border-radius: 0;
-  background-image: url("../../public/img/icon/icon_lock.png");
+  background-image: url("../img/icon/icon_lock.png");
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 1.6rem 1.8rem;
@@ -1840,7 +1840,7 @@ td .box_radio {
   height: 2.6rem;
   width: 2.6rem;
   position: absolute;
-  background-image: url("../../public/img/icon/icon_check_grey.svg");
+  background-image: url("../img/icon/icon_check_grey.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -1866,7 +1866,7 @@ td .box_radio {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("../../public/img/icon/icon_check_white.svg");
+  background-image: url("../img/icon/icon_check_white.svg");
 }
 .checkbox:disabled {
   border: 1px solid #eee;
@@ -1916,7 +1916,7 @@ td .box_radio {
   height: 1rem;
   color: #1953d5;
   text-align: center;
-  background-image: url("../../public/img/icon/checked.png");
+  background-image: url("../img/icon/checked.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -2097,7 +2097,7 @@ input[type=time] {
   z-index: 1;
 }
 .box_search button::after {
-  background-image: url("../../public/img/icon/icon_search.svg");
+  background-image: url("../img/icon/icon_search.svg");
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -2474,7 +2474,7 @@ input[type=number]::-webkit-inner-spin-button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("../../public/img/icon/icon_attach.png");
+  background-image: url("../img/icon/icon_attach.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -2726,7 +2726,7 @@ input[type=number]::-webkit-inner-spin-button {
         height: 5.4rem;
 
         &::after {
-            background-image: url("../../public/img/icon/icon_x.png");
+            background-image: url("../img/icon/icon_x.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: 1.6rem 1.6rem;
@@ -2869,7 +2869,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 /* 이용 제한 안내 팝업  */
 .popup_layer .box_warning {
-  background-image: url("../../public/img/icon/icon_warning.png");
+  background-image: url("../img/icon/icon_warning.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 8rem 8rem;
@@ -3128,7 +3128,7 @@ input[type=number]::-webkit-inner-spin-button {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../public/img/icon/icon_attach.png");
+  background-image: url("../img/icon/icon_attach.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -3147,7 +3147,7 @@ input[type=number]::-webkit-inner-spin-button {
   cursor: pointer;
   width: 2rem;
   height: 2rem;
-  background-image: url("../../public/img/icon/icon_attach_delete.png");
+  background-image: url("../img/icon/icon_attach_delete.png");
   background-position: center right;
   background-repeat: no-repeat;
   background-size: 2rem 2rem;
@@ -3200,7 +3200,7 @@ input[type=number]::-webkit-inner-spin-button {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../../public/img/icon/icon_attach.png");
+  background-image: url("../img/icon/icon_attach.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -3220,6 +3220,9 @@ input[type=number]::-webkit-inner-spin-button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.attached_download_viewer .attached_file_list .thumb img {
+  width: 2.6rem;
 }
 
 /* 이전글 다음글 ( 상세페이지 게시물 하단 ) */
@@ -3305,7 +3308,7 @@ input[type=number]::-webkit-inner-spin-button {
   padding-bottom: 2.2rem;
   padding-left: 4.6rem;
   padding-right: 3rem;
-  background-image: url("../../public/img/icon/icon_reply.png");
+  background-image: url("../img/icon/icon_reply.png");
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
   background-position: left center;
@@ -3324,6 +3327,10 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 /* 고객센터 상세페이지 게시글 style custom end */
+.post_title_top .post_title .post_title_anchor {
+  font-size: 18px;
+}
+
 /* table_list 주제 td - 말줄임 표시 + 우측 뱃지 ( NEW or 자물쇠 표시 badge.lock elememt ) */
 .post_title {
   position: relative;
@@ -3340,6 +3347,7 @@ input[type=number]::-webkit-inner-spin-button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-size: 16px;
 }
 .post_title .post_title_item {
   position: relative;
@@ -3500,7 +3508,7 @@ input[type=number]::-webkit-inner-spin-button {
   left: 0;
   width: 14px;
   height: 14px;
-  background-image: url("../../public/img/icon/icon_home.png");
+  background-image: url("../img/icon/icon_home.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
