@@ -702,10 +702,16 @@
 					width: auto;
           max-width: 20rem;
           height: auto;
-          max-height: 3.8rem;
+          max-height: 3.5rem;
           margin: auto;
           // object-fit: scale-down;
         }
+
+				&.logo_sm {
+					img {
+						max-height: 6.5rem;
+					}
+				}
       }
     }
     }
