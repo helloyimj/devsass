@@ -1173,7 +1173,7 @@
 		padding-top: 1.6rem;
 		padding-left: 2.9rem;
 		padding-right: 2.9rem;
-		padding-bottom: 6.3rem;
+		padding-bottom: 9.3rem;
 		box-shadow: 5px 5px 20px rgba($color: #253579, $alpha: 0.1);
 		//box-shadow: 4px 4px 16px rgba(21, 40, 95, 0.18); 
 
@@ -1255,7 +1255,8 @@
 		}
 
 		.service_tag_box {
-			height: 10rem;
+			// height: 10rem;
+			height: 6.2rem;
 
 			.service_tag_list {
 				display: flex;
@@ -1278,7 +1279,9 @@
 	}
 
 	.bot_cont {
-		margin-top: 1.2rem;
+		// margin-top: 1.2rem;
+		margin-top: 3rem;
+
 		display: flex;
 
 		.bot_cont_tit {
