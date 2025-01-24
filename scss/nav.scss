@@ -987,7 +987,8 @@
 
       .depth02_inner {
         display: flex;
-
+        border-bottom: 1px solid #ededed;
+        box-shadow: 0 5px 10px rgba(37, 53, 121, 0.1);
       }
 
       .depth02_title {
