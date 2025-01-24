@@ -212,15 +212,15 @@ $(document).ready(function () {
     $("header.header").html(header);
     $("footer.footer").html(footer);
     
-    // $(".footer .wrap_select_family").on("click", function(){
-    //     $(".footer .wrap_select_family ul").slideToggle(200);
-    //     $(".footer .wrap_select_family").toggleClass('toggle');
-    //     if ($(this).hasClass("toggle") === true) {
-    //         $(this).children(".rel_link_sel").attr("title","관련기관 누리집 목록 열림");
-    //     } else {
-    //         $(this).children(".rel_link_sel").attr("title","관련기관 누리집 목록 닫힘");
-    //     }
-    // });
+    $(".footer .wrap_select_family").on("click", function(){
+        $(".footer .wrap_select_family ul").slideToggle(200);
+        $(".footer .wrap_select_family").toggleClass('toggle');
+        if ($(this).hasClass("toggle") === true) {
+            $(this).children(".rel_link_sel").attr("title","관련기관 누리집 목록 열림");
+        } else {
+            $(this).children(".rel_link_sel").attr("title","관련기관 누리집 목록 닫힘");
+        }
+    });
     
     // 접근성 관련 
     // 접근성 - 스킵 메뉴

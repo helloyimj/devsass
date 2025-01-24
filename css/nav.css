@@ -731,6 +731,7 @@
   left: 0;
   width: 100%;
   background-color: #fff;
+  border-top: 1px solid #ededed;
 }
 .gnb_pc .menu_text .lnb_list .depth02_inner {
   display: -webkit-box;
