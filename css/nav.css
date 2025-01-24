@@ -313,7 +313,7 @@
 .header .box_btn_util .box_btn_item .btn_util_sitemap::after {
   width: 100%;
   height: 100%;
-  background-image: url("../../public/img/icons/icon_btn_ghost.png");
+  background-image: url("../img/icons/icon_btn_ghost.png");
   content: "";
   display: block;
   position: absolute;
@@ -335,7 +335,7 @@
 .header .box_btn_util .box_btn_item .btn_util_search::after {
   width: 100%;
   height: 100%;
-  background-image: url("../../public/img/icons/icon_search.png");
+  background-image: url("../img/icons/icon_search.png");
   content: "";
   display: block;
   position: absolute;
@@ -349,7 +349,7 @@
 }
 .header .box_btn_util .box_btn_item .btn_search.on::after,
 .header .box_btn_util .box_btn_item .btn_util_search.on::after {
-  background-image: url("../../public/img/icons/icon_x.png");
+  background-image: url("../img/icons/icon_x.png");
 }
 .header .area_top_inner {
   overflow: hidden;
@@ -599,9 +599,7 @@
   background-image: url("../img/logo/logo_saas.png");
   background-position: center left;
   background-repeat: no-repeat;
-  background-size: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  background-size: contain;
 }
 .gnb_pc .area_menu .area_menu_inner .logo .logo_anchor.gnb_scroll_change {
   background-image: url("../img/logo/logo_saas.png");
@@ -671,7 +669,7 @@
   background-size: 100%;
   width: 1.4rem;
   height: 0.8rem;
-  background-image: url("../../public/img/icon/icon_chevron_down_black.svg");
+  background-image: url("../img/icon/icon_chevron_down_black.svg");
 }
 .gnb_pc .menu_text .lnb_list .depth01_item.gnb_scroll_change {
   color: #fff;
@@ -680,7 +678,7 @@
   color: #111;
 }
 .gnb_pc .menu_text .lnb_list .depth01_item.on .depth01_item_anchor::after {
-  background-image: url("../../public/img/icon/icon_chevron_down_blue.svg");
+  background-image: url("../img/icon/icon_chevron_down_blue.svg");
 }
 .gnb_pc .menu_text .lnb_list .depth01 {
   padding-left: 3.6rem;
@@ -1063,7 +1061,7 @@
   right: 0;
   width: 1.2rem;
   height: 1.2rem;
-  background-image: url("../../public/img/icons/icon_plus.png");
+  background-image: url("../img/icons/icon_plus.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;

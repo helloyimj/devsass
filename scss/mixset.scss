@@ -226,7 +226,7 @@ $font_suit_bold : 'SUITBold', 'NotoSansRegular', '나눔바른고딕', 'NanumBar
 
 // width: rem;
 // height: rem;
-// background-image: url("../../public/img/");
+// background-image: url("../img/");
 @mixin bg_center {
     background-position: center center;
     background-repeat: no-repeat;
@@ -256,7 +256,7 @@ $font_suit_bold : 'SUITBold', 'NotoSansRegular', '나눔바른고딕', 'NanumBar
     background-size: 100%;
     // width: rem;
     // height: rem;
-    // background-image: url("../../public/img/");
+    // background-image: url("../img/");
 }
 
 @mixin before {
@@ -270,7 +270,7 @@ $font_suit_bold : 'SUITBold', 'NotoSansRegular', '나눔바른고딕', 'NanumBar
     background-size: 100%;
     // /* 	width: rem;
     // 	height: rem;
-    // 	background-image: url("../../public/img/"); */
+    // 	background-image: url("../img/"); */
 }
 
 //  border 

@@ -1,7 +1,7 @@
 let header = "";
 
 header +=       '<div class="header_inner">';
-// header +=       '<div class="nav_dim"></div>';
+header +=       '<div class="nav_dim"></div>';
 header +=       '<div class="wrap_gnb">';
 header +=           '<div class="area_top">';
 header +=               '<div class="area_top_inner">';
@@ -182,6 +182,14 @@ footer +=  		        '</div>';
 footer +=  		        '</div>';
 footer +=  		    '</footer>';
 
+let sideBtn = "";
+sideBtn += '<!-- 최상단 이동 -->';
+sideBtn +=     '<div class="wrap_side_btn">';
+sideBtn +=         '<a href="사용자 지원_기술지원.html" aria-label="기술지원 바로가기" class="btn_side_sup btn_side_sup01"><p>기술지원</p></a>';
+sideBtn +=         '<a href="javascript:;" aria-label="챗봇 문의, 검색 바로가기" class="btn_side_sup btn_side_sup02"><p>챗봇 문의 · 검색</p></a>';
+sideBtn +=         '<a href="#wrapper" aria-label="최상단으로 이동" class="btn_side_sup btn_side_sup03 btn_top"><span class="sr_only">최상단으로 이동</span></a>';
+sideBtn +=     '</div>';
+
 // <!-- 
 // <div class="area_other_logo only_pc">
 //     <img src="../img/logo/logo_nia.png" alt="한국지능정보사회진흥원 로고">
@@ -211,6 +219,7 @@ skip += '</nav>'
 $(document).ready(function () {
     $("header.header").html(header);
     $("footer.footer").html(footer);
+    $("footer.footer").after(sideBtn); 
     
     $(".footer .wrap_select_family").on("click", function(){
         $(".footer .wrap_select_family ul").slideToggle(200);
