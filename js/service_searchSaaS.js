@@ -4,7 +4,7 @@
 $(document).ready(function () {
 
     var product_01 = "";
-    product_01 +=  '<div class="product_item">';    
+    product_01 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
     product_01 +=     '<div class="item_head">'; 
     product_01 +=        '<div class="box_line_gray newly_added">'; 
     product_01 +=           '<div class="wrap_img">'; 
@@ -76,7 +76,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var product_02 = "";
-    product_02 +=  '<div class="product_item">';    
+    product_02 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
     product_02 +=     '<div class="item_head">'; 
     product_02 +=        '<div class="box_line_gray newly_added">'; 
     product_02 +=           '<div class="wrap_img">'; 
@@ -152,7 +152,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var product_03 = "";
-    product_03 +=  '<div class="product_item">';    
+    product_03 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
     product_03 +=     '<div class="item_head">'; 
     product_03 +=        '<div class="box_line_gray newly_added">'; 
     product_03 +=           '<div class="wrap_img">'; 
@@ -224,7 +224,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var product_04 = "";
-    product_04 +=  '<div class="product_item">';    
+    product_04 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
     product_04 +=     '<div class="item_head">'; 
     product_04 +=        '<div class="box_line_gray">'; 
     product_04 +=           '<div class="wrap_img">'; 
@@ -295,7 +295,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var product_05 = "";
-    product_05 +=  '<div class="product_item">';    
+    product_05 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
     product_05 +=     '<div class="item_head">'; 
     product_05 +=        '<div class="box_line_gray">'; 
     product_05 +=           '<div class="wrap_img">'; 
@@ -367,7 +367,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var product_06 = "";
-    product_06 +=  '<div class="product_item">';    
+    product_06 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
     product_06 +=     '<div class="item_head">'; 
     product_06 +=        '<div class="box_line_gray">'; 
     product_06 +=           '<div class="wrap_img">'; 
@@ -438,7 +438,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var product_07 = "";
-    product_07 +=  '<div class="product_item">';    
+    product_07 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
     product_07 +=     '<div class="item_head">'; 
     product_07 +=        '<div class="box_line_gray">'; 
     product_07 +=           '<div class="wrap_img">'; 
@@ -514,7 +514,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var product_08 = "";
-    product_08 +=  '<div class="product_item">';    
+    product_08 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
     product_08 +=     '<div class="item_head">'; 
     product_08 +=        '<div class="box_line_gray">'; 
     product_08 +=           '<div class="wrap_img">'; 
@@ -588,7 +588,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var product_09 = "";
-    product_09 +=  '<div class="product_item">';    
+    product_09 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
     product_09 +=     '<div class="item_head">'; 
     product_09 +=        '<div class="box_line_gray">'; 
     product_09 +=           '<div class="wrap_img">'; 
@@ -665,7 +665,7 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     var product_10 = "";
-    product_10 +=  '<div class="product_item">';    
+    product_10 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
     product_10 +=     '<div class="item_head">'; 
     product_10 +=        '<div class="box_line_gray">'; 
     product_10 +=           '<div class="wrap_img">'; 
