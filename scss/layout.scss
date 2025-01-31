@@ -681,6 +681,7 @@ body,
 /* top 버튼 */
 .wrap_side_btn {
   position: fixed;
+  z-index: 2000;
   right: 4rem;
   bottom: 8rem;
   display: flex;

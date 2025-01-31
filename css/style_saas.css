@@ -2118,6 +2118,12 @@
 }
 
 /* 이용 신청 */
+.page_howtoContract #main_shortcut01 {
+  scroll-margin-top: 300px; /* 상단에 300px 여백 추가 */
+}
+.page_howtoContract #main_shortcut02 {
+  scroll-margin-top: 300px; /* 상단에 300px 여백 추가 */
+}
 .page_howtoContract .wrap_article {
   margin-bottom: 20rem;
 }
