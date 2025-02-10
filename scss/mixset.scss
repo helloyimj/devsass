@@ -454,6 +454,8 @@ $line-height : 1.5;
 // }
 
 
+// 그라데이션 색상 수정 2025-02-03
+
 // 그라데이션 색상 설정
 @mixin purpleBlue_135deg {
     background: #3c4bbf;
@@ -464,6 +466,12 @@ $line-height : 1.5;
     background: #585dc8;
     background: linear-gradient(245deg, #7e50cb 0%, #585dc8 100%);
 }
+
+@mixin selectBox_PB_90deg {
+    background: #585dc8;
+    background: linear-gradient(90deg, #7e50cb 0%, #585dc8 100%);
+}
+
 
 @mixin purpleBlue_vivid_0deg {
     background: #2558bf;
@@ -486,3 +494,12 @@ $line-height : 1.5;
     background: linear-gradient(145deg, #25439a 0%, #686ec4 100%);
 }
 
+
+// 박스 그림자
+@mixin box_shadow_bl {
+    box-shadow: 0 0 20px rgba(37, 53, 121, 0.1);
+}
+
+@mixin box_shadow_black_24 {
+    box-shadow: 0 0 24px rgba(15, 23, 77, 0.2);
+}

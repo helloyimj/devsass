@@ -48,7 +48,7 @@
                             <div class="article_title">
                                 <article class="page_title_area">
                                     <h2 class="page_title">공공용 민간 SaaS</h2>
-                                    <h3 class="page_title_sub">공공 업무를 지원하는 민간 SaaS를 도입하여 업무 효율을 높이세요.</h3>
+                                    <h3 class="page_title_sub">공공 업무를 지원하는 민간 SaaS를 도입하여 <br class="only_mob" />업무 효율을 높이세요.</h3>
                                 </article>
                             </div>
 
@@ -58,7 +58,7 @@
                                 <div class="wrap_search_filter">
                                     <h3 class="search_filter_tit">공공용 민간 SaaS를 찾아보세요</h3>
                                     <div class="wrap_select">
-                                        <!-- <label for="select_" class="sr_only"></label>  -->
+                                        <!-- <label for="select_" class="sr_only"></label> -->
                                         <select name="select_" id="select_" class="select_searchbar">
                                             <option value="" selected>전체</option>
                                             <option value="">민간 SaaS명</option>
@@ -70,15 +70,21 @@
                                     </div>
                                     <button type="submit" class="btn_submit btn_search">검색</button>
                                 </div>
+                                <!-- 모바일 상세 검색 필터 -->
+                                <div class="mob_srch_filter_btn">
+                                    <button type="button">상세 검색 필터</button>
+                                </div>
+                                <!-- 모바일 상세 검색 필터 end -->
 
                                 <!-- 상세 검색 필터  -->
                                 <div class="wrap_search_service" data-aos="fade-up">
                                     <div class="wrap_btn_toggle">
-                                        <h3 class="filter_title">상세 검색 필터 </h3>
+                                        <h3 class="filter_title">상세 검색 필터</h3>
                                         <div class="wrap_arrow">
                                             <input type="checkbox" id="toggle" class="toggle_checked">
                                             <label for="toggle" class="btn_toggle"></label>
                                         </div>
+                                        <button class="wrap_srch_close" type="button">닫기</button>
                                     </div>
                                     <div class="area_detail_filter">
                                         <div class="wrap_filter_group">
@@ -152,9 +158,11 @@
                                                 <div class="wrap_checkbox_group">
                                                     <div class="wrap_radio wrap_textbox">
                                                         <div class="box_input">
+                                                            <i></i>
                                                             <input type="number" class="textbox year" name="date">년
                                                             <input type="number" class="textbox month" name="date">월
                                                             <span>~</span>
+                                                            <i></i>
                                                             <input type="number" class="textbox year" name="date">년
                                                             <input type="number" class="textbox month" name="date">월
                                                         </div>
@@ -368,7 +376,7 @@
                                             <div class="selected_filters">
                                                 <h3 class="selected_counter">선택된 필터 (<span>0</span>)</h3>
                                                 <ul class="list_selected_filters">
-                                                    <!-- <li class="item_selected_filter"></li> -->
+                                                    <!-- <li class="item_selected_filter"></li>-->
                                                 </ul>
                                                 <button class="btn_clear_filter">초기화</button>
                                             </div>
@@ -445,6 +453,12 @@
                                             <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor page_arrow next" title="다음"></a></li>
                                         </ul>
                                     </div>
+
+                                    <!-- 모바일 더보기 버튼 -->
+                                    <div class="btn_more_list">
+                                        <button type="button">더보기</button>
+                                    </div>
+                                    <!-- 모바일 더보기 버튼 end -->
                                 </div>
                             </div>
                         </div>
@@ -491,7 +505,7 @@
 							$(".selected_filters ul").empty();
 					});
 			}); -->
-    <!-- </script> -->
+    <!-- </script>-->
 
     <!-- <script>
     $(document).ready(function () {
@@ -534,7 +548,7 @@
             $(".wrap_radio").slideToggle();
         });
     });
-</script> -->
+</script>-->
 
     <!-- <script>
 	$(document).ready(function () {
@@ -577,7 +591,7 @@
 					$(".wrap_radio").slideToggle();
 			});
 	}); -->
-    <!-- </script> -->
+    <!-- </script>-->
 
 
     <script>
@@ -619,6 +633,35 @@
 
             $(".btn_toggle").click(function() {
                 $(".wrap_filter_group").slideToggle();
+            });
+
+            $('.mob_srch_filter_btn button').on('click', function(){
+                $('.wrap_search_service').show();
+            });
+            $('.wrap_srch_close').on('click', function(){
+                $('.wrap_search_service').hide();
+            });
+
+            const myWinW = $(window).width();
+            if (myWinW >= 1024) {
+                $('.wrap_search_service').show();
+            } else {
+                $('.wrap_search_service').hide();
+                $('.page_saas_search .wrap_filter_group').css({
+                    'display':'block'
+                });
+            }
+
+            $(window).on('resize', function(){
+                const myWinW = $(window).width();
+                if (myWinW >= 1024) {
+                    $('.wrap_search_service').show();
+                } else {
+                    $('.wrap_search_service').hide();
+                    $('.page_saas_search .wrap_filter_group').css({
+                        'display':'block'
+                    });
+                }
             });
         });
     </script>

@@ -13,7 +13,7 @@
 
     <!-- JS -->
     <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-    <script src="../js/swiper-5.4.3.min.js"></script>
+    <!-- <script src="../js/swiper-5.4.3.min.js"></script> -->
     <script src="../js/swiper.11.0.6-bundle.min.js"></script>
     <script src="../js/aos.js"></script>
     <script src="../js/nav.js"></script>
@@ -36,7 +36,7 @@
                 <section class="section main_visual" id="main_visual">
                     <h1 class="sr_only">메인 비주얼 영역</h1>
 
-                    <div class="main_visual_inner">
+                    <div class="main_visual_inner" data-aos="fade-up" data-aos-delay="300">
                         <article>
                             <h2>민간 SasS 연계공통기반 <br>통합관리포털</h2>
                             <p>전자정부 연계 SasS와 민간 SasS를 연계하여 <br>공공의 민간 SasS 이용을 활성화합니다.</p>
@@ -149,7 +149,7 @@
                                             <div class="wrap_txt" data-aos="fade-right" data-aos-delay="200">
                                                 <h2>모바일 공무원증</h2>
                                                 <h4 class="sub_txt">신원 증명 서비스를 쉽고 빠르게</h4>
-                                                <p>지도·교통·금융 등 다양한 분야의 민간앱에서 <br>SRT 승차권을 예매할 수 있습니다.</p>
+                                                <p>모바일 공무원증은 신원을 증명하는 서비스로서, <br>연계를 통해 로그인, 세션 관리를 할 수 있습니다.</p>
                                                 <h4 class="func_group_tit">주요 제공 기능:</h4>
                                                 <div class="func_group">
                                                     <div class="wrap_box_func">
@@ -174,13 +174,13 @@
                                                         <div class="func_img">
                                                             <img src="../img/main/func01_04.svg" alt="">
                                                         </div>
-                                                        <p class="func_tit ti_10">QR스캔/제출</p>
+                                                        <p class="func_tit ti_10 line02">QR스캔/제출</p>
                                                     </div>
                                                     <div class="wrap_box_func">
                                                         <div class="func_img">
                                                             <img src="../img/main/func01_05.svg" alt="">
                                                         </div>
-                                                        <p class="func_tit ti_10">타App로그인</p>
+                                                        <p class="func_tit ti_10 line02">타App로그인</p>
                                                     </div>
                                                 </div>
                                                 <a href="전자정부 연계 SaaS_모바일 공무원증.html" class="btn_action filled_brand link_in_white" target="_self" title=" 페이지로 이동">자세히 보기</a>
@@ -246,7 +246,7 @@
                                                         <div class="func_img">
                                                             <img src="../img/main/func03_02.svg" alt="">
                                                         </div>
-                                                        <p class="func_tit">법정동 코드</p>
+                                                        <p class="func_tit line02">법정동 코드</p>
                                                     </div>
                                                     <div class="wrap_box_func">
                                                         <div class="func_img">
@@ -258,7 +258,7 @@
                                                         <div class="func_img">
                                                             <img src="../img/main/func03_04.svg" alt="">
                                                         </div>
-                                                        <p class="func_tit">도로명 코드</p>
+                                                        <p class="func_tit line02">도로명 코드</p>
                                                     </div>
                                                     <div class="wrap_box_func">
                                                         <div class="func_img">
@@ -315,7 +315,7 @@
                                                         <div class="func_img">
                                                             <img src="../img/main/func04_05.svg" alt="">
                                                         </div>
-                                                        <p class="func_tit ti_15">전자문서 진본확인</p>
+                                                        <p class="func_tit ti_15 line02">전자문서 진본확인</p>
                                                     </div>
                                                 </div>
                                                 <a href="전자정부 연계 SaaS_행정전자서명(GPKI).html" class="btn_action filled_brand link_in_white" target="_self" title=" 페이지로 이동">자세히 보기</a>
@@ -585,7 +585,7 @@
                                 <a href="소개_연계한 민간 SaaS.html" class="btn_veiw_all" target="_blank" title=" 페이지 이동">전체 보기</a>
                             </div>
                         </div>
-                        </div>
+                    </div>
                 </section>
 
                 <!-- section_03 영역 -->
@@ -633,7 +633,7 @@
                                                 <img class="" src="../img/main/icon/s_01_03.svg" alt="">
                                             </div>
                                             <div class="label_box">
-                                                <p>관제 · IoT · 시설물 관리</p>
+                                                <p class="line02">관제 · IoT · 시설물 관리</p>
                                             </div>
                                         </a>
                                     </div>
@@ -914,7 +914,7 @@
                 </section>
             </div>
         </main>
-        
+
         <!-- 본문 콘텐츠 끝-->
 
         <!-- 푸터 -->
@@ -926,14 +926,14 @@
         AOS.init();
 
 
-    $(document).ready(function () {
-        $(".wrap_side_btn .btn_side_sup").on("focus", function () {
-            $(this).addClass("active");
-        });
+        $(document).ready(function() {
+            $(".wrap_side_btn .btn_side_sup").on("focus", function() {
+                $(this).addClass("active");
+            });
 
-        $(".wrap_side_btn .btn_side_sup").on("blur", function () {
-            $(this).removeClass("active");
-        });
+            $(".wrap_side_btn .btn_side_sup").on("blur", function() {
+                $(this).removeClass("active");
+            });
         });
 
         // 참여 민간 SaaS를 소개합니다 자동 슬라이드				
@@ -981,17 +981,25 @@
             },
 
             breakpoints: {
+                486: {
+                    slidesPerView: 4, // 태블릿 크기에서 3개의 슬라이드
+                    spaceBetween: 30, // 간격 조정
+                },
                 768: {
-                    slidesPerView: 3, // 태블릿 크기에서 3개의 슬라이드
-                    // spaceBetween: 7.5, // 간격 조정
+                    slidesPerView: 5, // 태블릿 크기에서 3개의 슬라이드
+                    spaceBetween: 34, // 간격 조정
                 },
                 1024: {
+                    slidesPerView: 6, // 데스크톱 크기에서 8개의 슬라이드
+                    spaceBetween: 30, // 간격 조정
+                },
+                1420: {
                     slidesPerView: 8, // 데스크톱 크기에서 8개의 슬라이드
-                    // spaceBetween: 15, // 간격 조정
+                    // spaceBetween: 30, // 간격 조정
                 },
             },
         });
-        
+
         // // // 마우스 호버 시 슬라이드 일시정지 
         // $(".slide_enterprise .swiper-slide").hover(function() {
         //     enterpriseSwiper.autoplay.stop();
@@ -1001,17 +1009,17 @@
         // });
 
         $(document).ready(function() {
-        //  슬라이드 일시정지 / 재생 버튼 
-        $(".slide_enterprise .controller_btn_pause").on("click", function() {
-            $(this).toggleClass("pausing");
-            if ($(this).hasClass("pausing") == true) {
-                enterpriseSwiper.autoplay.stop();
-                return false;
-            } else {
-                enterpriseSwiper.autoplay.start();
-            }
+            //  슬라이드 일시정지 / 재생 버튼 
+            $(".slide_enterprise .controller_btn_pause").on("click", function() {
+                $(this).toggleClass("pausing");
+                if ($(this).hasClass("pausing") == true) {
+                    enterpriseSwiper.autoplay.stop();
+                    return false;
+                } else {
+                    enterpriseSwiper.autoplay.start();
+                }
+            });
         });
-    });
 
 
         // 소개 슬라이드 
@@ -1052,13 +1060,14 @@
             //         $('.section_01 .swiper').find('.swiper-slide.swiper-slide-active a.btn_action').attr('tabindex', '0').focus();
             //     }
             // }
+
         });
 
 
         // 연계공통 기반으로 개발 된 민간 SasS 소개
         var swiper2 = new Swiper(".section_02 .swiper", {
             roundLengths: 'false',
-            slidesPerView: 4,
+            // slidesPerView: 4,
             // slidePerGroup: 1,
             spaceBetween: 20,
             mousewheel: {
@@ -1088,63 +1097,162 @@
                 paginationBulletMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
             },
 
-            // breakpoints: {
-            //     425: {
-            //         width: 425,
-            //         slidesPerView: 2,
-            //         slidePerGroup: 2,
-            //         spaceBetween: 15,
-            //         slidesOffAfter: 140,
-            //     },
-            //     768: {
-            //         width: 768,
-            //         slidesPerView: 3,
-            //         slidePerGroup: 3,
-            //         spaceBetween: 15,
-            //         slidesOffAfter: 240,
-            //     },
-            //     // 1024: {
-            //     //     width: 1024,
-            //     //     slidesPerView: 4,
-            //     //     slidePerGroup: 4,
-            //     //     spaceBetween: 20,
-            //     //     slidesOffAfter: 340,
-            //     // },
-            //     enabled: true,
-            // },
+            breakpoints: {
+                425: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1420: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                enabled: true,
+            },
         });
 
 
-        var swiper3 = new Swiper(".section_03 .swiper", {
-            slidesPerView: 4, // 기본 슬라이드 개수
-            slidesPerGroup: 4, // 네비게이션 버튼 클릭 시 이동할 슬라이드 그룹
-            grid: {
-                rows: 2,
-            },
+
+
+
+
+        
+// function initSwiper() {
+//     if (swiper3) {
+//     swiper3.destroy(true, true);
+//     swiper3 = null;
+// }
+
+//     if (window.innerWidth <= 486) {
+//         // 486px 이하 → 2열 3행
+//         swiper3 = new Swiper(".section_03 .swiper", {
+//             slidesPerView: 2,
+//             slidesPerGroup: 2,
+//             grid: {
+//                 rows: 3,
+//             },
+//             spaceBetween: 20,
+//             pagination: {
+//                 el: ".section_03 .swiper-pagination",
+//                 clickable: true,
+//             },
+//             navigation: {
+//                 prevEl: '.section_03 .wrap_swiper_button .swiper-button-prev',
+//                 nextEl: '.section_03 .wrap_swiper_button .swiper-button-next',
+//             },
+//         });
+//     } else if (window.innerWidth <= 1024) {
+//         // 1024px 이하 → 3열 3행
+//         swiper3 = new Swiper(".section_03 .swiper", {
+//             slidesPerView: 3,
+//             slidesPerGroup: 3,
+//             grid: {
+//                 rows: 3,
+//             },
+//             spaceBetween: 20,
+//             pagination: {
+//                 el: ".section_03 .swiper-pagination",
+//                 clickable: true,
+//             },
+//             navigation: {
+//                 prevEl: '.section_03 .wrap_swiper_button .swiper-button-prev',
+//                 nextEl: '.section_03 .wrap_swiper_button .swiper-button-next',
+//             },
+//         });
+//     } else {
+//         // 기본 (1024px 초과) → 4열 2행
+//         swiper3 = new Swiper(".section_03 .swiper", {
+//             slidesPerView: 4,
+//             slidesPerGroup: 4,
+//             grid: {
+//                 rows: 2,
+//             },
+//             spaceBetween: 20,
+//             pagination: {
+//                 el: ".section_03 .swiper-pagination",
+//                 clickable: true,
+//             },
+//             navigation: {
+//                 prevEl: '.section_03 .wrap_swiper_button .swiper-button-prev',
+//                 nextEl: '.section_03 .wrap_swiper_button .swiper-button-next',
+//             },
+//         });
+//     }
+// }
+   
+// // 초기 Swiper 설정 실행
+// initSwiper();
+
+// // 화면 크기 변경 시 Swiper 다시 설정
+// window.addEventListener("resize", initSwiper);
+let swiper3 = null; // ✅ 전역 변수 선언
+function initSwiper() {
+    // 기존 Swiper 인스턴스가 있으면 제거
+    if (swiper3) {
+        swiper3.destroy(true, true);
+        swiper3 = null;
+    }
+
+    if (window.innerWidth <= 486) {
+        // 486px 이하 → 2열 3행
+        swiper3 = new Swiper(".section_03 .swiper", {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            grid: { rows: 3 },
             spaceBetween: 20,
-            pagination: {
-                el: ".section_03 .swiper-pagination",
-                clickable: true,
-            },
+            pagination: { el: ".section_03 .swiper-pagination", clickable: true },
             navigation: {
-                prevEl: '.section_03 .wrap_swiper_button .swiper-button-prev',
-                nextEl: '.section_03 .wrap_swiper_button .swiper-button-next',
+                prevEl: ".section_03 .wrap_swiper_button .swiper-button-prev",
+                nextEl: ".section_03 .wrap_swiper_button .swiper-button-next",
             },
-            // on: {
-            //     slideChangeTransitionEnd: function(){
-            //         $('.section_03 .swiper').find('.swiper-slide.swiper-slide-active a.btn_action').attr('tabindex', '0').focus();
-            //     }
-            // // }
-            // watchSlidesProgress: true, // 슬라이드 진행 상태 감지
-            // on: {
-            //     slideChange: function () {
-            //         ensureFocusVisible();
-            //     },
-            // },
         });
-    
-    
-    </script>
+    } else if (window.innerWidth <= 1024) {
+        // 1024px 이하 → 3열 3행
+        swiper3 = new Swiper(".section_03 .swiper", {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            grid: { rows: 3 },
+            spaceBetween: 20,
+            pagination: { el: ".section_03 .swiper-pagination", clickable: true },
+            navigation: {
+                prevEl: ".section_03 .wrap_swiper_button .swiper-button-prev",
+                nextEl: ".section_03 .wrap_swiper_button .swiper-button-next",
+            },
+        });
+    } else {
+        // 기본 (1024px 초과) → 4열 2행
+        swiper3 = new Swiper(".section_03 .swiper", {
+            slidesPerView: 4,  // ✅ 4열 설정
+            slidesPerGroup: 4,
+            grid: { rows: 2 },
+            spaceBetween: 20,
+            pagination: { el: ".section_03 .swiper-pagination", clickable: true },
+            navigation: {
+                prevEl: ".section_03 .wrap_swiper_button .swiper-button-prev",
+                nextEl: ".section_03 .wrap_swiper_button .swiper-button-next",
+            },
+        });
+    }
+}
+
+// ✅ DOM이 완전히 로드된 후 실행되도록 변경
+document.addEventListener("DOMContentLoaded", function () {
+    initSwiper();
+});
+
+// ✅ 화면 크기 변경
+
+
+
+
+   </script>
 
 </body>
 

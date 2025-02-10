@@ -1,4 +1,6 @@
 /************************************* 개별 서비스 카드 *************************************/
+/* '자세히 보기'는 각 서비스별 공공용 민간 SaaS 상세 보기 페이지로 연결 */
+
 
 
 // 두레이 - 엔에이치엔두레이
@@ -39,7 +41,7 @@ $(document).ready(function () {
     card_dooray +=         '</div>'; 
     card_dooray +=         '<div class="wrap_btn">';
     card_dooray +=            '<div class="btn_openInNew">';
-    card_dooray +=               '<a href="https://dooray.com/main/" target="_blank" class="link_service_anchor" title="새 창 열림- 두레이 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_dooray +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 두레이 상세 보기 페이지로 이동">자세히 보기</a>';      
     card_dooray +=            '</div>'; 
     card_dooray +=         '</div>'; 
     card_dooray +=       '</div>'; 
@@ -80,7 +82,7 @@ $(document).ready(function () {
     card_videoHelpMe +=         '</div>'; 
     card_videoHelpMe +=         '<div class="wrap_btn">';
     card_videoHelpMe +=            '<div class="btn_openInNew">';
-    card_videoHelpMe +=               '<a href="https://www.videohelp.me/" target="_blank" class="link_service_anchor" title="새 창 열림- 비디오헬프미 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_videoHelpMe +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 비디오헬프미 상세 보기 페이지로 이동">자세히 보기</a>';    
     card_videoHelpMe +=            '</div>'; 
     card_videoHelpMe +=         '</div>'; 
     card_videoHelpMe +=       '</div>'; 
@@ -119,7 +121,7 @@ $(document).ready(function () {
     card_nlobby +=         '</div>'; 
     card_nlobby +=         '<div class="wrap_btn">';
     card_nlobby +=            '<div class="btn_openInNew">';
-    card_nlobby +=              '<a href="https://www.nlobby.com/sub/sub02_01.php" target="_blank" class="link_service_anchor" title="새 창 열림- 엔로비 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_nlobby +=              '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 엔로비 상세 보기 페이지로 이동">자세히 보기</a>';      
     card_nlobby +=            '</div>'; 
     card_nlobby +=         '</div>'; 
     card_nlobby +=       '</div>'; 
@@ -159,7 +161,7 @@ $(document).ready(function () {
     card_eCheckForm +=         '</div>'; 
     card_eCheckForm +=         '<div class="wrap_btn">';
     card_eCheckForm +=            '<div class="btn_openInNew">';
-    card_eCheckForm +=               '<a href="https://www.solbitech.com/" target="_blank" class="link_service_anchor" title="새 창 열림- 이체크폼 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_eCheckForm +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 이체크폼 상세 보기 페이지로 이동">자세히 보기</a>';    
     card_eCheckForm +=            '</div>'; 
     card_eCheckForm +=         '</div>'; 
     card_eCheckForm +=       '</div>'; 
@@ -201,7 +203,7 @@ $(document).ready(function () {
     card_eFormSign +=         '</div>'; 
     card_eFormSign +=         '<div class="wrap_btn">';
     card_eFormSign +=            '<div class="btn_openInNew">';
-    card_eFormSign +=               '<a href="https://www.eformsign.com/kr/index.html" target="_blank" class="link_service_anchor" title="새 창 열림- 이폼사인 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_eFormSign +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 이폼사인 상세 보기 페이지로 이동">자세히 보기</a>';     
     card_eFormSign +=            '</div>'; 
     card_eFormSign +=         '</div>'; 
     card_eFormSign +=       '</div>'; 
@@ -240,7 +242,7 @@ $(document).ready(function () {
     card_crinityGMail +=         '</div>'; 
     card_crinityGMail +=         '<div class="wrap_btn">';
     card_crinityGMail +=            '<div class="btn_openInNew">';
-    card_crinityGMail +=               '<a href="https://www.crinity.com/main/product/product_gcloud.html" target="_blank" class="link_service_anchor" title="새 창 열림- 크리니티 지 클라우드 공공메일 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_crinityGMail +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 크리니티 지 클라우드 공공메일 상세 보기 페이지로 이동">자세히 보기</a>';  
     card_crinityGMail +=            '</div>'; 
     card_crinityGMail +=         '</div>'; 
     card_crinityGMail +=       '</div>'; 
@@ -279,7 +281,7 @@ $(document).ready(function () {
     card_mailplugGMail +=         '</div>'; 
     card_mailplugGMail +=         '<div class="wrap_btn">';
     card_mailplugGMail +=            '<div class="btn_openInNew">';
-    card_mailplugGMail +=               '<a href="https://www.mailplug.com/" target="_blank" class="link_service_anchor" title="새 창 열림- 메일플러그 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_mailplugGMail +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 메일플러그 상세 보기 페이지로 이동">자세히 보기</a>';  
     card_mailplugGMail +=            '</div>'; 
     card_mailplugGMail +=         '</div>'; 
     card_mailplugGMail +=       '</div>'; 
@@ -319,7 +321,7 @@ $(document).ready(function () {
     card_GSmartlink +=         '</div>'; 
     card_GSmartlink +=         '<div class="wrap_btn">';
     card_GSmartlink +=            '<div class="btn_openInNew">';
-    card_GSmartlink +=               '<a href="https://www.smartlinkfms.com/" target="_blank" class="link_service_anchor" title="새 창 열림- 지 스마트링크 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_GSmartlink +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 지 스마트링크 상세 보기 페이지로 이동">자세히 보기</a>';  
     card_GSmartlink +=            '</div>'; 
     card_GSmartlink +=         '</div>'; 
     card_GSmartlink +=       '</div>'; 
@@ -360,7 +362,7 @@ $(document).ready(function () {
     card_ktAiContact +=         '</div>'; 
     card_ktAiContact +=         '<div class="wrap_btn">';
     card_ktAiContact +=            '<div class="btn_openInNew">';
-    card_ktAiContact +=               '<a href="https://www.kt-aicc.com" target="_blank" class="link_service_anchor" title="새 창 열림- 케이티 에이아이 콘텍트 센터 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_ktAiContact +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 케이티 에이아이 콘텍트 센터 상세 보기 페이지로 이동">자세히 보기</a>';     
     card_ktAiContact +=            '</div>'; 
     card_ktAiContact +=         '</div>'; 
     card_ktAiContact +=       '</div>'; 
@@ -404,7 +406,7 @@ $(document).ready(function () {
     card_ktBizmeet +=         '</div>'; 
     card_ktBizmeet +=         '<div class="wrap_btn">';
     card_ktBizmeet +=            '<div class="btn_openInNew">';
-    card_ktBizmeet +=               '<a href="https://gcloud.kt.com/product/productDetail?prodId=P000000055" target="_blank" class="link_service_anchor" title="새 창 열림- 케이티 클라우드 비즈 밋 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_ktBizmeet +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 케이티 클라우드 비즈 밋 상세 보기 페이지로 이동">자세히 보기</a>';     
     card_ktBizmeet +=            '</div>'; 
     card_ktBizmeet +=         '</div>'; 
     card_ktBizmeet +=       '</div>'; 
@@ -450,7 +452,7 @@ $(document).ready(function () {
     card_ktBizworkspro +=         '</div>'; 
     card_ktBizworkspro +=         '<div class="wrap_btn">';
     card_ktBizworkspro +=            '<div class="btn_openInNew">';
-    card_ktBizworkspro +=               '<a href="https://gcloud.kt.com/product/productDetail?prodId=P000000036" target="_blank" class="link_service_anchor" title="새 창 열림- 케이티 클라우드 비즈 웍스 프로 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_ktBizworkspro +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 케이티 클라우드 비즈 웍스 프로 상세 보기 페이지로 이동">자세히 보기</a>';      
     card_ktBizworkspro +=            '</div>'; 
     card_ktBizworkspro +=         '</div>'; 
     card_ktBizworkspro +=       '</div>'; 
@@ -498,7 +500,7 @@ $(document).ready(function () {
     card_naverworks +=         '</div>'; 
     card_naverworks +=         '<div class="wrap_btn">';
     card_naverworks +=            '<div class="btn_openInNew">';
-    card_naverworks +=               '<a href="https://gov-naverworks.com/" target="_blank" class="link_service_anchor" title="새 창 열림- 네이버 웍스 공공용 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_naverworks +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 네이버 웍스 공공용 상세 보기 페이지로 이동">자세히 보기</a>';      
     card_naverworks +=            '</div>'; 
     card_naverworks +=         '</div>'; 
     card_naverworks +=       '</div>'; 
@@ -546,7 +548,7 @@ $(document).ready(function () {
     card_pams +=         '</div>'; 
     card_pams +=         '<div class="wrap_btn">';
     card_pams +=            '<div class="btn_openInNew">';    
-    card_pams +=               '<a href="https://www.jiwone.com/" target="_blank" class="link_service_anchor" title="새 창 열림- PAMs(지능형 능동행정 공공지원사업 매칭서비스) 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_pams +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 PAMs(지능형 능동행정 공공지원사업 매칭서비스) 상세 보기 페이지로 이동">자세히 보기</a>';      
     card_pams +=            '</div>'; 
     card_pams +=         '</div>'; 
     card_pams +=       '</div>'; 
@@ -586,7 +588,7 @@ $(document).ready(function () {
     card_sgate +=         '</div>'; 
     card_sgate +=         '<div class="wrap_btn">';
     card_sgate +=            '<div class="btn_openInNew">';
-    card_sgate +=               '<a href="https://sgate.ispark.kr/sgate-public-institution/" target="_blank" class="link_service_anchor" title="새 창 열림- 에스게이트 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_sgate +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 에스게이트 상세 보기 페이지로 이동">자세히 보기</a>';   
     card_sgate +=            '</div>'; 
     card_sgate +=         '</div>'; 
     card_sgate +=       '</div>'; 
@@ -626,7 +628,7 @@ $(document).ready(function () {
     card_zeniusEms +=         '</div>'; 
     card_zeniusEms +=         '<div class="wrap_btn">';
     card_zeniusEms +=            '<div class="btn_openInNew">';
-    card_zeniusEms +=               '<a href="https://www.brainz.co.kr/" target="_blank" class="link_service_anchor" title="새 창 열림- 지니어스 이엠에스 공식 홈페이지로 이동">자세히 보기</a>';    
+    card_zeniusEms +=                '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 지니어스 이엠에스 상세 보기 페이지로 이동">자세히 보기</a>';     
     card_zeniusEms +=            '</div>'; 
     card_zeniusEms +=         '</div>'; 
     card_zeniusEms +=       '</div>'; 
