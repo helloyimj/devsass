@@ -667,6 +667,13 @@
   .page_content .wrap_table {
     max-width: 100%;
   }
+  .page_inner {
+    width: 100%;
+    padding: 0 2% 17rem;
+  }
+  .page p, .page li {
+    font-size: 1.6rem;
+  }
   .page_answer .wrap_box_info {
     margin-top: 10rem;
   }
@@ -765,7 +772,11 @@
   .wrap_board_list .post_title_txt {
     text-indent: 0;
     line-height: 2rem;
+    font-size: 1.4rem;
+    width: 100%;
     overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .wrap_board_list .post_title_txt .badge.lined {
     margin-left: 10px;
@@ -868,9 +879,10 @@
     padding: 0;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-  }
-  .attached_download_viewer .attached_file_list .attached_file_item:not(:nth-last-of-type(1)) {
     margin-bottom: 2rem;
+  }
+  .attached_download_viewer .attached_file_list .attached_file_item::nth-last-of-type(1) {
+    margin-bottom: 0;
   }
   .attached_download_viewer .attached_file_list .attached_file_item .attached_file_txt {
     width: 100%;

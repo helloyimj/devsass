@@ -1887,14 +1887,13 @@ input[type="time"] {
 	padding: 30px;
 	background: linear-gradient(-135deg,#7250df, #585dc8);
 	border-radius: 20px;
-	// background-color: $color_white;
 	.search_filter_tit {
 		width: 100%;
 		font-size: 2.4rem;
 		font-family: $font_bold;
 		color: #fff;
 		margin-bottom: 2rem;
-}
+    }
 	
 select {
 	font-family: $font_medium;
@@ -2526,6 +2525,10 @@ small {
         font-family: $font_bold;
     }
 
+    .wrap_title_anchor {
+        width: 100%;
+    }
+
     .post_title_anchor {
         // 뱃지 없을 때 (default)
         display: block;
@@ -2574,9 +2577,9 @@ small {
             right: 0;
         }
   }
-  .post_num + .post_title_item {
-    width: calc(100% - 6rem);
-    }
+//   .post_num + .post_title_item {
+//     width: calc(100% - 6rem);    
+//     }
 }
 
 
@@ -2830,13 +2833,13 @@ small {
                     width: 12px;
                     height: 12px;
                 }
+            }  
 
-
-            }  .wrap_search_filter {
-    border-radius: 1rem;
-    display: block;
-    font-size: 0;
-    padding: 2rem 1.5rem;
+        .wrap_search_filter {
+            border-radius: 1rem;
+            display: block;
+            font-size: 0;
+            padding: 2rem 1.5rem;
 
 		.wrap_select {
 			margin-bottom: 1.5rem;
@@ -2933,7 +2936,8 @@ small {
       width: 1.4rem;
     }
   }
-  }
+        }
+        
         }
     }
 

@@ -4178,6 +4178,13 @@
     width: 100%;
     padding: 0 2%;
   }
+  .page_govSaaS .article06 .wrap-slide-box_ {
+    top: initial;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    bottom: -4rem;
+    height: 4rem;
+  }
   .page_govSaaS .article06 .wrap-slide-box_ .swiper-button-prev,
   .page_govSaaS .article06 .wrap-slide-box_ .swiper-button-next {
     background-image: none;
@@ -7245,6 +7252,10 @@
   }
   .page_govSaaS .article06 .swiper-container .swiper-slide:last-of-type {
     margin-right: 1.4rem;
+  }
+  .page_govSaaS .article06 .wrap-slide-box_ {
+    bottom: -3.1rem;
+    height: 3rem;
   }
   .page_govSaaS .article06 .wrap-slide-box_ .swiper-button-prev,
   .page_govSaaS .article06 .wrap-slide-box_ .swiper-button-next {

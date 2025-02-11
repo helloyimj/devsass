@@ -985,6 +985,15 @@
     max-width: 100%;
   }
 
+  .page_inner {
+    width: 100%;
+    padding: 0 2% 17rem;
+}
+
+.page p, .page li {
+  font-size: 1.6rem;
+}
+
   // 사용자 지원_자주 묻는 질문 하단 박스
 
   .page_answer .wrap_box_info {
@@ -1102,6 +1111,7 @@
     }
 
     .post_title_item {
+
       &.new {
         .post_title_txt {
           font-size: 1.4rem;
@@ -1113,7 +1123,12 @@
     .post_title_txt {
       text-indent: 0;
       line-height: 2rem;
+      font-size: 1.4rem;
+
+      width: 100%;
       overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
 
       .badge.lined {
         // position: static;
@@ -1229,10 +1244,12 @@
               // margin-bottom: 1.5rem;
               padding: 0;
               flex-wrap: wrap;
+              margin-bottom: 2rem;
 
-              &:not(:nth-last-of-type(1)) {
-                margin-bottom: 2rem;
+              &::nth-last-of-type(1) {
+              margin-bottom: 0;
             }
+            
               .attached_file_txt {
                 width: 100%;
               }
