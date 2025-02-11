@@ -4178,13 +4178,6 @@
     width: 100%;
     padding: 0 2%;
   }
-  .page_govSaaS .article06 .wrap-slide-box_ {
-    top: initial;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    bottom: -4rem;
-    height: 4rem;
-  }
   .page_govSaaS .article06 .wrap-slide-box_ .swiper-button-prev,
   .page_govSaaS .article06 .wrap-slide-box_ .swiper-button-next {
     background-image: none;
@@ -4441,6 +4434,7 @@
   }
   .page_governanceIntro .article03 .wrap_contents .sum_article {
     margin-top: 2rem;
+    font-size: 1.8rem;
   }
   .page_governanceIntro .article03 .wrap_contents .deco_left {
     margin-top: 4rem;
@@ -4964,11 +4958,18 @@
   .page .wrap_article.select_area {
     padding: 0 1.4rem;
   }
+  .page_centered .wrap_article:last-of-type {
+    margin-bottom: 20rem;
+  }
   /****************** 소개 *******************/
   /* 소개 공통 템플릿 */
   .page_intro .wrap_graphic .wrap_con .wrap_items .box_shadow {
     width: 40rem;
     padding: 6rem 4rem 3rem;
+  }
+  .page_intro .topic_article {
+    font-size: 2.2rem;
+    padding: 0 2%;
   }
   /* 통합관리포털 소개 */
   .page_portalIntro .article02 .wrap_graphic {
@@ -7244,10 +7245,6 @@
   }
   .page_govSaaS .article06 .swiper-container .swiper-slide:last-of-type {
     margin-right: 1.4rem;
-  }
-  .page_govSaaS .article06 .wrap-slide-box_ {
-    bottom: -3.1rem;
-    height: 3rem;
   }
   .page_govSaaS .article06 .wrap-slide-box_ .swiper-button-prev,
   .page_govSaaS .article06 .wrap-slide-box_ .swiper-button-next {

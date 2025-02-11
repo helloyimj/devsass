@@ -176,18 +176,29 @@
 .swiper-button-next {
 	width: 5rem;
 	right: -2.5rem;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
-.swiper-button-prev,
+.swiper-button-prev{
+	width: 5rem;
+	left: -2.5rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
 .swiper-container-rtl .swiper-button-next {
 	width: 5rem;
 	left: -2.5rem;
+	top: -50%;
+	transform: translateY(-50%);
 }
 
 .swiper-container-rtl .swiper-button-prev {
 	width: 5rem;
 	// right: 0;
 	right: -2.5rem;
+
 }
 
 .swiper-container {
@@ -627,12 +638,6 @@
 }
 /* 메인 비주얼 end */
 
-	
-.wrap_section_contents {
-	padding: 0 2%;
-}
-
-
 /* section_01  */
 .section_01 {
 
@@ -1064,9 +1069,9 @@
 
 .section_03 {
 
-	.wrap_section_contents {
-		padding: 0 2%;
-	}
+	// .wrap_section_contents {
+	// 	padding: 0 2%;
+	// }
 
 	.inner {
 		padding-bottom: 6rem;
@@ -1204,6 +1209,12 @@
 					}
 			}
 	}
+		
+.wrap_section_contents {
+	padding: 0 2%;
+}
+
+
 }
 
 
@@ -1497,6 +1508,7 @@ padding-top: 135px;
 				margin-top: 3.4rem;
 		
 				.btn_saas {
+					width: 20rem;
 					height: 5.4rem;
 					padding-left: 4.8rem;
 					font-size: 1.2rem;
@@ -2225,6 +2237,10 @@ margin-top: 2.4rem;
 
 	.wrap_swiper_button {
 		display: none;
+	}
+
+	.main_visual .main_visual_inner .wrap_btn .btn_saas {
+		width: 18rem;
 	}
 
 

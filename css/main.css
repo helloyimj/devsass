@@ -163,12 +163,25 @@
 .swiper-button-next {
   width: 5rem;
   right: -2.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.swiper-button-prev,
+.swiper-button-prev {
+  width: 5rem;
+  left: -2.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .swiper-container-rtl .swiper-button-next {
   width: 5rem;
   left: -2.5rem;
+  top: -50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .swiper-container-rtl .swiper-button-prev {
@@ -613,10 +626,6 @@
 }
 
 /* 메인 비주얼 end */
-.wrap_section_contents {
-  padding: 0 2%;
-}
-
 /* section_01  */
 .section_01 {
   background-color: #e3e9f5;
@@ -1001,9 +1010,6 @@
 
 /* section_02 end */
 /* section_03 */
-.section_03 .wrap_section_contents {
-  padding: 0 2%;
-}
 .section_03 .inner {
   padding-bottom: 6rem;
 }
@@ -1107,6 +1113,9 @@
     position: absolute;
     right: 0;
     bottom: 0.6rem;
+  }
+  .page_main .wrap_section_contents {
+    padding: 0 2%;
   }
   /* 스와이퍼 공통사항 */
   .swiper-button-next {
@@ -1312,6 +1321,7 @@
     margin-top: 3.4rem;
   }
   .main_visual .main_visual_inner .wrap_btn .btn_saas {
+    width: 20rem;
     height: 5.4rem;
     padding-left: 4.8rem;
     font-size: 1.2rem;
@@ -1828,6 +1838,9 @@
   }
   .wrap_swiper_button {
     display: none;
+  }
+  .main_visual .main_visual_inner .wrap_btn .btn_saas {
+    width: 18rem;
   }
   .section_01 .wrap_section_contents .swiper_main_section_01 {
     padding-left: 1.4rem;

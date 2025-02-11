@@ -1119,135 +1119,130 @@
         });
 
 
+        // .section_03
+        //     if (swiper3) {
+        //     swiper3.destroy(true, true);
+        //     swiper3 = null;
+        // }
 
-
-
-
+        //     if (window.innerWidth <= 486) {
+        //         // 486px 이하 → 2열 3행
+        //         swiper3 = new Swiper(".section_03 .swiper", {
+        //             slidesPerView: 2,
+        //             slidesPerGroup: 2,
+        //             grid: {
+        //                 rows: 3,
+        //             },
+        //             spaceBetween: 20,
+        //             pagination: {
+        //                 el: ".section_03 .swiper-pagination",
+        //                 clickable: true,
+        //             },
+        //             navigation: {
+        //                 prevEl: '.section_03 .wrap_swiper_button .swiper-button-prev',
+        //                 nextEl: '.section_03 .wrap_swiper_button .swiper-button-next',
+        //             },
+        //         });
+        //     } else if (window.innerWidth <= 1024) {
+        //         // 1024px 이하 → 3열 3행
+        //         swiper3 = new Swiper(".section_03 .swiper", {
+        //             slidesPerView: 3,
+        //             slidesPerGroup: 3,
+        //             grid: {
+        //                 rows: 3,
+        //             },
+        //             spaceBetween: 20,
+        //             pagination: {
+        //                 el: ".section_03 .swiper-pagination",
+        //                 clickable: true,
+        //             },
+        //             navigation: {
+        //                 prevEl: '.section_03 .wrap_swiper_button .swiper-button-prev',
+        //                 nextEl: '.section_03 .wrap_swiper_button .swiper-button-next',
+        //             },
+        //         });
+        //     } else {
+        //         // 기본 (1024px 초과) → 4열 2행
+        //         swiper3 = new Swiper(".section_03 .swiper", {
+        //             slidesPerView: 4,
+        //             slidesPerGroup: 4,
+        //             grid: {
+        //                 rows: 2,
+        //             },
+        //             spaceBetween: 20,
+        //             pagination: {
+        //                 el: ".section_03 .swiper-pagination",
+        //                 clickable: true,
+        //             },
+        //             navigation: {
+        //                 prevEl: '.section_03 .wrap_swiper_button .swiper-button-prev',
+        //                 nextEl: '.section_03 .wrap_swiper_button .swiper-button-next',
+        //             },
+        //         });
+        //     }
+        // }
         
-// function initSwiper() {
-//     if (swiper3) {
-//     swiper3.destroy(true, true);
-//     swiper3 = null;
-// }
+        // // 초기 Swiper 설정 실행
+        // initSwiper();
 
-//     if (window.innerWidth <= 486) {
-//         // 486px 이하 → 2열 3행
-//         swiper3 = new Swiper(".section_03 .swiper", {
-//             slidesPerView: 2,
-//             slidesPerGroup: 2,
-//             grid: {
-//                 rows: 3,
-//             },
-//             spaceBetween: 20,
-//             pagination: {
-//                 el: ".section_03 .swiper-pagination",
-//                 clickable: true,
-//             },
-//             navigation: {
-//                 prevEl: '.section_03 .wrap_swiper_button .swiper-button-prev',
-//                 nextEl: '.section_03 .wrap_swiper_button .swiper-button-next',
-//             },
-//         });
-//     } else if (window.innerWidth <= 1024) {
-//         // 1024px 이하 → 3열 3행
-//         swiper3 = new Swiper(".section_03 .swiper", {
-//             slidesPerView: 3,
-//             slidesPerGroup: 3,
-//             grid: {
-//                 rows: 3,
-//             },
-//             spaceBetween: 20,
-//             pagination: {
-//                 el: ".section_03 .swiper-pagination",
-//                 clickable: true,
-//             },
-//             navigation: {
-//                 prevEl: '.section_03 .wrap_swiper_button .swiper-button-prev',
-//                 nextEl: '.section_03 .wrap_swiper_button .swiper-button-next',
-//             },
-//         });
-//     } else {
-//         // 기본 (1024px 초과) → 4열 2행
-//         swiper3 = new Swiper(".section_03 .swiper", {
-//             slidesPerView: 4,
-//             slidesPerGroup: 4,
-//             grid: {
-//                 rows: 2,
-//             },
-//             spaceBetween: 20,
-//             pagination: {
-//                 el: ".section_03 .swiper-pagination",
-//                 clickable: true,
-//             },
-//             navigation: {
-//                 prevEl: '.section_03 .wrap_swiper_button .swiper-button-prev',
-//                 nextEl: '.section_03 .wrap_swiper_button .swiper-button-next',
-//             },
-//         });
-//     }
-// }
-   
-// // 초기 Swiper 설정 실행
-// initSwiper();
+        // // 화면 크기 변경 시 Swiper 다시 설정
+        // window.addEventListener("resize", initSwiper);
+        let swiper3 = null; // 전역 변수 선언
+        function initSwiper() {
+            // 기존 Swiper 인스턴스가 있으면 제거
+            if (swiper3) {
+                swiper3.destroy(true, true);
+                swiper3 = null;
+            }
 
-// // 화면 크기 변경 시 Swiper 다시 설정
-// window.addEventListener("resize", initSwiper);
-let swiper3 = null; // ✅ 전역 변수 선언
-function initSwiper() {
-    // 기존 Swiper 인스턴스가 있으면 제거
-    if (swiper3) {
-        swiper3.destroy(true, true);
-        swiper3 = null;
-    }
+            if (window.innerWidth <= 486) {
+                // 486px 이하 → 2열 3행
+                swiper3 = new Swiper(".section_03 .swiper", {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    grid: { rows: 3 },
+                    spaceBetween: 20,
+                    pagination: { el: ".section_03 .swiper-pagination", clickable: true },
+                    navigation: {
+                        prevEl: ".section_03 .wrap_swiper_button .swiper-button-prev",
+                        nextEl: ".section_03 .wrap_swiper_button .swiper-button-next",
+                    },
+                });
+            } else if (window.innerWidth <= 1024) {
+                // 1024px 이하 → 3열 3행
+                swiper3 = new Swiper(".section_03 .swiper", {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    grid: { rows: 3 },
+                    spaceBetween: 20,
+                    pagination: { el: ".section_03 .swiper-pagination", clickable: true },
+                    navigation: {
+                        prevEl: ".section_03 .wrap_swiper_button .swiper-button-prev",
+                        nextEl: ".section_03 .wrap_swiper_button .swiper-button-next",
+                    },
+                });
+            } else {
+                // 기본 (1024px 초과) → 4열 2행
+                swiper3 = new Swiper(".section_03 .swiper", {
+                    slidesPerView: 4,  // 4열 설정
+                    slidesPerGroup: 4,
+                    grid: { rows: 2 },
+                    spaceBetween: 20,
+                    pagination: { el: ".section_03 .swiper-pagination", clickable: true },
+                    navigation: {
+                        prevEl: ".section_03 .wrap_swiper_button .swiper-button-prev",
+                        nextEl: ".section_03 .wrap_swiper_button .swiper-button-next",
+                    },
+                });
+            }
+        }
 
-    if (window.innerWidth <= 486) {
-        // 486px 이하 → 2열 3행
-        swiper3 = new Swiper(".section_03 .swiper", {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            grid: { rows: 3 },
-            spaceBetween: 20,
-            pagination: { el: ".section_03 .swiper-pagination", clickable: true },
-            navigation: {
-                prevEl: ".section_03 .wrap_swiper_button .swiper-button-prev",
-                nextEl: ".section_03 .wrap_swiper_button .swiper-button-next",
-            },
+        // DOM이 완전히 로드된 후 실행되도록 변경
+        document.addEventListener("DOMContentLoaded", function () {
+            initSwiper();
         });
-    } else if (window.innerWidth <= 1024) {
-        // 1024px 이하 → 3열 3행
-        swiper3 = new Swiper(".section_03 .swiper", {
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-            grid: { rows: 3 },
-            spaceBetween: 20,
-            pagination: { el: ".section_03 .swiper-pagination", clickable: true },
-            navigation: {
-                prevEl: ".section_03 .wrap_swiper_button .swiper-button-prev",
-                nextEl: ".section_03 .wrap_swiper_button .swiper-button-next",
-            },
-        });
-    } else {
-        // 기본 (1024px 초과) → 4열 2행
-        swiper3 = new Swiper(".section_03 .swiper", {
-            slidesPerView: 4,  // ✅ 4열 설정
-            slidesPerGroup: 4,
-            grid: { rows: 2 },
-            spaceBetween: 20,
-            pagination: { el: ".section_03 .swiper-pagination", clickable: true },
-            navigation: {
-                prevEl: ".section_03 .wrap_swiper_button .swiper-button-prev",
-                nextEl: ".section_03 .wrap_swiper_button .swiper-button-next",
-            },
-        });
-    }
-}
 
-// ✅ DOM이 완전히 로드된 후 실행되도록 변경
-document.addEventListener("DOMContentLoaded", function () {
-    initSwiper();
-});
-
-// ✅ 화면 크기 변경
+        // 화면 크기 변경
 
 
 

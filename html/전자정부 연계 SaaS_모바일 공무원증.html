@@ -368,6 +368,62 @@
 
     <script>
         AOS.init();
+        
+        $(document).ready(function() {
+            // 연계공통 기반으로 개발 된 민간 SasS 소개
+            var swiper = new Swiper(".wrap_article .swiper", {
+            roundLengths: 'false',
+            // slidesPerView: 4,
+            // slidePerGroup: 1,
+            spaceBetween: 20,
+            mousewheel: {
+                invert: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoHeight: true,
+            slidesOffAfter: 120,
+            keyboard: {
+                enabled: true,
+            },
+            navigation: {
+                prevEl: '.wrap-slide-box_ .swiper-button-prev',
+                nextEl: '.wrap-slide-box_ .swiper-button-next',
+            },
+            // Enable ARIA support
+            a11y: {
+                prevSlideMessage: '이전 슬라이드',
+                nextSlideMessage: '다음 슬라이드',
+                firstSlideMessage: '처음 슬라이드',
+                lastSlideMessage: '마지막 슬라이드',
+                paginationBulletMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
+            },
+
+            breakpoints: {
+                425: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1420: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                enabled: true,
+            },
+        });
+
+        });
+        
     </script>
 </body>
 
