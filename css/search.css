@@ -36,6 +36,9 @@
   height: 1.8rem;
   left: 3.2rem;
 }
+.page_search .result_keyword {
+  background-color: #bff0f5;
+}
 
 .wrap_title {
   display: -webkit-box;
@@ -149,10 +152,6 @@
   font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-.result_keyword {
-  background-color: #bff0f5;
-}
-
 .btn_more {
   width: 13rem;
   height: 3.4rem;
@@ -195,6 +194,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4rem;
+}
+.wrap_result_content .wrap_result_table {
+  padding-top: 0;
 }
 .wrap_result_content.notice .result_content_box {
   display: -webkit-box;
