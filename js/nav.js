@@ -194,9 +194,9 @@ footer += "</div>";
 footer += '<div class="area_links">';
 footer += '<div class="inner">';
 footer += '<div class="wrap_links">';
-footer += '<a href="누리집 이용 안내_포털이용약관.html" class="rel_link" target="_blank" title="새 창 열림-포털 이용약관">포털 이용약관</a>';
-footer += '<a href="누리집 이용 안내_개인정보처리방침.html" class="rel_link color_blue_light" target="_blank" title="새 창 열림-개인정보처리방침">개인정보처리방침</a>';
-footer += '<a href="javascript:;" class="rel_link" target="_blank" title="새 창 열림-웹 접근성 품질인증 마크 획득">웹 접근성 품질인증 마크 획득</a>';
+footer += '<a href="누리집 이용 안내_포털이용약관.html" class="rel_link" target="_self" title="포털 이용약관 페이지로 이동">포털 이용약관</a>';
+footer += '<a href="누리집 이용 안내_개인정보처리방침.html" class="rel_link color_blue_light" target="_self" title="개인정보처리방침 페이지로 이동">개인정보처리방침</a>';
+footer += '<a href="javascript:;" class="rel_link" target="_self" title="웹 접근성 품질인증 마크 획득 페이지로 이동">웹 접근성 품질인증 마크 획득</a>';
 footer += "</div>";
 footer += '<div class="wrap_copyright">';
 footer += '<p>Copyright@ 한국지능정보사회진흥원 All Rights Reserved.</p>';
@@ -208,7 +208,7 @@ footer += "</div>";
 
 let sideBtn = "";
 sideBtn += "<!-- 최상단 이동 -->";
-sideBtn += '<div class="wrap_side_btn">';
+sideBtn += '<div class="wrap_side_btn" id="quick">';
 sideBtn += '<a href="사용자 지원_기술지원.html" aria-label="기술지원 바로가기" class="btn_side_sup btn_side_sup01"><p>기술지원</p></a>';
 sideBtn += '<a href="javascript:;" aria-label="챗봇 문의, 검색 바로가기" class="btn_side_sup btn_side_sup02"><p>챗봇 문의 · 검색</p></a>';
 sideBtn += '<a href="#wrapper" aria-label="최상단으로 이동" class="btn_side_sup btn_side_sup03 btn_top"><span class="sr_only">최상단으로 이동</span></a>';
@@ -232,10 +232,8 @@ sideBtn += "</div>";
 let skip = "";
 skip += '<nav id="skip" class="skip">';
 skip += '<a href="#content" class="skip_anchor">본문 바로가기</a>';
-// skip +=  '<a href="#gnb" class="skip_anchor">주메뉴 바로가기</a>'
-// skip +=  '<a href="#sidemenu" class="skip_anchor">서브메뉴 바로가기</a>'
-// skip +=  '<a href="#footer" class="skip_anchor">푸터 바로가기</a>'
-// skip +=  '<a href="#">홈페이지 내 검색 바로가기</a>'
+skip +=  '<a href="#gnb" class="skip_anchor">주메뉴 바로가기</a>'
+skip +=  '<a href="#quick" class="skip_anchor">퀵메뉴 바로가기</a>'
 skip += "</nav>";
 
 $(document).ready(function () {

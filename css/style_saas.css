@@ -3617,12 +3617,12 @@
   color: #333c98;
   font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1.4rem;
+  margin-bottom: 1.4rem;
 }
 .page_saas_search .item_conts_t .wrap_name .product_name {
   font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 2.4rem;
   line-height: 1;
-  margin-top: 1.4rem;
 }
 .page_saas_search .item_conts_t .wrap_name .company_name {
   font-size: 1.6rem;
