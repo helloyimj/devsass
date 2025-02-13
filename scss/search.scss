@@ -369,9 +369,8 @@
 
 }
 
-// .select_category {
 
-  .wrap_select {
+  .wrap_select_category {
     background-color: #e7ebf7;
     border-radius: 1rem;
     padding: 2rem 1.4rem;
@@ -388,7 +387,6 @@
     }
   }
 
-// }
 
 
 @media all and (max-width: 1024px) {
@@ -440,6 +438,21 @@
         bottom: -6rem;
         left: 50%;
         transform: translateX(-50%);
+
+        &::after {
+          // content: "";
+          // position: absolute;
+          // right: 1.6rem; 
+          top: 50%;
+          // width: 10rem;
+          height: .6rem;
+          // background-image: url("../img/icon/icon_chevron_right_navy.svg");
+          // background-repeat: no-repeat;
+          // background-size: contain;
+          right: 1.1rem; 
+          transform: translateY(-50%) rotate(90deg)
+
+      }
 
       }
     }
