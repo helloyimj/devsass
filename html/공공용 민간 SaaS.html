@@ -58,14 +58,15 @@
                                 <div class="wrap_search_filter">
                                     <h3 class="search_filter_tit">공공용 민간 SaaS를 찾아보세요</h3>
                                     <div class="wrap_select">
-                                        <!-- <label for="select_" class="sr_only"></label> -->
-                                        <select name="select_" id="select_" class="select_searchbar">
+                                        <label for="select_" class="sr_only">검색 필터 선택</label> 
+                                        <select name="select_" class="select_searchbar">
                                             <option value="" selected>전체</option>
                                             <option value="">민간 SaaS명</option>
                                             <option value="">기업명</option>
                                         </select>
                                     </div>
                                     <div class="box_input">
+                                        <label class="sr_only">검색어 입력</label>                                         
                                         <input type="text" class="input_text input_searchbar" placeholder="검색어를 입력해주세요.">
                                     </div>
                                     <button type="submit" class="btn_submit btn_search">검색</button>
@@ -159,11 +160,15 @@
                                                     <div class="wrap_radio wrap_textbox">
                                                         <div class="box_input">
                                                             <i></i>
+                                                            <label class="sr_only">시작 연도 입력</label>
                                                             <input type="number" class="textbox year" name="date">년
+                                                            <label class="sr_only">시작 월 입력</label>
                                                             <input type="number" class="textbox month" name="date">월
                                                             <span>~</span>
                                                             <i></i>
+                                                            <label class="sr_only">종료 연도 입력</label>
                                                             <input type="number" class="textbox year" name="date">년
+                                                            <label class="sr_only">종료 월 입력</label>
                                                             <input type="number" class="textbox month" name="date">월
                                                         </div>
                                                         <div class="box_checkbox">
@@ -400,6 +405,7 @@
                                         <div class="area_right">
                                             <div class="wrap_select count">
                                                 <p>항목 표시 개수</p>
+                                                <label for="select_" class="sr_only">항목 표시 개수 선택</label> 
                                                 <select name="select_" id="select_count" class="select_sort">
                                                     <option value="" selected>10 개</option>
                                                     <option value="">20 개</option>
@@ -408,6 +414,7 @@
                                             </div>
                                             <div class="wrap_select array">
                                                 <p>정렬 기준</p>
+                                                <label for="select_" class="sr_only">정렬 기준 선택</label> 
                                                 <select name="select_" id="select_array" class="select_sort">
                                                     <option value="" selected>인증최신순</option>
                                                     <option value="">조회순 오름차순</option>

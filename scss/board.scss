@@ -1253,7 +1253,7 @@
               flex-wrap: wrap;
               margin-bottom: 2rem;
 
-              &::nth-last-of-type(1) {
+              &:nth-last-of-type(1) {
               margin-bottom: 0;
             }
             
@@ -1355,7 +1355,7 @@
 
   /* 이전글 다음글 (게시물 하단 ) */
   .post_prev_next {
-      font-family: 1.2rem;
+      font-size: 1.2rem;
       dl {
           padding: 15px 7px;
       }
@@ -1375,7 +1375,7 @@
 
           a {
               text-indent: 0;
-              width: a;
+              width: auto;
           }
       }
       .prev dt span::before {

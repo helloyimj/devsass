@@ -1056,7 +1056,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding-top: 2.5rem;
-  padding-bottom: -2rem;
+  padding-bottom: 2rem;
   background-color: #cbdef4;
   border-radius: 1rem;
 }

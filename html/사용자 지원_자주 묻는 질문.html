@@ -58,14 +58,15 @@
                                 <div class="wrap_search_filter">
                                     <div class="wrap_select">
                                         <h3></h3>
-                                        <!-- <label for="select_" class="sr_only"></label>  -->
-                                        <select name="select_" id="select_" class="select_searchbar">
+                                        <label for="select_" class="sr_only">검색 필터 선택</label> 
+                                        <select name="select_" class="select_searchbar">
                                             <option value="" selected>전체</option>
                                             <option value="">1</option>
                                             <option value="">2</option>
                                         </select>
                                     </div>
                                     <div class="box_input">
+                                        <label class="sr_only">검색어 입력</label>
                                         <input type="text" class="input_text input_searchbar" placeholder="검색어를 입력해주세요.">
                                     </div>
                                     <button type="submit" class="btn_submit btn_search">검색</button>
@@ -83,7 +84,8 @@
                                         </div>
                                         <div class="area_right">
                                             <div class="wrap_select">
-                                                <select name="select_" id="select_" class="select_sort">
+                                                <label for="select_" class="sr_only">정렬 개수 선택</label> 
+                                                <select name="select_" class="select_sort">
                                                     <option value="" selected>10 개씩</option>
                                                     <option value="">20 개씩</option>
                                                     <option value="">30 개씩</option>
@@ -97,7 +99,8 @@
                                         <!--table -->
                                         <div class="wrap_table" data-aos="fade-up" data-aos-delay="300">
                                             <table class="table table_user_manage">
-                                                <caption>사용자 목록</caption>
+                                                <summary class="sr_only">자주 묻는 질문</summary>                                               
+                                                <caption>자주 묻는 질문</caption>
                                                 <colgroup>
                                                     <col style="width: 162px;">
                                                     <col style="width: auto;">

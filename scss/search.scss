@@ -140,18 +140,6 @@
 }
 
 .btn_more {
-  // width: 13rem;
-  // height: 3.4rem;
-  // line-height: 3.2rem;
-  // // padding: 0 1.9rem;
-  // justify-content: flex-end;
-  // font-size: 1.4rem;
-
-  // border-radius: 1.6rem;
-  // padding-left: 1.6rem;
-  // text-align: left;
-  // justify-content: flex-start;
-
   width: 13rem;
   height: 3.4rem;
   border-radius: 1.7rem;   
@@ -182,6 +170,24 @@
 
 }
 
+
+.list_notice {
+  .result_content_box {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.list_archive {
+  .result_content_box {
+    .wrap_content_txt {
+      .result_content_cnt {
+        margin-top: 2.5rem;
+      }
+    }
+  }
+}
+
 .wrap_result_content {
   display: flex;
   flex-direction: column;
@@ -190,23 +196,6 @@
   .wrap_result_table {
     padding-top: 0;
   }
-
-&.notice {
-  .result_content_box {
-    display: flex;
-    align-items: center;
-  }
-}
-
-&.archive {
-  .result_content_box {
-    .wrap_content_txt {
-      .result_content_tit {
-        margin-bottom: 2.5rem;
-      }
-    }
-  }
-}
 
   .result_content_box {
     padding: 2.9rem 4rem 2.9rem 3.9rem;
@@ -217,11 +206,11 @@
     // display: flex;
 
     .wrap_content_txt {
-
+      
       .result_content_tit {
         font-size: 2.4rem;
         font-family: $font_bold;
-        margin-bottom: 3.5rem;
+        // margin-bottom: 3.5rem;
 
         .notice_day {
           font-size: 1.6rem;
@@ -234,7 +223,7 @@
      .result_content_cnt {
       font-size: 1.8rem;
       font-family: $font_light;
-      margin-bottom: 3rem;
+      margin-bottom: 1.7rem;
 
 
       display: block;
@@ -271,18 +260,13 @@
         }
     }
 
+    // 첨부 파일 다운로드 뷰어 ( 검색 페이지 )
     .result_content_attached {
       padding: 1.3rem 2rem;
       border-radius: .8rem;
       background-color: #e7ebf7;
       margin-bottom: 1.1rem;
 
-      // display: flex;
-      // background-color: #e6ebf8;
-      // justify-content: space-between;
-      // align-items: center;
-
-      /*  첨부 파일 다운로드 뷰어 ( 상세페이지 게시물 하단 ) */
       .attached_viewer {
         display: flex;
         width: 100%;
@@ -385,15 +369,230 @@
 
 }
 
+// .select_category {
 
-// @media all and (max-width: 1024px) {
+  .wrap_select {
+    background-color: #e7ebf7;
+    border-radius: 1rem;
+    padding: 2rem 1.4rem;
+    margin-bottom: 8rem;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
 
-
+    select {
+      width: 100%;
+      height: 3rem;
+      // font-size: 1.4rem;
+      // font-family: $font_medium;
+    }
+  }
 
 // }
 
-// @media all and (max-width: 768px) {
-// }
+
+@media all and (max-width: 1024px) {
+
+  // .page_search {
+  //   .area_tab .wrap_tab_button {
+  //     display: none;
+  //   }
+
+  // }
+
+}
+
+@media all and (max-width: 768px) {
+
+  .page_search {
+    .area_tab .wrap_tab_button {
+      display: none;
+    }
+
+
+    .wrap_title {
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.6rem;
+      
+      .title_leftCircle {
+        // width: 100%;
+        &::after {
+          left: .9rem;
+          top: -0.8rem;
+      }
+      }
+      .wrap_result_num {
+        display: inline-block;
+        width: 100%;
+        margin-left: 0;
+        font-size: 1.4rem;
+        margin-top: .8rem;
+      }
+      .btn_more {
+        width: 11rem;
+        height: 3rem;
+        font-size: 1.2rem;
+
+        // display: none;
+        position: absolute;
+        bottom: -6rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+      }
+    }
+
+    .area_tab .wrap_tab_content {
+      gap: 14.4rem;
+    }
+
+
+    .list_notice {
+      .result_content_box .wrap_content_txt .result_content_cnt {
+        margin-bottom: 0;
+      }
+    }
+
+    .wrap_result_content .result_content_box {
+      padding: 2rem 1.4rem 2rem 1.4rem;
+    }
+
+    .result_content_box  {
+
+    .wrap_content_txt {
+      flex-wrap: wrap;
+
+      .result_content_tit {
+        font-size: 1.4rem;
+        // width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: 0;
+
+
+        .notice_day {
+          font-size: 1.2rem;
+          margin-left: 0;
+          width: 100%;
+          display: block;
+          margin-top: 1.2rem;
+        }
+      }
+
+     .result_content_cnt {
+      font-size: 1.2rem;
+      margin-top: 1.4rem;
+      margin-bottom: 1.7rem;
+     }
+
+  }
+
+
+  .wrap_thumb {
+    width: 9rem;
+    height: 9rem;
+    border-radius: .5rem;
+    margin-left: 1.2rem;
+  }
+  // 첨부 파일 다운로드 뷰어 ( 검색 페이지 )
+  .result_content_attached {
+    padding: 1.1rem 1rem;
+    border-radius: .5rem;
+    margin-bottom: 0;
+
+    .attached_viewer {
+    
+      .attached_file_counter {
+          width: 100%;
+      }
+
+      // i.thumb  {
+      //     margin-right: 9px;
+      // }
+
+      .attached_file_list {
+    
+          .attached_file_item {
+              height: 1.2rem;
+              &:not(:nth-last-of-type(1)) {
+                  margin-bottom: 2.4rem;
+              }
+          }
+    
+          .attached_file_txt,
+          .attached_file_btn {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+          }
+          .attached_file_txt  {
+            width: calc(100% - 2.1rem);
+            p {
+              font-size: 1.2rem;
+              }
+          }
+          // .thumb {
+          //     img {width: 2.6rem;}
+          //   }
+    
+      }
+    
+      .btn_attached_download {
+        text-indent: -9999px;
+          width: 1.2rem;
+          height: 1.2rem;
+          line-height: 1.2rem;
+          background-color: transparent;
+          padding-left: 0;
+          border: none;
+          // border-radius: 1.7rem;
+          // font-size: 1.6rem;
+          // font-family: $font_medium;
+          // position: relative;
+          // display: flex;
+          // align-items: center;
+          // line-height: 3.2rem;
+          // color: #fff;
+          // -webkit-transition: all 0.1s;
+          // transition: all 0.1s;
+          // text-align: left;
+
+          &::after {
+            background-image: url("../img/icon/icon_download_navy.svg");
+            display: block;
+            width: 2.4rem;
+            height: 2.4rem;
+            right: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+      }
+
+    
+    }
+
+
+  }
+
+  .result_content_step {
+    font-family: $font_regular;
+    font-size: 1.6rem;
+    color: #777;
+    margin-bottom: 1.1rem;
+  }
+  }
+
+
+
+  }
+
+
+
+}
 
 
 @media all and (max-width: 480px) { 

@@ -888,7 +888,7 @@
         flex-wrap: wrap;
     margin-bottom: 2rem;
   }
-  .attached_download_viewer .attached_file_list .attached_file_item::nth-last-of-type(1) {
+  .attached_download_viewer .attached_file_list .attached_file_item:nth-last-of-type(1) {
     margin-bottom: 0;
   }
   .attached_download_viewer .attached_file_list .attached_file_item .attached_file_txt {
@@ -963,7 +963,7 @@
   }
   /* 이전글 다음글 (게시물 하단 ) */
   .post_prev_next {
-    font-family: 1.2rem;
+    font-size: 1.2rem;
   }
   .post_prev_next dl {
     padding: 15px 7px;
@@ -982,7 +982,7 @@
   }
   .post_prev_next dd a {
     text-indent: 0;
-    width: a;
+    width: auto;
   }
   .post_prev_next .prev dt span::before {
     left: 0.6rem;

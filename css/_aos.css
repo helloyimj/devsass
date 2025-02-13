@@ -607,11 +607,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
  * fade-up-right, fade-up-left, fade-down-right, fade-down-left
  */
 [data-aos^=fade][data-aos^=fade] {
-  opacity: 0;
+  opacity : 0.0;
   transition-property: opacity, transform;
 }
 [data-aos^=fade][data-aos^=fade].aos-animate {
-  opacity: 1;
+  opacity : 1.0;
   transform: translate3d(0, 0, 0);
 }
 
@@ -653,11 +653,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
  * zoom-out, zoom-out-up, zoom-out-down, zoom-out-left, zoom-out-right
  */
 [data-aos^=zoom][data-aos^=zoom] {
-  opacity: 0;
+  opacity : 0.0;
   transition-property: opacity, transform;
 }
 [data-aos^=zoom][data-aos^=zoom].aos-animate {
-  opacity: 1;
+  opacity : 1.0;
   transform: translate3d(0, 0, 0) scale(1);
 }
 

@@ -185,6 +185,19 @@
   background-size: contain;
 }
 
+.list_notice .result_content_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list_archive .result_content_box .wrap_content_txt .result_content_cnt {
+  margin-top: 2.5rem;
+}
+
 .wrap_result_content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,17 +211,6 @@
 .wrap_result_content .wrap_result_table {
   padding-top: 0;
 }
-.wrap_result_content.notice .result_content_box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.wrap_result_content.archive .result_content_box .wrap_content_txt .result_content_tit {
-  margin-bottom: 2.5rem;
-}
 .wrap_result_content .result_content_box {
   padding: 2.9rem 4rem 2.9rem 3.9rem;
   background-color: #fff;
@@ -220,7 +222,6 @@
 .wrap_result_content .result_content_box .wrap_content_txt .result_content_tit {
   font-size: 2.4rem;
   font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  margin-bottom: 3.5rem;
 }
 .wrap_result_content .result_content_box .wrap_content_txt .result_content_tit .notice_day {
   font-size: 1.6rem;
@@ -231,7 +232,7 @@
 .wrap_result_content .result_content_box .wrap_content_txt .result_content_cnt {
   font-size: 1.8rem;
   font-family: "NotoSansLight", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  margin-bottom: 3rem;
+  margin-bottom: 1.7rem;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -267,7 +268,6 @@
   border-radius: 0.8rem;
   background-color: #e7ebf7;
   margin-bottom: 1.1rem;
-  /*  첨부 파일 다운로드 뷰어 ( 상세페이지 게시물 하단 ) */
 }
 .wrap_result_content .result_content_box .result_content_attached .attached_viewer {
   display: -webkit-box;
@@ -364,4 +364,146 @@
   font-size: 1.6rem;
   color: #777;
   margin-bottom: 1.1rem;
+}
+
+.wrap_select {
+  background-color: #e7ebf7;
+  border-radius: 1rem;
+  padding: 2rem 1.4rem;
+  margin-bottom: 8rem;
+}
+.wrap_select select {
+  width: 100%;
+  height: 3rem;
+}
+
+@media all and (max-width: 768px) {
+  .page_search .area_tab .wrap_tab_button {
+    display: none;
+  }
+  .page_search .wrap_title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 2.6rem;
+  }
+  .page_search .wrap_title .title_leftCircle::after {
+    left: 0.9rem;
+    top: -0.8rem;
+  }
+  .page_search .wrap_title .wrap_result_num {
+    display: inline-block;
+    width: 100%;
+    margin-left: 0;
+    font-size: 1.4rem;
+    margin-top: 0.8rem;
+  }
+  .page_search .wrap_title .btn_more {
+    width: 11rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: -6rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .page_search .area_tab .wrap_tab_content {
+    gap: 14.4rem;
+  }
+  .page_search .list_notice .result_content_box .wrap_content_txt .result_content_cnt {
+    margin-bottom: 0;
+  }
+  .page_search .wrap_result_content .result_content_box {
+    padding: 2rem 1.4rem 2rem 1.4rem;
+  }
+  .page_search .result_content_box .wrap_content_txt {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .page_search .result_content_box .wrap_content_txt .result_content_tit {
+    font-size: 1.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0;
+  }
+  .page_search .result_content_box .wrap_content_txt .result_content_tit .notice_day {
+    font-size: 1.2rem;
+    margin-left: 0;
+    width: 100%;
+    display: block;
+    margin-top: 1.2rem;
+  }
+  .page_search .result_content_box .wrap_content_txt .result_content_cnt {
+    font-size: 1.2rem;
+    margin-top: 1.4rem;
+    margin-bottom: 1.7rem;
+  }
+  .page_search .result_content_box .wrap_thumb {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 0.5rem;
+    margin-left: 1.2rem;
+  }
+  .page_search .result_content_box .result_content_attached {
+    padding: 1.1rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0;
+  }
+  .page_search .result_content_box .result_content_attached .attached_viewer .attached_file_counter {
+    width: 100%;
+  }
+  .page_search .result_content_box .result_content_attached .attached_viewer .attached_file_list .attached_file_item {
+    height: 1.2rem;
+  }
+  .page_search .result_content_box .result_content_attached .attached_viewer .attached_file_list .attached_file_item:not(:nth-last-of-type(1)) {
+    margin-bottom: 2.4rem;
+  }
+  .page_search .result_content_box .result_content_attached .attached_viewer .attached_file_list .attached_file_txt,
+  .page_search .result_content_box .result_content_attached .attached_viewer .attached_file_list .attached_file_btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 8px;
+  }
+  .page_search .result_content_box .result_content_attached .attached_viewer .attached_file_list .attached_file_txt {
+    width: calc(100% - 2.1rem);
+  }
+  .page_search .result_content_box .result_content_attached .attached_viewer .attached_file_list .attached_file_txt p {
+    font-size: 1.2rem;
+  }
+  .page_search .result_content_box .result_content_attached .attached_viewer .btn_attached_download {
+    text-indent: -9999px;
+    width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    background-color: transparent;
+    padding-left: 0;
+    border: none;
+  }
+  .page_search .result_content_box .result_content_attached .attached_viewer .btn_attached_download::after {
+    background-image: url("../img/icon/icon_download_navy.svg");
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    right: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .page_search .result_content_box .result_content_step {
+    font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 1.6rem;
+    color: #777;
+    margin-bottom: 1.1rem;
+  }
 }
