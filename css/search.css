@@ -317,7 +317,10 @@
   gap: 8px;
 }
 .wrap_result_content .result_content_box .result_content_attached .attached_viewer .attached_file_list .attached_file_txt {
-  width: calc(100% - 23rem);
+  width: calc(100% - 14rem);
+}
+.wrap_result_content .result_content_box .result_content_attached .attached_viewer .attached_file_list .attached_file_txt p {
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -367,6 +370,7 @@
 }
 
 .wrap_select_category {
+  display: none;
   background-color: #e7ebf7;
   border-radius: 1rem;
   padding: 2rem 1.4rem;
@@ -377,9 +381,41 @@
   height: 3rem;
 }
 
+@media all and (max-width: 1420px) {
+  .page_search .area_tab .wrap_tab_button .tab_button {
+    font-size: 1.8rem;
+  }
+  .result_content_box .wrap_content_txt .result_content_tit {
+    font-size: 2.2rem;
+  }
+}
+@media all and (max-width: 1024px) {
+  .page_search .area_tab .wrap_tab_button {
+    padding: 3rem;
+  }
+  .page_search .area_tab .wrap_tab_button .tab_button {
+    font-size: 1.6rem;
+  }
+  .page_search .result_content_box .wrap_thumb {
+    width: 20rem;
+    height: 14rem;
+  }
+  .page_search .result_content_box .wrap_content_txt .result_content_tit {
+    font-size: 2rem;
+  }
+  .page_search .result_content_box .wrap_content_txt .result_content_cnt {
+    font-size: 1.6rem;
+  }
+}
 @media all and (max-width: 768px) {
   .page_search .area_tab .wrap_tab_button {
     display: none;
+  }
+  .page_search .wrap_select_category {
+    display: block;
+  }
+  .page_search .wrap_result_table {
+    padding-top: 5rem;
   }
   .page_search .wrap_title {
     -webkit-box-pack: center;
@@ -415,10 +451,11 @@
   }
   .page_search .wrap_title .btn_more::after {
     top: 50%;
-    height: 0.6rem;
     right: 1.1rem;
-    -webkit-transform: translateY(-50%) rotate(90deg);
-            transform: translateY(-50%) rotate(90deg);
+    height: 0.6rem;
+    background-image: url("../img/icon/icon_chevron_down_navy.svg");
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
   }
   .page_search .area_tab .wrap_tab_content {
     gap: 14.4rem;
@@ -426,15 +463,27 @@
   .page_search .list_notice .result_content_box .wrap_content_txt .result_content_cnt {
     margin-bottom: 0;
   }
+  .page_search .wrap_result_content {
+    gap: 2rem;
+  }
   .page_search .wrap_result_content .result_content_box {
     padding: 2rem 1.4rem 2rem 1.4rem;
   }
   .page_search .result_content_box .wrap_content_txt {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%; /* 최대 너비 설정 */
+    overflow: hidden; /* 넘치는 부분 숨김 */
   }
   .page_search .result_content_box .wrap_content_txt .result_content_tit {
     font-size: 1.4rem;
+    display: block;
+    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -459,7 +508,7 @@
     margin-left: 1.2rem;
   }
   .page_search .result_content_box .result_content_attached {
-    padding: 1.1rem 1rem;
+    padding: 1rem 0.3rem 1.2rem 1.2rem;
     border-radius: 0.5rem;
     margin-bottom: 0;
   }
@@ -483,34 +532,34 @@
     gap: 8px;
   }
   .page_search .result_content_box .result_content_attached .attached_viewer .attached_file_list .attached_file_txt {
-    width: calc(100% - 2.1rem);
+    width: calc(100% - 3rem);
   }
   .page_search .result_content_box .result_content_attached .attached_viewer .attached_file_list .attached_file_txt p {
     font-size: 1.2rem;
   }
   .page_search .result_content_box .result_content_attached .attached_viewer .btn_attached_download {
     text-indent: -9999px;
-    width: 1.2rem;
+    width: 3rem;
     height: 1.2rem;
     line-height: 1.2rem;
     background-color: transparent;
-    padding-left: 0;
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
     border: none;
   }
   .page_search .result_content_box .result_content_attached .attached_viewer .btn_attached_download::after {
     background-image: url("../img/icon/icon_download_navy.svg");
     display: block;
-    width: 2.4rem;
-    height: 2.4rem;
-    right: 50%;
+    width: 1.2rem;
+    height: 1.2rem;
     top: 50%;
+    right: unset;
+    left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
   }
   .page_search .result_content_box .result_content_step {
-    font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-size: 1.6rem;
-    color: #777;
-    margin-bottom: 1.1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
   }
 }

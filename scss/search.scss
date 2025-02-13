@@ -305,10 +305,13 @@
                 gap: 8px;
             }
             .attached_file_txt  {
-                width: calc(100% - 23rem);
+              width: calc(100% - 14rem);
+              p {
+                width: 100%;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+              }
             }
             // .thumb {
             //     img {width: 2.6rem;}
@@ -364,13 +367,12 @@
       margin-bottom: 1.1rem;
     }
 
-
   }
 
 }
 
-
   .wrap_select_category {
+    display: none;
     background-color: #e7ebf7;
     border-radius: 1rem;
     padding: 2rem 1.4rem;
@@ -389,14 +391,45 @@
 
 
 
+@media all and (max-width: 1420px) {
+
+  .page_search {
+    .area_tab .wrap_tab_button .tab_button {
+      font-size: 1.8rem;
+    }
+  }
+   .result_content_box .wrap_content_txt .result_content_tit {
+    font-size: 2.2rem;
+  }
+
+
+}
+
 @media all and (max-width: 1024px) {
 
-  // .page_search {
-  //   .area_tab .wrap_tab_button {
-  //     display: none;
-  //   }
+  .page_search {
+    .area_tab .wrap_tab_button {
+      padding: 3rem;
+    }
+    .area_tab .wrap_tab_button .tab_button {
+      font-size: 1.6rem;
+    }
 
-  // }
+     .result_content_box .wrap_thumb {
+      width: 20rem;
+      height: 14rem;
+  }
+
+   .result_content_box .wrap_content_txt .result_content_tit {
+    font-size: 2rem;
+  }
+
+   .result_content_box .wrap_content_txt .result_content_cnt{
+    font-size: 1.6rem;
+
+  }
+
+  }
 
 }
 
@@ -407,6 +440,13 @@
       display: none;
     }
 
+    .wrap_select_category {
+      display: block;
+    }
+
+    .wrap_result_table {
+      padding-top: 5rem;
+    }
 
     .wrap_title {
       justify-content: center;
@@ -444,13 +484,10 @@
           // position: absolute;
           // right: 1.6rem; 
           top: 50%;
-          // width: 10rem;
-          height: .6rem;
-          // background-image: url("../img/icon/icon_chevron_right_navy.svg");
-          // background-repeat: no-repeat;
-          // background-size: contain;
           right: 1.1rem; 
-          transform: translateY(-50%) rotate(90deg)
+          height: .6rem;
+          background-image: url("../img/icon/icon_chevron_down_navy.svg");
+          transform: translateY(-50%);
 
       }
 
@@ -468,23 +505,33 @@
       }
     }
 
-    .wrap_result_content .result_content_box {
-      padding: 2rem 1.4rem 2rem 1.4rem;
+    .wrap_result_content {
+      gap: 2rem;
+      .result_content_box {
+        padding: 2rem 1.4rem 2rem 1.4rem;
+      }
     }
-
+    
     .result_content_box  {
 
     .wrap_content_txt {
-      flex-wrap: wrap;
+      // display: flex;
+      // flex-direction: column;
+      // flex-wrap: wrap;
+
+      display: flex;
+      flex-direction: column;
+      max-width: 100%; /* 최대 너비 설정 */
+      overflow: hidden; /* 넘치는 부분 숨김 */
 
       .result_content_tit {
         font-size: 1.4rem;
-        // width: 100%;
+        display: block;
+        width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         margin-bottom: 0;
-
 
         .notice_day {
           font-size: 1.2rem;
@@ -503,7 +550,6 @@
 
   }
 
-
   .wrap_thumb {
     width: 9rem;
     height: 9rem;
@@ -512,7 +558,7 @@
   }
   // 첨부 파일 다운로드 뷰어 ( 검색 페이지 )
   .result_content_attached {
-    padding: 1.1rem 1rem;
+    padding: 1rem .3rem 1.2rem 1.2rem ;
     border-radius: .5rem;
     margin-bottom: 0;
 
@@ -542,7 +588,7 @@
               gap: 8px;
           }
           .attached_file_txt  {
-            width: calc(100% - 2.1rem);
+            width: calc(100% - 3rem);
             p {
               font-size: 1.2rem;
               }
@@ -555,12 +601,14 @@
     
       .btn_attached_download {
         text-indent: -9999px;
-          width: 1.2rem;
+          width: 3rem;
           height: 1.2rem;
           line-height: 1.2rem;
           background-color: transparent;
-          padding-left: 0;
+          padding-left: .9rem;
+          padding-right: .9rem;
           border: none;
+          
           // border-radius: 1.7rem;
           // font-size: 1.6rem;
           // font-family: $font_medium;
@@ -576,34 +624,25 @@
           &::after {
             background-image: url("../img/icon/icon_download_navy.svg");
             display: block;
-            width: 2.4rem;
-            height: 2.4rem;
-            right: 50%;
+            width: 1.2rem;
+            height: 1.2rem;
             top: 50%;
+            right: unset;
+            left: 50%;
             transform: translate(-50%, -50%);
         }
-
       }
-
-    
     }
-
-
   }
 
   .result_content_step {
-    font-family: $font_regular;
-    font-size: 1.6rem;
-    color: #777;
-    margin-bottom: 1.1rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
   }
-  }
-
-
 
   }
 
-
+  }
 
 }
 
