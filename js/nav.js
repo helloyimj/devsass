@@ -181,7 +181,7 @@ footer += '<div class="area_info">';
 footer += '<div class="inner">';
 footer += '<div class="wrap_logo">';
 footer += '<img src="../img/logo/Ministry_of_the_Interior_and_Safety_of_the_Republic_of_Korea_Logo_(horizontal).png" alt="행정안전부">';
-footer += '<img src="../img/logo/logo_nia_2.png" alt="한국지능정보사회진흥원">';
+footer += '<img src="../img/logo/logo_nia_wt.svg" alt="한국지능정보사회진흥원">';
 footer += "</div>";
 footer += '<div class="wrap_address">';
 footer += '<ul class="list_address">';
