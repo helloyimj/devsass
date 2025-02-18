@@ -753,7 +753,11 @@ button:disabled {
   width: 11.4rem;
   height: 5rem;
   z-index: 1;
-  text-indent: 32px;
+  text-indent: 0;
+  padding-left: 52px;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
   font-size: 2rem;
 }
 .btn_submit.btn_search::before {
@@ -2622,6 +2626,7 @@ small {
     max-width: initial;
     vertical-align: top;
     width: 7.75rem;
+    padding-left: 32px;
   }
   .post_breadcrumb_list .post_breadcrumb_item .wrap_search_filter .btn_search::before {
     height: 1.4rem;
@@ -2740,6 +2745,7 @@ small {
     max-width: initial;
     vertical-align: top;
     width: 7.75rem;
+    padding-left: 32px;
   }
   .wrap_search_filter .btn_submit.btn_search::before {
     height: 1.4rem;

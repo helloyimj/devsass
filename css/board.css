@@ -1106,7 +1106,8 @@
     min-width: 10rem;
   }
   .area_search_bar .btn_search {
-    text-indent: 26px;
+    text-indent: 0;
+    padding-left: 26px;
     width: auto;
     font-size: 14px;
     min-width: 4.3rem;
