@@ -17,9 +17,9 @@ header += '<li><a href="javascript:;" target="_self" class="user_anchor" title="
 header += '<li><a href="javascript:;" target="_self" class="user_anchor" title="회원가입 페이지로 이동">회원가입</a></li>';
 header += '<li><a href="누리집 이용 안내_누리집안내지도.html" target="_self" class="user_anchor" title="누리집안내지도 페이지로 이동">누리집안내지도</a></li>';
 header += '<li class="box_btn_zoom"><span>화면크기</span>';
-header += '<button onclick="javascript:zoomControl.zoomIn()" class="btn_zoom in" title="화면 확대"></button>';
-header += '<button onclick="javascript:zoomControl.zoomOut()" class="btn_zoom out" title="화면 축소"></button>';
-header += '<button onclick="javascript:zoomControl.zoomReset()" class="btn_zoom reset" title="화면크기 초기화"></button>';
+header += '<button onclick="javascript:zoomControl.zoomIn()" class="btn_zoom in" aria-label="화면 확대"></button>';
+header += '<button onclick="javascript:zoomControl.zoomOut()" class="btn_zoom out" aria-label="화면 축소"></button>';
+header += '<button onclick="javascript:zoomControl.zoomReset()" class="btn_zoom reset" aria-label="화면크기 초기화"></button>';
 header += "</li>";
 header += "</ul>";
 header += "</div>";
@@ -231,9 +231,9 @@ sideBtn += "</div>";
 
 let skip = "";
 skip += '<nav id="skip" class="skip">';
-skip += '<a href="#content" class="skip_anchor">본문 바로가기</a>';
-skip +=  '<a href="#gnb" class="skip_anchor">주메뉴 바로가기</a>'
-skip +=  '<a href="#quick" class="skip_anchor">퀵메뉴 바로가기</a>'
+skip += '<a href="#content" class="skip_anchor" target="_self" title="페이지 내 이동">본문 바로가기</a>';
+skip +=  '<a href="#gnb" class="skip_anchor" target="_self" title="페이지 내 이동">주메뉴 바로가기</a>'
+skip +=  '<a href="#quick" class="skip_anchor" target="_self" title="페이지 내 이동">퀵메뉴 바로가기</a>'
 skip += "</nav>";
 
 $(document).ready(function () {
