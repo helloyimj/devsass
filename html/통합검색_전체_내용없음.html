@@ -59,8 +59,8 @@
                                 <!-- 검색 필터  -->
                                 <div class="wrap_search_filter">
                                     <div class="box_input">
-                                        <label class="sr_only">검색어 입력</label>
-                                        <input type="text" class="input_text input_searchbar" placeholder="검색어를 입력해주세요.">
+                                        <label for="inputSearch" class="sr_only">검색어 입력</label>
+                                        <input type="text" id="inputSearch" class="input_text input_searchbar" placeholder="검색어를 입력해주세요.">
                                     </div>
                                     <button type="submit" class="btn_submit btn_search">검색</button>
                                 </div>
@@ -91,44 +91,41 @@
                                     <div class="wrap_tab_content">
                                         <div class="tab_content active tab_all">
 
-																					
-																					<div class="result_search_none">
-																						<div class="result_search_none_text">
-																							<h3>검색 결과가 존재하지 않습니다.</h3>
-																								<!-- <p>검색어 ‘그룹웨어’에 대한 검색 결과가 없습니다.<br></p> -->
-																								<p>˙ 검색어의 철자가 정확한지 확인해주세요.<br>
-																									˙ 검색어의 단어 수를 줄이거나, 보다 일반적인 검색어로 다시 검색해 보세요.<br>
-																									˙ 두 단어 이상의 검색어인 경우, 띄어쓰기를 확인해 보세요.</p>
-																						</div>
-																		</div>
+
+                                            <div class="result_search_none">
+                                                <div class="result_search_none_text">
+                                                    <h3>검색 결과가 존재하지 않습니다.</h3>
+                                                    <!-- <p>검색어 ‘그룹웨어’에 대한 검색 결과가 없습니다.<br></p> -->
+                                                    <p>˙ 검색어의 철자가 정확한지 확인해주세요.<br>
+                                                        ˙ 검색어의 단어 수를 줄이거나, 보다 일반적인 검색어로 다시 검색해 보세요.<br>
+                                                        ˙ 두 단어 이상의 검색어인 경우, 띄어쓰기를 확인해 보세요.</p>
+                                                </div>
+                                            </div>
 
                                         </div>
 
+                                    </div>
                                 </div>
+
+
                             </div>
+                            <!-- </div> -->
 
 
                         </div>
-                        <!-- </div> -->
 
-
+                    </article>
                 </div>
+            </section>
+            <!-- 본문 외부 영역 end-->
+        </main>
+        <!-- 전체 영역 end  -->
 
-                </article>
-    </div>
-    </section>
-    <!-- 본문 외부 영역 end-->
-    </main>
-    <!-- 전체 영역 end  -->
-
-    <footer id="footer" class="footer"></footer>
+        <footer id="footer" class="footer"></footer>
     </div>
 
     <script>
         AOS.init();
-
-
-
 
         // 탭 버튼 클릭 시 이벤트
         $('.area_tab .wrap_tab_button .tab_button').on('click', function() {
