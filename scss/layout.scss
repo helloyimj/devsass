@@ -258,7 +258,7 @@
         height: 12px;
         top: 50%;
         transform: translateY(-50%);
-        right: -8px;
+        right: -24px;
         background-image: url("../img/icon/icon_chevron_right_black.svg");
         background-size: 100%;
         background-position: center;
@@ -284,19 +284,19 @@
         background-position: center;
         background-repeat: no-repeat;
 
-        &::after {
-          content: "";
-          position: absolute;
-          width: 7px;
-          height: 12px;
-          top: 50%;
-          transform: translateY(-50%);
-          right: -24px;
-          background-image: url("../img/icon/icon_chevron_right_black.svg");
-          background-size: 100%;
-          background-position: center;
-          background-repeat: no-repeat;
-        }
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   width: 7px;
+        //   height: 12px;
+        //   top: 50%;
+        //   transform: translateY(-50%);
+        //   right: -24px;
+        //   background-image: url("../img/icon/icon_chevron_right_black.svg");
+        //   background-size: 100%;
+        //   background-position: center;
+        //   background-repeat: no-repeat;
+        // }
 
         a {
           display: inline-block;

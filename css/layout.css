@@ -240,7 +240,7 @@
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: -8px;
+  right: -24px;
   background-image: url("../img/icon/icon_chevron_right_black.svg");
   background-size: 100%;
   background-position: center;
@@ -257,20 +257,6 @@
   height: 18px;
   background-image: url("../img/icon/icon_home.svg");
   background-size: 16px 18px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.wrap_breadcrumb .breadcrumbs .breadcrumbs_item.cat_home::after {
-  content: "";
-  position: absolute;
-  width: 7px;
-  height: 12px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: -24px;
-  background-image: url("../img/icon/icon_chevron_right_black.svg");
-  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
