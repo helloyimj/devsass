@@ -1537,12 +1537,14 @@
 
                     .graphic_title {
                         position: relative;
-
+                        padding: 0;
+                        
                         &::before {
                             content: '';
                             position: absolute;
                             width: 4px;
-                            height: 5rem;
+                            // height: 5rem;
+                            height: 10rem;
                             left: 50%;
                             transform: translateX(-50%);
                             top: -5rem;

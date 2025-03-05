@@ -1480,12 +1480,13 @@
 }
 .page_portalIntro .article02 .wrap_graphic .wrap_con.cont_02 .graphic_title {
   position: relative;
+  padding: 0;
 }
 .page_portalIntro .article02 .wrap_graphic .wrap_con.cont_02 .graphic_title::before {
   content: "";
   position: absolute;
   width: 4px;
-  height: 5rem;
+  height: 10rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
