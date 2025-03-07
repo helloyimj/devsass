@@ -218,6 +218,9 @@ header +=                                     '<li class="depth01">';
 header +=                                         '<div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">소개</a></div>';
 header +=                                         '<div class="depth02_content">';
 header +=                                             '<div class="depth02_inner">';
+header +=                                                 '<div class="depth02_title">';
+header +=                                                     '<h3>소개</h3>';
+header +=                                                 '</div>';
 header +=                                                 '<ul class="depth02">';
 header +=                                                     '<li class="depth02_item"><a href="소개_민간SaaS연계공통기반이란.html" class="depth02_item_anchor" target="_self">민간 SaaS 연계공통기반이란?</a></li>';
 header +=                                                     '<li class="depth02_item"><a href="소개_연계한 민간 SaaS.html" class="depth02_item_anchor" target="_self">연계한 민간 SaaS</a></li>';
@@ -232,6 +235,9 @@ header +=                                     '<li class="depth01">';
 header +=                                         '<div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">전자정부 연계 SaaS</a></div>';
 header +=                                         '<div class="depth02_content">';
 header +=                                             '<div class="depth02_inner">';
+header +=                                                 '<div class="depth02_title">';
+header +=                                                     '<h3>전자정부 연계 SaaS</h3>';
+header +=                                                 '</div>';
 header +=                                                 '<ul class="depth02">';
 header +=                                                     '<li class="depth02_item"><a href="전자정부 연계 SaaS_모바일 공무원증.html" class="depth02_item_anchor" target="_self">모바일공무원증</a></li>';
 header +=                                                     '<li class="depth02_item"><a href="전자정부 연계 SaaS_정부디렉터리LDAP.html" class="depth02_item_anchor" target="_self">정부디렉터리 (LDAP)</a></li>';
@@ -245,6 +251,9 @@ header +=                                     '<li class="depth01">';
 header +=                                         '<div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">공공용 민간 SaaS</a></div>';
 header +=                                         '<div class="depth02_content">';
 header +=                                             '<div class="depth02_inner">';
+header +=                                                 '<div class="depth02_title">';
+header +=                                                     '<h3>공공용 민간 SaaS</h3>';
+header +=                                                 '</div>';
 header +=                                                 '<ul class="depth02">';
 header +=                                                     '<li class="depth02_item"><a href="공공용 민간 SaaS.html" class="depth02_item_anchor" target="_self">공공용 민간 SaaS</a></li>';
 header +=                                                 '</ul>';
@@ -255,6 +264,9 @@ header +=                                     '<li class="depth01">';
 header +=                                         '<div class="depth01_item"><a href="javascript:;" class="depth01_item_anchor" target="_self">사용자 지원</a></div>';
 header +=                                         '<div class="depth02_content">';
 header +=                                             '<div class="depth02_inner">';
+header +=                                                 '<div class="depth02_title">';
+header +=                                                     '<h3>사용자 지원</h3>';
+header +=                                                 '</div>';
 header +=                                                 '<ul class="depth02">';
 header +=                                                     '<li class="depth02_item"><a href="사용자 지원_공지사항.html" class="depth02_item_anchor" target="_self">공지사항</a></li>';
 header +=                                                     '<li class="depth02_item"><a href="사용자 지원_자주 묻는 질문.html" class="depth02_item_anchor" target="_self">자주묻는 질문</a></li>';
@@ -574,7 +586,7 @@ $(document).ready(function () {
       $(".header .lnb_list .depth01").removeClass("on");
       $(this).addClass("on");
       $(this).find(".depth02").css({
-        display: "flex"
+        display: "grid"
       });
       $(".header .lnb_list .depth02_content").stop().slideUp(200);
       $(this).find(".depth02_content").stop().slideDown(200);

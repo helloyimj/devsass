@@ -1601,6 +1601,701 @@
     }
 }
 
+// /* 이용 절차 */
+// .page_process {
+//     .article01 {
+//         margin-bottom: 8rem;
+
+//         .box_filled {
+//             padding: 2.3rem 3rem;
+//         }        
+    
+//         p {
+//             width: 100%;
+//             font-family: $font_bold;
+//             font-size: 2.4rem;
+//             color: $color_white;
+//             text-align: center;
+//         }
+//     }
+
+//     //전자정부 연계 SaaS 이용을 위해서는 다음 사항이 전제되어야 합니다.
+//     .article03 {
+//         background-color: $color_bg_f5;
+
+//         .contents_wrap {
+//             padding: 8rem 0;
+
+//             h4 {
+//                 font-family: $font_bold;
+//                 font-size: 2.4rem;
+//                 margin-bottom: 3.6rem;
+//             }
+
+//             .wrap_contents {
+//                 display: flex;
+//                 gap: 4rem;
+
+//                 .box_line {
+//                     flex: 1;
+//                     flex-shrink: 0;
+//                     overflow: hidden;
+
+//                     .item_title {
+//                         height: 7rem;
+//                         display: flex;
+//                         justify-content: center;
+//                         align-items: center;
+
+//                         p {
+//                             font-family: $font_bold;
+//                             color: $color_white;
+//                             font-size: 2.2rem;
+//                         }
+//                     }
+
+//                     .item_txt {
+//                         display: flex;
+//                         flex-direction: column;
+//                         gap: 5rem;
+//                         padding: 4.8rem 3.6rem 5.6rem;
+
+//                         .wrap_img {
+//                             height: 16rem;
+//                         }
+                        
+//                         ul li{
+//                             margin-top: 1rem;
+
+//                             &:first-of-type {
+//                                 margin-top: 0;
+//                             }
+//                         }
+//                     }
+
+//                     &:nth-of-type(1) {
+//                         .item_title {
+//                             background-color: $color_blue_indigo;
+//                         }
+//                     }
+
+//                     &:nth-of-type(2) {
+//                         border: 1px solid #3682ea;
+
+//                         .item_title {
+//                             background-color: #3682ea;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     // 단계별 순서도
+//     .stage_wrap {
+//         display: flex;
+//         gap: 2rem;
+//         margin-bottom: 8rem;
+
+//         &:last-of-type {
+//             margin-bottom: 0;
+//         }
+
+//         // 스테이지별 넘버링
+//         .stage_no {
+//             width: 16rem;
+//             flex-shrink: 0;
+//             margin-top: 2.2rem;
+
+//             .number {
+//                 width: 5rem;
+//                 height: 5rem;
+//                 border-radius: 50%;
+//                 background-color: #0f174d;
+//                 border: 1px solid $color_ed;
+//                 display: flex;
+//                 justify-content: center;
+//                 align-items: center;
+//                 position: absolute;
+//                 left: 50%;
+//                 transform: translateX(-50%);
+//                 top: -3.9rem;
+
+//                 span {
+//                     font-size: 2rem;
+//                     font-family: $font_bold;
+//                     color: $color_white;
+//                 }
+//             }
+
+//             .box_line {
+//                 display: flex;
+//                 flex-direction: column;                      
+//                 margin-top: 3.9rem;
+//                 position: relative;
+
+//                 .item_title {
+//                     padding: 2.1rem 1rem;   
+//                     border-radius: 1.8rem 1.8rem 0 0;
+                    
+//                     p{
+//                         font-family: $font_bold;
+//                         font-size: 1.6rem;    
+//                         color: $color_white; 
+//                         text-align: center;
+//                     }
+//                 }
+
+//                 .item_txt {
+//                     padding: 2rem 1.6rem;
+
+//                     p {
+//                         text-align: center;
+//                         font-family: $font_bold;
+//                         font-size: 2.2rem;  
+//                     }
+//                 }
+
+//                 &.blue_01 {
+//                     border: 1px solid #5872bc;
+
+//                     .item_title {
+//                         background-color: #5872bc;
+//                     }
+//                 }
+
+//                 &.blue_02 {
+//                     border: 1px solid #2031a5;
+
+//                     .item_title {
+//                         background-color: #2031a5;
+//                     }
+//                 }
+//                 &.blue_03 {
+//                     border: 1px solid #150a59;
+
+//                     .item_title {
+//                         background-color: #150a59;
+//                     }
+//                 }
+//             }
+//         }
+
+//         // 스테이지별 프로세스 설명
+//         .stage_process {
+//             width: 100%;
+//             height: 100%;
+//             padding: 6rem 0 2rem;
+//             position: relative;
+
+//             > div {
+//                 width: 100%;
+//             }
+
+//             // 배경
+//             .wrap_bg {
+//                 background-color: rgba(58, 117, 245, 0.1);
+//                 border-radius: 2rem;   
+//                 height: calc(100% - 8rem);
+//                 position: absolute;
+//                 top: 6rem;
+//                 left: 0;
+//             }
+
+//             .wrap_box {
+//                 height: 100%;
+//                 position: absolute;
+//                 top: 0;
+//                 left: 0;
+//                 display: flex;
+//                 padding: 0 2rem;
+//                 gap: 2rem;
+
+//                 > div {
+//                     width: 100%;
+//                     height: 100%;
+//                     border: 1px solid $color_ccc;
+//                     border-radius: 2rem;
+//                     position: relative;
+
+//                     &::after {                   
+//                         position: absolute;
+//                         width: 100%;
+//                         top: 1.6rem;
+//                         left: 50%;
+//                         transform: translateX(-50%);
+//                         font-size: 2rem;
+//                         font-family: $font_bold;
+//                         text-align: center;
+//                     }
+
+//                     &.comp01 {
+//                         background-color: rgba(226, 238, 255, 0.5);
+
+//                         &::after {
+//                             content: "운영기관";                          
+//                         }
+//                     }
+
+//                     &.comp02 {
+//                         background-color: rgba(226, 247, 230, 0.5);
+
+//                         &::after {
+//                             content: "민간 SaaS 기업";                        
+//                         }
+//                     }
+
+//                     &.comp03 {
+//                         background-color: rgba(251, 255, 226, 0.5);
+
+//                         &::after {
+//                             content: "이용기관";                
+//                         }
+//                     }
+
+//                     &.comp04 {
+//                         background-color: rgba(210, 229, 246, 0.5);
+
+//                         &::after {
+//                             content: "정보보유기관";                          
+//                         }
+//                     }
+//                 }
+//             }
+
+//             // 말풍선 박스
+//             .procedure_wrap {
+//                 height: 100%;
+//                 top: 0;
+//                 left: 0;
+//                 display: flex;
+//                 padding: 0 2rem;
+//                 gap: 2rem;                
+
+//                 .group01, .group02, .group03{
+//                     display: flex;
+//                     flex-shrink: 0;
+//                     height: 100%;
+//                     flex-direction: column;
+//                     gap: 4rem;
+//                     position: relative;
+//                     padding: 2rem;    
+//                 }
+
+//                 .procedure {
+//                     width: 100%;
+//                     min-height: 8.6rem;
+//                     border-radius: 1rem;
+//                     background-color: $color_white;
+//                     border: 1px solid $color_btn_bl;                 
+//                     display: flex;
+//                     flex-direction: column;
+//                     justify-content: center;
+//                     align-items: center;
+//                     padding: 1.6rem 2rem;
+//                     position: relative;
+
+//                     p {
+//                         font-size: 1.8rem;
+//                         text-align: center;
+//                     }
+
+//                     ul {
+//                         width: 100%;
+//                         margin-top: 1.8rem;
+//                         display: flex;
+//                         flex-direction: column;
+//                         gap: 0.8rem;
+
+//                         li {
+//                             font-family: $font_medium;
+//                             font-size: 1.4rem;
+//                             background-color: #eff2f7;
+//                             border: 1px solid $color_btn_bl;
+//                             height: 4rem;
+//                             border-radius: 2rem;
+//                             text-align: center;
+//                             display: flex;
+//                             justify-content: center;
+//                             align-items: center;                          
+//                         }
+//                     }                   
+//                 }
+
+//                 .arrow {
+//                     position: absolute;
+//                     display: inline-block;                
+//                     background-color: $color_btn_bl;
+
+//                     &::after {
+//                         content: "";
+//                         position: absolute;                  
+//                         background-position: center;
+//                         background-repeat: no-repeat;                        
+//                     }
+
+//                     &.down {
+//                         width: 2px;    
+//                         left: 50%;
+//                         transform: translateX(-50%);
+
+//                         &::after {
+//                             left: 50%;
+//                             transform: translateX(-50%);
+//                             bottom: -0.4rem;
+//                             width: 16px;
+//                             height: 14px;
+//                             background-image: url("../img/saas_img/2_intro/2_process/2_arrowD.svg");               
+//                             background-size: 16px 14px;
+//                         }
+//                     }
+
+//                     &.right {
+//                         height: 2px;
+//                         top: 50%;
+//                         transform: translateY(-50%);
+
+//                         &::after {
+//                             top: 50%;
+//                             transform: translateY(-50%);
+//                             right: -0.3rem;
+//                             width: 14px;
+//                             height: 16px;
+//                             background-image: url("../img/saas_img/2_intro/2_process/2_arrowR.svg");               
+//                             background-size: 14px 16px;
+//                         }
+//                     }
+
+//                     &.left {
+//                         height: 2px;
+//                         top: 50%;
+//                         transform: translateY(-50%);
+
+//                         &::after {
+//                             top: 50%;
+//                             transform: translateY(-50%);
+//                             left: -0.3rem;          
+//                             width: 14px;
+//                             height: 16px;
+//                             background-image: url("../img/saas_img/2_intro/2_process/2_arrowL.svg");               
+//                             background-size: 14px 16px;
+//                         }
+//                     }
+
+//                     &.bend_horizontal {
+//                         height: 2px;
+//                         top: 50%;
+//                         transform: translateY(-50%);
+//                     }
+
+//                     &.bend_vertical {
+//                         width: 2px;    
+//                         left: 50%;
+//                         transform: translateX(-50%);
+//                     }
+//                 }
+
+//                 .group01, .group03 {                 
+//                     width: calc((100% - 6rem) / 4);
+//                 }
+
+//                 .group02 {
+//                     width: calc((100% - 2rem) / 2);         
+                    
+//                     .col_each {
+//                         display: flex;
+//                         gap: 2rem;
+
+//                         > div {
+//                             flex: 1;
+//                             flex-shrink: 0;                           
+//                         }
+
+//                         .group02_1 {
+//                             padding-right: 2rem;
+//                         }
+
+//                         .group02_2 {
+//                             padding-left: 2rem;
+//                         }
+//                     }
+//                 }
+//             }           
+//         }       
+//     }
+
+//      // 스테이지별 말풍선 위치 조정
+//     .process01 {
+//         .group01 {
+//             .procedure:nth-of-type(1) {
+//                 margin-top: 28.3rem;
+//                 height: 14.2rem;
+
+//                 .down {                      
+//                     bottom: -3.7rem;
+//                     height: 3.7rem;                                      
+
+//                     &::after {                          
+//                         bottom: -0.3rem;
+//                     }
+//                 } 
+//             }
+
+//             .procedure:nth-of-type(2) {
+//                 .right {
+//                     right: -35.8rem;                        
+//                     width: 35.8rem;                    
+//                 }
+//                 .bend_vertical {
+//                     bottom: -8.4rem;
+//                     height: 8.4rem;
+//                 }            
+//             }
+//         }
+
+//         .group02 {
+//             .col_each:nth-of-type(1) {
+//                 .group02_1 {
+//                     .procedure {
+//                         height: 100%;
+//                     }
+//                     .down {                      
+//                         bottom: -3.6rem;
+//                         height: 3.6rem;                                      
+//                     }       
+//                 }
+//                 .group02_2 {
+//                     .procedure {
+//                         height: 100%;
+//                     }
+//                     .left {                     
+//                         left: -5.8rem;                        
+//                         width: 5.8rem;                    
+//                     }
+//                 }           
+//             }
+//             .col_each:nth-of-type(3) {
+//                 .group02_2 {
+//                     .down {                      
+//                         top: -4rem;                         
+//                         height: 3.6rem;           
+//                     }
+
+//                     .left  {
+//                         left: -35.8rem;                    
+//                         width: 35.8rem;             
+//                     }
+//                 }          
+//             } 
+//             .col_double:nth-of-type(4) {
+//                 margin-top: 18rem;
+
+//                 .procedure:nth-of-type(1) {
+//                     .right {
+//                         left: -18.2rem;                        
+//                         width: 17.8rem;     
+//                     }
+//                     .down {
+//                         bottom: -3.7rem;
+//                         height: 3.7rem;                                     
+//                     }
+//                 }
+
+//                 .procedure:nth-of-type(2) {
+//                     margin-top: 4rem;                    
+//                 }
+//             }
+//         }
+//     }
+
+//     .process02 {
+//         .group02 {
+//             .col_double {
+//                 margin: 3rem 0;
+//             }
+//         }
+//     }
+
+//     .process03  {
+//         .group01 {
+//             .procedure:nth-of-type(1) {
+//                 margin-top: 12.6rem;
+//                 height: 24.4rem;
+
+//                 .bend_vertical {
+//                     height: 9.6rem;
+//                     bottom: -9.6rem;
+//                 }
+//             }
+
+//             .procedure:nth-of-type(2) {
+//                 margin-top: 28.1rem;     
+                
+//                 .down {
+//                     height: 8.4rem;
+//                     top: -8.8rem;
+//                 }
+
+//                 .right:nth-of-type(2) {
+//                     top: 33%;
+//                     right: -5.8rem; 
+//                     width: 5.8rem;
+//                 }
+
+//                 .right:nth-of-type(3) {
+//                     top: 66%;
+//                     right: -65.8rem;
+//                     width: 65.8rem;
+//                 }
+//             }
+//         }
+
+//         .group02 {
+//             .col_each {
+//                 .group02_1 {
+//                     .procedure {
+//                         padding: 1.6rem 1.2rem 1.8rem;
+//                     }
+
+//                     .down {
+//                         height: 3.7rem;
+//                         top: -4.1rem;
+//                     }
+
+//                     .left {
+//                         width: 5.9rem;
+//                         left: -5.9rem;
+//                     } 
+//                 }
+//                 .group02_2 {
+//                     .procedure:nth-of-type(1) {
+//                         margin-top: 28rem;    
+                        
+//                         .right {
+//                             width: 47.8rem;
+//                             left: -48.2rem;
+//                         }
+//                         .down  {
+//                             height: 3.8rem;
+//                             bottom: -3.8rem;
+//                         }
+//                     }
+
+//                     .procedure:nth-of-type(2) {
+//                         margin-top: 4rem;   
+                        
+//                         .bend_horizontal {
+//                             width: 48.2rem;
+//                             left: -48.2rem;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//         .group03 {
+//             .procedure {
+//                 margin-top: 68.9rem;               
+//             }
+//         }
+//     }
+
+//     .process04 {
+//         .group01 {
+//             .procedure:nth-of-type(1) {
+//                 .bend_horizontal {
+//                     width: 18rem;
+//                     right: -18rem;
+//                 }
+//             }
+//             .procedure:nth-of-type(2) {
+//                 margin-top: 23.2rem;      
+                
+//                 .down {
+//                     height: 6rem;
+//                     top: -6.5rem;
+//                 }
+//             }
+//         }
+
+//         .group02 {
+//             .col_each {        
+//                 .group02_1 {
+//                     .procedure:nth-of-type(1) {
+//                         margin-top: 15.5rem;         
+                        
+//                         .down:nth-of-type(1) {
+//                             height: 9.4rem;
+//                             top: -9.9rem;
+//                         }
+
+//                         .down:nth-of-type(2) {
+//                             height: 3.7rem;
+//                             bottom: -3.7rem;
+//                         }
+//                     }
+
+//                     .procedure:nth-of-type(2) {
+//                         margin-top: 4rem;       
+                        
+//                         .bend_horizontal {
+//                             width: 18rem;
+//                             left: -18rem;
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .process05 {
+//         .group01 {
+//             .bend_horizontal {
+//                 width: 18rem;
+//                 right: -18rem;
+//             }
+//         }
+//         .group02 {
+//             .col_each {        
+//                 .group02_1 {
+//                     .procedure:nth-of-type(1) {
+//                         margin-top: 10.6rem;   
+                        
+//                         .down:nth-of-type(1) {
+//                             height: 5.8rem;
+//                             top: -6.4rem;
+//                         }
+//                         .down:nth-of-type(2) {
+//                             height: 3.6rem;
+//                             bottom: -3.6rem;
+//                         }
+//                     }
+
+//                     .procedure:nth-of-type(2) {
+//                         margin-top: 4rem;         
+                        
+//                         .bend_horizontal {
+//                             width: 18rem;
+//                             right: -18rem;
+//                         }
+//                     }
+//                 }
+
+//                 .group02_2 {
+//                     .procedure {
+//                         margin-top: 36.6rem; 
+//                     }
+//                     .down {
+//                         height: 5.8rem;
+//                         top: -6.3rem;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// 2025-03-06 수정  시작 ********************************
 /* 이용 절차 */
 .page_process {
     .article01 {
@@ -1658,7 +2353,7 @@
                         display: flex;
                         flex-direction: column;
                         gap: 5rem;
-                        padding: 4.8rem 3.6rem 5.6rem;
+                        padding: 4.8rem 3.6rem 3.6rem;
 
                         .wrap_img {
                             height: 16rem;
@@ -1685,6 +2380,126 @@
                         .item_title {
                             background-color: #3682ea;
                         }
+                    }
+
+                    .bllt_crcl {
+                        position: relative;
+                        padding-left: 1.4rem;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left :0;
+                            top: 1.2rem;         
+                            width: 0.4rem;
+                            height: 0.4rem;
+                            border-radius: 50%;
+                            background-color: $color_black;   
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 테이블
+    .wrap_table {
+        border-radius: 0.8rem;
+        border: 1px solid $color_ddd;
+        overflow: hidden;
+
+        table {
+            width: 100%;
+            font-size: 1.6rem;
+
+            tr {
+                border-bottom: 1px solid $color_ddd;
+
+                &:last-of-type {
+                    border-bottom: none;
+                }
+            }
+
+            th {
+                height: 4.2rem;
+                vertical-align: middle;
+                font-family: $font_medium;
+                background-color: $color_blue;       
+                color: $color_white;         
+            }
+
+            td {
+                min-height: 4.8rem;
+                padding: 1rem 1.6rem;
+                border-right: 1px solid $color_ddd;
+                vertical-align: middle;
+
+                p {
+                    font-size: 1.6rem;
+                }
+
+                &:last-of-type {
+                    border-right: none;
+                }
+
+                &:nth-of-type(2) {
+                    font-family: $font_medium;
+                    width: 12.4rem;
+                    padding: 1rem 1.2rem;
+                    background-color: $color_bg_lightpurple;
+                }
+
+                &.number {
+                    text-align: center;
+                    padding: 1rem 1.2rem;
+                    background-color: $color_eee;
+                }
+
+                .numbering {
+                    display: flex;
+                    
+                    span {
+                        width: 3.2rem;
+                        flex-shrink: 0;
+                    }
+                }
+
+                .bllt_star {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    padding-left: 1.4rem;
+                    line-height: 1.4;
+                    margin-top: 0.8rem;     
+                    font-size: 1.5rem;
+
+                    &::after {
+                        content: '*';
+                        position: absolute;
+                        left :0;
+                        top: 0.2rem;         
+                        font-size: 1.8rem;
+                        font-family: $font_bold;         
+                    }
+                }
+
+                .bllt_pocektball {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    padding-left: 1.8rem;
+                    line-height: 1.4;
+                    margin-top: 0.8rem;                
+
+                    &::after {
+                        content: '※';
+                        position: absolute;
+                        font-size: 1.5rem;
+                        left :0;
+                        top: 0.2rem;
+                        font-family: $font_bold;         
                     }
                 }
             }
@@ -1902,7 +2717,7 @@
 
                     ul {
                         width: 100%;
-                        margin-top: 1.8rem;
+                        margin-top: 1rem;
                         display: flex;
                         flex-direction: column;
                         gap: 0.8rem;
@@ -1919,7 +2734,53 @@
                             justify-content: center;
                             align-items: center;                          
                         }
-                    }                   
+                    }  
+                    
+                    .bllt_crcl {
+                        position: relative;
+                        width: 100%;
+                        text-align: left;
+                        padding-left: 1.4rem;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left :0;
+                            top: 1.1rem;
+                            width: 0.6rem;
+                            height: 0.6rem;
+                            border-radius: 50%;
+                            background-color: $color_black;
+                        }
+                    }
+
+                    .bllt_star {
+                        position: relative;
+                        width: 100%;
+                        text-align: left;
+                        padding-left: 1.4rem;
+                        line-height: 1.4;
+                        margin-top: 1rem;
+                        font-size: 1.6rem;
+
+                        &::after {
+                            content: '*';
+                            position: absolute;
+                            left :0;
+                            top: 0.4rem;         
+                            font-size: 1.8rem;
+                            font-family: $font_bold;         
+                        }
+                    }
+
+                    .descript {
+                        font-size: 1.6rem;
+                        line-height: 1.4;
+                    }
+
+                    .align_left {
+                        margin-top: 1rem;
+                    }
                 }
 
                 .arrow {
@@ -2024,40 +2885,14 @@
         }       
     }
 
-     // 스테이지별 말풍선 위치 조정
+    // 스테이지별 말풍선 위치 조정
     .process01 {
-        .group01 {
-            .procedure:nth-of-type(1) {
-                margin-top: 28.3rem;
-                height: 14.2rem;
-
-                .down {                      
-                    bottom: -3.7rem;
-                    height: 3.7rem;                                      
-
-                    &::after {                          
-                        bottom: -0.3rem;
-                    }
-                } 
-            }
-
-            .procedure:nth-of-type(2) {
-                .right {
-                    right: -35.8rem;                        
-                    width: 35.8rem;                    
-                }
-                .bend_vertical {
-                    bottom: -8.4rem;
-                    height: 8.4rem;
-                }            
-            }
-        }
-
         .group02 {
             .col_each:nth-of-type(1) {
                 .group02_1 {
                     .procedure {
-                        height: 100%;
+                        height: 12rem;
+                        margin-top: 24rem;
                     }
                     .down {                      
                         bottom: -3.6rem;
@@ -2066,43 +2901,59 @@
                 }
                 .group02_2 {
                     .procedure {
-                        height: 100%;
+                        &:nth-of-type(1) {
+                            height: 20rem;
+                        }     
+                        
+                        &:nth-of-type(2) {
+                            height: 12rem;
+                            margin-top: 4rem;                            
+                        }
                     }
+                    .down {                      
+                        bottom: -3.6rem;
+                        height: 3.6rem;                                      
+                    }  
                     .left {                     
                         left: -5.8rem;                        
                         width: 5.8rem;                    
                     }
                 }           
             }
+            .col_double:nth-of-type(2) {
+                .down {
+                    left: initial;
+                    transform: initial;
+                    right: 12rem;
+                    bottom: -3.6rem;
+                    height: 3.6rem;       
+                }
+            }
             .col_each:nth-of-type(3) {
                 .group02_2 {
                     .down {                      
-                        top: -4rem;                         
-                        height: 3.6rem;           
-                    }
-
-                    .left  {
-                        left: -35.8rem;                    
-                        width: 35.8rem;             
-                    }
+                        bottom: -3.6rem;
+                        height: 3.6rem;         
+                    }                 
                 }          
             } 
             .col_double:nth-of-type(4) {
-                margin-top: 18rem;
-
                 .procedure:nth-of-type(1) {
-                    .right {
-                        left: -18.2rem;                        
-                        width: 17.8rem;     
-                    }
                     .down {
-                        bottom: -3.7rem;
-                        height: 3.7rem;                                     
+                        transform: initial;
+                        left: 12rem;
+                        top: -17rem;                         
+                        height: 16.6rem;                                     
                     }
                 }
 
                 .procedure:nth-of-type(2) {
-                    margin-top: 4rem;                    
+                    margin-top: 4rem;      
+                    
+                    .down {                      
+                        top: -4.1rem;                         
+                        height: 3.6rem;           
+                    }
                 }
             }
         }
@@ -2111,7 +2962,16 @@
     .process02 {
         .group02 {
             .col_double {
-                margin: 3rem 0;
+                margin-top: 3rem;
+            }
+
+            .col_each {               
+                margin-bottom: 3rem;
+
+                .down {                      
+                    top: -4.1rem;                         
+                    height: 3.6rem;           
+                }
             }
         }
     }
@@ -2120,20 +2980,20 @@
         .group01 {
             .procedure:nth-of-type(1) {
                 margin-top: 12.6rem;
-                height: 24.4rem;
+                height: 30.4rem;
 
-                .bend_vertical {
-                    height: 9.6rem;
-                    bottom: -9.6rem;
-                }
+                .left {
+                    width: 5.8rem;
+                    right: -6.2rem;
+                }             
             }
 
             .procedure:nth-of-type(2) {
-                margin-top: 28.1rem;     
+                margin-top: 23.7rem;     
                 
                 .down {
-                    height: 8.4rem;
-                    top: -8.8rem;
+                    height: 9.4rem;
+                    top: -9.8rem;
                 }
 
                 .right:nth-of-type(2) {
@@ -2153,7 +3013,11 @@
         .group02 {
             .col_each {
                 .group02_1 {
+                    width: 100%;
+
                     .procedure {
+                        width: 100%;
+                        height: 30.4rem;
                         padding: 1.6rem 1.2rem 1.8rem;
                     }
 
@@ -2162,40 +3026,40 @@
                         top: -4.1rem;
                     }
 
-                    .left {
-                        width: 5.9rem;
-                        left: -5.9rem;
-                    } 
+                    .bend_vertical {
+                        height: 10rem;
+                        bottom: -10rem;
+                    }
                 }
                 .group02_2 {
                     .procedure:nth-of-type(1) {
-                        margin-top: 28rem;    
+                        margin-top: 34.4rem;    
                         
                         .right {
-                            width: 47.8rem;
-                            left: -48.2rem;
+                            top: 5.6rem;
+                            transform: initial;
+                            width: 17.8rem;
+                            left: -18.2rem;
                         }
-                        .down  {
-                            height: 3.8rem;
-                            bottom: -3.8rem;
-                        }
-                    }
-
-                    .procedure:nth-of-type(2) {
-                        margin-top: 4rem;   
-                        
                         .bend_horizontal {
+                            top: initial;
+                            transform: initial;
+                            bottom: 5.6rem;
                             width: 48.2rem;
                             left: -48.2rem;
                         }
-                    }
+                    }                
                 }
             }
         }
 
         .group03 {
             .procedure {
-                margin-top: 68.9rem;               
+                margin-top: 70.9rem;               
+
+                .block_768 {
+                    display: none;
+                }
             }
         }
     }
@@ -2203,17 +3067,20 @@
     .process04 {
         .group01 {
             .procedure:nth-of-type(1) {
-                .bend_horizontal {
-                    width: 18rem;
-                    right: -18rem;
+                margin-top: 36.4rem;   
+
+                .down {
+                    height: 3.7rem;
+                    top: -4.1rem;
                 }
+
             }
             .procedure:nth-of-type(2) {
-                margin-top: 23.2rem;      
+                margin-top: 18.2rem;      
                 
-                .down {
-                    height: 6rem;
-                    top: -6.5rem;
+                .left {
+                    width: 5.9rem;
+                    right: -6.1rem;
                 }
             }
         }
@@ -2221,15 +3088,8 @@
         .group02 {
             .col_each {        
                 .group02_1 {
-                    .procedure:nth-of-type(1) {
-                        margin-top: 15.5rem;         
-                        
-                        .down:nth-of-type(1) {
-                            height: 9.4rem;
-                            top: -9.9rem;
-                        }
-
-                        .down:nth-of-type(2) {
+                    .procedure:nth-of-type(1) {                       
+                        .down {
                             height: 3.7rem;
                             bottom: -3.7rem;
                         }
@@ -2238,9 +3098,48 @@
                     .procedure:nth-of-type(2) {
                         margin-top: 4rem;       
                         
+                        .down {
+                            height: 3.7rem;
+                            bottom: -3.7rem;
+                        }
+                    }
+
+                    .procedure:nth-of-type(3) {
+                        margin-top: 4rem;  
+
+                        .down {
+                            height: 3.7rem;
+                            bottom: -3.7rem;
+                        }
+
                         .bend_horizontal {
                             width: 18rem;
                             left: -18rem;
+                        }
+                    }
+
+                    .procedure:nth-of-type(4) {
+                        margin-top: 4rem;  
+
+                        .down {
+                            height: 3.7rem;
+                            bottom: -3.7rem;
+                        }
+                    }
+
+                    .procedure:nth-of-type(5) {
+                        margin-top: 4rem;  
+
+                    }
+                }
+                .group02_2 {
+                    .procedure {
+                        margin-top: 43.6rem;
+                        height: 14.2rem;
+
+                        .right {
+                            left: -6.1rem;                        
+                            width: 5.8rem;               
                         }
                     }
                 }
@@ -2249,51 +3148,18 @@
     }
 
     .process05 {
-        .group01 {
-            .bend_horizontal {
-                width: 18rem;
-                right: -18rem;
-            }
-        }
         .group02 {
-            .col_each {        
+            .col_each {
                 .group02_1 {
-                    .procedure:nth-of-type(1) {
-                        margin-top: 10.6rem;   
-                        
-                        .down:nth-of-type(1) {
-                            height: 5.8rem;
-                            top: -6.4rem;
-                        }
-                        .down:nth-of-type(2) {
-                            height: 3.6rem;
-                            bottom: -3.6rem;
-                        }
-                    }
-
-                    .procedure:nth-of-type(2) {
-                        margin-top: 4rem;         
-                        
-                        .bend_horizontal {
-                            width: 18rem;
-                            right: -18rem;
-                        }
-                    }
-                }
-
-                .group02_2 {
                     .procedure {
-                        margin-top: 36.6rem; 
-                    }
-                    .down {
-                        height: 5.8rem;
-                        top: -6.3rem;
+                        margin: 3rem 0;
                     }
                 }
             }
-        }
+        } 
     }
 }
+ // 2025-03-06 수정  끝********************************
 
 /* 이용 신청 */
 .page_howtoContract {
@@ -3061,6 +3927,38 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 z-index: 1;
+            }
+        }
+    }
+
+    .article02 {
+        
+        .cont_01 {
+            margin-top: 2.9rem;
+            padding-bottom: 12.3rem;
+            background-image: url('../img/saas_img/3_govSaaS/5_codesys/bg_arrow.png');
+            background-position: center bottom 0;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+
+        .cont_02 {
+            margin-top: 2.9rem;
+
+            .graphic_title {
+                margin: 0 auto;
+                width: 60rem;  
+                height: 6rem;
+                line-height: 6rem;
+                border-radius: 3rem;
+                background-color: #2f3a84;
+                text-align: center;
+
+                h5 {
+                    font-family: $font_bold;
+                    color: $color_white;
+                    font-size: 2.4rem;
+                }
             }
         }
     }
@@ -5340,6 +6238,15 @@
                 }
             }
         }
+
+        .article02 {
+            .wrap_img {
+                img {
+                    width: 90%;
+                }
+            }
+        }
+
     }
 
     /* 전자정부 연계 SaaS 행정전자서명 */
@@ -8856,6 +9763,29 @@
             }
         }
 
+        .article02 {
+            .cont_01 {
+                margin-top: 1.5rem;
+                padding-bottom: 8rem;
+            }
+
+            .cont_02 {
+                // margin-top: 2.9rem;
+
+                .graphic_title {
+                    width: calc(100% - 8rem);
+                    max-width: 52rem;
+                    height: 4.2rem;
+                    border-radius: 2.1rem;
+                    line-height: 4.2rem;
+
+                    h5 {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+        
         .article04 {       
             .box_line_gray {
                 &:nth-of-type(1) {
@@ -9614,4 +10544,24 @@
             }          
         }
     }
+
+        /* 전자정부 연계 SaaS 행정표준코드 */
+        .page_govSaaS.page_codeSys {
+
+            .article02 {
+                  
+                .cont_02 {
+                    margin-top: 2.9rem;
+    
+                    .graphic_title {
+                        width: calc(100% - 2rem);
+                        max-width: unset;
+    
+                        h5 {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
 }

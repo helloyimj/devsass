@@ -591,9 +591,11 @@
     box-shadow: 0 5px 20px rgba(37, 53, 121, 0.1);
     .area_menu_inner {
       position: relative;
+
       display: flex;
 
       justify-content: space-between;
+
       align-items: flex-start;
       width: 100%; /* padding: 0 4rem; */
       margin: 0 auto;
@@ -716,14 +718,12 @@
 
       .depth02_content {
         display: none;
-        position: absolute;
-        top: 5rem;
-        left: 50%;
-				transform: translateX(-50%);
-        width: max-content;
+        position: fixed;
+        top: 12.4rem;
+        left: 0;
+        width: 100%;
         background-color: #fff;
-        border: 1px solid #ededed;
-				border-radius: 8px;
+        border-top: 1px solid #ededed;
         -webkit-box-shadow: 0 5px 10px rgba(37, 53, 121, 0.1);
         box-shadow: 0 5px 10px rgba(37, 53, 121, 0.1);
       }
@@ -731,23 +731,25 @@
       .depth02_inner {
         display: flex;
         border-bottom: 1px solid #ededed;
+        margin: 0 auto;
+        max-width: 192rem;
       }
 
-      // .depth02_title {
-      //   font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      //   font-size: 3rem;
-      //   color: #fff;
-      //   position: relative;
-      //   display: flex;
-      //   align-items: center;
-      //   justify-content: center;
-      //   width: 50rem;
-      //   background-color: #0f174d;
-      //   background-image: url("../img/bg/bg_gnb.png");
-      //   background-repeat: no-repeat;
-      //   background-position: center bottom;
-      //   background-size: auto;
-      // }
+      .depth02_title {
+        font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 3rem;
+        color: #fff;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50rem;
+        background-color: #0f174d;
+        background-image: url("../img/bg/bg_gnb.png");
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: auto;
+      }
 
       .depth02 {
         -webkit-transition-property: visibility, opacity;
@@ -756,34 +758,18 @@
         position: relative;
         text-align: left;
         word-break: keep-all;
-        margin: 3rem 3rem 3rem 2rem;
-        display: flex;
-				flex-direction: column;
-				gap: 1.5rem;
-
+        margin: 5rem;
+        display: grid;
+        gap: 3rem 5rem;
+        grid-template-columns: repeat(2, minmax(100px, 195px));
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-flow: column;
         .depth02_item {
           z-index: 100;
-					// list-style: disc;
-
           .depth02_item_anchor {
             font-size: 16px;
             font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             line-height: 1.5;
-						position: relative;
-						padding-left: 2rem;
-
-						&::before {
-							background: #0f174d;
-							border-radius: 50%;
-							content: "";
-							width: 0.6rem;
-							height: 0.6rem;
-							left: 0.8rem;
-							position: absolute;
-							top: 50%;
-							transform: translateY(-50%);
-						}
-
             &:hover,
             &.on {
               color: #364ce0;
@@ -975,8 +961,11 @@
   .area_menu {
     background: #fff;
     position: relative;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
     width: 100%;
     border-bottom: 1px solid #ddd;
@@ -1301,7 +1290,6 @@
 
 html {
   &.open_lnb {
-		overflow: hidden;
     body {
       overflow: hidden;
       -ms-touch-action: none;
@@ -1608,7 +1596,6 @@ html {
   .gnb_mo {
     .menu_text .lnb_list .depth02 {
       padding: 3rem 1.5rem;
-			flex-direction: column;
     }
 
     .depth02_item a {

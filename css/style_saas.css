@@ -1600,7 +1600,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 5rem;
-  padding: 4.8rem 3.6rem 5.6rem;
+  padding: 4.8rem 3.6rem 3.6rem;
 }
 .page_process .article03 .contents_wrap .wrap_contents .box_line .item_txt .wrap_img {
   height: 16rem;
@@ -1619,6 +1619,110 @@
 }
 .page_process .article03 .contents_wrap .wrap_contents .box_line:nth-of-type(2) .item_title {
   background-color: #3682ea;
+}
+.page_process .article03 .contents_wrap .wrap_contents .box_line .bllt_crcl {
+  position: relative;
+  padding-left: 1.4rem;
+}
+.page_process .article03 .contents_wrap .wrap_contents .box_line .bllt_crcl::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: #111;
+}
+.page_process .wrap_table {
+  border-radius: 0.8rem;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.page_process .wrap_table table {
+  width: 100%;
+  font-size: 1.6rem;
+}
+.page_process .wrap_table table tr {
+  border-bottom: 1px solid #ddd;
+}
+.page_process .wrap_table table tr:last-of-type {
+  border-bottom: none;
+}
+.page_process .wrap_table table th {
+  height: 4.2rem;
+  vertical-align: middle;
+  font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #333c98;
+  color: #fff;
+}
+.page_process .wrap_table table td {
+  min-height: 4.8rem;
+  padding: 1rem 1.6rem;
+  border-right: 1px solid #ddd;
+  vertical-align: middle;
+}
+.page_process .wrap_table table td p {
+  font-size: 1.6rem;
+}
+.page_process .wrap_table table td:last-of-type {
+  border-right: none;
+}
+.page_process .wrap_table table td:nth-of-type(2) {
+  font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  width: 12.4rem;
+  padding: 1rem 1.2rem;
+  background-color: #faf9fe;
+}
+.page_process .wrap_table table td.number {
+  text-align: center;
+  padding: 1rem 1.2rem;
+  background-color: #eee;
+}
+.page_process .wrap_table table td .numbering {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.page_process .wrap_table table td .numbering span {
+  width: 3.2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.page_process .wrap_table table td .bllt_star {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding-left: 1.4rem;
+  line-height: 1.4;
+  margin-top: 0.8rem;
+  font-size: 1.5rem;
+}
+.page_process .wrap_table table td .bllt_star::after {
+  content: "*";
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 1.8rem;
+  font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.page_process .wrap_table table td .bllt_pocektball {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding-left: 1.8rem;
+  line-height: 1.4;
+  margin-top: 0.8rem;
+}
+.page_process .wrap_table table td .bllt_pocektball::after {
+  content: "※";
+  position: absolute;
+  font-size: 1.5rem;
+  left: 0;
+  top: 0.2rem;
+  font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 .page_process .stage_wrap {
   display: -webkit-box;
@@ -1832,7 +1936,7 @@
 }
 .page_process .stage_wrap .stage_process .procedure_wrap .procedure ul {
   width: 100%;
-  margin-top: 1.8rem;
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1859,6 +1963,46 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.page_process .stage_wrap .stage_process .procedure_wrap .procedure .bllt_crcl {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding-left: 1.4rem;
+}
+.page_process .stage_wrap .stage_process .procedure_wrap .procedure .bllt_crcl::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.1rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: #111;
+}
+.page_process .stage_wrap .stage_process .procedure_wrap .procedure .bllt_star {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding-left: 1.4rem;
+  line-height: 1.4;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+.page_process .stage_wrap .stage_process .procedure_wrap .procedure .bllt_star::after {
+  content: "*";
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  font-size: 1.8rem;
+  font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.page_process .stage_wrap .stage_process .procedure_wrap .procedure .descript {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.page_process .stage_wrap .stage_process .procedure_wrap .procedure .align_left {
+  margin-top: 1rem;
 }
 .page_process .stage_wrap .stage_process .procedure_wrap .arrow {
   position: absolute;
@@ -1956,78 +2100,79 @@
 .page_process .stage_wrap .stage_process .procedure_wrap .group02 .col_each .group02_2 {
   padding-left: 2rem;
 }
-.page_process .process01 .group01 .procedure:nth-of-type(1) {
-  margin-top: 28.3rem;
-  height: 14.2rem;
-}
-.page_process .process01 .group01 .procedure:nth-of-type(1) .down {
-  bottom: -3.7rem;
-  height: 3.7rem;
-}
-.page_process .process01 .group01 .procedure:nth-of-type(1) .down::after {
-  bottom: -0.3rem;
-}
-.page_process .process01 .group01 .procedure:nth-of-type(2) .right {
-  right: -35.8rem;
-  width: 35.8rem;
-}
-.page_process .process01 .group01 .procedure:nth-of-type(2) .bend_vertical {
-  bottom: -8.4rem;
-  height: 8.4rem;
-}
 .page_process .process01 .group02 .col_each:nth-of-type(1) .group02_1 .procedure {
-  height: 100%;
+  height: 12rem;
+  margin-top: 24rem;
 }
 .page_process .process01 .group02 .col_each:nth-of-type(1) .group02_1 .down {
   bottom: -3.6rem;
   height: 3.6rem;
 }
-.page_process .process01 .group02 .col_each:nth-of-type(1) .group02_2 .procedure {
-  height: 100%;
+.page_process .process01 .group02 .col_each:nth-of-type(1) .group02_2 .procedure:nth-of-type(1) {
+  height: 20rem;
+}
+.page_process .process01 .group02 .col_each:nth-of-type(1) .group02_2 .procedure:nth-of-type(2) {
+  height: 12rem;
+  margin-top: 4rem;
+}
+.page_process .process01 .group02 .col_each:nth-of-type(1) .group02_2 .down {
+  bottom: -3.6rem;
+  height: 3.6rem;
 }
 .page_process .process01 .group02 .col_each:nth-of-type(1) .group02_2 .left {
   left: -5.8rem;
   width: 5.8rem;
 }
-.page_process .process01 .group02 .col_each:nth-of-type(3) .group02_2 .down {
-  top: -4rem;
+.page_process .process01 .group02 .col_double:nth-of-type(2) .down {
+  left: initial;
+  -webkit-transform: initial;
+          transform: initial;
+  right: 12rem;
+  bottom: -3.6rem;
   height: 3.6rem;
 }
-.page_process .process01 .group02 .col_each:nth-of-type(3) .group02_2 .left {
-  left: -35.8rem;
-  width: 35.8rem;
-}
-.page_process .process01 .group02 .col_double:nth-of-type(4) {
-  margin-top: 18rem;
-}
-.page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(1) .right {
-  left: -18.2rem;
-  width: 17.8rem;
+.page_process .process01 .group02 .col_each:nth-of-type(3) .group02_2 .down {
+  bottom: -3.6rem;
+  height: 3.6rem;
 }
 .page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(1) .down {
-  bottom: -3.7rem;
-  height: 3.7rem;
+  -webkit-transform: initial;
+          transform: initial;
+  left: 12rem;
+  top: -17rem;
+  height: 16.6rem;
 }
 .page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(2) {
   margin-top: 4rem;
 }
+.page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(2) .down {
+  top: -4.1rem;
+  height: 3.6rem;
+}
 .page_process .process02 .group02 .col_double {
-  margin: 3rem 0;
+  margin-top: 3rem;
+}
+.page_process .process02 .group02 .col_each {
+  margin-bottom: 3rem;
+}
+.page_process .process02 .group02 .col_each .down {
+  top: -4.1rem;
+  height: 3.6rem;
 }
 .page_process .process03 .group01 .procedure:nth-of-type(1) {
   margin-top: 12.6rem;
-  height: 24.4rem;
+  height: 30.4rem;
 }
-.page_process .process03 .group01 .procedure:nth-of-type(1) .bend_vertical {
-  height: 9.6rem;
-  bottom: -9.6rem;
+.page_process .process03 .group01 .procedure:nth-of-type(1) .left {
+  width: 5.8rem;
+  right: -6.2rem;
 }
 .page_process .process03 .group01 .procedure:nth-of-type(2) {
-  margin-top: 28.1rem;
+  margin-top: 23.7rem;
 }
 .page_process .process03 .group01 .procedure:nth-of-type(2) .down {
-  height: 8.4rem;
-  top: -8.8rem;
+  height: 9.4rem;
+  top: -9.8rem;
 }
 .page_process .process03 .group01 .procedure:nth-of-type(2) .right:nth-of-type(2) {
   top: 33%;
@@ -2039,95 +2184,102 @@
   right: -65.8rem;
   width: 65.8rem;
 }
+.page_process .process03 .group02 .col_each .group02_1 {
+  width: 100%;
+}
 .page_process .process03 .group02 .col_each .group02_1 .procedure {
+  width: 100%;
+  height: 30.4rem;
   padding: 1.6rem 1.2rem 1.8rem;
 }
 .page_process .process03 .group02 .col_each .group02_1 .down {
   height: 3.7rem;
   top: -4.1rem;
 }
-.page_process .process03 .group02 .col_each .group02_1 .left {
-  width: 5.9rem;
-  left: -5.9rem;
+.page_process .process03 .group02 .col_each .group02_1 .bend_vertical {
+  height: 10rem;
+  bottom: -10rem;
 }
 .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) {
-  margin-top: 28rem;
+  margin-top: 34.4rem;
 }
 .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) .right {
-  width: 47.8rem;
-  left: -48.2rem;
+  top: 5.6rem;
+  -webkit-transform: initial;
+          transform: initial;
+  width: 17.8rem;
+  left: -18.2rem;
 }
-.page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) .down {
-  height: 3.8rem;
-  bottom: -3.8rem;
-}
-.page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(2) {
-  margin-top: 4rem;
-}
-.page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(2) .bend_horizontal {
+.page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) .bend_horizontal {
+  top: initial;
+  -webkit-transform: initial;
+          transform: initial;
+  bottom: 5.6rem;
   width: 48.2rem;
   left: -48.2rem;
 }
 .page_process .process03 .group03 .procedure {
-  margin-top: 68.9rem;
+  margin-top: 70.9rem;
 }
-.page_process .process04 .group01 .procedure:nth-of-type(1) .bend_horizontal {
-  width: 18rem;
-  right: -18rem;
+.page_process .process03 .group03 .procedure .block_768 {
+  display: none;
+}
+.page_process .process04 .group01 .procedure:nth-of-type(1) {
+  margin-top: 36.4rem;
+}
+.page_process .process04 .group01 .procedure:nth-of-type(1) .down {
+  height: 3.7rem;
+  top: -4.1rem;
 }
 .page_process .process04 .group01 .procedure:nth-of-type(2) {
-  margin-top: 23.2rem;
+  margin-top: 18.2rem;
 }
-.page_process .process04 .group01 .procedure:nth-of-type(2) .down {
-  height: 6rem;
-  top: -6.5rem;
+.page_process .process04 .group01 .procedure:nth-of-type(2) .left {
+  width: 5.9rem;
+  right: -6.1rem;
 }
-.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) {
-  margin-top: 15.5rem;
-}
-.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down:nth-of-type(1) {
-  height: 9.4rem;
-  top: -9.9rem;
-}
-.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down:nth-of-type(2) {
+.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down {
   height: 3.7rem;
   bottom: -3.7rem;
 }
 .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(2) {
   margin-top: 4rem;
 }
-.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(2) .bend_horizontal {
+.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(2) .down {
+  height: 3.7rem;
+  bottom: -3.7rem;
+}
+.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(3) {
+  margin-top: 4rem;
+}
+.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(3) .down {
+  height: 3.7rem;
+  bottom: -3.7rem;
+}
+.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(3) .bend_horizontal {
   width: 18rem;
   left: -18rem;
 }
-.page_process .process05 .group01 .bend_horizontal {
-  width: 18rem;
-  right: -18rem;
-}
-.page_process .process05 .group02 .col_each .group02_1 .procedure:nth-of-type(1) {
-  margin-top: 10.6rem;
-}
-.page_process .process05 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down:nth-of-type(1) {
-  height: 5.8rem;
-  top: -6.4rem;
-}
-.page_process .process05 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down:nth-of-type(2) {
-  height: 3.6rem;
-  bottom: -3.6rem;
-}
-.page_process .process05 .group02 .col_each .group02_1 .procedure:nth-of-type(2) {
+.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(4) {
   margin-top: 4rem;
 }
-.page_process .process05 .group02 .col_each .group02_1 .procedure:nth-of-type(2) .bend_horizontal {
-  width: 18rem;
-  right: -18rem;
+.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(4) .down {
+  height: 3.7rem;
+  bottom: -3.7rem;
 }
-.page_process .process05 .group02 .col_each .group02_2 .procedure {
-  margin-top: 36.6rem;
+.page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(5) {
+  margin-top: 4rem;
 }
-.page_process .process05 .group02 .col_each .group02_2 .down {
-  height: 5.8rem;
-  top: -6.3rem;
+.page_process .process04 .group02 .col_each .group02_2 .procedure {
+  margin-top: 43.6rem;
+  height: 14.2rem;
+}
+.page_process .process04 .group02 .col_each .group02_2 .procedure .right {
+  left: -6.1rem;
+  width: 5.8rem;
+}
+.page_process .process05 .group02 .col_each .group02_1 .procedure {
+  margin: 3rem 0;
 }
 
 /* 이용 신청 */
@@ -2829,6 +2981,31 @@
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
+}
+.page_govSaaS.page_codeSys .article02 .cont_01 {
+  margin-top: 2.9rem;
+  padding-bottom: 12.3rem;
+  background-image: url("../img/saas_img/3_govSaaS/5_codesys/bg_arrow.png");
+  background-position: center bottom 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.page_govSaaS.page_codeSys .article02 .cont_02 {
+  margin-top: 2.9rem;
+}
+.page_govSaaS.page_codeSys .article02 .cont_02 .graphic_title {
+  margin: 0 auto;
+  width: 60rem;
+  height: 6rem;
+  line-height: 6rem;
+  border-radius: 3rem;
+  background-color: #2f3a84;
+  text-align: center;
+}
+.page_govSaaS.page_codeSys .article02 .cont_02 .graphic_title h5 {
+  font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #fff;
+  font-size: 2.4rem;
 }
 .page_govSaaS.page_codeSys .article04 .box_line_gray:nth-of-type(1) img {
   width: 6.9rem;
@@ -4822,6 +4999,9 @@
   .page_govSaaS.page_codeSys .article01 .contents_wrap::before {
     width: 100%;
     background-position: center right 13rem;
+  }
+  .page_govSaaS.page_codeSys .article02 .wrap_img img {
+    width: 90%;
   }
   /* 전자정부 연계 SaaS 행정전자서명 */
   .page_govSaaS.page_gpki .article01 .contents_wrap::before {
@@ -7403,6 +7583,20 @@
     background-position: center right 2.7rem;
     background-size: 13.6rem 13.2rem;
   }
+  .page_govSaaS.page_codeSys .article02 .cont_01 {
+    margin-top: 1.5rem;
+    padding-bottom: 8rem;
+  }
+  .page_govSaaS.page_codeSys .article02 .cont_02 .graphic_title {
+    width: calc(100% - 8rem);
+    max-width: 52rem;
+    height: 4.2rem;
+    border-radius: 2.1rem;
+    line-height: 4.2rem;
+  }
+  .page_govSaaS.page_codeSys .article02 .cont_02 .graphic_title h5 {
+    font-size: 1.8rem;
+  }
   .page_govSaaS.page_codeSys .article04 .box_line_gray:nth-of-type(1) img {
     width: 3.6rem;
     height: 1.8rem;
@@ -7883,5 +8077,16 @@
   }
   .page_govSaaS .article03 .wrap_items > div .item_txt.has_list ul li {
     font-size: 1.4rem;
+  }
+  /* 전자정부 연계 SaaS 행정표준코드 */
+  .page_govSaaS.page_codeSys .article02 .cont_02 {
+    margin-top: 2.9rem;
+  }
+  .page_govSaaS.page_codeSys .article02 .cont_02 .graphic_title {
+    width: calc(100% - 2rem);
+    max-width: unset;
+  }
+  .page_govSaaS.page_codeSys .article02 .cont_02 .graphic_title h5 {
+    font-size: 1.6rem;
   }
 }
