@@ -3808,6 +3808,10 @@
 
 /* 전자정부 연계 SaaS 모바일 공무원증 */
 .page_govSaaS.page_idCard {
+    .contents_wrap .descript {
+        padding-left: 4rem;
+        margin-bottom: 6rem;
+    }
     .article01 {
         .contents_wrap {
             &::before {
@@ -3824,32 +3828,28 @@
             }
         }
     }
-
-    .article04 {       
+    // 모바일 공무원증 주요 제공 서비스
+    
+    .article03 {       
         .box_line_gray {
-            &:nth-of-type(1) {
-                img {
-                    width: 5.8rem;
-                    height: 5.8rem;
-                }
-            }
-            &:nth-of-type(2) {
-                img {
-                    width: 5rem;
-                    height: 5.6rem;
-                }
-            }
-            &:nth-of-type(3) {
-                img {
-                    width: 5.5rem;
-                    height: 4.4rem;
-                }
-            }
-            &:nth-of-type(4) {
-                img {
-                    width: 3.9rem;
-                    height: 6rem;
-                }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3rem 4rem 4rem;
+        text-align: center;
+
+        .wrap_icon {
+            width: 11.8rem;
+            height: 11.8rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7a2dc2 0%, #3c4bbf 100%);
+            margin-bottom: 4.6rem;
+          }
+
+          p {
+            font-family: $font_bold;
+            font-size: 2.2rem;
             }
         }      
     }
@@ -6214,6 +6214,13 @@
                 }
             }
         }
+
+        .wrap_img {
+            img {
+                width: 100%;
+            }
+        }
+
     }
 
     /* 전자정부 연계 SaaS 정부디렉터리 */
@@ -6951,6 +6958,12 @@
 
     /* 전자정부 연계 SaaS 모바일 공무원증 */
     .page_govSaaS.page_idCard {
+        .contents_wrap .descript {
+            padding-left: 0;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.4rem;
+        }
         .article01 {
             .contents_wrap {
                 &::before {
@@ -6960,6 +6973,11 @@
                     bottom: -6.8rem;             
                     background-image: url('../img/saas_img/3_govSaaS/1_id/mo_1_visual_il.png');
                 }
+            }
+        }
+        .article04 {
+            img {
+                width: 100%;
             }
         }
     }
@@ -9677,34 +9695,93 @@
             }
         }
 
-        .article04 {       
+        .article03 {       
             .box_line_gray {
-                &:nth-of-type(1) {
-                    img {
-                        width: 3.1rem;
-                        height: 3.1rem;
-                    }
+            padding: 2rem 4rem 2rem;
+            text-align: center;
+    
+            .wrap_icon {
+                width: 7.5rem;
+                height: 7.5rem;
+                margin-bottom: 1.5rem;
+              }
+
+              &:nth-of-type(1) {
+                img {
+                    width: 2.4rem;
+                    height: 3rem;
                 }
-                &:nth-of-type(2) {
-                    img {
-                        width: 2.7rem;
-                        height: 3rem;
-                    }
+            }
+            &:nth-of-type(2) {
+                img {
+                    width: 2.7rem;
+                    height: 3rem;
                 }
-                &:nth-of-type(3) {
-                    img {
-                        width: 3rem;
-                        height: 2.4rem;
-                    }
+            }
+            &:nth-of-type(3) {
+                img {
+                    width: 2.7rem;
+                    height: 2.9rem;
                 }
-                &:nth-of-type(4) {
-                    img {
-                        width: 2.1rem;
-                        height: 3.3rem;
-                    }
+            }
+            &:nth-of-type(4) {
+                img {
+                    width: 2.7rem;
+                    height: 2.9rem;
+                }
+            }
+            &:nth-of-type(5) {
+                img {
+                    width: 3.1rem;
+                    height: 3.3rem;
+                }
+            }
+    
+              p {
+                font-size: 1.4rem;
                 }
             }      
         }
+        // .article03 {       
+        //     .box_line_gray {
+        //         padding: 1.5rem 0.6rem;
+        //         .wrap_icon {
+        //             width: 4.4rem;
+        //             height: 4.4rem;
+        //             margin-bottom: 1.4rem;
+        //         }
+        //         &:nth-of-type(1) {
+        //             img {
+        //                 width: 3.1rem;
+        //                 height: 3.1rem;
+        //             }
+        //         }
+        //         &:nth-of-type(2) {
+        //             img {
+        //                 width: 2.7rem;
+        //                 height: 3rem;
+        //             }
+        //         }
+        //         &:nth-of-type(3) {
+        //             img {
+        //                 width: 3rem;
+        //                 height: 2.4rem;
+        //             }
+        //         }
+        //         &:nth-of-type(4) {
+        //             img {
+        //                 width: 2.1rem;
+        //                 height: 3.3rem;
+        //             }
+        //         }
+        //         &:nth-of-type(5) {
+        //             img {
+        //                 width: 3.1rem;
+        //                 height: 3.3rem;
+        //             }
+        //         }
+        //     }      
+        // }
     }
     
     /* 전자정부 연계 SaaS 정부디렉터리 */
@@ -10545,23 +10622,68 @@
         }
     }
 
-        /* 전자정부 연계 SaaS 행정표준코드 */
-        .page_govSaaS.page_codeSys {
+    /* 전자정부 연계 SaaS 행정표준코드 */
+    .page_govSaaS.page_codeSys {
 
-            .article02 {
-                  
-                .cont_02 {
-                    margin-top: 2.9rem;
-    
-                    .graphic_title {
-                        width: calc(100% - 2rem);
-                        max-width: unset;
-    
-                        h5 {
-                            font-size: 1.6rem;
-                        }
+        .article02 {
+                
+            .cont_02 {
+                margin-top: 2.9rem;
+
+                .graphic_title {
+                    width: calc(100% - 2rem);
+                    max-width: unset;
+
+                    h5 {
+                        font-size: 1.6rem;
                     }
                 }
             }
         }
+    }
+
+        // /* 전자정부 연계 SaaS 모바일 공무원증 */
+        // .page_govSaaS.page_idCard {
+
+        //     .article03 {       
+        //         .box_line_gray {
+        //             padding: 1.5rem 0.6rem;
+        //             .wrap_icon {
+        //                 width: 4.4rem;
+        //                 height: 4.4rem;
+        //                 margin-bottom: 1.4rem;
+        //             }
+        //             &:nth-of-type(1) {
+        //                 img {
+        //                     width: 3.1rem;
+        //                     height: 3.1rem;
+        //                 }
+        //             }
+        //             &:nth-of-type(2) {
+        //                 img {
+        //                     width: 2.7rem;
+        //                     height: 3rem;
+        //                 }
+        //             }
+        //             &:nth-of-type(3) {
+        //                 img {
+        //                     width: 3rem;
+        //                     height: 2.4rem;
+        //                 }
+        //             }
+        //             &:nth-of-type(4) {
+        //                 img {
+        //                     width: 2.1rem;
+        //                     height: 3.3rem;
+        //                 }
+        //             }
+        //             &:nth-of-type(5) {
+        //                 img {
+        //                     width: 3.1rem;
+        //                     height: 3.3rem;
+        //                 }
+        //             }
+        //         }      
+        //     }
+        // }
 }
