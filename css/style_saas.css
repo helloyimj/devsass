@@ -4794,6 +4794,9 @@
     height: 4.6rem;
     border-radius: 2.4rem;
   }
+  .page_process .stage_wrap .stage_process .procedure_wrap .procedure p, .page_process .stage_wrap .stage_process .procedure_wrap .procedure .break_word {
+    font-size: 1.8rem;
+  }
   .page_process .process01 .group01 .procedure:nth-of-type(1) {
     height: 16.9rem;
   }
@@ -4810,11 +4813,14 @@
     width: 26.3rem;
   }
   .page_process .process01 .group02 .col_double:nth-of-type(4) {
-    margin-top: 20.8rem;
+    margin-top: 0;
   }
   .page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(1) .right {
     left: -13.4rem;
     width: 13rem;
+  }
+  .page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(1) .down {
+    left: 10.5rem;
   }
   .page_process .process03 .group01 .procedure:nth-of-type(1) {
     height: 28.9rem;
@@ -4834,16 +4840,32 @@
     right: -49.7rem;
     width: 49.7rem;
   }
+  .page_process .process03 .group01 .procedure:nth-of-type(2) .down {
+    height: 14.4rem;
+    top: -14.8rem;
+  }
+  .page_process .process03 .group02 .col_each .group02_1 .bend_vertical {
+    height: 5rem;
+    bottom: -5rem;
+  }
   .page_process .process03 .group02 .col_each .group02_1 .left {
     width: 2.9rem;
     left: -2.9rem;
+  }
+  .page_process .process03 .group02 .col_each .group02_1 .procedure {
+    height: auto;
   }
   .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) {
     margin-top: 32.9rem;
   }
   .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) .right {
-    width: 36.5rem;
-    left: -36.9rem;
+    top: 8rem;
+    width: 13rem;
+    left: -13.2rem;
+  }
+  .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) .bend_horizontal {
+    width: 36.8rem;
+    left: -36.8rem;
   }
   .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(2) .bend_horizontal {
     width: 36.9rem;
@@ -4863,16 +4885,17 @@
     height: 6rem;
     top: -6.5rem;
   }
-  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) {
-    margin-top: 18.2rem;
-  }
-  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down:nth-of-type(1) {
-    height: 10.8rem;
-    top: -11.3rem;
-  }
   .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(2) .bend_horizontal {
     width: 13.3rem;
     left: -13.3rem;
+  }
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(3) .bend_horizontal {
+    width: 13.4rem;
+    left: -13.4rem;
+  }
+  .page_process .process04 .group02 .col_each .group02_2 .procedure .right {
+    left: -3.2rem;
+    width: 3rem;
   }
   .page_process .process05 .group01 .bend_horizontal {
     width: 13.3rem;
@@ -5327,9 +5350,15 @@
   .page_process .stage_wrap .stage_process .procedure_wrap .procedure {
     padding: 1.2rem;
   }
-  .page_process .stage_wrap .stage_process .procedure_wrap .procedure p {
+  .page_process .stage_wrap .stage_process .procedure_wrap .procedure p, .page_process .stage_wrap .stage_process .procedure_wrap .procedure .break_word {
     font-size: 1.6rem;
+  }
+  .page_process .stage_wrap .stage_process .procedure_wrap .procedure p {
     text-align: center;
+  }
+  .page_process .stage_wrap .stage_process .procedure_wrap .procedure .bllt_star {
+    font-size: 1.4rem;
+    margin-top: 0.6rem;
   }
   .page_process .process01 .group01 .procedure:nth-of-type(1) {
     margin-top: 30rem;
@@ -5343,12 +5372,14 @@
     left: -20.2rem;
     width: 20.2rem;
   }
-  .page_process .process01 .group02 .col_double:nth-of-type(4) {
-    margin-top: 22.8rem;
-  }
   .page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(1) .right {
     left: -10.4rem;
     width: 10rem;
+  }
+  .page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(1) .down {
+    left: 7.5rem;
+    top: -18rem;
+    height: 17.6rem;
   }
   .page_process .process03 .group01 .procedure:nth-of-type(1) {
     height: 28rem;
@@ -5368,8 +5399,14 @@
     margin-top: 32rem;
   }
   .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) .right {
-    width: 27.2rem;
-    left: -27.6rem;
+    width: 10rem;
+    left: -10.2rem;
+    top: 8.7rem;
+  }
+  .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) .bend_horizontal {
+    width: 27.5rem;
+    left: -27.5rem;
+    bottom: 4.6rem;
   }
   .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(2) .bend_horizontal {
     width: 27.6rem;
@@ -5382,23 +5419,29 @@
     width: 10.3rem;
     right: -10.3rem;
   }
-  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) {
-    margin-top: 16.2rem;
-  }
-  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down:nth-of-type(1) {
-    height: 9.8rem;
-    top: -10.3rem;
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down {
+    height: 3.7rem;
+    bottom: -3.7rem;
+    top: unset;
   }
   .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(2) .bend_horizontal {
     width: 10.4rem;
     left: -10.4rem;
   }
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(3) .bend_horizontal {
+    width: 5.8rem;
+    left: -6.2rem;
+  }
+  .page_process .process04 .group02 .col_each .group02_2 .procedure {
+    margin-top: 17rem;
+  }
+  .page_process .process04 .group02 .col_each .group02_2 .procedure .right {
+    left: -1.6rem;
+    width: 1.2rem;
+  }
   .page_process .process05 .group01 .bend_horizontal {
     width: 10.4rem;
     right: -10.4rem;
-  }
-  .page_process .process05 .group02 .col_each .group02_1 .procedure:nth-of-type(1) {
-    margin-top: 11.8rem;
   }
   .page_process .process05 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down:nth-of-type(1) {
     height: 6.5rem;
@@ -7059,14 +7102,16 @@
     padding-left: 0.3rem;
   }
   .page_process .stage_wrap .stage_process .procedure_wrap .procedure {
+    height: auto !important;
     min-height: 5.1rem;
     padding: 0.8rem 0.5rem;
     border-radius: 0.5rem;
   }
-  .page_process .stage_wrap .stage_process .procedure_wrap .procedure p {
+  .page_process .stage_wrap .stage_process .procedure_wrap .procedure p, .page_process .stage_wrap .stage_process .procedure_wrap .procedure .descript, .page_process .stage_wrap .stage_process .procedure_wrap .procedure .bllt_star {
     font-size: 1.4rem;
   }
-  .page_process .stage_wrap .stage_process .procedure_wrap .procedure p.break_word {
+  .page_process .stage_wrap .stage_process .procedure_wrap .procedure p.break_word, .page_process .stage_wrap .stage_process .procedure_wrap .procedure .descript.break_word, .page_process .stage_wrap .stage_process .procedure_wrap .procedure .bllt_star.break_word {
+    font-size: 1.4rem;
     word-break: break-all;
   }
   .page_process .stage_wrap .stage_process .procedure_wrap .procedure ul {
@@ -7081,6 +7126,7 @@
   }
   .page_process .stage_wrap .stage_process .procedure_wrap .arrow.down {
     width: 1px;
+    height: 2.6rem;
   }
   .page_process .stage_wrap .stage_process .procedure_wrap .arrow.down::after {
     bottom: -0.3rem;
@@ -7151,41 +7197,55 @@
     height: 5.7rem;
   }
   .page_process .process01 .group02 .col_each:nth-of-type(1) .group02_1 .down {
-    bottom: -1.2rem;
-    height: 1.2rem;
+    bottom: -4.8rem;
+    height: 4.8rem;
+  }
+  .page_process .process01 .group02 .col_each:nth-of-type(1) .group02_1 .procedure {
+    margin-top: 32.5rem;
   }
   .page_process .process01 .group02 .col_each:nth-of-type(1) .group02_2 .left {
     left: -1.2rem;
     width: 1.2rem;
   }
   .page_process .process01 .group02 .col_each:nth-of-type(3) .group02_2 .down {
-    top: -1.6rem;
+    bottom: -1.2rem;
     height: 1.2rem;
   }
   .page_process .process01 .group02 .col_each:nth-of-type(3) .group02_2 .left {
-    left: -12rem;
+    left: -13rem;
     width: 12rem;
   }
-  .page_process .process01 .group02 .col_double:nth-of-type(4) {
-    margin-top: 20rem;
+  .page_process .process01 .group02 .col_double:nth-of-type(2) .down {
+    right: 15rem;
+    bottom: -10.6rem;
+    height: 10.6rem;
   }
   .page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(1) .right {
     left: -6.2rem;
     width: 5.8rem;
   }
   .page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(1) .down {
-    bottom: -1.2rem;
+    top: -11rem;
     height: 1.2rem;
+    left: 12.5rem;
   }
   .page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(2) {
     margin-top: 1.4rem;
   }
+  .page_process .process01 .group02 .col_double:nth-of-type(4) .procedure:nth-of-type(2) .down {
+    top: -1.5rem;
+    height: 1.2rem;
+  }
   .page_process .process02 .group02 .col_double {
     margin: 1.4rem 0;
   }
+  .page_process .process02 .group02 .col_each .group02_1 .arrow.down {
+    height: 2.6rem;
+    top: -3rem;
+  }
   .page_process .process03 .group01 .procedure:nth-of-type(1) {
     margin-top: 7.4rem;
-    height: 23.6rem;
+    height: 23.6rem !important;
   }
   .page_process .process03 .group01 .procedure:nth-of-type(1) .bend_vertical {
     height: 7.8rem;
@@ -7201,12 +7261,12 @@
   }
   .page_process .process03 .group01 .procedure:nth-of-type(2) .right:nth-of-type(2) {
     top: 33%;
-    right: -1.5rem;
-    width: 1.5rem;
+    right: -12rem;
+    width: 12rem;
   }
   .page_process .process03 .group01 .procedure:nth-of-type(2) .bend_vertical {
-    height: 5.3rem;
-    bottom: -5.3rem;
+    height: 10.6rem;
+    bottom: -10.6rem;
   }
   .page_process .process03 .group02 .col_each .group02_1 .procedure {
     padding: 1rem 0.4rem 0.5rem;
@@ -7221,21 +7281,28 @@
   }
   .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) {
     margin-top: 25rem;
+    margin-bottom: 16.4rem;
   }
   .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) .right {
-    width: 16.6rem;
-    left: -17rem;
+    width: 5.8rem;
+    left: -6.2rem;
+    top: 11.9rem;
   }
   .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) .down {
     height: 1.2rem;
     bottom: -1.2rem;
   }
+  .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(1) .bend_horizontal {
+    width: 17rem;
+    left: -17rem;
+    bottom: 8.3rem;
+  }
   .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(2) {
     margin-top: 1.4rem;
   }
   .page_process .process03 .group02 .col_each .group02_2 .procedure:nth-of-type(2) .bend_horizontal {
-    width: 16.6rem;
-    left: -17rem;
+    width: 16.8rem;
+    left: -17.1rem;
   }
   .page_process .process03 .group03 .procedure {
     margin-top: 0rem;
@@ -7244,9 +7311,15 @@
     width: 16.6rem;
     left: -17rem;
   }
+  .page_process .process04 .group01 .procedure:nth-of-type(1) {
+    margin-top: 27rem;
+  }
   .page_process .process04 .group01 .procedure:nth-of-type(1) .bend_horizontal {
     width: 6.1rem;
     right: -6.1rem;
+  }
+  .page_process .process04 .group01 .procedure:nth-of-type(1) .down {
+    top: -3.1rem;
   }
   .page_process .process04 .group01 .procedure:nth-of-type(2) {
     margin-top: 14.8rem;
@@ -7256,29 +7329,38 @@
     top: -4.6rem;
   }
   .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) {
-    margin-top: 15.8rem;
+    margin-top: 0rem;
   }
-  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down:nth-of-type(1) {
-    height: 8.4rem;
-    top: -8.8rem;
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down {
+    height: 1.2rem;
+    top: unset;
+    bottom: -1.2rem;
   }
   .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down:nth-of-type(2) {
     height: 1.2rem;
     bottom: -1.2rem;
   }
-  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(2) {
-    margin-top: 1.4rem;
-  }
   .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(2) .bend_horizontal {
     width: 6.1rem;
     left: -6.1rem;
   }
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(2),
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(3),
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(4),
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(5) {
+    margin-top: 1.4rem;
+  }
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(2) .down,
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(3) .down,
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(4) .down,
+  .page_process .process04 .group02 .col_each .group02_1 .procedure:nth-of-type(5) .down {
+    height: 1.2rem;
+    top: unset;
+    bottom: -1.2rem;
+  }
   .page_process .process05 .group01 .bend_horizontal {
     width: 6.3rem;
     right: -6.3rem;
-  }
-  .page_process .process05 .group02 .col_each .group02_1 .procedure:nth-of-type(1) {
-    margin-top: 9.5rem;
   }
   .page_process .process05 .group02 .col_each .group02_1 .procedure:nth-of-type(1) .down:nth-of-type(1) {
     height: 5rem;
@@ -8109,7 +8191,7 @@
   }
   /* 전자정부 연계 SaaS 행정표준코드 */
   .page_govSaaS.page_codeSys .article02 .cont_02 {
-    margin-top: 2.9rem;
+    margin-top: 1.5rem;
   }
   .page_govSaaS.page_codeSys .article02 .cont_02 .graphic_title {
     width: calc(100% - 2rem);

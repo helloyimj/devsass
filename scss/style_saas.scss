@@ -2905,6 +2905,7 @@
                         }
                     }
                     .down {                      
+                        // top: unset;
                         bottom: -3.6rem;
                         height: 3.6rem;                                      
                     }  
@@ -5871,6 +5872,9 @@
                                 border-radius: 2.4rem;
                             }
                         }
+                        p, .break_word {
+                            font-size: 1.8rem;
+                        }
                     }
                 }
 
@@ -5899,6 +5903,7 @@
                             left: -2.8rem;                        
                             width: 2.8rem;                    
                         }
+                        
                     }
                 }
                 .col_each:nth-of-type(3) {
@@ -5910,12 +5915,17 @@
                     }
                 }
                 .col_double:nth-of-type(4) {
-                    margin-top: 20.8rem;
+                    // margin-top: 20.8rem;
+                    margin-top: 0;
 
                     .procedure:nth-of-type(1) {
                         .right {
                             left: -13.4rem;                        
                             width: 13rem;     
+                        }
+                        .down {
+                            // top: -37.8rem;
+                            left: 10.5rem;
                         }
                     }
                 }
@@ -5945,15 +5955,26 @@
                         right: -49.7rem;
                         width: 49.7rem;
                     }
+                    .down {
+                        height: 14.4rem;
+                        top: -14.8rem;
+                    }
                 }
             }
 
             .group02 {
                 .col_each {
                     .group02_1 {
+                        .bend_vertical {
+                            height: 5rem;
+                            bottom: -5rem;
+                        }
                         .left {
                             width: 2.9rem;
                             left: -2.9rem;
+                        }
+                        .procedure {
+                            height: auto;
                         }
                     }
                     .group02_2 {
@@ -5961,8 +5982,13 @@
                             margin-top: 32.9rem;    
 
                             .right {
-                                width: 36.5rem;
-                                left: -36.9rem;
+                                top: 8rem;
+                                width: 13rem;
+                                left: -13.2rem;
+                            }
+                            .bend_horizontal {
+                                width: 36.8rem;
+                                left: -36.8rem;
                             }
                         }
 
@@ -6004,19 +6030,24 @@
             .group02 {
                 .col_each {
                     .group02_1 {
-                        .procedure:nth-of-type(1) {
-                            margin-top: 18.2rem;  
-
-                            .down:nth-of-type(1) {
-                                height: 10.8rem;
-                                top: -11.3rem;
-                            }
-                        }
-
+                        
                         .procedure:nth-of-type(2)  {
                             .bend_horizontal {
                                 width: 13.3rem;
                                 left: -13.3rem;
+                            }
+                        }
+                        .procedure:nth-of-type(3) .bend_horizontal {
+                            width: 13.4rem;
+                            left: -13.4rem;
+                        }
+                    }
+                    
+                    .group02_2 {
+                        .procedure {
+                            .right {
+                                left: -3.2rem;
+                                width: 3rem;
                             }
                         }
                     }
@@ -6703,9 +6734,15 @@
                     .procedure {
                         padding: 1.2rem;
 
-                        p {
+                        p, .break_word {
                             font-size: 1.6rem;
+                        }
+                        p {
                             text-align: center;
+                        }
+                        .bllt_star {
+                            font-size: 1.4rem;
+                            margin-top: .6rem;
                         }
                     }
                 }  
@@ -6739,13 +6776,19 @@
                 }
 
                 .col_double:nth-of-type(4) {
-                    margin-top: 22.8rem;
+                    // margin-top: 22.8rem;
 
                     .procedure:nth-of-type(1) {
                         .right {
                             left: -10.4rem;                        
                             width: 10rem;     
                         }
+                        .down {
+                            left: 7.5rem;
+                            top: -18rem;
+                            height: 17.6rem;
+                        }
+
                     }
                 }
             }
@@ -6779,8 +6822,14 @@
                             margin-top: 32rem;    
 
                             .right {
-                                width: 27.2rem;   
-                                left: -27.6rem;    
+                                width: 10rem;
+                                left: -10.2rem;
+                                top: 8.7rem;
+                            }
+                            .bend_horizontal {
+                                width: 27.5rem;
+                                left: -27.5rem;
+                                bottom: 4.6rem;
                             }
                         }
 
@@ -6815,11 +6864,12 @@
                 .col_each {
                     .group02_1 {
                         .procedure:nth-of-type(1) {
-                            margin-top: 16.2rem;  
+                            // margin-top: 27rem;  
 
-                            .down:nth-of-type(1) {
-                                height: 9.8rem;
-                                top: -10.3rem;
+                            .down {
+                                height: 3.7rem;
+                                bottom: -3.7rem;
+                                top: unset;
                             }
                         }
 
@@ -6829,7 +6879,28 @@
                                 left: -10.4rem;
                             }
                         }
+                        .procedure:nth-of-type(3)  {
+                            .bend_horizontal {
+                                // width: 10.4rem;
+                                // left: -10.4rem;
+                                width: 5.8rem;
+                                left: -6.2rem;
+                                // top: 8.7rem;
+                            }                           
+                        }
+                        
                     }
+
+                    .group02_2 {
+                        .procedure {
+                            margin-top: 17rem;
+                            .right {
+                                left: -1.6rem;
+                                width: 1.2rem;
+                            }
+                        }
+                    }
+
                 }
             }
         }
@@ -6845,7 +6916,7 @@
                 .col_each {
                     .group02_1 {
                         .procedure:nth-of-type(1) {
-                            margin-top: 11.8rem;   
+                            // margin-top: 11.8rem;   
 
                             .down:nth-of-type(1) {
                                 height: 6.5rem;
@@ -8976,14 +9047,16 @@
                     }
 
                     .procedure {
+                        height: auto !important;
                         min-height: 5.1rem;
                         padding: 0.8rem 0.5rem;
                         border-radius: 0.5rem;
-
-                        p {
+                        
+                        p, .descript, .bllt_star {
                             font-size: 1.4rem;
-
+                            
                             &.break_word {
+                                font-size: 1.4rem;
                                 word-break: break-all;
                             }
                         }
@@ -9004,7 +9077,8 @@
                     .arrow {
                         &.down {
                             width: 1px;    
-
+                            // top: -3rem;
+                            height: 2.6rem;
                             &::after  {
                                 bottom: -0.3rem;
                                 width: 9px;
@@ -9121,9 +9195,18 @@
             .group02 {
                 .col_each:nth-of-type(1) {
                     .group02_1 {
-                        .down {
-                            bottom: -1.2rem;
-                            height: 1.2rem;                                          
+                        .down {                      
+                            bottom: -4.8rem;
+                            height: 4.8rem;
+                        }
+                    }
+                    .group02_1 {
+                        // .down {
+                        //     bottom: -1.2rem;
+                        //     height: 1.2rem;                                          
+                        // }
+                          .procedure {
+                            margin-top: 32.5rem;
                         }
                     }
                     .group02_2 {
@@ -9131,23 +9214,39 @@
                             left: -1.2rem;                        
                             width: 1.2rem;                    
                         }
+                        // .down {
+                        //     right: 15rem;
+                        //     bottom: -10.6rem;
+                        //     height: 10.6rem;
+                        // }
+                      
                     }
                 }
+
                 .col_each:nth-of-type(3) {
+
                     .group02_2 {
                         .down {                      
-                            top: -1.6rem;                         
+                            bottom: -1.2rem;                         
                             height: 1.2rem;        
                         }
     
                         .left  {
-                            left: -12rem;                 
+                            left: -13rem;                 
                             width: 12rem;          
                         }
                     }
                 }
+                
+                .col_double:nth-of-type(2) {
+                    .down {
+                        right: 15rem;
+                        bottom: -10.6rem;
+                        height: 10.6rem;
+                    }
+            }
                 .col_double:nth-of-type(4) {
-                    margin-top: 20rem;
+                    // margin-top: 20rem;
 
                     .procedure:nth-of-type(1) {
                         .right {
@@ -9155,13 +9254,19 @@
                             width: 5.8rem;     
                         }
                         .down {
-                            bottom: -1.2rem;
-                            height: 1.2rem;                                          
+                            // bottom: -1.2rem;
+                            top: -11rem;
+                            height: 1.2rem;            
+                            left: 12.5rem;
                         }
                     }
 
                     .procedure:nth-of-type(2) {
-                        margin-top: 1.4rem;                    
+                        margin-top: 1.4rem;
+                        .down {
+                            top: -1.5rem;
+                            height: 1.2rem;
+                        }
                     }
                 }
             }
@@ -9172,6 +9277,10 @@
                 .col_double {
                     margin: 1.4rem 0;
                 }
+                .col_each .group02_1 .arrow.down {
+                    height: 2.6rem;
+                    top: -3rem;
+                }
             }
         }
 
@@ -9179,7 +9288,7 @@
             .group01 {
                 .procedure:nth-of-type(1) {
                     margin-top: 7.4rem;
-                    height: 23.6rem;
+                    height: 23.6rem !important;
 
                     .bend_vertical {
                         height: 7.8rem;
@@ -9198,13 +9307,13 @@
 
                     .right:nth-of-type(2) {
                         top: 33%;
-                        right: -1.5rem; 
-                        width: 1.5rem;
+                        right: -12rem;
+                        width: 12rem;
                     }
 
                     .bend_vertical {
-                        height: 5.3rem;
-                        bottom: -5.3rem;
+                        height: 10.6rem;
+                        bottom: -10.6rem;
                     }
                 }
             }
@@ -9229,14 +9338,23 @@
                     .group02_2 {
                         .procedure:nth-of-type(1) {
                             margin-top: 25rem;    
+                            margin-bottom: 16.4rem;
 
                             .right {
-                                width: 16.6rem;
-                                left: -17rem;
+                                // width: 16.6rem;
+                                // left: -17rem;
+                                width: 5.8rem;
+                                left: -6.2rem;
+                                top: 11.9rem;
                             }
                             .down  {
                                 height: 1.2rem;
                                 bottom: -1.2rem;
+                            }
+                            .bend_horizontal {
+                                width: 17rem;
+                                left: -17rem;
+                                bottom: 8.3rem;
                             }
                         }
 
@@ -9244,8 +9362,8 @@
                             margin-top: 1.4rem;   
                             
                             .bend_horizontal {
-                                width: 16.6rem;
-                                left: -17rem;
+                                width: 16.8rem;
+                                left: -17.1rem;
                             }
                         }
                     }
@@ -9259,6 +9377,7 @@
                     .right {
                         width: 16.6rem;
                         left: -17rem;
+                        
                     }
                 }
             }
@@ -9267,9 +9386,14 @@
         .process04 {
             .group01 {
                 .procedure:nth-of-type(1) {
+                 margin-top: 27rem;  
+
                     .bend_horizontal {
                         width: 6.1rem;
                         right: -6.1rem;
+                    }
+                    .down {
+                        top: -3.1rem;
                     }
                 }
 
@@ -9287,11 +9411,11 @@
                 .col_each {
                     .group02_1 {
                         .procedure:nth-of-type(1) {
-                            margin-top: 15.8rem;     
-
-                            .down:nth-of-type(1) {
-                                height: 8.4rem;
-                                top: -8.8rem;
+                            margin-top: 0rem;     
+                            .down {
+                                height: 1.2rem;
+                                top: unset;
+                                bottom: -1.2rem;
                             }
 
                             .down:nth-of-type(2) {
@@ -9300,11 +9424,20 @@
                             }
                         }
                         .procedure:nth-of-type(2) {
-                            margin-top: 1.4rem;     
-                            
                             .bend_horizontal {
                                 width: 6.1rem;
                                 left: -6.1rem;
+                            }
+                        }
+                        .procedure:nth-of-type(2),
+                        .procedure:nth-of-type(3),
+                        .procedure:nth-of-type(4),
+                        .procedure:nth-of-type(5) {
+                            margin-top: 1.4rem;
+                            .down {
+                                height: 1.2rem;
+                                top: unset;
+                                bottom: -1.2rem;
                             }
                         }
                     }
@@ -9323,7 +9456,7 @@
                 .col_each {        
                     .group02_1 {
                         .procedure:nth-of-type(1) {
-                            margin-top: 9.5rem;   
+                            // margin-top: 9.5rem;   
                             
                             .down:nth-of-type(1) {
                                 height: 5rem;
@@ -10622,7 +10755,7 @@
         .article02 {
                 
             .cont_02 {
-                margin-top: 2.9rem;
+                margin-top: 1.5rem;
 
                 .graphic_title {
                     width: calc(100% - 2rem);
