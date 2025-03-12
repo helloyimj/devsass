@@ -5810,7 +5810,7 @@
     }
 
     /* 이용 절차 */
-    .page_process {
+    .page_intro.page_process {
         //전자정부 연계 SaaS 이용을 위해서는 다음 사항이 전제되어야 합니다.
         .article03 {
             .contents_wrap {
@@ -6086,6 +6086,7 @@
                 }
             }
         }
+
     }
 
     /* 이용 신청 */
@@ -6705,7 +6706,7 @@
     }
 
      /* 이용 절차 */
-    .page_process {
+     .page_intro.page_process {
         //전자정부 연계 SaaS 이용을 위해서는 다음 사항이 전제되어야 합니다.
         .article03 {
             .contents_wrap {
@@ -6942,6 +6943,28 @@
                         }
                     }
                 }
+            }
+        }
+        .wrap_table {
+            // overflow: unset;
+            table td {
+                font-size: 1.4rem;
+                padding: 1rem;
+                &:nth-of-type(2) {
+                    width: unset;
+                }
+
+                .bllt_pocektball, .bllt_star {
+                    width: auto;
+                    word-wrap: break-word; 
+                    white-space: normal; 
+                }
+
+                .numbering {
+                display: block;
+                word-wrap: break-word; 
+                white-space: normal; 
+            }
             }
         }
     }
@@ -8898,7 +8921,7 @@
     }
 
      /* 이용 절차 */
-    .page_process {
+     .page_intro.page_process {
         .article01 {
             margin-bottom: 4rem;
 
