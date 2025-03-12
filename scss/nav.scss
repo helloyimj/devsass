@@ -606,7 +606,7 @@
         height: 5.8rem;
         .logo_anchor {
           display: inline-block;
-          width: 21rem;
+          width: 23rem;
           height: 3.7rem;
           vertical-align: middle;
           background-image: url("../img/logo/logo_saas.png");
@@ -995,8 +995,8 @@
         background-position: center left;
         background-repeat: no-repeat;
         background-size: contain;
-        width: 15.8rem;
-        height: 2.5rem;
+        width: 17rem;
+        // height: 2.5rem;
       }
     }
 
@@ -1384,7 +1384,7 @@ html {
 
 @media screen and (max-width: 1280px) {
   .gnb_pc .area_menu .area_menu_inner .logo .logo_anchor {
-    width: 16rem;
+    width: 19rem;
   }
 
   .header .wrap_search .search_form {
