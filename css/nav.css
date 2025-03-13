@@ -589,7 +589,7 @@
 }
 .gnb_pc .area_menu .area_menu_inner .logo .logo_anchor {
   display: inline-block;
-  width: 21rem;
+  width: 23rem;
   height: 3.7rem;
   vertical-align: middle;
   background-image: url("../img/logo/logo_saas.png");
@@ -938,7 +938,7 @@
   background-position: center left;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 16rem;
+  width: 17rem;
   height: 3.5rem;
 }
 .gnb_mo .area_menu .box_btn_util .box_btn_item .btn_util_ham {
@@ -1320,7 +1320,7 @@ html.open_lnb .gnb_pc .area_menu::after {
 }
 @media screen and (max-width: 1280px) {
   .gnb_pc .area_menu .area_menu_inner .logo .logo_anchor {
-    width: 17rem;
+    width: 19rem;
   }
   .header .wrap_search .search_form {
     width: 20rem;
