@@ -624,6 +624,13 @@
   color: #1953d5;
   cursor: pointer;
 }
+.gnb_pc .menu_text .lnb_list .depth01.on .depth01_item_anchor::after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.gnb_pc .menu_text .lnb_list .depth01:hover {
+  background-color: rgba(237, 241, 245, 0.5764705882);
+}
 .gnb_pc .menu_text .lnb_list .depth01_item {
   position: relative;
   width: 100%;
@@ -651,25 +658,23 @@
   content: "";
   display: block;
   position: absolute;
-  top: 50%;
+  top: 43%;
   right: 0;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
   width: 1.4rem;
   height: 0.8rem;
   background-image: url("../img/icon/icon_chevron_down_black.svg");
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 .gnb_pc .menu_text .lnb_list .depth01_item.gnb_scroll_change {
   color: #fff;
-}
-.gnb_pc .menu_text .lnb_list .depth01_item.on {
-  color: #111;
-}
-.gnb_pc .menu_text .lnb_list .depth01_item.on .depth01_item_anchor::after {
-  background-image: url("../img/icon/icon_chevron_down_blue.svg");
 }
 .gnb_pc .menu_text .lnb_list .depth01 {
   padding-left: 3.6rem;
@@ -718,7 +723,7 @@
   position: relative;
   text-align: left;
   word-break: keep-all;
-  margin: 3rem 3rem 3rem 2rem;
+  margin: 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -726,34 +731,24 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1.5rem;
 }
 .gnb_pc .menu_text .lnb_list .depth02 .depth02_item {
   z-index: 100;
+  border-bottom: 1px solid #eee;
+}
+.gnb_pc .menu_text .lnb_list .depth02 .depth02_item:nth-last-of-type(1) {
+  border-bottom: none;
 }
 .gnb_pc .menu_text .lnb_list .depth02 .depth02_item .depth02_item_anchor {
   font-size: 16px;
   font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
   position: relative;
-  padding-left: 2rem;
-}
-.gnb_pc .menu_text .lnb_list .depth02 .depth02_item .depth02_item_anchor::before {
-  background: #0f174d;
-  border-radius: 50%;
-  content: "";
-  width: 0.6rem;
-  height: 0.6rem;
-  left: 0.8rem;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  padding: 2rem 3rem;
+  border-radius: 0.8rem;
 }
 .gnb_pc .menu_text .lnb_list .depth02 .depth02_item .depth02_item_anchor:hover, .gnb_pc .menu_text .lnb_list .depth02 .depth02_item .depth02_item_anchor.on {
-  color: #364ce0;
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  background-color: #edf1f5;
 }
 .gnb_pc .menu_text .lnb_list .depth02 .depth02_item:nth-of-type(1) .depth02_item_anchor {
   margin-top: 0;
