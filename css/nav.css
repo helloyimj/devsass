@@ -625,8 +625,8 @@
   cursor: pointer;
 }
 .gnb_pc .menu_text .lnb_list .depth01.on .depth01_item_anchor::after {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 .gnb_pc .menu_text .lnb_list .depth01:hover {
   background-color: rgba(237, 241, 245, 0.5764705882);
@@ -670,8 +670,8 @@
   background-image: url("../img/icon/icon_chevron_down_black.svg");
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
 }
 .gnb_pc .menu_text .lnb_list .depth01_item.gnb_scroll_change {
   color: #fff;

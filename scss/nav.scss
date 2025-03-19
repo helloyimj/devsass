@@ -647,8 +647,7 @@
         }
         &.on {
           .depth01_item_anchor::after {
-            // background-image: url("../img/icon/icon_chevron_down_blue.svg");
-            transform: rotate(0deg);
+            transform: rotate(-180deg);
           }
       }
       &:hover {
@@ -685,7 +684,7 @@
             height: 0.8rem;
             background-image: url("../img/icon/icon_chevron_down_black.svg");
             transition: all 0.4s;
-            transform: rotate(-180deg);
+            transform: rotate(0);
           }
         }
 
