@@ -1,0 +1,162 @@
+/* 스피너 */
+//사이즈 정의
+@mixin spinner-size-variable() {
+	--krds-spinner--layout-gap: var(--krds-number-5);
+	--krds-spinner--pc-font-size: var(--krds-pc-font-size-body-small);
+	--krds-spinner--mobile-font-size: var(--krds-mobile-font-size-body-small);
+	--krds-spinner--size: var(--krds-size-height-3);
+	--krds-spinner--animation-duration: 900ms;
+}
+
+//컬러 정의
+@mixin spinner-color-variable($mode: light) {
+	--krds-spinner--color-text: var(--krds-#{$mode}-color-text-subtle);
+	--krds-spinner--border-width: var(--krds-#{$mode}-border-width-variable-medium);
+	--krds-spinner--color-border: var(--krds-#{$mode}-color-element-disabled-light);
+	--krds-spinner--color-border-active: var(--krds-#{$mode}-color-element-primary);
+}
+
+//모드 설정
+$mode-setting: light;
+
+.krds-spinner {
+	@include spinner-size-variable();
+	@include spinner-color-variable(#{$mode-setting});
+	@include flex-layout($jc: center, $ai: center);
+	gap: var(--krds-spinner--layout-gap);
+	@include position($p: relative, $t: 0, $l: 0);
+	z-index: 10;
+	color: var(--krds-spinner--color-text);
+	font-size: var(--krds-spinner--pc-font-size);
+	width: 100%;
+	height: 100%;
+	text-align: right;
+
+	// // custom
+	// flex-direction: column;
+	// color: var(--krds-spinner--color-text);
+	
+	// // position: absolute;
+	// // top: 50%;
+	// // left: 50%;
+	// // transform: translate(-50%, -50%);
+
+	@include size-medium {
+		font-size: var(--krds-spinner--mobile-font-size);
+	}
+	&::before {
+		display: inline-flex;
+		content: '';
+		height: var(--krds-spinner--size);
+		width: var(--krds-spinner--size);
+		border: var(--krds-spinner--border-width) solid var(--krds-spinner--color-border);
+		border: {
+			top-color: var(--krds-spinner--color-border-active);
+			radius: 100%;
+		}
+		animation: spin var(--krds-spinner--animation-duration) infinite linear;
+	}
+}
+
+.form-spinner {
+	//spinner - form-spinner - padding
+	--krds-spinner-form-spinner-padding-x: var(--krds-number-8);
+
+	position: relative;
+	.krds-spinner {
+		position: absolute;
+		justify-content: flex-end;
+		padding: 0 var(--krds-spinner-form-spinner-padding-x);
+	}
+}
+
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(359deg); }
+}
+
+
+//고대비모드
+@include color-mode($mode: high-contrast) {
+	//모드 설정
+	$mode-setting: high-contrast;
+
+	.krds-spinner {
+		@include spinner-color-variable(#{$mode-setting});
+	}
+}
+
+
+// 페이지 중간 스피너 custom
+@mixin page-spinner-size-variable() {
+	// --krds-spinner--layout-gap: var(--krds-number-5);
+	--krds-spinner--layout-gap: 16px;
+	// --krds-spinner--pc-font-size: var(--krds-pc-font-size-body-small);
+	--krds-spinner--pc-font-size: #fff;
+	// --krds-spinner--mobile-font-size: var(--krds-mobile-font-size-body-small);
+	--krds-spinner--mobile-font-size: 18px;
+	// --krds-spinner--size: var(--krds-size-height-3);
+	--krds-spinner--size: 8rem;
+	--krds-spinner--animation-duration: 900ms;
+}
+
+//컬러 정의
+@mixin page-spinner-color-variable($mode: light) {
+	// --krds-spinner--color-text: var(--krds-#{$mode}-color-text-subtle);
+	--krds-spinner--color-text: #fff;
+	// --krds-spinner--border-width: var(--krds-#{$mode}-border-width-variable-medium);
+	--krds-spinner--border-width: var(--krds-#{$mode}-border-width-variable-bold);
+	--krds-spinner--color-border: var(--krds-#{$mode}-color-element-disabled-light);
+	// --krds-spinner--color-border-active: var(--krds-#{$mode}-color-element-primary);
+	--krds-spinner--color-border-active: var(--krds-#{$mode}-color-element-primary);
+}
+
+.wrap-krds-spinner {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+	.krds-spinner {
+	@include page-spinner-size-variable();
+	@include page-spinner-color-variable(#{$mode-setting});
+	@include flex-layout($jc: center, $ai: center);
+	gap: var(--krds-spinner--layout-gap);
+	@include position($p: relative, $t: 0, $l: 0);
+	z-index: 10;
+	// color: var(--krds-spinner--color-text);
+	font-size: var(--krds-spinner--pc-font-size);
+	width: 100%;
+	height: 100%;
+	text-align: right;
+
+	// custom
+	flex-direction: column;
+	color: var(--krds-spinner--color-text);
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	@include size-medium {
+		font-size: var(--krds-spinner--mobile-font-size);
+	}
+	&::before {
+		display: inline-flex;
+		content: '';
+		height: var(--krds-spinner--size);
+		width: var(--krds-spinner--size);
+		border: var(--krds-spinner--border-width) solid var(--krds-spinner--color-border);
+		border: {
+			// top-color: var(--krds-spinner--color-border-active);
+			top-color: #0B78CB;
+			radius: 100%;
+		}
+		animation: spin var(--krds-spinner--animation-duration) infinite linear;
+	}
+}
+
+}
+
+

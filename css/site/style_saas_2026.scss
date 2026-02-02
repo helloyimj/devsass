@@ -1,0 +1,495 @@
+@charset "utf-8";
+
+body {
+  height: 100%;
+}
+
+
+
+// 회원가입 페이지
+.page_signup {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(
+    --krds-pc-gap-layout-contents-footer
+  ); //gap: var(--krds-gap-10);
+
+  .article_title {
+    margin: auto;
+
+    .page_title_area {
+      width: 100%;
+    }
+  }
+
+  // 단계 표시기
+  .krds-step-wrap {
+    max-width: 54rem;
+    margin-bottom: var(--krds-gap-10);
+    //margin: auto;
+
+    li:not(li:last-of-type) {
+      width: 12rem;
+      min-width: 12rem;
+
+      &:last-of-type {
+        flex: 0;
+      }
+    }
+  }
+
+  // 현재 페이지 단계 표시
+  .step-type {
+    .sec-tit {
+      text-align: center;
+      margin-bottom: var(--krds-gap-9);
+      font-size: var(--krds-pc-font-size-heading-large);
+
+      .step-now {
+        display: block;
+        margin-bottom: var(--krds-gap-3);
+        font-size: var(--krds-pc-font-size-body-medium);
+        font-weight: var(--krds-font-weight-regular);
+        color: var(--krds-light-color-text-subtle);
+
+        strong {
+          color: var(--krds-light-color-text-primary);
+          font-weight: var(--krds-font-weight-bold);
+        }
+      }
+    }
+  }
+
+  // 라디오 버튼
+  .krds-check-area {
+    gap: var(--krds-gap-7);
+  }
+  .krds-form-check {
+    input[type='radio'] ~ label {
+      font-weight: var(--krds-font-weight-bold);
+    }
+  }
+
+  // 2단계 약관동의
+  .terms-type {
+    .txt-box {
+      margin-top: var(--krds-gap-9);
+    }
+  }
+  .terms-agree-ul {
+    gap: var(--krds-gap-11);
+
+    .agree-box {
+      gap: var(--krds-gap-8);
+      font-size: var(--krds-pc-font-size-body-medium);
+    }
+  }
+  .krds-info-list {
+    .contents_wrap {
+      padding-top: var(--krds-gap-6);
+
+      .krds-table-wrap,
+      .agree-box {
+        margin-top: var(--krds-gap-6);
+      }
+      .krds-table-wrap:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+  h4.agree-tit ~ ol {
+    margin-top: var(--krds-gap-7);
+  }
+  .depth_one {
+    gap: var(--krds-gap-10);
+
+    > li {
+      padding-left: 0;
+      color: var(--krds-light-color-text-basic);
+
+      p {
+        padding-left: 2rem;
+      }
+
+      .text_indent {
+        position: absolute;
+        left: 0;
+        top: 0.2rem;
+      }
+
+      .depth_two {
+        padding-left: var(--krds-gap-5);
+
+        li {
+          color: var(--krds-light-color-text-subtle);
+          font-size: var(--krds-pc-font-size-body-small);
+        }
+      }
+    }
+  }
+
+// 약관 동의 모달
+.terms-type-modal {
+  .krds-info-list {
+    > li {
+      padding-left: 0;
+    }
+
+    &.circle {
+      padding-left: var(--krds-padding-6);
+    }
+  }
+
+  .agree-t2 {
+    display: block;
+    padding-bottom: var(--krds-padding-2);
+  }
+}
+
+// 3단계 체크리스트
+.terms-type.checklist {
+  .terms-agree-ul {
+    gap: var(--krds-gap-9);
+
+    .terms-agree-ul {
+      margin-top: var(--krds-padding-8);
+      gap: var(--krds-gap-7);
+    }
+  }
+  .agree-box {
+    margin-top: 0;
+
+    > p,
+    > div {
+      font-size: var(--krds-pc-font-size-body-medium);
+      display: flex;
+      gap: var(--krds-gap-2);
+
+      .description {
+        display: block;
+        font-size: var(--krds-pc-font-size-body-small);
+        color: var(--krds-light-color-text-subtle);
+        margin-top: var(--krds-gap-3);
+      }
+    }
+    .num {
+      min-width: 3.5rem;
+    }
+  }
+}
+
+// 4단계 정보 입력
+.input-type {
+  .txt-box.bg-white {
+    .box-sec {
+      padding-bottom: var(--krds-padding-10);
+      border-bottom: 1px solid var(--krds-light-color-border-gray);
+      gap: var(--krds-gap-9);
+
+      &:last-of-type {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+  }
+  .form-group {
+    input,
+    select {
+      max-width: 39rem;
+    }
+  }
+
+  .krds-file-upload {
+    h3.tit {
+      display: inline-block;
+      font-size: var(--krds-pc-font-size-heading-small);
+      font-weight: var(--krds-font-weight-bold);
+      position: relative;
+
+      .required {
+        font-size: var(--krds-pc-font-size-label-small);
+        font-weight: var(--krds-font-weight-regular);
+        color: var(--krds-light-color-text-basic);
+        position: absolute;
+        top: 0.4rem;
+        right: -3.8rem;
+      }
+    }
+
+    .file-upload {
+      gap: var(--krds-gap-7);
+      padding: var(--krds-padding-10);
+    }
+
+    .upload-list {
+      .file-info {
+        .file-name {
+          font-size: var(--krds-pc-font-size-body-medium);
+        }
+      }
+      .file-hint-invalid {
+        font-size: var(--krds-pc-font-size-body-medium);
+      }
+    }
+  }
+}
+.form-group {
+  .form-tit {
+    label {
+      font-size: var(--krds-pc-font-size-heading-small);
+      font-weight: var(--krds-font-weight-bold);
+      position: relative;
+
+      .required {
+        font-size: var(--krds-pc-font-size-label-small);
+        font-weight: var(--krds-font-weight-regular);
+        color: var(--krds-light-color-text-basic);
+        position: absolute;
+        top: 0.4rem;
+        right: -3.8rem;
+      }
+    }
+  }
+
+  .form-hint {
+    &.above {
+      font-size: var(--krds-pc-font-size-label-small);
+      //color: var(--krds-light-color-text-subtle);
+
+      &::before {
+        content: none;
+      }
+    }
+
+    &.inline {
+      font-size: var(--krds-pc-font-size-label-small);
+      color: var(--krds-light-color-text-subtle);
+
+      &::before {
+        content: none;
+      }
+    }
+  }
+}
+
+// 모달 크기
+.krds-modal {
+  .modal-dialog {
+    .modal-content {
+      &.medium {
+        width: 56rem;
+      }
+    }
+
+    .box-sec {
+      display: flex;
+      flex-direction: column;
+      gap: var(--krds-gap-7);
+      padding-top: var(--krds-padding-6);
+    }
+
+    &.modal-search {
+      .box-sec {
+        gap: var(--krds-gap-5);
+      }
+    }
+  }
+}
+
+// 5단계 신청 완료
+.wrap-comp-info-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: var(--krds-radius-xlarge1);
+  background-color: var(--krds-light-color-surface-secondary-subtler);
+}
+
+.step-type {
+  .comp-msg-wrap {
+    h4 {
+      font-size: var(--krds-pc-font-size-heading-medium);
+      margin-bottom: var(--krds-padding-7);
+    }
+
+    p {
+      font-size: var(--krds-pc-font-size-body-large);
+    }
+  }
+}
+}
+
+
+/* 소개 - 연계한 민간 SaaS */
+/* 연계한 민간 SaaS 카드 */
+.structured-item {
+  &.case_card {
+    padding: var(--krds-padding-8);
+
+    .in {
+      .card-top {
+        .wrap_img {
+          position: relative;
+          width: 100%;
+          height: 16.8rem;
+          border: 1px solid #ccc;
+          border-radius: var(--krds-radius-xlarge1);
+
+          .saas-badge {
+            position: absolute !important;
+            top: 1.2rem;
+            right: 1.2rem;
+            background-color: var(--krds-color-light-secondary-70);
+            color: var(--krds-color-high-contrast-alpha-white100);
+            font-size: var(--krds-pc-font-size-body-small);
+            padding: 0 1rem;
+            height: 2.8rem;
+            line-height: 2.8rem;
+            border-radius: 1.4rem;
+          }
+
+          img {
+            max-width: 80%;
+            width: auto;
+            max-height: 80%;
+            height: auto;
+          }
+        }
+      }
+
+      .card-body {
+        display: flex;
+        align-items: normal;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: var(--krds-gap-7);
+
+        .wrap_title {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: var(--krds-gap-3);
+          margin-bottom: 0;
+        }
+        
+        .box_tooltip {
+          display: flex;
+          flex-direction: column;
+          gap: var(--krds-gap-5);
+        }
+        
+        .c-company {
+          font-size: var(--krds-pc-font-size-body-small);
+          color: var(--krds-light-color-element-gray);
+        }
+      }
+    }
+  }
+
+  .wrap-tooltip {   
+
+    .tooltip-txt {
+      display: flex;
+      width: 100%;
+
+      .key {
+        display: inline-block;
+        width: 8rem;
+        flex-shrink: 0;
+      }
+
+      .value-wrap {   
+        display: flex; 
+        width: calc(100% - 8rem);
+        gap: var(--krds-gap-2);
+
+        .value {
+          display: inline-block;
+          max-width: 100%;
+
+          &.is-ellipsis {
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 1;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              word-break: break-all;
+          }
+        }
+      }
+    }
+    .tooltip-more {
+      width: 1.8rem;
+      height: 1.4rem;
+      border-radius: 2px;
+      border: 1px solid var(--krds-light-color-text-basic);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .ico-plus {
+        width: 11px;
+        height: 11px;
+      }
+    }
+
+    .tooltip-popover {
+      width: 31rem;
+    }
+  }
+}
+
+
+.wrap-krds-pagination {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .krds-pagination {
+    .page-navi {
+      width: auto;
+    }
+  }
+}
+
+
+
+@media all and (max-width: 1420px) {
+  /* 회원가입 */
+  .page_signup {
+    .text_indent {
+      font-size: var(--krds-pc-font-size-body-small);
+      top: -0.5rem;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+    /* 회원가입 */
+    .page_signup {
+      // 단계 표시기
+      .krds-step-wrap {
+        li:not(li:last-of-type) {
+          width: 12rem;
+          min-width: initial;
+        }
+      }
+
+      // 테이블
+      .krds-table-wrap {
+        width: 100%;
+      }
+    
+    .input-type {
+      .form-group {
+        input,
+        select {
+          max-width: initial;
+        }
+      }
+    }
+  }
+}
+

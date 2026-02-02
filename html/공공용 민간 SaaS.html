@@ -2,679 +2,1558 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <title>공공용 민간 SaaS&lt;민간 Sass 연계공통기반 통합관리포털</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <title>공공용 민간 SaaS&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/total.css" />
+  <!-- css -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
+  <link href="../css/plugin/swiper-bundle.min.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="../css/output.css" />
 
-    <!-- JS -->
-    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-    <script src="../js/swiper-5.4.3.min.js"></script>
-    <script src="../js/aos.js"></script>
-    <script src="../js/nav.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/service_searchSaaS.js"></script>
+  <!-- script -->
+  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+  <script src="../js/plugin/swiper-bundle.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script defer src="../js/component/ui-script.js"></script>
+  <script defer src="../js/pattern/pattern.js"></script>
+  <script defer src="../js/nav.js"></script>
+  <script defer src="../js/app.js"></script>
+  <script defer src="../js/custom-saas.js"></script>
 
 </head>
 
 <body>
-    <div id="wrapper" class="wrapper sub_pages">
-        <!-- 바로가기 메뉴 -->
-        <nav id="skip"></nav>
+  <div id="wrapper">
 
-        <!-- 헤더 -->
-        <header id="header" class="header"></header>
+    <!-- 컨테이너 영역 -->
+    <div id="container">
 
-        <!-- 메인  -->
-        <main class="">
+      <!-- breadcrumb -->
+      <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
+        <ol class="breadcrumb">
+          <li class="home"><a href="#;" class="txt" target="_self" title="메인 페이지로 이동">홈</a></li>
+          <li class=""><a href="운영지원센터_공지사항.html" class="txt" target="_self" title="페이지 이동">운영지원센터</a></li>
+        </ol>
+      </nav>
+      <!-- // breadcrumb -->
 
-            <!-- 본문 외부 영역 -->
-            <section id="content" class="">
-                <div class="page_inner">
+      <!-- 컨텐츠 영역 -->
+      <div class="inner">
+        <!-- 페이지 타이틀 영역 -->
+        <div class="page-title-wrap">
+          <h1 class="h-tit">공공용 민간 SaaS</h1>
+          <h4 class="h-txt">공공 업무를 지원하는 민간 SaaS를 도입하여 업무 효율을 높이세요.</h4>
+        </div>
+        <!-- //페이지 타이틀 영역 -->
+        <div class="page_content page_notice">
 
-                    <!-- 본문 -->
-                    <article class="page page_saas_search">
-                        <!-- 브레드크럼 -->
-                        <div class="wrap_breadcrumb">
-                            <ul class="breadcrumbs">
-                                <li class="breadcrumbs_item cat_home"><a href="main.html" target="_self" title="메인 페이지로 이동" class="home"></a></li>
-                                <li class="breadcrumbs_item current_page"><a href="공공용 민간 SaaS.html" target="_self" title="페이지 이동">공공용 민간 SaaS</a></li>
-                            </ul>
-                        </div>
+          <div class="article_content" data-aos="fade-up">
 
-                        <div class="page_content">
-                            <div class="article_title">
-                                <article class="page_title_area">
-                                    <h2 class="page_title">공공용 민간 SaaS</h2>
-                                    <h3 class="page_title_sub">공공 업무를 지원하는 민간 SaaS를 도입하여 <br class="only_mob" />업무 효율을 높이세요.</h3>
-                                </article>
-                            </div>
+            <!-- 검색 입력폼 -->
+            <div class="search-top-box page_top">
+              <div class="sch-filter-box">
+                <h3 class="f-txt">공공용 민간 SaaS를 찾아보세요</h3>
 
-                            <div class="article_content">
-
-                                <!-- 검색 필터  -->
-                                <div class="wrap_search_filter">
-                                    <h3 class="search_filter_tit">공공용 민간 SaaS를 찾아보세요</h3>
-                                    <div class="wrap_select">
-                                        <label for="select01" class="sr_only">검색 필터 목록 선택 열기</label>
-                                        <select name="select01" id="select01" class="select_searchbar">
-                                            <option value="" selected>전체</option>
-                                            <option value="">제목</option>
-                                            <option value="">내용</option>
-                                        </select>
-                                    </div>
-                                    <div class="box_input">
-                                        <label for="inputSearch" class="sr_only">검색어 입력</label>
-                                        <input type="text" id="inputSearch" class="input_text input_searchbar" placeholder="검색어를 입력해주세요.">
-                                    </div>
-                                    <button type="submit" class="btn_submit btn_search">검색</button>
-                                </div>
-                                <!-- 모바일 상세 검색 필터 -->
-                                <div class="mob_srch_filter_btn">
-                                    <button type="button">상세 검색 필터</button>
-                                </div>
-                                <!-- 모바일 상세 검색 필터 end -->
-
-                                <!-- 상세 검색 필터  -->
-                                <div class="wrap_search_service" data-aos="fade-up">
-                                    <div class="wrap_btn_toggle">
-                                        <h3 class="filter_title">상세 검색 필터</h3>
-                                        <div class="wrap_arrow">
-                                            <input type="checkbox" id="toggle" class="toggle_checked">
-                                            <label for="toggle" class="btn_toggle"></label>
-                                        </div>
-                                        <button class="wrap_srch_close" type="button">닫기</button>
-                                    </div>
-                                    <div class="area_detail_filter">
-                                        <div class="wrap_filter_group">
-                                            <div class="wrap_filter group01">
-                                                <div class="wrap_group_name">
-                                                    <p>연계공통기반 사용</p>
-                                                </div>
-                                                <div class="wrap_checkbox_group">
-                                                    <div class="wrap_radio">
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group01_ck01" name="govSaas">
-                                                            <label for="group01_ck01" class="label_txt">모바일 공무원증</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group01_ck02" name="govSaas">
-                                                            <label for="group01_ck02" class="label_txt">행정표준코드</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group01_ck03" name="govSaas">
-                                                            <label for="group01_ck03" class="label_txt">GPKI (행정전자서명)</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group01_ck04" name="govSaas">
-                                                            <label for="group01_ck04" class="label_txt">LDAP (정부디렉터리)</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wrap_filter group02">
-                                                <div class="wrap_group_name">
-                                                    <p>인증</p>
-                                                </div>
-                                                <div class="wrap_checkbox_group">
-                                                    <div class="wrap_radio">
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group02_ck01" name="certificate">
-                                                            <label for="group02_ck01" class="label_txt">국가정보원 인증</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group02_ck02" name="certificate">
-                                                            <label for="group02_ck02" class="label_txt">CSAP 인증</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wrap_filter group03">
-                                                <div class="wrap_group_name">
-                                                    <p>이용중인 인프라</p>
-                                                </div>
-                                                <div class="wrap_checkbox_group">
-                                                    <div class="wrap_radio">
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group03_ck01" name="infra">
-                                                            <label for="group03_ck01" class="label_txt">가비아</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group03_ck02" name="infra">
-                                                            <label for="group03_ck02" class="label_txt">네이버 (공공기관용)</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group03_ck03" name="infra">
-                                                            <label for="group03_ck03" class="label_txt">카카오</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wrap_filter group04">
-                                                <div class="wrap_group_name">
-                                                    <p>인증 시기</p>
-                                                </div>
-                                                <div class="wrap_checkbox_group">
-                                                    <div class="wrap_radio wrap_textbox">
-                                                        <div class="box_input">
-                                                            <i></i>
-                                                            <label class="sr_only">시작 연도 입력</label>
-                                                            <input type="number" class="textbox year" name="date">년
-                                                            <label class="sr_only">시작 월 입력</label>
-                                                            <input type="number" class="textbox month" name="date">월
-                                                            <span>~</span>
-                                                            <i></i>
-                                                            <label class="sr_only">종료 연도 입력</label>
-                                                            <input type="number" class="textbox year" name="date">년
-                                                            <label class="sr_only">종료 월 입력</label>
-                                                            <input type="number" class="textbox month" name="date">월
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group04_ck01" name="date">
-                                                            <label for="group04_ck01" class="label_txt">최근 12개월</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wrap_filter group05">
-                                                <div class="wrap_group_name">
-                                                    <p>계약 및 등록</p>
-                                                </div>
-                                                <div class="wrap_checkbox_group">
-                                                    <div class="wrap_radio half">
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group05_ck01" name="contract">
-                                                            <label for="group05_ck01" class="label_txt">디지털서비스 이용지원시스템 등록</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group05_ck02" name="contract">
-                                                            <label for="group05_ck02" class="label_txt">디지털서비스 카탈로그 계약</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wrap_filter group06">
-                                                <div class="wrap_group_name">
-                                                    <p>서비스 구분</p>
-                                                </div>
-                                                <div class="wrap_checkbox_group">
-                                                    <div class="wrap_radio">
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group06_ck01" name="service_type">
-                                                            <label for="group06_ck01" class="label_txt">메일</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group06_ck02" name="service_type">
-                                                            <label for="group06_ck02" class="label_txt">협업 도구 </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wrap_filter group07">
-                                                <div class="wrap_group_name">
-                                                    <p>대표 서비스 카테고리</p>
-                                                </div>
-                                                <div class="wrap_checkbox_group">
-                                                    <div class="wrap_radio">
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck01" name="service_cate">
-                                                            <label for="group07_ck01" class="label_txt">개발지원</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck02" name="service_cate">
-                                                            <label for="group07_ck02" class="label_txt">관제 · IoT · 시설물 관리</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck03" name="service_cate">
-                                                            <label for="group07_ck03" class="label_txt">교육</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck04" name="service_cate">
-                                                            <label for="group07_ck04" class="label_txt">데이터 분석</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck05" name="service_cate">
-                                                            <label for="group07_ck05" class="label_txt">도서관 관리</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck06" name="service_cate">
-                                                            <label for="group07_ck06" class="label_txt">마케팅</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck07" name="service_cate">
-                                                            <label for="group07_ck07" class="label_txt">매칭</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck08" name="service_cate">
-                                                            <label for="group07_ck08" class="label_txt">메일</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck09" name="service_cate">
-                                                            <label for="group07_ck09" class="label_txt">모니터링</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck10" name="service_cate">
-                                                            <label for="group07_ck10" class="label_txt">보안 관리</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck11" name="service_cate">
-                                                            <label for="group07_ck11" class="label_txt">복지</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck12" name="service_cate">
-                                                            <label for="group07_ck12" class="label_txt">사업평가 관리</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck13" name="service_cate">
-                                                            <label for="group07_ck13" class="label_txt">상담</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck14" name="service_cate">
-                                                            <label for="group07_ck14" class="label_txt">성과 관리</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck15" name="service_cate">
-                                                            <label for="group07_ck15" class="label_txt">의료</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck16" name="service_cate">
-                                                            <label for="group07_ck16" class="label_txt">자료 관리 (아카이브)</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck17" name="service_cate">
-                                                            <label for="group07_ck17" class="label_txt">전자 계약</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck18" name="service_cate">
-                                                            <label for="group07_ck18" class="label_txt">전자 행정 서식</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck19" name="service_cate">
-                                                            <label for="group07_ck19" class="label_txt">차량 관리</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck20" name="service_cate">
-                                                            <label for="group07_ck20" class="label_txt">채용 · 인사 관리</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck21" name="service_cate">
-                                                            <label for="group07_ck21" class="label_txt">출입 관리</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck22" name="service_cate">
-                                                            <label for="group07_ck22" class="label_txt">협업</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck23" name="service_cate">
-                                                            <label for="group07_ck23" class="label_txt">화상</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck24" name="service_cate">
-                                                            <label for="group07_ck24" class="label_txt">AI · 챗봇</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck25" name="service_cate">
-                                                            <label for="group07_ck25" class="label_txt">IT 인프라 관리</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck26" name="service_cate">
-                                                            <label for="group07_ck26" class="label_txt">PaaS</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="checkbox" class="checkbox" id="group07_ck27" name="service_cate">
-                                                            <label for="group07_ck27" class="label_txt">기타</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wrap_filter group08">
-                                                <div class="wrap_group_name">
-                                                    <p>CSAP 인증 종류</p>
-                                                </div>
-                                                <div class="wrap_checkbox_group">
-                                                    <div class="wrap_radio">
-                                                        <div class="box_checkbox">
-                                                            <input type="radio" class="radio" id="group08_ck01" name="certificate_type">
-                                                            <label for="group08_ck01" class="label_txt">전체</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="radio" class="radio" id="group08_ck02" name="certificate_type">
-                                                            <label for="group08_ck02" class="label_txt">간편</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="radio" class="radio" id="group08_ck03" name="certificate_type">
-                                                            <label for="group08_ck03" class="label_txt">표준</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="wrap_filter group09">
-                                                <div class="wrap_group_name">
-                                                    <p>CSAP 인증 현황</p>
-                                                </div>
-                                                <div class="wrap_checkbox_group">
-                                                    <div class="wrap_radio">
-                                                        <div class="box_checkbox">
-                                                            <input type="radio" class="radio" id="group09_ck01" name="current_certificate">
-                                                            <label for="group09_ck01" class="label_txt">전체</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="radio" class="radio" id="group09_ck02" name="current_certificate">
-                                                            <label for="group09_ck02" class="label_txt">유지</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="radio" class="radio" id="group09_ck03" name="current_certificate">
-                                                            <label for="group09_ck03" class="label_txt">취소</label>
-                                                        </div>
-                                                        <div class="box_checkbox">
-                                                            <input type="radio" class="radio" id="group09_ck04" name="current_certificate">
-                                                            <label for="group09_ck04" class="label_txt">만료</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="wrap_selected_filter">
-                                            <div class="selected_filters">
-                                                <h3 class="selected_counter">선택된 필터 (<span>0</span>)</h3>
-                                                <ul class="list_selected_filters">
-                                                    <!-- <li class="item_selected_filter"></li>-->
-                                                </ul>
-                                                <button class="btn_clear_filter">초기화</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="wrap_btn">
-                                        <button type="submit" class="btn_submit">필터 적용</button>
-                                    </div>
-                                </div>
-
-                                <!-- 검색 결과 -->
-                                <div class="wrap_result_table wrap_result_card" data-aos="fade-up">
-
-                                    <!-- 테이블 상단 -->
-                                    <div class="box_table_top">
-                                        <div class="area_left">
-                                            <div class="result_num">
-                                                <p><span>18</span>개의 상품이 조회되었습니다</p>
-                                            </div>
-                                        </div>
-                                        <div class="area_right">
-                                            <div class="wrap_select count">
-                                                <p>항목 표시 개수</p>
-                                                <label for="select02" class="sr_only">항목 표시 개수 선택 목록 열기</label>
-                                                <select name="select02" id="select02" class="select_sort">
-                                                    <option value="" selected>10 개씩</option>
-                                                    <option value="">20 개씩</option>
-                                                    <option value="">30 개씩</option>
-                                                </select>
-                                            </div>
-                                            <div class="wrap_select array">
-                                                <p>정렬 기준</p>
-                                                <label for="select_array" class="sr_only">정렬 기준 선택 목록 열기</label>
-                                                <select name="select_" id="select_array" class="select_sort">
-                                                    <option value="" selected>인증최신순</option>
-                                                    <option value="">조회순 오름차순</option>
-                                                    <option value="">조회순 내림자순</option>
-                                                    <option value="">가나다 오름차순</option>
-                                                    <option value="">가나다 내림자순</option>
-                                                    <option value="">민간 SaaS 출시일 오름차순</option>
-                                                    <option value="">민간 SaaS 출시일 내림자순</option>
-                                                    <option value="">공공기관 이용 사례 개수 오름차순</option>
-                                                    <option value="">공공기관 이용 사례 개수 내림자순</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="box_table_contents">
-                                        <div class="product_card product_01"></div>
-                                        <div class="product_card product_02"></div>
-                                        <div class="product_card product_03"></div>
-                                        <div class="product_card product_04"></div>
-                                        <div class="product_card product_05"></div>
-                                        <div class="product_card product_06"></div>
-                                        <div class="product_card product_07"></div>
-                                        <div class="product_card product_08"></div>
-                                        <div class="product_card product_09"></div>
-                                        <div class="product_card product_10"></div>
-                                    </div>
-
-                                    <!-- pagenation -->
-                                    <div class="wrap_pagenation">
-                                        <ul class="pagination_list">
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor page_arrow first" title="이전"></a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor currently">1</a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">2</a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">3</a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">4</a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">5</a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">6</a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">7</a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">8</a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">9</a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor">10</a></li>
-                                            <li class="pagenation_item"><a href="javascript:;" target="_self" class="pagenation_anchor page_arrow next" title="다음"></a></li>
-                                        </ul>
-                                    </div>
-
-                                    <!-- 모바일 더보기 버튼 -->
-                                    <div class="btn_more_list">
-                                        <button type="button" class="">더보기</button>
-                                    </div>
-                                    <!-- 모바일 더보기 버튼 end -->
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                <div class="sch-form-wrap wrap_search_saas">
+                  <div class="search_saas_group select">
+                    <div class="form-tit">
+                      <label for="addr-input1">카테고리</label>
+                    </div>
+                    <div class="group_select_conts">
+                      <select id="input-select-category" class="krds-form-select medium">
+                        <option value="">전체</option>
+                        <option value="">항목1</option>
+                        <option value="">항목2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="search_saas_group input">
+                    <div class="form-tit">
+                      <label for="addr-input1">검색어</label>
+                    </div>
+                    <div class="group_input_conts">
+                      <div class="input-group m-column">
+                        <input type="text" class="krds-input medium" placeholder="검색어를 입력해주세요" title="검색어 입력"
+                          id="input-text-search">
+                        <button type="button" class="krds-btn medium primary"><i
+                            class="svg-icon ico-sch"></i>검색</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- 본문 end  -->
-            </section>
-            <!-- 본문 외부 영역 end-->
-        </main>
-        <!-- 전체 영역 end  -->
+              </div>
+            </div>
+            <!-- //검색 입력폼 -->
 
-        <footer id="footer" class="footer"></footer>
+            <!-- 검색 결과 -->
+            <div class="">
+              <!-- 검색 결과 : 리스트 상단 -->
+              <div class="search-list-top">
+                <ul class="sch-info" aria-live="polite">
+                  <li>총 <span class="point">18</span>건이 조회되었습니다.</li>
+                </ul>
+                <ul class="sch-sort">
+                  <li>
+                    <strong class="sort-label"><label for="search_result_count">목록 표시 개수</label></strong>
+                    <select class="krds-form-select-sort" id="search_result_count">
+                      <option>10개</option>
+                      <option>20개</option>
+                      <option>30개</option>
+                    </select>
+                  </li>
+                </ul>
+              </div>
+              <!-- //검색 결과 : 리스트 상단 -->
+
+              <!-- 검색 컨텐츠 영역 -->
+              <div class="search-between-conts">
+
+                <!-- 왼쪽영역 -->
+                <div class="aside">
+                  <dl class="filter-dl">
+                    <dt>검색 필터</dt>
+                    <dd>
+                      <ul class="filter-list krds-accordion type-line" data-type="multiOpen">
+                        <li class="li accordion-item active">
+                          <h3 class="accordion-header">
+                            <button type="button" class="btn-accordion">
+                              <div class="tit">연계공통기반 사용<span class="krds-badge bg-primary number">4</span>
+                              </div>
+                            </button>
+                          </h3>
+                          <div class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="krds-check-area chk-column">
+                                <div class="krds-form-check">
+                                  <input type="checkbox" id="filter_target_chk_1a">
+                                  <label for="filter_target_chk_1a">모바일 공무원증 (1)</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="checkbox" id="filter_target_chk_2a" checked>
+                                  <label for="filter_target_chk_2a">행정표준코드 (1)</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="checkbox" id="filter_target_chk_3a" checked>
+                                  <label for="filter_target_chk_3a">GPKI (1)</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="checkbox" id="filter_target_chk_4a" checked>
+                                  <label for="filter_target_chk_4a">자료 (18,201)</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="checkbox" id="filter_target_chk_5a">
+                                  <label for="filter_target_chk_5a">LDAP (1)</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="li accordion-item active">
+                          <h3 class="accordion-header">
+                            <button type="button" class="btn-accordion">
+                              <div class="tit">인증 기간<span class="krds-badge bg-primary number">1
+                                </span>
+                              </div>
+                            </button>
+                          </h3>
+                          <div class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="form-group">
+                                <div class="form-conts calendar-conts">
+                                  <ul class="input-group range">
+                                    <li>
+                                      <label for="datepicker1a" class="form-tit">시작날짜</label>
+                                      <input type="number" class="krds-input datepicker medium" id="datepicker1a"
+                                        placeholder="" value="20231002">
+                                    </li>
+                                    <li class="mark sm">-</li>
+                                    <li>
+                                      <label for="datepicker2a" class="form-tit">종료날짜</label>
+                                      <input type="number" class="krds-input datepicker medium date-end"
+                                        id="datepicker2a" placeholder="" value="20231202">
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="li accordion-item active">
+                          <h3 class="accordion-header">
+                            <button type="button" class="btn-accordion">
+                              <div class="tit">서비스 유형<span class="krds-badge bg-primary number">1
+                                </span>
+                              </div>
+                            </button>
+                          </h3>
+                          <div class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="form-group">
+                                <div class="form-conts">
+                                  <ul class="input-group range select">
+                                    <li>
+                                      <label for="input_select_serv" class="form-tit">서비스
+                                        유형</label>
+                                      <select id="input_select_serv" class="krds-form-select medium">
+                                        <!-- <option value="">전체</option> -->
+                                        <option value="" disabled selected hidden>서비스 유형을
+                                          선택해주세요</option>
+                                        <option value="select_serv_edu">교육</option>
+                                        <option value="select_serv_groupware">그룹웨어</option>
+                                        <option value="select_serv_library">도서 관리</option>
+                                        <option value="select_serv_mail">메일</option>
+                                        <option value="select_serv_document_manage">문서관리
+                                        </option>
+                                        <option value="select_serv_document_tool">문서작성 도구
+                                        </option>
+                                        <option value="select_serv_security">보안</option>
+                                        <option value="select_serv_welfare">복지</option>
+                                        <option value="select_serv_business_evaluation">사업
+                                          평가관리</option>
+                                        <option value="select_serv_consulting">상담</option>
+                                        <option value="select_serv_performance">성과관리
+                                        </option>
+                                        <option value="select_serv_facility">시설 관리</option>
+                                        <option value="select_serv_video_meeting">영상 회의
+                                        </option>
+                                        <option value="select_serv_medical">의료</option>
+                                        <option value="select_serv_hr">인사·채용 관리</option>
+                                        <option value="select_serv_storage">저장소</option>
+                                        <option value="select_serv_erp">전사적 자원관리(ERP)
+                                        </option>
+                                        <option value="select_serv_e_contract">전자계약</option>
+                                        <option value="select_serv_e_form">전자행정서식</option>
+                                        <option value="select_serv_vehicle">차량관리</option>
+                                        <option value="select_serv_startup">창업 지원</option>
+                                        <option value="select_serv_access">출입 관리</option>
+                                        <option value="select_serv_collaboration">협업 도구
+                                        </option>
+                                        <option value="select_serv_ai">AI</option>
+                                        <option value="select_serv_it_infra">IT 인프라 관리
+                                        </option>
+                                        <option value="select_serv_etc">기타</option>
+                                      </select>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="li accordion-item active">
+                          <h3 class="accordion-header">
+                            <button type="button" class="btn-accordion">
+                              <div class="tit">제공 기능</div>
+                            </button>
+                          </h3>
+                          <div class="accordion-collapse collapse">
+                            <p class="sub-txt">분류를 선택하시면 상세 기능이 표시됩니다.</p>
+                            <div class="accordion-body">
+                              <div class="form-group">
+                                <div class="form-conts">
+                                  <ul class="input-group range select">
+                                    <li>
+                                      <label for="filterSelectProvide" class="form-tit">분류</label>
+                                      <select id="filterSelectProvide" class="krds-form-select medium">
+                                        <option value="" disabled selected hidden>분류를 선택해주세요
+                                        </option>
+                                        <!-- <optgroup label="필터 그룹1"> -->
+                                        <option value="select_cls_cs">고객응대·자동응답</option>
+                                        <option value="select_cls_public">공공사업 발주·관리
+                                        </option>
+                                        <option value="select_cls_tour">관광</option>
+                                        <option value="select_cls_edu">교육</option>
+                                        <option value="select_cls_data">데이터 통계·분석</option>
+                                        <option value="select_cls_library">도서관리</option>
+                                        <option value="select_cls_media">방송·영상</option>
+                                        <option value="select_cls_security">보안</option>
+                                        <option value="select_cls_welfare">복지</option>
+                                        <option value="select_cls_estate">부동산</option>
+                                        <option value="select_cls_performance">성과관리</option>
+                                        <option value="select_cls_facility">시설관리·건설</option>
+                                        <option value="select_cls_hr">인사·채용 관리</option>
+                                        <!-- </optgroup>
+                                                                    <optgroup label="필터 그룹2"> -->
+                                        <option value="select_cls_contract">전자계약</option>
+                                        <option value="select_cls_light">조명 관제</option>
+                                        <option value="select_cls_map">지도·공간분석</option>
+                                        <option value="select_cls_content">콘텐츠 관리</option>
+                                        <option value="select_cls_meal">학교 급식</option>
+                                        <option value="select_cls_event">행사 운영</option>
+                                        <option value="select_cls_groupware">협업그룹웨어</option>
+                                        <option value="select_cls_video">화상</option>
+                                        <option value="select_cls_ai">AI</option>
+                                        <option value="select_cls_itsm">IT서비스관리</option>
+                                        <option value="select_cls_erp">ERP</option>
+                                        <option value="select_cls_etc">기타</option>
+                                        <!-- </optgroup> -->
+                                      </select>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordion-collapse collapse" id="filterDetailAccordion">
+                            <div class="accordion-body">
+                              <div class="form-group">
+                                <div class="form-conts">
+                                  <!-- accordion 안에 있어야 함 -->
+                                  <label class="form-tit">상세 기능</label>
+                                  <ul class="input-group">
+                                    <li>
+                                      <div class="krds-check-area chk-column" id="filterDetailCheck">
+                                      </div>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="li accordion-item active">
+                          <h3 class="accordion-header">
+                            <button type="button" class="btn-accordion">
+                              <div class="tit">CSAP 인증 종류</span>
+                              </div>
+                            </button>
+                          </h3>
+                          <div class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="row krds-check-area chk-column">
+                                <div class="krds-form-check">
+                                  <input type="radio" id="filter_kind_rdo_all" name="filter_kind">
+                                  <label for="filter_kind_rdo_all">전체</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="radio" id="filter_kind_rdo_1a" name="filter_kind">
+                                  <label for="filter_kind_rdo_1a">간편</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="radio" id="filter_kind_rdo_2a" name="filter_kind">
+                                  <label for="filter_kind_rdo_2a">표준</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="li accordion-item active">
+                          <h3 class="accordion-header">
+                            <button type="button" class="btn-accordion">
+                              <div class="tit">CSAP 인증 현황</span>
+                              </div>
+                            </button>
+                          </h3>
+                          <div class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="row krds-check-area chk-column">
+                                <div class="krds-form-check">
+                                  <input type="radio" id="filter_current_rdo_all" name="filter_current">
+                                  <label for="filter_current_rdo_all">전체</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="radio" id="filter_current_rdo_1a" name="filter_current">
+                                  <label for="filter_current_rdo_1a">유지</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="radio" id="filter_current_rdo_2a" name="filter_current">
+                                  <label for="filter_current_rdo_2a">취소</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="radio" id="filter_current_rdo_3a" name="filter_current">
+                                  <label for="filter_current_rdo_3a">만료</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="li accordion-item active">
+                          <h3 class="accordion-header">
+                            <button type="button" class="btn-accordion">
+                              <div class="tit">민간 클라우드 컴퓨팅 서비스 도입 가능 여부</span>
+                              </div>
+                            </button>
+                          </h3>
+                          <div class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <div class="row krds-check-area chk-column">
+                                <div class="krds-form-check">
+                                  <input type="radio" id="filter_cloud_rdo_all" name="filter_cloud">
+                                  <label for="filter_cloud_rdo_all">전체</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="radio" id="filter_cloud_rdo_1a" name="filter_cloud">
+                                  <label for="filter_cloud_rdo_1a">가능</label>
+                                </div>
+                                <div class="krds-form-check">
+                                  <input type="radio" id="filter_cloud_rdo_2a" name="filter_cloud">
+                                  <label for="filter_cloud_rdo_2a">불가능</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                  <div class="filter-btn">
+                    <button type="button" class="krds-btn medium tertiary" id="filterResetBtn">초기화</button>
+                    <button type="button" class="krds-btn medium primary">적용하기</button>
+                  </div>
+                </div>
+                <!-- //왼쪽영역 -->
+
+                <!-- 검색 결과 -->
+                <div class="contents">
+
+                  <!-- 적용된 필터 박스 -->
+                  <dl class="filter-chip">
+                    <dt>적용된 고급검색 조건 <span class="num">6</span></dt>
+                    <dd>
+                      <button type="button" class="krds-btn xlarge icon border btn_chip_refresh">
+                        <span class="sr-only">새로고침</span>
+                        <i class="svg-icon ico-refresh"></i>
+                      </button>
+                      <div class="chip-wrap krds-tag-wrap large">
+                        <span class="krds-btn-tag">
+                          행정표준코드
+                          <button type="button" class="btn-delete">
+                            <span class="sr-only">삭제</span>
+                          </button>
+                        </span>
+                        <span class="krds-btn-tag">
+                          GPKI
+                          <button type="button" class="btn-delete">
+                            <span class="sr-only">삭제</span>
+                          </button>
+                        </span>
+                        <span class="krds-btn-tag">
+                          자료
+                          <button type="button" class="btn-delete">
+                            <span class="sr-only">삭제</span>
+                          </button>
+                        </span>
+                        <span class="krds-btn-tag">
+                          인증 종류: 전체
+                          <button type="button" class="btn-delete">
+                            <span class="sr-only">삭제</span>
+                          </button>
+                        </span>
+                        <span class="krds-btn-tag">
+                          인증 현황: 유지
+                          <button type="button" class="btn-delete">
+                            <span class="sr-only">삭제</span>
+                          </button>
+                        </span>
+                        <span class="krds-btn-tag">
+                          서비스 도입 가능 여부: 전체
+                          <button type="button" class="btn-delete">
+                            <span class="sr-only">삭제</span>
+                          </button>
+                        </span>
+                      </div>
+                    </dd>
+                  </dl>
+                  <!-- //적용된 필터 박스 -->
+
+                  <!-- 리스트 상단 -->
+                  <div class="search-list-top border">
+                    <ul class="sch-info" aria-live="polite">
+                      <li>총 <span class="point">20</span>개의 상품</li>
+                    </ul>
+                    <ul class="sch-sort">
+                      <li class="m-hide">
+                        <strong class="sort-label"><label for="search_result_count1">목록 표시
+                            개수</label></strong>
+                        <select class="krds-form-select-sort" id="search_result_count1">
+                          <option>10개</option>
+                          <option>9개</option>
+                        </select>
+                      </li>
+                      <li class="w-hide">
+                        <div class="m-sort-btn">
+                          <button type="button" class="krds-btn large text ico-filter open-modal"
+                            data-target="popFilterId">
+                            <span class="span">필터</span>
+                            <span class="krds-badge bg-primary number">6</span>
+                            <i class="svg-icon ico-filter"></i>
+                          </button>
+                        </div>
+                      </li>
+                      <li>
+                        <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                        <div class="w-sort-btn">
+                          <button type="button" class="active">관련도순</button>
+                          <button type="button">최신순</button>
+                          <button type="button">인기순</button>
+                        </div>
+                        <div class="m-sort-btn">
+                          <select class="krds-form-select-sort" id="sort1">
+                            <option>관련도순</option>
+                            <option>최신순</option>
+                            <option>인기순</option>
+                          </select>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- //리스트 상단 -->
+
+                  <!-- 검색 결과 -->
+                  <div class="krds-tab-area layer">
+                    <!-- 리스트 -->
+                    <!-- 구조화 목록 -->
+                    <ul class="total-search-list product_list krds-structured-list type-full">
+                      <!-- custom-saas.js 에서 호출 -->
+                      <li class="structured-item product_card product_01"></li>
+                      <li class="structured-item product_card product_02"></li>
+                      <li class="structured-item product_card product_03"></li>
+                      <li class="structured-item product_card product_04"></li>
+                      <li class="structured-item product_card product_05"></li>
+                      <li class="structured-item product_card product_06"></li>
+                      <li class="structured-item product_card product_07"></li>
+                      <li class="structured-item product_card product_08"></li>
+                      <li class="structured-item product_card product_09"></li>
+                      <li class="structured-item product_card product_10"></li>
+                    </ul>
+                    <!-- 구조화 목록 -->
+
+                    <!-- <li class="total-search-item">
+                                    <p class="info-top">
+                                        <span class="krds-badge bg-light-primary">메뉴</span>
+                                        <span class="i-date">2023.11.01</span>
+                                    </p>
+                                    <div class="info-body">
+                                        <a href="#">
+                                            <p class="tit w-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+                                            <div class="in">
+                                                <div class="text">
+                                                    <p class="tit m-hide">나의 <span class="keyword">퇴직</span>금 계산해 보기</p>
+                                                    <p class="txt">
+                                                        <span class="keyword">퇴직</span>급여는 근로자가 상당한 기간을 근속하고
+                                                        <span class="keyword">퇴직</span>할 경우 지급되는 연금 또는 일시금입니다.
+                                                        나의 <span class="keyword">퇴직</span>금 계산해 보기로 본인의
+                                                        <span class="keyword">퇴직</span>급여를 미리 계산해 볼 수 있습니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="info-btm">
+                                        <a href="https://labor.moel.go.kr/cmmt/calRtrmnt.do" target="_blank"
+                                            title="새 창 열기" class="krds-btn medium link basic"><span
+                                                class="underline">https://labor.moel.go.kr/cmmt/calRtrmnt.do</span> <i
+                                                class="svg-icon ico-go"></i></a>
+                                    </div>
+                                </li> -->
+
+                    </ul>
+                    <!-- //리스트 -->
+
+                  </div>
+                  <!-- //검색 결과 -->
+
+                </div>
+                <!-- //검색 결과 -->
+              </div>
+              <!-- //검색 컨텐츠 영역 -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //컨텐츠 영역 -->
     </div>
-
-    <script>
-        AOS.init();
-    </script>
-    <a href="" class="" target="_blank" title="새 창 열림-사이트로 이동"></a>
-    <a href="javascript:;" target="_blank" class="link_service_anchor" title="새 창 열림 - 공식 홈페이지로 이동"></a>
-    <!-- <script>
-			$(document).ready(function () {
-					$(".checkbox").change(function () {
-							const selectedId = $(this).attr("id");
-							const selectedLabel = $(`label[for="${selectedId}"]`).text();
-	
-							if ($(this).is(":checked")) {
-									if ($(`.selected_filters ul li[data-id="${selectedId}"]`).length === 0) {
-											$(".selected_filters ul").append(
-													`<li data-id="${selectedId}">${selectedLabel} <button class="btn_remove_filter" data-id="${selectedId}">x</button></li>`
-											);
-									}
-							} else {
-									$(`.selected_filters ul li[data-id="${selectedId}"]`).remove();
-							}
-					});
-	
-					$(".selected_filters").on("click", ".btn_remove_filter", function () {
-							const id = $(this).data("id");
-							$(`#${id}`).prop("checked", false);
-							$(this).parent().remove();
-					});
-	
-					$(".btn_clear_filter").click(function () {
-							$(".checkbox").prop("checked", false);
-							$(".selected_filters ul").empty();
-					});
-			}); -->
-    <!-- </script>-->
-
-    <!-- <script>
-    $(document).ready(function () {
-        function updateFilterCount() {
-            const count = $(".selected_filters ul li").length;
-            $(".selected_filters h3 span").text(count);
-        }
-
-        $(".checkbox").change(function () {
-            const selectedId = $(this).attr("id");
-            const selectedLabel = $(`label[for="${selectedId}"]`).text();
-
-            if ($(this).is(":checked")) {
-                if ($(`.selected_filters ul li[data-id="${selectedId}"]`).length === 0) {
-                    $(".selected_filters ul").append(
-                        `<li data-id="${selectedId}">${selectedLabel} <button class="btn_remove_filter" data-id="${selectedId}">x</button></li>`
-                    );
-                }
-            } else {
-                $(`.selected_filters ul li[data-id="${selectedId}"]`).remove();
-            }
-
-            updateFilterCount();
-        });
-
-        $(".selected_filters").on("click", ".btn_remove_filter", function () {
-            const id = $(this).data("id");
-            $(`#${id}`).prop("checked", false);
-            $(this).parent().remove();
-            updateFilterCount();
-        });
-
-        $(".btn_clear_filter").click(function () {
-            $(".checkbox").prop("checked", false);
-            $(".selected_filters ul").empty();
-            updateFilterCount();
-        });
-
-				$(".btn_toggle").click(function () {
-            $(".wrap_radio").slideToggle();
-        });
-    });
-</script>-->
-
-    <!-- <script>
-	$(document).ready(function () {
-			function updateFilterCount() {
-					const count = $(".list_selected_filters .item_selected_filter").length;
-					$(".selected_filters h3 span").text(count);
-			}
-
-			$(".checkbox").change(function () {
-					const selectedId = $(this).attr("id");
-					const selectedLabel = $(`label[for="${selectedId}"]`).text();
-
-					if ($(this).is(":checked")) {
-							if ($(`.list_selected_filters .item_selected_filter[data-id="${selectedId}"]`).length === 0) {
-									$(".list_selected_filters").append(
-											`<li class="item_selected_filter" data-id="${selectedId}">${selectedLabel} <button class="btn_remove_filter" data-id="${selectedId}"></button></li>`
-									);
-							}
-					} else {
-							$(`.list_selected_filters .item_selected_filter[data-id="${selectedId}"]`).remove();
-					}
-
-					updateFilterCount();
-			});
-
-			$(".list_selected_filters").on("click", ".btn_remove_filter", function () {
-					const id = $(this).data("id");
-					$(`#${id}`).prop("checked", false);
-					$(this).parent().remove();
-					updateFilterCount();
-			});
-
-			$(".btn_clear_filter").click(function () {
-					$(".checkbox").prop("checked", false);
-					$(".list_selected_filters").empty();
-					updateFilterCount();
-			});
-
-			$(".btn_toggle").click(function () {
-					$(".wrap_radio").slideToggle();
-			});
-	}); -->
-    <!-- </script>-->
-
-
-    <script>
-        $(document).ready(function() {
-            function updateFilterCount() {
-                const count = $(".list_selected_filters .item_selected_filter").length;
-                $(".selected_filters h3 span").text(count);
-            }
-
-            $(".checkbox").change(function() {
-                const selectedId = $(this).attr("id");
-                const selectedLabel = $(`label[for="${selectedId}"]`).text();
-
-                if ($(this).is(":checked")) {
-                    if ($(`.list_selected_filters .item_selected_filter[data-id="${selectedId}"]`).length === 0) {
-                        $(".list_selected_filters").append(
-                            `<li class="item_selected_filter" data-id="${selectedId}">${selectedLabel} <button class="btn_remove_filter" data-id="${selectedId}"></button></li>`
-                        );
-                    }
-                } else {
-                    $(`.list_selected_filters .item_selected_filter[data-id="${selectedId}"]`).remove();
-                }
-
-                updateFilterCount();
-            });
-
-            $(".list_selected_filters").on("click", ".btn_remove_filter", function() {
-                const id = $(this).data("id");
-                $(`#${id}`).prop("checked", false);
-                $(this).parent().remove();
-                updateFilterCount();
-            });
-
-            $(".btn_clear_filter").click(function() {
-                $(".checkbox").prop("checked", false);
-                $(".list_selected_filters").empty();
-                updateFilterCount();
-            });
-
-            $(".btn_toggle").click(function() {
-                $(".wrap_filter_group").slideToggle();
-            });
-
-            $('.mob_srch_filter_btn button').on('click', function(){
-                $('.wrap_search_service').show();
-            });
-            $('.wrap_srch_close').on('click', function(){
-                $('.wrap_search_service').hide();
-            });
-
-            const myWinW = $(window).width();
-            if (myWinW >= 1024) {
-                $('.wrap_search_service').show();
-            } else {
-                $('.wrap_search_service').hide();
-                $('.page_saas_search .wrap_filter_group').css({
-                    'display':'block'
-                });
-            }
-
-            $(window).on('resize', function(){
-                const myWinW = $(window).width();
-                if (myWinW >= 1024) {
-                    $('.wrap_search_service').show();
-                } else {
-                    $('.wrap_search_service').hide();
-                    $('.page_saas_search .wrap_filter_group').css({
-                        'display':'block'
-                    });
-                }
-            });
-        });
-    </script>
+    <!-- //컨테이너 영역 -->
+  </div>
 
 </body>
+
+<script>
+    // /* 필터 체크박스 전체 클릭 시 */
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // 모든 체크박스 그룹 순회
+        document.querySelectorAll('.krds-check-area').forEach(group => {
+            const allChk = group.querySelector('input[type="checkbox"][id$="_chk_all"]');
+            const itemChks = group.querySelectorAll(
+                'input[type="checkbox"]:not([id$="_chk_all"])'
+            );
+
+            if (!allChk || itemChks.length === 0) return;
+
+            // 전체 클릭 → 하위 전체 제어
+            allChk.addEventListener('change', () => {
+                itemChks.forEach(chk => chk.checked = allChk.checked);
+            });
+
+            // 하위 변경 → 전체 상태 반영
+            itemChks.forEach(chk => {
+                chk.addEventListener('change', () => {
+                    const isAllChecked = [...itemChks].every(item => item.checked);
+                    allChk.checked = isAllChecked;
+                });
+            });
+        });
+    });
+
+
+    // /* 분류를 선택하시면 상세 기능이 표시됩니다. */
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterSelectBox = document.getElementById('filterSelectProvide');
+        const filterDetailCheck = document.getElementById('filterDetailCheck');
+        const filterDetailAccordion = document.getElementById('filterDetailAccordion');
+        const filterAccordionBody = filterDetailAccordion?.querySelector('.accordion-body');
+
+        // 초기 상태 (선택 전)
+        if (filterDetailAccordion) filterDetailAccordion.style.display = 'none';
+        if (filterAccordionBody) filterAccordionBody.style.display = 'none';
+
+        filterSelectBox.addEventListener('change', () => {
+            const filterSelectBoxValue = filterSelectBox.value;
+
+            // 분류 선택 전
+            if (!filterSelectBoxValue) {
+                if (filterDetailAccordion) filterDetailAccordion.style.display = 'none';
+                if (filterAccordionBody) filterAccordionBody.style.display = 'none';
+                filterDetailCheck.innerHTML = '';
+                return;
+            }
+
+            // 분류 선택 후
+            if (filterDetailAccordion) filterDetailAccordion.style.display = 'block';
+            if (filterAccordionBody) filterAccordionBody.style.display = 'block';
+            renderDetailCheckbox(filterSelectBoxValue);
+        });
+
+
+        const checkboxData = {
+
+            select_cls_cs: [{
+                    id: 'cs_1',
+                    label: '보이스봇'
+                },
+                {
+                    id: 'cs_2',
+                    label: '챗봇'
+                },
+                {
+                    id: 'cs_3',
+                    label: '콜봇'
+                },
+                {
+                    id: 'cs_4',
+                    label: 'AI 기반 컨택센터'
+                },
+                {
+                    id: 'cs_5',
+                    label: 'AI 상담'
+                }
+            ],
+
+            select_cls_public: [{
+                    id: 'public_1',
+                    label: '관심기업관리'
+                },
+                {
+                    id: 'public_2',
+                    label: '지원사업 관리'
+                },
+                {
+                    id: 'public_3',
+                    label: '지원사업 검색'
+                },
+                {
+                    id: 'public_4',
+                    label: '지원사업 매칭'
+                },
+                {
+                    id: 'public_5',
+                    label: '평가관리시스템'
+                },
+                {
+                    id: 'public_6',
+                    label: 'GAIA 시스템 관리'
+                },
+                {
+                    id: 'public_7',
+                    label: 'PCES 시스템 관리'
+                }
+            ],
+
+            select_cls_tour: [{
+                    id: 'tour_1',
+                    label: '관광객 데이터 분석'
+                },
+                {
+                    id: 'tour_2',
+                    label: '관광정보 솔루션'
+                },
+                {
+                    id: 'tour_3',
+                    label: '디지털 전시 기능'
+                },
+                {
+                    id: 'tour_4',
+                    label: '예약결제 솔루션'
+                },
+                {
+                    id: 'tour_5',
+                    label: '지역관광분석'
+                },
+                {
+                    id: 'tour_6',
+                    label: '지역관광 솔루션'
+                },
+                {
+                    id: 'tour_7',
+                    label: '커뮤니티'
+                }
+            ],
+
+            select_cls_edu: [{
+                    id: 'edu_1',
+                    label: '본인 인증'
+                },
+                {
+                    id: 'edu_2',
+                    label: '온라인교육'
+                },
+                {
+                    id: 'edu_3',
+                    label: '이수증 관리'
+                },
+                {
+                    id: 'edu_4',
+                    label: '전자 출결'
+                },
+                {
+                    id: 'edu_5',
+                    label: '전자 통지'
+                },
+                {
+                    id: 'edu_6',
+                    label: '출결관리'
+                },
+                {
+                    id: 'edu_7',
+                    label: '콘텐츠 저작'
+                },
+                {
+                    id: 'edu_8',
+                    label: 'AI 기반 학습 관리'
+                },
+                {
+                    id: 'edu_9',
+                    label: 'AI 보조교사'
+                },
+                {
+                    id: 'edu_10',
+                    label: 'AI 튜터링'
+                },
+                {
+                    id: 'edu_11',
+                    label: 'LMS'
+                }
+            ],
+
+            select_cls_data: [{
+                    id: 'data_1',
+                    label: '개인화 메시징'
+                },
+                {
+                    id: 'data_2',
+                    label: '고객 여정 분석'
+                },
+                {
+                    id: 'data_3',
+                    label: '기능 플래그'
+                },
+                {
+                    id: 'data_4',
+                    label: '데이터 분석'
+                },
+                {
+                    id: 'data_5',
+                    label: '데이터 수집'
+                },
+                {
+                    id: 'data_6',
+                    label: '빅데이터 분석'
+                },
+                {
+                    id: 'data_7',
+                    label: '설문'
+                },
+                {
+                    id: 'data_8',
+                    label: '홈페이지 분석'
+                },
+                {
+                    id: 'data_9',
+                    label: 'AB 테스트'
+                },
+                {
+                    id: 'data_10',
+                    label: 'AI 상품 추천'
+                },
+                {
+                    id: 'data_11',
+                    label: 'CRM'
+                }
+            ],
+
+            select_cls_library: [{
+                    id: 'library_1',
+                    label: '대출반납'
+                },
+                {
+                    id: 'library_2',
+                    label: '도서관리'
+                },
+                {
+                    id: 'library_3',
+                    label: '도서관서비스'
+                },
+                {
+                    id: 'library_4',
+                    label: '소장자료검색'
+                },
+                {
+                    id: 'library_5',
+                    label: '열람 관리'
+                },
+                {
+                    id: 'library_6',
+                    label: '이용자관리'
+                }
+            ],
+
+            select_cls_media: [{
+                    id: 'media_1',
+                    label: '동영상관리'
+                },
+                {
+                    id: 'media_2',
+                    label: '동영상편집'
+                },
+                {
+                    id: 'media_3',
+                    label: '방송관리'
+                },
+                {
+                    id: 'media_4',
+                    label: '방송 운영'
+                },
+                {
+                    id: 'media_5',
+                    label: '이미지관리'
+                },
+                {
+                    id: 'media_6',
+                    label: '판매 관리 시스템'
+                },
+                {
+                    id: 'media_7',
+                    label: 'AI 영상제작'
+                }
+            ],
+
+            select_cls_security: [{
+                    id: 'security_1',
+                    label: '네트워크'
+                },
+                {
+                    id: 'security_2',
+                    label: '보안'
+                },
+                {
+                    id: 'security_3',
+                    label: '취약점 진단'
+                },
+                {
+                    id: 'security_4',
+                    label: '파일시스템 암호화'
+                },
+                {
+                    id: 'security_5',
+                    label: 'DB 암호화'
+                },
+                {
+                    id: 'security_6',
+                    label: 'DLP'
+                }
+            ],
+
+            select_cls_welfare: [{
+                    id: 'welfare_1',
+                    label: '교통서비스'
+                },
+                {
+                    id: 'welfare_2',
+                    label: '수어번역'
+                },
+                {
+                    id: 'welfare_3',
+                    label: '예약 문자'
+                },
+                {
+                    id: 'welfare_4',
+                    label: '이재민 관리'
+                },
+                {
+                    id: 'welfare_5',
+                    label: '진료기록등록'
+                },
+                {
+                    id: 'welfare_6',
+                    label: '차량 배차'
+                },
+                {
+                    id: 'welfare_7',
+                    label: '통합복지서비스'
+                }
+            ],
+
+            select_cls_estate: [{
+                    id: 'estate_1',
+                    label: '부동산'
+                },
+                {
+                    id: 'estate_2',
+                    label: '부동산 관리'
+                },
+                {
+                    id: 'estate_3',
+                    label: '수납'
+                },
+                {
+                    id: 'estate_4',
+                    label: '위탁운영'
+                },
+                {
+                    id: 'estate_5',
+                    label: '임대관리'
+                },
+                {
+                    id: 'estate_6',
+                    label: '임대관리 서비스'
+                },
+                {
+                    id: 'estate_7',
+                    label: '임대료 청구'
+                },
+                {
+                    id: 'estate_8',
+                    label: '자산관리'
+                },
+                {
+                    id: 'estate_9',
+                    label: '청구'
+                }
+            ],
+
+            select_cls_performance: [{
+                    id: 'performance_1',
+                    label: '개인업적평가'
+                },
+                {
+                    id: 'performance_2',
+                    label: '개인역량평가'
+                },
+                {
+                    id: 'performance_3',
+                    label: '경영평가관리'
+                },
+                {
+                    id: 'performance_4',
+                    label: '성과모니터링'
+                },
+                {
+                    id: 'performance_5',
+                    label: '조직성과관리'
+                },
+                {
+                    id: 'performance_6',
+                    label: '직무관리'
+                }
+            ],
+
+            select_cls_facility: [{
+                    id: 'facility_1',
+                    label: '보고서관리'
+                },
+                {
+                    id: 'facility_2',
+                    label: '시설관리'
+                },
+                {
+                    id: 'facility_3',
+                    label: '안전관리'
+                },
+                {
+                    id: 'facility_4',
+                    label: '자재 및 자원 관리'
+                },
+                {
+                    id: 'facility_5',
+                    label: '점검 통계'
+                },
+                {
+                    id: 'facility_6',
+                    label: 'GAIA 시스템 관리'
+                },
+                {
+                    id: 'facility_7',
+                    label: 'PCES 시스템 관리'
+                },
+                {
+                    id: 'facility_8',
+                    label: 'QR'
+                }
+            ],
+
+            select_cls_hr: [{
+                id: 'hr_1',
+                label: 'AI 기반 채용 관리'
+            }],
+
+            //??
+
+            select_cls_contract: [{
+                    id: 'contract_1',
+                    label: '문서관리'
+                },
+                {
+                    id: 'contract_2',
+                    label: '비대면계약'
+                },
+                {
+                    id: 'contract_3',
+                    label: '전자계약'
+                },
+                {
+                    id: 'contract_4',
+                    label: '전자근로계약'
+                },
+                {
+                    id: 'contract_5',
+                    label: '전자민원'
+                },
+                {
+                    id: 'contract_6',
+                    label: '전자서명'
+                },
+                {
+                    id: 'contract_7',
+                    label: '전자서식'
+                },
+                {
+                    id: 'contract_8',
+                    label: '회원관리'
+                }
+            ],
+
+            select_cls_light: [{
+                    id: 'light_1',
+                    label: '긴급 알림'
+                },
+                {
+                    id: 'light_2',
+                    label: '밝기 제어'
+                },
+                {
+                    id: 'light_3',
+                    label: '스마트 공공조명'
+                },
+                {
+                    id: 'light_4',
+                    label: '스케줄 관리'
+                },
+                {
+                    id: 'light_5',
+                    label: '전원 제어'
+                }
+            ],
+
+            select_cls_map: [{
+                    id: 'map_1',
+                    label: '공간 분석'
+                },
+                {
+                    id: 'map_2',
+                    label: '데이터 가시화'
+                },
+                {
+                    id: 'map_3',
+                    label: '앱마켓 플레이스'
+                },
+                {
+                    id: 'map_4',
+                    label: '지도 기능'
+                },
+                {
+                    id: 'map_5',
+                    label: '지도제작'
+                }
+            ],
+
+            select_cls_content: [{
+                    id: 'content_1',
+                    label: '도서관리'
+                },
+                {
+                    id: 'content_2',
+                    label: '디지털 아카이브'
+                },
+                {
+                    id: 'content_3',
+                    label: '미디어 자료관리'
+                },
+                {
+                    id: 'content_4',
+                    label: '소장자료검색'
+                },
+                {
+                    id: 'content_5',
+                    label: '컨텐츠 관리'
+                }
+            ],
+
+            select_cls_meal: [{
+                    id: 'meal_1',
+                    label: '학교급식'
+                },
+                {
+                    id: 'meal_2',
+                    label: '학교급식안전관리시스템'
+                },
+                {
+                    id: 'meal_3',
+                    label: '학교급식위생관리시스템'
+                },
+                {
+                    id: 'meal_4',
+                    label: 'HACCP관리'
+                }
+            ],
+
+            select_cls_event: [{
+                    id: 'event_1',
+                    label: '비즈매칭 솔루션'
+                },
+                {
+                    id: 'event_2',
+                    label: '행사 성과 관리'
+                },
+                {
+                    id: 'event_3',
+                    label: '행사 업무 DX'
+                },
+                {
+                    id: 'event_4',
+                    label: '행사 웹사이트 제작'
+                },
+                {
+                    id: 'event_5',
+                    label: '행사 참가자 관리'
+                }
+            ],
+
+            select_cls_groupware: [{
+                    id: 'group_1',
+                    label: '게시판'
+                },
+                {
+                    id: 'group_2',
+                    label: '뉴스피드'
+                },
+                {
+                    id: 'group_3',
+                    label: '드라이브'
+                },
+                {
+                    id: 'group_4',
+                    label: '메신저'
+                },
+                {
+                    id: 'group_5',
+                    label: '메일'
+                },
+                {
+                    id: 'group_6',
+                    label: '멤버 관리'
+                },
+                {
+                    id: 'group_7',
+                    label: '아카이빙'
+                },
+                {
+                    id: 'group_8',
+                    label: '웹오피스'
+                },
+                {
+                    id: 'group_9',
+                    label: '업무관리'
+                },
+                {
+                    id: 'group_10',
+                    label: '일정관리'
+                },
+                {
+                    id: 'group_11',
+                    label: '자동화'
+                },
+                {
+                    id: 'group_12',
+                    label: '자원관리'
+                },
+                {
+                    id: 'group_13',
+                    label: '전자결재'
+                },
+                {
+                    id: 'group_14',
+                    label: '전자설문'
+                },
+                {
+                    id: 'group_15',
+                    label: '정보 공유'
+                },
+                {
+                    id: 'group_16',
+                    label: '주소록'
+                },
+                {
+                    id: 'group_17',
+                    label: '캘린더'
+                },
+                {
+                    id: 'group_18',
+                    label: '설문'
+                },
+                {
+                    id: 'group_19',
+                    label: '포털'
+                },
+                {
+                    id: 'group_20',
+                    label: '협업'
+                },
+                {
+                    id: 'group_21',
+                    label: '화상회의'
+                }
+            ],
+
+            select_cls_video: [{
+                    id: 'video_1',
+                    label: '영상상담'
+                },
+                {
+                    id: 'video_2',
+                    label: '영상중계'
+                },
+                {
+                    id: 'video_3',
+                    label: '원격상담'
+                },
+                {
+                    id: 'video_4',
+                    label: '화상 서비스'
+                },
+                {
+                    id: 'video_5',
+                    label: '화상회의'
+                }
+            ],
+
+            select_cls_ai: [{
+                    id: 'ai_1',
+                    label: '데이터 수집'
+                },
+                {
+                    id: 'ai_2',
+                    label: 'AI 기반 채용 관리'
+                },
+                {
+                    id: 'ai_3',
+                    label: 'AI 기반 컨택센터'
+                },
+                {
+                    id: 'ai_4',
+                    label: 'AI 기반 학습 관리'
+                },
+                {
+                    id: 'ai_5',
+                    label: 'AI 보조교사'
+                },
+                {
+                    id: 'ai_6',
+                    label: 'AI 상담'
+                },
+                {
+                    id: 'ai_7',
+                    label: 'AI 상품 추천'
+                },
+                {
+                    id: 'ai_8',
+                    label: 'AI 영상 분석'
+                },
+                {
+                    id: 'ai_9',
+                    label: 'AI 튜터링'
+                },
+                {
+                    id: 'ai_10',
+                    label: 'MLOps'
+                }
+            ],
+
+            select_cls_itsm: [{
+                    id: 'it_1',
+                    label: '공공 SaaS 통합모니터링'
+                },
+                {
+                    id: 'it_2',
+                    label: '모니터링'
+                },
+                {
+                    id: 'it_3',
+                    label: '서비스 만족도 지수 제공'
+                },
+                {
+                    id: 'it_4',
+                    label: '실시간 예측'
+                },
+                {
+                    id: 'it_5',
+                    label: '장애관리'
+                },
+                {
+                    id: 'it_6',
+                    label: 'IT서비스관리'
+                },
+                {
+                    id: 'it_7',
+                    label: 'ITAM'
+                },
+                {
+                    id: 'it_8',
+                    label: 'ITOM'
+                },
+                {
+                    id: 'it_9',
+                    label: 'ITSM'
+                },
+                {
+                    id: 'it_10',
+                    label: 'SLA관리'
+                },
+                {
+                    id: 'it_11',
+                    label: 'SLA 모니터링'
+                },
+                {
+                    id: 'it_12',
+                    label: 'WAS 장애 분석도구 제공'
+                }
+            ],
+
+            select_cls_erp: [{
+                    id: 'erp_1',
+                    label: '결재관리'
+                },
+                {
+                    id: 'erp_2',
+                    label: '경영관리'
+                },
+                {
+                    id: 'erp_3',
+                    label: '계약관리'
+                },
+                {
+                    id: 'erp_4',
+                    label: '급여관리'
+                },
+                {
+                    id: 'erp_5',
+                    label: '복무관리'
+                },
+                {
+                    id: 'erp_6',
+                    label: '시스템관리'
+                },
+                {
+                    id: 'erp_7',
+                    label: '예산관리'
+                },
+                {
+                    id: 'erp_8',
+                    label: '인사관리'
+                },
+                {
+                    id: 'erp_9',
+                    label: '자원관리'
+                },
+                {
+                    id: 'erp_10',
+                    label: '재무회계'
+                },
+                {
+                    id: 'erp_11',
+                    label: '출장 및 여비 관리 시스템'
+                },
+                {
+                    id: 'erp_12',
+                    label: '회계결산'
+                }
+            ],
+
+            select_cls_etc: [{
+                    id: 'etc_1',
+                    label: '개인화서비스'
+                },
+                {
+                    id: 'etc_2',
+                    label: '근로자 관리'
+                },
+                {
+                    id: 'etc_3',
+                    label: '근로자 평가관리'
+                },
+                {
+                    id: 'etc_4',
+                    label: '데이터 품질진단'
+                },
+                {
+                    id: 'etc_5',
+                    label: '방문객 사전예약'
+                },
+                {
+                    id: 'etc_6',
+                    label: '신고센터'
+                },
+                {
+                    id: 'etc_7',
+                    label: '신고 접수'
+                },
+                {
+                    id: 'etc_8',
+                    label: '신호 처리'
+                },
+                {
+                    id: 'etc_9',
+                    label: '연구 통계'
+                },
+                {
+                    id: 'etc_10',
+                    label: '파일뷰어'
+                }
+            ]
+        };
+
+
+        function renderCheckbox(list) {
+            filterDetailCheck.innerHTML = '';
+
+            list.forEach(item => {
+                const wrap = document.createElement('div');
+                wrap.className = 'krds-form-check';
+
+                const input = document.createElement('input');
+                input.type = 'checkbox';
+                input.id = item.id;
+
+                const label = document.createElement('label');
+                label.setAttribute('for', item.id);
+                label.textContent = item.label;
+
+                wrap.appendChild(input);
+                wrap.appendChild(label);
+                filterDetailCheck.appendChild(wrap);
+            });
+        }
+
+        filterSelectBox.addEventListener('change', () => {
+            const filterSelectValue = filterSelectBox.value;
+            let result = [];
+
+            // 초기화
+            filterDetailAccordion.classList.remove('show');
+
+            // 전체 선택
+            if (filterSelectValue === '') {
+                Object.values(checkboxData).forEach(arr => {
+                    result = result.concat(arr);
+                });
+            }
+            // 특정 분류
+            else if (checkboxData[filterSelectValue]) {
+                result = checkboxData[filterSelectValue];
+            }
+
+            if (result.length === 0) return;
+
+            renderCheckbox(result);
+            filterDetailAccordion.classList.add('show');
+        });
+
+        // 페이지 진입 시 기본값이 전체라면 바로 실행
+        filterSelectBox.dispatchEvent(new Event('change'));
+    });
+// 좌측 필터 하단 전체 초기화 버튼
+const filterResetBtn = document.getElementById('filterResetBtn');
+// 칩 영역 새로고침 버튼 (클래스 사용)
+const chipRefreshBtn = document.querySelector('.btn_chip_refresh');
+
+const filterArea = document.querySelector('.filter-dl');
+const filterDetailCheck = document.getElementById('filterDetailCheck');
+const filterDetailAccordion = document.getElementById('filterDetailAccordion');
+const chipWrap = document.querySelector('.filter-chip .chip-wrap');
+
+// 안전하게 초기화 이벤트
+filterResetBtn?.addEventListener('click', () => {
+    // 1. 체크박스 전체 해제
+    filterArea?.querySelectorAll('input[type="checkbox"]')?.forEach(chk => chk.checked = false);
+
+    // 2. 셀렉트 전체 초기화
+    filterArea?.querySelectorAll('select')?.forEach(sel => sel.selectedIndex = 0);
+
+    // 3. 날짜 / input 초기화
+    filterArea?.querySelectorAll('input[type="text"], input[type="number"], input[type="date"]')?.forEach(input => input.value = '');
+
+    // 4. 상세 기능 영역 초기화
+    if (filterDetailCheck) filterDetailCheck.innerHTML = '';
+    if (filterDetailAccordion) filterDetailAccordion.classList.remove('show');
+
+    // 5. 셀렉트 change 트리거 (UI 정리용)
+    filterArea?.querySelectorAll('select')?.forEach(sel => sel.dispatchEvent(new Event('change')));
+
+    // 6. 적용된 필터 칩 전체 제거
+    chipWrap?.querySelectorAll('.krds-btn-tag')?.forEach(chip => chip.remove());
+});
+
+// 칩 영역 새로고침 버튼 클릭 시에도 초기화
+chipRefreshBtn?.addEventListener('click', () => {
+    // 1~6 동일 처리
+    filterResetBtn?.click();
+});
+
+// 각 칩 삭제 버튼 개별 삭제
+chipWrap?.querySelectorAll('.btn-delete')?.forEach(btn => {
+    btn.addEventListener('click', e => {
+        const chip = e.currentTarget.closest('.krds-btn-tag');
+        chip?.remove();
+    });
+});
+
+</script>
+
 
 </html>

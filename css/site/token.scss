@@ -1,0 +1,151 @@
+// ==========================================================================
+// 1. Primitive Colors (기본 색상 팔레트)
+// ==========================================================================
+
+// Primary
+$primitive-primary-5: #f5f6ff;
+$primitive-primary-10: #ced5f6;
+$primitive-primary-20: #a0aded;
+$primitive-primary-30: #6877c9;
+$primitive-primary-40: #3a4794;
+$primitive-primary-50: #0f174d;
+$primitive-primary-60: #0a1142;
+$primitive-primary-70: #070c37;
+$primitive-primary-80: #04082c;
+$primitive-primary-90: #020524;
+$primitive-primary-95: #01031e;
+
+// Secondary
+$primitive-secondary-5: #eef2f7;
+$primitive-secondary-10: #d6e0eb;
+$primitive-secondary-20: #bacbde;
+$primitive-secondary-30: #90b0d5;
+$primitive-secondary-40: #6b96c7;
+$primitive-secondary-50: #346fb2;
+$primitive-secondary-60: #1c589c;
+$primitive-secondary-70: #063a74;
+$primitive-secondary-80: #052b57;
+$primitive-secondary-90: #031f3f;
+$primitive-secondary-95: #02162c;
+
+// Gray
+$primitive-gray-0: #ffffff;
+$primitive-gray-5: #f4f5f6;
+$primitive-gray-10: #e6e8ea;
+$primitive-gray-20: #cdd1d5;
+$primitive-gray-30: #b1b8be;
+$primitive-gray-40: #8a949e;
+$primitive-gray-50: #6d7882;
+$primitive-gray-60: #58616a;
+$primitive-gray-70: #464c53;
+$primitive-gray-80: #33363d;
+$primitive-gray-90: #1e2124;
+$primitive-gray-95: #131416;
+$primitive-gray-100: #000000;
+
+// Alpha (Opacity)
+$primitive-alpha-black-100: #000000;
+$primitive-alpha-black-75: rgba(0, 0, 0, 0.75);
+$primitive-alpha-black-50: rgba(0, 0, 0, 0.5);
+$primitive-alpha-black-25: rgba(0, 0, 0, 0.25);
+$primitive-alpha-black-10: rgba(0, 0, 0, 0.1);
+$primitive-alpha-white-100: #ffffff;
+$primitive-alpha-white-75: rgba(255, 255, 255, 0.75);
+$primitive-alpha-white-50: rgba(255, 255, 255, 0.5);
+$primitive-alpha-white-25: rgba(255, 255, 255, 0.25);
+$primitive-alpha-white-10: rgba(255, 255, 255, 0.1);
+
+// ==========================================================================
+// 2. Gradients (그라디언트)
+// ==========================================================================
+
+$gradient-white: linear-gradient(77.62deg, rgba(255, 255, 255, 0.25) 25%, #ffffff 100%);
+$gradient-secondary: linear-gradient(77.62deg, rgba(255, 255, 255, 0) 25%, #eef2f7 100%);
+$gradient-gray: linear-gradient(77.62deg, rgba(255, 255, 255, 0) 25%, #f4f5f6 100%);
+$gradient-icon-bg: linear-gradient(135deg, #364dd9 0%, #2f99cb 100%);
+$gradient-icon-purple-bg: linear-gradient(135deg, #7a2dc2 0%, #3c4bbf 100%);
+
+// ==========================================================================
+// 3. Effects (그림자 효과)
+// ==========================================================================
+
+$effect-shadow-1: 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.05);
+$effect-shadow-2: 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 0px 2px rgba(0, 0, 0, 0.05);
+$effect-shadow-3: 0px 8px 16px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.08);
+$effect-shadow-4: 0px 16px 24px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.08);
+
+// ==========================================================================
+// 4. Typography Mixins (타이포그래피)
+// ==========================================================================
+
+@mixin font-base {
+  font-family: 'Noto Sans', sans-serif;
+  font-style: normal;
+  font-stretch: normal;
+  text-transform: none;
+}
+
+// Display Styles
+@mixin font-display-large {
+  @include font-base;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 90px;
+  letter-spacing: -0.25px;
+}
+
+@mixin font-display-medium {
+  @include font-base;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 66px;
+  letter-spacing: -0.25px;
+}
+
+// Heading Styles
+@mixin font-heading-medium {
+  @include font-base;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.25px;
+}
+
+@mixin font-heading-xsmall {
+  @include font-base;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+
+// Body Styles
+@mixin font-body-medium {
+  @include font-base;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+
+@mixin font-body-medium-bold {
+  @include font-base;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.25px;
+}
+
+@mixin font-body-small {
+  @include font-base;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0;
+}
+
+// Underline Styles
+@mixin font-underline-medium {
+  @include font-body-medium;
+  text-decoration: underline;
+}

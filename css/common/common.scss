@@ -1,0 +1,19 @@
+//공통
+
+// @import "path";
+@import "_path";
+// @import "../../css/token/krds_tokens.css"; //디자인 토큰
+@import "../token/krds_tokens.css";
+// @import "../token/_token"; //디자인 토큰
+
+// @import "include";
+@import "_include";
+
+// @import "root";
+@import "_root";
+// @import "icon";
+@import "_icon";
+// @import "dropdown";
+@import "_dropdown";
+// @import "reset";
+@import "_reset";

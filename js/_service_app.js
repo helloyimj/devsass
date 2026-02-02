@@ -34,7 +34,7 @@
             slidesPerView: 'auto',
             spaceBetween: 20,
             roundLengths: 'false',
-            freeMode: true,
+       /*      freeMode: true, */
             pagination: {
                 el: '.swiper-pagination_',
                 clickable: true,

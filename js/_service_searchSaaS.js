@@ -3,72 +3,149 @@
 
 $(document).ready(function () {
 
-    var product_01 = "";
-    product_01 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
-    product_01 +=     '<div class="item_head">'; 
-    product_01 +=        '<div class="box_line_gray newly_added">'; 
-    product_01 +=           '<div class="wrap_img">'; 
-    product_01 +=              '<img src="../img/saas_img/4_privateSaaS/logo_01.png" alt="센스메일 클라우드 로고 이미지" class="viewer"/>'; 
-    product_01 +=            '</div>'; 
-    product_01 +=            '<span class="newly_added_tag">NEW</span>'; 
-    product_01 +=        '</div>'; 
-    product_01 +=        '<div class="box_filled">'; 
-    product_01 +=          '<p>국가정보원 공시 국가공공기관 도입 가능 <span>클라우드 컴퓨팅 서비스</span></p>'; 
-    product_01 +=        '</div>'; 
-    product_01 +=     '</div>';  
-    product_01 +=     '<div class="item_middle">'; 
-    product_01 +=        '<div class="wrap_name">'; 
-    product_01 +=           '<span class="service_category">메일</span>'; 
-    product_01 +=           '<span class="product_name">센스메일 클라우드 (SensMail Cloud)</span>'; 
-    product_01 +=           '<span class="company_name">아이모션</span>'; 
-    product_01 +=           '<div class="wrap_serviceTag">'; 
-    product_01 +=              '<span class="search_tag">메일</span>'; 
-    product_01 +=              '<span class="search_tag">그룹웨어</span>'; 
-    product_01 +=           '</div>'; 
-    product_01 +=           '<div class="wrap_govSaas">'; 
-    product_01 +=              '<p>정부 공통시스템 연계</p>'; 
-    product_01 +=              '<div class="govSaas_tag">'; 
-    product_01 +=                 '<span class="tag">모바일 공무원증</span>'; 
-    product_01 +=                 '<span class="tag">행정표준코드</span>'; 
-    product_01 +=                 '<span class="tag">LDAP</span>'; 
-    product_01 +=                 '<span class="tag">GPKI</span>'; 
-    product_01 +=              '</div>'; 
-    product_01 +=           '</div>'; 
-    product_01 +=         '</div>'; 
-    product_01 +=         '<div class="wrap_detail_info">'; 
-    product_01 +=             '<ul>'; 
-    product_01 +=                '<li><span class="label">CSAP 인증</span><span class="info_value">표준</span></li>'; 
-    product_01 +=                '<li><span class="label">인증 날짜</span><span class="info_value">2017.07.22 ~ 2026.07.21</span></li>'; 
-    product_01 +=                '<li><span class="label">이용 인프라</span><span class="info_value">네이버 클라우드(공공)</span></li>'; 
-    product_01 +=             '</ul>'; 
-    product_01 +=          '</div>'; 
-    product_01 +=      '</div>';   
-    product_01 +=      '<div class="item_buttons">';  
-    product_01 +=         '<div class="btn_top">'; 
-    product_01 +=            '<div class="wrap_btn">';
-    product_01 +=               '<div class="round_btn btn_openInNew btn_lined">';
-    product_01 +=                  '<a href="javascript:;" target="_blank" class="link_service_anchor" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트</a>';    
-    product_01 +=               '</div>'; 
-    product_01 +=            '</div>'; 
-    product_01 +=         '</div>'; 
-    product_01 +=         '<div class="btn_bottom">'; 
-    product_01 +=            '<div class="wrap_btn">';
-    product_01 +=              '<p>기관직접계약</p>'; 
-    product_01 +=               '<div class="round_btn btn_openInNew btn_filled">';
-    product_01 +=                  '<a href="javascript:;" target="_blank" class="link_service_anchor" title="새 창 열림- 디지털서비스 이용지원 홈페이지의 상세 페이지로 이동">이용지원시스템</a>';    
-    product_01 +=               '</div>'; 
-    product_01 +=            '</div>'; 
-    product_01 +=            '<div class="wrap_btn">';
-    product_01 +=              '<p>중앙조달계약</p>'; 
-    product_01 +=               '<div class="round_btn btn_openInNew btn_filled">';
-    product_01 +=                  '<a href="javascript:;" target="_blank" class="link_service_anchor" title="새 창 열림- 조달청 디지철서비스몰의 상세 페이지로 이동">조달청 서비스몰</a>';    
-    product_01 +=               '</div>'; 
-    product_01 +=            '</div>'; 
-    product_01 +=         '</div>'; 
-    product_01 +=       '</div>'; 
-    product_01 +=    '</div>'; 
+    // var product_01 = "";
+    // product_01 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    
+    // product_01 +=     '<div class="item_head">'; 
+    // product_01 +=        '<div class="box_line_gray newly_added">'; 
+    // product_01 +=           '<div class="wrap_img">'; 
+    // product_01 +=              '<img src="../img/saas_img/4_privateSaaS/logo_01.png" alt="센스메일 클라우드 로고 이미지" class="viewer"/>'; 
+    // product_01 +=            '</div>'; 
+    // product_01 +=            '<span class="newly_added_tag">NEW</span>'; 
+    // product_01 +=        '</div>'; 
+    // product_01 +=        '<div class="box_filled">'; 
+    // product_01 +=          '<p>국가정보원 공시 국가공공기관 도입 가능 <span>클라우드 컴퓨팅 서비스</span></p>'; 
+    // product_01 +=        '</div>'; 
+    // product_01 +=     '</div>';  
+    // product_01 +=     '<div class="item_middle">'; 
+    // product_01 +=        '<div class="wrap_name">'; 
+    // product_01 +=           '<span class="service_category">메일</span>'; 
+    // product_01 +=           '<span class="product_name">센스메일 클라우드 (SensMail Cloud)</span>'; 
+    // product_01 +=           '<span class="company_name">아이모션</span>'; 
+    // product_01 +=           '<div class="wrap_serviceTag">'; 
+    // product_01 +=              '<span class="search_tag">메일</span>'; 
+    // product_01 +=              '<span class="search_tag">그룹웨어</span>'; 
+    // product_01 +=           '</div>'; 
+    // product_01 +=           '<div class="wrap_govSaas">'; 
+    // product_01 +=              '<p>정부 공통시스템 연계</p>'; 
+    // product_01 +=              '<div class="govSaas_tag">'; 
+    // product_01 +=                 '<span class="tag">모바일 공무원증</span>'; 
+    // product_01 +=                 '<span class="tag">행정표준코드</span>'; 
+    // product_01 +=                 '<span class="tag">LDAP</span>'; 
+    // product_01 +=                 '<span class="tag">GPKI</span>'; 
+    // product_01 +=              '</div>'; 
+    // product_01 +=           '</div>'; 
+    // product_01 +=         '</div>'; 
+    // product_01 +=         '<div class="wrap_detail_info">'; 
+    // product_01 +=             '<ul>'; 
+    // product_01 +=                '<li><span class="label">CSAP 인증</span><span class="info_value">표준</span></li>'; 
+    // product_01 +=                '<li><span class="label">인증 날짜</span><span class="info_value">2017.07.22 ~ 2026.07.21</span></li>'; 
+    // product_01 +=                '<li><span class="label">이용 인프라</span><span class="info_value">네이버 클라우드(공공)</span></li>'; 
+    // product_01 +=             '</ul>'; 
+    // product_01 +=          '</div>'; 
+    // product_01 +=      '</div>';   
+    // product_01 +=      '<div class="item_buttons">';  
+    // product_01 +=         '<div class="btn_top">'; 
+    // product_01 +=            '<div class="wrap_btn">';
+    // product_01 +=               '<div class="round_btn btn_openInNew btn_lined">';
+    // product_01 +=                  '<a href="javascript:;" target="_blank" class="link_service_anchor" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트</a>';    
+    // product_01 +=               '</div>'; 
+    // product_01 +=            '</div>'; 
+    // product_01 +=         '</div>'; 
+    // product_01 +=         '<div class="btn_bottom">'; 
+    // product_01 +=            '<div class="wrap_btn">';
+    // product_01 +=              '<p>기관직접계약</p>'; 
+    // product_01 +=               '<div class="round_btn btn_openInNew btn_filled">';
+    // product_01 +=                  '<a href="javascript:;" target="_blank" class="link_service_anchor" title="새 창 열림- 디지털서비스 이용지원 홈페이지의 상세 페이지로 이동">이용지원시스템</a>';    
+    // product_01 +=               '</div>'; 
+    // product_01 +=            '</div>'; 
+    // product_01 +=            '<div class="wrap_btn">';
+    // product_01 +=              '<p>중앙조달계약</p>'; 
+    // product_01 +=               '<div class="round_btn btn_openInNew btn_filled">';
+    // product_01 +=                  '<a href="javascript:;" target="_blank" class="link_service_anchor" title="새 창 열림- 조달청 디지철서비스몰의 상세 페이지로 이동">조달청 서비스몰</a>';    
+    // product_01 +=               '</div>'; 
+    // product_01 +=            '</div>'; 
+    // product_01 +=         '</div>'; 
+    // product_01 +=       '</div>'; 
+    // product_01 +=    '</div>'; 
 
-    $(".product_card.product_01").html(product_01);
+    // $(".product_card.product_01").html(product_01);
+var product_01 = "";
+
+product_01 += '<li class="structured-item product_card product_01">';
+product_01 +=   '<div class="product_item_inner">';
+
+product_01 +=     '<div class="box_logo">';
+product_01 +=       '<img src="../img/saas_img/4_privateSaaS/logo_01.png" alt="센스메일 클라우드 로고" class="viewer">';
+product_01 +=     '</div>';
+
+product_01 +=     '<div class="in">';
+product_01 +=       '<div class="box_txt">';
+product_01 +=         '<div class="card-top">';
+product_01 +=           '<span class="krds-badge bg-primary">메일</span>';
+product_01 +=         '</div>';
+
+product_01 +=         '<div class="box_txt_inner">';
+product_01 +=           '<div class="card-body">';
+product_01 +=             '<a href="공공용 민간 SaaS_상세.html" target="_self" class="c-text" title="상세 페이지 이동">';
+
+product_01 +=               '<p class="c-tit"><span class="span">센스메일 클라우드 (SensMail Cloud)</span></p>';
+product_01 +=               '<p class="c-txt">아이모션</p>';
+
+product_01 +=               '<div class="tags">';
+product_01 +=                 '<span class="tag">메일</span>';
+product_01 +=                 '<span class="tag">그룹웨어</span>';
+product_01 +=               '</div>';
+
+product_01 +=               '<div class="b_box">';
+product_01 +=                 '<p>정부 공통시스템 연계</p>';
+product_01 +=                 '<div class="tags">';
+product_01 +=                   '<span class="tag_gov">모바일 공무원증</span>';
+product_01 +=                   '<span class="tag_gov">행정표준코드</span>';
+product_01 +=                   '<span class="tag_gov">LDAP</span>';
+product_01 +=                   '<span class="tag_gov">GPKI</span>';
+product_01 +=                 '</div>';
+product_01 +=               '</div>';
+
+product_01 +=               '<div class="wrap_detail_info">';
+product_01 +=                 '<ul class="detail_info_list">';
+product_01 +=                   '<li class="detail_info_list_item"><strong class="info_tit">CSAP 인증</strong><span class="info_value">표준</span></li>';
+product_01 +=                   '<li class="detail_info_list_item"><strong class="info_tit">인증 날짜</strong><span class="info_value">2017.07.22 ~ 2026.07.21</span></li>';
+product_01 +=                   '<li class="detail_info_list_item"><strong class="info_tit">이용 인프라</strong><span class="info_value">네이버 클라우드(공공)</span></li>';
+product_01 +=                 '</ul>';
+product_01 +=               '</div>';
+
+product_01 +=               '<div class="b_box">';
+product_01 +=                 '<p class="before_mark medal_icon">국가정보원 공시 국가공공기관 도입 가능</p>';
+product_01 +=                 '<span class="b_box_cont">클라우드 컴퓨팅 서비스</span>';
+product_01 +=               '</div>';
+
+product_01 +=             '</a>';
+product_01 +=           '</div>';
+
+product_01 +=           '<div class="card-btm">';
+product_01 +=             '<div class="wrap_link_area">';
+
+product_01 +=               '<div class="link_area">';
+product_01 +=                 '<span class="link_label">서비스 공식 사이트</span>';
+product_01 +=                 '<a href="javascript:;" target="_blank" class="krds-btn medium tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>';
+product_01 +=               '</div>';
+
+product_01 +=               '<div class="link_area">';
+product_01 +=                 '<span class="link_label">기관직접계약</span>';
+product_01 +=                 '<a href="javascript:;" target="_blank" class="krds-btn medium tertiary">이용지원시스템 <i class="svg-icon ico-go"></i></a>';
+product_01 +=               '</div>';
+
+product_01 +=             '</div>';
+product_01 +=           '</div>';
+
+product_01 +=         '</div>'; // box_txt_inner
+product_01 +=       '</div>';   // box_txt
+product_01 +=     '</div>';     // in
+
+product_01 +=   '</div>';
+product_01 += '</li>';
+
+$(".product_card.product_01").replaceWith(product_01);
 
     var product_02 = "";
     product_02 +=  '<div class="product_item" data-aos="fade-up" data-aos-delay="100">';    

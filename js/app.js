@@ -1,47 +1,327 @@
-// // top_btn
-// $(window).scroll(function () {
+/* =========================
+   초기 실행 + AOS 
+========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  ui_accordion.init();
+  ui_modal.init();
 
-//     // console.log($(this).scrollTop())
+  if (typeof AOS !== "undefined") {
+    AOS.init({
+      once: false,
+      offset: 50,
+      duration: 700,
+      easing: "ease-out-cubic",
+      disableMutationObserver: true,
+    });
 
-//     if ($(this).scrollTop() > 600) {
-//         $(".wrap_side_btn").fadeIn();
-//         // } else if ($(this).scrollTop()  < 600 && $(this).scrollTop() > 100 ) {
-//     } else if ($(this).scrollTop() < 600) {
-//         $(".wrap_side_btn").fadeOut();
-//     }
-// });
-
-// $(document).on("click", ".wrap_side_btn .btn_top", function () {
-//   // $(document).on("click",".top_btn", function () {
-//     $("html, body").stop().animate({    
-//         scrollTop: 0,
-//     },
-//     "500"
-//     );
-//     return false;
-// });
-
-
-$(window).scroll(function () {
-
-    
-    var scrollTop = $(this).scrollTop();
-
-    // btn_side_sup01, btn_side_sup02는 항상 보이도록 설정
-    $(".btn_side_sup01, .btn_side_sup02").fadeIn();
-
-    // 스크롤 위치가 600px 초과일 때만 btn_side_sup03 보이기
-    if (scrollTop > 600) {
-        $(".btn_side_sup03").addClass("show"); // .show 클래스를 추가하여 효과 적용
-    } else {
-        $(".btn_side_sup03").removeClass("show"); // .show 클래스를 제거하여 버튼 숨김
-    }
+    setTimeout(() => {
+      AOS.refresh();
+    }, 300);
+  }
 });
 
-// 최상단 이동 버튼 클릭 시
-$(document).on("click", ".wrap_side_btn .btn_top", function () {
-    $("html, body").stop().animate({
-        scrollTop: 0
-    }, 500);
-    return false;
+window.addEventListener("load", () => {
+  if (typeof AOS !== "undefined") {
+    // 레이아웃 + 이미지 다 로드된 뒤 최종 계산
+    AOS.refreshHard();
+  }
+});
+
+
+// document.querySelectorAll('[data-aos]')[1].style.opacity = 1;
+// document.querySelectorAll('[data-aos]')[1].getBoundingClientRect()
+
+window.addEventListener("load", () => {
+  if (typeof AOS !== "undefined") {
+    AOS.refreshHard();
+  }
+});
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+
+  document
+    .querySelectorAll(".btn_side_sup01, .btn_side_sup02")
+    .forEach(el => el.style.display = "block");
+
+  const btn03 = document.querySelector(".btn_side_sup03");
+  if (!btn03) return;
+
+  // 
+  btn03.classList.toggle("show", scrollTop > 600);
+});
+
+/* =========================
+   최상단 이동 버튼
+========================= */
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".wrap_side_btn .btn_top");
+  if (!btn) return;
+
+  e.preventDefault();
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+
+/* =========================
+   아코디언
+========================= */
+const ui_accordion = {
+  init() {
+    const answerButtons = document.querySelectorAll(".page_answer .btn-accordion");
+    if (!answerButtons.length) return;
+
+    answerButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".accordion-item");
+        const container = button.closest(".krds-accordion");
+        const panel = item.querySelector(".accordion-collapse");
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+        const type = container.dataset.type || "singleOpen";
+
+        // singleOpen → 다른 아이템 닫기
+        if (type !== "multiOpen" && !isExpanded) {
+          container.querySelectorAll(".accordion-item").forEach((otherItem) => {
+            if (otherItem !== item) {
+              const otherBtn = otherItem.querySelector(".btn-accordion");
+              const otherPanel = otherItem.querySelector(".accordion-collapse");
+
+              otherBtn.setAttribute("aria-expanded", "false");
+              otherItem.classList.remove("active");
+              otherPanel.classList.remove("active");
+            }
+          });
+        }
+
+        // 현재 아이템 토글
+        button.setAttribute("aria-expanded", String(!isExpanded));
+        item.classList.toggle("active", !isExpanded);
+        panel.classList.toggle("active", !isExpanded);
+      });
+    });
+  }
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  ui_accordion.init();
+});
+
+
+/* =========================
+   로그인 비밀번호 on/off
+========================= */
+document.addEventListener("click", (e) => {
+  const btnPw = e.target.closest(".btn-ico-wrap .krds-btn");
+  if (!btnPw) return;
+
+  const wrapPw = btnPw.closest(".btn-ico-wrap");
+  const inputPw = wrapPw.querySelector("input");
+  const srTextPw = btnPw.querySelector(".sr-only");
+
+  const isPassword = inputPw.type === "password";
+
+  // 비밀번호 타입 토글
+  inputPw.type = isPassword ? "text" : "password";
+
+  // 버튼 aria-pressed 상태 토글
+  btnPw.setAttribute("aria-pressed", String(isPassword));
+
+  // 화면 읽기용 텍스트 변경
+  if (srTextPw) {
+    srTextPw.textContent = isPassword
+      ? "입력한 비밀번호 숨기기"
+      : "입력한 비밀번호 보기";
+  }
+
+  // 버튼 시각적 상태 토글
+  btnPw.classList.toggle("is-active", !isPassword);
+});
+
+
+/* =========================
+   로그인 모달
+========================= */
+const ui_modal = {
+  modalOpenTriggers: null,
+  modalCloseTriggers: null,
+  outsideClickHandlers: {},
+
+  init() {
+    this.modalOpenTriggers = document.querySelectorAll(".open-modal");
+    this.modalCloseTriggers = document.querySelectorAll(".close-modal");
+    if (!this.modalOpenTriggers.length) return;
+    this.setupTriggers();
+  },
+
+  setupTriggers() {
+    this.modalOpenTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        const id = trigger.dataset.target;
+        if (!id) return;
+
+        trigger.classList.add("modal-opened");
+        trigger.setAttribute("tabindex", "-1");
+        trigger.setAttribute("data-modal-id", id);
+        this.openModal(id);
+      });
+    });
+
+    this.modalCloseTriggers.forEach((trigger) => {
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        const modal = trigger.closest(".krds-modal");
+        if (modal) this.closeModal(modal.id);
+      });
+    });
+  },
+
+  openModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+
+    const dialog = modal.querySelector(".modal-content");
+    const back = modal.querySelector(".modal-back");
+    const conts = modal.querySelector(".modal-conts");
+
+    document.body.classList.add("scroll-no");
+    modal.classList.add("shown");
+    back.classList.add("in");
+
+    if (conts.scrollHeight > conts.clientHeight) {
+      conts.setAttribute("tabindex", "0");
+    } else {
+      conts.removeAttribute("tabindex");
+    }
+
+    setTimeout(() => modal.classList.add("in"), 150);
+
+    const focusables = modal.querySelectorAll(
+      'a, button, input, textarea, select, [tabindex="0"]'
+    );
+    if (focusables.length) {
+      setTimeout(() => focusables[0].focus(), 300);
+    }
+
+    dialog.addEventListener(
+      "keydown",
+      (e) => {
+        if (e.key === "Escape") this.closeModal(id);
+      },
+      { once: true }
+    );
+
+    document.getElementById("wrap")?.setAttribute("inert", "");
+  },
+
+  closeModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+
+    modal.classList.remove("in");
+    modal.querySelector(".modal-back")?.classList.remove("in");
+
+    setTimeout(() => modal.classList.remove("shown"), 300);
+
+    document.body.classList.remove("scroll-no");
+    document.getElementById("wrap")?.removeAttribute("inert");
+
+    const trigger = document.querySelector(
+      `.modal-opened[data-modal-id="${id}"]`
+    );
+    if (trigger) {
+      trigger.focus();
+      trigger.classList.remove("modal-opened");
+      trigger.removeAttribute("data-modal-id");
+      trigger.removeAttribute("tabindex");
+    }
+  },
+};
+
+
+/* =========================
+   체크박스 전체 선택 (체크리스트)
+========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const all = document.getElementById("check-agree-all");
+  const items = document.querySelectorAll(".terms-item");
+  if (!all || !items.length) return;
+
+  all.addEventListener("change", () => {
+    items.forEach((item) => {
+      item.checked = all.checked;
+      item.indeterminate = false;
+    });
+  });
+
+  items.forEach((item) => {
+    item.addEventListener("change", () => {
+      const checked = [...items].filter(i => i.checked).length;
+
+      if (checked === 0) {
+        all.checked = false;
+        all.indeterminate = false;
+      } else if (checked === items.length) {
+        all.checked = true;
+        all.indeterminate = false;
+      } else {
+        all.checked = false;
+        all.indeterminate = true;
+      }
+    });
+  });
+});
+
+/* =========================
+   체크박스 전체 선택 (라디오 약관)
+========================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const all = document.getElementById("check-agree-all");
+  const agreeYes = document.querySelectorAll(".agree-yes");
+  const radios = document.querySelectorAll('input[type="radio"]');
+  if (!all || !agreeYes.length) return;
+
+  all.addEventListener("change", () => {
+    if (all.checked) {
+      agreeYes.forEach(r => (r.checked = true));
+    }
+  });
+
+  radios.forEach((radio) => {
+    radio.addEventListener("change", () => {
+      const checked = [...agreeYes].filter(r => r.checked).length;
+
+      if (checked === agreeYes.length) {
+        all.checked = true;
+        all.indeterminate = false;
+      } else if (checked === 0) {
+        all.checked = false;
+        all.indeterminate = false;
+      } else {
+        all.checked = false;
+        all.indeterminate = true;
+      }
+    });
+  });
+});
+
+
+/* =========================
+   스크롤 이벤트 (사이드 버튼)
+========================= */
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+
+  document
+    .querySelectorAll(".btn_side_sup01, .btn_side_sup02")
+    .forEach(el => (el.style.display = "block"));
+
+  const btn03 = document.querySelector(".btn_side_sup03");
+  if (!btn03) return;
+
+  btn03.classList.toggle("show", scrollTop > 600);
 });

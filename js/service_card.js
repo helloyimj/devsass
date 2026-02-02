@@ -1,638 +1,696 @@
 /************************************* 개별 서비스 카드 *************************************/
 /* '자세히 보기'는 각 서비스별 공공용 민간 SaaS 상세 보기 페이지로 연결 */
 
+/* 카드 공통 컴포넌트 */
+// 상단 뱃지, 로고 사진, 링크
+function createCardHTML(data) {
+  return `
+<div class="in slide_case_item">
+  <div class="card-top">
+    <div class="wrap_img">
+      <img src="${data.logo}" alt="${data.logoAlt}" class="viewer"/>
+      <span class="saas-badge bg-light-primary">${data.badge}</span>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="wrap_title">
+      <a href="${data.link || '#'}" class="c-text" aria-label="상세 페이지로 이동하기">
+        <p class="c-tit"><span class="span">${data.title}</span></p>
+      </a>
+      <p class="c-company">${data.company}</p>
+    </div>
+
+    <div class="box_tooltip">
+
+      ${Array.isArray(data.tooltips)
+      ? data.tooltips.map((t, i) => createTooltipHTML(t, i)).join("")
+    : ""}
+      
+    </div> 
+  </div>
+</div>`;
+}
+
+// 연계, 제공기능, 이용기관
+function createTooltipHTML(t, index) {
+  const tooltipId = `tooltip-${t.id || index}`;
+
+  return `
+<div class="wrap-tooltip">
+  <div class="krds-contextual-help top right">
+    <div class="tooltip-txt">
+      <strong class="key">${t.key}</strong>
+
+      <div class="value-wrap">
+        <span class="value">${t.full}</span>
+
+        <div class="tooltip-action">
+          <button type="button"
+                  class="krds-btn icon tooltip-btn tooltip-more"
+                  aria-expanded="false"
+                  aria-controls="${tooltipId}">
+            <span class="sr-only">${t.sr}</span>
+            <i class="svg-icon ico-plus" aria-hidden="true"></i>
+          </button>
+
+          <div class="tooltip-popover"
+              id="${tooltipId}"
+              role="tooltip">
+            <h4 class="tooltip-title">${t.key}</h4>
+            <div class="tooltip-contents">
+              <p>${t.full}</p>
+            </div>
+            <button type="button"
+                    class="krds-btn xsmall icon tooltip-close">
+              <span class="sr-only">닫기</span>
+              <i class="svg-icon ico-modal-close" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>`;
+}
+
+/* $(document).ready(function () {
+  $(".case_card").each(function () {
+    const $card = $(this);
+
+    const key = Object.keys(CARD_DATA).find(k =>
+      $card.hasClass(k)
+    );
+    if (!key) return;
+
+    const html = createCardHTML(CARD_DATA[key]);
+    $card.html(html);
+  });
+
+  // 카드 DOM 생성 후 KRDS 초기화
+  window.krds_contextualHelp?.init?.();
+});
+ */
 
 
-// 두레이 - 엔에이치엔두레이
+/* =========================
+   초기화
+========================= */
 $(document).ready(function () {
+  $(".case_card").each(function () {
+    const $card = $(this);
+    const key = Object.keys(CARD_DATA).find(k => $card.hasClass(k));
+    if (!key) return;
 
-    var card_dooray = "";
-    card_dooray +=  '<div class="case_item_info slide_case_item">';    
-    card_dooray +=     '<div class="case_item_head">'; 
-    card_dooray +=        '<div class="wrap_img">'; 
-    card_dooray +=           '<img src="../img/saas_img/0_common/logo/logo_pr_dooray.svg" alt="두레이 로고 이미지" class="viewer"/>'; 
-    card_dooray +=        '</div>'; 
-    card_dooray +=        '<div class="wrap_govSaas">'; 
-    card_dooray +=           '<span class="tag_dirSys">LDAP</span>'; 
-    card_dooray +=           '<span class="tag_codeSys">행정표준코드</span>'; 
-    card_dooray +=           '<span class="tag_idCard">모바일 공무원증</span>'; 
-    card_dooray +=        '</div>'; 
-    card_dooray +=        '<div class="wrap_serviceName">'; 
-    card_dooray +=           '<h4 class="title_card service_name">두레이<span class="txt_small"> (Dooray!)</span></h4>'; 
-    card_dooray +=           '<p class="company_name">엔에이치엔두레이</p>'; 
-    card_dooray +=        '</div>'; 
-    card_dooray +=     '</div>';     
-    card_dooray +=     '<div class="case_item_inner">'; 
-    card_dooray +=         '<div class="wrap_tag">'; 
-    card_dooray +=            '<span class="service_tag">메일</span>'; 
-    card_dooray +=            '<span class="service_tag">메신저</span>'; 
-    card_dooray +=            '<span class="service_tag">전자결재</span>'; 
-    card_dooray +=            '<span class="service_tag">근태관리</span>'; 
-    card_dooray +=            '<span class="service_tag">프로젝트</span>'; 
-    card_dooray +=            '<span class="service_tag">업무</span>'; 
-    card_dooray +=            '<span class="service_tag">드라이브</span>'; 
-    card_dooray +=            '<span class="service_tag">위키</span>'; 
-    card_dooray +=         '</div>'; 
-    card_dooray +=      '</div>'; 
-    card_dooray +=      '<div class="case_item_bottom">';  
-    card_dooray +=         '<div class="wrap_office">'; 
-    card_dooray +=            '<h5>이용 기관</h5>'; 
-    card_dooray +=             '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_dooray +=         '</div>'; 
-    card_dooray +=         '<div class="wrap_btn">';
-    card_dooray +=            '<div class="btn_openInNew">';
-    card_dooray +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 두레이 상세 보기 페이지로 이동">자세히 보기</a>';      
-    card_dooray +=            '</div>'; 
-    card_dooray +=         '</div>'; 
-    card_dooray +=       '</div>'; 
-    card_dooray +=    '</div>'; 
+    $card.html(createCardHTML(CARD_DATA[key]));
+  });
 
-    $(".case_card.card_dooray").html(card_dooray);
+  // ✅ 말줄임 + 버튼 표시 판단
+  updateTooltipEllipsis();
+
+  // ✅ KRDS 툴팁 초기화
+  window.krds_contextualHelp?.init?.();
 });
 
 
-//  비디오헬프미 - 주식회사 클라운지
-$(document).ready(function () {
-
-    var card_videoHelpMe = "";
-    card_videoHelpMe +=  '<div class="case_item_info slide_case_item">';    
-    card_videoHelpMe +=     '<div class="case_item_head">'; 
-    card_videoHelpMe +=        '<div class="wrap_img">'; 
-    card_videoHelpMe +=           '<img src="../img/saas_img/0_common/logo/logo_pr_videoHelpMe.png" alt=" 비디오헬프미 로고 이미지" class="viewer"/>'; 
-    card_videoHelpMe +=        '</div>'; 
-    card_videoHelpMe +=        '<div class="wrap_govSaas">'; 
-    card_videoHelpMe +=           '<span class="tag_idCard">모바일 공무원증</span>'; 
-    card_videoHelpMe +=        '</div>'; 
-    card_videoHelpMe +=        '<div class="wrap_serviceName">'; 
-    card_videoHelpMe +=           '<h4 class="title_card service_name">비디오헬프미</h4>'; 
-    card_videoHelpMe +=           '<p class="company_name">주식회사 클라운지</p>'; 
-    card_videoHelpMe +=        '</div>'; 
-    card_videoHelpMe +=     '</div>';     
-    card_videoHelpMe +=     '<div class="case_item_inner">'; 
-    card_videoHelpMe +=         '<div class="wrap_tag">'; 
-    card_videoHelpMe +=            '<span class="service_tag">보이는 원격상담</span>'; 
-    card_videoHelpMe +=            '<span class="service_tag">비대면</span>'; 
-    card_videoHelpMe +=            '<span class="service_tag">영상 중계</span>'; 
-    card_videoHelpMe +=         '</div>'; 
-    card_videoHelpMe +=      '</div>'; 
-    card_videoHelpMe +=     '<div class="case_item_bottom">';  
-    card_videoHelpMe +=         '<div class="wrap_office">'; 
-    card_videoHelpMe +=            '<h5>이용 기관</h5>'; 
-    card_videoHelpMe +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_videoHelpMe +=         '</div>'; 
-    card_videoHelpMe +=         '<div class="wrap_btn">';
-    card_videoHelpMe +=            '<div class="btn_openInNew">';
-    card_videoHelpMe +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 비디오헬프미 상세 보기 페이지로 이동">자세히 보기</a>';    
-    card_videoHelpMe +=            '</div>'; 
-    card_videoHelpMe +=         '</div>'; 
-    card_videoHelpMe +=       '</div>'; 
-    card_videoHelpMe +=    '</div>'; 
-
-    $(".case_card.card_videoHelpMe").html(card_videoHelpMe);
-});
 
 
-// 엔로비 - ㈜엔로비
-$(document).ready(function () {
 
-    var card_nlobby = "";
-    card_nlobby +=  '<div class="case_item_info slide_case_item">';    
-    card_nlobby +=     '<div class="case_item_head">'; 
-    card_nlobby +=        '<div class="wrap_img">'; 
-    card_nlobby +=           '<img src="../img/saas_img/0_common/logo/logo_pr_nlobby.png" alt=" 엔로비 로고 이미지" class="viewer"/>'; 
-    card_nlobby +=        '</div>'; 
-    card_nlobby +=        '<div class="wrap_govSaas">'; 
-    card_nlobby +=           '<span class="tag_codeSys">행정표준코드</span>'; 
-    card_nlobby +=        '</div>'; 
-    card_nlobby +=        '<div class="wrap_serviceName">'; 
-    card_nlobby +=           '<h4 class="title_card service_name">엔로비<span class="txt_small"> (방문예약시스템 클라우드 서비스)</span></h4>'; 
-    card_nlobby +=           '<p class="company_name">㈜엔로비</p>'; 
-    card_nlobby +=        '</div>'; 
-    card_nlobby +=     '</div>';     
-    card_nlobby +=     '<div class="case_item_inner">'; 
-    card_nlobby +=         '<div class="wrap_tag">'; 
-    card_nlobby +=            '<span class="service_tag">방문예약</span>'; 
-    card_nlobby +=         '</div>'; 
-    card_nlobby +=      '</div>'; 
-    card_nlobby +=      '<div class="case_item_bottom">';  
-    card_nlobby +=         '<div class="wrap_office">'; 
-    card_nlobby +=            '<h5>이용 기관</h5>'; 
-    card_nlobby +=             '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_nlobby +=         '</div>'; 
-    card_nlobby +=         '<div class="wrap_btn">';
-    card_nlobby +=            '<div class="btn_openInNew">';
-    card_nlobby +=              '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 엔로비 상세 보기 페이지로 이동">자세히 보기</a>';      
-    card_nlobby +=            '</div>'; 
-    card_nlobby +=         '</div>'; 
-    card_nlobby +=       '</div>'; 
-    card_nlobby +=    '</div>'; 
+/* 카드 데이터 */
 
-    $(".case_card.card_nlobby").html(card_nlobby);
-});
+const CARD_DATA = {
+
+ //공공용 계절근로자 관리 플랫폼
+  card_kollabo: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_kollabo.svg",
+    logoAlt: "콜라보 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000045",
+    badge: "문서 관리",
+    title: "공공용 계절근로자 관리 플랫폼",
+    company: "(주)인조이웍스",
+    tooltips: [
+      {
+        key: "연계",
+        full: "모바일 공무원증, GPKI",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "근로자 관리, 근로자 평가관리, 전자서명",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "강원특별자치도 평창군, 전북특별자치도 완주군, 경상남도 진주시, 전라남도 해남군, 충청북도 진천군, 충청남도 공주시 농업기술센터 농업정책과",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },  
+  
+  //두레이
+  card_dooray: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_dooray.svg",
+    logoAlt: "두레이 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000077",
+    badge: "협업 도구",
+    title: "두레이(Dooray!)",
+    company: "엔에이치엔두레이(주)",
+    tooltips: [
+      {
+        key: "연계",
+        full: "모바일 공무원증, 행정표준코드, LDAP, GPKI",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "드라이브, 메신저, 메일, 업무관리, 전자결재",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "충청북도, 광주광역시, 전라남도 장성군, 충청북도 옥천군, 충청북도 음성군, 충청북도 제천시, 충청북도 증평군, 충청북도 진천군, 충청북도 충주시, 경기도 구리시, 경기도 하남시",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },
+
+  // 디지털 트윈 클라우드
+  card_twinCloud: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_egis.png",
+    logoAlt: "주식회사 이지스 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000041",
+    badge: "기타",
+    title: "디지털 트윈 클라우드",
+    company: "(주) 이지스",
+    tooltips: [
+      {
+        key: "연계",
+        full: "모바일 공무원증, 행정표준코드, LDAP, GPKI",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "데이터 가시화, 앱마켓 플레이스, 지도 기능",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "제주특별자치도",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },
+
+  //모두싸인 공공용
+  card_modusign: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_modusign.png",
+    logoAlt: "모두싸인 공공용 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000011",
+    badge: "전자 계약",
+    title: "모두싸인 공공용",
+    company: "주식회사 모두싸인",
+    tooltips: [
+      {
+        key: "연계",
+        full: "행정표준코드",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "시설관리, 전자계약, 전자근로계약, 전자서명",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "한국에너지공단, 부산광역시남구시설관리공단",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },
+
+  //보이는 원격상담 비디오헬프미
+  card_videoHelpMe: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_videoHelpMe.png",
+    logoAlt: "비디오헬프미 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000012",
+    badge: "기타",
+    title: "보이는 원격상담 비디오헬프미",
+    company: "주식회사 클라운지",
+    tooltips: [
+      {
+        key: "연계",
+        full: "모바일 공무원증",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "영상상담, 영상중계, 원격상담, 파일뷰어",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "경기도 오산시",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },
+
+  // 스트레티지게이트
+  card_sgate: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_sgate.svg",
+    logoAlt: "스트레티지게이트 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000028",
+    badge: "성과 관리",
+    title: "스트레티지게이트",
+    company: "(주)이즈파크",
+    tooltips: [
+      {
+        key: "연계",
+        full: "모바일 공무원증, 행정표준코드, LDAP, GPKI",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "개인업적평가, 개인역량평가, 경영평가관리, 성과모니터링, 조직성과관리, 직무관리",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "국립부산과학관, 성남시청소년재단, 한국도핑방지위원회, 한국조세재정연구원, 한국지능정보사회진흥원, 경상남도 창원시, 경상북도 의성군",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },
+
+  //스패로우 클라우드
+  card_sparrowCloud: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_sparrowCloud.jpg",
+    logoAlt: "스패로우 클라우드 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000072",
+    badge: "보안",
+    title: "스패로우 클라우드",
+    company: "(주)스패로우",
+    tooltips: [
+      {
+        key: "연계",
+        full: "행정표준코드",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "취약점 진단",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "사립학교교직원연금공단",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },
+
+  //엔로비 - 방문예약시스템 클라우드 서비스
+  card_nlobby: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_nlobby.png",
+    logoAlt: "엔로비 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000023",
+    badge: "출입 관리",
+    title: "엔로비 - 방문예약시스템 클라우드 서비스",
+    company: "(주)엔로비",
+    tooltips: [
+      {
+        key: "연계",
+        full: "모바일 공무원증, 행정표준코드, LDAP",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "방문객 사전예약",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "광주광역시, 한국보건산업진흥원, 한국사회보장정보원, 경찰청 서울특별시경찰청 서울은평경찰서 경무과",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },
+
+  //엔아이클라우드
+  card_niCloud: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_niCloud.jpg",
+    logoAlt: "엔아이클라우드 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000029",
+    badge: "메일",
+    title: "엔아이클라우드",
+    company: "(주)타이거컴퍼니",
+    tooltips: [
+      {
+        key: "연계",
+        full: "모바일 공무원증, 행정표준코드, LDAP, GPKI",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",        
+        full: "뉴스피드, 드라이브, 메신저, 웹오피스, 캘린더, 파일뷰어, 화상회의 ",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "광주광역시 광산구, 충청남도 보령시",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },
+    
+  // 웹 기반 수어 번역 서비스
+  card_eq4all: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_eq4all.jpg",
+    logoAlt: "이큐포올 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000075",
+    badge: "기타",
+    title: "웹 기반 수어 번역 서비스",
+    company: "주식회사 이큐포올",
+    tooltips: [
+      {
+        key: "연계",
+        full: "행정표준코드",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "수어 번역",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "국민연금공단",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },  
+    
+  // 이젠터치/토이
+  card_egenTouch: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_egenTouch.png",
+    logoAlt: "이젠터치 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000005",
+    badge: "기타",
+    title: "이젠터치/토이",
+    company: "(주)두드림시스템",
+    tooltips: [
+      {
+        key: "연계",
+        full: "모바일 공무원증, 행정표준코드, LDAP",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "도서 관리, 디지털 아카이브",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "제주특별자치도 제주시, 한국석유공사",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },  
+
+  //이진 아이티에스엠
+  card_steg: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_steg.jpg",
+    logoAlt: "에스티이지 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000017",
+    badge: "기타",
+    title: "이진 아이티에스엠",
+    company: "(주)에스티이지",
+    tooltips: [
+      {
+        key: "연계",
+        full: "행정표준코드",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "장애관리, IT서비스관리, ITAM, ITOM, ITSM, SLA관리",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "한국보건산업진흥원",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },  
+  
+  // 이체크폼
+  card_eCheckForm: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_eCheckForm.png",
+    logoAlt: "솔비텍 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000074",
+    badge: "전자행정서식",
+    title: "이체크폼",
+    company: "(주)솔비텍",
+    tooltips: [
+      {
+        key: "연계",
+        full: "행정표준코드",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "장애관리, IT서비스관리, ITAM, ITOM, ITSM, SLA관리",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "근로복지공단, 울산광역시 북구",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },  
+
+  //이폼사인
+  card_eFormSign: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_eFormSign.svg",
+    logoAlt: "이폼사인 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000037",
+    badge: "전자계약",
+    title: "이폼사인",
+    company: "주식회사 포시에스",
+    tooltips: [
+      {
+        key: "연계",
+        full: "행정표준코드, LDAP",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "전자 계약, 전자 서명, 회원 관리",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "경기도 연천군, 용산구시설관리공단",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },  
+  
+  //지능형 능동행정 공공지원사업 매칭 서비스
+  card_bizData: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_bizData.png",
+    logoAlt: "비즈데이터 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000021",
+    badge: "기타",
+    title: "지능형 능동행정 공공지원사업 매칭 서비스",
+    company: "(주)비즈데이터",
+    tooltips: [
+      {
+        key: "연계",
+        full: "LDAP",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "관심기업관리, 지원사업 검색, 지원사업 관리, 지원사업 매칭",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "강원특별자치도 춘천시, 경기도 고양시",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },  
+
+  //케이티 에이아이 컨택트센터
+  card_ktAiContact: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_ktAiContact.jpg",
+    logoAlt: "케이티 에이아이 컨택트센터 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000069",
+    badge: "AI",
+    title: "케이티 에이아이 컨택트센터",
+    company: "케이티",
+    tooltips: [
+      {
+        key: "연계",
+        full: "행정표준코드, LDAP",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",
+        full: "챗봇, AI상담",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",       
+        full: "국립부산과학관, 근로복지공단, 인천광역시중구시설관리공단, 충청북도, 충청북도 충주시, 한국양성평등교육진흥원, 한국체육산업개발주식회사",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },  
+
+  //케이티클라우드 비즈웍스 프로
+  card_ktBizworkspro: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_ktBizworkspro.png",
+    logoAlt: "케이티클라우드 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000001",
+    badge: "협업 도구",
+    title: "케이티클라우드 비즈웍스 프로",
+    company: "(주)케이티클라우드",
+    tooltips: [
+      {
+        key: "연계",      
+        full: "모바일 공무원증, LDAP",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",       
+        full: "뉴스피드, 드라이브, 메신저, 웹오피스, 캘린더, 화상회의",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",
+        full: "대전광역시 중구",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },   
+  
+  //크리니티 G-Cloud 공공메일
+  card_crinityGMail: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_crinityGMail.png",
+    logoAlt: "크리니티 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000030",
+    badge: "메일",
+    title: "크리니티 G-Cloud 공공메일",
+    company: "(주)케이티클라우드",
+    tooltips: [
+      {
+        key: "연계",     
+        full: "행정표준코드",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",     
+        full: "게시판, 드라이브, 메일, 아카이빙, 주소록, 캘린더, 화상회의, DLP",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",       
+        full: "경상북도개발공사, (재)양산시복지재단",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },   
+
+  //G-Cloud 메일솔루션  
+  card_mailplugGMail: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_mailplugGMail.svg",
+    logoAlt: "메일플러그 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000027",
+    badge: "메일",
+    title: "G-Cloud 메일솔루션",
+    company: "(주)메일플러그",
+    tooltips: [
+      {
+        key: "연계",      
+        full: "행정표준코드",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",       
+        full: "게시판, 메일, 아카이빙, 주소록",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",        
+        full: "서울특별시서대문구도시관리공단",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },   
+
+  //Naver Works for 공공용
+  card_naverworks: {
+    logo: "../img/saas_img/0_common/logo/logo_pr_naverworks.svg",
+    logoAlt: "Naver Works for 공공용 로고 이미지",
+    link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000043",
+    badge: "협업 도구",
+    title: "Naver Works for 공공용",
+    company: "네이버클라우드 주식회사",
+    tooltips: [
+      {
+        key: "연계",       
+        full: "모바일 공무원증, 행정표준코드, LDAP",
+        sr: "연계 전체 보기"
+      },
+      {
+        key: "제공 기능",       
+        full: "게시판, 메신저, 메일, 모니터링, 보안, 설문, 자동화, 정보 공유, 캘린더, 협업, 화상회의",
+        sr: "제공 기능 전체 보기"
+      },
+      {
+        key: "이용 기관",       
+        full: "서울특별시 소방재난본부, 제주특별자치도, 한국농촌경제연구원",
+        sr: "이용 기관 전체 보기"
+      }
+    ]
+  },   
+};
 
 
-// 이체크폼 - ㈜솔비텍
-$(document).ready(function () {
-
-    var card_eCheckForm = "";
-    card_eCheckForm +=  '<div class="case_item_info slide_case_item">';    
-    card_eCheckForm +=     '<div class="case_item_head">'; 
-    card_eCheckForm +=        '<div class="wrap_img">'; 
-    card_eCheckForm +=           '<img src="../img/saas_img/0_common/logo/logo_pr_eCheckForm.png" alt=" 이체크폼 로고 이미지" class="viewer"/>'; 
-    card_eCheckForm +=        '</div>'; 
-    card_eCheckForm +=        '<div class="wrap_govSaas">'; 
-    card_eCheckForm +=           '<span class="tag_codeSys">행정표준코드</span>'; 
-    card_eCheckForm +=        '</div>'; 
-    card_eCheckForm +=        '<div class="wrap_serviceName">'; 
-    card_eCheckForm +=           '<h4 class="title_card service_name">이체크폼</h4>'; 
-    card_eCheckForm +=           '<p class="company_name">㈜솔비텍</p>'; 
-    card_eCheckForm +=        '</div>'; 
-    card_eCheckForm +=     '</div>';     
-    card_eCheckForm +=     '<div class="case_item_inner">'; 
-    card_eCheckForm +=         '<div class="wrap_tag">'; 
-    card_eCheckForm +=            '<span class="service_tag">현장관리</span>'; 
-    card_eCheckForm +=            '<span class="service_tag">전자서식</span>'; 
-    card_eCheckForm +=         '</div>'; 
-    card_eCheckForm +=      '</div>'; 
-    card_eCheckForm +=      '<div class="case_item_bottom">';  
-    card_eCheckForm +=         '<div class="wrap_office">'; 
-    card_eCheckForm +=            '<h5>이용 기관</h5>'; 
-    card_eCheckForm +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_eCheckForm +=         '</div>'; 
-    card_eCheckForm +=         '<div class="wrap_btn">';
-    card_eCheckForm +=            '<div class="btn_openInNew">';
-    card_eCheckForm +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 이체크폼 상세 보기 페이지로 이동">자세히 보기</a>';    
-    card_eCheckForm +=            '</div>'; 
-    card_eCheckForm +=         '</div>'; 
-    card_eCheckForm +=       '</div>'; 
-    card_eCheckForm +=    '</div>'; 
-
-    $(".case_card.card_eCheckForm").html(card_eCheckForm);
-});
 
 
-// 이폼사인(eformsign) - 주식회사 포시에스
-$(document).ready(function () {
+/* =========================
+  말줄임 여부 체크
+========================= */
+function updateTooltipEllipsis() {
+  document.querySelectorAll(".wrap-tooltip").forEach(wrap => {
+    const value = wrap.querySelector(".value");
+    const action = wrap.querySelector(".tooltip-action");
 
-    var card_eFormSign = "";
-    card_eFormSign +=  '<div class="case_item_info slide_case_item">';    
-    card_eFormSign +=     '<div class="case_item_head">'; 
-    card_eFormSign +=        '<div class="wrap_img">'; 
-    card_eFormSign +=           '<img src="../img/saas_img/0_common/logo/logo_pr_eFormSign.svg" alt=" 이폼사인 로고 이미지" class="viewer"/>'; 
-    card_eFormSign +=        '</div>'; 
-    card_eFormSign +=        '<div class="wrap_govSaas">'; 
-    card_eFormSign +=           '<span class="tag_dirSys">LDAP</span>';
-    card_eFormSign +=        '</div>'; 
-    card_eFormSign +=        '<div class="wrap_serviceName">'; 
-    card_eFormSign +=           '<h4 class="title_card service_name">이폼사인<span class="txt_small"> (eformsign)</span></h4>'; 
-    card_eFormSign +=           '<p class="company_name">주식회사 포시에스</p>'; 
-    card_eFormSign +=        '</div>'; 
-    card_eFormSign +=     '</div>';     
-    card_eFormSign +=     '<div class="case_item_inner">'; 
-    card_eFormSign +=         '<div class="wrap_tag">'; 
-    card_eFormSign +=            '<span class="service_tag">전자계약</span>'; 
-    card_eFormSign +=            '<span class="service_tag">전자서명</span>'; 
-    card_eFormSign +=            '<span class="service_tag">전자도장</span>'; 
-    card_eFormSign +=            '<span class="service_tag">전자문서</span>'; 
-    card_eFormSign +=         '</div>'; 
-    card_eFormSign +=      '</div>'; 
-    card_eFormSign +=      '<div class="case_item_bottom">';  
-    card_eFormSign +=         '<div class="wrap_office">'; 
-    card_eFormSign +=            '<h5>이용 기관</h5>'; 
-    card_eFormSign +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_eFormSign +=         '</div>'; 
-    card_eFormSign +=         '<div class="wrap_btn">';
-    card_eFormSign +=            '<div class="btn_openInNew">';
-    card_eFormSign +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 이폼사인 상세 보기 페이지로 이동">자세히 보기</a>';     
-    card_eFormSign +=            '</div>'; 
-    card_eFormSign +=         '</div>'; 
-    card_eFormSign +=       '</div>'; 
-    card_eFormSign +=    '</div>'; 
+    if (!value || !action) return;
 
-    $(".case_card.card_eFormSign").html(card_eFormSign);
-});
+    // 모바일/PC 공통 줄 계산
+    const style = getComputedStyle(value);
+    const lineHeight = parseFloat(style.lineHeight);
 
+    // line-height가 auto일 경우 대비
+    if (!lineHeight) return;
 
-// 크리니티 G-Cloud 공공메일 - 크리니티㈜
-$(document).ready(function () {
+    const lines = Math.round(value.scrollHeight / lineHeight);
 
-    var card_crinityGMail = "";
-    card_crinityGMail +=  '<div class="case_item_info slide_case_item">';    
-    card_crinityGMail +=     '<div class="case_item_head">'; 
-    card_crinityGMail +=        '<div class="wrap_img">'; 
-    card_crinityGMail +=           '<img src="../img/saas_img/0_common/logo/logo_pr_crinityGMail.png" alt=" 크리니티 로고 이미지" class="viewer"/>'; 
-    card_crinityGMail +=        '</div>'; 
-    card_crinityGMail +=        '<div class="wrap_govSaas">'; 
-    card_crinityGMail +=           '<span class="tag_codeSys">행정표준코드</span>'; 
-    card_crinityGMail +=        '</div>'; 
-    card_crinityGMail +=        '<div class="wrap_serviceName">'; 
-    card_crinityGMail +=           '<h4 class="title_card service_name">크리니티 G-Cloud 공공메일</h4>'; 
-    card_crinityGMail +=           '<p class="company_name">크리니티㈜</p>'; 
-    card_crinityGMail +=        '</div>'; 
-    card_crinityGMail +=     '</div>';     
-    card_crinityGMail +=     '<div class="case_item_inner">'; 
-    card_crinityGMail +=         '<div class="wrap_tag">'; 
-    card_crinityGMail +=            '<span class="service_tag">공공용 클라우드 메일시스템</span>'; 
-    card_crinityGMail +=         '</div>'; 
-    card_crinityGMail +=      '</div>'; 
-    card_crinityGMail +=      '<div class="case_item_bottom">';  
-    card_crinityGMail +=         '<div class="wrap_office">'; 
-    card_crinityGMail +=            '<h5>이용 기관</h5>'; 
-    card_crinityGMail +=             '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_crinityGMail +=         '</div>'; 
-    card_crinityGMail +=         '<div class="wrap_btn">';
-    card_crinityGMail +=            '<div class="btn_openInNew">';
-    card_crinityGMail +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 크리니티 지 클라우드 공공메일 상세 보기 페이지로 이동">자세히 보기</a>';  
-    card_crinityGMail +=            '</div>'; 
-    card_crinityGMail +=         '</div>'; 
-    card_crinityGMail +=       '</div>'; 
-    card_crinityGMail +=    '</div>'; 
+    if (lines > 1) {
+      value.classList.add("is-ellipsis");
+      action.style.display = "inline-flex";
+    } else {
+      value.classList.remove("is-ellipsis");
+      action.style.display = "none";
+    }
+  });
+}
 
-    $(".case_card.card_crinityGMail").html(card_crinityGMail);
-});
-
-
-// G-Cloud 메일솔루션 - 메일플러그
-$(document).ready(function () {
-
-    var card_mailplugGMail = "";
-    card_mailplugGMail +=  '<div class="case_item_info slide_case_item">';    
-    card_mailplugGMail +=     '<div class="case_item_head">'; 
-    card_mailplugGMail +=        '<div class="wrap_img">'; 
-    card_mailplugGMail +=           '<img src="../img/saas_img/0_common/logo/logo_pr_mailplugGMail.svg" alt=" 메일플러그 로고 이미지" class="viewer"/>'; 
-    card_mailplugGMail +=        '</div>'; 
-    card_mailplugGMail +=        '<div class="wrap_govSaas">'; 
-    card_mailplugGMail +=           '<span class="tag_codeSys">행정표준코드</span>'; 
-    card_mailplugGMail +=        '</div>'; 
-    card_mailplugGMail +=        '<div class="wrap_serviceName">'; 
-    card_mailplugGMail +=           '<h4 class="title_card service_name">G-Cloud 메일솔루션</h4>'; 
-    card_mailplugGMail +=           '<p class="company_name">메일플러그</p>'; 
-    card_mailplugGMail +=        '</div>'; 
-    card_mailplugGMail +=     '</div>';     
-    card_mailplugGMail +=     '<div class="case_item_inner">'; 
-    card_mailplugGMail +=         '<div class="wrap_tag">'; 
-    card_mailplugGMail +=            '<span class="service_tag">메일시스템</span>'; 
-    card_mailplugGMail +=         '</div>'; 
-    card_mailplugGMail +=      '</div>'; 
-    card_mailplugGMail +=      '<div class="case_item_bottom">';  
-    card_mailplugGMail +=         '<div class="wrap_office">'; 
-    card_mailplugGMail +=            '<h5>이용 기관</h5>'; 
-    card_mailplugGMail +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_mailplugGMail +=         '</div>'; 
-    card_mailplugGMail +=         '<div class="wrap_btn">';
-    card_mailplugGMail +=            '<div class="btn_openInNew">';
-    card_mailplugGMail +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 메일플러그 상세 보기 페이지로 이동">자세히 보기</a>';  
-    card_mailplugGMail +=            '</div>'; 
-    card_mailplugGMail +=         '</div>'; 
-    card_mailplugGMail +=       '</div>'; 
-    card_mailplugGMail +=    '</div>'; 
-
-    $(".case_card.card_mailplugGMail").html(card_mailplugGMail);
-});
-
-
-// G-Smartlink - SK렌터카(주)
-$(document).ready(function () {
-
-    var card_GSmartlink = "";
-    card_GSmartlink +=  '<div class="case_item_info slide_case_item">';    
-    card_GSmartlink +=     '<div class="case_item_head">'; 
-    card_GSmartlink +=        '<div class="wrap_img">'; 
-    card_GSmartlink +=           '<img src="../img/saas_img/0_common/logo/logo_pr_GSmartlink.png" alt=" 지 스마트링크 로고 이미지" class="viewer"/>'; 
-    card_GSmartlink +=        '</div>'; 
-    card_GSmartlink +=        '<div class="wrap_govSaas">'; 
-    card_GSmartlink +=           '<span class="tag_dirSys">LDAP</span>';
-    card_GSmartlink +=        '</div>'; 
-    card_GSmartlink +=        '<div class="wrap_serviceName">'; 
-    card_GSmartlink +=           '<h4 class="title_card service_name">G-Smartlink</h4>'; 
-    card_GSmartlink +=           '<p class="company_name">SK렌터카(주)</p>'; 
-    card_GSmartlink +=        '</div>'; 
-    card_GSmartlink +=     '</div>';     
-    card_GSmartlink +=     '<div class="case_item_inner">'; 
-    card_GSmartlink +=         '<div class="wrap_tag">'; 
-    card_GSmartlink +=            '<span class="service_tag">차량관리</span>'; 
-    card_GSmartlink +=            '<span class="service_tag">차량예약</span>'; 
-    card_GSmartlink +=         '</div>'; 
-    card_GSmartlink +=      '</div>'; 
-    card_GSmartlink +=      '<div class="case_item_bottom">';  
-    card_GSmartlink +=         '<div class="wrap_office">'; 
-    card_GSmartlink +=            '<h5>이용 기관</h5>'; 
-    card_GSmartlink +=           '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_GSmartlink +=         '</div>'; 
-    card_GSmartlink +=         '<div class="wrap_btn">';
-    card_GSmartlink +=            '<div class="btn_openInNew">';
-    card_GSmartlink +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 지 스마트링크 상세 보기 페이지로 이동">자세히 보기</a>';  
-    card_GSmartlink +=            '</div>'; 
-    card_GSmartlink +=         '</div>'; 
-    card_GSmartlink +=       '</div>'; 
-    card_GSmartlink +=    '</div>'; 
-
-    $(".case_card.card_GSmartlink").html(card_GSmartlink);
-});
-
-
-// KT AI Contact Center - 케이티
-$(document).ready(function () {
-
-    var card_ktAiContact = "";
-    card_ktAiContact +=  '<div class="case_item_info slide_case_item">';    
-    card_ktAiContact +=     '<div class="case_item_head">'; 
-    card_ktAiContact +=        '<div class="wrap_img">'; 
-    card_ktAiContact +=           '<img src="../img/saas_img/0_common/logo/logo_pr_ktAiContact.png" alt="케이티 로고 이미지" class="viewer"/>'; 
-    card_ktAiContact +=        '</div>'; 
-    card_ktAiContact +=        '<div class="wrap_govSaas">'; 
-    card_ktAiContact +=           '<span class="tag_dirSys">LDAP</span>';
-    card_ktAiContact +=        '</div>'; 
-    card_ktAiContact +=        '<div class="wrap_serviceName">'; 
-    card_ktAiContact +=           '<h4 class="title_card service_name">KT AI Contact Center</h4>'; 
-    card_ktAiContact +=           '<p class="company_name">케이티</p>'; 
-    card_ktAiContact +=        '</div>'; 
-    card_ktAiContact +=     '</div>';     
-    card_ktAiContact +=     '<div class="case_item_inner">'; 
-    card_ktAiContact +=         '<div class="wrap_tag">'; 
-    card_ktAiContact +=            '<span class="service_tag">보이스봇</span>'; 
-    card_ktAiContact +=            '<span class="service_tag">챗봇</span>'; 
-    card_ktAiContact +=            '<span class="service_tag">통합대시보드</span>'; 
-    card_ktAiContact +=         '</div>'; 
-    card_ktAiContact +=      '</div>'; 
-    card_ktAiContact +=      '<div class="case_item_bottom">';  
-    card_ktAiContact +=         '<div class="wrap_office">'; 
-    card_ktAiContact +=            '<h5>이용 기관</h5>'; 
-    card_ktAiContact +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>';  
-    card_ktAiContact +=         '</div>'; 
-    card_ktAiContact +=         '<div class="wrap_btn">';
-    card_ktAiContact +=            '<div class="btn_openInNew">';
-    card_ktAiContact +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 케이티 에이아이 콘텍트 센터 상세 보기 페이지로 이동">자세히 보기</a>';     
-    card_ktAiContact +=            '</div>'; 
-    card_ktAiContact +=         '</div>'; 
-    card_ktAiContact +=       '</div>'; 
-    card_ktAiContact +=    '</div>'; 
-
-    $(".case_card.card_ktAiContact").html(card_ktAiContact);
-});
-
-
-// KT Cloud BizMeet - 주식회사 케이티클라우드
-$(document).ready(function () {
-
-    var card_ktBizmeet = "";
-    card_ktBizmeet +=  '<div class="case_item_info slide_case_item">';    
-    card_ktBizmeet +=     '<div class="case_item_head">'; 
-    card_ktBizmeet +=        '<div class="wrap_img">'; 
-    card_ktBizmeet +=           '<img src="../img/saas_img/0_common/logo/logo_pr_ktBizmeet.png" alt="케이티 클라우드 비즈 밋 로고 이미지" class="viewer"/>'; 
-    card_ktBizmeet +=        '</div>'; 
-    card_ktBizmeet +=        '<div class="wrap_govSaas">'; 
-    card_ktBizmeet +=           '<span class="tag_codeSys">행정표준코드</span>'; 
-    card_ktBizmeet +=        '</div>'; 
-    card_ktBizmeet +=        '<div class="wrap_serviceName">'; 
-    card_ktBizmeet +=           '<h4 class="title_card service_name">KT Cloud BizMeet</h4>'; 
-    card_ktBizmeet +=           '<p class="company_name">주식회사 케이티클라우드</p>'; 
-    card_ktBizmeet +=        '</div>'; 
-    card_ktBizmeet +=     '</div>';     
-    card_ktBizmeet +=     '<div class="case_item_inner">'; 
-    card_ktBizmeet +=         '<div class="wrap_tag">'; 
-    card_ktBizmeet +=            '<span class="service_tag">화상회의</span>'; 
-    card_ktBizmeet +=            '<span class="service_tag">문제 출제</span>'; 
-    card_ktBizmeet +=            '<span class="service_tag">채팅</span>'; 
-    card_ktBizmeet +=            '<span class="service_tag">문서 공유</span>'; 
-    card_ktBizmeet +=            '<span class="service_tag">판서</span>'; 
-    card_ktBizmeet +=            '<span class="service_tag">녹화</span>'; 
-    card_ktBizmeet +=         '</div>'; 
-    card_ktBizmeet +=      '</div>'; 
-    card_ktBizmeet +=      '<div class="case_item_bottom">';  
-    card_ktBizmeet +=         '<div class="wrap_office">'; 
-    card_ktBizmeet +=            '<h5>이용 기관</h5>'; 
-    card_ktBizmeet +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_ktBizmeet +=         '</div>'; 
-    card_ktBizmeet +=         '<div class="wrap_btn">';
-    card_ktBizmeet +=            '<div class="btn_openInNew">';
-    card_ktBizmeet +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 케이티 클라우드 비즈 밋 상세 보기 페이지로 이동">자세히 보기</a>';     
-    card_ktBizmeet +=            '</div>'; 
-    card_ktBizmeet +=         '</div>'; 
-    card_ktBizmeet +=       '</div>'; 
-    card_ktBizmeet +=    '</div>'; 
-
-    $(".case_card.card_ktBizmeet").html(card_ktBizmeet);
-});
-
-
-// KT Cloud BizWorks Pro - 주식회사 케이티클라우드
-$(document).ready(function () {
-
-    var card_ktBizworkspro = "";
-    card_ktBizworkspro +=  '<div class="case_item_info slide_case_item">';    
-    card_ktBizworkspro +=     '<div class="case_item_head">'; 
-    card_ktBizworkspro +=        '<div class="wrap_img">'; 
-    card_ktBizworkspro +=           '<img src="../img/saas_img/0_common/logo/logo_pr_ktBizworkspro.png" alt="케이티 클라우드 로고 이미지" class="viewer"/>'; 
-    card_ktBizworkspro +=        '</div>'; 
-    card_ktBizworkspro +=        '<div class="wrap_govSaas">'; 
-    card_ktBizworkspro +=           '<span class="tag_dirSys">LDAP</span>';
-    card_ktBizworkspro +=           '<span class="tag_idCard">모바일 공무원증</span>';
-    card_ktBizworkspro +=        '</div>'; 
-    card_ktBizworkspro +=        '<div class="wrap_serviceName">'; 
-    card_ktBizworkspro +=           '<h4 class="title_card service_name">KT Cloud BizWorks Pro</h4>'; 
-    card_ktBizworkspro +=           '<p class="company_name">주식회사 케이티클라우드</p>'; 
-    card_ktBizworkspro +=        '</div>'; 
-    card_ktBizworkspro +=     '</div>';     
-    card_ktBizworkspro +=     '<div class="case_item_inner">'; 
-    card_ktBizworkspro +=         '<div class="wrap_tag">'; 
-    card_ktBizworkspro +=            '<span class="service_tag">뉴스피드</span>'; 
-    card_ktBizworkspro +=            '<span class="service_tag">메신저</span>'; 
-    card_ktBizworkspro +=            '<span class="service_tag">일정</span>'; 
-    card_ktBizworkspro +=            '<span class="service_tag">드라이브</span>'; 
-    card_ktBizworkspro +=            '<span class="service_tag">웹오피스</span>'; 
-    card_ktBizworkspro +=            '<span class="service_tag">화상회의</span>'; 
-    card_ktBizworkspro +=            '<span class="service_tag">문자인증</span>'; 
-    card_ktBizworkspro +=         '</div>'; 
-    card_ktBizworkspro +=      '</div>'; 
-    card_ktBizworkspro +=      '<div class="case_item_bottom">';  
-    card_ktBizworkspro +=         '<div class="wrap_office">'; 
-    card_ktBizworkspro +=            '<h5>이용 기관</h5>'; 
-    card_ktBizworkspro +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_ktBizworkspro +=         '</div>'; 
-    card_ktBizworkspro +=         '<div class="wrap_btn">';
-    card_ktBizworkspro +=            '<div class="btn_openInNew">';
-    card_ktBizworkspro +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 케이티 클라우드 비즈 웍스 프로 상세 보기 페이지로 이동">자세히 보기</a>';      
-    card_ktBizworkspro +=            '</div>'; 
-    card_ktBizworkspro +=         '</div>'; 
-    card_ktBizworkspro +=       '</div>'; 
-    card_ktBizworkspro +=    '</div>'; 
-
-    $(".case_card.card_ktBizworkspro").html(card_ktBizworkspro);
-});
-
-
-// NAVER WORKS 공공용 - 네이버클라우드
-$(document).ready(function () {
-
-    var card_naverworks = "";
-    card_naverworks +=  '<div class="case_item_info slide_case_item">';    
-    card_naverworks +=     '<div class="case_item_head">'; 
-    card_naverworks +=        '<div class="wrap_img">'; 
-    card_naverworks +=           '<img src="../img/saas_img/0_common/logo/logo_pr_naverworks.svg" alt="네이버 웍스 공공용 로고 이미지" class="viewer"/>'; 
-    card_naverworks +=        '</div>'; 
-    card_naverworks +=        '<div class="wrap_govSaas">'; 
-    card_naverworks +=           '<span class="tag_dirSys">LDAP</span>';
-    card_naverworks +=           '<span class="tag_idCard">모바일 공무원증</span>';
-    card_naverworks +=        '</div>'; 
-    card_naverworks +=        '<div class="wrap_serviceName">'; 
-    card_naverworks +=           '<h4 class="title_card service_name">NAVER WORKS 공공용</h4>'; 
-    card_naverworks +=           '<p class="company_name">네이버클라우드</p>'; 
-    card_naverworks +=        '</div>'; 
-    card_naverworks +=     '</div>';     
-    card_naverworks +=     '<div class="case_item_inner">'; 
-    card_naverworks +=         '<div class="wrap_tag">'; 
-    card_naverworks +=            '<span class="service_tag">메시지</span>'; 
-    card_naverworks +=            '<span class="service_tag">메일</span>'; 
-    card_naverworks +=            '<span class="service_tag">캘린더</span>'; 
-    card_naverworks +=            '<span class="service_tag">게시판</span>'; 
-    card_naverworks +=            '<span class="service_tag">할일</span>'; 
-    card_naverworks +=            '<span class="service_tag">설문</span>'; 
-    card_naverworks +=            '<span class="service_tag">주소록</span>'; 
-    card_naverworks +=            '<span class="service_tag">메시지봇</span>'; 
-    card_naverworks +=            '<span class="service_tag">관리자페이지</span>'; 
-    card_naverworks +=         '</div>';
-    card_naverworks +=      '</div>'; 
-    card_naverworks +=      '<div class="case_item_bottom">';  
-    card_naverworks +=         '<div class="wrap_office">'; 
-    card_naverworks +=            '<h5>이용 기관</h5>'; 
-    card_naverworks +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_naverworks +=         '</div>'; 
-    card_naverworks +=         '<div class="wrap_btn">';
-    card_naverworks +=            '<div class="btn_openInNew">';
-    card_naverworks +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 네이버 웍스 공공용 상세 보기 페이지로 이동">자세히 보기</a>';      
-    card_naverworks +=            '</div>'; 
-    card_naverworks +=         '</div>'; 
-    card_naverworks +=       '</div>'; 
-    card_naverworks +=    '</div>'; 
-
-    $(".case_card.card_naverworks").html(card_naverworks);
-});
-
-
-// PAMs(지능형 능동행정 공공지원사업 매칭서비스) - 비즈데이터
-$(document).ready(function () {
-
-    var card_pams = "";
-    card_pams +=  '<div class="case_item_info slide_case_item">';    
-    card_pams +=     '<div class="case_item_head">'; 
-    card_pams +=        '<div class="wrap_img">'; 
-    card_pams +=           '<img src="../img/saas_img/0_common/logo/logo_pr_pams.svg" alt="PAMs 로고 이미지" class="viewer"/>'; 
-    card_pams +=        '</div>'; 
-    card_pams +=        '<div class="wrap_govSaas">'; 
-    card_pams +=           '<span class="tag_idCard">모바일 공무원증</span>';
-    card_pams +=        '</div>'; 
-    card_pams +=        '<div class="wrap_serviceName">'; 
-    card_pams +=           '<h4 class="title_card service_name">PAMs<span class="txt_small"> (지능형 능동행정 공공지원사업 매칭서비스)</span></h4>'; 
-    card_pams +=           '<p class="company_name">비즈데이터</p>'; 
-    card_pams +=        '</div>'; 
-    card_pams +=     '</div>';     
-    card_pams +=     '<div class="case_item_inner">'; 
-    card_pams +=         '<div class="wrap_tag">'; 
-    card_pams +=            '<span class="service_tag">지원사업</span>'; 
-    card_pams +=            '<span class="service_tag">정책자금</span>'; 
-    card_pams +=            '<span class="service_tag">공공사업</span>'; 
-    card_pams +=            '<span class="service_tag">관내기업관리</span>'; 
-    card_pams +=            '<span class="service_tag">맞춤지원사업</span>'; 
-    card_pams +=            '<span class="service_tag">정책매칭</span>'; 
-    card_pams +=            '<span class="service_tag">관심기업관리</span>'; 
-    card_pams +=            '<span class="service_tag">공공지원사업</span>'; 
-    card_pams +=            '<span class="service_tag">자금지원</span>'; 
-    card_pams +=            '<span class="service_tag">타기관 유사 지원사업</span>'; 
-    card_pams +=         '</div>'; 
-    card_pams +=      '</div>'; 
-    card_pams +=      '<div class="case_item_bottom">';  
-    card_pams +=         '<div class="wrap_office">'; 
-    card_pams +=            '<h5>이용 기관</h5>'; 
-    card_pams +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_pams +=         '</div>'; 
-    card_pams +=         '<div class="wrap_btn">';
-    card_pams +=            '<div class="btn_openInNew">';    
-    card_pams +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 PAMs(지능형 능동행정 공공지원사업 매칭서비스) 상세 보기 페이지로 이동">자세히 보기</a>';      
-    card_pams +=            '</div>'; 
-    card_pams +=         '</div>'; 
-    card_pams +=       '</div>'; 
-    card_pams +=    '</div>'; 
-
-    $(".case_card.card_pams").html(card_pams);
-});
-
-
-// Sgate(StrategyGate) - 이즈파크
-$(document).ready(function () {
-
-    var card_sgate = "";
-    card_sgate +=  '<div class="case_item_info slide_case_item">';    
-    card_sgate +=     '<div class="case_item_head">'; 
-    card_sgate +=        '<div class="wrap_img">'; 
-    card_sgate +=           '<img src="../img/saas_img/0_common/logo/logo_pr_sgate.png" alt="에스게이트 로고 이미지" class="viewer"/>'; 
-    card_sgate +=        '</div>'; 
-    card_sgate +=        '<div class="wrap_govSaas">'; 
-    card_sgate +=           '<span class="tag_dirSys">LDAP</span>';
-    card_sgate +=           '<span class="tag_idCard">모바일 공무원증</span>';
-    card_sgate +=        '</div>'; 
-    card_sgate +=        '<div class="wrap_serviceName">'; 
-    card_sgate +=           '<h4 class="title_card service_name">Sgate<span class="txt_small"> (StrategyGate)</span></h4>'; 
-    card_sgate +=           '<p class="company_name">이즈파크</p>'; 
-    card_sgate +=        '</div>'; 
-    card_sgate +=     '</div>';     
-    card_sgate +=     '<div class="case_item_inner">'; 
-    card_sgate +=         '<div class="wrap_tag">'; 
-    card_sgate +=            '<span class="service_tag">성과관리 시스템</span>'; 
-    card_sgate +=         '</div>'; 
-    card_sgate +=      '</div>'; 
-    card_sgate +=      '<div class="case_item_bottom">'; 
-    card_sgate +=         '<div class="wrap_office">'; 
-    card_sgate +=            '<h5>이용 기관</h5>'; 
-    card_sgate +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_sgate +=         '</div>'; 
-    card_sgate +=         '<div class="wrap_btn">';
-    card_sgate +=            '<div class="btn_openInNew">';
-    card_sgate +=               '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 에스게이트 상세 보기 페이지로 이동">자세히 보기</a>';   
-    card_sgate +=            '</div>'; 
-    card_sgate +=         '</div>'; 
-    card_sgate +=       '</div>'; 
-    card_sgate +=    '</div>'; 
-
-    $(".case_card.card_sgate").html(card_sgate);
-});
-
-
-// Zenius EMS - 브레인즈컴퍼니
-$(document).ready(function () {
-
-    var card_zeniusEms = "";
-    card_zeniusEms +=  '<div class="case_item_info slide_case_item">';    
-    card_zeniusEms +=     '<div class="case_item_head">'; 
-    card_zeniusEms +=        '<div class="wrap_img">'; 
-    card_zeniusEms +=           '<img src="../img/saas_img/0_common/logo/logo_pr_zeniusEms.png" alt="지니어스 이엠에스 로고 이미지" class="viewer"/>'; 
-    card_zeniusEms +=        '</div>'; 
-    card_zeniusEms +=        '<div class="wrap_govSaas">'; 
-    card_zeniusEms +=           '<span class="tag_dirSys">LDAP</span>';
-    card_zeniusEms +=           '<span class="tag_idCard">모바일 공무원증</span>';
-    card_zeniusEms +=        '</div>'; 
-    card_zeniusEms +=        '<div class="wrap_serviceName">'; 
-    card_zeniusEms +=           '<h4 class="title_card service_name">Zenius EMS</h4>'; 
-    card_zeniusEms +=           '<p class="company_name">브레인즈컴퍼니</p>'; 
-    card_zeniusEms +=        '</div>'; 
-    card_zeniusEms +=     '</div>';     
-    card_zeniusEms +=     '<div class="case_item_inner">'; 
-    card_zeniusEms +=         '<div class="wrap_tag">'; 
-    card_zeniusEms +=            '<span class="service_tag">모니터링 시스템</span>'; 
-    card_zeniusEms +=         '</div>'; 
-    card_zeniusEms +=      '</div>'; 
-    card_zeniusEms +=      '<div class="case_item_bottom">';  
-    card_zeniusEms +=         '<div class="wrap_office">'; 
-    card_zeniusEms +=            '<h5>이용 기관</h5>'; 
-    card_zeniusEms +=            '<p>행정안전부, 충청북도, 한국지능정보사회진흥원</p>'; 
-    card_zeniusEms +=         '</div>'; 
-    card_zeniusEms +=         '<div class="wrap_btn">';
-    card_zeniusEms +=            '<div class="btn_openInNew">';
-    card_zeniusEms +=                '<a href="javascript:;" target="_self" class="link_service_anchor" title="공공용 민간 SaaS의 지니어스 이엠에스 상세 보기 페이지로 이동">자세히 보기</a>';     
-    card_zeniusEms +=            '</div>'; 
-    card_zeniusEms +=         '</div>'; 
-    card_zeniusEms +=       '</div>'; 
-    card_zeniusEms +=    '</div>'; 
-
-    $(".case_card.card_zeniusEms").html(card_zeniusEms);
-});

@@ -1,0 +1,938 @@
+/* 구조화 목록 */
+//사이즈 정의
+@mixin structured-list-size-variable() {
+  //변수 배열 생성
+  $structuredlist-settings: (
+    wrap: (
+      gap: var(--krds-gap-7)
+    ),
+    list: (
+      gap: var(--krds-gap-5),
+      padding-small-size: var(--krds-padding-8),
+      padding-medium-size: var(--krds-padding-9),
+      padding-large-size: var(--krds-padding-10),
+      radius: var(--krds-radius-xlarge2),
+      inner-gap: var(--krds-gap-5),
+      column-gap: var(--krds-gap-7),
+      first-element-margin: var(--krds-gap-3)
+    ),
+    card: (
+      body-gap: var(--krds-gap-7),
+      body-cont-gap: var(--krds-gap-5),
+      body-title-gap: var(--krds-gap-1),
+      body-title-pc-font-size: var(--krds-pc-font-size-heading-small),
+      body-title-mobile-font-size: var(--krds-mobile-font-size-heading-small),
+      body-title-pc-font-size-small: var(--krds-pc-font-size-heading-xsmall),
+      body-title-mobile-font-size-small:
+        var(--krds-mobile-font-size-heading-xsmall),
+      body-title-icon-size: var(--krds-size-height-4),
+      body-txt-margin-bottom: var(--krds-gap-2),
+      body-date-gap: var(--krds-gap-3),
+      bottom-gap: var(--krds-gap-3),
+      bottom-padding-top: var(--krds-padding-6),
+      bottom-margin-top: var(--krds-padding-3),
+      buttons-position-top-small-size: var(--krds-gap-7),
+      buttons-position-right-small-size: var(--krds-gap-7),
+      buttons-position-right-medium-size: var(--krds-gap-8),
+      buttons-position-top-medium-size: var(--krds-gap-8),
+      buttons-position-right-large-size: var(--krds-gap-9),
+      buttons-position-top-large-size: var(--krds-gap-9),
+      buttons-gap: var(--krds-gap-5),
+      buttons-size-height: var(--krds-size-height-4)
+    ),
+    tag: (
+      size-height: var(--krds-size-height-5),
+      pc-font-size: var(--krds-pc-font-size-label-small),
+      mobile-font-size: var(--krds-mobile-font-size-label-small),
+      padding-x: var(--krds-padding-4),
+      radius: var(--krds-radius-max)
+    )
+  ) !default;
+
+  //css variable 생성
+  @each $target, $types in $structuredlist-settings {
+    @each $type, $value in $types {
+      --krds-structured-list--#{$target}-#{$type}: #{$value};
+    }
+  }
+  @include size-medium {
+    --krds-structured-list--wrap-gap: var(--krds-gap-5);
+    --krds-structured-list--list-gap: var(--krds-gap-4);
+    --krds-structured-list--list-padding-medium-size: var(--krds-padding-8);
+    --krds-structured-list--list-inner-gap: var(--krds-gap-7);
+    --krds-structured-list--list-first-element-margin: var(--krds-gap-2);
+    --krds-structured-list--card-body-gap: var(--krds-gap-5);
+    --krds-structured-list--card-body-cont-gap: var(--krds-gap-4);
+    --krds-structured-list--card-bottom-margin-top: var(--krds-gap-2);
+  }
+}
+
+//structuredlist card size
+@mixin structured-list-card-size($unit) {
+  @if ($unit == small) {
+    .card-body {
+      .c-tit {
+        font-size: var(
+          --krds-structured-list--card-body-title-pc-font-size-#{$unit}
+        );
+        @include size-medium {
+          font-size: var(
+            --krds-structured-list--card-body-title-mobile-font-size-#{$unit}
+          );
+        }
+      }
+    }
+  } @else {
+    .card-body {
+      .c-tit {
+        font-size: var(--krds-structured-list--card-body-title-pc-font-size);
+        @include size-medium {
+          font-size: var(
+            --krds-structured-list--card-body-title-mobile-font-size
+          );
+        }
+      }
+    }
+  }
+
+  > li {
+    padding: var(--krds-structured-list--list-padding-#{$unit}-size);
+  }
+
+  .card-btn {
+    @include position(
+      $t: var(--krds-structured-list--card-buttons-position-top-#{$unit}-size),
+      $r: var(--krds-structured-list--card-buttons-position-right-#{$unit}-size)
+    );
+  }
+}
+
+//컬러 정의
+@mixin structured-list-color-variable($mode: light) {
+  --krds-structured-list--tag-color-text: #333c98;
+  // --krds-structured-list--tag-color-text: var(--krds-#{$mode}-color-text-basic);
+  --krds-structured-list--tag-color-text-visited: var(
+    --krds-#{$mode-setting}-color-link-visited
+  );
+  --krds-structured-list--tag-color-border: #333c98;
+  // --krds-structured-list--tag-color-border: var(--krds-#{$mode}-color-border-gray-light);
+  --krds-structured-list--tag-color-action: var(
+    --krds-#{$mode}-color-action-white
+  );
+  --krds-structured-list--list-color-surface: var(
+    --krds-#{$mode}-color-surface-white-subtle
+  );
+  --krds-structured-list--list-color-border: var(
+    --krds-#{$mode}-color-border-gray
+  );
+  --krds-structured-list--list-color-action-active: var(
+    --krds-#{$mode}-color-link-default
+  );
+  --krds-structured-list--list-action-outline-width: var(
+    --krds-#{$mode}-border-width-variable-medium
+  );
+  --krds-structured-list--card-bottom-color-border: var(
+    --krds-#{$mode}-color-divider-gray-light
+  );
+  --krds-structured-list--card-body-color-text: var(
+    --krds-#{$mode}-color-text-subtle
+  );
+  --krds-structured-list--card-body-divider-width: var(
+    --krds-#{$mode}-border-width-variable-regular
+  );
+  --krds-structured-list--card-body-divider-color-divider: var(
+    --krds-#{$mode}-color-divider-gray-light
+  );
+  --krds-structured-list--border-width: var(
+    --krds-#{$mode}-border-width-variable-regular
+  );
+  --krds-structured-list--full-card-body-meta-color-text: var(
+    --krds-#{$mode}-color-text-subtle
+  );
+}
+
+@mixin type-check-button-position($unit) {
+  $btn-pos: calc(
+    var(--krds-structured-list--list-gap) +
+      var(--krds-structured-list--card-buttons-position-top-#{$unit}-size) +
+      var(--krds-size-height-5)
+  );
+
+  .card-btn {
+    top: $btn-pos;
+  }
+}
+
+//모드 설정
+$mode-setting: light;
+.krds-structured-list {
+  @include structured-list-color-variable(#{$mode-setting});
+  @include structured-list-size-variable();
+
+  & {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: var(--krds-structured-list--wrap-gap);
+  }
+
+  //checkbox 형태시 하단 버튼 위치
+  &.type-check {
+    @include type-check-button-position(medium);
+  }
+
+  //카드기본 사이즈 md
+  @include structured-list-card-size(medium);
+
+  > li {
+    position: relative;
+    @include flex-layout($fd: column, $ai: normal);
+    gap: var(--krds-structured-list--list-gap) 0;
+    background: var(--krds-structured-list--list-color-surface);
+    border-radius: var(--krds-structured-list--list-radius);
+    border: var(--krds-structured-list--border-width) solid
+      var(--krds-structured-list--list-color-border);
+    &.is-check {
+      border-color: transparent;
+      outline: var(--krds-structured-list--list-action-outline-width) solid
+        var(--krds-structured-list--list-color-action-active);
+    }
+
+    .in {
+      @include flex-layout($fd: column, $ai: normal);
+      gap: var(--krds-structured-list--list-inner-gap);
+      width: 100%;
+    }
+  }
+
+  &:not(.type-full) {
+    .krds-check-area:first-child,
+    .card-top:first-child {
+      margin-bottom: var(--krds-structured-list--list-first-element-margin);
+    }
+  }
+  //체크박스
+  .krds-check-area {
+    padding-top: 0.4rem;
+    font-size: 0;
+    .krds-form-check input[type='checkbox'] ~ label {
+      &::before {
+        margin-top: 0;
+      }
+      &::after {
+        margin-top: -0.3rem;
+      }
+    }
+  }
+
+  .card-top {
+    @include flex-layout($ai: center);
+    flex-wrap: wrap;
+  }
+  .card-body {
+    @include flex-layout($fd: column, $ai: normal);
+    gap: var(--krds-structured-list--card-body-gap);
+    .c-text {
+      @include flex-layout($fd: column, $ai: normal);
+      gap: var(--krds-structured-list--card-body-cont-gap);
+      word-break: break-all;
+      &:hover {
+        .c-tit {
+          @include underline(0.5rem);
+        }
+      }
+      &:visited {
+        .c-tit {
+          color: var(--krds-structured-list--tag-color-text-visited);
+        }
+      }
+      .c-tit {
+        @include flex-layout($ai: center);
+        gap: var(--krds-structured-list--card-body-title-gap);
+        position: relative;
+        font-weight: var(--krds-font-weight-bold);
+        .span {
+          @include ellipsis(1);
+        }
+        &::after {
+          display: inline-flex;
+          flex-shrink: 0;
+          @include pseudo();
+          @include square(
+            var(--krds-structured-list--card-body-title-icon-size)
+          );
+          @include svg-icon($mode: light);
+          @include icon-set(ico_angle);
+          transform: rotate(-90deg);
+        }
+      }
+      .c-txt {
+        @include ellipsis(3);
+        color: var(--krds-structured-list--card-body-color-text);
+      }
+    }
+    .c-btn {
+      text-align: right;
+    }
+  }
+  .card-btm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--krds-structured-list--card-bottom-gap);
+    padding-top: var(--krds-structured-list--card-bottom-padding-top);
+    margin-top: var(--krds-structured-list--card-bottom-margin-top);
+    border-top: var(--krds-structured-list--border-width) solid
+      var(--krds-structured-list--card-bottom-color-border);
+    .tag {
+      @include flex-layout($d: inline-flex, $ai: center);
+      background-color: var(--krds-structured-list--tag-color-action);
+      height: var(--krds-structured-list--tag-size-height);
+      padding: 0 var(--krds-structured-list--tag-padding-x);
+      font-size: var(--krds-structured-list--tag-pc-font-size);
+      color: var(--krds-structured-list--tag-color-text);
+      border-radius: var(--krds-structured-list--tag-radius);
+      border: var(--krds-structured-list--border-width) solid
+        var(--krds-structured-list--tag-color-border);
+      @include size-medium {
+        font-size: var(--krds-structured-list--tag-mobile-font-size);
+      }
+      &::before {
+        content: '#';
+      }
+    }
+  }
+  .card-btn {
+    @include position(
+      $t: var(--krds-structured-list--card-buttons-position-top-medium-size),
+      $r: var(--krds-structured-list--card-buttons-position-right-medium-size)
+    );
+    display: inline-flex;
+    gap: var(--krds-structured-list--card-buttons-gap);
+    .krds-btn {
+      height: var(--krds-structured-list--card-buttons-size-height);
+    }
+  }
+
+  //카드 사이즈
+  &.sm {
+    @include structured-list-card-size(small);
+    &.type-check {
+      @include type-check-button-position(small);
+    }
+  }
+  &.md {
+    @include structured-list-card-size(medium);
+    &.type-check {
+      @include type-check-button-position(medium);
+    }
+  }
+  &.lg {
+    @include structured-list-card-size(large);
+    &.type-check {
+      @include type-check-button-position(large);
+    }
+  }
+
+  //site 개발 적용 후 &.type2 삭제
+  &.type-full,
+  &.type2 {
+    grid-template-columns: none;
+    --krds-structured-list--full-list-column-gap: var(--krds-gap-7);
+    --krds-structured-list--full-card-top-margin: var(--krds-gap-2);
+    --krds-structured-list--full-card-body-gap: var(--krds-gap-9);
+    --krds-structured-list--full-card-body-cont-gap: var(--krds-gap-5);
+    --krds-structured-list--full-card-btn-position-top: var(--krds-gap-2);
+    --krds-structured-list--full-card-body-meta-gap-y: var(--krds-gap-3);
+    --krds-structured-list--full-card-body-meta-gap-x: var(--krds-gap-4);
+    --krds-structured-list--full-card-body-divider-height: var(
+      --krds-size-height-2
+    );
+    --krds-structured-list--full-card-body-divider-margin-x: var(--krds-gap-3);
+
+    .structured-item {
+      flex-direction: row;
+      column-gap: var(--krds-structured-list--full-list-column-gap);
+
+      .in {
+        position: relative;
+      }
+      .krds-check-area {
+        margin: 0;
+      }
+    }
+    .card-top {
+      margin: var(--krds-structured-list--full-card-top-margin) 0;
+    }
+    .card-body {
+      flex-direction: row;
+      justify-content: space-between;
+      .c-text {
+        flex: 1;
+        margin: 0;
+        .key {
+          white-space: nowrap;
+        }
+      }
+      .c-txt {
+        @include ellipsis(1);
+      }
+      .c-txt-p {
+        @include flex-layout();
+        &:not(:first-child) {
+          //margin-top: var(--krds-structured-list--full-card-body-text-margin-y); 확인필요
+        }
+      }
+      .c-txt-ul {
+        @include flex-layout();
+        flex-wrap: wrap;
+        gap: var(--krds-structured-list--full-card-body-meta-gap-x);
+        column-gap: var(--krds-structured-list--full-card-body-meta-gap-y);
+        li {
+          display: inline-flex;
+          align-items: center;
+          color: var(--krds-structured-list--full-card-body-meta-color-text);
+          &:not(:last-child) {
+            &::after {
+              display: inline-flex;
+              @include pseudo();
+              width: var(--krds-structured-list--card-body-divider-width);
+              height: var(
+                --krds-structured-list--full-card-body-divider-height
+              );
+              margin-left: var(
+                --krds-structured-list--full-card-body-divider-margin-x
+              );
+              background-color: var(
+                --krds-structured-list--card-body-divider-color-divider
+              );
+            }
+          }
+        }
+      }
+    }
+    .card-btm {
+      // margin-top:0;
+      margin-top: 1.6rem;
+    }
+    .card-btn {
+      top: var(--krds-structured-list--full-card-btn-position-top);
+      right: 0;
+    }
+  }
+
+  &.type-full {
+    --krds-structured-list--card-body-title-pc-font-size: var(
+      --krds-pc-font-size-heading-medium
+    );
+    --krds-structured-list--card-body-title-mobile-font-size: var(
+      --krds-mobile-font-size-heading-medium
+    );
+
+    .card-body {
+      .c-tit {
+        // font-size: var(--krds-structured-list--card-body-title-pc-font-size);
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
+
+// custom
+
+//   .box_line_gray {
+//         background-color: $color_white;
+//         border-radius: 2rem;
+//         border: 1px solid $color_ccc;
+//     }
+// 	    .box_line_gray {
+//       border-radius: 1rem;
+//       height: 18rem;
+//       left: 0;
+//       position: absolute;
+//       top: 0;
+//       width: 18rem;
+
+//     //   &.newly_added {
+//     //     border-color: #ed0319;
+
+//     //     .newly_added_tag {
+//     //       position: absolute;
+//     //       top: 9px;
+//     //       left: 9px;
+//     //       width: 4.6rem;
+//     //       height: 2.4rem;
+//     //       border-radius: 1.2rem;
+//     //       background-color: #ed0319;
+//     //       font-size: 1.2rem;
+//     //       color: #fff;
+//     //       font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+//     //       text-align: center;
+//     //       line-height: 2.4rem;
+//     //     }
+//     //   }
+
+//       .wrap_img {
+//         width: 100%;
+//         height: 100%;
+//         padding: 0.8rem;
+
+//         img {
+//           width: 80%;
+//         }
+//       }
+//     }
+
+.tag {
+  @include flex-layout($d: inline-flex, $ai: center);
+  background-color: var(--krds-structured-list--tag-color-action);
+  height: var(--krds-structured-list--tag-size-height);
+  padding: 0 var(--krds-structured-list--tag-padding-x);
+  font-size: var(--krds-structured-list--tag-pc-font-size);
+  color: var(--krds-structured-list--tag-color-text);
+  border-radius: var(--krds-structured-list--tag-radius);
+  // border: var(--krds-structured-list--border-width) solid var(--krds-structured-list--tag-color-border);
+  border: var(--krds-structured-list--border-width) solid
+    var(--krds-structured-list--tag-color-border);
+  @include size-medium {
+    font-size: var(--krds-structured-list--tag-mobile-font-size);
+  }
+  &::before {
+    content: '#';
+  }
+}
+
+// 		.wrap_govSaas {
+// 		background-color: $color_bg_lightblue;
+// 		padding: 0.5rem 0.6rem;
+// 		border-radius: 2rem;
+// 		display: flex;
+// 		gap: 2rem;
+// 		margin-top: 1.6rem;
+
+// 		p {
+// 				font-family: $font_medium;
+// 				color: $color_btn_bl;
+// 				font-size: 1.4rem;
+// 				padding-left: 1.5rem;
+// 				display: flex;
+// 				align-items: center;
+// 		}
+
+// 		.govSaas_tag {
+// 				display: flex;
+// 				gap: 0.6rem;
+
+// 				.tag {
+// 						display: inline-block;
+// 						font-family: $font_medium;
+// 						font-size: 1.2rem;
+// 						color: $color_blue;
+// 						padding: 0.3rem 1.2rem;
+// 						background-color: $color_white;
+// 						border-radius: 1.4rem;
+
+// 						/* 공공용 민간 SaaS 상세페이지 추가 시작 2025-02-05 */
+// 						&.connected {
+// 								background-color: $color_blue;
+// 								color: $color_white;
+// 						}
+// 						/* 공공용 민간 SaaS 상세페이지 추가 끝 2025-02-05 */
+// 				}
+// 		}
+// }
+
+//
+
+.product_list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  .product_item {
+    padding: 4rem;
+    background-color: #fff;
+    border: 1px solid #b1b8be;
+    border-radius: 1.2rem;
+    display: flex;
+  }
+
+  .product_item_inner {
+    display: flex;
+    gap: 4rem;
+
+    .box_logo {
+      background-color: #fff;
+      border-radius: 2rem;
+      border: 1px solid #ccc;
+
+      width: 21.6rem;
+      height: 21.6rem;
+      border-radius: 0.8rem;
+      object-fit: contain;
+      padding: 1.9rem;
+
+      position: relative;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 82%;
+      }
+    }
+
+    .box_txt {
+      // padding-left: 4rem;
+
+      .box_txt_inner {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        
+      }
+
+      .card-top {
+        margin-bottom: 1.8rem;
+      }
+
+      .card-body {
+        // .c_text {
+        // 	width: auto;
+        // }
+
+        .c-tit {
+          a {
+            display: inline-block;
+            width: auto;
+            font-size: 2.4rem;
+            font-weight: bold;
+          }
+
+          // .product_name {
+          // 	position: relative;
+          // 		&::after {
+          // 		display: inline-flex;
+          // 		align-items: center;
+          // 		flex-shrink: 0;
+          // 		content: "";
+          // 		width: var(--krds-icon--size-large);
+          // 		height: var(--krds-icon--size-large);
+          // 		background-color: var(--krds-light-color-text-basic);
+          // 		forced-color-adjust: none;
+          // 		mask-repeat: no-repeat;
+          // 		mask-position: center center;
+          // 		mask-size: contain;
+          // 		mask-image: url(../../img/component/icon/ico_angle.svg);
+          // 		transform: rotate(-90deg);
+          // 	}
+          // //     // font-family: $font_bold;
+          // //     // padding-right: ;
+          // }
+          .company_name {
+            color: #777;
+            margin-top: 0.8rem;
+            margin-bottom: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.b_box {
+  background-color: #e3e9f5;
+  padding: 0.5rem 1.6rem;
+  border-radius: 2rem;
+  display: flex;
+  gap: 1.6rem;
+  flex-grow: 0;
+  width: fit-content;
+  // margin-bottom: 1.6rem;
+  // margin-top: 1.6rem;
+
+  p {
+    font-weight: bold;
+    //   font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #111;
+    font-size: 1.6rem;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+
+    .tag_gov {
+      display: inline;
+      height: 2.6rem;
+      font-size: 1.4rem;
+      background-color: #fff;
+      color: #111;
+      padding: 0.25rem 1rem;
+      border-radius: 1.4rem;
+      border-color: #fff;
+    }
+  }
+
+  .before_mark {
+    padding-left: 2.6rem;
+    &.medal_icon {
+      background-image: url(../../img/icon/icon_medal.svg);
+      background-size: 1.8rem 2.1rem;
+      background-repeat: no-repeat;
+      background-position: left center;
+    }
+  }
+  .b_box {
+    padding-left: 8px;
+  }
+}
+
+.wrap_detail_info {
+  padding-right: 20%;
+  .detail_info_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem 2.4rem;
+    // flex-direction: column;
+    .detail_info_list_item {
+      min-width: 24rem;
+      padding-right: 2.4rem;
+      font-size: 1.6rem;
+      .key {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.wrap_link_area {
+  display: flex;
+  gap: 2.4rem;
+
+  .link_area {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .link_label {
+      font-weight: bold;
+    }
+  }
+}
+
+//
+//
+//
+//
+//
+//
+
+//태블릿 전용 속성
+@include size-medium-to-large {
+  .krds-structured-list {
+    --krds-structured-list--card-buttons-gap: var(--krds-number-3);
+
+    grid-template-columns: 1fr 1fr;
+
+    .card-btn {
+      gap: var(--krds-structured-list--card-buttons-gap);
+    }
+  }
+
+  // custom
+
+  .product_list .product_item_inner {
+    flex-direction: column;
+  }
+  .product_list .product_item_inner .box_logo {
+    margin: auto;
+  }
+
+  .box_txt {
+    padding-left: 0;
+  }
+
+  .b_box {
+    width: max-content;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    padding: 1.6rem 1.2rem;
+  }
+
+  .wrap_link_area {
+    // flex-wrap: wrap;
+  }
+
+  .wrap_link_area .link_area {
+    width: 50%;
+    // justify-content: space-between;
+  }
+}
+
+//모바일 전용
+@include size-medium {
+  .krds-structured-list {
+    grid-template-columns: 1fr;
+
+    .krds-check-area:first-child,
+    .card-top:first-child {
+      margin-bottom: var(--krds-structured-list--list-first-element-margin);
+    }
+
+    .structured-item {
+      // flex-direction: row;
+      flex-wrap: wrap;
+
+      .in {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .krds-check-area {
+        order: -1;
+        width: 100%;
+      }
+    }
+    .card-top {
+      order: -1;
+      flex: 1;
+      flex-wrap: nowrap;
+      min-width: fit-content;
+    }
+    .card-body {
+      width: 100%;
+      .c-date {
+        // width: 50%;
+        flex-wrap: wrap;
+      }
+      .c-btn {
+        align-self: flex-end;
+        text-align: left;
+      }
+    }
+    .card-btm {
+      width: 100%;
+      // margin-top: 1.6rem;
+    }
+    .card-btn {
+      order: -1;
+      position: static;
+    }
+
+    //type full
+    //site 개발 적용 후 &.type2 삭제
+    &.type-full,
+    &.type2 {
+      --krds-structured-list--full-card-body-gap: var(--krds-gap-7);
+      --krds-structured-list--full-card-body-cont-gap: var(--krds-gap-4);
+      --krds-structured-list--full-card-body-meta-gap-y: var(--krds-gap-3);
+
+      .in {
+        gap: 1.6rem;
+      }
+      .card-top {
+        margin: 0;
+      }
+      .card-body {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--krds-structured-list--full-card-body-gap);
+        .c-text {
+          gap: var(--krds-structured-list--full-card-body-cont-gap);
+        }
+        .c-txt-ul {
+          gap: var(--krds-structured-list--full-card-body-meta-gap-y);
+        }
+      }
+    }
+
+    &.type-full {
+      .card-body {
+        .c-tit {
+          font-size: var(
+            --krds-structured-list--card-body-title-mobile-font-size
+          );
+        }
+      }
+    }
+  }
+
+  // custom
+  .product_list .product_item_inner {
+    // display: flex;
+    flex-direction: column;
+  }
+  .product_list .product_item_inner .box_logo {
+    width: 100%;
+    img {
+      max-width: 224px;
+    }
+  }
+
+  .b_box {
+    flex-wrap: wrap;
+  }
+  .wrap_link_area {
+    flex-wrap: wrap;
+  }
+
+  .wrap_link_area .link_area {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+//고대비모드
+@include color-mode($mode: high-contrast) {
+  //모드 설정
+  $mode-setting: high-contrast;
+  .krds-structured-list {
+    @include structured-list-color-variable(#{$mode-setting});
+
+    //체크박스
+    .krds-check-area {
+      .krds-form-check input[type='checkbox'] ~ label {
+        &::before {
+          margin-top: 0;
+        }
+        &::after {
+          margin-top: -0.3rem;
+        }
+      }
+    }
+
+    .card-body {
+      .c-text {
+        .c-tit {
+          &::after {
+            @include svg-icon(
+              $size: var(--krds-icon--size-medium),
+              $mode: #{$mode-setting}
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 통합 saas 
+.sch-filter-box  .form-group-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: var(--krds-gap-5);
+}
+
