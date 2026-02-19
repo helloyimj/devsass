@@ -11,6 +11,33 @@
 }
 
 /* font size */
+/* 공통 style */
+.m_block {
+  display: none;
+}
+
+.search-list-top .sch-info li {
+  font-weight: var(--krds-font-weight-bold);
+}
+.search-list-top .sch-info li .point {
+  color: #1953d5;
+}
+.search-list-top .sch-sort li {
+  padding: 0;
+}
+.search-list-top .sch-sort li::after {
+  display: none;
+}
+
+.krds-pagination .page-link.active {
+  background-color: var(--krds-color-light-secondary-50);
+}
+.krds-pagination .prev,
+.krds-pagination .next {
+  width: auto;
+}
+
+/* 슬라이드 공통 */
 .slide_box_container {
   max-width: 1420px;
   margin: 0 auto;
@@ -263,168 +290,7 @@
   opacity: 1;
 }
 
-.guide_container {
-  margin-top: 8rem;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  background-color: #e3e9f5;
-}
-.guide_container .shadow_box {
-  overflow: hidden;
-}
-.guide_container p {
-  text-align: left;
-  margin-bottom: 5rem;
-}
-.guide_container .cont_1 {
-  width: 100%;
-  position: relative;
-}
-.guide_container .cont_1::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: calc(100% - 12rem);
-  background-color: #ccc;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.guide_container .cont_1 .service_btns {
-  display: flex;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-.guide_container .cont_1 .service_btns .service_btn {
-  width: calc((100% - 21rem) / 8);
-  height: 187px;
-  border-radius: 3rem;
-  background: linear-gradient(-45deg, #3551dc, #7250df);
-}
-.guide_container .cont_1 .service_btns .service_btn a {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  position: relative;
-  padding-top: 34px;
-}
-.guide_container .cont_1 .service_btns .service_btn a span {
-  display: block;
-  margin-bottom: 5px;
-}
-.guide_container .cont_1 .service_btns .service_btn a span img {
-  margin: 0 auto;
-  width: 6rem;
-  height: 6rem;
-}
-.guide_container .cont_1 .service_btns .service_btn a p {
-  text-align: center;
-  font-size: 1.8rem;
-  color: #fff;
-  font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-.guide_container .cont_1 .service_btns .service_btn a::after {
-  content: "";
-  display: block;
-  position: absolute;
-  background-image: url("../../../img/icon/icon_longarrow_right_white.png");
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  width: 26px;
-  height: 20px;
-  bottom: 21px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: all 0.2s ease-in-out;
-}
-.guide_container .cont_1 .service_btns .service_btn a:hover:after {
-  transform: translateX(-30%);
-}
-.guide_container .cont_2 .cont_2_txtbox {
-  width: 100%;
-  padding: 5.3rem 10rem 3.4rem;
-  background-color: #fff;
-  border-radius: 1rem;
-}
-.guide_container .cont_2 .cont_2_txtbox .sub_tit {
-  margin-bottom: 0;
-}
-.guide_container .cont_2 .cont_2_txtbox .sub_tit b {
-  font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-.guide_container .cont_2 .cont_2_txtbox .gr_txt {
-  width: 100%;
-  display: flex;
-  text-align: left;
-  margin-bottom: 1.8rem;
-  line-height: 1.75;
-}
-.guide_container .cont_2 .cont_2_txtbox .gr_txt .sub_tit {
-  display: flex;
-  justify-content: space-between;
-  flex-shrink: 0;
-  width: 13.6rem;
-  font-size: 1.8rem;
-  padding-right: 10px;
-}
-.guide_container .cont_2 .cont_2_txtbox .gr_txt .cont_tit {
-  position: relative;
-}
-.guide_container .cont_2 .cont_2_txtbox .gr_txt .space {
-  display: inline-block;
-  width: 14px;
-}
-.guide_container .cont_2 .cont_2_txtbox ul li {
-  width: 100%;
-  display: inline-block;
-  box-sizing: border-box;
-}
-.guide_container .cont_2 .cont_2_txtbox ul li span {
-  display: inline-block;
-  box-sizing: border-box;
-  word-break: keep-all;
-  margin: 0;
-  padding: 0;
-  flex: 0 0;
-}
-.guide_container .cont_2 .cont_2_txtbox ul li .download_file {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 3rem;
-  height: 2.4rem;
-  margin-left: 10px;
-  padding: 0 6px;
-}
-.guide_container .cont_2 .cont_2_txtbox ul li .download_file::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 2.4rem;
-  height: 2.4rem;
-  background-image: url("../../../img/icon/icon_download_black.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-.guide_container .cont24_page {
-  background: #425782;
-  width: 100%;
-  height: 14rem;
-  padding: 4.8rem 0;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
-}
-.guide_container .cont24_page .wrap_btn .btn_action {
-  margin: 0 auto;
-  text-align: left;
-  padding-left: 21px;
-  text-indent: 0;
-}
-
+/* // 20260128 aos 오류 추가 */
 /* .wrap_article,
 .wrap_article *,
 .page_content ,

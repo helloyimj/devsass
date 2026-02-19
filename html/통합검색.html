@@ -2,448 +2,1571 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <title>통합검색&lt;민간 Sass 연계공통기반 통합관리포털</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <title>통합검색&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/output.css" />
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/output.css" />
 
-    <!-- JS -->
-    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-    <script src="../js/swiper-5.4.3.min.js"></script>
-    <script src="../js/aos.js"></script>
-    <script src="../js/nav.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/service_searchSaaS.js"></script>
-
+  <!-- script -->
+  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+  <script src="../js/plugin/swiper-bundle.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script defer src="../js/component/ui-script.js"></script>
+  <script defer src="../js/pattern/pattern.js"></script>
+  <script defer src="../js/nav.js"></script>
+  <script defer src="../js/app.js"></script>
+  
 </head>
 
 <body>
-    <div id="wrapper" class="wrapper sub_pages">
-        <!-- 바로가기 메뉴 -->
-        <nav id="skip"></nav>
+  <div id="wrapper">
+    
+    <!-- 컨테이너 영역 -->
+    <div id="container">
+      <!-- breadcrumb -->
+      <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
+        <ol class="breadcrumb"><li class="home"><a href="#;" class="txt">홈</a></li></ol>
+      </nav>
+      <!-- //breadcrumb -->
 
-        <!-- 헤더 -->
-        <header id="header" class="header"></header>
+      <!-- 컨텐츠 영역 -->
+      <div class="inner">
+        <!-- 페이지 타이틀 영역 -->
+        <div class="page-title-wrap">
+          <h1 class="h-tit">통합검색</h1>
+        </div>
+        <!-- //페이지 타이틀 영역 -->
 
-        <!-- 메인  -->
-        <main class="">
-
-            <!-- 본문 외부 영역 -->
-            <section id="content" class="page_centered page_search">
-                <h3 class="sr_only">통합검색 페이지</h3>
-
-                <div class="page_inner">
-
-                    <!-- 본문 -->
-                    <article class="page">
-                        <h3 class="sr_only">본문</h3>
-
-                        <!-- 브레드크럼 -->
-                        <div class="wrap_breadcrumb">
-                            <ul class="breadcrumbs">
-                                <li class="breadcrumbs_item cat_home"><a href="main.html" target="_self" title="메인 페이지로 이동" class="home"></a></li>
-                                <li class="breadcrumbs_item current_page"><a href="통합검색.html" target="_self" title="페이지 이동">통합검색</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="page_content">
-                            <!-- <div class="wrap_article"> -->
-                            <div class="article_title">
-                                <article class="page_title_area">
-                                    <h2 class="page_title">통합검색</h2>
-                                </article>
-                            </div>
-
-                            <div class="article_content">
-
-                                <!-- 검색 필터  -->
-                                <div class="wrap_search_filter">
-                                    <div class="box_input">
-                                        <label for="inputSearch" class="sr_only">검색어 입력</label>
-                                        <input type="text" id="inputSearch" class="input_text input_searchbar" placeholder="검색어를 입력해주세요.">
-                                    </div>
-                                    <button type="submit" class="btn_submit btn_search">검색</button>
-                                </div>
-
-                                <!-- 검색 결과 -->
-                                <div class="wrap_result_table">
-                                    <div class="box_table_top">
-                                        <div class="area_left">
-                                            <div class="wrap_result_word">
-                                                <p>적용된 검색어 “<span class="result_word">협업</span>”</p>
-                                            </div>
-                                            <div class="wrap_result_num">
-                                                <p>검색 결과 <span class="result_num">0</span>건</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="area_tab">
-                                    <div class="wrap_tab_button">
-                                        <button class="tab_button active" data-tab="tab_all">전체 (<span class="result_num">53</span>건)</button>
-                                        <button class="tab_button" data-tab="tab01">민간 SaaS (<span class="result_num">12</span>건)</button>
-                                        <button class="tab_button" data-tab="tab02">공지사항 (<span class="result_num">25</span>건)</button>
-                                        <button class="tab_button" data-tab="tab03">자료실 (<span class="result_num">7</span>건)</button>
-                                        <button class="tab_button" data-tab="tab04">기타 (<span class="result_num">9</span>건)</button>
-                                    </div>
-
-                                    <div class="wrap_select_category">
-                                        <label for="select_category" class="sr_only">검색 결과 카테고리 선택 목록 열기 : </label>
-                                        <select name="select_category" id="select_category" class="select_category">
-                                            <option value="all_case" selected="">전체</option>
-                                            <option value="list_saas">민간 SaaS</option>
-                                            <option value="list_notice">공지사항</option>
-                                            <option value="list_archive">자료실</option>
-                                            <option value="list_etc">기타</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="wrap_tab_content">
-                                        <div class="tab_content active tab01 list_saas">
-                                            <div class="wrap_title">
-                                                <h4 class="title_leftCircle">민간 SaaS <span class="wrap_result_num">총 <span class="result_num">12</span>건</span></h4>
-                                                <a href="공공용 민간 SaaS.html" class="btn_more" target="_blank" title="">더보기</a>
-                                            </div>
-                                            <div class="page_saas_search wrap_result_content">
-                                                <div class="wrap_result_table wrap_result_card" data-aos="fade-up">
-                                                    <div class="box_table_contents">
-                                                        <div class="product_card product_01"></div>
-                                                        <div class="product_card product_02"></div>
-                                                        <div class="product_card product_03"></div>
-                                                        <div class="product_card product_04"></div>
-                                                        <div class="product_card product_05"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab_content active tab02 list_notice">
-                                            <div class="wrap_title">
-                                                <h4 class="title_leftCircle">공지사항 <span class="wrap_result_num">총 <span class="result_num">25</span>건</span></h4>
-                                                <a href="사용자 지원_공지사항.html" class="btn_more" target="_blank" title="">더보기</a>
-                                            </div>
-                                            <div class="wrap_result_content">
-                                                <!-- 공지사항 미리보기 -->
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">[행사] 정부 공통시스템과 민간 SaaS 간 연계 개통식 개최<span class="notice_day">(등록일 2024.12.01)</span></h3>
-                                                        <p class="result_content_cnt">행정안전부과 한국지능정보사회진흥원은공공부문의 민간 SaaS 이용촉진을 위해 민간 SaaS 연계공통기반을 구축하고 공공부문의 민간 SaaS 이용을 <span class="result_keyword">협업</span>하고 있습니다. 이와 관련하여 '정부 공통시스템과 민간 SaaS 간 연계 개통식'을 아래와 같이 개최하오니 관심있는 기관과 기업의 참석을 요청드립니다.</p>
-                                                    </div>
-                                                    <div class="wrap_thumb">
-                                                        <img class="result_content_thumb" src="../img/main/bg_func01.png" alt="">
-                                                    </div>
-                                                </div>
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">[공모안내] 공공용 민간 SaaS 이용지원 기관 공모 안내<span class="notice_day">(등록일 2024.12.01)</span></h3>
-                                                        <p class="result_content_cnt">행정안전부에서 주최하고 우리 원에서 주관하는 「공공용 민간 SaaS 이용지원 <span class="result_keyword">협업</span> 기관 공모」에 대해 안내 드리오니 많은 관심과 참여를 부탁드립니다.가. 지원대상 : 기업모집을 통해 선정 된 민간 SaaS(35종) 중 수요가 있는 중앙행정기관, 지자체 및 공공기관※ 기업모집을 통해 선정된 민간 SaaS(35종)의 세부 내용은 붙임 참고 나. 접수기간 : 〜 2024.1.05.(금), 18:00 - 2024.1.15.(수), 18:00</p>
-                                                    </div>
-                                                </div>
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">[모집안내] 공공용 민간 SaaS 시범이용 서비스 제공기업 모집 공고<span class="notice_day">(등록일 2024.12.24)</span></h3>
-                                                        <p class="result_content_cnt">정부에서는 공공부문의 민간 SaaS 이용 활성화를 위해, 행정기관(중앙부처, 지자체 등)에서 민간 SaaS를 <span class="result_keyword">협업</span>하고자 하는 경우 초기 이용료 등을 지원하는 공공용 민간 SaaS 시범이용을 추진할 예정입니다. 이와 관련하여 시범이용을 위해 행정기관(중앙부처, 지자체)에서 이용가능한 공공용 민간 SaaS를 제공할 수 있는 제공기업을 모집하오니 희망기업에서는 기한내에 많은 신청 바랍니다.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">[수요조사] 2023년도 행정·공공기관 클라우드컴퓨팅서비스 활용모델 사업 수요조사 안내
-                                                            <span class="notice_day">(등록일 2024.12.01)</span></h3>
-                                                        <p class="result_content_cnt">클라우드컴퓨팅서비스 활용모델 사업을 통해 행정·공공기관에 적용할 수 있는 클라우드 전환 선도사례를 발굴하고 확산을 유도하기 위하여 ‘클라우드컴퓨팅서비스 활용모델 사업’을 추진 하고 있습니다. 이와 관련하여 ‘23년 행정·공공기관 클라우드컴퓨팅서비스 활용모델 <span class="result_keyword">협업</span> 수요조사를 아래와 같이 실시하오니, 활용모델 사업 참여를 희망하는 기관 및 관꼐자분들 께서는 기한내에 많은 신청 바랍니다. </p>
-                                                    </div>
-                                                </div>
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">[설명회] 공공용 민간 SaaS 수요 설명회 개최<span class="notice_day">(등록일 2024.12.01)</span></h3>
-                                                        <p class="result_content_cnt">* 일 시 : 2023.4.6.(목) / 14:00 ~ 15:20 * 장 소 : NIA 서울사무소 지하1층 대회의실(서울시 중구 청계천로 14) * 참석대상: 국내 클라우드 기업 및 소프트웨어 개발 기업 많은 관심과 참여 부탁드립니다. 행정공공기관의 민간 SaaS 활성화를 위해 공공에서 필요한 공공용 민간 SaaS 수요를 민간 기업에 공개하는 설명회를 개최합니다. <span class="result_keyword">협업</span> 대상은 설명회에 참석 기한내에 많은 신청 바랍니다.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="tab_content active tab03 list_archive">
-                                            <div class="wrap_title">
-                                                <h4 class="title_leftCircle">자료실<span class="wrap_result_num">총 <span class="result_num">7</span>건</span></h4>
-                                                <a href="사용자 지원_자료실.html" class="btn_more" target="_blank" title="">더보기</a>
-                                            </div>
-                                            <div class="wrap_result_content">
-                                                <!-- 자료실 미리보기 -->
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">[행정·공공기관 클라우드전환] CSAP 인증을 받은 SaaS 목록 안내(‘24.11)</h3>
-                                                        <p class="result_content_cnt">클라우드서비스보안인증(CSAP)을 받은 <span class="result_keyword">협업</span> SaaS 목록(‘24.11)을 배포하오니 관련 업무에 참고하시기 바랍니다. 자세한 사항은 KISA 한국인터넷진흥원의 '클라우드 보안인증제 연도별 인
-                                                            증서 발급현황'을 참고하시기 바랍니다. 감사합니다.</p>
-                                                    </div>
-                                                    <div class="result_content_attached">
-                                                        <!-- 첨부 파일 뷰어 -->
-                                                        <div class="attached_viewer">
-                                                            <ul class="attached_file_list">
-                                                                <li class="attached_file_item">
-                                                                    <div class="attached_file_txt">
-                                                                        <p>CSAP 인증을 받은 SaaS 목록 안내(‘24.10) SaaS 목록 안내(‘24.10)SaaS 목록 안내(‘24.10)SaaS 목록 안내(‘24.10)SaaS 목록 안내(‘24.10)SaaS 목록 안내(‘24.10)SaaS 목록 안내(‘24.10)SaaS 목록 안내(‘24.10)SaaS 목록 안내(‘24.10)SaaS 목록 안내(‘24.10)SaaS 목록 안내(‘24.10)<span class="txtByte"> [pdf, 328kb]</span></p>
-                                                                    </div>
-                                                                    <div class="attached_file_btn">
-                                                                        <a href="javascript:;" class="btn_inline btn_attached_download" target="_self" title="CSAP 인증을 받은 SaaS 목록 안내(‘24.10).pdf 다운로드">다운로드</a>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">2024년 공공부문 클라우드 정책 설명회 발표자료</h3>
-                                                        <p class="result_content_cnt">2024년 11월 7일(목) 개최한 「2024년 공공부문 <span class="result_keyword">협업</span> 클라우드 정책 설명회」 발표 자료 공유드립니다. 자세한 내용은 첨부된 설명회 발표 자료를 참고해 주시기 바랍니다.</p>
-                                                    </div>
-                                                    <div class="result_content_attached">
-                                                        <!-- 첨부 파일 뷰어 -->
-                                                        <div class="attached_viewer">
-                                                            <ul class="attached_file_list">
-                                                                <li class="attached_file_item">
-                                                                    <div class="attached_file_txt">
-                                                                        <p>1_1 클라우드 네이티브 기반 디지털정부 사업 혁신전략.pdf<span class="txtByte">(2414.152kb)</span></p>
-                                                                    </div>
-                                                                    <div class="attached_file_btn">
-                                                                        <a href="javascript:;" class="btn_inline btn_attached_download" target="_self" title="CSAP 인증을 받은 SaaS 목록 안내(‘24.10).pdf 다운로드">다운로드</a>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="attached_file_item">
-                                                                    <div class="attached_file_txt">
-                                                                        <p>2_1. 클라우드컴퓨팅서비스 이용안내서 및 이용요금 산출가이드.pdf</p>
-                                                                    </div>
-                                                                    <div class="attached_file_btn">
-                                                                        <a href="javascript:;" class="btn_inline btn_attached_download" target="_self" title="CSAP 인증을 받은 SaaS 목록 안내(‘24.10).pdf 다운로드">다운로드</a>
-                                                                    </div>
-                                                                </li>
-                                                                <li class="attached_file_item">
-                                                                    <div class="attached_file_txt">
-                                                                        <p>2_3 클라우드컴퓨팅서비스 비용 최적화 가이드라인.pdf</p>
-                                                                    </div>
-                                                                    <div class="attached_file_btn">
-                                                                        <a href="javascript:;" class="btn_inline btn_attached_download" target="_self" title="CSAP 인증을 받은 SaaS 목록 안내(‘24.10).pdf 다운로드">다운로드</a>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">2024년 클라우드컴퓨팅서비스 지자체 활용모델 사례·성과 공유 행사 발표 자료</h3>
-                                                        <p class="result_content_cnt">24년 8월 29일(화) 개최한 「 2024년 클라우드컴퓨팅서비스 지자체 활용모델 <span class="result_keyword">협업</span> 사례·성과 공유」 발표 자료 공유드립니다.자세한 내용은 첨부된 자료를 참고해 주시기 바랍니다.</p>
-                                                    </div>
-                                                    <div class="result_content_attached">
-                                                        <!-- 첨부 파일 뷰어 -->
-                                                        <div class="attached_viewer">
-                                                            <ul class="attached_file_list">
-                                                                <li class="attached_file_item">
-                                                                    <div class="attached_file_txt">
-                                                                        <p>24년 클라우드컴퓨팅서비스 지자체 활용모델 사례 및 성과 공유 발표자료.pdf</p>
-                                                                    </div>
-                                                                    <div class="attached_file_btn">
-                                                                        <a href="javascript:;" class="btn_inline btn_attached_download" target="_self" title="CSAP 인증을 받은 SaaS 목록 안내(‘24.10).pdf 다운로드">다운로드</a>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">공공용 민간 SaaS 수요 설명회 발표 자료</h3>
-                                                        <p class="result_content_cnt">4월 6일(목) 개최한 「공공용 민간 SaaS <span class="result_keyword">협업</span> 수요 설명회」 발표자료 공유드립니다.자세한 내용은 첨부된 설명회 발표 자료를 참고해 주시기 바랍니다.감사합니다.</p>
-                                                    </div>
-                                                    <div class="result_content_attached">
-                                                        <!-- 첨부 파일 뷰어 -->
-                                                        <div class="attached_viewer">
-                                                            <ul class="attached_file_list">
-                                                                <li class="attached_file_item">
-                                                                    <div class="attached_file_txt">
-                                                                        <p>0331 공공용 민간 SaaS 수요 설명회 발표자료.pdf</p>
-                                                                    </div>
-                                                                    <div class="attached_file_btn">
-                                                                        <a href="javascript:;" class="btn_inline btn_attached_download" target="_self" title="CSAP 인증을 받은 SaaS 목록 안내(‘24.10).pdf 다운로드">다운로드</a>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">2024년 클라우드컴퓨팅서비스 지자체 활용모델 사례·성과 공유 행사 발표 자료</h3>
-                                                        <p class="result_content_cnt">24년 8월 29일(화) 개최한 「 2024년 클라우드컴퓨팅서비스 지자체 활용모델 <span class="result_keyword">협업</span> 사례·성과 공유」 발표 자료 공유드립니다.자세한 내용은 첨부된 자료를 참고해 주시기 바랍니다.</p>
-                                                    </div>
-                                                    <div class="result_content_attached">
-                                                        <!-- 첨부 파일 뷰어 -->
-                                                        <div class="attached_viewer">
-                                                            <ul class="attached_file_list">
-                                                                <li class="attached_file_item">
-                                                                    <div class="attached_file_txt">
-                                                                        <p>24년 클라우드컴퓨팅서비스 지자체 활용모델 사례 및 성과 공유 발표자료.pdf</p>
-                                                                    </div>
-                                                                    <div class="attached_file_btn">
-                                                                        <a href="javascript:;" class="btn_inline btn_attached_download" target="_self" title="CSAP 인증을 받은 SaaS 목록 안내(‘24.10).pdf 다운로드">다운로드</a>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="tab_content active tab04 list_etc">
-                                            <div class="wrap_title">
-                                                <h4 class="title_leftCircle">기타<span class="wrap_result_num">총 <span class="result_num">9</span>건</span></h4>
-                                                <a href="사용자 지원_자료실.html" class="btn_more" target="_blank" title="">더보기</a>
-                                            </div>
-                                            <div class="wrap_result_content">
-                                                <!-- 기타 미리보기 -->
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">모바일 공무원증 </h3>
-                                                        <p class="result_content_cnt">모바일 공무원증은 DID(Decentralized Identifie) 기술이 적용된 자기주권 신원증명(Self Sovereign Identity)의 모바일 신분증입니다. 자기주권 신원증명이란 현재 보편적으로 이용되고 있
-                                                            는 중앙집중식 신원증명과 대조되는 개념으로 신원정보의 소유 및 이용권한을 신원주체인 <span class="result_keyword">협업</span>인이 갖게 되는 것을 말합니다. 또한 모바일 신분증 소유자는 또한 모바일 신분증 소유자는 …
-                                                        </p>
-                                                    </div>
-                                                    <p class="result_content_step">홈 > 전자정부 연계 SaaS > 모바일 공무원증</p>
-                                                </div>
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">통합관리포털 소개</h3>
-                                                        <p class="result_content_cnt">통합관리포털은 민간 SaaS 연계공통기반의 운영 체계를 구성하는 총괄·운영기관, 정보보유기관, 이용기관, 민간 SaaS 기업의 사용자들이 이용 신청, 서비스 연계, 배포 관리, 모니터링 등을
-                                                            편리하게 할 수 있도록 지원합니다. 공공기관이 간편하게 민간 SaaS를 이용할 수 있도록 제도 ˙ 절차 ˙ 기술 측면의 기반을 마련하여 연계를 지원함으로써 <span class="result_keyword">협업</span>을 위한 공동 <span class="result_keyword">협업</span>을 위한 공… </p>
-                                                    </div>
-                                                    <p class="result_content_step">홈 > 소개 > 통합관리포털 소개</p>
-                                                </div>
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">전자정부 연계 SaaS 이용 계획이 없거나, 계약 체결이 안 된 경우 회원 가입이 가능한가요?</h3>
-                                                        <p class="result_content_cnt">전자정부 연계 SaaS 이용 절차상 민간 SaaS 기업과 이용기관 간 계획을 수립하고 계약을 체결한 뒤 회원 가입이 가능합니다. <span class="result_keyword">협업</span>을 위해서는 계약 체결을 우선 진행해 주시기 바랍니다.
-                                                        </p>
-                                                    </div>
-                                                    <p class="result_content_step">홈 > 사용자 지원 > 자주 묻는 질문</p>
-                                                </div>
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">사업자 서류 인증에 필요한 증빙 자료는 어디로 보내면 되나요?</h3>
-                                                        <p class="result_content_cnt"><span class="result_keyword">협업</span>자 증빙 자료가 필요한 경우는 다음과 같습니다. 1. 법인 회원 가입 시 2. 파트너 제휴 시 사업자등록증 등의 증빙 자료는 1:1 문의 이메일 로 보내주시기 바랍니다. 발신자가 신뢰할 만한지
-                                                            검증해 이메일 수신자에게 스팸 메일이 전달되는 것을 막기 위해 사용되는 방법입니다. 중복 발송 설정을 통해 중복된 메시지를 발송하지 않도록 설정할 수 있습니다 않도록 설정할 수 있…
-                                                        </p>
-                                                    </div>
-                                                    <p class="result_content_step">홈 > 사용자 지원 > 자주 묻는 질문</p>
-                                                </div>
-                                                <div class="result_content_box">
-                                                    <div class="wrap_content_txt">
-                                                        <h3 class="result_content_tit">연계 서비스 이용 신청</h3>
-                                                        <p class="result_content_cnt">민간 SaaS 연계공통기반 및 전자정부 연계 SaaS 이용 사전준비를 마친 민간 SaaS 기업과 이용기관은 통합관리포털에서 전자정부 연계 SaaS <span class="result_keyword">협업</span> 신청을 할 수 있습니다. 전자정부 연계
-                                                            SaaS 이용 신청을 진행하기 위해서는 민간 SaaS 연계공통기반 통합관리포털에 회원가입 되어있어야 합니다 전자정부 연계 SaaS 신청 및 이용은 다음과 연계 SaaS 신청 및 이용은 다음과…
-                                                        </p>
-                                                    </div>
-                                                    <p class="result_content_step">홈 > 소개 > 이용 신청</p>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                            </div>
-                        </div>
-
-                    </article>
+        <div class="page_content page_search">
+          <!-- 검색 입력폼 -->
+          <div class="search-top-box">
+            <div class="sch-filter-box">
+              <div class="sch-form-wrap flex_inline">
+                <div class="input-group">
+                  <div class="sch-input">
+                    <input type="text" class="krds-input medium" placeholder="검색어를 입력해주세요" title="검색어 입력" />
+                  </div>
+                  <button type="button" class="krds-btn medium primary"><i class="svg-icon ico-sch"></i>검색</button>
                 </div>
-            </section>
-            <!-- 본문 외부 영역 end-->
-        </main>
-        <!-- 전체 영역 end  -->
+              </div>
+              <div class="sch-form-group">
+                <button type="button" class="krds-btn medium text btn_search_detail"><i class="svg-icon ico-sch-plus"></i>상세검색 닫기</button>
+              </div>
+              <div class="sch_form_bottom">
+                <div class="filter-chip">
+                    <div class="filter_wrap">
+                    <div class="filter_label">
+                        <label for="filter_label">결과 내 재검색</label>
+                    </div>
 
-        <footer id="footer" class="footer"></footer>
+                    <div class="filter_row">
+                        <div class="krds-form-check filter_radio">
+                            <input type="radio" name="filter_radio" id="rdo_1" checked />
+                            <label class="label" for="rdo_1">검색어 포함</label>
+                        </div>
+                        <div class="wrap_filter_search">
+                        <div class="krds-form-check filter_radio">
+                            <input type="radio" name="filter_radio" id="rdo_2" />
+                            <label for="rdo_2">검색어 제외</label>
+                        </div>
+                        <div class="filter_search">
+                            <label for="filter_search_input">검색어</label>
+                            <input class="krds-input medium" type="text" id="filter_search_input" placeholder="검색어를 입력해주세요" />
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="filter_wrap">
+                    <div class="filter_label">
+                        <label for="filter_label">검색기간</label>
+                    </div>
+                    <div class="flex_column">
+                        <div class="filter_wrap">
+                        <div class="filter_row" data-checkbox-group>
+                            <!-- checkbox -->
+                            <div class="krds-check-area">
+                                <div class="krds-form-chip">
+                                    <input type="checkbox" class="checkbox" id="sch_filter_chk_all" checked data-check-all />
+                                    <label class="krds-form-chip-outline" for="sch_filter_chk_all">전체</label>
+                                </div>
+                                <div class="krds-form-chip">
+                                    <input type="checkbox" class="checkbox" id="chk_chip_1" />
+                                    <label class="krds-form-chip-outline" for="chk_chip_1">1개월</label>
+                                </div>
+                                <div class="krds-form-chip">
+                                    <input type="checkbox" class="checkbox" id="chk_chip_2" />
+                                    <label class="krds-form-chip-outline" for="chk_chip_2">3개월</label>
+                                </div>
+                                <div class="krds-form-chip">
+                                    <input type="checkbox" class="checkbox" id="chk_chip_3" />
+                                    <label class="krds-form-chip-outline" for="chk_chip_3">6개월</label>
+                                </div>
+                                <div class="krds-form-chip">
+                                    <input type="checkbox" class="checkbox" id="chk_chip_4" />
+                                    <label class="krds-form-chip-outline" for="chk_chip_4">1년</label>
+                                </div>
+                            </div>
+                            <!-- //checkbox -->
+                        </div>
+                        </div>
+
+                        <div class="sch-form-wrap flex_inline">
+                        <div class="form-group">
+                            <div class="form-tit">
+                            <label for="addr-input-etc">시작날짜</label>
+                            </div>
+                            <div class="form-conts">
+                            <input type="date" class="krds-input medium" placeholder="검색어를 입력해주세요" title="검색어 입력" />
+                            </div>
+                        </div>
+                        <div class="">
+                            <div>
+                            <label></label>
+                            </div>
+                            <div class="">
+                                <span class="mark sm">/</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-tit">
+                            <label for="addr-input-etc">종료날짜</label>
+                            </div>
+                            <div class="form-conts">
+                            <input type="date" class="krds-input medium" placeholder="검색어를 입력해주세요" title="검색어 입력" />
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- 버튼 -->
+                <div class="comp-btn-wrap center">
+                    <button type="button" class="krds-btn medium tertiary">
+                    <i class="svg-icon ico-refresh"></i>
+                    초기화
+                    </button>
+                    <button type="button" class="krds-btn medium primary">상세 검색 적용</button>
+                </div>
+                <!-- //버튼 -->
+               </div>
+
+            </div>
+          </div>
+          <!-- //검색 입력폼 -->
+
+          <!-- 검색 결과 -->
+          <div class="krds-tab-area layer">
+            <!-- tab list -->
+            <div class="tab fill full">
+              <ul role="tablist">
+                <li id="totalTab01" aria-selected="true" aria-controls="totalTabpanel01" class="active">
+                  <button type="button" class="btn-tab">전체(45건)</button>
+                </li>
+                <li id="totalTab02" aria-selected="false" aria-controls="totalTabpanel02">
+                  <button type="button" class="btn-tab">민간 SaaS(13건)</button>
+                </li>
+                <li id="totalTab03" aria-selected="false" aria-controls="totalTabpanel03">
+                  <button type="button" class="btn-tab">공지사항 (25건)</button>
+                </li>
+                <li id="totalTab04" aria-selected="false" aria-controls="totalTabpanel04">
+                  <button type="button" class="btn-tab">자료실 (7건)</button>
+                </li>
+                <li id="totalTab05" aria-selected="false" aria-controls="totalTabpanel05">
+                  <button type="button" class="btn-tab">자주 묻는 질문(7건)</button>
+                </li>
+              </ul>
+            </div>
+            <!-- //tab list -->
+
+            <!-- tab contents -->
+            <div class="tab-conts-wrap">
+              <section id="totalTabpanel01" role="tabpanel" aria-labelledby="totalTab01" class="tab-conts active">
+                <h3 class="sr-only">전체</h3>
+
+                <!-- 리스트 상단 -->
+                <div class="search-list-top border">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>적용된 검색어‘<span class="point">협업</span>’</li>
+                    <li>검색 결과 <span class="point">45</span>건</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li class="m-hide">
+                      <strong class="sort-label"><label for="search_result_count1">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count1">
+                        <option>10개</option>
+                        <option>50개</option>
+                        <option>100개</option>
+                      </select>
+                    </li>
+                    <li>
+                      <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                      <div class="w-sort-btn">
+                        <button type="button" class="active">관련도순</button>
+                        <button type="button">최신순</button>
+                        <button type="button">인기순</button>
+                      </div>
+                      <div class="m-sort-btn">
+                        <select class="krds-form-select-sort" id="sort6">
+                          <option>관련도순</option>
+                          <option>최신순</option>
+                          <option>인기순</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //리스트 상단 -->
+
+                <!-- 리스트 -->
+                <ul class="total-search-list">
+                  <!-- 전체보기 수정중 -->
+                </ul>
+                <!-- //리스트 -->
+              </section>
+
+              <section id="totalTabpanel02" role="tabpanel" aria-labelledby="totalTab02" class="tab-conts">
+                <h3 class="sr-only">민간 SaaS</h3>
+
+                <!-- 리스트 상단 -->
+                <div class="search-list-top border">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>적용된 검색어‘<span class="point">협업</span>’</li>
+                    <li>검색 결과 <span class="point">13</span>건</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li class="m-hide">
+                      <strong class="sort-label"><label for="search_result_count2">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count2">
+                        <option>10개</option>
+                        <option>50개</option>
+                        <option>100개</option>
+                      </select>
+                    </li>
+                    <li>
+                      <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                      <div class="w-sort-btn">
+                        <button type="button" class="active">관련도순</button>
+                        <button type="button">최신순</button>
+                        <button type="button">인기순</button>
+                      </div>
+                      <div class="m-sort-btn">
+                        <select class="krds-form-select-sort" id="sort6">
+                          <option>관련도순</option>
+                          <option>최신순</option>
+                          <option>인기순</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //리스트 상단 -->
+
+                <!-- 탭 리스트 제목 -->
+                <div class="tab_conts_tit">
+                  <h3 class="tab_list_tit">민간 SaaS<strong>총<span class="point">20</span>건</strong></h3>
+                  <a href="공공용 민간 SaaS.html" class="krds-btn small text">더보기<i class="svg-icon ico-plus"></i></a>
+                </div>
+                <!-- //탭리스트 제목 -->
+
+                <!-- 리스트 -->
+                <ul class="total-search-list product_list krds-structured-list type-full">
+                  <!-- 리스트 서식 -->
+                  <li class="structured-item product_card" data-aos="fade-up">
+                    <div class="product_item_inner">
+                      <div class="box_logo">
+                        <img src="../img/saas_img/0_common/logo/logo_pr_dooray.svg" alt="두레이 로고" class="viewer" />
+                      </div>
+                      <div class="box_txt">
+                        <div class="box_txt_inner">
+                          <div class="card-top">
+                            <span class="krds-badge">협업도구</span>
+                          </div>
+                          <div class="card-body">
+                            <div class="c-text">
+                              <div class="c-tit">
+                                <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                                  <span class="product_name">두레이!(Dooray!)</span>
+                                </a>
+                              </div>
+                              <p class="company_name">두레이</p>
+                              <div class="tags">
+                                <span class="tag">드라이브</span>
+                                <span class="tag">메일</span>
+                                <span class="tag">메신저</span>
+                                <span class="tag">업무관리</span>
+                                <span class="tag">전자결재</span>
+                              </div>
+                            </div>
+                            <div class="b_box">
+                              <p>정부 공통시스템 연계</p>
+                              <div class="tags">
+                                <span class="tag_gov">모바일 공무원증</span>
+                                <span class="tag_gov">행정표준코드</span>
+                                <span class="tag_gov">LDAP</span>
+                                <span class="tag_gov">GPKI</span>
+                              </div>
+                            </div>
+                            <div class="wrap_detail_info">
+                              <ul class="detail_info_list">
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">CSAP 인증</strong>
+                                  <span class="info_value value">표준</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">인증 날짜</strong>
+                                  <span class="info_value value">2025.12.11~2029.12.17</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">이용 인프라</strong>
+                                  <span class="info_value value">네이버 클라우드(공공)</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">중앙조달계약</strong>
+                                  <span class="info_value value">계약 완료</span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="b_box">
+                              <p class="before_mark medal_icon">
+                                국가정보원 공시 국가공공기관 도입 가능
+                                <span>클라우드 컴퓨팅 서비스</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="card-btm">
+                            <div class="wrap_link_area">
+                              <div class="link_area">
+                                <span class="link_label">서비스 공식 사이트</span>
+                                <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">
+                                  공식 사이트 이동
+                                  <i class="svg-icon ico-go"></i>
+                                </a>
+                              </div>
+                              <div class="link_area">
+                                <span class="link_label">기관직접계약</span>
+                                <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">
+                                  이용지원시스템 이동
+                                  <i class="svg-icon ico-go"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="structured-item product_card" data-aos="fade-up">
+                    <div class="product_item_inner">
+                      <div class="box_logo">
+                        <img src="../img/saas_img/0_common/logo/logo.png" alt="공공기관용 ERP서비스(well-formed 공공Erp시스템) 로고" class="viewer" />
+                      </div>
+                      <div class="box_txt">
+                        <div class="box_txt_inner">
+                          <div class="card-top">
+                            <span class="krds-badge">협업도구</span>
+                          </div>
+                          <div class="card-body">
+                            <div class="c-text">
+                              <div class="c-tit">
+                                <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                                  <span class="product_name">공공기관용 ERP서비스(well-formed 공공Erp시스템)</span>
+                                </a>
+                              </div>
+                              <p class="company_name">하이퍼테크</p>
+                              <div class="tags">
+                                <span class="tag">경영관리</span>
+                                <span class="tag">급여관리</span>
+                                <span class="tag">복무관리</span>
+                                <span class="tag">시스템관리</span>
+                                <span class="tag">협업</span>
+                              </div>
+                            </div>
+                            <div class="b_box">
+                              <p>정부 공통시스템 연계</p>
+                              <div class="tags">
+                                <span class="tag_gov">해당없음</span>
+                              </div>
+                            </div>
+                            <div class="wrap_detail_info">
+                              <ul class="detail_info_list">
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">CSAP 인증</strong>
+                                  <span class="info_value value">표준</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">인증 날짜</strong>
+                                  <span class="info_value value">2025.10.24-2029.10.23</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">이용 인프라</strong>
+                                  <span class="info_value value">KT G-Cloud</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">중앙조달계약</strong>
+                                  <span class="info_value value">해당 없음</span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="b_box">
+                              <p class="before_mark medal_icon">
+                                국가정보원 공시 국가공공기관 도입 가능
+                                <span>클라우드 컴퓨팅 서비스</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="card-btm">
+                            <div class="wrap_link_area">
+                              <div class="link_area">
+                                <span class="link_label">서비스 공식 사이트</span>
+                                <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">
+                                  공식 사이트 이동
+                                  <i class="svg-icon ico-go"></i>
+                                </a>
+                              </div>
+                              <div class="link_area">
+                                <span class="link_label">기관직접계약</span>
+                                <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">
+                                  이용지원시스템 이동
+                                  <i class="svg-icon ico-go"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="structured-item product_card" data-aos="fade-up">
+                    <div class="product_item_inner">
+                      <div class="box_logo">
+                        <img src="../img/saas_img/0_common/logo/logo_pr_dooray.svg" alt="두레이 로고" class="viewer" />
+                      </div>
+                      <div class="box_txt">
+                        <div class="box_txt_inner">
+                          <div class="card-top">
+                            <span class="krds-badge">협업도구</span>
+                          </div>
+                          <div class="card-body">
+                            <div class="c-text">
+                              <div class="c-tit">
+                                <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                                  <span class="product_name">두레이!(Dooray!)</span>
+                                </a>
+                              </div>
+                              <p class="company_name">두레이</p>
+                              <div class="tags">
+                                <span class="tag">드라이브</span>
+                                <span class="tag">메일</span>
+                                <span class="tag">메신저</span>
+                                <span class="tag">업무관리</span>
+                                <span class="tag">전자결재</span>
+                              </div>
+                            </div>
+                            <div class="b_box">
+                              <p>정부 공통시스템 연계</p>
+                              <div class="tags">
+                                <span class="tag_gov">모바일 공무원증</span>
+                                <span class="tag_gov">행정표준코드</span>
+                                <span class="tag_gov">LDAP</span>
+                                <span class="tag_gov">GPKI</span>
+                              </div>
+                            </div>
+                            <div class="wrap_detail_info">
+                              <ul class="detail_info_list">
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">CSAP 인증</strong>
+                                  <span class="info_value value">표준</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">인증 날짜</strong>
+                                  <span class="info_value value">2025.12.11~2029.12.17</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">이용 인프라</strong>
+                                  <span class="info_value value">네이버 클라우드(공공)</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">중앙조달계약</strong>
+                                  <span class="info_value value">계약 완료</span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="b_box">
+                              <p class="before_mark medal_icon">
+                                국가정보원 공시 국가공공기관 도입 가능
+                                <span>클라우드 컴퓨팅 서비스</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="card-btm">
+                            <div class="wrap_link_area">
+                              <div class="link_area">
+                                <span class="link_label">서비스 공식 사이트</span>
+                                <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">
+                                  공식 사이트 이동
+                                  <i class="svg-icon ico-go"></i>
+                                </a>
+                              </div>
+                              <div class="link_area">
+                                <span class="link_label">기관직접계약</span>
+                                <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">
+                                  이용지원시스템 이동
+                                  <i class="svg-icon ico-go"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="structured-item product_card" data-aos="fade-up">
+                    <div class="product_item_inner">
+                      <div class="box_logo">
+                        <img src="../img/saas_img/0_common/logo/logo.png" alt="공공기관용 ERP서비스(well-formed 공공Erp시스템) 로고" class="viewer" />
+                      </div>
+                      <div class="box_txt">
+                        <div class="box_txt_inner">
+                          <div class="card-top">
+                            <span class="krds-badge">협업도구</span>
+                          </div>
+                          <div class="card-body">
+                            <div class="c-text">
+                              <div class="c-tit">
+                                <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                                  <span class="product_name">공공기관용 ERP서비스(well-formed 공공Erp시스템)</span>
+                                </a>
+                              </div>
+                              <p class="company_name">하이퍼테크</p>
+                              <div class="tags">
+                                <span class="tag">경영관리</span>
+                                <span class="tag">급여관리</span>
+                                <span class="tag">복무관리</span>
+                                <span class="tag">시스템관리</span>
+                                <span class="tag">협업</span>
+                              </div>
+                            </div>
+                            <div class="b_box">
+                              <p>정부 공통시스템 연계</p>
+                              <div class="tags">
+                                <span class="tag_gov">해당없음</span>
+                              </div>
+                            </div>
+                            <div class="wrap_detail_info">
+                              <ul class="detail_info_list">
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">CSAP 인증</strong>
+                                  <span class="info_value value">표준</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">인증 날짜</strong>
+                                  <span class="info_value value">2025.10.24-2029.10.23</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">이용 인프라</strong>
+                                  <span class="info_value value">KT G-Cloud</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">중앙조달계약</strong>
+                                  <span class="info_value value">해당 없음</span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="b_box">
+                              <p class="before_mark medal_icon">
+                                국가정보원 공시 국가공공기관 도입 가능
+                                <span>클라우드 컴퓨팅 서비스</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="card-btm">
+                            <div class="wrap_link_area">
+                              <div class="link_area">
+                                <span class="link_label">서비스 공식 사이트</span>
+                                <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">
+                                  공식 사이트 이동
+                                  <i class="svg-icon ico-go"></i>
+                                </a>
+                              </div>
+                              <div class="link_area">
+                                <span class="link_label">기관직접계약</span>
+                                <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">
+                                  이용지원시스템 이동
+                                  <i class="svg-icon ico-go"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                                    <li class="structured-item product_card" data-aos="fade-up">
+                    <div class="product_item_inner">
+                      <div class="box_logo">
+                        <img src="../img/saas_img/0_common/logo/logo_pr_dooray.svg" alt="두레이 로고" class="viewer" />
+                      </div>
+                      <div class="box_txt">
+                        <div class="box_txt_inner">
+                          <div class="card-top">
+                            <span class="krds-badge">협업도구</span>
+                          </div>
+                          <div class="card-body">
+                            <div class="c-text">
+                              <div class="c-tit">
+                                <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                                  <span class="product_name">두레이!(Dooray!)</span>
+                                </a>
+                              </div>
+                              <p class="company_name">두레이</p>
+                              <div class="tags">
+                                <span class="tag">드라이브</span>
+                                <span class="tag">메일</span>
+                                <span class="tag">메신저</span>
+                                <span class="tag">업무관리</span>
+                                <span class="tag">전자결재</span>
+                              </div>
+                            </div>
+                            <div class="b_box">
+                              <p>정부 공통시스템 연계</p>
+                              <div class="tags">
+                                <span class="tag_gov">모바일 공무원증</span>
+                                <span class="tag_gov">행정표준코드</span>
+                                <span class="tag_gov">LDAP</span>
+                                <span class="tag_gov">GPKI</span>
+                              </div>
+                            </div>
+                            <div class="wrap_detail_info">
+                              <ul class="detail_info_list">
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">CSAP 인증</strong>
+                                  <span class="info_value value">표준</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">인증 날짜</strong>
+                                  <span class="info_value value">2025.12.11~2029.12.17</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">이용 인프라</strong>
+                                  <span class="info_value value">네이버 클라우드(공공)</span>
+                                </li>
+                                <li class="detail_info_list_item c-date">
+                                  <strong class="info_tit key">중앙조달계약</strong>
+                                  <span class="info_value value">계약 완료</span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="b_box">
+                              <p class="before_mark medal_icon">
+                                국가정보원 공시 국가공공기관 도입 가능
+                                <span>클라우드 컴퓨팅 서비스</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="card-btm">
+                            <div class="wrap_link_area">
+                              <div class="link_area">
+                                <span class="link_label">서비스 공식 사이트</span>
+                                <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">
+                                  공식 사이트 이동
+                                  <i class="svg-icon ico-go"></i>
+                                </a>
+                              </div>
+                              <div class="link_area">
+                                <span class="link_label">기관직접계약</span>
+                                <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">
+                                  이용지원시스템 이동
+                                  <i class="svg-icon ico-go"></i>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- //리스트 -->
+
+                <!-- 페이지네이션 영역 -->
+                <div class="krds-pagination">
+                  <span class="page-navi prev disabled" href="javascript:;">이전</span>
+                  <div class="page-links">
+                    <a class="page-link" href="javascript:;">1</a>
+                    <a class="page-link" href="javascript:;">2</a>
+                    <a class="page-link" href="javascript:;">3</a>
+                    <a class="page-link active" href="javascript:;">4</a>
+                    <a class="page-link" href="javascript:;">5</a>
+                    <a class="page-link" href="javascript:;">6</a>
+                    <a class="page-link" href="javascript:;">7</a>
+                    <a class="page-link" href="javascript:;">8</a>
+                    <span class="page-link link-dot"></span>
+                    <a class="page-link" href="javascript:;">99</a>
+                  </div>
+                  <a class="page-navi next" href="javascript:;">다음</a>
+                </div>
+                <!-- //페이지네이션 영역 -->
+              </section>
+
+              <section id="totalTabpanel03" role="tabpanel" aria-labelledby="totalTab03" class="tab-conts">
+                <h3 class="sr-only">공지사항</h3>
+                <!-- 리스트 상단 -->
+                <div class="search-list-top border">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>적용된 검색어‘<span class="point">협업</span>’</li>
+                    <li>검색 결과 <span class="point">25</span>건</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li class="m-hide">
+                      <strong class="sort-label"><label for="search_result_count3">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count3">
+                        <option>10개</option>
+                        <option>50개</option>
+                        <option>100개</option>
+                      </select>
+                    </li>
+                    <li>
+                      <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                      <div class="w-sort-btn">
+                        <button type="button" class="active">관련도순</button>
+                        <button type="button">최신순</button>
+                        <button type="button">인기순</button>
+                      </div>
+                      <div class="m-sort-btn">
+                        <select class="krds-form-select-sort" id="sort6">
+                          <option>관련도순</option>
+                          <option>최신순</option>
+                          <option>인기순</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //리스트 상단 -->
+                <!-- 탭 리스트 제목 -->
+                <div class="tab_conts_tit">
+                  <h3 class="tab_list_tit">공지사항<strong>총<span class="point">25</span>건</strong></h3>
+                  <a href="운영지원센터_공지사항.html" class="krds-btn small text">더보기<i class="svg-icon ico-plus"></i></a>
+                </div>
+                <!-- //탭리스트 제목 -->
+                <!-- 리스트 -->
+                <ul class="total-search-list">
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">공지사항</span>
+                      <span class="i-date">(등록일 2025.12.01)</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">[행사] 정부 공통시스템과 민간 SaaS 간 연계 개통식 개최</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">
+                              [행사] 정부 공통시스템과 민간 SaaS 간 연계 개통식 개최 [행사] 정부 공통시스템과 민간 SaaS 간 연계 개통식 개최
+                            </p>
+                            <p class="txt">
+                              행정안전부과 한국지능정보사회진흥원은공공부문의 민간 SaaS 이용촉진을 위해 민간 SaaS 연계공통기반을 구축하고 공공부문의 민간 SaaS 이용을 <span class="keyword">협업</span>하고 있습니다. 이와 관련하여 '정부 공통시스템과 민간 SaaS 간 연계 개통식'을 아래와 같이 개최하오니 관심있는 기관과 기업의 참석을 요청드립니다. 관심있는 기관과 기업의 참석을 요청드립니다.관심있는 기관과 기업의 참석을 요청드립니다.관심있는 기관과 기업의 참석을 요청드립니다.관심있는 기관과 기업의 참석을 요청드립니다.관심있는 기관과 기업의 참석을 요청드립니다. </p>
+                          </div>
+                          <span class="thum">
+                            <img src="../img/thumb/thumb_a.png" alt="게시글 썸네일">
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">공지사항</span></a></li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">공지사항</span>
+                      <span class="i-date">(등록일 2025.12.11)</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">[공모안내] 공공용 민간 SaaS 이용지원 기관 공모 안내</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">[공모안내] 공공용 민간 SaaS 이용지원 기관 공모 안내</p>
+                            <p class="txt">행정안전부에서 주최하고 우리 원에서 주관하는 「공공용 민간 SaaS 이용지원 <span class="keyword">협업</span> 기관 공모」에 대해 안내 드리오니 많은 관심과 참여를 부탁드립니다.가. 지원대상 : 기업모집을 통해 선정된 민간 SaaS(35종) 중 수요가 있는 중앙행정기관, 지자체 및 공공기관※ 기업모집을 통해 선정된 민간 SaaS(35종)의 세부 내용은 붙임 참고 나. 접수기간 : 〜 2025.1.05.(금), 18:00</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">공지사항</span></a></li>
+                        </li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">공지사항</span>
+                      <span class="i-date">(등록일 2025.12.11)</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">[모집안내] 공공용 민간 SaaS 시범이용 서비스 제공기업 모집 공고</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">[모집안내] 공공용 민간 SaaS 시범이용 서비스 제공기업 모집 공고</p>
+                            <p class="txt">정부에서는 공공부문의 민간 SaaS 이용 활성화를 위해, 행정기관(중앙부처, 지자체 등)에서 민간 SaaS를 <span class="point">협업</span>하고자 하는 경우 초기 이용료 등을 지원하는 공공용 민간 SaaS 시범이용을 추진할 예정입니다. 이와 관련하여 시범이용을 위해 행정기관(중앙부처, 지자체)에서 이용가능한 공공용 민간 SaaS를 제공할 수 있는 제공기업을 모집하오니 희망기업에서는 기한 내 있는 제공기업을 모집하오니 희망기업에서는 기한 내있는 제공기업을 모집하오니 희망기업에서는 기한 내있는 제공기업을 모집하오니 희망기업에서는 기한 내</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">공지사항</span></a></li>
+                        </li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">공지사항</span>
+                      <span class="i-date">(등록일 2025.12.11)</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">[수요조사] 2023년도 행정·공공기관 클라우드컴퓨팅서비스 활용모델 사업 수요조사 안내</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">[수요조사] 2023년도 행정·공공기관 클라우드컴퓨팅서비스 활용모델 사업 수요조사 안내</p>
+                            <p class="txt">클라우드컴퓨팅서비스 활용모델 사업을 통해 행정·공공기관에 적용할 수 있는 클라우드 전환 선도사례를 발굴하고 확산을 유도하기 위하여 ‘클라우드컴퓨팅서비스 활용모델 사업’을 추진하고 있습니다. 이와 관련하여 ‘23년 행정·공공기관 클라우드컴퓨팅서비스 활용모델 <span class="point">협업</span>수요조사를 아래와 같이 실시하오니, 활용모델 사업 참여를 희망하는 기관 및</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">공지사항</span></a></li>
+                        </li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">공지사항</span>
+                      <span class="i-date">(등록일 2025.12.11)</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">[설명회] 공공용 민간 SaaS 수요 설명회 개최</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">[설명회] 공공용 민간 SaaS 수요 설명회 개최</p>
+                            <p class="txt">* 일 시 : 2023.4.6.(목) / 14:00 ~ 15:20* 장 소 : NIA 서울사무소 지하1층 대회의실(서울시 중구 청계천로 14)* 참석대상: 국내 클라우드 기업 및 소프트웨어 개발 기업많은 관심과 참여 부탁드립니다. 행정공공기관의 민간 SaaS 활성화를 위해 공공에서 필요한 공공용 민간 SaaS 수요를 민간 기업에 공개하는 설명회를 개최합니다. <span class="point">협업</span> 대상은</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">공지사항</span></a></li>
+                        </li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- //리스트 -->
+
+                <!-- 페이지네이션 영역 -->
+                <div class="krds-pagination">
+                  <span class="page-navi prev disabled" href="javascript:;">이전</span>
+                  <div class="page-links">
+                    <a class="page-link" href="javascript:;">1</a>
+                    <a class="page-link" href="javascript:;">2</a>
+                    <a class="page-link" href="javascript:;">3</a>
+                    <a class="page-link active" href="javascript:;">4</a>
+                    <a class="page-link" href="javascript:;">5</a>
+                    <a class="page-link" href="javascript:;">6</a>
+                    <a class="page-link" href="javascript:;">7</a>
+                    <a class="page-link" href="javascript:;">8</a>
+                    <span class="page-link link-dot"></span>
+                    <a class="page-link" href="javascript:;">99</a>
+                  </div>
+                  <a class="page-navi next" href="javascript:;">다음</a>
+                </div>
+                <!-- //페이지네이션 영역 -->
+              </section>
+
+              <section id="totalTabpanel04" role="tabpanel" aria-labelledby="totalTab04" class="tab-conts">
+                <h3 class="sr-only">자료실</h3>
+                <!-- 리스트 상단 -->
+                <div class="search-list-top border">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>적용된 검색어‘<span class="point">협업</span>’</li>
+                    <li>검색 결과 <span class="point">7</span>건</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li class="m-hide">
+                      <strong class="sort-label"><label for="search_result_count4">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count4">
+                        <option>10개</option>
+                        <option>50개</option>
+                        <option>100개</option>
+                      </select>
+                    </li>
+                    <li>
+                      <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                      <div class="w-sort-btn">
+                        <button type="button" class="active">관련도순</button>
+                        <button type="button">최신순</button>
+                        <button type="button">인기순</button>
+                      </div>
+                      <div class="m-sort-btn">
+                        <select class="krds-form-select-sort" id="sort6">
+                          <option>관련도순</option>
+                          <option>최신순</option>
+                          <option>인기순</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //리스트 상단 -->
+                <!-- 탭 리스트 제목 -->
+                <div class="tab_conts_tit">
+                  <h3 class="tab_list_tit">자료실<strong>총<span class="point">7</span>건</strong></h3>
+                  <a href="운영지원센터_자료실.html" class="krds-btn small text">더보기<i class="svg-icon ico-plus"></i></a>
+                </div>
+                <!-- //탭리스트 제목 -->
+                <!-- 리스트 -->
+                <ul class="total-search-list list_archive">
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">자료실</span>
+                      <span class="i-date">(등록일 2025.12.11)</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">[행정·공공기관 클라우드전환] CSAP 인증을 받은 SaaS 목록 안내(‘24.11)</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">[행정·공공기관 클라우드전환] CSAP 인증을 받은 SaaS 목록 안내(‘24.11)</p>
+                            <p class="txt">클라우드서비스보안인증(CSAP)을 받은 <span class="keyword">협업</span> SaaS 목록(‘24.11)을 배포하오니 관련 업무에 참고하시기 바랍니다. 자세한 사항은 KISA 한국인터넷진흥원의 '클라우드 보안인증제 연도별 인증서 발급현황'을 참고하시기 바랍니다. 감사합니다.</p>
+                          </div>
+                      </div>
+                    </a>
+                    <!-- 첨부 파일 -->
+                    <ul class="box-group-area">
+                      <li>
+                        <p>(24.11) CSAP 인증 SaaS 목록 [HWP,20KB]</p>
+                        <div class="btn-wrap">
+                          <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                        </div>
+                      </li>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">자료실</span></a></li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                   <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">자료실</span>
+                      <span class="i-date">(등록일 2025.11.14)</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">2025년 공공부문 클라우드 정책 설명회 발표자료</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">2025년 공공부문 클라우드 정책 설명회 발표자료</p>
+                            <p class="txt">2025년 11월 7일(목) 개최한 「2025년 공공부문 <span class="keyword">협업</span> 클라우드 정책 설명회」 발표 자료 공유드립니다. 자세한 내용은 첨부된 설명회 발표 자료를 참고해 주시기 바랍니다.</p>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- 첨부 파일 -->
+                      <ul class="box-group-area">
+                        <li>
+                          <p>(24.11) CSAP 인증 SaaS 목록 [HWP,20KB]</p>
+                          <div class="btn-wrap">
+                            <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                          </div>
+                        </li>
+                        <li>
+                          <p>1_1 클라우드 네이티브 기반 디지털정부 사업 혁신전략 [PDF,24KB]</p>
+                          <div class="btn-wrap">
+                            <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                          </div>
+                        </li>
+                        <li>
+                          <p>2_1. 클라우드컴퓨팅서비스 이용안내서 및 이용요금 산출가이드 [PDF,24KB]</p>
+                          <div class="btn-wrap">
+                            <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                          </div>
+                        </li>
+                        <li>
+                          <p>2_3 클라우드컴퓨팅서비스 비용 최적화 가이드라인.pdf [PDF,24KB]</p>
+                          <div class="btn-wrap">
+                            <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">자료실</span></a></li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                   <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">자료실</span>
+                      <span class="i-date">(등록일 2025.12.11)</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">공공용 민간 SaaS 수요 설명회 발표 자료</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">공공용 민간 SaaS 수요 설명회 발표 자료</p>
+                            <p class="txt">4월 6일(목) 개최한 「공공용 민간 SaaS <span class="point">협업</span> 수요 설명회」 발표자료 공유드립니다.자세한 내용은 첨부된 설명회 발표 자료를 참고해 주시기 바랍니다.감사합니다.</p>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- 첨부 파일 -->
+                      <ul class="box-group-area">
+                        <li>
+                          <p>0331 공공용 민간 SaaS 수요 설명회 발표자료 [PDF,24KB]</p>
+                          <div class="btn-wrap">
+                            <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">자료실</span></a></li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                   <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">자료실</span>
+                      <span class="i-date">(등록일 2025.12.11)</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">2025년 클라우드컴퓨팅서비스 지자체 활용모델 사례·성과 공유 행사 발표 자료</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">2025년 클라우드컴퓨팅서비스 지자체 활용모델 사례·성과 공유 행사 발표 자료</p>
+                            <p class="txt">24년 8월 29일(화) 개최한 「 2025년 클라우드컴퓨팅서비스 지자체 활용모델 <span class="point">협업</span> 사례·성과 공유」 발표 자료 공유드립니다.자세한 내용은 첨부된 자료를 참고해 주시기 바랍니다.</p>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- 첨부 파일 -->
+                      <ul class="box-group-area">
+                        <li>
+                          <p>24년 클라우드컴퓨팅서비스 지자체 활용모델 사례 및 성과 공유 발표자료 [PDF,24KB]</p>
+                          <div class="btn-wrap">
+                            <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">자료실</span></a></li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                   <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">자료실</span>
+                      <span class="i-date">(등록일 2025.12.11)</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">2025년 클라우드컴퓨팅서비스 지자체 활용모델 사례·성과 공유 행사 발표 자료</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">2025년 클라우드컴퓨팅서비스 지자체 활용모델 사례·성과 공유 행사 발표 자료</p>
+                            <p class="txt">24년 8월 29일(화) 개최한 「 2025년 클라우드컴퓨팅서비스 지자체 활용모델 협업 사례·성과 공유」 발표 자료 공유드립니다.자세한 내용은 첨부된 자료를 참고해 주시기 바랍니다.</p>
+                          </div>
+                        </div>
+                      </a>
+                      <!-- 첨부 파일 -->
+                      <ul class="box-group-area">
+                        <li>
+                          <p>24년 클라우드컴퓨팅서비스 지자체 활용모델 사례 및 성과 공유 발표자료 [PDF,24KB]</p>
+                          <div class="btn-wrap">
+                            <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">자료실</span></a></li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- //리스트 -->
+
+                <!-- 페이지네이션 영역 -->
+                <div class="krds-pagination">
+                  <span class="page-navi prev disabled" href="javascript:;">이전</span>
+                  <div class="page-links">
+                    <a class="page-link" href="javascript:;">1</a>
+                    <a class="page-link" href="javascript:;">2</a>
+                    <a class="page-link" href="javascript:;">3</a>
+                    <a class="page-link active" href="javascript:;">4</a>
+                    <a class="page-link" href="javascript:;">5</a>
+                    <a class="page-link" href="javascript:;">6</a>
+                    <a class="page-link" href="javascript:;">7</a>
+                    <a class="page-link" href="javascript:;">8</a>
+                    <span class="page-link link-dot"></span>
+                    <a class="page-link" href="javascript:;">99</a>
+                  </div>
+                  <a class="page-navi next" href="javascript:;">다음</a>
+                </div>
+                <!-- //페이지네이션 영역 -->
+              </section>
+
+              <section id="totalTabpanel05" role="tabpanel" aria-labelledby="totalTab05" class="tab-conts">
+                <h3 class="sr-only">자주 묻는 질문</h3>
+                <!-- 리스트 상단 -->
+                <div class="search-list-top border">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>적용된 검색어‘<span class="point">협업</span>’</li>
+                    <li>검색 결과 <span class="point">7</span>건</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li class="m-hide">
+                      <strong class="sort-label"><label for="search_result_count5">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count5">
+                        <option>10개</option>
+                        <option>50개</option>
+                        <option>100개</option>
+                      </select>
+                    </li>
+                    <li>
+                      <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                      <div class="w-sort-btn">
+                        <button type="button" class="active">관련도순</button>
+                        <button type="button">최신순</button>
+                        <button type="button">인기순</button>
+                      </div>
+                      <div class="m-sort-btn">
+                        <select class="krds-form-select-sort" id="sort6">
+                          <option>관련도순</option>
+                          <option>최신순</option>
+                          <option>인기순</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //리스트 상단 -->
+                <!-- 탭 리스트 제목 -->
+                <div class="tab_conts_tit">
+                  <h3 class="tab_list_tit">자주 묻는 질문<strong>총<span class="point">20</span>건</strong></h3>
+                  <a href="운영지원센터_자주 묻는 질문.html" class="krds-btn small text">더보기<i class="svg-icon ico-plus"></i></a>
+                </div>
+                <!-- //탭리스트 제목 -->
+                <!-- 리스트 -->
+                <ul class="total-search-list">
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">자주 묻는 질문</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">모바일 공무원증</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">모바일 공무원증</p>
+                            <p class="txt">모바일 공무원증은 DID(Decentralized Identifie) 기술이 적용된 자기주권 신원증명(Self Sovereign Identity)의 모바일 신분증입니다. 자기주권 신원증명이란 현재 보편적으로 이용되고 있는 중앙집중식 신원증명과 대조되는 개념으로 신원정보의 소유 및 이용권한을 신원주체인 <span class="point">협업</span>인이 갖게 되는 것을 말합니다. 또한 모바일 신분증 소유자는</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">자주 묻는 질문</span></a>
+                        </li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">자주 묻는 질문</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">통합관리포털 소개</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">통합관리포털 소개</p>
+                            <p class="txt">통합관리포털은 민간 SaaS 연계공통기반의 운영 체계를 구성하는 총괄·운영기관, 정보보유기관, 이용기관, 민간 SaaS 기업의 사용자들이 이용 신청, 서비스 연계, 배포 관리, 모니터링 등을 편리하게 할 수 있도록 지원합니다. 공공기관이 간편하게 민간 SaaS를 이용할 수 있도록 제도⸱절차⸱기술 측면의 기반을 마련하여 연계를 지원함으로써 <span class="point">협업</span>을 위한 공동</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">자주 묻는 질문</span></a>
+                        </li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">자주 묻는 질문</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">전자정부 연계 SaaS 이용 계획이 없거나, 계약 체결이 안 된 경우 회원 가입이 가능한가요?</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">전자정부 연계 SaaS 이용 계획이 없거나, 계약 체결이 안 된 경우 회원 가입이 가능한가요?</p>
+                            <p class="txt">전자정부 연계 SaaS 이용 절차상 민간 SaaS 기업과 이용기관 간 계획을 수립하고 계약을 체결한 뒤 회원 가입이 가능합니다. <span class="point">협업</span>을 위해서는 계약 체결을 우선 진행해 주시기 바랍니다.</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">자주 묻는 질문</span></a>
+                        </li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">자주 묻는 질문</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">사업자 서류 인증에 필요한 증빙 자료는 어디로 보내면 되나요?</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">사업자 서류 인증에 필요한 증빙 자료는 어디로 보내면 되나요?</p>
+                            <p class="txt"><span class="point">협업</span>자 증빙 자료가 필요한 경우는 다음과 같습니다. 1. 법인 회원 가입 시 2. 파트너 제휴 시 사업자등록증 등의 증빙 자료는 1:1 문의 이메일 로 보내주시기 바랍니다.  발신자가 신뢰할 만한지 검증해 이메일 수신자에게 스팸 메일이 전달되는 것을 막기 위해 사용되는 방법입니다. 중복 발송 설정을 통해 중복된 메시지를 발송하지 않도록 설정할 수 있습니다</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">자주 묻는 질문</span></a>
+                        </li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="total-search-item">
+                    <p class="info-top">
+                      <span class="krds-badge bg-light-primary">자주 묻는 질문</span>
+                    </p>
+                    <div class="info-body">
+                      <a href="javascript:;">
+                        <p class="tit w-hide">이용 신청</p>
+                        <div class="in">
+                          <div class="text">
+                            <p class="tit m-hide">이용 신청</p>
+                            <p class="txt">민간 SaaS 연계공통기반 및 전자정부 연계 SaaS 이용 사전준비를 마친 민간 SaaS 기업과 이용기관은 통합관리포털에서 전자정부 연계 SaaS <span class="point">협업</span>신청을 할 수 있습니다. 전자정부 연계 SaaS 이용 신청을 진행하기 위해서는 민간 SaaS 연계공통기반 통합관리포털에 회원가입 되어있어야 합니다 전자정부 연계 SaaS 신청 및 이용은 다음과</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="info-btm">
+                      <ul class="i-cate">
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">홈</span></a></li>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">운영지원센터</span></a>
+                        <li><a href="javascript:;" class="krds-btn medium link basic"><span class="underline">자주 묻는 질문</span></a>
+                        </li>
+                      </ul>
+                      <div class="btn-area">
+                        <a href="javascript:;" class="krds-btn medium link basic">자세히보기 <i class="svg-icon ico-more"></i></a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <!-- //리스트 -->
+
+                <!-- 페이지네이션 영역 -->
+                <div class="krds-pagination">
+                  <span class="page-navi prev disabled" href="javascript:;">이전</span>
+                  <div class="page-links">
+                    <a class="page-link" href="javascript:;">1</a>
+                    <a class="page-link" href="javascript:;">2</a>
+                    <a class="page-link" href="javascript:;">3</a>
+                    <a class="page-link active" href="javascript:;">4</a>
+                    <a class="page-link" href="javascript:;">5</a>
+                    <a class="page-link" href="javascript:;">6</a>
+                    <a class="page-link" href="javascript:;">7</a>
+                    <a class="page-link" href="javascript:;">8</a>
+                    <span class="page-link link-dot"></span>
+                    <a class="page-link" href="javascript:;">99</a>
+                  </div>
+                  <a class="page-navi next" href="javascript:;">다음</a>
+                </div>
+                <!-- //페이지네이션 영역 -->
+              </section>
+            </div>
+            <!-- //tab contents -->
+          </div>
+          <!-- //검색 결과 -->
+        </div>
+        <!-- //컨텐츠 영역 -->
+
+      </div>
     </div>
+  </div>
 
-    <script>
-        // AOS.init();
-        AOS.init({
-            // easing: 'ease-out-back',
-            duration: 1000,
-            once: true // 한 번만 애니메이션을 실행하도록 설정
+<script>
+
+  // 검색기간 체크박스 전체선택/해제, 부분선택 처리
+    document.querySelectorAll("[data-checkbox-group]").forEach((group) => {
+      const checkAll = group.querySelector("[data-check-all]");
+      const items = group.querySelectorAll("[data-check-item]");
+
+      // 전체 클릭 시 → 나머지 전체 체크/해제
+      checkAll.addEventListener("change", () => {
+        items.forEach((item) => {
+          item.checked = checkAll.checked;
+        });
+      });
+
+      // 개별 체크 변경 시
+      items.forEach((item) => {
+        item.addEventListener("change", () => {
+          const allChecked = [...items].every((i) => i.checked);
+          const anyChecked = [...items].some((i) => i.checked);
+
+          checkAll.checked = allChecked;
+          checkAll.indeterminate = !allChecked && anyChecked;
+        });
+      });
+    });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initTotalSchTab();
+    initTotalSchPeriodSingleChk();
+    initTotalSchDetailToggle(); 
+  });
+
+  /* ------------------------------------------------------------------
+   * 통합검색 - 전체 탭
+   * ------------------------------------------------------------------ */
+  function initTotalSchTab() {
+    const TOTAL_SCH_TAB_ID = "totalTab01";
+    const TOTAL_SCH_PANEL_ID = "totalTabpanel01";
+
+    function updateTotalSchTab() {
+      const totalSchPanel =
+        document.getElementById(TOTAL_SCH_PANEL_ID);
+      if (!totalSchPanel) return;
+
+      const totalSchListContainer =
+        totalSchPanel.querySelector(".total-search-list");
+      if (!totalSchListContainer) return;
+
+      totalSchListContainer.innerHTML = "";
+
+      document
+        .querySelectorAll(".tab-conts:not(#totalTabpanel01)")
+        .forEach(totalSchEachPanel => {
+          const totalSchEachTitle =
+            totalSchEachPanel.querySelector(".tab_conts_tit");
+          const totalSchEachList =
+            totalSchEachPanel.querySelector(".total-search-list");
+
+          if (totalSchEachTitle) {
+            totalSchListContainer.appendChild(
+              totalSchEachTitle.cloneNode(true)
+            );
+          }
+
+          if (totalSchEachList) {
+            totalSchListContainer.appendChild(
+              totalSchEachList.cloneNode(true)
+            );
+          }
+        });
+    }
+
+    const totalSchTab =
+      document.getElementById(TOTAL_SCH_TAB_ID);
+
+    if (totalSchTab?.classList.contains("active")) {
+      updateTotalSchTab();
+    }
+
+    document.querySelectorAll(".btn-tab").forEach(totalSchTabBtn => {
+      totalSchTabBtn.addEventListener("click", () => {
+        const totalSchTabItem =
+          totalSchTabBtn.closest("li");
+        if (totalSchTabItem?.id === TOTAL_SCH_TAB_ID) {
+          updateTotalSchTab();
+        }
+      });
+    });
+  }
+
+  /* ------------------------------------------------------------------
+   * 통합검색 - 검색기간 (단일 선택)
+   * ------------------------------------------------------------------ */
+  function initTotalSchPeriodSingleChk() {
+    document
+      .querySelectorAll(".krds-check-area")
+      .forEach(totalSchChkArea => {
+        const totalSchChkAll =
+          totalSchChkArea.querySelector("[data-check-all]");
+        if (!totalSchChkAll) return;
+
+        const totalSchChkItems = Array.from(
+          totalSchChkArea.querySelectorAll(
+            "input[type='checkbox']"
+          )
+        ).filter(chk => chk !== totalSchChkAll);
+
+        totalSchChkAll.addEventListener("change", () => {
+          if (totalSchChkAll.checked) {
+            totalSchChkItems.forEach(
+              chk => (chk.checked = false)
+            );
+          }
         });
 
-        // // 탭 버튼 클릭 시 이벤트
-        // $('.area_tab .wrap_tab_button .tab_button').on('click', function() {
-        //     // 모든 버튼에서 active 클래스 제거
-        //     $('.area_tab .wrap_tab_button .tab_button').removeClass('active');
-        //     // 클릭한 버튼에 active 클래스 추가
-        //     $(this).addClass('active');
-
-        //     // 모든 탭 콘텐츠에서 active 클래스 제거
-        //     $('.area_tab .wrap_tab_content .tab_content').removeClass('active');
-        //     // 클릭한 버튼의 data-tab 속성을 읽어 해당 콘텐츠를 활성화
-        //     var targetTab = $(this).data('tab');
-        //     $('.area_tab .wrap_tab_content .tab_content.' + targetTab).addClass('active');
-        // });
-
-
-        // 초기 상태: 모든 탭 콘텐츠 표시
-        $(document).ready(function() {
-            $('.area_tab .wrap_tab_content .tab_content').addClass('active');
-        });
-
-        $('.area_tab .wrap_tab_button .tab_button').on('click', function() {
-            // 모든 버튼에서 active 클래스 제거
-            $('.area_tab .wrap_tab_button .tab_button').removeClass('active');
-            // 클릭한 버튼에 active 클래스 추가
-            $(this).addClass('active');
-
-            // 클릭한 버튼의 data-tab 속성을 읽음
-            var targetTab = $(this).data('tab');
-
-            if (targetTab === 'tab_all') {
-                // "전체" 버튼 클릭 시 모든 탭 콘텐츠 표시
-                $('.area_tab .wrap_tab_content .tab_content').addClass('active');
-            } else {
-                // 모든 탭 콘텐츠에서 active 클래스 제거 후, 선택한 탭만 활성화
-                $('.area_tab .wrap_tab_content .tab_content').removeClass('active');
-                $('.area_tab .wrap_tab_content .tab_content.' + targetTab).addClass('active');
-            }
-
-        });
-
-        $(document).ready(function() {
-            // 카테고리 선택 시
-            $('#select_category').change(function() {
-                var selectedCategory = $(this).val(); // 선택된 카테고리 값
-
-                // 모든 tab_content에서 active 클래스를 제거
-                $('.tab_content').removeClass('active');
-
-                // 선택된 카테고리가 "all_case"이면 모든 탭을 활성화
-                if (selectedCategory === "all_case") {
-                    $('.tab_content').addClass('active'); // 모든 탭에 active 클래스 추가
-                } else {
-                    // 선택된 카테고리에 해당하는 tab_content에 active 클래스 추가
-                    $('.tab_content.' + selectedCategory).addClass('active');
+        totalSchChkItems.forEach(totalSchChkItem => {
+          totalSchChkItem.addEventListener("change", () => {
+            if (totalSchChkItem.checked) {
+              totalSchChkAll.checked = false;
+              totalSchChkItems.forEach(chk => {
+                if (chk !== totalSchChkItem) {
+                  chk.checked = false;
                 }
-            });
-
-            // 페이지 로드 시 기본 탭 활성화 (전체 탭을 활성화하거나 기본값 탭을 활성화)
-            var initialCategory = $('#select_category').val(); // 초기 선택된 카테고리 값
-
-            if (initialCategory === "all_case") {
-                $('.tab_content').addClass('active');
+              });
             } else {
-                $('.tab_content.' + initialCategory).addClass('active');
+              const hasAnyChecked =
+                totalSchChkItems.some(chk => chk.checked);
+              if (!hasAnyChecked) {
+                totalSchChkAll.checked = true;
+              }
             }
+          });
         });
-    </script>
-</body>
+      });
+  }
 
+  /* ------------------------------------------------------------------
+   * 통합검색 - 상세검색 열기 / 닫기
+   * ------------------------------------------------------------------ */
+  function initTotalSchDetailToggle() {
+
+    document.addEventListener("click", function (e) {
+
+      const totalSchDetailBtn =
+        e.target.closest(".btn_search_detail");
+      if (!totalSchDetailBtn) return;
+
+      const totalSchDetailArea =
+        document.querySelector(".sch_form_bottom");
+      if (!totalSchDetailArea) return;
+
+      const isClosed =
+        totalSchDetailArea.classList.contains("is-closed");
+
+      totalSchDetailArea.classList.toggle(
+        "is-closed",
+        !isClosed
+      );
+
+      totalSchDetailBtn.setAttribute(
+        "aria-expanded",
+        String(isClosed)
+      );
+
+      totalSchDetailBtn.innerHTML = isClosed
+        ? '<i class="svg-icon ico-sch-plus"></i>상세검색 닫기'
+        : '<i class="svg-icon ico-sch-plus"></i>상세검색';
+    });
+  }
+</script>
+
+
+</body>
 </html>

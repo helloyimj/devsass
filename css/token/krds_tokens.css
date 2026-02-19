@@ -1,4 +1,3 @@
-
 @charset "utf-8";
 
 /* Do not edit directly */
@@ -435,7 +434,8 @@
   --krds-light-color-icon-success-static: var(--krds-color-light-success-50);
   --krds-light-color-icon-information-static: var(--krds-color-light-information-50);
   --krds-light-color-icon-gray-static: var(--krds-color-light-gray-80);
-  --krds-light-color-link-default: var(--krds-color-light-primary-50);
+  /* --krds-light-color-link-default: var(--krds-color-light-primary-50); */
+  --krds-light-color-link-default: #256ef4;
   --krds-light-color-link-hover: var(--krds-color-light-primary-60);
   --krds-light-color-link-pressed: var(--krds-color-light-primary-70);
   --krds-light-color-link-visited: #5917b8;
@@ -453,7 +453,8 @@
   --krds-light-color-button-secondary-fill-pressed: var(--krds-color-light-primary-20);
   --krds-light-color-button-secondary-border: var(--krds-color-light-primary-50);
   
-  --krds-light-color-button-tertiary-fill: var(--krds-color-light-alpha-white0);
+  /* --krds-light-color-button-tertiary-fill: var(--krds-color-light-alpha-white0); */
+  --krds-light-color-button-tertiary-fill: var(--mg-primary-5);
   --krds-light-color-button-tertiary-fill-hover: var(--krds-color-light-gray-5);
   --krds-light-color-button-tertiary-fill-pressed: var(--krds-color-light-gray-10);  
   --krds-light-color-button-tertiary-border: #0A1142;
@@ -461,7 +462,6 @@
   --krds-light-color-button-tertiary-fill-hover: var(--krds-color-light-gray-5);
   --krds-light-color-button-tertiary-fill-pressed: var(--krds-color-light-gray-10);  
   --krds-light-color-button-tertiary-border: var(--krds-color-light-gray-60); */
-
 
   --krds-light-color-button-disabled-fill: var(--krds-color-light-gray-20);
   --krds-light-color-button-text-fill-hover: var(--krds-color-light-secondary-5);

@@ -106,15 +106,12 @@ $(document).ready(function () {
     $card.html(createCardHTML(CARD_DATA[key]));
   });
 
-  // ✅ 말줄임 + 버튼 표시 판단
+  // 말줄임 + 버튼 표시 판단
   updateTooltipEllipsis();
 
-  // ✅ KRDS 툴팁 초기화
+  // KRDS 툴팁 초기화
   window.krds_contextualHelp?.init?.();
 });
-
-
-
 
 
 /* 카드 데이터 */
@@ -186,7 +183,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",
-        full: "모바일 공무원증, 행정표준코드, LDAP, GPKI",
+        full: "모바일 공무원증, 행정표준코드, LDAP",
         sr: "연계 전체 보기"
       },
       {
@@ -461,7 +458,7 @@ const CARD_DATA = {
       },
       {
         key: "제공 기능",
-        full: "장애관리, IT서비스관리, ITAM, ITOM, ITSM, SLA관리",
+        full: "시설관리, 안전관리, 전자서식",
         sr: "제공 기능 전체 보기"
       },
       {

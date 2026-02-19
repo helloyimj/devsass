@@ -1,0 +1,150 @@
+@charset "UTF-8";
+/* 사이드 버튼 top 버튼 */
+.wrap_side_btn {
+  position: fixed;
+  z-index: 60;
+  right: 4rem;
+  bottom: 8rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-direction: column;
+  // display: none;
+
+  .btn_side_sup {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin-top: 0.6rem;
+    background: linear-gradient(45deg, #3357cb, #6097fc);
+    overflow: visible;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("../../img/icon/icon_set.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 3.4rem;
+      pointer-events: none;
+    }
+
+    p {
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      line-height: 1;
+      width: 16.6rem;
+      height: 6rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border: 1px solid #4068d8;
+      // font-family: $font_medium;
+      font-size: 1.8rem;
+      border-radius: 3rem;
+      color: #111;
+      padding: 2rem 7rem 2rem 2rem;
+      opacity: 0;
+      transition: all 0.2s ease;
+    }
+
+    &:hover,
+    &.active {
+      p {
+        opacity: 1;
+        display: block;
+      }
+    }
+
+
+
+    &.btn_side_sup02 {
+      background: linear-gradient(45deg, #1a7395, #0db5bd);
+
+      &::after {
+        background-image: url("../../img/icon/icon_ai.svg");
+      }
+
+      p {
+        border-color: #1e84a0;
+        width: 21.5rem;
+      }
+    }
+
+    &.btn_side_sup03 {
+      // display: none;
+      background: #0f174d;
+
+      &::after {
+        background-image: url("../../img/icon/icon_top.svg");
+        background-size: 2.6rem;
+      }
+    }
+  }
+}
+
+.wrap_side_btn .btn_side_sup03 {
+  transform: translateY(100px); /* 초기 위치는 100px 아래로 설정 */
+  opacity: 0; /* 시작할 때는 보이지 않음 */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* 부드러운 이동과 투명도 변화 */
+}
+
+.wrap_side_btn .btn_side_sup03.show {
+  transform: translateY(0); /* 보일 때 원래 위치로 */
+  opacity: 1; /* 보이게 설정 */
+}
+
+// .wrap_side_btn .btn_side_sup03.show ~ .btn_side_sup01,
+// .wrap_side_btn .btn_side_sup03.show ~ .btn_side_sup02 {
+//   transform: translateY(-50px); /* 버튼들이 밀려 올라가도록 */
+// }
+
+@media all and (max-width: 1420px) {
+  /* top 버튼 */
+  .wrap_side_btn {
+    position: fixed;
+    right: 3%;
+    bottom: 4rem;
+    // z-index: 100;
+  }
+  }
+
+@media all and (max-width: 1024px) {
+  
+  /* top 버튼 */
+  .wrap_side_btn {
+    position: fixed;
+    right: 1.4rem;
+    bottom: 3rem;
+    // z-index: 80;
+
+    a {
+      position: relative;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      width: 4.6rem;
+      height: 4.6rem;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(37, 53, 121, 0.2);
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 4.5rem;
+        height: 4.5rem;
+        background-image: url("../../img/icon/icon_top.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+      }
+    }
+  }
+  }
+
+  

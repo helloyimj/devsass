@@ -17,7 +17,7 @@
       first-element-margin: var(--krds-gap-3)
     ),
     card: (
-      body-gap: var(--krds-gap-7),
+      body-gap: var(--krds-gap-5),
       body-cont-gap: var(--krds-gap-5),
       body-title-gap: var(--krds-gap-1),
       body-title-pc-font-size: var(--krds-pc-font-size-heading-small),
@@ -97,6 +97,10 @@
 
   > li {
     padding: var(--krds-structured-list--list-padding-#{$unit}-size);
+     @include size-medium {
+      padding: 2.4rem;
+
+     }
   }
 
   .card-btn {
@@ -233,18 +237,19 @@ $mode-setting: light;
     gap: var(--krds-structured-list--card-body-gap);
     .c-text {
       @include flex-layout($fd: column, $ai: normal);
-      gap: var(--krds-structured-list--card-body-cont-gap);
+      // gap: var(--krds-structured-list--card-body-cont-gap);
+      gap: var(--krds-gap-3);
       word-break: break-all;
-      &:hover {
-        .c-tit {
-          @include underline(0.5rem);
+        &:hover {
+          .c-tit a {
+            @include underline(0.5rem);
+          }
         }
-      }
-      &:visited {
-        .c-tit {
-          color: var(--krds-structured-list--tag-color-text-visited);
+        &:visited {
+          .c-tit a {
+            color: var(--krds-structured-list--tag-color-text-visited);
+          }
         }
-      }
       .c-tit {
         @include flex-layout($ai: center);
         gap: var(--krds-structured-list--card-body-title-gap);
@@ -253,7 +258,7 @@ $mode-setting: light;
         .span {
           @include ellipsis(1);
         }
-        &::after {
+        a::after {
           display: inline-flex;
           flex-shrink: 0;
           @include pseudo();
@@ -262,12 +267,17 @@ $mode-setting: light;
           );
           @include svg-icon($mode: light);
           @include icon-set(ico_angle);
-          transform: rotate(-90deg);
+          transform: rotate(-90deg) translateX(-4px);
         }
       }
       .c-txt {
         @include ellipsis(3);
         color: var(--krds-structured-list--card-body-color-text);
+      }
+      .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 8px;
       }
     }
     .c-btn {
@@ -359,12 +369,13 @@ $mode-setting: light;
         margin: 0;
       }
     }
-    .card-top {
-      margin: var(--krds-structured-list--full-card-top-margin) 0;
-    }
+    // .card-top {
+    //   margin: var(--krds-structured-list--full-card-top-margin) 0;
+    // }
+
     .card-body {
-      flex-direction: row;
-      justify-content: space-between;
+      // flex-direction: row;
+      // justify-content: space-between;
       .c-text {
         flex: 1;
         margin: 0;
@@ -411,7 +422,8 @@ $mode-setting: light;
     }
     .card-btm {
       // margin-top:0;
-      margin-top: 1.6rem;
+      // margin-top: 1.6rem;
+      margin-top: var(--krds-number-8);
     }
     .card-btn {
       top: var(--krds-structured-list--full-card-btn-position-top);
@@ -436,51 +448,6 @@ $mode-setting: light;
   }
 }
 
-// custom
-
-//   .box_line_gray {
-//         background-color: $color_white;
-//         border-radius: 2rem;
-//         border: 1px solid $color_ccc;
-//     }
-// 	    .box_line_gray {
-//       border-radius: 1rem;
-//       height: 18rem;
-//       left: 0;
-//       position: absolute;
-//       top: 0;
-//       width: 18rem;
-
-//     //   &.newly_added {
-//     //     border-color: #ed0319;
-
-//     //     .newly_added_tag {
-//     //       position: absolute;
-//     //       top: 9px;
-//     //       left: 9px;
-//     //       width: 4.6rem;
-//     //       height: 2.4rem;
-//     //       border-radius: 1.2rem;
-//     //       background-color: #ed0319;
-//     //       font-size: 1.2rem;
-//     //       color: #fff;
-//     //       font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-//     //       text-align: center;
-//     //       line-height: 2.4rem;
-//     //     }
-//     //   }
-
-//       .wrap_img {
-//         width: 100%;
-//         height: 100%;
-//         padding: 0.8rem;
-
-//         img {
-//           width: 80%;
-//         }
-//       }
-//     }
-
 .tag {
   @include flex-layout($d: inline-flex, $ai: center);
   background-color: var(--krds-structured-list--tag-color-action);
@@ -500,242 +467,6 @@ $mode-setting: light;
   }
 }
 
-// 		.wrap_govSaas {
-// 		background-color: $color_bg_lightblue;
-// 		padding: 0.5rem 0.6rem;
-// 		border-radius: 2rem;
-// 		display: flex;
-// 		gap: 2rem;
-// 		margin-top: 1.6rem;
-
-// 		p {
-// 				font-family: $font_medium;
-// 				color: $color_btn_bl;
-// 				font-size: 1.4rem;
-// 				padding-left: 1.5rem;
-// 				display: flex;
-// 				align-items: center;
-// 		}
-
-// 		.govSaas_tag {
-// 				display: flex;
-// 				gap: 0.6rem;
-
-// 				.tag {
-// 						display: inline-block;
-// 						font-family: $font_medium;
-// 						font-size: 1.2rem;
-// 						color: $color_blue;
-// 						padding: 0.3rem 1.2rem;
-// 						background-color: $color_white;
-// 						border-radius: 1.4rem;
-
-// 						/* 공공용 민간 SaaS 상세페이지 추가 시작 2025-02-05 */
-// 						&.connected {
-// 								background-color: $color_blue;
-// 								color: $color_white;
-// 						}
-// 						/* 공공용 민간 SaaS 상세페이지 추가 끝 2025-02-05 */
-// 				}
-// 		}
-// }
-
-//
-
-.product_list {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
-
-  .product_item {
-    padding: 4rem;
-    background-color: #fff;
-    border: 1px solid #b1b8be;
-    border-radius: 1.2rem;
-    display: flex;
-  }
-
-  .product_item_inner {
-    display: flex;
-    gap: 4rem;
-
-    .box_logo {
-      background-color: #fff;
-      border-radius: 2rem;
-      border: 1px solid #ccc;
-
-      width: 21.6rem;
-      height: 21.6rem;
-      border-radius: 0.8rem;
-      object-fit: contain;
-      padding: 1.9rem;
-
-      position: relative;
-      flex-shrink: 0;
-
-      img {
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 82%;
-      }
-    }
-
-    .box_txt {
-      // padding-left: 4rem;
-
-      .box_txt_inner {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        
-      }
-
-      .card-top {
-        margin-bottom: 1.8rem;
-      }
-
-      .card-body {
-        // .c_text {
-        // 	width: auto;
-        // }
-
-        .c-tit {
-          a {
-            display: inline-block;
-            width: auto;
-            font-size: 2.4rem;
-            font-weight: bold;
-          }
-
-          // .product_name {
-          // 	position: relative;
-          // 		&::after {
-          // 		display: inline-flex;
-          // 		align-items: center;
-          // 		flex-shrink: 0;
-          // 		content: "";
-          // 		width: var(--krds-icon--size-large);
-          // 		height: var(--krds-icon--size-large);
-          // 		background-color: var(--krds-light-color-text-basic);
-          // 		forced-color-adjust: none;
-          // 		mask-repeat: no-repeat;
-          // 		mask-position: center center;
-          // 		mask-size: contain;
-          // 		mask-image: url(../../img/component/icon/ico_angle.svg);
-          // 		transform: rotate(-90deg);
-          // 	}
-          // //     // font-family: $font_bold;
-          // //     // padding-right: ;
-          // }
-          .company_name {
-            color: #777;
-            margin-top: 0.8rem;
-            margin-bottom: 1.6rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-.b_box {
-  background-color: #e3e9f5;
-  padding: 0.5rem 1.6rem;
-  border-radius: 2rem;
-  display: flex;
-  gap: 1.6rem;
-  flex-grow: 0;
-  width: fit-content;
-  // margin-bottom: 1.6rem;
-  // margin-top: 1.6rem;
-
-  p {
-    font-weight: bold;
-    //   font-family: "NotoSansBold", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: #111;
-    font-size: 1.6rem;
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-
-    span {
-      font-weight: 400;
-    }
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-
-    .tag_gov {
-      display: inline;
-      height: 2.6rem;
-      font-size: 1.4rem;
-      background-color: #fff;
-      color: #111;
-      padding: 0.25rem 1rem;
-      border-radius: 1.4rem;
-      border-color: #fff;
-    }
-  }
-
-  .before_mark {
-    padding-left: 2.6rem;
-    &.medal_icon {
-      background-image: url(../../img/icon/icon_medal.svg);
-      background-size: 1.8rem 2.1rem;
-      background-repeat: no-repeat;
-      background-position: left center;
-    }
-  }
-  .b_box {
-    padding-left: 8px;
-  }
-}
-
-.wrap_detail_info {
-  padding-right: 20%;
-  .detail_info_list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.6rem 2.4rem;
-    // flex-direction: column;
-    .detail_info_list_item {
-      min-width: 24rem;
-      padding-right: 2.4rem;
-      font-size: 1.6rem;
-      .key {
-        margin-right: 8px;
-      }
-    }
-  }
-}
-
-.wrap_link_area {
-  display: flex;
-  gap: 2.4rem;
-
-  .link_area {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-
-    .link_label {
-      font-weight: bold;
-    }
-  }
-}
-
-//
-//
-//
-//
-//
-//
 
 //태블릿 전용 속성
 @include size-medium-to-large {
@@ -749,35 +480,6 @@ $mode-setting: light;
     }
   }
 
-  // custom
-
-  .product_list .product_item_inner {
-    flex-direction: column;
-  }
-  .product_list .product_item_inner .box_logo {
-    margin: auto;
-  }
-
-  .box_txt {
-    padding-left: 0;
-  }
-
-  .b_box {
-    width: max-content;
-    flex-direction: column;
-    flex-grow: 1;
-    width: 100%;
-    padding: 1.6rem 1.2rem;
-  }
-
-  .wrap_link_area {
-    // flex-wrap: wrap;
-  }
-
-  .wrap_link_area .link_area {
-    width: 50%;
-    // justify-content: space-between;
-  }
 }
 
 //모바일 전용
@@ -846,10 +548,10 @@ $mode-setting: light;
       .card-body {
         flex-direction: column;
         align-items: flex-start;
-        gap: var(--krds-structured-list--full-card-body-gap);
-        .c-text {
-          gap: var(--krds-structured-list--full-card-body-cont-gap);
-        }
+        gap: 12px;
+        // .c-text {
+        //   gap: var(--krds-structured-list--full-card-body-cont-gap);
+        // }
         .c-txt-ul {
           gap: var(--krds-structured-list--full-card-body-meta-gap-y);
         }
@@ -924,15 +626,5 @@ $mode-setting: light;
       }
     }
   }
-}
-
-
-// 통합 saas 
-.sch-filter-box  .form-group-row {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: var(--krds-gap-5);
 }
 

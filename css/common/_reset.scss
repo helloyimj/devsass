@@ -21,7 +21,7 @@ body {
 	background-color: var(--krds-#{$mode-setting}-color-background-white);
 	font-size: var(--krds-pc-font-size-body-medium);
 	// overflow-x: hidden;
-	overflow: hidden;
+	// overflow: hidden;
 }
 //시스템 고대비모드 켜도 우리 style 적용되도록
 // * {

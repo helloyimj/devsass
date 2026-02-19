@@ -2,7 +2,7 @@
 //사이즈 정의
 @mixin spinner-size-variable() {
 	--krds-spinner--layout-gap: var(--krds-number-5);
-	--krds-spinner--pc-font-size: var(--krds-pc-font-size-body-small);
+	--krds-spinner--pc-font-size: var(--krds-pc-font-size-body-large);
 	--krds-spinner--mobile-font-size: var(--krds-mobile-font-size-body-small);
 	--krds-spinner--size: var(--krds-size-height-3);
 	--krds-spinner--animation-duration: 900ms;
@@ -92,7 +92,7 @@ $mode-setting: light;
 	// --krds-spinner--layout-gap: var(--krds-number-5);
 	--krds-spinner--layout-gap: 16px;
 	// --krds-spinner--pc-font-size: var(--krds-pc-font-size-body-small);
-	--krds-spinner--pc-font-size: #fff;
+	--krds-spinner--pc-font-size: 18px;
 	// --krds-spinner--mobile-font-size: var(--krds-mobile-font-size-body-small);
 	--krds-spinner--mobile-font-size: 18px;
 	// --krds-spinner--size: var(--krds-size-height-3);
@@ -113,7 +113,7 @@ $mode-setting: light;
 
 .wrap-krds-spinner {
   background-color: rgba(0, 0, 0, 0.75);
-  position: relative;
+  position: fixed;
   width: 100%;
   height: 100%;
 
@@ -124,7 +124,7 @@ $mode-setting: light;
 	gap: var(--krds-spinner--layout-gap);
 	@include position($p: relative, $t: 0, $l: 0);
 	z-index: 10;
-	// color: var(--krds-spinner--color-text);
+	color: #fff;
 	font-size: var(--krds-spinner--pc-font-size);
 	width: 100%;
 	height: 100%;

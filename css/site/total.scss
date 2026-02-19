@@ -1,39 +1,34 @@
 @charset "utf-8";
 
-@import "swiper-5.4.3.css";
-@import "swiper.11.0.6-bundle.css";
+// AOS library
 @import "aos.css";
+
+// font 설정
 @import "fontset.css";
 
-// normalize
-@import "base.css";
-// button style 등 common
+// 공통 사용 style
 @import "style.css";
-// navigation
-@import "nav.css";
+
 // layout
 @import "layout.css";
-// footer
-@import "footer.css";
-// layout2
-@import "style_promotion.css";
-// 상세페이지 커스텀
-@import "style_saas.css";
 
-// 1차 추가 부가 요소 - 스와이퍼 슬라이드 추가 커스텀
-// krds 와 충돌로 추가 수정해야함
-@import "../site/new.css";
+// 퀵 버튼
+@import "side_button.css";
 
 // 게시판
 @import "board.css";
-// 약관
-@import "terms_sass.css";
-// 검색
-@import "search.css";
 
-// 2026 수정 
-// 추가 부가 요소 여기에 작성
-// @use 'new_total.css';
+// SaaS - 공통, 템플릿, 소개, 연계한 민간 SaaS, 상세페이지
+@import "style_saas.css";
 
-// 커스텀 스타일
-// @use '../css/total_custom';
+// 회원가입
+@import "style_join.css";
+
+// 운영지원센터
+@import "style_center.css";
+
+// 이용약관
+@import "style_terms.css";
+
+// 개인정보처리방침
+@import "style_policy.css";

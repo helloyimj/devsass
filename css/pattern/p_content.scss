@@ -1,4 +1,4 @@
-@import '../common/include';
+@import "../common/include";
 
 //모드 설정
 $mode-setting: light;
@@ -212,8 +212,7 @@ $mode-setting: light;
               &::after {
                 width: 0;
                 height: 0;
-                border-bottom: 0.6rem solid
-                  var(--krds-#{$mode-setting}-color-icon-point);
+                border-bottom: 0.6rem solid var(--krds-#{$mode-setting}-color-icon-point);
                 border-left: 0.4rem solid transparent;
                 border-right: 0.4rem solid transparent;
               }
@@ -222,8 +221,7 @@ $mode-setting: light;
               &::after {
                 width: 0;
                 height: 0;
-                border-top: 0.6rem solid
-                  var(--krds-#{$mode-setting}-color-icon-information);
+                border-top: 0.6rem solid var(--krds-#{$mode-setting}-color-icon-information);
                 border-left: 0.4rem solid transparent;
                 border-right: 0.4rem solid transparent;
               }
@@ -296,13 +294,9 @@ $mode-setting: light;
               &::before {
                 @include position($t: 50%, $l: 0);
                 @include pseudo();
-                width: var(
-                  --krds-#{$mode-setting}-border-width-variable-regular
-                );
+                width: var(--krds-#{$mode-setting}-border-width-variable-regular);
                 height: var(--krds-size-height-2);
-                background-color: var(
-                  --krds-#{$mode-setting}-color-divider-secondary-light
-                );
+                background-color: var(--krds-#{$mode-setting}-color-divider-secondary-light);
                 transform: translateY(-50%);
               }
             }
@@ -379,9 +373,7 @@ $mode-setting: light;
   &.bg {
     padding-top: var(--krds-gap-11);
     padding-bottom: var(--krds-gap-11);
-    background-color: var(
-      --krds-#{$mode-setting}-color-surface-secondary-subtler
-    );
+    background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
     .contents-wrap {
       .contents-text {
         background-color: #dfe7ef;
@@ -431,15 +423,9 @@ $mode-setting: light;
         @for $n from 1 through 8 {
           &.i#{$n} {
             &::after {
-              content: '';
-              @include svg-icon(
-                $size: var(--krds-size-height-5),
-                $mode: #{$mode-setting}
-              );
-              mask: url('#{$url}/img/pattern/content/main_menu_ico#{$n}.svg')
-                no-repeat
-                center /
-                contain;
+              content: "";
+              @include svg-icon($size: var(--krds-size-height-5), $mode: #{$mode-setting});
+              mask: url("#{$url}/img/pattern/content/main_menu_ico#{$n}.svg") no-repeat center / contain;
             }
           }
         }
@@ -449,9 +435,7 @@ $mode-setting: light;
       .menu-item {
         .ico {
           border-radius: var(--krds-radius-xlarge1);
-          background-color: var(
-            --krds-#{$mode-setting}-color-surface-secondary-subtler
-          );
+          background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
         }
       }
     }
@@ -473,11 +457,8 @@ $mode-setting: light;
           justify-content: center;
           height: 10.8rem;
           border-radius: var(--krds-radius-xlarge1);
-          border: var(--krds-#{$mode-setting}-border-width-variable-regular)
-            solid var(--krds-#{$mode-setting}-color-border-gray);
-          background-color: var(
-            --krds-#{$mode-setting}-color-surface-white-subtle
-          );
+          border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-border-gray);
+          background-color: var(--krds-#{$mode-setting}-color-surface-white-subtle);
           .ico {
             width: 3.2rem;
             height: 3.2rem;
@@ -510,7 +491,7 @@ $mode-setting: light;
         .ico {
           @for $n from 1 through 8 {
             &.i#{$n} {
-              background-image: url('#{$url}/img/pattern/content/main_menu_blue_ico#{$n}.svg');
+              background-image: url("#{$url}/img/pattern/content/main_menu_blue_ico#{$n}.svg");
               &::after {
                 display: none;
               }
@@ -533,9 +514,7 @@ $mode-setting: light;
       height: 42.9rem;
       padding: var(--krds-padding-9);
       border-radius: var(--krds-radius-xlarge1);
-      background-color: var(
-        --krds-#{$mode-setting}-color-surface-secondary-subtler
-      );
+      background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
       background-image: url(#{$url}/img/pattern/content/main_ico_book_M.svg);
       background-position: bottom 3.2rem right 3.2rem;
       background-repeat: no-repeat;
@@ -616,8 +595,7 @@ $mode-setting: light;
     .d-card {
       padding: 0;
       &.line {
-        border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-          var(--krds-#{$mode-setting}-color-border-gray);
+        border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-border-gray);
       }
       .im {
         flex-shrink: 0;
@@ -644,9 +622,7 @@ $mode-setting: light;
       .in {
         border-radius: 0 0 var(--krds-radius-xlarge2) var(--krds-radius-xlarge2);
         padding: var(--krds-pc-padding-card-medium);
-        background-color: var(
-          --krds-#{$mode-setting}-color-surface-white-subtle
-        );
+        background-color: var(--krds-#{$mode-setting}-color-surface-white-subtle);
       }
     }
   }
@@ -971,11 +947,8 @@ $mode-setting: light;
           font-weight: var(--krds-font-weight-bold);
           width: 100%;
           height: 6.1rem;
-          padding: var(--krds-pc-padding-card-xsmall)
-            var(--krds-pc-padding-card-small);
-          background-color: var(
-            --krds-#{$mode-setting}-color-surface-secondary-subtler
-          );
+          padding: var(--krds-pc-padding-card-xsmall) var(--krds-pc-padding-card-small);
+          background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
           border-radius: var(--krds-radius-xlarge1);
         }
       }
@@ -996,8 +969,7 @@ $mode-setting: light;
       background-color: var(--krds-#{$mode-setting}-color-background-white);
       li {
         > .krds-btn {
-          border: var(--krds-#{$mode-setting}-border-width-variable-regular)
-            solid var(--krds-#{$mode-setting}-color-border-gray);
+          border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-border-gray);
           background-color: var(--krds-#{$mode-setting}-color-background-white);
         }
       }
@@ -1021,15 +993,12 @@ $mode-setting: light;
     height: 100%;
     padding: var(--krds-pc-padding-card-medium);
     border-radius: var(--krds-radius-xlarge2);
-    background-color: var(
-      --krds-#{$mode-setting}-color-surface-secondary-subtler
-    );
+    background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
     &.outline {
       display: flex;
       flex-direction: column;
       gap: var(--krds-gap-7);
-      border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-        var(--krds-#{$mode-setting}-color-border-gray);
+      border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-border-gray);
       background-color: var(--krds-#{$mode-setting}-color-surface-white-subtle);
       .main-tit-wrap {
         @include flex-layout($ai: center, $jc: space-between);
@@ -1146,8 +1115,7 @@ $mode-setting: light;
   &.line {
     padding: var(--krds-pc-padding-card-small);
     border-radius: var(--krds-radius-xlarge1);
-    border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-      var(--krds-#{$mode-setting}-color-border-gray);
+    border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-border-gray);
     .c-btn {
       text-align: right;
     }
@@ -1161,9 +1129,7 @@ $mode-setting: light;
   &.fill {
     padding: var(--krds-pc-padding-card-small);
     border-radius: var(--krds-radius-xlarge1);
-    background-color: var(
-      --krds-#{$mode-setting}-color-surface-secondary-subtler
-    );
+    background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
     .c-btn {
       text-align: right;
     }
@@ -1185,21 +1151,18 @@ a {
 //swiper button 공통
 .main-vban-wrap {
   .swiper-pagination,
-  [class*='swiper-button-'] {
-    border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-      #d7d9db; //토근없음
+  [class*="swiper-button-"] {
+    border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid #d7d9db; //토근없음
   }
 }
 .main-sect {
   .swiper-indicator {
     .swiper-pagination {
-      border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-        #d7d9db; //토근없음
+      border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid #d7d9db; //토근없음
     }
   }
-  [class*='swiper-button-'] {
-    border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-      #d7d9db; //토근없음
+  [class*="swiper-button-"] {
+    border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid #d7d9db; //토근없음
   }
 }
 
@@ -1869,8 +1832,7 @@ a {
         > .krds-btn {
           &.text {
             height: 5.3rem;
-            padding: var(--krds-mobile-padding-card-xsmall)
-              var(--krds-mobile-padding-card-small);
+            padding: var(--krds-mobile-padding-card-xsmall) var(--krds-mobile-padding-card-small);
             font-size: var(--krds-mobile-font-size-body-large);
           }
         }
@@ -1977,25 +1939,21 @@ a {
             .ranking-state {
               &.up {
                 &::after {
-                  border-bottom: 0.6rem solid
-                    var(--krds-#{$mode-setting}-color-icon-point);
+                  border-bottom: 0.6rem solid var(--krds-#{$mode-setting}-color-icon-point);
                   border-left: 0.4rem solid transparent;
                   border-right: 0.4rem solid transparent;
                 }
               }
               &.down {
                 &::after {
-                  border-top: 0.6rem solid
-                    var(--krds-#{$mode-setting}-color-icon-information);
+                  border-top: 0.6rem solid var(--krds-#{$mode-setting}-color-icon-information);
                   border-left: 0.4rem solid transparent;
                   border-right: 0.4rem solid transparent;
                 }
               }
               &.same {
                 &::after {
-                  background-color: var(
-                    --krds-#{$mode-setting}-color-text-basic
-                  );
+                  background-color: var(--krds-#{$mode-setting}-color-text-basic);
                 }
               }
             }
@@ -2010,12 +1968,8 @@ a {
             > li {
               & + li {
                 &::before {
-                  width: var(
-                    --krds-#{$mode-setting}-border-width-variable-regular
-                  );
-                  background-color: var(
-                    --krds-#{$mode-setting}-color-divider-secondary-light
-                  );
+                  width: var(--krds-#{$mode-setting}-border-width-variable-regular);
+                  background-color: var(--krds-#{$mode-setting}-color-divider-secondary-light);
                 }
               }
             }
@@ -2040,9 +1994,7 @@ a {
   //메인 섹션
   .main-sect {
     &.bg {
-      background-color: var(
-        --krds-#{$mode-setting}-color-surface-secondary-subtler
-      );
+      background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
     }
 
     //자주찾는 메뉴 swiper 디자인 정리 후 작업예정
@@ -2052,10 +2004,7 @@ a {
           @for $n from 1 through 8 {
             &.i#{$n} {
               &::after {
-                @include svg-icon(
-                  $size: var(--krds-size-height-5),
-                  $mode: #{$mode-setting}
-                );
+                @include svg-icon($size: var(--krds-size-height-5), $mode: #{$mode-setting});
               }
             }
           }
@@ -2064,20 +2013,15 @@ a {
       &:not(.outline) {
         .menu-item {
           .ico {
-            background-color: var(
-              --krds-#{$mode-setting}-color-surface-secondary-subtler
-            );
+            background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
           }
         }
       }
       &.type1 {
         &.outline {
           .menu-item {
-            border: var(--krds-#{$mode-setting}-border-width-variable-regular)
-              solid var(--krds-#{$mode-setting}-color-border-gray);
-            background-color: var(
-              --krds-#{$mode-setting}-color-surface-white-subtle
-            );
+            border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-border-gray);
+            background-color: var(--krds-#{$mode-setting}-color-surface-white-subtle);
           }
         }
       }
@@ -2099,9 +2043,7 @@ a {
     //복합 콘텐츠
     .contents-wrap {
       .contents-text {
-        background-color: var(
-          --krds-#{$mode-setting}-color-surface-secondary-subtler
-        );
+        background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
         .txt {
           color: var(--krds-#{$mode-setting}-color-text-subtle);
         }
@@ -2112,13 +2054,10 @@ a {
     .policy-list {
       .d-card {
         &.line {
-          border: var(--krds-#{$mode-setting}-border-width-variable-regular)
-            solid var(--krds-#{$mode-setting}-color-border-gray);
+          border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-border-gray);
         }
         .in {
-          background-color: var(
-            --krds-#{$mode-setting}-color-surface-white-subtle
-          );
+          background-color: var(--krds-#{$mode-setting}-color-surface-white-subtle);
         }
       }
     }
@@ -2162,9 +2101,7 @@ a {
         > .krds-btn {
           &.text {
             border: none;
-            background-color: var(
-              --krds-#{$mode-setting}-color-surface-secondary-subtler
-            );
+            background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
           }
         }
       }
@@ -2172,11 +2109,8 @@ a {
         background-color: var(--krds-#{$mode-setting}-color-background-white);
         li {
           > .krds-btn {
-            border: var(--krds-#{$mode-setting}-border-width-variable-regular)
-              solid var(--krds-#{$mode-setting}-color-border-gray);
-            background-color: var(
-              --krds-#{$mode-setting}-color-background-white
-            );
+            border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-border-gray);
+            background-color: var(--krds-#{$mode-setting}-color-background-white);
           }
         }
       }
@@ -2187,15 +2121,10 @@ a {
   .main-box-responsive {
     .in {
       border-radius: var(--krds-radius-xlarge2);
-      background-color: var(
-        --krds-#{$mode-setting}-color-surface-secondary-subtler
-      );
+      background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
       &.outline {
-        border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-          var(--krds-#{$mode-setting}-color-border-gray);
-        background-color: var(
-          --krds-#{$mode-setting}-color-surface-white-subtle
-        );
+        border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-border-gray);
+        background-color: var(--krds-#{$mode-setting}-color-surface-white-subtle);
       }
     }
   }
@@ -2233,34 +2162,28 @@ a {
       color: var(--krds-#{$mode-setting}-color-text-subtle);
     }
     &.line {
-      border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-        var(--krds-#{$mode-setting}-color-border-gray);
+      border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-border-gray);
     }
     &.fill {
-      background-color: var(
-        --krds-#{$mode-setting}-color-surface-secondary-subtler
-      );
+      background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
     }
   }
 
   //swiper button 공통
   .main-vban-wrap {
     .swiper-pagination,
-    [class*='swiper-button-'] {
-      border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-        #d7d9db; //토근없음
+    [class*="swiper-button-"] {
+      border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid #d7d9db; //토근없음
     }
   }
   .main-sect {
     .swiper-indicator {
       .swiper-pagination {
-        border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-          #d7d9db; //토근없음
+        border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid #d7d9db; //토근없음
       }
     }
-    [class*='swiper-button-'] {
-      border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid
-        #d7d9db; //토근없음
+    [class*="swiper-button-"] {
+      border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid #d7d9db; //토근없음
     }
   }
 }
@@ -2282,7 +2205,7 @@ a {
     background-repeat: no-repeat;
     background-size: contain;
 
-    @if ($mode == 'high-contrast') {
+    @if ($mode == "high-contrast") {
       background-image: url(#{$url}/img/pattern/content/ico_outline_chk_fill.svg);
     }
   }
@@ -2295,7 +2218,8 @@ a {
 /* contents depth guide */
 .conts-wrap {
   width: 100%;
-  color: var(--krds-#{$mode-setting}-color-text-bolder);
+  // color: var(--krds-#{$mode-setting}-color-text-bolder);
+  color: #111;
 
   &.scroll-check {
     .section-link {
@@ -2353,12 +2277,8 @@ a {
 
 /* txt bar */
 .txt-list {
-  --txt-list-width-border: var(
-    --krds-#{$mode-setting}-border-width-static-regular
-  );
-  --txt-list-color-background: var(
-    --krds-#{$mode-setting}-color-divider-secondary-light
-  );
+  --txt-list-width-border: var(--krds-#{$mode-setting}-border-width-static-regular);
+  --txt-list-color-background: var(--krds-#{$mode-setting}-color-divider-secondary-light);
 
   display: flex;
   flex-wrap: wrap;
@@ -2399,22 +2319,14 @@ a {
 
 /* 도움말 박스 */
 .helper-box {
-  --helper-color-background: var(
-    --krds-#{$mode-setting}-color-surface-secondary-subtler
-  );
-  --helper-color-border: var(
-    --krds-#{$mode-setting}-color-border-secondary-light
-  );
+  --helper-color-background: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
+  --helper-color-border: var(--krds-#{$mode-setting}-color-border-secondary-light);
   --helper-color-text: var(--krds-#{$mode-setting}-color-text-secondary);
-  --helper-width-border: var(
-    --krds-#{$mode-setting}-border-width-variable-regular
-  );
+  --helper-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
   --helper-icon-size: var(--krds-size-height-3);
   --helper-gap-tit-icon: var(--krds-gap-3);
   --helper-desc-wrap-margin-top: var(--krds-gap-4);
-  --helper-desc-wrap-margin-left: calc(
-    var(--krds-size-height-3) + var(--krds-gap-3)
-  );
+  --helper-desc-wrap-margin-left: calc(var(--krds-size-height-3) + var(--krds-gap-3));
 
   width: 100%;
   padding: var(--krds-pc-padding-card-xsmall);
@@ -2440,12 +2352,8 @@ a {
     margin-left: var(--helper-desc-wrap-margin-left);
   }
   &.refer {
-    --helper-refer-color-border: var(
-      --krds-#{$mode-setting}-color-border-gray-light
-    );
-    --helper-refer-color-background: var(
-      --krds-#{$mode-setting}-color-surface-gray-subtler
-    );
+    --helper-refer-color-border: var(--krds-#{$mode-setting}-color-border-gray-light);
+    --helper-refer-color-background: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
     --helper-refer-color-text: var(--krds-#{$mode-setting}-color-text-basic);
     --helper-refer-color-desc: var(--krds-#{$mode-setting}-color-text-subtle);
 
@@ -2467,9 +2375,7 @@ a {
     }
     //소득인정액 산정식 리스트
     .calc-wrap {
-      --calc-color-border: var(
-        --krds-#{$mode-setting}-color-divider-gray-light
-      );
+      --calc-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
 
       .total-txt {
         + .calc-list {
@@ -2489,13 +2395,9 @@ a {
 
 /* 텍스트 박스 */
 .txt-box {
-  --txt-box-width-border: var(
-    --krds-#{$mode-setting}-border-width-static-regular
-  );
+  --txt-box-width-border: var(--krds-#{$mode-setting}-border-width-static-regular);
   --txt-box-color-border: var(--krds-#{$mode-setting}-color-border-gray);
-  --txt-box-color-background: var(
-    --krds-#{$mode-setting}-color-surface-gray-subtler
-  );
+  --txt-box-color-background: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
 
   padding: var(--krds-pc-padding-card-large);
   background-color: var(--txt-box-color-background);
@@ -2506,9 +2408,7 @@ a {
   }
   &.outline {
     border-color: var(--krds-#{$mode-setting}-color-border-secondary-light);
-    background-color: var(
-      --krds-#{$mode-setting}-color-surface-secondary-subtler
-    );
+    background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
 
     @include flex-layout($fd: column);
     gap: var(--krds-gap-7);
@@ -2521,8 +2421,7 @@ a {
       &::before {
         @include pseudo();
         @include svg-icon($size: var(--krds-size-height-5), $effect: pure);
-        background: url(#{$url}/img/pattern/content/ico_outline.svg) no-repeat
-          center;
+        background: url(#{$url}/img/pattern/content/ico_outline.svg) no-repeat center;
         background-size: contain;
       }
     }
@@ -2576,15 +2475,9 @@ a {
     }
   }
   &.bg-white {
-    --bg-white-color-background: var(
-      --krds-#{$mode-setting}-color-surface-white-subtle
-    );
-    --bg-white-color-background-gray: var(
-      --krds-#{$mode-setting}-color-surface-gray-subtler
-    );
-    --bg-white-color-border: var(
-      --krds-#{$mode-setting}-color-divider-gray-light
-    );
+    --bg-white-color-background: var(--krds-#{$mode-setting}-color-surface-white-subtle);
+    --bg-white-color-background-gray: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
+    --bg-white-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
     --bg-white-color-text: var(--krds-#{$mode-setting}-color-text-subtle);
 
     @include flex-layout($fd: column, $ai: normal);
@@ -2624,7 +2517,7 @@ a {
       .krds-table-wrap {
         .krds-form-check.ico-only {
           @include flex-layout($ai: center, $jc: space-around);
-          input[type='checkbox'] ~ label {
+          input[type="checkbox"] ~ label {
             &::before {
               margin-top: 0;
             }
@@ -2689,8 +2582,7 @@ a {
         + .info-ul {
           padding-top: var(--krds-padding-8);
           margin-top: var(--krds-padding-8);
-          border-top: var(--txt-box-width-border) solid
-            var(--bg-white-color-border);
+          border-top: var(--txt-box-width-border) solid var(--bg-white-color-border);
         }
       }
     }
@@ -2713,8 +2605,7 @@ a {
         padding-inline: 0;
         border: none;
         border-radius: 0;
-        border-top: var(--txt-box-width-border) solid
-          var(--bg-white-color-border);
+        border-top: var(--txt-box-width-border) solid var(--bg-white-color-border);
       }
     }
   }
@@ -2734,9 +2625,7 @@ a {
       gap: var(--krds-gap-5);
       li {
         &::after {
-          background-color: var(
-            --krds-#{$mode-setting}-color-divider-gray-light
-          );
+          background-color: var(--krds-#{$mode-setting}-color-divider-gray-light);
           margin-left: var(--krds-gap-5);
           height: var(--krds-size-height-2);
         }
@@ -2752,19 +2641,13 @@ a {
 
   /* 텍스트 박스 */
   .txt-box {
-    --txt-box-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
+    --txt-box-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
     --txt-box-color-border: var(--krds-#{$mode-setting}-color-border-gray);
-    --txt-box-color-background: var(
-      --krds-#{$mode-setting}-color-surface-gray-subtler
-    );
+    --txt-box-color-background: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
 
     &.outline {
       border-color: var(--krds-#{$mode-setting}-color-border-secondary-light);
-      background-color: var(
-        --krds-#{$mode-setting}-color-surface-secondary-subtler
-      );
+      background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
       .outline-tit {
         &::before {
           background-image: url(#{$url}/img/pattern/content/ico_outline_fill.svg);
@@ -2778,15 +2661,9 @@ a {
       }
     }
     &.bg-white {
-      --bg-white-color-background: var(
-        --krds-#{$mode-setting}-color-surface-white-subtle
-      );
-      --bg-white-color-background-gray: var(
-        --krds-#{$mode-setting}-color-surface-gray-subtler
-      );
-      --bg-white-color-border: var(
-        --krds-#{$mode-setting}-color-divider-gray-light
-      );
+      --bg-white-color-background: var(--krds-#{$mode-setting}-color-surface-white-subtle);
+      --bg-white-color-background-gray: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
+      --bg-white-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
       --bg-white-color-text: var(--krds-#{$mode-setting}-color-text-subtle);
 
       .box-tit1 {
@@ -2799,9 +2676,7 @@ a {
     .txt-list {
       li {
         &::after {
-          background-color: var(
-            --krds-#{$mode-setting}-color-divider-gray-light
-          );
+          background-color: var(--krds-#{$mode-setting}-color-divider-gray-light);
         }
       }
     }
@@ -2855,23 +2730,13 @@ a {
     --check-item-gap-layout-checkbox-txt: var(--krds-gap-7);
     --check-item-gap-layout-txt-btn: var(--krds-gap-5);
     --check-item-gap-layout-tit-desc: var(--krds-gap-5);
-    --check-item-btn-padding-left: calc(
-      var(--krds-size-height-3) + var(--check-item-gap-layout-checkbox-txt)
-    );
+    --check-item-btn-padding-left: calc(var(--krds-size-height-3) + var(--check-item-gap-layout-checkbox-txt));
     --check-item-desc-color: var(--krds-#{$mode-setting}-color-text-subtle);
     --check-item-border-color: var(--krds-#{$mode-setting}-color-border-gray);
-    --check-item-active-border-color: var(
-      --krds-#{$mode-setting}-color-border-primary
-    );
-    --check-item-disable-border-color: var(
-      --krds-#{$mode-setting}-color-border-disabled
-    );
-    --check-item-disable-text-color: var(
-      --krds-#{$mode-setting}-color-text-disabled-on
-    );
-    --check-item-disable-btn-color: var(
-      --krds-#{$mode-setting}-color-text-disabled
-    );
+    --check-item-active-border-color: var(--krds-#{$mode-setting}-color-border-primary);
+    --check-item-disable-border-color: var(--krds-#{$mode-setting}-color-border-disabled);
+    --check-item-disable-text-color: var(--krds-#{$mode-setting}-color-text-disabled-on);
+    --check-item-disable-btn-color: var(--krds-#{$mode-setting}-color-text-disabled);
     --check-item-conts-desc-font-size: var(--krds-pc-font-size-body-medium);
 
     display: flex;
@@ -2883,8 +2748,7 @@ a {
       gap: var(--check-item-gap-layout-txt-btn);
       width: 100%;
       padding: var(--check-item-padding);
-      border: var(--krds-#{$mode-setting}-border-width-static-regular) solid
-        var(--check-item-border-color);
+      border: var(--krds-#{$mode-setting}-border-width-static-regular) solid var(--check-item-border-color);
       border-radius: var(--krds-radius-xlarge2);
       transition: $transition-base;
       &.checked {
@@ -2903,8 +2767,8 @@ a {
       }
     }
     .form-group {
-      input[type='radio'],
-      input[type='checkbox'] {
+      input[type="radio"],
+      input[type="checkbox"] {
         + label {
           width: 100%;
           gap: var(--check-item-gap-layout-checkbox-txt);
@@ -2957,12 +2821,10 @@ a {
       --check-item-gap-layout-txt-btn: var(--krds-gap-4);
       --check-item-gap-layout-tit-desc: var(--krds-gap-4);
       --check-item-btn-padding-left: 0;
-      --check-item-conts-desc-font-size: var(
-        --krds-mobile-font-size-body-medium
-      );
+      --check-item-conts-desc-font-size: var(--krds-mobile-font-size-body-medium);
 
-      input[type='radio'],
-      input[type='checkbox'] {
+      input[type="radio"],
+      input[type="checkbox"] {
         + label {
           flex-direction: column;
         }
@@ -3201,37 +3063,23 @@ a {
   }
 
   .txt-list {
-    --txt-list-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
-    --txt-list-color-background: var(
-      --krds-#{$mode-setting}-color-divider-secondary-light
-    );
+    --txt-list-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
+    --txt-list-color-background: var(--krds-#{$mode-setting}-color-divider-secondary-light);
   }
 
   .helper-box {
-    --helper-color-background: var(
-      --krds-#{$mode-setting}-color-surface-secondary-subtler
-    );
-    --helper-color-border: var(
-      --krds-#{$mode-setting}-color-border-secondary-light
-    );
+    --helper-color-background: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
+    --helper-color-border: var(--krds-#{$mode-setting}-color-border-secondary-light);
     --helper-color-text: var(--krds-#{$mode-setting}-color-text-secondary);
-    --helper-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
+    --helper-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
     .helper-tit {
       &::before {
         background-image: url(#{$url}/img/pattern/content/ico_helper_info_fill.svg);
       }
     }
     &.refer {
-      --helper-refer-color-border: var(
-        --krds-#{$mode-setting}-color-border-gray-light
-      );
-      --helper-refer-color-background: var(
-        --krds-#{$mode-setting}-color-surface-gray-subtler
-      );
+      --helper-refer-color-border: var(--krds-#{$mode-setting}-color-border-gray-light);
+      --helper-refer-color-background: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
       --helper-refer-color-text: var(--krds-#{$mode-setting}-color-text-basic);
       --helper-refer-color-desc: var(--krds-#{$mode-setting}-color-text-subtle);
       .helper-tit {
@@ -3241,45 +3089,29 @@ a {
       }
 
       .calc-wrap {
-        --calc-color-border: var(
-          --krds-#{$mode-setting}-color-divider-gray-light
-        );
+        --calc-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
       }
     }
   }
 
   .txt-box {
-    --txt-box-width-border: var(
-      --krds-#{$mode-setting}-border-width-static-regular
-    );
+    --txt-box-width-border: var(--krds-#{$mode-setting}-border-width-static-regular);
     --txt-box-color-border: var(--krds-#{$mode-setting}-color-border-gray);
-    --txt-box-color-background: var(
-      --krds-#{$mode-setting}-color-surface-gray-subtler
-    );
+    --txt-box-color-background: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
     &.outline {
       border-color: var(--krds-#{$mode-setting}-color-border-secondary-light);
-      background-color: var(
-        --krds-#{$mode-setting}-color-surface-secondary-subtler
-      );
+      background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
     }
     &.bg-white {
-      --bg-white-color-background: var(
-        --krds-#{$mode-setting}-color-surface-white-subtler
-      );
-      --bg-white-color-background-gray: var(
-        --krds-#{$mode-setting}-color-surface-gray-subtler
-      );
-      --bg-white-color-border: var(
-        --krds-#{$mode-setting}-color-divider-gray-light
-      );
+      --bg-white-color-background: var(--krds-#{$mode-setting}-color-surface-white-subtler);
+      --bg-white-color-background-gray: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
+      --bg-white-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
       --bg-white-color-text: var(--krds-#{$mode-setting}-color-text-subtle);
     }
   }
 
   .agree-box {
-    background-color: var(
-      --krds-#{$mode-setting}-color-surface-primary-subtler
-    );
+    background-color: var(--krds-#{$mode-setting}-color-surface-primary-subtler);
     &.bg-gray {
       background-color: var(--krds-#{$mode-setting}-color-surface-gray-subtle);
     }
@@ -3289,18 +3121,10 @@ a {
     .chk-group-wrap {
       --check-item-desc-color: var(--krds-#{$mode-setting}-color-text-subtle);
       --check-item-border-color: var(--krds-#{$mode-setting}-color-border-gray);
-      --check-item-active-border-color: var(
-        --krds-#{$mode-setting}-color-border-primary
-      );
-      --check-item-disable-border-color: var(
-        --krds-#{$mode-setting}-color-border-disabled
-      );
-      --check-item-disable-text-color: var(
-        --krds-#{$mode-setting}-color-text-disabled-on
-      );
-      --check-item-disable-btn-color: var(
-        --krds-#{$mode-setting}-color-text-disabled
-      );
+      --check-item-active-border-color: var(--krds-#{$mode-setting}-color-border-primary);
+      --check-item-disable-border-color: var(--krds-#{$mode-setting}-color-border-disabled);
+      --check-item-disable-text-color: var(--krds-#{$mode-setting}-color-text-disabled-on);
+      --check-item-disable-btn-color: var(--krds-#{$mode-setting}-color-text-disabled);
     }
   }
 }
@@ -3322,25 +3146,18 @@ a {
 /* 로그인 폼 */
 .login-form-area {
   --login-form-color-border: var(--krds-#{$mode-setting}-color-divider-gray);
-  --login-form-width-border: var(
-    --krds-#{$mode-setting}-border-width-variable-regular
-  );
+  --login-form-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
 
   display: flex;
   position: relative;
   padding: var(--krds-padding-10);
   gap: var(--krds-gap-12);
   width: 100%;
-  border-top: var(--login-form-width-border) solid
-    var(--login-form-color-border);
-  border-bottom: var(--login-form-width-border) solid
-    var(--login-form-color-border);
+  border-top: var(--login-form-width-border) solid var(--login-form-color-border);
+  border-bottom: var(--login-form-width-border) solid var(--login-form-color-border);
   &::after {
     @include pseudo();
-    @include position(
-      $t: var(--krds-gap-9),
-      $l: calc(50% - var(--login-form-width-border))
-    );
+    @include position($t: var(--krds-gap-9), $l: calc(50% - var(--login-form-width-border)));
     width: var(--login-form-width-border);
     height: calc(100% - var(--krds-gap-12));
     background-color: var(--login-form-color-border);
@@ -3405,16 +3222,10 @@ a {
 }
 /* 본인인증방식 선택 */
 .certify-sel-wrap {
-  --certify-color-background: var(
-    --krds-#{$mode-setting}-color-background-gray-subtler
-  );
+  --certify-color-background: var(--krds-#{$mode-setting}-color-background-gray-subtler);
   --certify-color-border: var(--krds-#{$mode-setting}-color-divider-gray);
-  --certify-width-border: var(
-    --krds-#{$mode-setting}-border-width-variable-regular
-  );
-  --certify-expand-color-background: var(
-    --krds-#{$mode-setting}-color-surface-white-subtler
-  );
+  --certify-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
+  --certify-expand-color-background: var(--krds-#{$mode-setting}-color-surface-white-subtler);
   --certify-desc-color-text: var(--krds-#{$mode-setting}-color-text-subtle);
 
   width: 100%;
@@ -3432,8 +3243,7 @@ a {
       gap: var(--krds-gap-7);
       padding-top: var(--krds-padding-8);
       padding-bottom: var(--krds-padding-8);
-      border-bottom: var(--certify-width-border) solid
-        var(--certify-color-border);
+      border-bottom: var(--certify-width-border) solid var(--certify-color-border);
     }
   }
   .certify-type {
@@ -3448,8 +3258,7 @@ a {
       @include flex-layout($jc: flex-start);
       flex-direction: column;
       position: relative;
-      padding: var(--krds-padding-9) var(--krds-padding-9) var(--krds-padding-9)
-        var(--krds-number-21);
+      padding: var(--krds-padding-9) var(--krds-padding-9) var(--krds-padding-9) var(--krds-number-21);
       background-color: var(--certify-color-background);
       border-radius: var(--krds-radius-xlarge1);
       .login-link {
@@ -3467,22 +3276,12 @@ a {
       &::after {
         @include position($t: var(--krds-gap-8), $l: var(--krds-gap-8));
         @include pseudo();
-        @include svg-icon(
-          $size: var(--krds-size-height-6),
-          $mode: #{$mode-setting}
-        );
+        @include svg-icon($size: var(--krds-size-height-6), $mode: #{$mode-setting});
         background-size: contain;
       }
       &::after {
-        @include position(
-          $t: var(--krds-gap-9),
-          $l: auto,
-          $r: var(--krds-gap-8)
-        );
-        @include svg-icon(
-          $size: var(--krds-size-height-4),
-          $mode: #{$mode-setting}
-        );
+        @include position($t: var(--krds-gap-9), $l: auto, $r: var(--krds-gap-8));
+        @include svg-icon($size: var(--krds-size-height-4), $mode: #{$mode-setting});
         @include icon-set(ico_more);
       }
       &.mobile {
@@ -3628,12 +3427,8 @@ a {
 /* 로그인 방식 선택 */
 .login-type-ul {
   --login-ul-color-text: var(--krds-#{$mode-setting}-color-text-secondary);
-  --login-ul-color-border: var(
-    --krds-#{$mode-setting}-color-divider-gray-light
-  );
-  --login-ul-width-border: var(
-    --krds-#{$mode-setting}-border-width-variable-regular
-  );
+  --login-ul-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
+  --login-ul-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
 
   display: flex;
   gap: var(--krds-gap-8);
@@ -3642,8 +3437,7 @@ a {
     flex: 1;
     &:not(:first-child) {
       padding-left: var(--krds-padding-9);
-      border-left: var(--login-ul-width-border) solid
-        var(--login-ul-color-border);
+      border-left: var(--login-ul-width-border) solid var(--login-ul-color-border);
     }
     .in {
       @include flex-layout($fd: column, $ai: normal);
@@ -3689,8 +3483,7 @@ a {
     }
     .login-info-wrap {
       padding-bottom: 0;
-      border-top: var(--krds-#{$mode-setting}-border-width-variable-regular)
-        solid var(--krds-#{$mode-setting}-color-divider-gray);
+      border-top: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-divider-gray);
     }
   }
   /* 로그인 - 탭형식 */
@@ -3710,7 +3503,7 @@ a {
 
 // 로그인 - 모바일 전용 속성
 @include size-medium {
-  .conts-area[class*='login-'] {
+  .conts-area[class*="login-"] {
     gap: var(--krds-gap-7);
   }
   .conts-area.login-type {
@@ -3796,8 +3589,7 @@ a {
       &:not(:first-child) {
         padding-left: 0;
         border: none;
-        border-top: var(--krds-#{$mode-setting}-border-width-variable-regular)
-          solid var(--krds-#{$mode-setting}-color-divider-gray-light);
+        border-top: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-divider-gray-light);
       }
       .in {
         gap: var(--krds-mobile-gap-layout-title-body-large);
@@ -3827,37 +3619,23 @@ a {
 
   .login-form-area {
     --login-form-color-border: var(--krds-#{$mode-setting}-color-divider-gray);
-    --login-form-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
+    --login-form-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
   }
 
   .certify-sel-wrap {
-    --certify-color-background: var(
-      --krds-#{$mode-setting}-color-background-gray-subtler
-    );
+    --certify-color-background: var(--krds-#{$mode-setting}-color-background-gray-subtler);
     --certify-color-border: var(--krds-#{$mode-setting}-color-divider-gray);
-    --certify-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
-    --certify-expand-color-background: var(
-      --krds-#{$mode-setting}-color-surface-white-subtler
-    );
+    --certify-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
+    --certify-expand-color-background: var(--krds-#{$mode-setting}-color-surface-white-subtler);
     --certify-desc-color-text: var(--krds-#{$mode-setting}-color-text-subtle);
 
     .certify-type {
       > li {
         &::after {
-          @include svg-icon(
-            $size: var(--krds-size-height-4),
-            $mode: #{$mode-setting}
-          );
+          @include svg-icon($size: var(--krds-size-height-4), $mode: #{$mode-setting});
         }
         &::before {
-          @include svg-icon(
-            $size: var(--krds-size-height-6),
-            $mode: #{$mode-setting}
-          );
+          @include svg-icon($size: var(--krds-size-height-6), $mode: #{$mode-setting});
         }
       }
     }
@@ -3865,12 +3643,8 @@ a {
 
   .login-type-ul {
     --login-ul-color-text: var(--krds-#{$mode-setting}-color-text-secondary);
-    --login-ul-color-border: var(
-      --krds-#{$mode-setting}-color-divider-gray-light
-    );
-    --login-ul-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
+    --login-ul-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
+    --login-ul-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
   }
 }
 
@@ -3878,15 +3652,13 @@ a {
 
 /* 공통 - 검색 폼 */
 .search-top-box {
-  --search-box-filter-color-background: var(
-    --krds-#{$mode-setting}-color-surface-secondary-subtler
-  );
-  --search-box-filter-chip-width-border: var(
-    --krds-#{$mode-setting}-border-width-variable-regular
-  );
-  --search-box-filter-chip-color-border: var(
-    --krds-#{$mode-setting}-color-divider-secondary-light
-  );
+  --search-box-filter-color-background: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
+  // --search-box-filter-chip-width-border: var(
+  //   --krds-#{$mode-setting}-border-width-variable-regular
+  // );
+  // --search-box-filter-chip-color-border: var(
+  //   --krds-#{$mode-setting}-color-divider-secondary-light
+  // );
 
   min-width: auto;
   margin-bottom: 4rem;
@@ -3930,20 +3702,20 @@ a {
       gap: var(--krds-gap-7);
       max-width: 100%;
       flex-wrap: wrap;
-    //   > div {
-    //     @include flex-layout($d: inline-flex, $ai: center);
-    //     gap: var(--krds-gap-4);
-    //     width: 100%;
-    //     // max-width: 26.5rem;
+      //   > div {
+      //     @include flex-layout($d: inline-flex, $ai: center);
+      //     gap: var(--krds-gap-4);
+      //     width: 100%;
+      //     // max-width: 26.5rem;
 
-    //     &:nth-child(4) {
-    //       max-width: fit-content;
-    //       .krds-input {
-    //         width: 37rem;
-    //       }
-    //     }
+      //     &:nth-child(4) {
+      //       max-width: fit-content;
+      //       .krds-input {
+      //         width: 37rem;
+      //       }
+      //     }
 
-    //   }
+      //   }
 
       .label {
         font-weight: var(--krds-font-weight-bold);
@@ -3966,8 +3738,7 @@ a {
     //@include flex-layout($ai: flex-start);
     padding: var(--krds-padding-8) 0 0;
     margin: var(--krds-gap-7) 0 0;
-    border-top: var(--search-box-filter-chip-width-border) solid
-      var(--search-box-filter-chip-color-border);
+    border-top: var(--search-box-filter-chip-width-border) solid var(--search-box-filter-chip-color-border);
     border-radius: 0;
   }
 
@@ -3984,27 +3755,14 @@ a {
 
 /* 공통 - 결과 리스트 상단 */
 .search-list-top {
-  --search-list-color-text-primary: var(
-    --krds-#{$mode-setting}-color-text-primary
-  );
-  --search-list-width-border: var(
-    --krds-#{$mode-setting}-border-width-variable-regular
-  );
+  --search-list-color-text-primary: var(--krds-#{$mode-setting}-color-text-primary);
+  --search-list-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
   --search-list-color-border: var(--krds-#{$mode-setting}-color-divider-gray);
-  --search-list-sort-btn-color-button-hover: var(
-    --krds-#{$mode-setting}-color-button-text-fill-hover
-  );
-  --search-list-sort-btn-color-button-active: var(
-    --krds-#{$mode-setting}-color-button-text-fill-pressed
-  );
+  --search-list-sort-btn-color-button-hover: var(--krds-#{$mode-setting}-color-button-text-fill-hover);
+  --search-list-sort-btn-color-button-active: var(--krds-#{$mode-setting}-color-button-text-fill-pressed);
   --search-list-sort-btn-color: var(--krds-#{$mode-setting}-color-text-basic);
-  --search-list-sort-btn-color-background: var(
-    --krds-#{$mode-setting}-color-button-text-fill
-  );
-  --search-list-sort-btn-border: var(
-      --krds-#{$mode-setting}-border-width-static-regular
-    )
-    solid var(--krds-#{$mode-setting}-color-button-text-border);
+  --search-list-sort-btn-color-background: var(--krds-#{$mode-setting}-color-button-text-fill);
+  --search-list-sort-btn-border: var(--krds-#{$mode-setting}-border-width-static-regular) solid var(--krds-#{$mode-setting}-color-button-text-border);
 
   @include flex-layout($jc: space-between);
   gap: var(--krds-gap-9);
@@ -4092,7 +3850,7 @@ a {
     &:not(:last-child) {
       padding-right: 1.7rem;
       &::after {
-        content: '';
+        content: "";
         display: inline-flex;
         width: var(--search-list-width-border);
         height: var(--krds-size-height-2);
@@ -4124,7 +3882,7 @@ a {
       &:not(:last-child) {
         &::after {
           display: inline-flex;
-          content: '';
+          content: "";
           width: var(--search-list-width-border);
           height: var(--krds-size-height-2);
           margin-left: var(--krds-padding-3);
@@ -4136,9 +3894,8 @@ a {
   &.border {
     flex-wrap: wrap;
     padding-bottom: var(--krds-padding-8);
-    margin: 0 0 var(--krds-padding-10);
-    border-bottom: var(--search-list-width-border) solid
-      var(--search-list-color-border);
+    margin: 0;
+    border-bottom: var(--search-list-width-border) solid var(--search-list-color-border);
   }
 }
 
@@ -4147,7 +3904,7 @@ a {
   // --filter-chip-color-background: var(
   //   --krds-#{$mode-setting}-color-surface-secondary-subtler
   // );
-  --filter-chip-color-background: #E6EBF8;
+  --filter-chip-color-background: #e6ebf8;
 
   --filter-chip-num-color-text: var(--krds-#{$mode-setting}-color-text-primary);
 
@@ -4209,7 +3966,6 @@ a {
     // .sch-filter-box {
     //   display: none;
     // }
-
   }
 
   /* 공통 - 결과 리스트 상단 */
@@ -4257,10 +4013,7 @@ a {
             font-weight: var(--krds-font-weight-bold);
           }
           .krds-badge.number {
-            @include position(
-              $t: calc(-1 * var(--krds-number-6)),
-              $r: var(--krds-number-5)
-            );
+            @include position($t: calc(-1 * var(--krds-number-6)), $r: var(--krds-number-5));
             z-index: 1;
           }
         }
@@ -4281,7 +4034,6 @@ a {
   }
 }
 
-
 // 페이지 상단 검색바
 // 페이지 상단 검색바
 // 페이지 상단 검색바
@@ -4289,25 +4041,23 @@ a {
 
 .page,
 .page_content {
-.search-top-box {
+  .search-top-box {
+    .sch-filter-box {
+      // padding: var(--krds-padding-10);
+      // border-radius: var(--krds-radius-xlarge1);
+      // background: var(--search-box-filter-color-background);
+      padding: 3rem 10rem;
+      margin-top: var(--krds-pc-gap-layout-h2-h3);
+      border-radius: 2rem;
+      background: linear-gradient(90deg, #585dc8 0%, #7250df 100%);
+      color: #fff;
+    }
 
-  .sch-filter-box {
-    // padding: var(--krds-padding-10);
-    // border-radius: var(--krds-radius-xlarge1);
-    // background: var(--search-box-filter-color-background);
-    padding: 3rem 10rem;
-    margin-top: var(--krds-pc-gap-layout-h2-h3);
-    border-radius: 2rem;
-    background: linear-gradient(90deg, #585dc8 0%, #7250df 100%);
-    color: #fff;
-  }
-  
     .f-txt {
       font-size: 24px;
       font-weight: var(--krds-font-weight-bold);
       margin-bottom: 2rem;
     }
-
   }
 }
 
@@ -4328,7 +4078,7 @@ a {
         flex-direction: row;
         flex-wrap: nowrap;
         gap: var(--krds-gap-5);
-      align-items: end;
+        align-items: end;
 
         > div {
           // flex-direction: column;
@@ -4339,7 +4089,7 @@ a {
           label {
             font-size: var(--krds-pc-font-size-label-small);
             font-weight: var(--krds-font-weight-regular);
-                margin-bottom: 8px;
+            margin-bottom: 8px;
           }
 
           &:nth-of-type(1) {
@@ -4376,55 +4126,33 @@ a {
   }
 }
 
-
 // 검색 : 공통 - 고대비모드
 @include color-mode($mode: high-contrast) {
   //모드 설정
   $mode-setting: high-contrast;
 
   .search-top-box {
-    --search-box-filter-color-background: var(
-      --krds-#{$mode-setting}-color-surface-secondary-subtler
-    );
-    --search-box-filter-chip-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
-    --search-box-filter-chip-color-border: var(
-      --krds-#{$mode-setting}-color-divider-secondary-light
-    );
+    --search-box-filter-color-background: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
+    --search-box-filter-chip-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
+    --search-box-filter-chip-color-border: var(--krds-#{$mode-setting}-color-divider-secondary-light);
   }
 
   .search-list-top {
-    --search-list-color-text-primary: var(
-      --krds-#{$mode-setting}-color-text-primary
-    );
-    --search-list-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
+    --search-list-color-text-primary: var(--krds-#{$mode-setting}-color-text-primary);
+    --search-list-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
     --search-list-color-border: var(--krds-#{$mode-setting}-color-divider-gray);
-    --search-list-sort-btn-color-button-hover: var(
-      --krds-#{$mode-setting}-color-button-text-fill-hover
-    );
-    --search-list-sort-btn-color-button-active: var(
-      --krds-#{$mode-setting}-color-button-text-fill-pressed
-    );
+    --search-list-sort-btn-color-button-hover: var(--krds-#{$mode-setting}-color-button-text-fill-hover);
+    --search-list-sort-btn-color-button-active: var(--krds-#{$mode-setting}-color-button-text-fill-pressed);
     --search-list-sort-btn-color: var(--krds-#{$mode-setting}-color-text-basic);
-    --search-list-sort-btn-color-background: var(
-      --krds-#{$mode-setting}-color-button-text-fill
-    );
-    --search-list-sort-btn-border: var(
-        --krds-#{$mode-setting}-border-width-variable-regular
-      )
-      solid var(--krds-#{$mode-setting}-color-button-text-border);
+    --search-list-sort-btn-color-background: var(--krds-#{$mode-setting}-color-button-text-fill);
+    --search-list-sort-btn-border: var(--krds-#{$mode-setting}-border-width-variable-regular) solid var(--krds-#{$mode-setting}-color-button-text-border);
   }
 
   .filter-chip {
     // --filter-chip-color-background: var(
     //   --krds-#{$mode-setting}-color-surface-secondary-subtler
     // );
-    --filter-chip-num-color-text: var(
-      --krds-#{$mode-setting}-color-text-primary
-    );
+    --filter-chip-num-color-text: var(--krds-#{$mode-setting}-color-text-primary);
   }
 }
 
@@ -4483,9 +4211,7 @@ a {
 /* 필터 아코디언 */
 .filter-list {
   &.krds-accordion {
-    --acc-btn-color-background-active: var(
-      --krds-#{$mode-setting}-color-icon-secondary
-    );
+    --acc-btn-color-background-active: var(--krds-#{$mode-setting}-color-icon-secondary);
     .accordion-item {
       padding: var(--krds-padding-2) 0;
       .accordion-header {
@@ -4503,9 +4229,7 @@ a {
         margin-bottom: var(--krds-gap-3);
       }
       .btn-accordion {
-        padding: var(--krds-padding-5)
-          calc(var(--krds-size-height-4) + var(--krds-gap-5))
-          var(--krds-padding-5) 0;
+        padding: var(--krds-padding-5) calc(var(--krds-size-height-4) + var(--krds-gap-5)) var(--krds-padding-5) 0;
         font-size: var(--krds-pc-font-size-heading-xsmall);
 
         @include size-medium {
@@ -4524,7 +4248,7 @@ a {
       &.active {
         // padding-inline: var(--krds-padding-3);
       }
-      .krds-form-chip input[type='radio']:checked ~ label {
+      .krds-form-chip input[type="radio"]:checked ~ label {
         padding-inline: var(--krds-padding-4);
       }
 
@@ -4578,38 +4302,31 @@ a {
     @include position($t: 0, $l: 50%);
     z-index: 0;
     transform: translateX(-50%);
-    content: '';
+    content: "";
     width: 100vw;
     height: 100%;
-    background-color: var(
-      --krds-#{$mode-setting}-color-surface-secondary-subtler
-    );
+    background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
   }
 }
 
 /* 결과 리스트 */
 .total-search-list {
   --total-search-color-border: var(--krds-#{$mode-setting}-color-divider-gray);
-  --total-search-width-border: var(
-    --krds-#{$mode-setting}-border-width-variable-regular
-  );
+  --total-search-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
   --total-search-keyword-color: var(--krds-#{$mode-setting}-color-text-primary);
-  --total-search-keyword-background: var(
-    --krds-#{$mode-setting}-color-element-primary-lighter
-  );
+  // --total-search-keyword-background: var(--krds-#{$mode-setting}-color-element-primary-lighter);
+  --total-search-keyword-background: #ced5f6;
   --total-search-info-color: var(--krds-#{$mode-setting}-color-text-subtle);
-  --total-search-info-body-text-visited: var(
-    --krds-#{$mode-setting}-color-link-visited
-  );
+  --total-search-info-body-text-visited: var(--krds-#{$mode-setting}-color-link-visited);
   --total-search-info-btm-color: var(--krds-#{$mode-setting}-color-text-basic);
+  width: 100%;
 
   .total-search-item {
     display: flex;
     flex-direction: column;
     gap: var(--krds-gap-7);
     padding: var(--krds-padding-10) 0;
-    border-bottom: var(--total-search-width-border) solid
-      var(--total-search-color-border);
+    border-bottom: var(--total-search-width-border) solid var(--total-search-color-border);
     .keyword {
       font-weight: var(--krds-font-weight-bold);
       color: var(--total-search-keyword-color);
@@ -4621,7 +4338,9 @@ a {
   }
   .info-top {
     display: flex;
-    gap: var(--krds-gap-5);
+    gap: var(--krds-gap-4);
+    align-items: center;
+
     .i-date {
       color: var(--total-search-info-color);
     }
@@ -4662,31 +4381,34 @@ a {
       }
     }
   }
-  // .info-btm {
-  //     @include flex-layout($ai: center, $jc: space-between);
-  //     gap: var(--krds-gap-5);
-  //     .i-cate {
-  //         @include flex-layout($d: inline-flex, $ai: center);
-  //         color: var(--total-search-info-btm-color);
-  //         li {
-  //             @include flex-layout($d: inline-flex, $ai: center);
-  //             &:not(:first-child) {
-  //                 &::before {
-  //                     display: inline-flex;
-  //                     @include pseudo();
-  //                     @include square(var(--krds-size-height-2));
-  //                     background: url(#{$url}../img/component/common/ico_arr_16_right_gray70.svg) no-repeat center;
-  //                     background-size: contain;
-  //                     margin-inline: var(--krds-gap-2);
-  //                 }
-  //             }
-  //         }
-  //     }
-  //     .btn-area {
-  //         @include flex-layout($d: inline-flex, $ai: center);
-  //         gap: var(--krds-gap-5);
-  //     }
-  // }
+  .info-btm {
+    @include flex-layout($ai: center, $jc: space-between);
+    gap: var(--krds-gap-5);
+    .i-cate {
+      @include flex-layout($d: inline-flex, $ai: center);
+      color: var(--total-search-info-btm-color);
+      li {
+        @include flex-layout($d: inline-flex, $ai: center);
+        &:not(:first-child) {
+          &::before {
+            display: inline-flex;
+            @include pseudo();
+            @include square(var(--krds-size-height-2));
+            background: url(#{$url}/img/component/icon/ico_arrow-right.svg) no-repeat center;
+            background-size: contain;
+            margin-inline: var(--krds-gap-2);
+          }
+        }
+      }
+      a:visited {
+        color: var(--krds-light-color-text-basic);
+      }
+    }
+    .btn-area {
+      @include flex-layout($d: inline-flex, $ai: center);
+      gap: var(--krds-gap-5);
+    }
+  }
 }
 
 // 통합검색 - 태블릿 전용 속성
@@ -4729,8 +4451,12 @@ a {
     .total-search-item {
       padding: var(--krds-padding-8) 0;
       gap: var(--krds-gap-5);
+
       &:first-child {
         padding-top: var(--krds-padding-8);
+        @include size-medium {
+          padding: 0;
+        }
       }
     }
     .info-top {
@@ -4762,49 +4488,31 @@ a {
   $mode-setting: high-contrast;
   .filter-list {
     &.krds-accordion {
-      --acc-btn-color-background-active: var(
-        --krds-#{$mode-setting}-color-icon-secondary
-      );
+      --acc-btn-color-background-active: var(--krds-#{$mode-setting}-color-icon-secondary);
     }
   }
 
   .total-search-top-box {
     &::after {
-      background-color: var(
-        --krds-#{$mode-setting}-color-surface-secondary-subtler
-      );
+      background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
     }
   }
 
   /* 검색어 영역 */
   .total-search-top-box {
     &::after {
-      background-color: var(
-        --krds-#{$mode-setting}-color-surface-secondary-subtler
-      );
+      background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
     }
   }
 
   .total-search-list {
-    --total-search-color-border: var(
-      --krds-#{$mode-setting}-color-divider-gray
-    );
-    --total-search-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
-    --total-search-keyword-color: var(
-      --krds-#{$mode-setting}-color-text-primary
-    );
-    --total-search-keyword-background: var(
-      --krds-#{$mode-setting}-color-element-primary-lighter
-    );
+    --total-search-color-border: var(--krds-#{$mode-setting}-color-divider-gray);
+    --total-search-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
+    --total-search-keyword-color: var(--krds-#{$mode-setting}-color-text-primary);
+    --total-search-keyword-background: var(--krds-#{$mode-setting}-color-element-primary-lighter);
     --total-search-info-color: var(--krds-#{$mode-setting}-color-text-subtle);
-    --total-search-info-body-text-visited: var(
-      --krds-#{$mode-setting}-color-link-visited
-    );
-    --total-search-info-btm-color: var(
-      --krds-#{$mode-setting}-color-text-basic
-    );
+    --total-search-info-body-text-visited: var(--krds-#{$mode-setting}-color-link-visited);
+    --total-search-info-btm-color: var(--krds-#{$mode-setting}-color-text-basic);
   }
 
   .search-between-conts {
@@ -4831,7 +4539,7 @@ a {
   @include flex-layout($fd: column, $ai: normal);
   gap: var(--krds-gap-3);
   .krds-form-check {
-    input[type='checkbox'] {
+    input[type="checkbox"] {
       ~ label {
         font-size: var(--krds-pc-font-size-heading-small);
         font-weight: var(--krds-font-weight-bold);
@@ -4875,7 +4583,7 @@ a {
   /* 약관동의 전체동의 */
   .terms-agree-all {
     .krds-form-check {
-      input[type='checkbox'] {
+      input[type="checkbox"] {
         ~ label {
           font-size: var(--krds-mobile-font-size-heading-small);
         }
@@ -4934,9 +4642,7 @@ a {
 
 /* 신청하기 : 컨텐츠 영역 확장 축소 */
 .conts-expand-area {
-  --conts-width-border: var(
-    --krds-#{$mode-setting}-border-width-static-regular
-  );
+  --conts-width-border: var(--krds-#{$mode-setting}-border-width-static-regular);
   --conts-expand-background: var(--krds-#{$mode-setting}-color-surface-white);
 
   .expand-wrap {
@@ -4946,11 +4652,7 @@ a {
       @include pseudo();
       width: 100%;
       height: 7.2rem;
-      background: linear-gradient(
-        180deg,
-        transparent 0%,
-        var(--conts-expand-background) 100%
-      );
+      background: linear-gradient(180deg, transparent 0%, var(--conts-expand-background) 100%);
       @include visibility($v: visible);
       z-index: 2;
       transition: $transition-base;
@@ -4977,12 +4679,8 @@ a {
   //step button style
   &.step {
     --step-color-border: var(--krds-#{$mode-setting}-color-border-gray);
-    --step-conts-desc-color-text: var(
-      --krds-#{$mode-setting}-color-text-subtle
-    );
-    --step-btn-conts-expand-color-background: var(
-      --krds-#{$mode-setting}-color-element-secondary-light
-    );
+    --step-conts-desc-color-text: var(--krds-#{$mode-setting}-color-text-subtle);
+    --step-btn-conts-expand-color-background: var(--krds-#{$mode-setting}-color-element-secondary-light);
 
     padding: var(--krds-pc-padding-card-medium);
     width: 58.8rem;
@@ -5004,11 +4702,7 @@ a {
         width: 100%;
         height: var(--krds-size-height-10);
         @include position($b: 0, $l: 0, $r: 0);
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0) 0%,
-          var(--conts-expand-background) 100%
-        );
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, var(--conts-expand-background) 100%);
         z-index: 2;
       }
 
@@ -5023,10 +4717,7 @@ a {
           @include pseudo();
           @include svg-icon(var(--krds-size-height-2), $mode: light);
           @include icon-set(ico_plus);
-          @include position(
-            $t: var(--krds-padding-3),
-            $l: calc(var(--krds-padding-3) + var(--krds-padding-2))
-          );
+          @include position($t: var(--krds-padding-3), $l: calc(var(--krds-padding-3) + var(--krds-padding-2)));
         }
       }
       &::before {
@@ -5060,12 +4751,8 @@ a {
   }
   //복지 사례 알아보기
   &.txt-box {
-    --txt-box-color-border: var(
-      --krds-#{$mode-setting}-color-divider-gray-light
-    );
-    --txt-box-btn-expand-color-background: var(
-      --krds-#{$mode-setting}-color-surface-gray-subtler
-    );
+    --txt-box-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
+    --txt-box-btn-expand-color-background: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
 
     padding: var(--krds-pc-padding-card-medium);
     padding-bottom: 0;
@@ -5085,11 +4772,7 @@ a {
         height: var(--krds-size-height-10);
         position: absolute;
         @include position($t: -7.3rem, $l: 0, $r: 0);
-        background: linear-gradient(
-          180deg,
-          transparent 0%,
-          var(--txt-box-btn-expand-color-background) 95.01%
-        );
+        background: linear-gradient(180deg, transparent 0%, var(--txt-box-btn-expand-color-background) 95.01%);
         mask-image: none;
       }
       &::after {
@@ -5117,27 +4800,13 @@ a {
 
 /* 신청하기 : 신청 및 처리 절차 */
 .service-step {
-  --service-step-width-border: var(
-    --krds-#{$mode-setting}-border-width-static-regular
-  );
-  --service-step-color-border: var(
-    --krds-#{$mode-setting}-color-divider-secondary-light
-  );
-  --service-step-num-color: var(
-    --krds-#{$mode-setting}-color-text-basic-inverse
-  );
-  --service-step-num-background: var(
-    --krds-#{$mode-setting}-color-element-secondary
-  );
-  --service-step-tit-area-color: var(
-    --krds-#{$mode-setting}-color-text-secondary
-  );
-  --service-step-tit-area-color-border: var(
-    --krds-#{$mode-setting}-color-divider-gray-light
-  );
-  --service-step-tit-area-desc-color: var(
-    --krds-#{$mode-setting}-color-text-subtle
-  );
+  --service-step-width-border: var(--krds-#{$mode-setting}-border-width-static-regular);
+  --service-step-color-border: var(--krds-#{$mode-setting}-color-divider-secondary-light);
+  --service-step-num-color: var(--krds-#{$mode-setting}-color-text-basic-inverse);
+  --service-step-num-background: var(--krds-#{$mode-setting}-color-element-secondary);
+  --service-step-tit-area-color: var(--krds-#{$mode-setting}-color-text-secondary);
+  --service-step-tit-area-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
+  --service-step-tit-area-desc-color: var(--krds-#{$mode-setting}-color-text-subtle);
 
   $num-width: var(--krds-size-height-4);
   $num-padding-x: var(--krds-padding-3);
@@ -5203,9 +4872,7 @@ a {
 /* 신청하기 : 검색 결과 리스트 : 선택형 */
 .page-apply-btn {
   --apply-list-gap-txt-badge: var(--krds-gap-5);
-  --apply-list-width-border: var(
-    --krds-#{$mode-setting}-border-width-variable-regular
-  );
+  --apply-list-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
   --apply-list-color-border: var(--krds-#{$mode-setting}-color-border-primary);
 
   .apply-select {
@@ -5214,11 +4881,7 @@ a {
       position: relative;
       width: 100%;
       .svg-icon {
-        @include position(
-          $p: absolute,
-          $t: calc(50% - (var(--krds-icon--size-xlarge) / 2)),
-          $r: var(--krds-gap-7)
-        );
+        @include position($p: absolute, $t: calc(50% - (var(--krds-icon--size-xlarge) / 2)), $r: var(--krds-gap-7));
       }
     }
     .apply-list {
@@ -5227,8 +4890,7 @@ a {
       gap: var(--krds-gap-5);
       margin-top: var(--krds-gap-4);
       padding: var(--krds-pc-padding-card-medium);
-      border: var(--apply-list-width-border) solid
-        var(--apply-list-color-border);
+      border: var(--apply-list-width-border) solid var(--apply-list-color-border);
       border-radius: var(--krds-radius-xlarge2);
       li {
         display: flex;
@@ -5274,13 +4936,16 @@ a {
 .box-group-area {
   @include flex-layout($fd: column);
   gap: var(--krds-gap-7);
+  width: 100%;
+  p {
+    color: #131416;
+  }
   > li {
     @include flex-layout($ai: center, $jc: space-between);
     gap: var(--krds-gap-6);
     width: 100%;
     padding: var(--krds-padding-6);
-    border: var(--krds-#{$mode-setting}-border-width-static-regular) solid
-      var(--krds-#{$mode-setting}-color-divider-gray-light);
+    border: var(--krds-#{$mode-setting}-border-width-static-regular) solid var(--krds-#{$mode-setting}-color-divider-gray-light);
     border-radius: var(--krds-radius-medium3);
 
     .btn-wrap {
@@ -5369,9 +5034,7 @@ a {
             gap: var(--krds-gap-3);
           }
           .krds-btn {
-            margin-top: calc(
-              --apply-list-gap-txt-badge + var(--krds-size-height-4)
-            );
+            margin-top: calc(--apply-list-gap-txt-badge + var(--krds-size-height-4));
             height: auto;
           }
         }
@@ -5416,86 +5079,51 @@ a {
   }
 
   .conts-expand-area {
-    --conts-width-border: var(
-      --krds-#{$mode-setting}-border-width-static-regular
-    );
+    --conts-width-border: var(--krds-#{$mode-setting}-border-width-static-regular);
     --conts-expand-background: var(--krds-#{$mode-setting}-color-surface-white);
 
     .btn-conts-expand {
       &::after {
-        @include svg-icon(
-          $size: var(--krds-size-height-3),
-          $mode: #{$mode-setting}
-        );
+        @include svg-icon($size: var(--krds-size-height-3), $mode: #{$mode-setting});
       }
     }
     &.step {
       --step-color-border: var(--krds-#{$mode-setting}-color-border-gray);
-      --step-conts-desc-color-text: var(
-        --krds-#{$mode-setting}-color-text-subtle
-      );
-      --step-btn-conts-expand-color-background: var(
-        --krds-#{$mode-setting}-color-element-secondary-light
-      );
+      --step-conts-desc-color-text: var(--krds-#{$mode-setting}-color-text-subtle);
+      --step-btn-conts-expand-color-background: var(--krds-#{$mode-setting}-color-element-secondary-light);
       .btn-conts-expand {
         > span {
           &::before {
-            @include svg-icon(
-              var(--krds-size-height-2),
-              $mode: #{$mode-setting}
-            );
+            @include svg-icon(var(--krds-size-height-2), $mode: #{$mode-setting});
           }
         }
       }
     }
     &.txt-box {
-      --txt-box-color-border: var(
-        --krds-#{$mode-setting}-color-divider-gray-light
-      );
-      --txt-box-btn-expand-color-background: var(
-        --krds-#{$mode-setting}-color-surface-gray-subtler
-      );
+      --txt-box-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
+      --txt-box-btn-expand-color-background: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
     }
   }
 
   .service-step {
-    --service-step-width-border: var(
-      --krds-#{$mode-setting}-border-width-static-regular
-    );
-    --service-step-color-border: var(
-      --krds-#{$mode-setting}-color-divider-secondary-light
-    );
-    --service-step-num-color: var(
-      --krds-#{$mode-setting}-color-text-basic-inverse
-    );
-    --service-step-num-background: var(
-      --krds-#{$mode-setting}-color-element-secondary
-    );
-    --service-step-tit-area-color: var(
-      --krds-#{$mode-setting}-color-text-secondary
-    );
-    --service-step-tit-area-color-border: var(
-      --krds-#{$mode-setting}-color-divider-gray-light
-    );
-    --service-step-tit-area-desc-color: var(
-      --krds-#{$mode-setting}-color-text-subtle
-    );
+    --service-step-width-border: var(--krds-#{$mode-setting}-border-width-static-regular);
+    --service-step-color-border: var(--krds-#{$mode-setting}-color-divider-secondary-light);
+    --service-step-num-color: var(--krds-#{$mode-setting}-color-text-basic-inverse);
+    --service-step-num-background: var(--krds-#{$mode-setting}-color-element-secondary);
+    --service-step-tit-area-color: var(--krds-#{$mode-setting}-color-text-secondary);
+    --service-step-tit-area-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
+    --service-step-tit-area-desc-color: var(--krds-#{$mode-setting}-color-text-subtle);
   }
 
   .page-apply-btn {
     --apply-list-gap-txt-badge: var(--krds-gap-5);
-    --apply-list-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
-    --apply-list-color-border: var(
-      --krds-#{$mode-setting}-color-border-primary
-    );
+    --apply-list-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
+    --apply-list-color-border: var(--krds-#{$mode-setting}-color-border-primary);
   }
 
   .box-group-area {
     > li {
-      border: var(--krds-#{$mode-setting}-border-width-static-regular) solid
-        var(--krds-#{$mode-setting}-color-divider-gray-light);
+      border: var(--krds-#{$mode-setting}-border-width-static-regular) solid var(--krds-#{$mode-setting}-color-divider-gray-light);
     }
   }
 }
@@ -5516,9 +5144,7 @@ a {
 
 /* 완료 정보 */
 .comp-info-box {
-  --comp-color-background: var(
-    --krds-#{$mode-setting}-color-surface-secondary-subtler
-  );
+  --comp-color-background: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
 
   @include flex-layout($fd: column, $ai: normal);
   gap: var(--krds-gap-7);
@@ -5546,15 +5172,13 @@ a {
 .comp-btn-wrap {
   @include flex-layout($jc: center);
   gap: var(--krds-gap-5);
-  margin-top: var(--krds-gap-10);
-  margin-bottom: var(--krds-gap-10);
+  margin-top: var(--krds-gap-8);
+  margin-bottom: var(--krds-gap-8);
 }
 
 /* 링크버튼 */
 .comp-link-box {
-  --comp-color-background: var(
-    --krds-#{$mode-setting}-color-surface-gray-subtler
-  );
+  --comp-color-background: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
   --comp-width-border: var(--krds-#{$mode-setting}-border-width-static-regular);
   --comp-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
 
@@ -5609,8 +5233,8 @@ a {
     flex-wrap: wrap;
     margin-top: var(--krds-gap-7);
 
-    .krds-btn {
-      width: 100%;
+    .krds-btn.medium {
+      width: 14rem;
     }
   }
 
@@ -5640,18 +5264,12 @@ a {
   }
 
   .comp-info-box {
-    --comp-color-background: var(
-      --krds-#{$mode-setting}-color-surface-secondary-subtler
-    );
+    --comp-color-background: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
   }
 
   .comp-link-box {
-    --comp-color-background: var(
-      --krds-#{$mode-setting}-color-surface-gray-subtler
-    );
-    --comp-width-border: var(
-      --krds-#{$mode-setting}-border-width-static-regular
-    );
+    --comp-color-background: var(--krds-#{$mode-setting}-color-surface-gray-subtler);
+    --comp-width-border: var(--krds-#{$mode-setting}-border-width-static-regular);
     --comp-color-border: var(--krds-#{$mode-setting}-color-divider-gray-light);
   }
 }
@@ -5660,18 +5278,10 @@ a {
 .assess-question-wrap {
   --asses-radio-color-text: var(--krds-#{$mode-setting}-color-text-basic);
   --asses-radio-color-border: var(--krds-#{$mode-setting}-color-border-gray);
-  --asses-radio-color-background: var(
-    --krds-#{$mode-setting}-color-surface-white
-  );
-  --asses-radio-color-text-active: var(
-    --krds-#{$mode-setting}-color-text-primary
-  );
-  --asses-radio-color-border-active: var(
-    --krds-#{$mode-setting}-color-border-primary
-  );
-  --asses-radio-color-background-active: var(
-    --krds-#{$mode-setting}-color-action-primary-selected
-  );
+  --asses-radio-color-background: var(--krds-#{$mode-setting}-color-surface-white);
+  --asses-radio-color-text-active: var(--krds-#{$mode-setting}-color-text-primary);
+  --asses-radio-color-border-active: var(--krds-#{$mode-setting}-color-border-primary);
+  --asses-radio-color-background-active: var(--krds-#{$mode-setting}-color-action-primary-selected);
 
   @include flex-layout($ai: center);
   gap: var(--krds-gap-5);
@@ -5733,9 +5343,7 @@ a {
 }
 
 .assess-opinion-wrap {
-  --asses-width-border: var(
-    --krds-#{$mode-setting}-border-width-variable-regular
-  );
+  --asses-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
   --asses-color-border: var(--krds-#{$mode-setting}-color-divider-gray);
 
   @include flex-layout($fd: column, $ai: normal);
@@ -5775,13 +5383,9 @@ a {
 }
 
 .assess-end-message {
-  --asses-width-border: var(
-    --krds-#{$mode-setting}-border-width-variable-regular
-  );
+  --asses-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
   --asses-color-border: var(--krds-#{$mode-setting}-color-border-success-light);
-  --asses-color-background: var(
-    --krds-#{$mode-setting}-color-border-success-light
-  );
+  --asses-color-background: var(--krds-#{$mode-setting}-color-border-success-light);
   --asses-color-text: var(--krds-#{$mode-setting}-color-text-success);
 
   @include flex-layout($fd: column, $ai: normal);
@@ -5799,11 +5403,9 @@ a {
     &::before {
       @include pseudo();
       @include svg-icon($size: var(--krds-icon--size-medium), $effect: pure);
-      margin: var(--krds-gap-1) var(--krds-number-6) var(--krds-gap-1)
-        var(--krds-gap-1);
+      margin: var(--krds-gap-1) var(--krds-number-6) var(--krds-gap-1) var(--krds-gap-1);
       vertical-align: text-top;
-      background: url(#{$url}/img/pattern/content/ico_check_rd_20.svg) no-repeat
-        center;
+      background: url(#{$url}/img/pattern/content/ico_check_rd_20.svg) no-repeat center;
       background-size: contain;
     }
   }
@@ -5854,37 +5456,21 @@ a {
   .assess-question-wrap {
     --asses-radio-color-text: var(--krds-#{$mode-setting}-color-text-basic);
     --asses-radio-color-border: var(--krds-#{$mode-setting}-color-border-gray);
-    --asses-radio-color-background: var(
-      --krds-#{$mode-setting}-color-surface-white
-    );
-    --asses-radio-color-text-active: var(
-      --krds-#{$mode-setting}-color-text-primary
-    );
-    --asses-radio-color-border-active: var(
-      --krds-#{$mode-setting}-color-border-primary
-    );
-    --asses-radio-color-background-active: var(
-      --krds-#{$mode-setting}-color-action-primary-selected
-    );
+    --asses-radio-color-background: var(--krds-#{$mode-setting}-color-surface-white);
+    --asses-radio-color-text-active: var(--krds-#{$mode-setting}-color-text-primary);
+    --asses-radio-color-border-active: var(--krds-#{$mode-setting}-color-border-primary);
+    --asses-radio-color-background-active: var(--krds-#{$mode-setting}-color-action-primary-selected);
   }
 
   .assess-opinion-wrap {
-    --asses-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
+    --asses-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
     --asses-color-border: var(--krds-#{$mode-setting}-color-divider-gray);
   }
 
   .assess-end-message {
-    --asses-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
-    --asses-color-border: var(
-      --krds-#{$mode-setting}-color-border-success-light
-    );
-    --asses-color-background: var(
-      --krds-#{$mode-setting}-color-border-success-light
-    );
+    --asses-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
+    --asses-color-border: var(--krds-#{$mode-setting}-color-border-success-light);
+    --asses-color-background: var(--krds-#{$mode-setting}-color-border-success-light);
     --asses-color-text: var(--krds-#{$mode-setting}-color-text-success);
   }
 }
@@ -5978,9 +5564,7 @@ a {
   z-index: 4;
   padding: var(--krds-padding-6);
   margin: 0 -1.6rem;
-  background-color: var(
-    --krds-#{$mode-setting}-color-surface-secondary-subtler
-  );
+  background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
   .filter-txt {
     font-size: var(--krds-mobile-font-size-body-small);
     color: var(--krds-#{$mode-setting}-color-text-subtle);
@@ -6018,13 +5602,8 @@ a {
       top: 0;
       right: 0;
       z-index: 2;
-      padding: var(--krds-padding-6) var(--krds-padding-3) var(--krds-padding-6)
-        var(--krds-padding-8);
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 3.12%,
-        var(--krds-#{$mode-setting}-color-surface-secondary-subtler) 46.25%
-      );
+      padding: var(--krds-padding-6) var(--krds-padding-3) var(--krds-padding-6) var(--krds-padding-8);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 3.12%, var(--krds-#{$mode-setting}-color-surface-secondary-subtler) 46.25%);
     }
     .krds-btn {
       &.active {
@@ -6054,12 +5633,8 @@ a {
     }
   }
   .pop-foot-links {
-    --pop-foot-link-color-background-hover: var(
-      --krds-#{$mode-setting}-color-element-secondary-light
-    );
-    --pop-foot-link-color-background-active: var(
-      --krds-#{$mode-setting}-secondary-20
-    );
+    --pop-foot-link-color-background-hover: var(--krds-#{$mode-setting}-color-element-secondary-light);
+    --pop-foot-link-color-background-active: var(--krds-#{$mode-setting}-secondary-20);
 
     padding: 0.4rem;
     display: grid;
@@ -6074,7 +5649,7 @@ a {
         border-radius: var(--krds-radius-medium3);
         word-break: break-all;
         &::before {
-          content: '･';
+          content: "･";
           margin-top: 0.1rem;
         }
         &:hover {
@@ -6092,6 +5667,7 @@ a {
 #popTotalSchType1,
 #popTotalSch {
   .modal-dialog {
+    width: 100%;
     // $modal-gap-x: 20.4rem;
 
     // max-width:79.2rem;
@@ -6104,9 +5680,15 @@ a {
     //     }
 
     // }
+
+    .modal-content {
+      border-radius: 0;
+    }
+
     .modal-conts {
-      max-width: 79.2rem;
+      max-width: unset;
       padding: 16rem 0 var(--krds-gap-12);
+      background-color: #e6ebf8;
     }
     .btn-close {
       top: var(--krds-gap-12);
@@ -6117,30 +5699,14 @@ a {
     padding-inline: 0;
   }
   .pop-total-serch-wrap {
-    --pop-total-serch-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
-    --pop-total-serch-color-border: var(
-      --krds-#{$mode-setting}-color-divider-secondary-light
-    );
-    --pop-total-serch-color-background: var(
-      --krds-#{$mode-setting}-color-surface-secondary-subtler
-    );
-    --pop-total-serch-state-up-text: var(
-      --krds-#{$mode-setting}-color-text-point
-    );
-    --pop-total-serch-state-up-icon: var(
-      --krds-#{$mode-setting}-color-icon-point
-    );
-    --pop-total-serch-state-down-text: var(
-      --krds-#{$mode-setting}-color-text-information
-    );
-    --pop-total-serch-state-down-icon: var(
-      --krds-#{$mode-setting}-color-icon-information
-    );
-    --pop-total-serch-state-same-text: var(
-      --krds-#{$mode-setting}-color-text-basic
-    );
+    --pop-total-serch-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
+    --pop-total-serch-color-border: var(--krds-#{$mode-setting}-color-divider-secondary-light);
+    --pop-total-serch-color-background: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
+    --pop-total-serch-state-up-text: var(--krds-#{$mode-setting}-color-text-point);
+    --pop-total-serch-state-up-icon: var(--krds-#{$mode-setting}-color-icon-point);
+    --pop-total-serch-state-down-text: var(--krds-#{$mode-setting}-color-text-information);
+    --pop-total-serch-state-down-icon: var(--krds-#{$mode-setting}-color-icon-information);
+    --pop-total-serch-state-same-text: var(--krds-#{$mode-setting}-color-text-basic);
 
     .search-tit {
       @include flex-layout($ai: center);
@@ -6160,8 +5726,7 @@ a {
       top: 0;
       background-color: var(--pop-total-serch-color-background);
       padding: 0 0.4rem var(--krds-padding-10);
-      border-bottom: var(--pop-total-serch-width-border) solid
-        var(--pop-total-serch-color-border);
+      border-bottom: var(--pop-total-serch-width-border) solid var(--pop-total-serch-color-border);
     }
     .search-text {
       padding-top: var(--krds-padding-10);
@@ -6200,7 +5765,7 @@ a {
         width: 4.3rem;
         &::before {
           display: inline-flex;
-          content: '';
+          content: "";
           width: var(--krds-number-7);
           height: var(--krds-number-7);
         }
@@ -6249,8 +5814,7 @@ a {
       }
     }
     .word-lately {
-      border-left: var(--pop-total-serch-width-border) solid
-        var(--pop-total-serch-color-border);
+      border-left: var(--pop-total-serch-width-border) solid var(--pop-total-serch-color-border);
       li {
         gap: var(--krds-gap-3);
       }
@@ -6302,9 +5866,7 @@ a {
   }
 
   .pop-agree-wrap {
-    --pop-agree-width-border: var(
-      --krds-#{$mode-setting}-border-width-variable-regular
-    );
+    --pop-agree-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
     --pop-agree-color-border: var(--krds-#{$mode-setting}-color-border-gray);
     --pop-agree-info-list-color: var(--krds-#{$mode-setting}-color-text-basic);
 
@@ -6381,6 +5943,7 @@ a {
       width: 100%;
       margin: 0;
       padding: 0;
+
       .btn-close {
         @include square(var(--krds-size-height-4));
         top: var(--krds-gap-6);
@@ -6394,10 +5957,13 @@ a {
       padding: 0;
     }
     .pop-total-serch-wrap {
-      padding: 4.4rem 0 0;
       .search-total-top {
-        padding: var(--krds-padding-8) var(--krds-padding-6);
+        padding-top: 7.6rem;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+        padding-bottom: 2rem;
       }
+
       .sch-form-wrap {
         gap: var(--krds-gap-4);
         .sch-input {
@@ -6450,9 +6016,7 @@ a {
             @include position($t: 0, $l: -1.6rem, $r: 0);
             width: calc(100% + var(--krds-gap-8));
             height: var(--krds-#{$mode-setting}-border-width-variable-regular);
-            background-color: var(
-              --krds-#{$mode-setting}-color-divider-secondary-light
-            );
+            background-color: var(--krds-#{$mode-setting}-color-divider-secondary-light);
           }
         }
 
@@ -6501,73 +6065,43 @@ a {
   $mode-setting: high-contrast;
 
   .pop-filter-top {
-    background-color: var(
-      --krds-#{$mode-setting}-color-surface-secondary-subtler
-    );
+    background-color: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
     .filter-txt {
       color: var(--krds-#{$mode-setting}-color-text-subtle);
     }
     .filter-tag-wrap {
       .tag-btn {
-        background: linear-gradient(
-          90deg,
-          rgba(0, 0, 0, 0) 3.12%,
-          var(--krds-#{$mode-setting}-color-surface-secondary-subtler) 46.25%
-        );
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 3.12%, var(--krds-#{$mode-setting}-color-surface-secondary-subtler) 46.25%);
       }
     }
   }
 
   #popFootLink {
     .pop-foot-links {
-      --pop-foot-link-color-background-hover: var(
-        --krds-#{$mode-setting}-color-element-secondary-light
-      );
-      --pop-foot-link-color-background-active: var(
-        --krds-#{$mode-setting}-secondary-20
-      );
+      --pop-foot-link-color-background-hover: var(--krds-#{$mode-setting}-color-element-secondary-light);
+      --pop-foot-link-color-background-active: var(--krds-#{$mode-setting}-secondary-20);
     }
   }
 
   #popTotalSchType1,
   #popTotalSch {
     .pop-total-serch-wrap {
-      --pop-total-serch-width-border: var(
-        --krds-#{$mode-setting}-border-width-variable-regular
-      );
-      --pop-total-serch-color-border: var(
-        --krds-#{$mode-setting}-color-divider-secondary-light
-      );
-      --pop-total-serch-color-background: var(
-        --krds-#{$mode-setting}-color-surface-secondary-subtler
-      );
-      --pop-total-serch-state-up-text: var(
-        --krds-#{$mode-setting}-color-text-point
-      );
-      --pop-total-serch-state-up-icon: var(
-        --krds-#{$mode-setting}-color-icon-point
-      );
-      --pop-total-serch-state-down-text: var(
-        --krds-#{$mode-setting}-color-text-information
-      );
-      --pop-total-serch-state-down-icon: var(
-        --krds-#{$mode-setting}-color-icon-information
-      );
-      --pop-total-serch-state-same-text: var(
-        --krds-#{$mode-setting}-color-text-basic
-      );
+      --pop-total-serch-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
+      --pop-total-serch-color-border: var(--krds-#{$mode-setting}-color-divider-secondary-light);
+      --pop-total-serch-color-background: var(--krds-#{$mode-setting}-color-surface-secondary-subtler);
+      --pop-total-serch-state-up-text: var(--krds-#{$mode-setting}-color-text-point);
+      --pop-total-serch-state-up-icon: var(--krds-#{$mode-setting}-color-icon-point);
+      --pop-total-serch-state-down-text: var(--krds-#{$mode-setting}-color-text-information);
+      --pop-total-serch-state-down-icon: var(--krds-#{$mode-setting}-color-icon-information);
+      --pop-total-serch-state-same-text: var(--krds-#{$mode-setting}-color-text-basic);
     }
   }
 
   #modal_agree {
     .pop-agree-wrap {
-      --pop-agree-width-border: var(
-        --krds-#{$mode-setting}-border-width-variable-regular
-      );
+      --pop-agree-width-border: var(--krds-#{$mode-setting}-border-width-variable-regular);
       --pop-agree-color-border: var(--krds-#{$mode-setting}-color-border-gray);
-      --pop-agree-info-list-color: var(
-        --krds-#{$mode-setting}-color-text-basic
-      );
+      --pop-agree-info-list-color: var(--krds-#{$mode-setting}-color-text-basic);
     }
   }
 }
@@ -6648,11 +6182,11 @@ a {
   background-color: transparent;
   width: 30rem;
   height: 5.4rem;
-//   line-height: 5.4rem;
+  //   line-height: 5.4rem;
   padding: 16px 52px 16px 24px;
-  background-image: url('../../img/component/icon/ico_plus.svg');
-//   background-color: #111;
-//   background-image: url('../../img/icon/icon_plus_grey.svg');
+  background-image: url("../../img/component/icon/ico_plus.svg");
+  //   background-color: #111;
+  //   background-image: url('../../img/icon/icon_plus_grey.svg');
   background-position: center right 24px;
   background-repeat: no-repeat;
   background-size: 2rem 2rem;
@@ -6669,7 +6203,7 @@ a {
   margin: 0;
 
   &.toggle {
-  background-image: url('../../img/component/icon/ico_angle_up.svg');
+    background-image: url("../../img/component/icon/ico_angle_up.svg");
   }
 
   ul {
@@ -6687,15 +6221,15 @@ a {
     display: none;
 
     li {
-    //   margin-bottom: 10px;
-    //   border-bottom: 1px solid #cdd1d5;
+      //   margin-bottom: 10px;
+      //   border-bottom: 1px solid #cdd1d5;
       border-top: 1px solid #cdd1d5;
     }
 
     li:last-child {
       margin-bottom: 0;
       border-bottom: 1px solid #cdd1d5;
-    //   border-bottom: none;
+      //   border-bottom: none;
     }
 
     li a {
@@ -6706,7 +6240,7 @@ a {
       position: relative;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         right: 24px;
         top: 50%;
@@ -6739,229 +6273,9 @@ a {
   }
 }
 
-
-// 1025
-
-
-
-//       .wrap_select_family {
-//         position: relative;
-//         background-color: transparent;
-//         width: 100%;
-//         height: 4.5rem;
-//         line-height: 4.3rem;
-//         border-left: none;
-//         border-right: none;
-//         text-align: left;
-//         padding: 0 5rem 0 2rem;
-//         font-size: 1.2rem;
-
-//         background-image: url("../../img/icon/icon_plus_black.svg");
-//         background-position: center right 21px;
-//         // background-repeat: no-repeat;
-//         // background-size: 2rem 2rem;
-
-//         cursor: pointer;
-
-//         &.toggle {
-//           background-image: url("../../img/icon/icon_chevron_up_gray.svg");
-//         }
-
-//         ul {
-//           border-bottom: 0;
-//           bottom: 45px;
-//           left: 0;
-//           padding: 10px 0;
-//           position: absolute;
-//           width: 100%;
-//           z-index: 1;
-//           display: none;
-//           text-align: left;
-
-//           // li {
-//           //   margin-bottom: 10px;
-//           // }
-
-//           // li:last-child {
-//           //   margin-bottom: 0;
-//           // }
-
-//           li a {
-//             color: $color_aaa;
-//             display: block;
-//             padding: 0 19px;
-//           }
-//         }
-//       }
-
-
-//     .wrap_select_family {
-//       font-size: 14px;
-//     }
-
-
-
-
-// 481
-
-
-
-//     .wrap_select_family {
-//       width: 16rem;
-//       font-size: 12px;
-//       height: 3rem;
-//       line-height: 2.8rem;
-//       background-position: center right 15px;
-//       padding-right: 2.4rem;
-
-//       ul {
-//         bottom: 29px;
-//       }
-//     }
-
-
-
-// 통합검색
-// 상세검색 버튼
-.search-top-box {
-.sch-form-group {
-    margin-top: 32px;
-    .krds-btn.text.medium {
-    color: #fff;
-
-    &:hover {
-        background: none;
-        color: #fff;
-    }
-    }
-}
-
-// .btn_search_detail {
-//     max-width: none;
-//     width: -webkit-fill-available;
-//     background-color: #fff;
-//     color: #fff;
-// }
-
-.sch-form-group .krds-btn.text:not(.icon) .svg-icon {
-    background-color: #fff;
-}
-
-}
-
-
-
-
-//       .radio_size_fixed {
-//         width: 26.5rem;
-//       }
-
-//       .radio_size_wide {
-//         flex-grow: 1;
-//         // width: auto;
-
-//         align-items: center;
-
-//         .label {
-//             width: 20rem;
-//         }
-
-//       }
-
-//       .radio_area {
-//         display: flex;
-//         align-items: center;
-//         flex: 1 1 auto;
-        
-//         .form-conts {
-
-//           display: flex;
-//         //   flex: 1 1 100%;
-
-//             align-items: flex-start;
-//             justify-content: flex-start;
-//             flex-direction: column;
-//             gap: 8px;
-//             // width: 100%;
-
-//     max-width: none;
-//     width: -webkit-fill-available;
-
-// .krds-input {
-//     max-width: none;
-//     width: -webkit-fill-available;
-
-// }
-
-//         }
-//       }
-
-// .new_filter > .label {
-//   width: 345px;
-//   flex-shrink: 0;      // 줄어들지 않게
-
-// }
-
-// .radio_area {
-//   display: flex;
-//   align-items: center;
-//   gap: 50px; // 요소 간 간격
-
-//   .krds-form-check {
-//   flex: none;          // 🔥 기존 flex 제거
-//   width: 250px;        // 고정값
-//   flex-shrink: 0;      // 줄어들지 않게
-// }
-
-
-// }
-
-// .radio_area > .wrap_form_radio {
-//   flex: none;          // 🔥 기존 flex 제거
-//   width: 250px;        // 고정값
-//   flex-shrink: 0;      // 줄어들지 않게
-// }
-
-// /* 1, 2번 라디오 영역 */
-// .radio_size_fixed {
-//   flex: 0 0 250px; // 고정 너비
-//   display: flex;
-//   align-items: center;
-//   // justify-content: center;
-// }
-
-// /* 3번 검색 영역 */
-// .form-conts.search_field {
-//   // flex: 1 1 auto; // 남은 영역 전부 차지
-//    flex: 1 0 100%;
-//   min-width: 0;   // input overflow 방지 (중요)
-
-//   .krds-input {
-//     width: 100%;
-//   }
-// }
-
-
-
-// .search-top-box .sch-form-wrap {
-//   width: 100%;
-// }
-
-// .input-group {
-//   flex: 1;
-// }
-
-// .sch-input {
-//   flex: 1;
-// }
-
-// .sch-input .krds-input {
-//   flex: 1;
-// }
-
-
 /* 전체 래퍼 */
 .filter-chip {
+  // background-color: transparent;
   width: 100%;
   flex-wrap: wrap;
 }
@@ -6969,22 +6283,23 @@ a {
 .filter_wrap {
   width: 100%;
   display: flex;
-  align-items: center;
+  &:nth-of-type(1) {
+    align-items: center;
+  }
 }
-
 
 /* 상단 라벨 */
 .filter_label {
   margin-bottom: 8px;
   width: 175px;
-  
+  flex-shrink: 0;
+
   label {
     font-weight: var(--krds-font-weight-bold);
     white-space: nowrap;
     align-items: center;
     // width: 17.5rem;
   }
-
 }
 
 /* 핵심 flex 라인 */
@@ -7000,13 +6315,31 @@ a {
   display: flex;
   align-items: center;
   // justify-content: center;
-
-  width: 170px;        // 고정 너비
-  flex: 0 0 170px;     // 늘어나지도 줄어들지도 않음
+  width: 170px; // 고정 너비
+  flex: 0 0 170px; // 늘어나지도 줄어들지도 않음
   box-sizing: border-box;
 
   input {
     margin-right: 4px;
+  }
+
+  &.krds-form-check input[type="radio"] ~ label:after {
+    background-color: transparent;
+    // border-color: transparent;
+  }
+  &.krds-form-check input[type="radio"] ~ label:before,
+  .krds-form-check input[type="checkbox"] ~ label:before {
+    background-color: transparent;
+    border-color: #fff;
+  }
+
+  &.krds-form-check input[type="radio"]:checked ~ label:after {
+    background-color: #fff;
+  }
+
+  &.krds-form-check input[type="radio"]:checked ~ label:before {
+    background-color: transparent;
+    border-color: #fff;
   }
 }
 
@@ -7017,13 +6350,13 @@ a {
   // align-items: center;
   gap: 8px;
 
-  flex: 1 1 auto;      // 남은 영역 전부 차지
-  min-width: 0;        // input overflow 방지
+  flex: 1 1 auto; // 남은 영역 전부 차지
+  min-width: 0; // input overflow 방지
   box-sizing: border-box;
-
 
   label {
     white-space: nowrap;
+    font-size: 14px;
   }
 
   input {
@@ -7032,15 +6365,12 @@ a {
   }
 }
 
-
 .wrap_filter_search {
   display: flex;
   align-items: center;
   margin-left: 5rem;
-    flex: 1 1 auto;      // 남은 영역 전부 차지
-
+  flex: 1 1 auto; // 남은 영역 전부 차지
 }
-
 
 .sch-form-wrap {
   .form-conts {
@@ -7048,95 +6378,856 @@ a {
   }
 }
 
-
 .search-top-box .krds-btn.tertiary {
-  background-color: #F5F6FF;
+  background-color: #f5f6ff;
 }
 
 /* saas 검색 필터  */
 
+.filter-btn .krds-btn.tertiary.line {
+  background-color: #fff;
+  border-color: #58616a;
+  color: #111;
 
+  // line: (
+  // 	fill: #fff,
+  // 	fill-hover: var(--krds-#{$mode}-color-button-tertiary-fill-hover),
+  // 	fill-pressed: var(--krds-#{$mode}-color-button-tertiary-fill-pressed),
+  // 	fill-disabled: var(--krds-#{$mode}-color-button-disabled-fill),
+  // 	border: #58616A,
+  // 	border-disabled: var(--krds-#{$mode}-color-button-disabled-border),
+  // 	text: #111,
+  // 	text-disabled: var(--krds-#{$mode}-color-text-disabled-on),
+  // ),
+}
 
-// saas 검색 필터 -모바일
+/* saas 검색 필터 - 모바일 */
 @include size-medium {
-
-  .search-top-box .sch-filter-box {
+  .page,
+  .page_content {
+    .search-top-box .sch-filter-box {
       padding: 2rem;
       margin-top: var(--krds-pc-gap-layout-h2-h3);
 
-    .f-txt {
-      font-size: 16px;
-      margin-bottom: 1.2rem;
+      .f-txt {
+        font-size: 16px;
+        margin-bottom: 1.2rem;
+      }
     }
-}
-      .sch-form-wrap.wrap_search_saas {
-        @include size-medium {
-          gap: 10px;
 
-.search_saas_group {
-  flex-wrap: wrap;
-  &.select {
-      width: 100%;
-}
-&.input {
-          width: 100%;
+    .sch-form-wrap.wrap_search_saas {
+
+      @include size-medium {
+        gap: 10px;
+
+        .search_saas_group {
+          flex-wrap: wrap;
+          &.select {
+            width: 100%;
+          }
+          &.input {
+            width: 100%;
+          }
         }
-
+        .krds-form-select.medium,
+        .krds-input.medium {
+          height: 4rem;
         }
-
 
         .group_input_conts {
           .krds-btn {
             width: 7.8rem;
-            height: 4.1rem;
+            height: 4rem;
           }
         }
 
+        .form-tit {
+          label {
+            font-size: 14px;
+          }
         }
-        }
-
       }
-
-
+    }
+  }
+}
 
 .search_saas_group {
   display: flex;
   flex-direction: column;
   gap: 8px;
   &.select {
-      width: 16rem;
+    width: 16rem;
+  }
+  &.input {
+    width: 100%;
+  }
 }
-&.input {
-          width: 100%;
-        }
 
-        }
+.group_input_conts {
+  .krds-btn {
+    width: 11.4rem;
+  }
+  .input-group {
+    gap: 10px;
+  }
+}
 
-
-        .group_input_conts {
-          .krds-btn {
-            width: 11.4rem;
-          }
-          .input-group {
-            gap: 10px;
-
-          }
-        }
-
-        .filter-list.krds-accordion {
-          
-          li.mark.sm {
-                padding-top: 11px;
-
-          }
-        }
-
+.filter-list.krds-accordion {
+  li.mark.sm {
+    padding-top: 11px;
+  }
+}
 
 /* 페이지 타이틀 */
-        .page-title-wrap {
-        .s-tit {
-            font-size: var(--krds-pc-font-size-body-large);
-            font-weight: var(--krds-font-weight-bold);
-            text-align: center;
-        }
+.page-title-wrap {
+  .s-tit {
+    font-size: var(--krds-pc-font-size-body-large);
+    font-weight: var(--krds-font-weight-bold);
+    text-align: center;
   }
+}
+
+/* 공공용 saas 페이지 */
+
+// 통합 saas
+.sch-filter-box .form-group-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: var(--krds-gap-5);
+}
+
+/*  krds-structured-list custom*/
+
+.krds-tab-area .product_list .product_list {
+ margin-top: 4rem;
+}
+
+.product_list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.product_card {
+  .product_item {
+    padding: 4rem;
+    background-color: #fff;
+    border: 1px solid #b1b8be;
+    border-radius: 1.2rem;
+    display: flex;
+  }
+
+  .product_item_inner {
+    display: flex;
+    gap: 4rem;
+
+    .box_logo {
+      background-color: #fff;
+      border-radius: 2rem;
+      border: 1px solid #ccc;
+
+      width: 21.6rem;
+      height: 21.6rem;
+      border-radius: 0.8rem;
+      object-fit: contain;
+      padding: 1.9rem;
+
+      position: relative;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 82%;
+      }
+    }
+
+    .box_txt {
+      // padding-left: 4rem;
+
+      .box_txt_inner {
+        display: flex;
+        flex-direction: column;
+        // gap: var(--krds-gap-3);
+      }
+
+      .card-top {
+        margin-bottom: var(--krds-number-8);
+      }
+
+      .card-body {
+        // .c_text {
+        // 	width: auto;
+        // }
+
+        .c-tit {
+          font-size: 2.4rem;
+          font-weight: bold;
+          a {
+            display: inline-block;
+            width: auto;
+          }
+        }
+        .company_name {
+          color: #777;
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+
+    .b_box {
+      // background-color: var(--mg-primary-5);
+      background-color: #e6ebf8;
+      padding: 0.5rem 1.6rem;
+      border-radius: 2rem;
+      display: flex;
+      gap: 1.6rem;
+      flex-grow: 0;
+      width: fit-content;
+      // margin-bottom: 1.6rem;
+      // margin-top: 1.6rem;
+
+      p {
+        font-weight: bold;
+        color: #111;
+        font-size: 1.6rem;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+
+        span {
+          font-weight: 400;
+        }
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--krds-gap-3);
+
+        .tag_gov {
+          display: inline;
+          height: 2.6rem;
+          font-size: 1.4rem;
+          background-color: #fff;
+          color: #111;
+          padding: 0.25rem 1rem;
+          border-radius: 1.4rem;
+          border-color: #fff;
+        }
+      }
+
+      .before_mark {
+        padding-left: 2.6rem;
+        &.medal_icon {
+          background-image: url(../../img/icon/icon_medal.svg);
+          background-size: 1.8rem 2.1rem;
+          background-repeat: no-repeat;
+          background-position: left center;
+        }
+        span {
+          margin-left: 0.8rem;
+        }
+      }
+      .b_box {
+        padding-left: 8px;
+      }
+    }
+  }
+  // }
+
+  .wrap_detail_info {
+    padding-right: 20%;
+    .detail_info_list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem 2.4rem;
+      max-width: 70rem;
+      // flex-direction: column;
+      .detail_info_list_item {
+        min-width: 24rem;
+        padding-right: 2.4rem;
+        font-size: 1.6rem;
+        .key {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .wrap_link_area {
+    display: flex;
+    gap: 2.4rem;
+
+    .link_area {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .link_label {
+        font-weight: bold;
+      }
+    }
+    @include size-medium {
+      gap: 1.6rem;
+
+      .krds-btn.medium {
+        width: 16.4rem;
+      }
+    }
+  }
+
+  .detail_organization {
+    display: flex;
+    gap: var(--krds-gap-6);
+    .key {
+      flex-shrink: 0;
+    }
+  }
+}
+
+@include size-medium-to-large {
+  // custom
+
+  .product_card {
+    .product_item_inner {
+      flex-direction: column;
+      .box_logo {
+        margin: auto;
+      }
+
+      .box_txt {
+        padding-left: 0;
+      }
+
+      .b_box {
+        width: max-content;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 100%;
+        padding: 1.6rem 1.2rem;
+      }
+    }
+
+    // .wrap_link_area {
+    //   // flex-wrap: wrap;
+    // }
+
+    .wrap_link_area .link_area {
+      width: 50%;
+      // justify-content: space-between;
+    }
+  }
+}
+
+@include size-medium {
+  .product_card {
+    .product_item {
+      padding: 4rem;
+      background-color: #fff;
+      border: 1px solid #b1b8be;
+      border-radius: 1.2rem;
+      display: flex;
+    }
+
+    .product_item_inner {
+      gap: 16px;
+
+      .box_logo {
+        width: 100%;
+        border-radius: 0.8rem;
+      }
+
+      .tags {
+        gap: 8px 8px;
+      }
+
+      .b_box {
+        width: 100%;
+        flex-direction: column;
+        align-items: normal;
+        padding: 12px;
+
+        .before_mark {
+          padding-left: 2.6rem;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: normal;
+          text-align: left;
+
+          &.medal_icon {
+            background-position: left top;
+          }
+          span {
+            width: 100%;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .wrap_detail_info {
+      padding-right: none;
+      .detail_info_list {
+        gap: 1.2rem 0;
+      }
+    }
+  }
+}
+
+/* 공공용 saas 상세 페이지 */
+.page_product_detail {
+  padding-left: var(--krds-pc-gap-layout-h2-h3);
+  padding-right: var(--krds-pc-gap-layout-h2-h3);
+
+  .txt-box {
+    padding: 4.8rem;
+
+    &.bg-white {
+      margin-top: var(--krds-gap-7);
+      gap: 8px;
+
+      h3.sec-tit {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #ededed;
+        margin-bottom: 0;
+      }
+    }
+    @include size-medium {
+      padding: 2.4rem;
+    }
+  }
+
+  // 하단에 줄이 그어져 있는 제목
+  .sec-tit.title_bottomLine {
+    display: inline-block;
+    // font-family: $font_bold;
+    font-size: 1.8rem;
+    line-height: 1;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2.4rem;
+    border-bottom: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.6rem;
+      width: 102%;
+      height: 1rem;
+      background-color: #bddff9;
+      z-index: -1;
+    }
+  }
+
+  .conts-wrap {
+    .krds-info-list + .krds-info-list {
+      margin-top: 24px;
+    }
+  }
+
+  // .conts-wrap .conts-wrap h3.sec-tit ~ .conts-wrap {
+  // }
+  @include size-medium {
+    padding: 0;
+  }
+}
+
+/*  통합검색 페이지*/
+
+/* 통합검색 컨텐츠*/
+// 카테고리별 간격
+// .total-search-list,
+.tab_conts_tit {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  @include size-medium {
+    margin-top: 3.2rem;
+    margin-bottom: 2.4rem;
+  }
+}
+.total-search-list + .tab_conts_tit {
+  margin-top: 8rem;
+  @include size-medium {
+    margin-top: 3.2rem;
+  }
+}
+
+//탭 리스트 제목
+.tab_conts_tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  padding-bottom: 24px;
+  // margin-bottom: 4rem;
+  border-bottom: 1px solid var(--krds-#{$mode-setting}-color-border-gray);
+
+  .tab_list_tit {
+    display: block;
+    align-items: flex-end;
+    font-weight: var(--krds-font-weight-bold);
+  }
+
+  a {
+    width: fit-content;
+    height: 3.2rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+  strong {
+    font-size: 1.8rem;
+
+    margin-left: 2rem;
+    .point {
+      color: #1953d5;
+    }
+  }
+}
+
+/* 통합검색 - 자료실 */
+.total-search-list.list_archive {
+  .total-search-item .info-body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/*  (전체 탭 예외) 더보기 버튼 숨김 처리 */
+#totalTabpanel02,
+#totalTabpanel03,
+#totalTabpanel04,
+#totalTabpanel05,
+#totalTabpanel06 {
+  &.tab-conts {
+    &.active {
+      .tab_conts_tit .krds-btn.text {
+        display: none;
+      }
+    }
+  }
+}
+
+/* 통합검색 - 검색어 없음 */
+.page_search {
+  .result_none {
+    margin: auto;
+    color: #464c53;
+    padding-top: 12rem;
+
+    h3 {
+      width: 100% !important;
+      font-weight: var(--krds-font-weight-bold);
+      line-height: 1.5;
+      font-size: 1.8rem;
+      color: #111;
+      text-align: center;
+      padding: 0 3.2rem 1.2rem;
+
+      .point {
+        color: #1953d5;
+      }
+    }
+
+    @include size-medium {
+      padding-top: 5.6rem;
+      padding-bottom: 2rem;
+      h3 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/*  통합검색 상단 검색 바*/
+.page_search {
+  .sch-form-wrap,
+  .sch-form-group,
+  .filter-chip {
+    max-width: 1030px;
+  }
+
+  .sch_form_bottom {
+    overflow: hidden;
+    max-height: 2000px; /* 열려 있는 기본 상태 */
+    opacity: 1;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease;
+  }
+
+  // 상세검색 버튼
+  .search-top-box {
+    .sch-form-group {
+      margin-top: 32px;
+      .krds-btn.text.medium {
+        color: #fff;
+
+        &:hover {
+          background: none;
+          color: #fff;
+        }
+      }
+    }
+
+    .sch-form-group .krds-btn.text:not(.icon) .svg-icon {
+      background-color: #fff;
+      margin-right: 4px;
+    }
+  }
+
+  /* 닫힌 상태 */
+  .sch_form_bottom.is-closed {
+    max-height: 0;
+    opacity: 0;
+  }
+
+  /* 열렸을 때 */
+  .is-open {
+    max-height: 1000px; /* 충분히 큰 값 */
+    opacity: 1;
+  }
+  .filter-chip {
+    background-color: transparent;
+    border-top: 1px solid #9ca4aa;
+    border-bottom: 1px solid #9ca4aa;
+    padding-bottom: 2.4rem;
+    gap: 3.8rem;
+  }
+
+  .search-top-box {
+    .sch-form-wrap {
+      width: 100%;
+      .input-group {
+        gap: 10px;
+        .sch-input {
+          flex: 1 1 auto;
+          // width: 100%;
+        }
+      }
+      .krds-btn.medium {
+        width: 114px;
+      }
+    }
+
+    .sch-filter-box {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // margin: auto;
+
+      .sch-form-group {
+        width: 100%;
+      }
+
+      .krds-btn.text:active, .krds-btn.text:focus {
+          background-color: #0F174D;
+      }
+    }
+  }
+
+  /* 상세 검색 적용 버튼 */
+  .comp-btn-wrap {
+    @include flex-layout($jc: center);
+    gap: var(--krds-gap-5);
+    margin-top: 20px;
+    margin-bottom: 0;
+    .krds-btn.medium {
+      width: 129px;
+    }
+  }
+
+  /* 통합검색 - 게시물 뱃지 */
+  .total-search-item .krds-badge {
+    &.bg-light-primary {
+      height: 2.4rem;
+      line-height: 2.4rem;
+      border-radius: 4px;
+      background-color: #f5f6ff;
+      color: var(--krds-badge--color-primary-text);
+    }
+  }
+
+  @include size-medium {
+    .sch-form-wrap,
+    .sch-form-group,
+    .filter-chip {
+      max-width: 100%;
+    }
+
+    .search-top-box .sch-form-wrap .krds-btn.medium {
+          width: 7.8rem;
+    }
+
+    // /* 상세검색 버튼 */
+    .search-top-box {
+      .sch-form-group {
+        margin-top: 9.5px;
+      }
+    }
+
+    .sch_form_bottom {
+      overflow: visible;
+      width: 100%;
+    }
+    .filter-chip {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      padding-top: 1.6rem;
+      padding-bottom: 1.6rem;
+      margin-top: 18px;
+      // gap: 2.4rem;
+    }
+    .filter_wrap {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .krds-check-area {
+      gap: 8px;
+      flex-wrap: wrap;
+
+      .krds-form-chip {
+        display: flex;
+        width: auto;
+        flex: 1 1 0;
+
+        width: auto !important;
+        flex: 0 0 auto !important;
+        min-width: 0 !important;
+
+        label {
+          flex: 0 0 auto;
+          // flex-grow: 1;
+        }
+      }
+      .krds-form-chip input[type="radio"] ~ label,
+      .krds-form-chip input[type="checkbox"] ~ label {
+        height: 40px;
+        min-width: 0;
+        width: auto;
+        padding: 0 4px;
+        gap: 0;
+      }
+    }
+
+    // /* 상단 라벨 */
+    .filter_label {
+      margin-bottom: 0;
+      width: 100%;
+      // flex-shrink: 0;
+    }
+
+    // /* 핵심 flex 라인 */
+    .filter_row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      // display: flex;
+      // width: 100%;
+    }
+
+    .filter_radio {
+      flex-direction: column;
+      align-items: flex-start;
+      // justify-content: center;
+      flex: 0 0 16px; // 늘어나지도 줄어들지도 않음
+      width: unset; // 고정 너비
+    }
+
+    /* 3번 검색 영역 */
+    .filter_search {
+      min-width: unset;
+      width: 100%;
+    }
+
+    .wrap_filter_search {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 0;
+      gap: 16px;
+      width: 100%;
+      // flex: 1 1 auto; // 남은 영역 전부 차지
+    }
+    .sch-form-wrap {
+      flex-direction: row;
+      align-items: center;
+      gap: 4px;
+
+      width: auto;
+      min-width: 0;
+      flex: 1 1 auto;
+      // flex-wrap: wrap;
+
+      .form-group {
+        width: auto;
+        min-width: 0;
+        flex: 1 1 auto;
+      }
+      .form-conts {
+        width: auto;
+      }
+    }
+
+    .search-top-box .krds-btn.tertiary {
+      background-color: #f5f6ff;
+    }
+
+    .search-top-box {
+      .sch-form-wrap {
+        // width: 100%;
+        .input-group {
+          flex-direction: row;
+
+          .sch-input {
+            flex: 1 1 auto;
+            // width: 100%;
+          }
+        }
+      }
+
+      .sch-filter-box {
+        padding: 2rem;
+      }
+    }
+
+    /* 상세 검색 적용 버튼 */
+    .comp-btn-wrap {
+      flex-direction: row;
+      gap: 8px;
+      margin-top: 24px;
+      .krds-btn.medium {
+        width: 14rem;
+      }
+    }
+
+    /* 통합검색 - 게시물 뱃지 */
+    .total-search-item .krds-badge {
+      &.bg-light-primary {
+        height: 2.4rem;
+        line-height: 2.4rem;
+        border-radius: 4px;
+        background-color: #f5f6ff;
+        color: var(--krds-badge--color-primary-text);
+      }
+    }
+  }
+}

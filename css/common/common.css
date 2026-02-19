@@ -1050,7 +1050,6 @@ html {
 body {
   background-color: var(--krds-light-color-background-white);
   font-size: var(--krds-pc-font-size-body-medium);
-  overflow: hidden;
 }
 
 [data-krds-mode=high-contrast] html, [data-krds-mode=high-contrast] body {

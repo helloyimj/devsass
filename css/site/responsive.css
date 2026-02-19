@@ -51,7 +51,6 @@
     position: fixed;
     right: 1.4rem;
     bottom: 3rem;
-    z-index: 100;
   }
   .wrap_side_btn a {
     position: relative;

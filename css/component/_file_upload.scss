@@ -158,6 +158,7 @@ $mode-setting: light;
                     @include size-medium {
                         flex-direction: column;
                         gap: var(--krds-gap-3);
+                        align-items: flex-start;
                         .btn-wrap {
                             gap: var(--krds-gap-5);
                             justify-content: flex-end;

@@ -1,14 +1,7 @@
-
-
-
-
 /**
 연계한 민간 saas 카드에 적용된 툴팁 작동 코드 
 (KRDS 외에 추가 적용 필요)
 **/
-
-
-
 
 (() => {
   if (window.__customTooltipInit) return;

@@ -111,6 +111,7 @@
         background-color: #0F174D;
 	} @else {
 		border-color: var(--krds-badge--#{$mode}-color-#{$color}-element);
+		// background-color: #333C98;
 	}
 }
 
@@ -122,6 +123,7 @@
 //badge color background 
 @mixin color-background($color) {
     background-color: var(--krds-badge--color-#{$color}-element);
+
 }
 
 //badge color background light
@@ -148,6 +150,9 @@ $mode-setting: light;
         font-weight: var(--krds-font-weight-regular);
         padding: 0 var(--krds-badge--padding);
         border-radius: var(--krds-badge--radius-max);
+        // border-color: #333C98;
+        background-color: #333C98;
+        color: #fff;
 
         @include size-medium {
             font-size: var(--krds-badge--mobile-font-size);
@@ -164,6 +169,7 @@ $mode-setting: light;
     &.number {
         height: var(--krds-badge--number-size-height);
         border-radius: var(--krds-badge--radius-max);
+        background-color: #0F174D;
     }  
     &.dot {
         @include square(var(--krds-badge--dot-size));

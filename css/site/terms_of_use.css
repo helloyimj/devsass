@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* 포털 이용약관 */
+.terms_of_use .terms_sub_tit {
+  position: relative;
+  margin-bottom: var(--krds-gap-9);
+  font-size: var(--krds-pc-font-size-heading-large);
+  font-weight: var(--krds-font-weight-bold);
+  text-align: center;
+}
+.terms_of_use .wrap_article {
+  margin-bottom: var(--krds-pc-gap-layout-h2-h2);
+}
+.terms_of_use .article01 {
+  margin-bottom: 16rem;
+}
+.terms_of_use .article01 .sub_tit {
+  margin-bottom: var(--krds-pc-gap-layout-title-body-large);
+  font-size: var(--krds-pc-font-size-heading-large);
+  font-weight: var(--krds-font-weight-bold);
+  text-align: center;
+}
+.terms_of_use .article01 .wrap_terms_list .index_list {
+  display: grid;
+  width: 100%;
+  gap: var(--krds-gap-8) var(--krds-gap-6);
+  padding: var(--krds-padding-10);
+  border-radius: var(--krds-radius-xlarge2);
+  background: #e3e9f5;
+  grid-template-columns: 1fr 1fr;
+}
+.terms_of_use .article01 .wrap_terms_list .index_list .labeling-card {
+  display: flex;
+  padding-left: var(--krds-padding-3);
+}
+.terms_of_use .article01 .wrap_terms_list .index_list .labeling-card a {
+  position: relative;
+  padding-left: var(--krds-padding-6);
+  line-height: 1.5;
+  font-size: var(--krds-pc-font-size-body-large);
+  font-weight: var(--krds-font-weight-bold);
+}
+.terms_of_use .article01 .wrap_terms_list .index_list .labeling-card a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0.4rem;
+  display: block;
+  width: 2.4rem;
+  height: 2.6rem;
+  background: url("../../img/icon/icon_chevron_right_blue.svg") no-repeat center;
+  transform: translateX(-50%);
+}
+.terms_of_use .article01 .wrap_terms_list .index_list .labeling-card a .num {
+  position: relative;
+  padding-left: 0;
+}
+.terms_of_use .article01 .wrap_terms_list .index_list .labeling-card a .title {
+  display: block;
+  padding-left: 0.6rem;
+}
+.terms_of_use .terms_detail {
+  margin-bottom: var(--krds-gap-10);
+}
+.terms_of_use .terms_detail .terms_detail_tit {
+  position: relative;
+  margin-bottom: var(--krds-pc-gap-layout-title-body-large);
+  padding-left: var(--krds-padding-8);
+  font-size: var(--krds-pc-font-size-heading-medium);
+  font-weight: var(--krds-font-weight-bold);
+}
+.terms_of_use .terms_detail .terms_detail_tit::before {
+  content: "";
+  position: absolute;
+  top: 0.4rem;
+  left: 0;
+  display: block;
+  width: 2.2rem;
+  height: 2.4rem;
+  margin-bottom: var(--krds-pc-gap-layout-h2-h2);
+  background: url("../../img/icon/icon_chevron_right_blue.svg") no-repeat left center;
+  background-size: 1.4rem 2rem;
+}
+.terms_of_use .terms_detail .detail_txt {
+  margin-bottom: var(--krds-gap-5);
+  padding-left: var(--krds-padding-7);
+  font-size: var(--krds-pc-font-size-body-large);
+}
+.terms_of_use .terms_detail .krds-info-list {
+  color: var(--krds-light-color-text-subtle);
+  padding-left: var(--krds-padding-8);
+}
+.terms_of_use .terms_detail .krds-info-list > li .num {
+  padding-left: var(--krds-padding-3);
+}
+.terms_of_use .terms_detail .krds-info-list > li > ol {
+  padding-left: 0;
+}
+.terms_of_use .terms_detail .krds-info-list > li > ol .num {
+  padding-left: 0;
+}
+
+@media (max-width: 1023px) {
+  .terms_of_use .article01 .wrap_terms_list .krds-info-list {
+    gap: var(--krds-gap-8) var(--krds-gap-4);
+  }
+}
+@media (max-width: 767px) {
+  .terms_of_use .terms_sub_tit {
+    font-size: var(--krds-mobile-font-size-heading-large);
+  }
+  .terms_of_use .wrap_article {
+    margin-bottom: var(--krds-mobile-gap-layout-h2-h2);
+  }
+  .terms_of_use .article01 .sub_tit {
+    margin-bottom: var(--krds-mobile-gap-layout-title-body-medium);
+    font-size: var(--krds-mobile-font-size-heading-medium);
+  }
+  .terms_of_use .article01 .wrap_terms_list .index_list {
+    gap: var(--krds-gap-7) var(--krds-gap-4);
+    padding: var(--krds-padding-7) var(--krds-padding-6);
+    grid-template-columns: 1fr;
+  }
+  .terms_of_use .article01 .wrap_terms_list .index_list li a::before {
+    top: 0.3rem;
+    width: 1.1rem;
+    height: 2.1rem;
+    background-size: contain;
+  }
+  .terms_of_use .terms_detail .terms_detail_tit {
+    font-size: var(--krds-mobile-font-size-heading-medium);
+  }
+  .terms_of_use .terms_detail .detail_txt {
+    margin-bottom: var(--krds-gap-5);
+    padding-left: var(--krds-padding-7);
+    font-size: var(--krds-mobile-font-size-body-medium);
+  }
+}
+/* 포털 이용약관 end */

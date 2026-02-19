@@ -1,13 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="9" height="14" viewBox="0 0 9 14">
-  <defs>
-    <style>
-      .cls-1 {
-        font-size: 17px;
-        fill: #333c98;
-        font-family: SUIT;
-        font-weight: 500;
-      }
-    </style>
-  </defs>
-  <text id="_" data-name="&lt;" class="cls-1" transform="matrix(-1, 0, 0, 1, 10.211, 12.52)">&lt;</text>
+<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_11141_78428)">
+<path d="M8.3131 6.65685L2.65625 12.3137L1.94914 11.6066L6.89889 6.65685L1.94914 1.70711L2.65625 1L8.3131 6.65685Z" fill="#333C98"/>
+</g>
+<defs>
+<clipPath id="clip0_11141_78428">
+<rect width="9" height="14" fill="white"/>
+</clipPath>
+</defs>
 </svg>

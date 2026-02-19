@@ -19,21 +19,21 @@
 }
 //컬러 정의
 @mixin tab-color-variable($mode: light) {
-	--krds-tab--button-color-action: var(--krds-#{$mode}-color-action-secondary);
-	--krds-tab--button-color-action-hover: var(--krds-#{$mode}-color-action-secondary-hover);
-	--krds-tab--button-color-action-pressed: var(--krds-#{$mode}-color-action-secondary-pressed);
-	--krds-tab--button-color-border: var(--krds-#{$mode}-color-action-secondary);
+	--krds-tab--button-color-action: var(--krds-#{$mode}-color-action-primary);
+	--krds-tab--button-color-action-hover: var(--krds-#{$mode}-color-action-primary-hover);
+	--krds-tab--button-color-action-pressed: var(--krds-#{$mode}-color-action-primary-pressed);
+	--krds-tab--button-color-border: var(--krds-#{$mode}-color-action-primary);
 	--krds-tab--button-color-text: var(--krds-#{$mode}-color-text-subtle);
 	--krds-tab--button-color-text-disabled: var(--krds-#{$mode}-color-text-disabled);
-	--krds-tab--fill-button-color-action-active: var(--krds-#{$mode}-color-action-secondary-active);
+	--krds-tab--fill-button-color-action-active: var(--krds-#{$mode}-color-action-primary-active);
 	--krds-tab--fill-button-color-border: var(--krds-#{$mode}-color-border-gray);
-	--krds-tab--fill-button-color-border-active: var(--krds-#{$mode}-color-action-secondary-active);
+	--krds-tab--fill-button-color-border-active: var(--krds-#{$mode}-color-action-primary-active);
 	--krds-tab--fill-button-color-text: var(--krds-#{$mode}-color-text-inverse-static);
 	--krds-tab--line-button-color-border: var(--krds-#{$mode}-color-border-gray);
-	--krds-tab--line-button-color-line-active: var(--krds-#{$mode}-color-action-secondary-active);
-	--krds-tab--line-button-color-text-active: var(--krds-#{$mode}-color-text-secondary);
+	--krds-tab--line-button-color-line-active: var(--krds-#{$mode}-color-action-primary-active);
+	--krds-tab--line-button-color-text-active: var(--krds-#{$mode}-color-text-primary);
 	--krds-tab--mobile-button-trigger-color-text: var(--krds-#{$mode}-color-text-inverse-static);
-	--krds-tab--mobile-button-trigger-color-action: var(--krds-#{$mode}-color-action-secondary-active);
+	--krds-tab--mobile-button-trigger-color-action: var(--krds-#{$mode}-color-action-primary-active);
 }
 
 //모드 설정
@@ -209,9 +209,9 @@ $mode-setting: light;
 //mobile only
 @include size-medium {
 	.tab-conts {
-		&.active {
-			gap: var(--krds-padding-8);
-		}
+		// &.active {
+		// 	gap: var(--krds-padding-8);
+		// }
 	}
 	.tab{
 		&.fill {

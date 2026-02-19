@@ -3,32 +3,27 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
     <title>모바일 공무원증&lt;서비스&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/output.css" />
+    <link rel="stylesheet" type="text/css" href="../css/output.css" />   
 
-    <!-- JS -->
+    <!-- script -->
     <script src="../js/jquery-3.6.3/jquery.min.js"></script>
     <script src="../js/plugin/swiper-bundle.min.js"></script>
     <script src="../js/aos.js"></script>
-    <script src="../js/nav.js"></script>
-    <script src="../js/app.js"></script>
-    <script src="../js/component/ui-script.js"></script>
-    <script src="../js/service_card.js" defer></script>
-    <script src="../js/custom-krdsContextualHelp.js" defer></script>
+    <script defer src="../js/component/ui-script.js"></script>
+    <script defer src="../js/pattern/pattern.js"></script>
+    <script defer src="../js/nav.js"></script>
+    <script defer src="../js/app.js"></script>
+    <script defer src="../js/service_card.js"></script>    
+    <script defer src="../js/custom-krdsContextualHelp.js"></script>
 
 </head>
 
 <body>
     <div id="wrapper" class="sub_pages">
-        <!-- 바로가기 메뉴 -->
-        <nav id="skip"></nav>
-
-        <!-- 헤더 -->
-        <header id="header" class="header"></header>
 
         <!-- 메인  -->
         <main class="">
@@ -40,25 +35,21 @@
                 <article class="page">
                     <!-- 브레드크럼 -->
                     <div class="wrap_breadcrumb">
-                        <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
-                            <ol class="breadcrumb breadcrumbs">
-                                <li class="home"><a href="#" target="_self" class="txt" title="메인 페이지로 이동">홈</a></li>
-                                <li><a href="#" target="_self" class="txt" title="모바일 공무원증으로 이동">서비스</a></li>
-                            </ol>
-                        </nav>
+                      <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
+                      	<ol class="breadcrumb breadcrumbs">
+                      		<li class="home"><a href="main.html" target="_self" class="txt" title="메인 페이지로 이동">홈</a></li>
+                      		<li><a href="서비스_모바일 공무원증.html" target="_self" class="txt" title="서비스로 페이지 이동">서비스</a></li>
+                      	</ol>
+                      </nav>
+                    </div>                    
+                    <!-- 페이지 타이틀 영역 -->
+                    <div class="page-title-wrap">
+                        <h1 class="h-tit">모바일 공무원증</h1>
+                        <h2 class="s-tit">민간 SaaS 연계공통기반에서 제공중인<br class="block_768"/> 전자정부공통서비스를 소개합니다.</h2>
                     </div>
-
+                    <!-- //페이지 타이틀 영역 -->
                     <div class="page_content">
-                        <div class="article_title">
-                            <article class="page_title_area">
-                                <h2 class="page_title">모바일 공무원증</h2>
-                                <h3 class="page_title_sub">민간 SaaS 연계공통기반에서 제공중인<br class="block_768" /> 전자정부공통서비스를
-                                    소개합니다.</h3>
-                            </article>
-                        </div>
-
                         <div class="article_content">
-
                             <div class="wrap_article article01" data-aos="fade-up">
                                 <article class="contents_wrap">
                                     <h3>디지털 시대엔 디지털 신분증, <br>
@@ -73,12 +64,9 @@
                                         <h4 class="title_leftCircle">모바일 공무원증이란?</h4>
                                     </div>
                                     <div class="deco_left">
-                                        <p>모바일 공무원증은 DID(Decentralized Identifie) 기술이 적용된 자기주권 신원증명(Self Sovereign
-                                            Identity)의 모바일 신분증입니다.<br class="none_1025">
-                                            자기주권 신원증명이란 현재 보편적으로 이용되고 있는 중앙집중식 신원증명과 대조되는 개념으로 신원정보의 소유 및 이용권한을 신원주체인
-                                            개인이 갖게 되는 것을 말합니다.<br>
-                                            또한 모바일 신분증 소유자는 자신의 신분증을 스마트폰에 발급받아 보관하면서 신원확인 요청이 있을 때마다 본인의 판단에 따라 제공 여부를
-                                            결정하는데, <br class="none_1025">
+                                        <p>모바일 공무원증은 DID(Decentralized Identifie) 기술이 적용된 자기주권 신원증명(Self Sovereign Identity)의 모바일 신분증입니다.<br class="none_1025">
+                                            자기주권 신원증명이란 현재 보편적으로 이용되고 있는 중앙집중식 신원증명과 대조되는 개념으로 신원정보의 소유 및 이용권한을 신원주체인 개인이 갖게 되는 것을 말합니다.<br>
+                                            또한 모바일 신분증 소유자는 자신의 신분증을 스마트폰에 발급받아 보관하면서 신원확인 요청이 있을 때마다 본인의 판단에 따라 제공 여부를 결정하는데, <br class="none_1025">
                                             신분증 사용 이력은 본인만 확인할 수 있도록 개인 스마트폰에 저장되며 중앙서버에는 저장되지 않습니다.
                                         </p>
                                     </div>
@@ -95,36 +83,31 @@
                                             <div class="wrap_items">
                                                 <div class="box_line_gray" data-aos="fade-right" data-aos-delay="100">
                                                     <div class="wrap_icon">
-                                                        <img src="../img/saas_img/3_govSaaS/1_id/sec03_icon01.svg"
-                                                            alt="">
+                                                        <img src="../img/saas_img/3_govSaaS/1_id/sec03_icon01.svg" alt="">
                                                     </div>
                                                     <p>신원 증명</p>
                                                 </div>
                                                 <div class="box_line_gray" data-aos="fade-right" data-aos-delay="200">
                                                     <div class="wrap_icon">
-                                                        <img src="../img/saas_img/3_govSaaS/1_id/sec03_icon02.svg"
-                                                            alt="">
+                                                        <img src="../img/saas_img/3_govSaaS/1_id/sec03_icon02.svg" alt="">
                                                     </div>
                                                     <p>증명서 발급</p>
                                                 </div>
                                                 <div class="box_line_gray" data-aos="fade-right" data-aos-delay="300">
                                                     <div class="wrap_icon">
-                                                        <img src="../img/saas_img/3_govSaaS/1_id/sec03_icon03.svg"
-                                                            alt="">
+                                                        <img src="../img/saas_img/3_govSaaS/1_id/sec03_icon03.svg" alt="">
                                                     </div>
                                                     <p>시스템 로그인</p>
                                                 </div>
                                                 <div class="box_line_gray" data-aos="fade-right" data-aos-delay="400">
                                                     <div class="wrap_icon">
-                                                        <img src="../img/saas_img/3_govSaaS/1_id/sec03_icon04.svg"
-                                                            alt="">
+                                                        <img src="../img/saas_img/3_govSaaS/1_id/sec03_icon04.svg" alt="">
                                                     </div>
                                                     <p>청사 출입</p>
                                                 </div>
                                                 <div class="box_line_gray" data-aos="fade-right" data-aos-delay="500">
                                                     <div class="wrap_icon">
-                                                        <img src="../img/saas_img/3_govSaaS/1_id/sec03_icon05.svg"
-                                                            alt="">
+                                                        <img src="../img/saas_img/3_govSaaS/1_id/sec03_icon05.svg" alt="">
                                                     </div>
                                                     <p>도서 대출</p>
                                                 </div>
@@ -143,8 +126,7 @@
                                     <div class="box_shadow">
                                         <div class="wrap_contents">
                                             <div class="wrap_img">
-                                                <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_id.png" class="only_pc"
-                                                    alt="모바일 공무원증이 제공하는 신원인증 서비스 종류
+                                                <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_id.png" class="only_pc" alt="모바일 공무원증이 제공하는 신원인증 서비스 종류
 																						사용자 액션 
 																						1. APP 로그인 : 공직자 통합메일 App 공무원 연금공단 App 
 																						2. NFC(Android) : 청사(세종, 서울, 대전, 과천 청사) *아이폰 BLE 기반 스마트워크센터 출입 
@@ -159,8 +141,7 @@
 																						">
                                             </div>
                                             <div class="wrap_img">
-                                                <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_id_mo.png"
-                                                    class="only_mob" alt="모바일 공무원증이 제공하는 신원인증 서비스 종류
+                                                <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_id_mo.png" class="only_mob" alt="모바일 공무원증이 제공하는 신원인증 서비스 종류
 																						사용자 액션 
 																						1. APP 로그인 : 공직자 통합메일 App 공무원 연금공단 App 
 																						2. NFC(Android) : 청사(세종, 서울, 대전, 과천 청사) *아이폰 BLE 기반 스마트워크센터 출입 
@@ -182,19 +163,14 @@
                             <div class="wrap_article article04" data-aos="fade-up">
                                 <article class="contents_wrap">
                                     <div class="wrap_title">
-                                        <h4 class="title_leftCircle">연계서비스란?</h4>
+                                        <h4 class="title_leftCircle">연계 API란?</h4>
                                     </div>
-                                    <p class="descript">모바일 공무원증은 신원을 증명하는 서비스로서, 업무시스템의 QR코드를 모바일로 스캔하여 <br
-                                            class="block_1024"> 없이도 쉽게 로그인 할 수 있는 서비스입니다.</p>
+                                    <p class="descript">모바일 공무원증은 신원을 증명하는 서비스로서, 업무시스템의 QR코드를 모바일로 스캔하여 <br class="block_1024"> 없이도 쉽게 로그인 할 수 있는 서비스입니다.</p>
                                     <div class="box_shadow">
                                         <div class="wrap_contents">
                                             <div class="wrap_img">
-                                                <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_login.png"
-                                                    class="only_pc"
-                                                    alt="모바일 공무원증 QR코드를 모바일로 스캔하여 인증서 없이도 쉽게 로그인 할 수 있는 이미지">
-                                                <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_login_mo.png"
-                                                    class="only_mob"
-                                                    alt="모바일 공무원증 QR코드를 모바일로 스캔하여 인증서 없이도 쉽게 로그인 할 수 있는 이미지">
+                                                <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_login.png" class="only_pc" alt="모바일 공무원증 QR코드를 모바일로 스캔하여 인증서 없이도 쉽게 로그인 할 수 있는 이미지">
+                                                <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_login_mo.png" class="only_mob" alt="모바일 공무원증 QR코드를 모바일로 스캔하여 인증서 없이도 쉽게 로그인 할 수 있는 이미지">
                                             </div>
                                         </div>
                                     </div>
@@ -203,7 +179,7 @@
 
                             <div class="wrap_article article05" data-aos="fade-up">
                                 <article class="contents_wrap">
-                                    <div class="wrap_title">
+                                    <div class="wrap_title"> 
                                         <h4 class="title_leftCircle">연계방식</h4>
                                     </div>
                                     <div class="box_shadow">
@@ -225,20 +201,18 @@
                                             </div>
                                             <div class="box_line_gray" data-aos="fade" data-aos-delay="300">
                                                 <div class="wrap_img">
-                                                    <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_il01.png"
-                                                        class="only_pc" alt="이어서 대체 텍스트 제공">
-                                                    <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_il01_mo.png"
-                                                        class="only_mob" alt="이어서 대체 텍스트 제공">
+                                                    <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_il01.png" class="only_pc" alt="이어서 대체 텍스트 제공">
+                                                    <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_il01_mo.png" class="only_mob" alt="이어서 대체 텍스트 제공">
                                                     <span class="sr-only">
-                                                        QR-MPM 방식으로 모바일 공무원증 연계시의 작동을 설명하는 도식입니다.
-                                                        1. PC 브라우저가 연계 API에 QR 로그인 요청을 합니다.
-                                                        2. 연계 API는 브라우저에 QR 로그인 데이터 응답을 합니다.
-                                                        3. 브라우저가 QR을 표시합니다.
-                                                        4. 사용자가 모바일 기기로 QR을 촬영합니다.
-                                                        5. VP을 생성하여 연계 SaaS에 전달합니다.
-                                                        6. 연계 API가 블록체인 서버에 VP 검증 요청을 합니다.
-                                                        7. 블록체인 서버가 연계 API에 VP 검증 응답을 합니다.
-                                                        8. 로그인이 됩니다.
+                                                      QR-MPM 방식으로 모바일 공무원증 연계시의 작동을 설명하는 도식입니다.
+																							        1. PC 브라우저가 연계 API에 QR 로그인 요청을 합니다.
+																							        2. 연계 API는 브라우저에 QR 로그인 데이터 응답을 합니다.
+																							        3. 브라우저가 QR을 표시합니다.
+																							        4. 사용자가 모바일 기기로 QR을 촬영합니다.
+																							        5. VP을 생성하여 연계 SaaS에 전달합니다.
+																							        6. 연계 API가 블록체인 서버에 VP 검증 요청을 합니다.
+																							        7. 블록체인 서버가 연계 API에 VP 검증 응답을 합니다.
+																							        8. 로그인이 됩니다.
                                                     </span>
                                                 </div>
                                             </div>
@@ -261,22 +235,20 @@
                                             </div>
                                             <div class="box_line_gray" data-aos="fade" data-aos-delay="300">
                                                 <div class="wrap_img">
-                                                    <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_il02.png"
-                                                        class="only_pc" alt="이어서 대체 텍스트 제공">
-                                                    <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_il02_mo.png"
-                                                        class="only_mob" alt="이어서 대체 텍스트 제공">
+                                                    <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_il02.png" class="only_pc" alt="이어서 대체 텍스트 제공">
+                                                    <img src="../img/saas_img/3_govSaaS/1_id/3_sec04_il02_mo.png" class="only_mob" alt="이어서 대체 텍스트 제공">
                                                     <span class="sr-only">
-                                                        PUSH 방식으로 모바일 공무원증 연계시의 작동을 설명하는 도식입니다.
-                                                        1. PC 브라우저가 연계 API에 PUSH 로그인 요청을 합니다.
-                                                        2. 연계 API는 모바일 공무원증 발급 관리 시스템에 사용자 앱 토큰을 요청합니다
-                                                        3. 연계 API이 모바일 공무원증 발급 관리 시스템으로부터 사용자 앱 토큰을 획득합니다.
-                                                        4. 획득한 사용자 앱 토큰으로 Firebase에 PUSH 발송을 요청합니다.
-                                                        5. Firebase가 사용자의 기기로 PUSH를 발송합니다.
-                                                        6. 사용자가 인증합니다.
-                                                        7. VP를 생성하여 연계 SaaS에 전달합니다.
-                                                        8. 연계 API가 블록체인 서버에 VP 검증 요청을 합니다.
-                                                        9. 블록체인 서버가 연계 API에 VP 검증 응답을 합니다.
-                                                        10. 로그인이 됩니다.
+                                                      PUSH 방식으로 모바일 공무원증 연계시의 작동을 설명하는 도식입니다.
+																							        1. PC 브라우저가 연계 API에 PUSH 로그인 요청을 합니다.
+																							        2. 연계 API는 모바일 공무원증 발급 관리 시스템에 사용자 앱 토큰을 요청합니다
+																							        3. 연계 API이 모바일 공무원증 발급 관리 시스템으로부터 사용자 앱 토큰을 획득합니다.
+																							        4. 획득한 사용자 앱 토큰으로 Firebase에 PUSH 발송을 요청합니다.
+																							        5. Firebase가 사용자의 기기로 PUSH를 발송합니다.
+																							        6. 사용자가 인증합니다.
+																							        7. VP를 생성하여 연계 SaaS에 전달합니다.
+																							        8. 연계 API가 블록체인 서버에 VP 검증 요청을 합니다.
+																							        9. 블록체인 서버가 연계 API에 VP 검증 응답을 합니다.
+																							        10. 로그인이 됩니다.
                                                     </span>
                                                 </div>
                                             </div>
@@ -296,31 +268,27 @@
                                             <div class="service_list swiper-wrapper krds-structured-list">
                                                 <div class="swiper-slide structured-item case_card card_kollabo"></div>
                                                 <div class="swiper-slide structured-item case_card card_dooray"></div>
-                                                <div class="swiper-slide structured-item case_card card_twinCloud">
-                                                </div>
+                                                <div class="swiper-slide structured-item case_card card_twinCloud"></div>
                                                 <div class="swiper-slide structured-item case_card card_niCloud"></div>
-                                                <div class="swiper-slide structured-item case_card card_egenTouch">
-                                                </div>
-                                                <div class="swiper-slide structured-item case_card card_videoHelpMe">
-                                                </div>
+                                                <div class="swiper-slide structured-item case_card card_egenTouch"></div>
+                                                <div class="swiper-slide structured-item case_card card_videoHelpMe"></div>
                                                 <div class="swiper-slide structured-item case_card card_nlobby"></div>
-                                                <div class="swiper-slide structured-item case_card card_naverworks">
-                                                </div>
+                                                <div class="swiper-slide structured-item case_card card_naverworks"></div>                                          
                                                 <div class="swiper-slide structured-item case_card card_sgate"></div>
                                             </div>
                                         </div>
                                         <!-- arrow  -->
                                         <div class="swiper-indicator">
-                                            <div class="swiper-pagination"></div>
-                                            <div class="swiper-navigation">
-                                                <button type="button" class="swiper-button-prev">
-                                                    <span class="sr-only">이전</span>
-                                                </button>
-                                                <button type="button" class="swiper-button-next">
-                                                    <span class="sr-only">다음</span>
-                                                </button>
-                                            </div>
-                                        </div>
+                                          <div class="swiper-pagination"></div>
+                                          <div class="swiper-navigation">
+                                            <button type="button" class="swiper-button-prev">
+                                              <span class="sr-only">이전</span>
+                                            </button>
+                                            <button type="button" class="swiper-button-next">
+                                              <span class="sr-only">다음</span>
+                                            </button>
+                                          </div>
+                                      </div>                                    
                                     </div>
                                 </article>
                             </div>
@@ -334,8 +302,7 @@
                                             더 자세한 정보를 열람하실 수 있습니다.
                                         </h4>
                                         <div>
-                                            <a href="https://www.id.go.kr/" target="_blank" title="모바일 공무원증 누리집 새창에서 열기"
-                                                class="openInNew">
+                                            <a href="https://www.id.go.kr/" target="_blank" title="모바일 공무원증 누리집 새창에서 열기" class="openInNew">
                                                 <span class="wrap_icon home"></span>
                                                 <span class="label">누리집</span>
                                                 <span class="address">id.go.kr</span>
@@ -355,14 +322,12 @@
         </main>
         <!-- 전체 영역 end  -->
 
-        <footer id="footer" class="footer"></footer>
-
     </div>
 
     <script>
         AOS.init();
 
-        $(document).ready(function () {
+        $(document).ready(function() {
             // 연계공통 기반으로 개발 된 민간 SasS 소개
             var swiper = new Swiper(".wrap_article .swiper", {
                 roundLengths: 'false',
@@ -371,7 +336,7 @@
                 spaceBetween: 16,
                 mousewheel: {
                     invert: true,
-                },
+                },        
                 autoHeight: true,
                 slidesOffAfter: 120,
                 keyboard: {
@@ -383,7 +348,7 @@
                 },
                 pagination: {
                     el: ".swiper-pagination",
-                    type: "fraction",
+                    type: "fraction",                
                 },
                 // Enable ARIA support
                 a11y: {

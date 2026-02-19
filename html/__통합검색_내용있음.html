@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <title>통합검색&lt;민간 Sass 연계공통기반 통합관리포털</title>
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../css/output.css" />
+
+  <!-- script -->
+  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+  <script src="../js/plugin/swiper-bundle.min.js"></script>
+  <script src="../js/aos.js"></script>
+  <script defer src="../js/component/ui-script.js"></script>
+  <script defer src="../js/pattern/pattern.js"></script>
+  <script defer src="../js/nav.js"></script>
+  <script defer src="../js/app.js"></script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <!-- 컨테이너 영역 -->
+    <div id="container">
+      <!-- breadcrumb -->
+      <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
+        <ol class="breadcrumb">
+          <li class="home"><a href="#;" class="txt">홈</a></li>
+        </ol>
+      </nav>
+      <!-- //breadcrumb -->
+
+      <!-- 컨텐츠 영역 -->
+      <div class="inner">
+        <!-- 페이지 타이틀 영역 -->
+        <div class="page-title-wrap">
+          <h1 class="h-tit">통합검색</h1>
+        </div>
+        <!-- //페이지 타이틀 영역 -->
+
+        <div class="page_content page_search">
+          <!-- 검색 입력폼 -->
+          <div class="search-top-box">
+            <div class="sch-filter-box">
+              <div class="sch-form-wrap flex_inline">
+                <div class="input-group">
+                  <div class="sch-input">
+                    <input type="text" class="krds-input medium" placeholder="검색어를 입력해주세요" title="검색어 입력" />
+                  </div>
+                  <button type="button" class="krds-btn medium primary"><i class="svg-icon ico-sch"></i>검색</button>
+                </div>
+              </div>
+
+              <div class="sch-form-group">
+                <button type="button" class="krds-btn medium text btn_search_detail"><i class="svg-icon ico-sch-plus"></i>상세검색</button>
+              </div>
+
+              <div class="filter-chip">
+                <div class="filter_wrap">
+                  <div class="filter_label">
+                    <label for="filter_label">결과 내 재검색</label>
+                  </div>
+
+                  <div class="filter_row">
+                    <div class="krds-form-check filter_radio">
+                      <input type="radio" name="filter_radio" id="rdo_1" checked />
+                      <label class="label" for="rdo_1">검색어 포함</label>
+                    </div>
+                    <div class="wrap_filter_search">
+                      <div class="krds-form-check filter_radio">
+                        <input type="radio" name="filter_radio" id="rdo_2" />
+                        <label for="rdo_2">검색어 제외</label>
+                      </div>
+                      <div class="filter_search">
+                        <label for="filter_search_input">검색어</label>
+                        <input class="krds-input medium" type="text" id="filter_search_input" placeholder="검색어를 입력해주세요" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter_wrap">
+                  <div class="filter_label">
+                    <label for="filter_label">검색기간</label>
+                  </div>
+                  <div class="flex_column">
+                    <div class="filter_wrap">
+                      <div class="filter_row" data-checkbox-group>
+                        <!-- checkbox -->
+                        <div class="krds-check-area">
+                          <div class="krds-form-chip">
+                            <input type="checkbox" class="checkbox" id="sch_filter_chk_all" checked data-check-all />
+                            <label class="krds-form-chip-outline" for="sch_filter_chk_all">전체</label>
+                          </div>
+                          <div class="krds-form-chip">
+                            <input type="checkbox" class="checkbox" id="chk_chip_1" />
+                            <label class="krds-form-chip-outline" for="chk_chip_1">1개월</label>
+                          </div>
+                          <div class="krds-form-chip">
+                            <input type="checkbox" class="checkbox" id="chk_chip_2" />
+                            <label class="krds-form-chip-outline" for="chk_chip_2">3개월</label>
+                          </div>
+                          <div class="krds-form-chip">
+                            <input type="checkbox" class="checkbox" id="chk_chip_3" />
+                            <label class="krds-form-chip-outline" for="chk_chip_3">6개월</label>
+                          </div>
+                          <div class="krds-form-chip">
+                            <input type="checkbox" class="checkbox" id="chk_chip_4" />
+                            <label class="krds-form-chip-outline" for="chk_chip_4">1년</label>
+                          </div>
+                        </div>
+                        <!-- //checkbox -->
+                      </div>
+                    </div>
+
+                    <script>
+                      document.querySelectorAll("[data-checkbox-group]").forEach((group) => {
+                        const checkAll = group.querySelector("[data-check-all]");
+                        const items = group.querySelectorAll("[data-check-item]");
+
+                        // 전체 클릭 시 → 나머지 전체 체크/해제
+                        checkAll.addEventListener("change", () => {
+                          items.forEach((item) => {
+                            item.checked = checkAll.checked;
+                          });
+                        });
+
+                        // 개별 체크 변경 시
+                        items.forEach((item) => {
+                          item.addEventListener("change", () => {
+                            const allChecked = [...items].every((i) => i.checked);
+                            const anyChecked = [...items].some((i) => i.checked);
+
+                            checkAll.checked = allChecked;
+                            checkAll.indeterminate = !allChecked && anyChecked;
+                          });
+                        });
+                      });
+                    </script>
+
+                    <div class="sch-form-wrap flex_inline">
+                      <div class="form-group">
+                        <div class="form-tit">
+                          <label for="addr-input-etc">시작날짜</label>
+                        </div>
+                        <div class="form-conts">
+                          <input type="date" class="krds-input medium" placeholder="검색어를 입력해주세요" title="검색어 입력" />
+                        </div>
+                      </div>                        
+                      <div class="">
+                            <div>
+                            <label></label>
+                            </div>
+                            <div class="">
+                                <span class="mark sm">/</span>
+                            </div>
+                        </div>
+                      <div class="form-group">
+                        <div class="form-tit">
+                          <label for="addr-input-etc">종료날짜</label>
+                        </div>
+                        <div class="form-conts">
+                          <input type="date" class="krds-input medium" placeholder="검색어를 입력해주세요" title="검색어 입력" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 버튼 -->
+              <div class="comp-btn-wrap center">
+                <button type="button" class="krds-btn xlarge tertiary">
+                  <i class="svg-icon ico-refresh"></i>
+                  초기화
+                </button>
+                <button type="button" class="krds-btn xlarge primary">상세 검색 적용</button>
+              </div>
+              <!-- //버튼 -->
+            </div>
+          </div>
+          <!-- //검색 입력폼 -->
+
+          <!-- 검색 결과 -->
+          <div class="krds-tab-area layer">
+            <!-- tab list -->
+            <div class="tab fill full">
+              <ul role="tablist">
+                <li id="totalTab01" aria-selected="true" aria-controls="totalTabpanel01" class="active">
+                  <button type="button" class="btn-tab">전체(45건)</button>
+                </li>
+                <li id="totalTab02" aria-selected="false" aria-controls="totalTabpanel02" disabled>
+                  <button type="button" class="btn-tab">민간 SaaS(0건)</button>
+                </li>
+                <li id="totalTab03" aria-selected="false" aria-controls="totalTabpanel03" disabled>
+                  <button type="button" class="btn-tab">공지사항 (0건)</button>
+                </li>
+                <li id="totalTab04" aria-selected="false" aria-controls="totalTabpanel04" disabled>
+                  <button type="button" class="btn-tab">자료실 (0건)</button>
+                </li>
+                <li id="totalTab05" aria-selected="false" aria-controls="totalTabpanel05" disabled>
+                  <button type="button" class="btn-tab">자주 묻는 질문(0건)</button>
+                </li>
+              </ul>
+            </div>
+            <!-- //tab list -->
+
+            <!-- tab contents -->
+            <div class="tab-conts-wrap">
+              <section id="totalTabpanel01" role="tabpanel" aria-labelledby="totalTab01" class="tab-conts active">
+                <h3 class="sr-only">전체</h3>
+
+                <!-- 리스트 상단 -->
+                <div class="search-list-top border">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>적용된 검색어‘<span class="point">협업</span>’</li>
+                    <li>검색 결과 <span class="point">0</span>건</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li class="m-hide">
+                      <strong class="sort-label"><label for="search_result_count1">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count1">
+                        <option>10개</option>
+                        <option>50개</option>
+                        <option>100개</option>
+                      </select>
+                    </li>
+                    <li class="w-hide">
+                      <div class="m-sort-btn">
+                        <button type="button" class="krds-btn large text ico-filter open-modal"
+                          data-target="popFilterId">
+                          <span class="span">필터</span>
+                          <span class="krds-badge bg-primary number">122</span>
+                          <i class="svg-icon ico-filter"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                      <div class="w-sort-btn">
+                        <button type="button" class="active">관련도순</button>
+                        <button type="button">최신순</button>
+                        <button type="button">인기순</button>
+                      </div>
+                      <div class="m-sort-btn">
+                        <select class="krds-form-select-sort" id="sort6">
+                          <option>관련도순</option>
+                          <option>최신순</option>
+                          <option>인기순</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //리스트 상단 -->
+
+                  <div class="result_none">
+                    <h3>검색어 ‘<span class="point">협업</span>’에 대한 검색 결과가 없습니다.<br></h3>
+                    <ul class="krds-info-list decimal" role="list">
+                      <li role="listitem">철자나 맞춤법 오류가 있는지 확인해 주세요.</li>
+                      <li role="listitem">여러 단위로 나누거나 다른 검색어로 검색해 주세요.</li>
+                      <li role="listitem">보다 일반적인 단어로 검색해 보세요.</li>
+                    </ul>
+                  </div>
+              </section>
+
+              <section id="totalTabpanel02" role="tabpanel" aria-labelledby="totalTab02" class="tab-conts">
+                <h3 class="sr-only">민간 SaaS</h3>
+
+                <!-- 리스트 상단 -->
+                <div class="search-list-top border">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>적용된 검색어‘<span class="point">협업</span>’</li>
+                    <li>검색 결과 <span class="point">0</span>건</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li class="m-hide">
+                      <strong class="sort-label"><label for="search_result_count2">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count2">
+                        <option>10개</option>
+                        <option>50개</option>
+                        <option>100개</option>
+                      </select>
+                    </li>
+                    <li class="w-hide">
+                      <div class="m-sort-btn">
+                        <button type="button" class="krds-btn large text ico-filter open-modal"
+                          data-target="popFilterId">
+                          <span class="span">필터</span>
+                          <span class="krds-badge bg-primary number">122</span>
+                          <i class="svg-icon ico-filter"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                      <div class="w-sort-btn">
+                        <button type="button" class="active">관련도순</button>
+                        <button type="button">최신순</button>
+                        <button type="button">인기순</button>
+                      </div>
+                      <div class="m-sort-btn">
+                        <select class="krds-form-select-sort" id="sort6">
+                          <option>관련도순</option>
+                          <option>최신순</option>
+                          <option>인기순</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //리스트 상단 -->
+              </section>
+
+              <section id="totalTabpanel03" role="tabpanel" aria-labelledby="totalTab03" class="tab-conts">
+                <h3 class="sr-only">공지사항</h3>
+                <!-- 리스트 상단 -->
+                <div class="search-list-top border">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>적용된 검색어‘<span class="point">협업</span>’</li>
+                    <li>검색 결과 <span class="point">25</span>건</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li class="m-hide">
+                      <strong class="sort-label"><label for="search_result_count3">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count3">
+                        <option>10개</option>
+                        <option>50개</option>
+                        <option>100개</option>
+                      </select>
+                    </li>
+                    <li class="w-hide">
+                      <div class="m-sort-btn">
+                        <button type="button" class="krds-btn large text ico-filter open-modal"
+                          data-target="popFilterId">
+                          <span class="span">필터</span>
+                          <span class="krds-badge bg-primary number">122</span>
+                          <i class="svg-icon ico-filter"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                      <div class="w-sort-btn">
+                        <button type="button" class="active">관련도순</button>
+                        <button type="button">최신순</button>
+                        <button type="button">인기순</button>
+                      </div>
+                      <div class="m-sort-btn">
+                        <select class="krds-form-select-sort" id="sort6">
+                          <option>관련도순</option>
+                          <option>최신순</option>
+                          <option>인기순</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //리스트 상단 -->
+                <!-- 탭 리스트 제목 -->
+                <!-- //탭리스트 제목 -->
+                <!-- 리스트 -->
+                 
+                <!-- //리스트 -->
+              </section>
+
+              <section id="totalTabpanel04" role="tabpanel" aria-labelledby="totalTab04" class="tab-conts">
+                <h3 class="sr-only">자료실</h3>
+                <!-- 리스트 상단 -->
+                <div class="search-list-top border">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>적용된 검색어‘<span class="point">협업</span>’</li>
+                    <li>검색 결과 <span class="point">7</span>건</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li class="m-hide">
+                      <strong class="sort-label"><label for="search_result_count4">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count4">
+                        <option>10개</option>
+                        <option>50개</option>
+                        <option>100개</option>
+                      </select>
+                    </li>
+                    <li class="w-hide">
+                      <div class="m-sort-btn">
+                        <button type="button" class="krds-btn large text ico-filter open-modal"
+                          data-target="popFilterId">
+                          <span class="span">필터</span>
+                          <span class="krds-badge bg-primary number">122</span>
+                          <i class="svg-icon ico-filter"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                      <div class="w-sort-btn">
+                        <button type="button" class="active">관련도순</button>
+                        <button type="button">최신순</button>
+                        <button type="button">인기순</button>
+                      </div>
+                      <div class="m-sort-btn">
+                        <select class="krds-form-select-sort" id="sort6">
+                          <option>관련도순</option>
+                          <option>최신순</option>
+                          <option>인기순</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //리스트 상단 -->
+              </section>
+
+              <section id="totalTabpanel05" role="tabpanel" aria-labelledby="totalTab05" class="tab-conts">
+                <h3 class="sr-only">자주 묻는 질문</h3>
+                <!-- 리스트 상단 -->
+                <div class="search-list-top border">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>적용된 검색어‘<span class="point">협업</span>’</li>
+                    <li>검색 결과 <span class="point">7</span>건</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li class="m-hide">
+                      <strong class="sort-label"><label for="search_result_count5">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count5">
+                        <option>10개</option>
+                        <option>50개</option>
+                        <option>100개</option>
+                      </select>
+                    </li>
+                    <li class="w-hide">
+                      <div class="m-sort-btn">
+                        <button type="button" class="krds-btn large text ico-filter open-modal"
+                          data-target="popFilterId">
+                          <span class="span">필터</span>
+                          <span class="krds-badge bg-primary number">122</span>
+                          <i class="svg-icon ico-filter"></i>
+                        </button>
+                      </div>
+                    </li>
+                    <li>
+                      <strong class="sort-label"><label for="sort1">정렬기준</label></strong>
+                      <div class="w-sort-btn">
+                        <button type="button" class="active">관련도순</button>
+                        <button type="button">최신순</button>
+                        <button type="button">인기순</button>
+                      </div>
+                      <div class="m-sort-btn">
+                        <select class="krds-form-select-sort" id="sort6">
+                          <option>관련도순</option>
+                          <option>최신순</option>
+                          <option>인기순</option>
+                        </select>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- //리스트 상단 -->
+              </section>
+            </div>
+            <!-- //tab contents -->
+          </div>
+          <!-- //검색 결과 -->
+        </div>
+        <!-- //컨텐츠 영역 -->
+
+        <!-- <div class="page_saas_search">
+    <div class="wrap_result_table"> -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      // '전체' 탭을 눌렀을 때 실행되는 함수 (또는 초기 로드 시)
+      function updateTotalTab() {
+          const $totalPanel = $('#totalTabpanel01');
+          const $totalListContainer = $totalPanel.find('.total-search-list');
+          
+          // 1. 기존에 들어있던 임시 텍스트나 내용을 비웁니다.
+          $totalListContainer.empty();
+  
+          // 2. 2번부터 5번까지의 섹션을 순회합니다.
+          // :not(#totalTabpanel01)을 사용해 전체 탭 자신은 제외합니다.
+          $('.tab-conts:not(#totalTabpanel01)').each(function() {
+              const $this = $(this);
+              
+              // 3. 해당 섹션에서 제목(.tab_conts_tit)과 리스트(.total-search-list)를 복사합니다.
+              const $title = $this.find('.tab_conts_tit').clone();
+              const $list = $this.find('.total-search-list').clone();
+              
+              // 4. 전체보기 탭 컨테이너에 차례대로 추가합니다.
+              $totalListContainer.append($title);
+              $totalListContainer.append($list);
+          });
+      }
+  
+      // 초기 실행 (페이지 로드 시 전체 탭이 active라면 실행)
+      if ($('#totalTab01').hasClass('active')) {
+          updateTotalTab();
+      }
+  
+      // 탭 클릭 이벤트 바인딩 (KRDS 탭 클릭 로직에 추가)
+      $('.btn-tab').on('click', function() {
+          const targetId = $(this).closest('li').attr('id');
+          if (targetId === 'totalTab01') {
+              updateTotalTab();
+          }
+      });
+  });
+  </script>
+  
+</body>
+</html>

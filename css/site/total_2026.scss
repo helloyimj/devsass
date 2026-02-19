@@ -1,0 +1,546 @@
+/* custom base style */
+html,
+body {
+    //  height: 100%; 
+    margin: 0;
+    color: #111;
+    // font-family: $font_regular;
+    // font-size: 10px;
+    font-style: normal;
+    min-width: 100%;
+    overflow-x: hidden;
+    white-space: normal;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+// body {
+//     font-size: 1.6rem;
+// }
+
+img {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    /*   transform: translateY(0);
+      backface-visibility: hidden; */
+  }
+
+/* 스크린리더 유효 텍스트 */
+.screen_reader_only,
+.sr_only,
+caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.hide {
+    display: none !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* system common -> mixset.scss $SCSS 동일 class 추가 */
+// /* color system */
+// .color_white {
+//     color: $color_white !important;
+// }
+
+// .color_f5 {
+//     color: $color_f5 !important;
+// }
+
+// .color_aaa {
+//     color: $color_aaa !important;
+// }
+
+// .color_ddd {
+//     color: $color_ddd !important;
+// }
+
+// .color_eee {
+//     color: $color_eee !important;
+// }
+
+// .color_red {
+//     color: #f00 !important;
+// }
+
+// .color_black {
+//     color: $color_111 !important;
+// }
+
+// .color_blue {
+//     color: $color_brand_main !important;
+// }
+
+// .color_blue_light {
+//     color: $color_blue_light;
+// }
+
+// /* Color admin */
+// .color_mainA_indigo {
+//     color: $color_brand_main !important;
+// }
+
+// .color_mainA_duskblue {
+//     color: #26357c !important;
+// }
+
+// /* Color user */
+// .color_mainU_navy {
+//     color: $color_brand_main !important;
+// }
+
+.text_left {
+    text-align: left !important;
+}
+
+.text_center {
+    text-align: center !important;
+}
+
+.text_right {
+    text-align: right !important;
+}
+
+.tal {
+    text-align: left !important;
+}
+
+.tac {
+    text-align: center !important;
+}
+
+.tar {
+    text-align: right !important;
+}
+
+.txt {
+    line-height: 1.5;
+}
+
+/* layout system */
+/* float */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* clear */
+.clear:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* felx */
+.flex {
+    display: flex;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex_column {
+    flex-direction: column;
+}
+
+.flex_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex_stretch {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* felx box */
+.flex_box {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+/* felx */
+.flex_ct {
+    justify-content: center;
+}
+
+.flex_st {
+    justify-content: flex-start;
+}
+
+.flex_ed {
+    justify-content: flex-end;
+}
+
+.flex_sa {
+    justify-content: space-around;
+}
+
+.flex_sb {
+    justify-content: space-between;
+}
+
+.flex_vct {
+    align-items: center;
+}
+
+.flex_vst {
+    align-items: flex-start;
+}
+
+.flex_ved {
+    align-items: flex-end;
+}
+
+.flex_g {
+    flex-grow: 1;
+}
+
+.flex_ng {
+    flex-grow: 0;
+}
+
+.flex_s {
+    flex-shrink: 1;
+}
+
+.flex_ns {
+    flex-shrink: 0;
+}
+
+.flex_b1 {
+    flex-basis: 10%;
+}
+
+.flex_b2 {
+    flex-basis: 20%;
+}
+
+.flex_b3 {
+    flex-basis: 30%;
+}
+
+.flex_b4 {
+    flex-basis: 40%;
+}
+
+.flex_b5 {
+    flex-basis: 50%;
+}
+
+.flex_b6 {
+    flex-basis: 60%;
+}
+
+.flex_b7 {
+    flex-basis: 70%;
+}
+
+.flex_b8 {
+    flex-basis: 80%;
+}
+
+.flex_b9 {
+    flex-basis: 90%;
+}
+
+.flex_b0 {
+    flex-basis: 100%;
+}
+
+.gap10 {
+    gap: 10px;
+}
+
+.gap20 {
+    gap: 20px;
+}
+
+.gap30 {
+    gap: 30px;
+}
+
+.gap40 {
+    gap: 40px;
+}
+
+.gap50 {
+    gap: 50px;
+}
+
+.gap60 {
+    gap: 60px;
+}
+
+.gap70 {
+    gap: 70px;
+}
+
+.gap80 {
+    gap: 80px;
+}
+
+.gap90 {
+    gap: 90px;
+}
+
+.gap100 {
+    gap: 100px;
+}
+
+/* margin/padding */
+.mt {
+    margin-top: 1rem;
+}
+
+.ml {
+    margin-left: 1rem;
+}
+
+.mr {
+    margin-right: 1rem;
+}
+
+.mb {
+    margin-bottom: 1rem;
+}
+
+.ma {
+    margin: 1rem;
+}
+
+.mt_half {
+    margin-top: 0.5rem;
+}
+
+.ml_half {
+    margin-left: 0.5rem;
+}
+
+.mr_half {
+    margin-right: 0.5rem;
+}
+
+.mb_half {
+    margin-bottom: 0.5rem;
+}
+
+.ma_half {
+    margin: 0.5rem;
+}
+
+.mt2 {
+    margin-top: 2rem;
+}
+
+.ml2 {
+    margin-left: 2rem;
+}
+
+.mr2 {
+    margin-right: 2rem;
+}
+
+.mb2 {
+    margin-bottom: 2rem;
+}
+
+.ma2 {
+    margin: 2rem;
+}
+
+.mt3 {
+    margin-top: 3rem;
+}
+
+.ml3 {
+    margin-left: 3rem;
+}
+
+.mr3 {
+    margin-right: 3rem;
+}
+
+.mb3 {
+    margin-bottom: 3rem;
+}
+
+.ma3 {
+    margin: 3rem;
+}
+
+.mt4 {
+    margin-top: 4rem;
+}
+
+.ml4 {
+    margin-left: 4rem;
+}
+
+.mr4 {
+    margin-right: 4rem;
+}
+
+.mb4 {
+    margin-bottom: 4rem;
+}
+
+.ma4 {
+    margin: 4rem;
+}
+
+.mt4 {
+    margin-top: 5rem;
+}
+
+.ml4 {
+    margin-left: 5rem;
+}
+
+.mr4 {
+    margin-right: 5rem;
+}
+
+.mb4 {
+    margin-bottom: 5rem;
+}
+
+.ma4 {
+    margin: 5rem;
+}
+
+.pt {
+    padding-top: 1rem;
+}
+
+.pl {
+    padding-left: 1rem;
+}
+
+.pr {
+    padding-right: 1rem;
+}
+
+.pb {
+    padding-bottom: 1rem;
+}
+
+.pa {
+    padding: 1rem;
+}
+
+.pt2 {
+    padding-top: 2rem;
+}
+
+.pl2 {
+    padding-left: 2rem;
+}
+
+.pr2 {
+    padding-right: 2rem;
+}
+
+.pb2 {
+    padding-bottom: 2rem;
+}
+
+.pa2 {
+    padding: 2rem;
+}
+
+.pt3 {
+    padding-top: 3rem;
+}
+
+.pl3 {
+    padding-left: 3rem;
+}
+
+.pr3 {
+    padding-right: 3rem;
+}
+
+.pb3 {
+    padding-bottom: 3rem;
+}
+
+.pa3 {
+    padding: 3rem;
+}
+
+.pt4 {
+    padding-top: 4rem;
+}
+
+.pl4 {
+    padding-left: 4rem;
+}
+
+.pr4 {
+    padding-right: 4rem;
+}
+
+.pb4 {
+    padding-bottom: 4rem;
+}
+
+.pa4 {
+    padding: 4rem;
+}
+
+.pt5 {
+    padding-top: 5rem;
+}
+
+.pl5 {
+    padding-left: 5rem;
+}
+
+.pr5 {
+    padding-right: 5rem;
+}
+
+.pb5 {
+    padding-bottom: 5rem;
+}
+
+.pa5 {
+    padding: 5rem;
+}
+
+
+

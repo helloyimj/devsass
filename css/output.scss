@@ -1,28 +1,13 @@
-// 1차 saas CSS
-// @import "site/css/total.css";
-// @import "site/css/total.css";
 @import "site/total.css";
 
 //component with common setting file
-
-//common
- @import "common/common.css";
-//  @import "/common/common.css";
+@import "common/common.css";
 
 //component
-//  @import "/component/component.css";
+@import "component/component.css";
 
- @import "component/component.css";
-
- @import "pattern/p_content";
- @import "pattern/p_common";
- @import "pattern/p_layout";
-
-// 2차 saas CSS
-// @use 'site/custom.css';
-
-// 회원가입
-@import 'site/style_saas_2026.css';
-
-// 공지사항
-@import 'site/new_style_saas.css';
+@import "pattern/p_content";
+@import "pattern/p_common";
+@import "pattern/p_layout";
+@import "plugin/swiper-bundle.min.css";
+@import "site/main.css";
