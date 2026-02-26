@@ -10,9 +10,8 @@
 .page_signup {
   display: flex;
   flex-direction: column;
-  padding-bottom: var(
-    --krds-pc-gap-layout-contents-footer
-  ); //gap: var(--krds-gap-10);
+  // padding-bottom: var(--krds-pc-gap-layout-contents-footer);
+  // color: var(--krds-#{$mode-setting}-color-light-gray-95);
 
   .article_title {
     margin: auto;
@@ -60,15 +59,19 @@
     }
   }
 
+  .krds-info-list {
+    gap: 8px;
+  }
+
   // 라디오 버튼
   .krds-check-area {
     gap: var(--krds-gap-7);
   }
-  .krds-form-check {
-    input[type='radio'] ~ label {
-      font-weight: var(--krds-font-weight-bold);
-    }
-  }
+  // .krds-form-check {
+  //   input[type='radio'] ~ label {
+  //     font-weight: var(--krds-font-weight-bold);
+  //   }
+  // }
 
   // 2단계 약관동의
   .terms-type {
@@ -331,6 +334,7 @@
 .structured-item {
   &.case_card {
     padding: var(--krds-padding-8);
+    min-height: 40.1rem;
 
     .in {
       .card-top {

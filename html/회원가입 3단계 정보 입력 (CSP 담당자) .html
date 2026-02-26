@@ -1,392 +1,372 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>3단계 정보 입력&lt;회원가입&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-  <title>3단계 정보 입력&lt;회원가입&lt;민간 Sass 연계공통기반 통합관리포털</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/output.css" />
 
-  <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../css/output.css" />
+    <!-- script -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/plugin/swiper-bundle.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script defer src="../js/component/ui-script.js"></script>
+    <script defer src="../js/pattern/pattern.js"></script>
+    <script defer src="../js/nav.js"></script>
+    <script defer src="../js/app.js"></script>
+  </head>
 
-  <!-- script -->
-  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-  <script src="../js/plugin/swiper-bundle.min.js"></script>
-  <script src="../js/aos.js"></script>
-  <script defer src="../js/component/ui-script.js"></script>
-  <script defer src="../js/pattern/pattern.js"></script>
-  <script defer src="../js/nav.js"></script>
-  <script defer src="../js/app.js"></script>
+  <body>
+    <div id="wrapper">
+      <!-- 컨테이너 영역 -->
+      <div id="container">
+        <!-- breadcrumb -->
+        <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
+          <ol class="breadcrumb">
+            <li class="home"><a href="main.html" class="txt" target="_self" title="메인 페이지로 이동">홈</a></li>
+          </ol>
+        </nav>
+        <!-- // breadcrumb -->
 
-</head>
-
-<body>
-  <div id="wrapper">
-
-    <!-- 컨테이너 영역 -->
-    <div id="container">
-
-      <!-- breadcrumb -->
-      <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
-        <ol class="breadcrumb">
-          <li class="home"><a href="main.html" class="txt" target="_self" title="메인 페이지로 이동">홈</a></li>
-        </ol>
-      </nav>
-      <!-- // breadcrumb -->
-
-      <!-- 컨텐츠 영역 -->
-      <div class="inner narrow">
-        <!-- 페이지 타이틀 영역 -->
-        <div class="page-title-wrap">
-          <h1 class="h-tit">회원가입</h1>
-        </div>
-        <!-- //페이지 타이틀 영역 -->
-        <div class="page_content page_signup page-step">
-          <div class="article_title">
-            <!-- step indicator -->
-            <!-- 스텝 -->
-            <ol class="krds-step-wrap">
-              <li class="done">
-                <span>
-                  <i class="step">1단계</i>
-                  <span class="step-tit">유형 선택</span>
-                </span>
-              </li>
-              <li class="done">
-                <span>
-                  <i class="step">2단계</i>
-                  <span class="step-tit">약관 동의</span>
-                </span>
-              </li>
-              <li class="active">
-                <span>
-                  <em class="sr-only">현재단계</em>
-                  <i class="step">3단계</i>
-                  <span class="step-tit">정보 입력</span>
-                </span>
-              </li>
-              <li class="step">
-                <span>                             
-                  <i class="step">4단계</i>
-                  <span class="step-tit">신청 완료</span>
-                </span>
-              </li>
-            </ol>
-            <!-- //스텝 -->
+        <!-- 컨텐츠 영역 -->
+        <div class="inner narrow">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-title-wrap">
+            <h1 class="h-tit">회원가입</h1>
           </div>
+          <!-- //페이지 타이틀 영역 -->
+          <div class="page_content page_signup page-step">
+            <div class="article_title">
+              <!-- step indicator -->
+              <!-- 스텝 -->
+              <ol class="krds-step-wrap">
+                <li class="done">
+                  <span>
+                    <i class="step">1단계</i>
+                    <span class="step-tit">유형 선택</span>
+                  </span>
+                </li>
+                <li class="done">
+                  <span>
+                    <i class="step">2단계</i>
+                    <span class="step-tit">약관 동의</span>
+                  </span>
+                </li>
+                <li class="active">
+                  <span>
+                    <em class="sr-only">현재단계</em>
+                    <i class="step">3단계</i>
+                    <span class="step-tit">정보 입력</span>
+                  </span>
+                </li>
+                <li class="step">
+                  <span>
+                    <i class="step">4단계</i>
+                    <span class="step-tit">신청 완료</span>
+                  </span>
+                </li>
+              </ol>
+              <!-- //스텝 -->
+            </div>
 
-          <!-- 콘텐츠 영역 -->
-          <div class="article_content step-type input-type">
-            <h3 class="sec-tit">
-              <span class="step-now">
-                <strong class="active">3단계</strong>
-                / 4단계
-              </span>
-              정보 입력
-            </h3>
-            <div class="txt-box bg-white">
-              <h4 class="box-tit1">회원정보를 입력해 주세요.</h4>
-              <div class="box-cnt">
-                <div class="box-sec">
-                  <div class="form-group">
-                    <div class="form-tit">
-                      <label for="txt-email">이메일 <span class="required">(필수)</span></label>
-                    </div>
-                    <p class="form-hint above">포털 ID, 기업 및 기관 메일을 사용해 주세요.</p>
-                    <div class="form-conts is-error">
-                      <div class="input-group m-column">
-                        <input type="text" id="txt-email" class="krds-input" placeholder="이메일을 입력하세요." value="">
-                        <button type="button" class="krds-btn large secondary open-modal"
-                          data-target="modal-email-check">메일 인증</button>
+            <!-- 콘텐츠 영역 -->
+            <div class="article_content step-type input-type">
+              <h3 class="sec-tit">
+                <span class="step-now">
+                  <strong class="active">3단계</strong>
+                  / 4단계
+                </span>
+                정보 입력
+              </h3>
+              <div class="txt-box bg-white">
+                <h4 class="box-tit1">회원정보를 입력해 주세요.</h4>
+                <div class="box-cnt">
+                  <div class="box-sec">
+                    <div class="form-group">
+                      <div class="form-tit">
+                        <label for="txt-email">이메일 <span class="required">(필수)</span></label>
                       </div>
-                    </div>
-                    <p class="form-hint-invalid">이메일 형식에 맞지 않습니다.</p>
-                    <p class="form-hint-invalid">메일 인증을 해주세요.</p>
-                    <p class="form-hint-invalid">이메일을 입력해 주세요.</p>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-tit">
-                      <label for="txt-password">비밀번호 <span class="required">(필수)</span></label>
-                    </div>
-                    <p class="form-hint above">영문, 숫자, 특수문자를 혼용해 8자 이상 15자 이하로 입력해 주세요.</p>
-                    <div class="form-conts is-error">
-                      <input type="text" id="txt-password" class="krds-input" placeholder="비밀번호를 입력하세요." value="">
-                    </div>
-                    <p class="form-hint-invalid">비밀번호 형식에 맞지 않습니다.</p>
-                    <p class="form-hint-invalid">비밀번호를 입력해 주세요.</p>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-tit">
-                      <label for="txt-password-check">비밀번호 확인<span class="required">(필수)</span></label>
-                    </div>
-                    <p class="form-hint above">위에 입력한 비밀번호를 한 번 더 입력해 주세요.</p>
-                    <div class="form-conts is-error">
-                      <input type="text" id="txt-password-check" class="krds-input" placeholder="비밀번호를 입력하세요." value="">
-                    </div>
-                    <p class="form-hint-invalid">비밀번호를 다시 한 번 입력해 주세요.</p>
-                    <p class="form-hint-invalid">비밀번호가 일치하지 않습니다.</p>
-                  </div>
-                </div>
-                <div class="box-sec">
-                  <div class="form-group">
-                    <div class="form-tit">
-                      <label for="select-service-type">클라우드 제공 업체<span class="required">(필수)</span></label>
-                    </div>
-                    <p class="form-hint above">운영 중인 클라우드 서비스 제공 업체명을 선택해 주세요.</p>
-                    <div class="form-conts is-error">
-                      <select id="select-service-type" class="krds-form-select" title="선택">
-                        <option value="default">제공 업체명을 선택해 주세요.</option>
-                        <option value="NHN Cloud" aria-label="NHN Cloud">NHN Cloud</option>
-                      </select>
-                    </div>
-                    <p class="form-hint-invalid">연계 시스템을 선택해 주세요.</p>
-                  </div>
-                </div>
-                <div class="box-sec">
-                  <div class="form-group">
-                    <div class="form-tit">
-                      <label for="txt-name">담당자<span class="required">(필수)</span></label>
-                    </div>
-                    <div class="form-conts is-error">
-                      <input type="text" id="txt-name" class="krds-input" placeholder="담당자 이름을 입력해 주세요." value="">
-                    </div>
-                    <p class="form-hint-invalid">담당자 이름을 입력해 주세요.</p>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-tit">
-                      <label for="txt-mobilenumber">휴대폰 번호<span class="required">(필수)</span></label>
-                    </div>
-                    <p class="form-hint above">- 없이 숫자만 입력해 주세요.</p>
-                    <div class="form-conts is-error">
-                      <div class="input-group m-column">
-                        <input type="text" id="txt-mobilenumber" class="krds-input" placeholder="휴대폰 번호를 입력해 주세요."
-                          value="">
-                        <button type="button" class="krds-btn large secondary open-modal"
-                          data-target="modal-phonenumber-check">인증번호 전송</button>
-                        <p class="form-hint inline">(남은 시간:<span>2분 00초</span>)</p>
+                      <p class="form-hint above">포털 ID, 기업 및 기관 메일을 사용해 주세요.</p>
+                      <div class="form-conts is-error">
+                        <div class="input-group m-column">
+                          <input type="text" id="txt-email" class="krds-input" placeholder="이메일을 입력하세요." value="" />
+                          <button type="button" class="krds-btn large secondary open-modal" data-target="modal-email-check">메일 인증</button>
+                        </div>
                       </div>
+                      <p class="form-hint-invalid">이메일 형식에 맞지 않습니다.</p>
+                      <p class="form-hint-invalid">메일 인증을 해주세요.</p>
+                      <p class="form-hint-invalid">이메일을 입력해 주세요.</p>
                     </div>
-                    <p class="form-hint-invalid">휴대폰 번호를 인증해 주세요.</p>
-                  </div>
-                  <div class="form-group">
-                    <div class="form-tit">
-                      <label for="txt-code">인증번호 입력<span class="required">(필수)</span></label>
-                    </div>
-                    <div class="form-conts is-error">
-                      <div class="input-group m-column">
-                        <input type="text" id="txt-code" class="krds-input" placeholder="인증번호를 입력해 주세요." value="">
-                        <button type="button" class="krds-btn large secondary">확인</button>
+                    <div class="form-group">
+                      <div class="form-tit">
+                        <label for="txt-password">비밀번호 <span class="required">(필수)</span></label>
                       </div>
+                      <p class="form-hint above">영문, 숫자, 특수문자를 혼용해 8자 이상 15자 이하로 입력해 주세요.</p>
+                      <div class="form-conts is-error">
+                        <input type="text" id="txt-password" class="krds-input" placeholder="비밀번호를 입력하세요." value="" />
+                      </div>
+                      <p class="form-hint-invalid">비밀번호 형식에 맞지 않습니다.</p>
+                      <p class="form-hint-invalid">비밀번호를 입력해 주세요.</p>
                     </div>
-                    <p class="form-hint-invalid">인증번호가 일치하지 않습니다.</p>
-                    <p class="form-hint-success">인증되었습니다.</p>
+                    <div class="form-group">
+                      <div class="form-tit">
+                        <label for="txt-password-check">비밀번호 확인<span class="required">(필수)</span></label>
+                      </div>
+                      <p class="form-hint above">위에 입력한 비밀번호를 한 번 더 입력해 주세요.</p>
+                      <div class="form-conts is-error">
+                        <input type="text" id="txt-password-check" class="krds-input" placeholder="비밀번호를 입력하세요." value="" />
+                      </div>
+                      <p class="form-hint-invalid">비밀번호를 다시 한 번 입력해 주세요.</p>
+                      <p class="form-hint-invalid">비밀번호가 일치하지 않습니다.</p>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <div class="form-tit">
-                      <label for="txt-department">담당 부서<span class="required">(필수)</span></label>
+                  <div class="box-sec">
+                    <div class="form-group">
+                      <div class="form-tit">
+                        <label for="select-service-type">클라우드 제공 업체<span class="required">(필수)</span></label>
+                      </div>
+                      <p class="form-hint above">운영 중인 클라우드 서비스 제공 업체명을 선택해 주세요.</p>
+                      <div class="form-conts is-error">
+                        <select id="select-service-type" class="krds-form-select" title="선택">
+                          <option value="default">제공 업체명을 선택해 주세요.</option>
+                          <option value="NHN Cloud" aria-label="NHN Cloud">NHN Cloud</option>
+                        </select>
+                      </div>
+                      <p class="form-hint-invalid">연계 시스템을 선택해 주세요.</p>
                     </div>
-                    <div class="form-conts is-error">
-                      <input type="text" id="txt-department" class="krds-input" placeholder="소속 부서명을 입력해 주세요." value="">
-                    </div>
-                    <p class="form-hint-invalid">담당 부서를 입력해 주세요.</p>
                   </div>
-                  <div class="form-group">
-                    <div class="form-tit">
-                      <label for="txt-phonenumber">유선 번호<span class="required">(필수)</span></label>
+                  <div class="box-sec">
+                    <div class="form-group">
+                      <div class="form-tit">
+                        <label for="txt-name">담당자<span class="required">(필수)</span></label>
+                      </div>
+                      <div class="form-conts is-error">
+                        <input type="text" id="txt-name" class="krds-input" placeholder="담당자 이름을 입력해 주세요." value="" />
+                      </div>
+                      <p class="form-hint-invalid">담당자 이름을 입력해 주세요.</p>
                     </div>
-                    <p class="form-hint above">- 없이 숫자만 입력해 주세요.</p>
-                    <div class="form-conts is-error">
-                      <input type="text" id="txt-phonenumber" class="krds-input" placeholder="유선 번호를 입력해 주세요." value="">
+                    <div class="form-group">
+                      <div class="form-tit">
+                        <label for="txt-mobilenumber">휴대폰 번호<span class="required">(필수)</span></label>
+                      </div>
+                      <p class="form-hint above">- 없이 숫자만 입력해 주세요.</p>
+                      <div class="form-conts is-error">
+                        <div class="input-group m-column">
+                          <input type="text" id="txt-mobilenumber" class="krds-input" placeholder="휴대폰 번호를 입력해 주세요." value="" />
+                          <button type="button" class="krds-btn large secondary open-modal" data-target="modal-phonenumber-check">인증번호 전송</button>
+                          <p class="form-hint inline">(남은 시간:<span>2분 00초</span>)</p>
+                        </div>
+                      </div>
+                      <p class="form-hint-invalid">휴대폰 번호를 인증해 주세요.</p>
                     </div>
-                    <p class="form-hint-invalid">유선 번호를 입력해 주세요.</p>
+                    <div class="form-group">
+                      <div class="form-tit">
+                        <label for="txt-code">인증번호 입력<span class="required">(필수)</span></label>
+                      </div>
+                      <div class="form-conts is-error">
+                        <div class="input-group m-column">
+                          <input type="text" id="txt-code" class="krds-input" placeholder="인증번호를 입력해 주세요." value="" />
+                          <button type="button" class="krds-btn large secondary">확인</button>
+                        </div>
+                      </div>
+                      <p class="form-hint-invalid">인증번호가 일치하지 않습니다.</p>
+                      <p class="form-hint-success">인증되었습니다.</p>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-tit">
+                        <label for="txt-department">담당 부서<span class="required">(필수)</span></label>
+                      </div>
+                      <div class="form-conts is-error">
+                        <input type="text" id="txt-department" class="krds-input" placeholder="소속 부서명을 입력해 주세요." value="" />
+                      </div>
+                      <p class="form-hint-invalid">담당 부서를 입력해 주세요.</p>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-tit">
+                        <label for="txt-phonenumber">유선 번호<span class="required">(필수)</span></label>
+                      </div>
+                      <p class="form-hint above">- 없이 숫자만 입력해 주세요.</p>
+                      <div class="form-conts is-error">
+                        <input type="text" id="txt-phonenumber" class="krds-input" placeholder="유선 번호를 입력해 주세요." value="" />
+                      </div>
+                      <p class="form-hint-invalid">유선 번호를 입력해 주세요.</p>
+                    </div>
                   </div>
-                </div>
-                <div class="box-sec">
-                  <!-- file upload -->
-                  <div class="krds-file-upload">
-                    <!-- 파일 업로드 상단 -->
-                    <div class="file-head">
-                      <h3 class="tit">증빙 서류<span class="required">(필수)</span></h3>
-                      <div>
-                        <ul class="krds-info-list decimal">
-                          <li>신청 정보를 증명할 수 있는 서류를 제출해 주세요. (공공기관 고유번호증 또는 사업자 등록증 등)</li>
-                          <li>30MB 이내의 허용된 확장자 파일만 첨부할 수 있습니다. (jpg, png, jpeg, pdf, hwp, docx만 가능)</li>
+                  <div class="box-sec">
+                    <!-- file upload -->
+                    <div class="krds-file-upload">
+                      <!-- 파일 업로드 상단 -->
+                      <div class="file-head">
+                        <h3 class="tit">증빙 서류<span class="required">(필수)</span></h3>
+                        <div>
+                          <ul class="krds-info-list decimal">
+                            <li>신청 정보를 증명할 수 있는 서류를 제출해 주세요. (공공기관 고유번호증 또는 사업자 등록증 등)</li>
+                            <li>30MB 이내의 허용된 확장자 파일만 첨부할 수 있습니다. (jpg, png, jpeg, pdf, hwp, docx만 가능)</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- //파일 업로드 상단 -->
+
+                      <!-- 파일 업로드 영역 -->
+                      <div class="file-upload">
+                        <p class="txt">첨부할 파일을 여기에 끌어다 놓거나, 파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</p>
+                        <div class="file-upload-btn-wrap">
+                          <input type="file" name="myFile" hidden />
+                          <label for="fileu-upload">
+                            <button type="button" id="fileu-upload" class="krds-btn medium"><i class="svg-icon ico-upload"></i>파일선택</button>
+                          </label>
+                        </div>
+                      </div>
+                      <!-- //파일 업로드 영역 -->
+                      <!-- 파일 리스트 영역 -->
+                      <div class="file-list">
+                        <div class="total"><span class="current">0개</span> / 1개</div>
+                        <ul class="upload-list">
+                          <li>
+                            <div class="file-info">
+                              <div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB]</div>
+                              <div class="btn-wrap">
+                                <span class="krds-spinner" role="status">
+                                  <span class="sr-only">업로드 중</span>
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="file-info">
+                              <div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB]</div>
+                              <div class="btn-wrap">
+                                <span class="ico-invalid complete">
+                                  <em class="sr-only">업로드 완료</em>
+                                </span>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="file-info">
+                              <div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB]</div>
+                              <div class="btn-wrap">
+                                <button type="button" class="krds-btn medium text">삭제 <i class="svg-icon ico-delete-fill"></i></button>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="is-error">
+                            <div class="file-info">
+                              <div class="file-name">전입재등록신고서 [주민등록법 시행령 : 별지서식 15, 15호의2호] [hwp, 17KB]</div>
+                              <div class="btn-wrap">
+                                <button type="button" class="krds-btn medium text">삭제 <i class="svg-icon ico-delete-fill"></i></button>
+                              </div>
+                            </div>
+                            <p class="file-hint-invalid">
+                              등록 가능한 파일 용량을 초과하였습니다.<br />
+                              20MB 미만의 파일만 등록할 수 있습니다.
+                            </p>
+                          </li>
+                          <li>
+                            <div class="file-info m-column">
+                              <div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB]</div>
+                              <div class="btn-wrap">
+                                <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                                <button type="button" class="krds-btn medium text">바로보기 <i class="svg-icon ico-angle right"></i></button>
+                              </div>
+                            </div>
+                          </li>
                         </ul>
                       </div>
+                      <!-- //파일 리스트 영역 -->
                     </div>
-                    <!-- //파일 업로드 상단 -->
-
-                    <!-- 파일 업로드 영역 -->
-                    <div class="file-upload">
-                      <p class="txt">첨부할 파일을 여기에 끌어다 놓거나, 파일 선택 버튼을 눌러 파일을 직접 선택해주세요.</p>
-                      <div class="file-upload-btn-wrap">
-                        <input type="file" name="myFile" hidden>
-                        <label for="fileu-upload">
-                          <button type="button" id="fileu-upload" class="krds-btn medium"><i
-                              class="svg-icon ico-upload"></i>파일선택</button>
-                        </label>
-                      </div>
-                    </div>
-                    <!-- //파일 업로드 영역 -->
-                    <!-- 파일 리스트 영역 -->
-                    <div class="file-list">
-                      <div class="total"><span class="current">0개</span> / 1개</div>
-                      <ul class="upload-list">
-                        <li>
-                          <div class="file-info">
-                            <div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB] </div>
-                            <div class="btn-wrap">
-                              <span class="krds-spinner" role="status">
-                                <span class="sr-only">업로드 중</span>
-                              </span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="file-info">
-                            <div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB] </div>
-                            <div class="btn-wrap">
-                              <span class="ico-invalid complete">
-                                <em class="sr-only">업로드 완료</em>
-                              </span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="file-info">
-                            <div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB] </div>
-                            <div class="btn-wrap">
-                              <button type="button" class="krds-btn medium text">삭제 <i
-                                  class="svg-icon ico-delete-fill"></i></button>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="is-error">
-                          <div class="file-info">
-                            <div class="file-name">전입재등록신고서 [주민등록법 시행령 : 별지서식 15, 15호의2호] [hwp, 17KB]</div>
-                            <div class="btn-wrap">
-                              <button type="button" class="krds-btn medium text">삭제 <i
-                                  class="svg-icon ico-delete-fill"></i></button>
-                            </div>
-                          </div>
-                          <p class="file-hint-invalid">
-                            등록 가능한 파일 용량을 초과하였습니다.<br>
-                            20MB 미만의 파일만 등록할 수 있습니다.
-                          </p>
-                        </li>
-                        <li>
-                          <div class="file-info m-column">
-                            <div class="file-name">위임장(주민등록법 시행령 별지 제15호의2호서식) [hwp, 17KB] </div>
-                            <div class="btn-wrap">
-                              <button type="button" class="krds-btn medium text">다운로드 <i
-                                  class="svg-icon ico-down"></i></button>
-                              <button type="button" class="krds-btn medium text">바로보기 <i
-                                  class="svg-icon ico-angle right"></i></button>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <!-- //파일 리스트 영역 -->
+                    <!-- //file upload -->
                   </div>
-                  <!-- //file upload -->
                 </div>
               </div>
             </div>
-
+            <!-- //콘텐츠 영역 -->
+            <!-- 페이지 버튼 영역 -->
+            <div class="page-btn-wrap both m-column">
+              <button type="button" class="krds-btn xlarge tertiary" onclick="location.href = ''">이전으로</button>
+              <!-- <button type="button" class="krds-btn xlarge primary" onclick="location.href=''" disabled>가입 신청하기</button> -->
+              <button type="button" class="krds-btn xlarge primary" onclick="location.href = '회원가입 4단계 신청 완료 (정보보유기관 담당자, CSP 담당자).html'">가입 신청하기</button>
+            </div>
+            <!-- //페이지 버튼 영역 -->
           </div>
-          <!-- //콘텐츠 영역 -->
-          <!-- 페이지 버튼 영역 -->
-          <div class="page-btn-wrap both m-column">
-            <button type="button" class="krds-btn xlarge tertiary" onclick="location.href=''">이전으로</button>
-            <button type="button" class="krds-btn xlarge primary" onclick="location.href=''" disabled>가입 신청하기</button>
-          </div>
-          <!-- //페이지 버튼 영역 -->
         </div>
+        <!-- //컨텐츠 영역 -->
       </div>
-      <!-- //컨텐츠 영역 -->
+      <!-- //컨테이너 영역 -->
     </div>
-    <!-- //컨테이너 영역 -->
-  </div>
-  <!-- modal-wrap -->
-  <div class="modal-wrap page_join">
-
-    <!-- modal 1 인증 메일 전송 -->
-    <section id="modal-email-check" class="krds-modal fade in " role="dialog" aria-labelledby="tit-modal-email-check">
-      <div class="modal-dialog modal-md">
-        <div class="modal-content">
-          <!-- modal title -->
-          <div class="modal-header">
-            <h2 id="tit-modal-email-check" class="modal-title">
-              인증 메일 전송
-            </h2>
-          </div>
-          <!-- //modal title -->
-          <!-- modal contents -->
-          <div class="modal-conts">
-            <div class="conts-area">
-              인증 메일을 전송했습니다. <br>
-              인증을 완료하신 후 페이지로 돌아와 다음 단계를 진행해 주세요.
+    <!-- modal-wrap -->
+    <div class="modal-wrap page_join">
+      <!-- modal 1 인증 메일 전송 -->
+      <section id="modal-email-check" class="krds-modal fade in" role="dialog" aria-labelledby="tit-modal-email-check">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <!-- modal title -->
+            <div class="modal-header">
+              <h2 id="tit-modal-email-check" class="modal-title">인증 메일 전송</h2>
             </div>
-          </div>
-          <!-- //modal contents -->
-          <!-- modal btn -->
-          <div class="modal-btn btn-wrap">
-            <button type="button" class="krds-btn medium primary close-modal">확인</button>
-          </div>
-          <!-- //modal btn -->
-          <!-- close button -->
-          <button type="button" class="krds-btn medium icon btn-close close-modal">
-            <span class="sr-only">닫기</span>
-            <i class="svg-icon ico-popup-close"></i>
-          </button>
-          <!-- //close button -->
-        </div>
-      </div>
-      <div class="modal-back in"></div>
-    </section>
-    <!-- //modal -->
-
-    <!-- modal 2 인증 번호 전송 -->
-    <section id="modal-phonenumber-check" class="krds-modal fade in " role="dialog"
-      aria-labelledby="tit-modal-phonenumber-check">
-      <div class="modal-dialog modal-md">
-        <div class="modal-content">
-          <!-- modal title -->
-          <div class="modal-header">
-            <h2 id="tit-modal-phonenumber-check" class="modal-title">
-              휴대폰 인증번호 전송
-            </h2>
-          </div>
-          <!-- //modal title -->
-          <!-- modal contents -->
-          <div class="modal-conts">
-            <div class="conts-area">
-              휴대폰으로 인증번호를 전송했습니다. <br>
-              받으신 인증번호를 인증번호 입력란에 입력하여 인증을 완료해주세요.
+            <!-- //modal title -->
+            <!-- modal contents -->
+            <div class="modal-conts">
+              <div class="conts-area">
+                인증 메일을 전송했습니다. <br />
+                인증을 완료하신 후 페이지로 돌아와 다음 단계를 진행해 주세요.
+              </div>
             </div>
+            <!-- //modal contents -->
+            <!-- modal btn -->
+            <div class="modal-btn btn-wrap">
+              <button type="button" class="krds-btn medium primary close-modal">확인</button>
+            </div>
+            <!-- //modal btn -->
+            <!-- close button -->
+            <button type="button" class="krds-btn medium icon btn-close close-modal">
+              <span class="sr-only">닫기</span>
+              <i class="svg-icon ico-popup-close"></i>
+            </button>
+            <!-- //close button -->
           </div>
-          <!-- //modal contents -->
-          <!-- modal btn -->
-          <div class="modal-btn btn-wrap">
-            <button type="button" class="krds-btn medium primary close-modal">확인</button>
-          </div>
-          <!-- //modal btn -->
-          <!-- close button -->
-          <button type="button" class="krds-btn medium icon btn-close close-modal">
-            <span class="sr-only">닫기</span>
-            <i class="svg-icon ico-popup-close"></i>
-          </button>
-          <!-- //close button -->
         </div>
-      </div>
-      <div class="modal-back in"></div>
-    </section>
-    <!-- //modal -->
+        <div class="modal-back in"></div>
+      </section>
+      <!-- //modal -->
 
-  </div>
-  <!-- //modal-wrap -->
-</body>
-
+      <!-- modal 2 인증 번호 전송 -->
+      <section id="modal-phonenumber-check" class="krds-modal fade in" role="dialog" aria-labelledby="tit-modal-phonenumber-check">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <!-- modal title -->
+            <div class="modal-header">
+              <h2 id="tit-modal-phonenumber-check" class="modal-title">휴대폰 인증번호 전송</h2>
+            </div>
+            <!-- //modal title -->
+            <!-- modal contents -->
+            <div class="modal-conts">
+              <div class="conts-area">
+                휴대폰으로 인증번호를 전송했습니다. <br />
+                받으신 인증번호를 인증번호 입력란에 입력하여 인증을 완료해주세요.
+              </div>
+            </div>
+            <!-- //modal contents -->
+            <!-- modal btn -->
+            <div class="modal-btn btn-wrap">
+              <button type="button" class="krds-btn medium primary close-modal">확인</button>
+            </div>
+            <!-- //modal btn -->
+            <!-- close button -->
+            <button type="button" class="krds-btn medium icon btn-close close-modal">
+              <span class="sr-only">닫기</span>
+              <i class="svg-icon ico-popup-close"></i>
+            </button>
+            <!-- //close button -->
+          </div>
+        </div>
+        <div class="modal-back in"></div>
+      </section>
+      <!-- //modal -->
+    </div>
+    <!-- //modal-wrap -->
+  </body>
 </html>

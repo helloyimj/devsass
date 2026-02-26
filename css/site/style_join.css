@@ -8,7 +8,6 @@
 .page_signup {
   display: flex;
   flex-direction: column;
-  padding-bottom: var(--krds-pc-gap-layout-contents-footer);
 }
 .page_signup .article_title {
   margin: auto;
@@ -43,11 +42,11 @@
   color: var(--krds-light-color-text-primary);
   font-weight: var(--krds-font-weight-bold);
 }
+.page_signup .krds-info-list {
+  gap: 8px;
+}
 .page_signup .krds-check-area {
   gap: var(--krds-gap-7);
-}
-.page_signup .krds-form-check input[type=radio] ~ label {
-  font-weight: var(--krds-font-weight-bold);
 }
 .page_signup .terms-type .txt-box {
   margin-top: var(--krds-gap-9);
@@ -229,6 +228,7 @@
 /* 연계한 민간 SaaS 카드 */
 .structured-item.case_card {
   padding: var(--krds-padding-8);
+  min-height: 40.1rem;
 }
 .structured-item.case_card .in .card-top .wrap_img {
   position: relative;

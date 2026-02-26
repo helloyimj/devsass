@@ -52,6 +52,7 @@
       padding: 2rem 7rem 2rem 2rem;
       opacity: 0;
       transition: all 0.2s ease;
+      display: none;
     }
 
     &:hover,
@@ -61,8 +62,6 @@
         display: block;
       }
     }
-
-
 
     &.btn_side_sup02 {
       background: linear-gradient(45deg, #1a7395, #0db5bd);
@@ -77,13 +76,48 @@
       }
     }
 
+    // .btn_side_sup03 {
+    //   display: none; // 기본적으로는 숨겨둡니다.
+    //   // background: #0f174d;
+    //   width: 50px;   // 모바일에서도 보일 수 있게 명시적인 크기 지정
+    //   height: 50px;
+    //   position: relative; 
+
+    //   &.show {
+    //     display: block !important; // JS가 클래스를 붙이면 나타남
+    //   }
+
+    //   &::after {
+    //     content: ""; // 가상 요소엔 필수!
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     width: 2.6rem;
+    //     height: 2.6rem;
+    //     background-image: url("../../img/icon/icon_top.svg");
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //   }
+    // }
+
     &.btn_side_sup03 {
       // display: none;
       background: #0f174d;
+      opacity: 0;
+      visibility: hidden;     
+      pointer-events: none;
+      transition: all 0.4s ease;
+
+      &.show {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
 
       &::after {
         background-image: url("../../img/icon/icon_top.svg");
-        background-size: 2.6rem;
+        background-size: 2.6rem;        
       }
     }
   }

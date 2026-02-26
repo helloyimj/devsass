@@ -33,7 +33,7 @@ const headerAreaHtml = `
                 <li>
                   <a href="https://saas.go.kr/" class="krds-btn small text cloud">클라우드전문지원센터 <i class="svg-icon ico-go"></i></a>
                 </li>
-                <li><a href="누리집 이용 안내_누리집안내지도.html" class="krds-btn small text">누리집 안내지도</a></li>
+                <li><a href="누리집 이용 안내_누리집 안내지도.html" class="krds-btn small text">누리집 안내지도</a></li>
                 <li>
                   <!-- resize -->
                   <div class="krds-drop-wrap krds-resize" data-adjust="scale">
@@ -59,8 +59,8 @@ const headerAreaHtml = `
             </div>
             <div class="header-branding">
               <h2 class="logo">
-                <a href="javascript:;">
-                  <span class="sr-only">대한민국정부</span>
+                <a href="main.html">
+                  <span class="sr-only">민간 saas 메인페이지로 이동</span>
                 </a>
               </h2>
               <div class="header-actions">
@@ -118,8 +118,8 @@ const headerAreaHtml = `
           <div class="inner">
             <ul class="gnb-menu" aria-label="메인 메뉴">
               <li>
-                <button type="button" class="gnb-main-trigger active" data-trigger="gnb"
-                  aria-controls="gnb-main-menu-intro" aria-expanded="false" aria-haspopup="true">소개</button>
+                  <button type="button" class="gnb-main-trigger" data-trigger="gnb" aria-controls="gnb-main-menu-intro"
+                  aria-expanded="false" aria-haspopup="true">소개</button>
                 <!-- gnb-toggle-wrap -->
                 <div class="gnb-toggle-wrap" id="gnb-main-menu-intro">
                   <!-- gnb-main-list -->
@@ -156,7 +156,7 @@ const headerAreaHtml = `
                       <div class="gnb-sub-content">
                         <h2 class="sub-title"><span>서비스</span></h2>
                         <ul>
-                          <a href="서비스_모바일 공무원증.html">모바일공무원증</a></li>
+                          <a href="서비스_모바일공무원증.html">모바일공무원증</a></li>
                           <a href="서비스_정부디렉터리(LDAP).html">정부디렉터리(LDAP)</a></li>
                           <a href="서비스_행정표준코드.html">행정표준코드</a></li>
                           <a href="서비스_행정전자서명(GPKI).html">행정전자서명(GPKI)</a></li>
@@ -172,7 +172,7 @@ const headerAreaHtml = `
               </li>
 
               <li>
-                <button type="button" class="gnb-main-trigger" data-trigger="gnb" aria-controls="gnb-main-menu-saas" aria-expanded="false" aria-haspopup="true"> 공공용 민간 SaaS</button>
+                <button type="button" class="gnb-main-trigger" data-trigger="gnb" aria-controls="gnb-main-menu-saas" aria-expanded="false" aria-haspopup="true"> 공공부문 민간 SaaS</button>
                 <!-- gnb-toggle-wrap -->
                 <div class="gnb-toggle-wrap" id="gnb-main-menu-saas">
                   <!-- gnb-main-list -->
@@ -180,9 +180,9 @@ const headerAreaHtml = `
                     <!-- gnb-sub-list -->
                     <div class="gnb-sub-list single-list">
                       <div class="gnb-sub-content">
-                        <h2 class="sub-title"><span>공공용 민간 SaaS</span></h2>
+                        <h2 class="sub-title"><span>공공부문 민간 SaaS</span></h2>
                         <ul>
-                          <a href="공공용 민간 SaaS.html">공공용 민간 SaaS</a></li>
+                          <a href="공공부문 민간 SaaS.html">공공부문 민간 SaaS</a></li>
                         </ul>
                       </div>
                     </div>
@@ -234,14 +234,14 @@ const headerAreaHtml = `
               <ul class="utility-list">
                 <li>
                   <div class="krds-drop-wrap">
-                    <button type="button" class="krds-btn small text drop-btn active" aria-expanded="false">
+                    <button type="button" class="krds-btn small text drop-btn" aria-expanded="false">
                       지원 <i class="svg-icon ico-toggle"></i>
                     </button>
                     <div class="drop-menu">
                       <!-- <div class="drop-menu" style="display: none;"> -->
                       <div class="drop-in">
                         <ul class="drop-list">
-                          <a href="누리집 이용 안내_누리집안내지도.html" class="item-link">누리집 안내지도</a></li>
+                          <a href="누리집 이용 안내_누리집 안내지도.html" class="item-link">누리집 안내지도</a></li>
                           <a href="https://saas.go.kr/" class="item-link cloud" target="_blank"> 클라우드전문지원센터 <i class="svg-icon ico-go"></i></a></li>
                         </ul>
                       </div>
@@ -262,13 +262,13 @@ const headerAreaHtml = `
               <div class="menu-wrap">
                 <ul role="tablist">
                   <li role="none">
-                    <a href="#mGnb-anchor1" class="gnb-main-trigger active" role="tab" aria-selected="true" aria-controls="mGnb-anchor1" id="tab-0">소개</a>
+                    <a href="#mGnb-anchor1" class="gnb-main-trigger" role="tab" aria-selected="true" aria-controls="mGnb-anchor1" id="tab-0">소개</a>
                   </li>
                   <li role="none">
                     <a href="#mGnb-anchor2" class="gnb-main-trigger" role="tab" aria-selected="false" aria-controls="mGnb-anchor2" id="tab-1">서비스</a>
                   </li>
                   <li role="none">
-                    <a href="#mGnb-anchor3" class="gnb-main-trigger" role="tab" aria-selected="false" aria-controls="mGnb-anchor3" id="tab-2">공공용 민간 SaaS</a>
+                    <a href="#mGnb-anchor3" class="gnb-main-trigger" role="tab" aria-selected="false" aria-controls="mGnb-anchor3" id="tab-2">공공부문 민간 SaaS</a>
                   </li>
                   <li role="none">
                     <a href="#mGnb-anchor4" class="gnb-main-trigger" role="tab" aria-selected="false" aria-controls="mGnb-anchor4" id="tab-3">운영지원센터</a>
@@ -298,7 +298,7 @@ const headerAreaHtml = `
                 <div class="gnb-sub-list" id="mGnb-anchor2" role="tabpanel" aria-labelledby="tab-2">
                   <h2 class="sub-title">서비스</h2>
                   <ul>
-                    <a href="서비스_모바일 공무원증.html" class="gnb-sub-trigger">모바일공무원증</a></li>
+                    <a href="서비스_모바일공무원증.html" class="gnb-sub-trigger">모바일공무원증</a></li>
                     <a href="서비스_정부디렉터리(LDAP).html" class="gnb-sub-trigger">정부디렉터리(LDAP)</a></li>
                     <a href="서비스_행정표준코드.html" class="gnb-sub-trigger">행정표준코드</a></li>
                     <a href="서비스_행정전자서명(GPKI).html" class="gnb-sub-trigger">행정전자서명(GPKI)</a></li>
@@ -306,9 +306,9 @@ const headerAreaHtml = `
                   </ul>
                 </div>
                 <div class="gnb-sub-list" id="mGnb-anchor3" role="tabpanel" aria-labelledby="tab-3">
-                  <h2 class="sub-title">공공용 민간 SaaS</h2>
+                  <h2 class="sub-title">공공부문 민간 SaaS</h2>
                   <ul>
-                    <a href="공공용 민간 SaaS.html" class="gnb-sub-trigger">공공용 민간 SaaS</a></li>
+                    <a href="공공부문 민간 SaaS.html" class="gnb-sub-trigger">공공부문 민간 SaaS</a></li>
                   </ul>
                 </div>
                 <div class="gnb-sub-list" id="mGnb-anchor4" role="tabpanel" aria-labelledby="tab-4">

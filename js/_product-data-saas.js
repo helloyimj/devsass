@@ -18,7 +18,7 @@
 //           <div class="card-body">
 //             <div class="c-text">
 //               <div class="c-tit">
-//                 <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+//                 <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
 //                   <span class="product_name">${productData.name}</span>
 //                 </a>
 //               </div>
@@ -49,7 +49,7 @@
 //             <div class="card-btm">
 //               <div class="wrap_link_area">
 //                 <div class="link_area">
-//                   <span class="link_label">서비스 공식 사이트</span>
+//                   <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
 //                   <a href="${productData.officialSite}" target="_blank" class="krds-btn medium tertiary" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
 //                 </div>
 //                 <div class="link_area">
@@ -121,7 +121,7 @@
               <div class="card-btm">
                 <div class="wrap_link_area">
                   <div class="link_area">
-                    <span class="link_label">서비스 공식 사이트</span>
+                    <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                     <a href="${product.officialSite}" target="_blank" class="krds-btn medium tertiary"
                       title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                   </div>
@@ -167,7 +167,7 @@
 //     company: "(주)인조이웍스",
 //     tags: ["전자서명", "근로자 관리"],
 //     govText: "정부 공통시스템 연계",
-//     govTags: ["모바일 공무원증", "GPKI"],
+//     govTags: ["모바일공무원증", "GPKI"],
 //     csap: "표준",
 //     date: "2017.07.22 ~ 2026.07.21",
 //     infra: "네이버 클라우드(공공)",
@@ -205,7 +205,7 @@ const productData = {
     company: "(주)인조이웍스",
     tags: ["전자서명", "근로자 관리"],
     govText: "정부 공통시스템 연계",
-    govTags: ["모바일 공무원증", "GPKI"],
+    govTags: ["모바일공무원증", "GPKI"],
     csap: "표준",
     date: "2017.07.22 ~ 2026.07.21",
     infra: "네이버 클라우드(공공)",

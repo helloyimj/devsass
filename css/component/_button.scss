@@ -375,6 +375,10 @@ $mode-setting: light;
 				font-size: var(--krds-button--mobile-font-size-medium);
 				height: 4rem;
 				line-height: 4rem;
+				&.basic {
+					height: 2.4rem;
+					line-height: 2.4rem;
+				}
 			}
 			.svg-icon {
 				margin-bottom: -0.4rem;

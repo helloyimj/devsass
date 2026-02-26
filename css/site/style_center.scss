@@ -295,7 +295,7 @@
         .title {
           position: relative;
           padding-left: 2.2rem;
-          font-size: var(--krds-accordion--button-pc-font-size);
+          font-size: 1.8rem;
           color: var(--krds-accordion--button-color-text);
           font-weight: var(--krds-font-weight-bold);
 
@@ -315,7 +315,7 @@
 
       .accordion-body {
         padding: var(--krds-padding-10) 0 var(--krds-padding-10) 14rem;
-        background: var(--krds-light-color-surface-gray-subtle);
+        background-color: var(--krds-light-color-surface-gray-subtle) !important;
 
         .answer {
           position: relative;
@@ -341,6 +341,7 @@
             content: "A.";
             position: absolute;
             left: 0;
+            font-weight: 700;
           }
         }
       }
@@ -350,6 +351,13 @@
 
 /* 운영지원센터_기술지원 */
 .page_user_support {
+    
+  .wrap_article {
+      &:last-of-type {
+      margin-bottom: 0;
+  }
+  }
+
   .article_title {
     margin-bottom: var(--krds-pc-gap-layout-h1-h2);
   }
@@ -396,7 +404,7 @@
         padding-left: 10rem;
         flex-direction: column;
         justify-content: flex-start;
-        gap: var(--krds-gap-3);
+        gap: var(--krds-gap-9);
 
         &::before {
           content: "";
@@ -479,6 +487,7 @@
 
 /* 로그인 */
 .page_login {
+  color: var(--krds-color-light-gray-70);
   .article_title {
     margin: 0 0 var(--krds-pc-gap-layout-h1-h2);
 
@@ -495,11 +504,13 @@
       label {
         font-size: var(--krds-pc-font-size-label-small);
         line-height: 1.8;
+      	color: var(--krds-color-light-gray-70);
       }
 
       .label_info {
         color: var(--krds-light-color-text-subtle);
         font-size: var(--krds-pc-font-size-label-xsmall);
+        margin-top: 8px;
       }
 
       .form-conts.btn-ico-wrap {
@@ -526,11 +537,39 @@
         .krds-info-list {
           li {
             font-size: var(--krds-pc-font-size-body-medium);
+            color: var(--krds-color-light-gray-70);
           }
         }
       }
     }
   }
+  .save_id {
+    color: var(--krds-color-light-gray-95);
+  }
+}
+/* 로그인 - 2차인증 */
+.page_login {
+  .sub_txt {
+    margin-bottom: 8px;
+  }
+  .login_code {
+    margin-top: 8px;
+    font-size: var(--krds-pc-font-size-label-small);
+    line-height: 1.8;
+    color: var(--krds-color-light-gray-70);
+  }
+  .btn-wrap.full {
+        display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap: var(--krds-gap-5);
+    width: 100%;
+    .krds-btn {
+      width: stretch;
+    }
+  }
+
 }
 /* 로그인 - 모달 */
 .modal_login {
@@ -1289,6 +1328,9 @@
                   h3 {
                     color: var(--krds-light-color-text-bolder-inverse);
                     font-size: var(--krds-pc-font-size-heading-medium);
+                    @include size-medium {
+                      font-size: 18px;
+                    }
                   }
                 }
 
@@ -1773,7 +1815,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       align-items: self-start;
-      gap: var(--krds-gap-10);
+      gap: var(--krds-gap-9);
       .box_title {
         height: 6rem;
         border-radius: 1rem;
@@ -1792,7 +1834,7 @@
         }
       }
       .box_contents {
-        padding: var(--krds-padding-8);
+        padding: var(--krds-padding-9);
         border: 0.1rem solid var(--krds-light-color-border-gray-light);
         border-radius: var(--krds-radius-large2);
         background: var(--krds-light-color-background-white);
@@ -2477,6 +2519,7 @@
               content: "A.";
               position: absolute;
               left: 0;
+              font-weight: 700;
             }
           }
         }
@@ -2562,6 +2605,7 @@
           a {
             width: 100%;
             padding: 0 var(--krds-padding-6);
+            border-radius: .5rem;
           }
 
           // .jump_to {
@@ -3244,7 +3288,7 @@
           .wrap_process_lined {
             flex-direction: column;
             .item_title {
-              height: 4rem;
+              // height: 6.7rem;
               .title {
                 font-size: var(--krds-mobile-font-size-heading-small);
               }

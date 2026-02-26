@@ -22,7 +22,7 @@
   flex: 1;
 }
 #container > .inner {
-  min-height: 60rem;
+  min-height: 54rem;
 }
 #container > .inner:not(.in-between) {
   padding-bottom: var(--krds-pc-gap-layout-contents-footer);

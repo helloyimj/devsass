@@ -308,7 +308,7 @@ $mode-setting: light;
 	.krds-form-check-cnt {
 		margin-top: var(--krds-padding-2);
 		.krds-form-check-p {
-			color: var(--krds-form-check--additional-text-color-text);
+			color: var(--krds-#{$mode-setting}-color-light-gray-95);
 		}
 	}
 }

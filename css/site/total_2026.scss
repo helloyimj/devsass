@@ -3,10 +3,10 @@ html,
 body {
     //  height: 100%; 
     margin: 0;
-    color: #111;
+    // color: #111;
     // font-family: $font_regular;
     // font-size: 10px;
-    font-style: normal;
+    // font-style: normal;
     min-width: 100%;
     overflow-x: hidden;
     white-space: normal;
@@ -15,10 +15,6 @@ body {
 body * {
     box-sizing: border-box;
 }
-
-// body {
-//     font-size: 1.6rem;
-// }
 
 img {
     image-rendering: -moz-crisp-edges;
@@ -55,58 +51,6 @@ caption {
 [hidden] {
     display: none !important;
 }
-
-/* system common -> mixset.scss $SCSS 동일 class 추가 */
-// /* color system */
-// .color_white {
-//     color: $color_white !important;
-// }
-
-// .color_f5 {
-//     color: $color_f5 !important;
-// }
-
-// .color_aaa {
-//     color: $color_aaa !important;
-// }
-
-// .color_ddd {
-//     color: $color_ddd !important;
-// }
-
-// .color_eee {
-//     color: $color_eee !important;
-// }
-
-// .color_red {
-//     color: #f00 !important;
-// }
-
-// .color_black {
-//     color: $color_111 !important;
-// }
-
-// .color_blue {
-//     color: $color_brand_main !important;
-// }
-
-// .color_blue_light {
-//     color: $color_blue_light;
-// }
-
-// /* Color admin */
-// .color_mainA_indigo {
-//     color: $color_brand_main !important;
-// }
-
-// .color_mainA_duskblue {
-//     color: #26357c !important;
-// }
-
-// /* Color user */
-// .color_mainU_navy {
-//     color: $color_brand_main !important;
-// }
 
 .text_left {
     text-align: left !important;

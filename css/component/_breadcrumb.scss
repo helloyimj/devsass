@@ -95,6 +95,7 @@ $mode-setting: light;
 	.krds-breadcrumb-wrap {
 		padding-top: var(--krds-mobile-gap-layout-header-breadcrumb);
 		padding-bottom: var(--krds-mobile-gap-layout-breadcrumb-h2);
+		margin-bottom: var(--krds-number-12);
 		.breadcrumb {
 			li {
 				//모바일에서는 홈, 마지막 뎁스만 화면에 표시

@@ -368,7 +368,7 @@
 
     .article_title {
         .page_title_area {
-            width: 140rem;
+            max-width: 140rem;
             margin: 0 auto;
         }
     }
@@ -377,7 +377,7 @@
         margin-top: 0;
 
         .breadcrumbs {
-            width: 140rem;
+            max-width: 140rem;
             margin: 0 auto;
         }       
     }
@@ -387,7 +387,8 @@
         margin-bottom: 16rem;
 
         .contents_wrap {
-            width: 140rem;
+            width: 100%;
+            max-width: 140rem;
             margin: 0 auto;
         }
     
@@ -605,7 +606,7 @@
     }
 }
 
-// /* 연계한 민간 SaaS 카드 디자인 (소개 > 연계한 민간 SaaS / 전자정부 연계 SaaS 등에 삽입) */
+// /* 연계한 민간 SaaS 카드 디자인 (소개 > 연계한 민간 SaaS / 전자정부 연계 API 등에 삽입) */
 .case_card {
     max-width: 33.2rem;
     max-height: 42rem;
@@ -755,7 +756,7 @@
                 top: 50%;
                 transform: translateY(-50%);
                 right: 1.6rem;
-                font-family: $font_suit_medium;
+                font-family: $font_medium;
                 font-size: 1.5rem;
                 color: $color_white;
             }
@@ -1997,7 +1998,7 @@
       margin-bottom: 8rem;
     }
 
-    //전자정부 연계 SaaS 이용을 위해서는 다음 사항이 전제되어야 합니다.
+    //전자정부 연계 API 이용을 위해서는 다음 사항이 전제되어야 합니다.
     .article03 {
         background-color: $color_bg_f5;
         padding: 10rem 0;
@@ -2355,7 +2356,7 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    padding: var(--krds-padding-7);
+                    padding: var(--krds-padding-7) var(--krds-padding-5);
                     position: relative;
                     min-height: 9rem;
 
@@ -2603,7 +2604,7 @@
                 .col_double {
                   .procedure-krds {
                     .decimal {
-                      padding: 2rem 9rem;
+                      padding: 2rem 8rem;
                     }
                   }
                 }
@@ -2985,7 +2986,7 @@
   }
 }
 
-// /* 전자정부 연계 SaaS 공통 템플릿 */
+// /* 전자정부 연계 API 공통 템플릿 */
 // /* 서비스 공통 템플릿 */ 
 .page_govSaaS {
     .wrap_article, .wrap_article_contents {   
@@ -3457,7 +3458,7 @@
     }
 }
 
-// /* 전자정부 연계 SaaS 모바일 공무원증 */
+// /* 전자정부 연계 API 모바일공무원증 */
 .page_govSaaS.page_idCard {
     .contents_wrap .descript {
         padding-left: var(--krds-padding-7);
@@ -3480,7 +3481,7 @@
             }
         }
     }
-    // 모바일 공무원증 주요 제공 서비스
+    // 모바일공무원증 주요 제공 서비스
     
     .article03 {       
         .box_line_gray {
@@ -3508,7 +3509,7 @@
     }
 }
 
-// /* 전자정부 연계 SaaS 정부디렉터리 */
+// /* 전자정부 연계 API 정부디렉터리 */
 .page_govSaaS.page_dirSys {
     .article01 {
         .contents_wrap {
@@ -3577,8 +3578,13 @@
     }
 }
 
-// /* 전자정부 연계 SaaS 행정표준코드 */
+// /* 전자정부 연계 API 행정표준코드 */
 .page_govSaaS.page_codeSys {
+        .contents_wrap .descript {
+        padding-left: var(--krds-padding-7);
+        margin-bottom: var(--krds-padding-9);
+        font-size: var(--krds-pc-font-size-body-large);
+    }
     .article01 {
         .contents_wrap {
             &::before {
@@ -3845,7 +3851,7 @@
     }
 }
 
-// /* 전자정부 연계 SaaS 행정전자서명 */
+// /* 전자정부 연계 API 행정전자서명 */
 .page_govSaaS.page_gpki {
     .contents_wrap .descript {
         padding-left: var(--krds-padding-7);
@@ -3879,7 +3885,7 @@
     } 
 }
 
-// /* 전자정부 연계 SaaS 교육부 행정전자서명 */
+// /* 전자정부 연계 API 교육부 행정전자서명 */
 .page_govSaaS.page_epki {
   .article01 {
         .contents_wrap {
@@ -3948,6 +3954,11 @@
         }
       } 
     }
+.contents_wrap .descript {
+    padding-left: var(--krds-padding-7);
+    margin-bottom: var(--krds-padding-9);
+    font-size: var(--krds-pc-font-size-body-large);
+}
 } 
 
 /****************** 운영지원센터 *******************/
@@ -4130,7 +4141,7 @@
     }
 }
 
-// /* 공공용 민간 SaaS */
+// /* 공공부문 민간 SaaS */
 .page_saas_search {
 
     .wrap_btn_toggle {
@@ -4847,7 +4858,7 @@
   }
   
   }
-  // /* 공공용 민간 SaaS end */
+  // /* 공공부문 민간 SaaS end */
   
 // /* 프로덕트 카드 */
 .product_item {
@@ -5015,12 +5026,12 @@
 											background-color: $color_white;
 											border-radius: 1.4rem;
 
-											// /* 공공용 민간 SaaS 상세페이지 추가 시작 2025-02-05 */
+											// /* 공공부문 민간 SaaS 상세페이지 추가 시작 2025-02-05 */
 											&.connected {
 													background-color: $color_blue;
 													color: $color_white;
 											}
-											// /* 공공용 민간 SaaS 상세페이지 추가 끝 2025-02-05 */
+											// /* 공공부문 민간 SaaS 상세페이지 추가 끝 2025-02-05 */
 									}
 							}
 					}
@@ -5129,7 +5140,7 @@
 	}
 } 
 
-// /* 공공용 민간 SaaS - 상세페이지*/
+// /* 공공부문 민간 SaaS - 상세페이지*/
 .page_saas_detailPage {
     .wrap_article {
         margin-bottom: 8rem;
@@ -5208,7 +5219,7 @@
                 background-color: $color_white;
                 border: 1px solid $color_ccc;
                 border-radius: 1rem;
-                min-height: 27.4rem;
+                min-height: 22.6rem;
                 @include box_shadow_bl;
 
                 .wrap_text {
@@ -5298,7 +5309,7 @@
                     border-radius: 50%;                  
 
                     &::after {
-                        font-family: $font_suit_regular;
+                        font-family: $font_regular;
                         font-size: 2.4rem;
                         color: $color_brand_main;
                     }
@@ -5419,7 +5430,7 @@
         gap: 1.8rem;   
     }
     
-    // 연계한 민간 SaaS 카드 디자인 (소개 > 연계한 민간 SaaS / 전자정부 연계 SaaS 등에 삽입)
+    // 연계한 민간 SaaS 카드 디자인 (소개 > 연계한 민간 SaaS / 전자정부 연계 API 등에 삽입)
     .case_card {        
         .case_item_bottom {
             .wrap_office {
@@ -5718,7 +5729,7 @@
 
     // // /* 이용 절차 */
     .page_process {
-        //전자정부 연계 SaaS 이용을 위해서는 다음 사항이 전제되어야 합니다.
+        //전자정부 연계 API 이용을 위해서는 다음 사항이 전제되어야 합니다.
         .article03 {
             .contents_wrap {
                 padding: 8rem 2rem;
@@ -5847,7 +5858,7 @@
         }
     }
 
-    // // /* 전자정부 연계 SaaS 모바일 공무원증 */
+    // // /* 전자정부 연계 API 모바일공무원증 */
     .page_govSaaS.page_idCard {
         .article01 {
             .contents_wrap {
@@ -5867,7 +5878,7 @@
 
     }
 
-    // // /* 전자정부 연계 SaaS 정부디렉터리 */
+    // // /* 전자정부 연계 API 정부디렉터리 */
     .page_govSaaS.page_dirSys {
         .article01 {
             .contents_wrap {
@@ -5888,8 +5899,9 @@
         }
     }
 
-    // // /* 전자정부 연계 SaaS 행정표준코드 */
+    // // /* 전자정부 연계 API 행정표준코드 */
     .page_govSaaS.page_codeSys {
+
         .article01 {
             .contents_wrap {
                 &::before {               
@@ -5996,7 +6008,7 @@
 
     }
 
-    // /* 전자정부 연계 SaaS 행정전자서명 */
+    // /* 전자정부 연계 API 행정전자서명 */
     .page_govSaaS.page_gpki {
         .article01 {
             .contents_wrap {
@@ -6020,7 +6032,7 @@
         }
     }
     
-    // /* 전자정부 연계 SaaS 교육부 행정전자서명 */
+    // /* 전자정부 연계 API 교육부 행정전자서명 */
     .page_govSaaS.page_epki {
     .article01 {
       .contents_wrap {
@@ -6058,8 +6070,8 @@
         }
     }
 
-    /****************** 공공용 민간 SaaS *******************/
-    // /* 공공용 민간 SaaS */
+    /****************** 공공부문 민간 SaaS *******************/
+    // /* 공공부문 민간 SaaS */
     .page_saas_search {
         .wrap_result_table .box_table_top {
     .wrap_select {
@@ -6156,9 +6168,9 @@
     }
 
     }
-    // /* 공공용 민간 SaaS end */
+    // /* 공공부문 민간 SaaS end */
 
-    // /* 공공용 민간 SaaS - 상세페이지*/
+    // /* 공공부문 민간 SaaS - 상세페이지*/
     .page_saas_detailPage {
         // 프로덕트 카드
         .product_item {
@@ -6795,7 +6807,7 @@
         }
       }
 
-        //전자정부 연계 SaaS 이용을 위해서는 다음 사항이 전제되어야 합니다.
+        //전자정부 연계 API 이용을 위해서는 다음 사항이 전제되어야 합니다.
         .article03 {
           padding-top: var(--krds-padding-9);
           padding-bottom: var(--krds-padding-9);
@@ -7005,7 +7017,7 @@
         }
     }
 
-    // /* 전자정부 연계 SaaS 모바일 공무원증 */
+    // /* 전자정부 연계 API 모바일공무원증 */
     .page_govSaaS.page_idCard {
         .contents_wrap .descript {
             padding-left: 0;
@@ -7031,7 +7043,7 @@
         }
     }
 
-    // /* 전자정부 연계 SaaS 정부디렉터리 */
+    // /* 전자정부 연계 API 정부디렉터리 */
     .page_govSaaS.page_dirSys {
         .article01 {
             .contents_wrap {
@@ -7043,7 +7055,7 @@
         }
     }
 
-    // /* 전자정부 연계 SaaS 행정표준코드 */
+    // /* 전자정부 연계 API 행정표준코드 */
     .page_govSaaS.page_codeSys {
         .article01 {
             .contents_wrap {
@@ -7172,7 +7184,7 @@
       }
     }
 
-    // /* 전자정부 연계 SaaS 행정전자서명 */
+    // /* 전자정부 연계 API 행정전자서명 */
     .page_govSaaS.page_gpki {
         .contents_wrap .descript {
             padding-left: 0;
@@ -7191,7 +7203,7 @@
         }
     }
     
-    // /* 전자정부 연계 SaaS 교육부 행정전자서명 */
+    // /* 전자정부 연계 API 교육부 행정전자서명 */
     .page_govSaaS.page_epki {
       .article01 {
         .contents_wrap {
@@ -7242,8 +7254,8 @@
     }
 
 
-    /****************** 공공용 민간 SaaS *******************/
-    // /* 공공용 민간 SaaS */
+    /****************** 공공부문 민간 SaaS *******************/
+    // /* 공공부문 민간 SaaS */
     .page_saas_search {
 
         .wrap_result_table .box_table_top {
@@ -7724,9 +7736,9 @@
     }
 
     }
-    // /* 공공용 민간 SaaS end */
+    // /* 공공부문 민간 SaaS end */
 
-    // /* 공공용 민간 SaaS - 상세페이지*/
+    // /* 공공부문 민간 SaaS - 상세페이지*/
     .page_saas_detailPage {
         // 프로덕트 카드
         .product_item {
@@ -7866,12 +7878,12 @@
                                     background-color: $color_white;
                                     border-radius: 0.5rem;
             
-                                    // /* 공공용 민간 SaaS 상세페이지 추가 시작 2025-02-05 */
+                                    // /* 공공부문 민간 SaaS 상세페이지 추가 시작 2025-02-05 */
                                     &.connected {
                                         background-color: $color_blue;
                                         color: $color_white;
                                     }
-                                    // /* 공공용 민간 SaaS 상세페이지 추가 끝 2025-02-05 */
+                                    // /* 공공부문 민간 SaaS 상세페이지 추가 끝 2025-02-05 */
                                 }
                             }
                         }
@@ -7988,7 +8000,6 @@
     .page_centered {
         .wrap_article, .wrap_article_contents {
             // margin-bottom: 8rem;
-
             &:last-of-type {
                 margin-bottom: var(--krds-mobile-gap-layout-contents-footer);
             }
@@ -8021,7 +8032,7 @@
 
     // 페이지 상단 검색 영역
     .wrap_select_box {      
-        border-radius: 1rem; 
+        border-radius: var(--krds-radius-medium3);
 
         h3 {
             font-size: 1.8rem;
@@ -8070,7 +8081,7 @@
                         .box_title  {
                             top: -1.8rem;
                             width: 26rem;
-                            height: 3.6rem;
+                            height: 5.1rem;
                             border-radius: 1.8rem;
 
                             h5 {
@@ -8133,7 +8144,7 @@
                 width: 100%;
 
                 .item_title {
-                    height: 4rem;
+                    // height: 4rem;
 
                     > p {
                         font-size: 1.5rem;
@@ -8261,9 +8272,9 @@
     // /* 민간 SaaS 연계공통기반이란? */
     .page_governanceIntro {
         .box_title, .img_title {           
-            height: 3.6rem;  
+            height: 5.1rem;  
+            line-height: 5.1rem;
             border-radius: 1.8rem;
-            line-height: 3.6rem;
 
             h5, p {           
                 font-size: 1.6rem;
@@ -8921,7 +8932,7 @@
           }  
       }
 
-        //전자정부 연계 SaaS 이용을 위해서는 다음 사항이 전제되어야 합니다.
+        //전자정부 연계 API 이용을 위해서는 다음 사항이 전제되어야 합니다.
       .article03 {
         padding: 0 1.4rem;
 
@@ -9545,9 +9556,9 @@
                     width: 100%;
                     min-height: 12.4rem;
 
-                    .item_title {
-                        height: 4rem;
-                    }
+                    // .item_title {
+                    //     height: 4rem;
+                    // }
 
                     .item_txt {
                         height: calc(100% - 4rem);
@@ -9602,7 +9613,7 @@
                     left: 50%;
                     transform: translateX(-50%);
                     width: 24rem;
-                    height: 3.6rem;
+                    height: 5.1rem;
                     font-size: 1.6rem;
                 }
 
@@ -9742,7 +9753,7 @@
         }
     }
 
-    // // /* 전자정부 연계 SaaS 모바일 공무원증 */
+    // // /* 전자정부 연계 API 모바일공무원증 */
     .page_govSaaS.page_idCard {
         .article01 {
             .contents_wrap {
@@ -9804,7 +9815,7 @@
         }
     }
     
-    // // /* 전자정부 연계 SaaS 정부디렉터리 */
+    // // /* 전자정부 연계 API 정부디렉터리 */
     .page_govSaaS.page_dirSys {
         .article01 {
             .contents_wrap {
@@ -9869,7 +9880,7 @@
         }
     }
 
-    // // /* 전자정부 연계 SaaS 행정표준코드 */
+    // // /* 전자정부 연계 API 행정표준코드 */
     .page_govSaaS.page_codeSys {
         .article01 {
             .contents_wrap {
@@ -10015,7 +10026,7 @@
         }  
     }
 
-    // // /* 전자정부 연계 SaaS 행정전자서명 */
+    // // /* 전자정부 연계 API 행정전자서명 */
     .page_govSaaS.page_gpki {
         .article01 {
             .contents_wrap {
@@ -10060,7 +10071,7 @@
         }
     }
     
-    // // /* 전자정부 연계 SaaS 교육부 행정전자서명 */
+    // // /* 전자정부 연계 API 교육부 행정전자서명 */
     .page_govSaaS.page_epki {
       .article01 {
         .contents_wrap {
@@ -10083,7 +10094,7 @@
     }
 //   /****************** 서비스 끝 *******************/
 
-    // /****************** 운영지원센터 *******************/
+/****************** 운영지원센터 *******************/
     // // /* 기술 지원 */
     .page_user_support {
         .article_title {
@@ -10214,9 +10225,8 @@
         }
     }
 
-
-    // /****************** 공공용 민간 SaaS *******************/
-    // // /* 공공용 민간 SaaS - 상세페이지*/
+    // /****************** 공공부문 민간 SaaS *******************/
+    // // /* 공공부문 민간 SaaS - 상세페이지*/
     .page_saas_detailPage {
         // 프로덕트 카드
         .product_item {
@@ -10416,8 +10426,8 @@
 **********************************************************************************************************
 *********************************************************************************************************/
 @media all and (max-width: 620px) {
-    // /****************** 공공용 민간 SaaS *******************/
-    // // /* 공공용 민간 SaaS - 상세페이지*/
+    // /****************** 공공부문 민간 SaaS *******************/
+    // // /* 공공부문 민간 SaaS - 상세페이지*/
     .page_saas_detailPage {
         // 프로덕트 카드
         .product_item {
@@ -10552,7 +10562,7 @@
     }
     
 
-    // 연계한 민간 SaaS 카드 디자인 (소개 > 연계한 민간 SaaS / 전자정부 연계 SaaS 등에 삽입)
+    // 연계한 민간 SaaS 카드 디자인 (소개 > 연계한 민간 SaaS / 전자정부 연계 API 등에 삽입)
     // 슬라이드 안에 들은 카드
     .case_card {        
         width: 100%;     
@@ -10721,7 +10731,7 @@
 
  
 //    /****************** 서비스 시작  *******************/
-//     // /* 전자정부 연계 SaaS 공통 템플릿 */
+//     // /* 전자정부 연계 API 공통 템플릿 */
     .page_govSaaS {
         // 제공 기능     
         .article03 {
@@ -10745,7 +10755,7 @@
         }
     }
 
-    // // /* 전자정부 연계 SaaS 행정표준코드 */
+    // // /* 전자정부 연계 API 행정표준코드 */
     .page_govSaaS.page_codeSys {
         .article02 {                
             .cont_02 {               

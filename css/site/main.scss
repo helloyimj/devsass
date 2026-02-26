@@ -2,19 +2,19 @@
 @import "mixset";
 
 /* 메인페이지 공통 사항  */
-.content {
-  width: 100%;
-}
-
-.section {
-  margin-left: auto;
-}
-
 .page_main {
   width: 100%;
   padding: 0;
   margin: 0;
   background-color: $color_white;
+
+  .content {
+    width: 100%;
+  }
+
+  .section {
+    margin-left: auto;
+  }
 
   h1,
   h2,
@@ -98,9 +98,9 @@
   .only_pc {
     display: block;
   }
-}
 
 /* 스와이퍼 공통사항 */
+
 .swiper {
   img {
     // user-drag: none;
@@ -231,6 +231,7 @@
   position: relative;
 }
 
+}
 /* 메인 비주얼 */
 .main_visual {
   width: 100%;
@@ -1671,7 +1672,7 @@
     }
   }
 
-  /* 민간 SaaS 연계공통기반에서 제공 중인 연계 SaaS를 소개합니다. */
+  /* 민간 SaaS 연계공통기반에서 제공 중인 연계 API를 소개합니다. */
   .section_01 {
     .inner {
       padding-bottom: 0;

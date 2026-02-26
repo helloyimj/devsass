@@ -1,4 +1,6 @@
+@charset "UTF-8";
 @import "../common/include";
+@import "../site/mixset";
 
 //모드 설정
 $mode-setting: light;
@@ -2365,7 +2367,7 @@ a {
       color: var(--helper-refer-color-text);
       &::before {
         @include svg-icon($size: var(--krds-size-height-3), $effect: pure);
-        background-image: url(../img/component/icon/ico_notice_fill.svg);
+        background-image: url(../../img/component/icon/ico_notice_fill.svg);
       }
     }
     .helper-desc-wrap {
@@ -3084,7 +3086,7 @@ a {
       --helper-refer-color-desc: var(--krds-#{$mode-setting}-color-text-subtle);
       .helper-tit {
         &::before {
-          background-image: url(../img/component/icon/ico_notice_fill_high_contrast.svg);
+          background-image: url(../../img/component/icon/ico_notice_fill_high_contrast.svg);
         }
       }
 
@@ -3663,6 +3665,11 @@ a {
   min-width: auto;
   margin-bottom: 4rem;
 
+  @include size-medium {
+  margin-bottom: 2.4rem;
+  }
+  
+
   .sch-form-wrap {
     .krds-input {
       // width: 48.5rem;
@@ -4035,9 +4042,6 @@ a {
 }
 
 // 페이지 상단 검색바
-// 페이지 상단 검색바
-// 페이지 상단 검색바
-// 페이지 상단 검색바 ???
 
 .page,
 .page_content {
@@ -4048,7 +4052,7 @@ a {
       // background: var(--search-box-filter-color-background);
       padding: 3rem 10rem;
       margin-top: var(--krds-pc-gap-layout-h2-h3);
-      border-radius: 2rem;
+      border-radius: 1.6rem;
       background: linear-gradient(90deg, #585dc8 0%, #7250df 100%);
       color: #fff;
     }
@@ -4121,7 +4125,7 @@ a {
     }
   }
   .krds-pagination {
-    margin-top: 0;
+    margin-top: 16px;
     padding: 0 var(--krds-padding-9);
   }
 }
@@ -4169,6 +4173,7 @@ a {
 .search-between-conts {
   @include flex-layout();
   gap: var(--krds-pc-gap-layout-left-contents);
+
   .aside {
     //position: sticky;
     position: relative;
@@ -4205,6 +4210,46 @@ a {
   }
   .contents {
     flex: 1;
+  }
+
+  @include size-large-to-xlarge {
+    gap: 4rem;
+    .product_card .product_item_inner {
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .aside {
+      // width: 0;
+      flex-shrink: 1;
+    }
+  }
+
+  @include size-large-less {
+    gap: 2.5rem;
+
+    // .contents {
+    // .product_card {
+    //   .product_item_inner {
+    //     flex-direction: column;
+    //     .box_logo {
+    //       width: 100%;
+    //       margin: auto;
+    //     }
+
+    //     .box_txt {
+    //       padding-left: 0;
+    //     }
+
+    //     .b_box {
+    //       // width: max-content;
+    //       flex-direction: column;
+    //       flex-grow: 1;
+    //       width: 100%;
+    //       padding: 1.6rem 1.2rem;
+    //     }
+    //   }
+    // }
+    // }
   }
 }
 
@@ -4394,7 +4439,7 @@ a {
             display: inline-flex;
             @include pseudo();
             @include square(var(--krds-size-height-2));
-            background: url(#{$url}/img/component/icon/ico_arrow-right.svg) no-repeat center;
+            background: url(#{$url}/component/icon/ico_arrow-right.svg) no-repeat center;
             background-size: contain;
             margin-inline: var(--krds-gap-2);
           }
@@ -4407,6 +4452,12 @@ a {
     .btn-area {
       @include flex-layout($d: inline-flex, $ai: center);
       gap: var(--krds-gap-5);
+      .krds-btn.link.medium {
+        &.basic {
+					height: 3.2rem;
+					line-height: 3.2rem;
+				}
+      }
     }
   }
 }
@@ -4424,10 +4475,11 @@ a {
 
 // 통합검색 - 모바일 전용
 @include size-medium {
-  /* 통합검색 양쪽 배치 */
+  // /* 통합검색 양쪽 배치 */
   .search-between-conts {
     .aside {
       display: none;
+      width: 0;
     }
   }
 
@@ -4538,6 +4590,8 @@ a {
 .terms-agree-all {
   @include flex-layout($fd: column, $ai: normal);
   gap: var(--krds-gap-3);
+  font-size: 18px;
+
   .krds-form-check {
     input[type="checkbox"] {
       ~ label {
@@ -4549,6 +4603,7 @@ a {
   }
   .conts-desc {
     padding-left: var(--krds-padding-10);
+    color: var(--krds-color-light-gray-70);
   }
 }
 
@@ -5134,9 +5189,11 @@ a {
 
   margin-bottom: var(--krds-pc-gap-layout-h2-h3);
   font-size: var(--krds-pc-font-size-heading-large);
-  font-weight: var(--krds-font-weight-bold);
   letter-spacing: var(--krds-typo-letter-spacing-1);
   text-align: center;
+  h4 {
+  font-weight: var(--krds-font-weight-bold);
+  }
   .point {
     color: var(--comp-color-text-primary);
   }
@@ -5877,7 +5934,7 @@ a {
       gap: var(--krds-gap-5);
       .tit {
         flex: 1;
-        font-size: var(--krds-pc-font-size-heading-small);
+        font-size: var(--krds-pc-font-size-heading-medium);
       }
       .agree-navigation {
         display: inline-flex;
@@ -6182,11 +6239,8 @@ a {
   background-color: transparent;
   width: 30rem;
   height: 5.4rem;
-  //   line-height: 5.4rem;
   padding: 16px 52px 16px 24px;
   background-image: url("../../img/component/icon/ico_plus.svg");
-  //   background-color: #111;
-  //   background-image: url('../../img/icon/icon_plus_grey.svg');
   background-position: center right 24px;
   background-repeat: no-repeat;
   background-size: 2rem 2rem;
@@ -6194,10 +6248,6 @@ a {
   border-right: 1px solid #cdd1d5;
   font-size: 1.6rem;
   color: #111;
-
-  // .rel_link_sel {
-  // 	color: $color_black;
-  // }
 
   cursor: pointer;
   margin: 0;
@@ -6256,14 +6306,12 @@ a {
         mask-size: contain;
         mask-image: url(../../img/component/icon/ico_go.svg);
       }
-
-      //   &:hover {
-      //     color: $color_black;
-      //   }
     }
   }
   @include size-medium {
     width: 100%;
+    border-left: none;
+    border-right: none;
     ul {
       width: 100%;
       border-right: none;
@@ -6306,9 +6354,60 @@ a {
 .filter_row {
   display: flex;
   align-items: center;
+  gap: 16px;
   // gap: 8px;
   width: 100%;
 }
+
+ /* 통합검색 검색기간 */
+  .search-top-box .krds-check-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+
+    /* 개별 칩 컨테이너 */
+    .krds-form-chip {
+      display: flex;
+      flex: 0 0 calc(20% - 16px);
+      min-width: 87px;           
+    }
+
+    label {      
+    width: 100%;           
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    margin: 0
+    }
+    
+// @mixin size-large-to-xlarge {
+//     display: grid;
+//     align-items: center;
+//     gap: 16px;
+//     grid-template-columns: repeat(5, 1fr);
+//     // .krds-form-chip {
+//     // }
+//   }
+
+  // @include size-medium-to-large {
+  //   gap: 8px;
+  // }
+@include size-medium {
+  gap: 8px;
+    .krds-form-chip {
+      flex: 0 0  calc(33.33% - 8px);
+      label {
+        width: 100%;
+        min-width: 90px;
+      }
+    }
+    }
+  }
 
 /* 1, 2번 라디오 고정 */
 .filter_radio {
@@ -6416,7 +6515,6 @@ a {
     }
 
     .sch-form-wrap.wrap_search_saas {
-
       @include size-medium {
         gap: 10px;
 
@@ -6440,12 +6538,6 @@ a {
             height: 4rem;
           }
         }
-
-        .form-tit {
-          label {
-            font-size: 14px;
-          }
-        }
       }
     }
   }
@@ -6461,11 +6553,17 @@ a {
   &.input {
     width: 100%;
   }
+  .form-tit {
+    label {
+      font-size: 14px;
+    }
+  }
 }
 
 .group_input_conts {
   .krds-btn {
     width: 11.4rem;
+    font-size: 20px;
   }
   .input-group {
     gap: 10px;
@@ -6499,9 +6597,9 @@ a {
 }
 
 /*  krds-structured-list custom*/
-
-.krds-tab-area .product_list .product_list {
- margin-top: 4rem;
+.page_product .krds-tab-area .product_list {
+  margin-top: 4rem;
+  width: 100%;
 }
 
 .product_list {
@@ -6511,6 +6609,7 @@ a {
 }
 
 .product_card {
+  width: 100%;
   .product_item {
     padding: 4rem;
     background-color: #fff;
@@ -6522,6 +6621,8 @@ a {
   .product_item_inner {
     display: flex;
     gap: 4rem;
+    flex-wrap: wrap;
+    width: 100%;
 
     .box_logo {
       background-color: #fff;
@@ -6606,6 +6707,7 @@ a {
       }
 
       .tags {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: var(--krds-gap-3);
@@ -6673,13 +6775,6 @@ a {
         font-weight: bold;
       }
     }
-    @include size-medium {
-      gap: 1.6rem;
-
-      .krds-btn.medium {
-        width: 16.4rem;
-      }
-    }
   }
 
   .detail_organization {
@@ -6726,32 +6821,41 @@ a {
 }
 
 @include size-medium {
+
   .product_card {
     .product_item {
-      padding: 4rem;
-      background-color: #fff;
-      border: 1px solid #b1b8be;
-      border-radius: 1.2rem;
-      display: flex;
+      padding: 2.4rem;
+      border-radius: .8rem;
     }
 
     .product_item_inner {
       gap: 16px;
+      flex-direction: column;
+      width: 100%;
 
       .box_logo {
         width: 100%;
+        max-height: 16.8rem;
+        min-height: 16.8rem;
         border-radius: 0.8rem;
+        img {
+          max-width: 224px;
+        }
       }
 
-      .tags {
-        gap: 8px 8px;
-      }
+      // .tags {
+      //   gap: 8px 8px;
+      // }
 
       .b_box {
+        flex-wrap: wrap;
         width: 100%;
         flex-direction: column;
         align-items: normal;
         padding: 12px;
+        gap: 12px;
+        // border-radius: 8px;
+        border-radius: var(--krds-radius-medium3);
 
         .before_mark {
           padding-left: 2.6rem;
@@ -6762,8 +6866,9 @@ a {
           text-align: left;
 
           &.medal_icon {
-            background-position: left top;
+            background-position: left top 4px;
           }
+          
           span {
             width: 100%;
             margin-left: 0;
@@ -6772,7 +6877,32 @@ a {
       }
     }
 
-    .wrap_detail_info {
+      .wrap_detail_info {
+    padding-right: 0;
+    .detail_info_list {
+      max-width: unset;
+      width: 100%;
+      // gap: 1.6rem 2.4rem;
+      // flex-direction: column;
+      .detail_info_list_item {
+        // min-width: auto;
+        padding-right: 0;
+        // font-size: 1.6rem;
+      }
+    }
+  }
+
+    .wrap_link_area {
+      flex-wrap: wrap;
+      .link_area {
+        width: 100%;
+        // justify-content: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+    }
+
+    .wrap_link_area .wrap_detail_info {
       padding-right: none;
       .detail_info_list {
         gap: 1.2rem 0;
@@ -6780,6 +6910,86 @@ a {
     }
   }
 }
+
+// @include size-medium {
+//   .product_card {
+
+//     .product_item {
+//       padding: 4rem;
+//       background-color: #fff;
+//       border: 1px solid #b1b8be;
+//       border-radius: 1.2rem;
+//       display: flex;
+//     }
+
+//     .product_item_inner {
+//       gap: 16px;
+
+//       .box_logo {
+//         width: 100%;
+//         border-radius: 0.8rem;
+//       }
+
+//       .tags {
+//         gap: 8px 8px;
+//       }
+
+//       .b_box {
+//         width: 100%;
+//         flex-direction: column;
+//         align-items: normal;
+//         padding: 12px;
+
+//         .before_mark {
+//           padding-left: 2.6rem;
+//           display: flex;
+//           flex-direction: column;
+//           flex-wrap: wrap;
+//           align-items: normal;
+//           text-align: left;
+
+//           &.medal_icon {
+//             background-position: left top;
+//           }
+//           span {
+//             width: 100%;
+//             margin-left: 0;
+//           }
+//         }
+//       }
+//     }
+
+//     .wrap_detail_info {
+//       padding-right: none;
+//       .detail_info_list {
+//         gap: 1.2rem 0;
+//       }
+//     }
+//   }
+//   }
+
+// @include size-medium-to-large {
+//   .product_card {
+//     .product_item_inner {
+//       flex-direction: column;
+//       .box_logo {
+//         margin: auto;
+//       }
+
+//       .box_txt {
+//         padding-left: 0;
+//       }
+
+//       .b_box {
+//         width: max-content;
+//         flex-direction: column;
+//         flex-grow: 1;
+//         width: 100%;
+//         padding: 1.6rem 1.2rem;
+//       }
+//     }
+//   }
+// }
 
 /* 공공용 saas 상세 페이지 */
 .page_product_detail {
@@ -6832,9 +7042,10 @@ a {
       margin-top: 24px;
     }
   }
+  .conts-wrap .conts-wrap h3.sec-tit {
+    font-size: var(--krds-pc-font-size-heading-medium);
+}
 
-  // .conts-wrap .conts-wrap h3.sec-tit ~ .conts-wrap {
-  // }
   @include size-medium {
     padding: 0;
   }
@@ -6851,6 +7062,10 @@ a {
   @include size-medium {
     margin-top: 3.2rem;
     margin-bottom: 2.4rem;
+  }
+  &.mb_none {
+    margin-bottom: 0;
+    border-bottom: none;
   }
 }
 .total-search-list + .tab_conts_tit {
@@ -7036,8 +7251,9 @@ a {
         width: 100%;
       }
 
-      .krds-btn.text:active, .krds-btn.text:focus {
-          background-color: #0F174D;
+      .krds-btn.text:active,
+      .krds-btn.text:focus {
+        background-color: #0f174d;
       }
     }
   }
@@ -7072,7 +7288,7 @@ a {
     }
 
     .search-top-box .sch-form-wrap .krds-btn.medium {
-          width: 7.8rem;
+      width: 7.8rem;
     }
 
     // /* 상세검색 버튼 */
@@ -7099,35 +7315,7 @@ a {
     .filter_wrap {
       flex-direction: column;
       gap: 16px;
-    }
-
-    .krds-check-area {
-      gap: 8px;
-      flex-wrap: wrap;
-
-      .krds-form-chip {
-        display: flex;
-        width: auto;
-        flex: 1 1 0;
-
-        width: auto !important;
-        flex: 0 0 auto !important;
-        min-width: 0 !important;
-
-        label {
-          flex: 0 0 auto;
-          // flex-grow: 1;
-        }
-      }
-      .krds-form-chip input[type="radio"] ~ label,
-      .krds-form-chip input[type="checkbox"] ~ label {
-        height: 40px;
-        min-width: 0;
-        width: auto;
-        padding: 0 4px;
-        gap: 0;
-      }
-    }
+    }    
 
     // /* 상단 라벨 */
     .filter_label {
@@ -7136,13 +7324,13 @@ a {
       // flex-shrink: 0;
     }
 
-    // /* 핵심 flex 라인 */
     .filter_row {
+      display: flex;      
       flex-direction: column;
       align-items: flex-start;
-      gap: 16px;
-      // display: flex;
-      // width: 100%;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 8px;
     }
 
     .filter_radio {
@@ -7150,7 +7338,7 @@ a {
       align-items: flex-start;
       // justify-content: center;
       flex: 0 0 16px; // 늘어나지도 줄어들지도 않음
-      width: unset; // 고정 너비
+      width: 100%; // 고정 너비
     }
 
     /* 3번 검색 영역 */
@@ -7194,6 +7382,7 @@ a {
     .search-top-box {
       .sch-form-wrap {
         // width: 100%;
+        min-width: 2rem; // ??
         .input-group {
           flex-direction: row;
 
@@ -7206,6 +7395,7 @@ a {
 
       .sch-filter-box {
         padding: 2rem;
+        border-radius: var(--krds-radius-medium2);
       }
     }
 

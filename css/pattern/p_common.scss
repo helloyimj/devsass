@@ -117,14 +117,14 @@ $mode-setting: light;
 //     .f-logo {	
 //         &.sample {
 //             @include square(20rem, 4.8rem);
-//             background-image: url(#{$url}/../img/logo/logo_saas.png);
+//             background-image: url(#{$url}/img/logo/logo_saas.png);
 //         }       
 //     }
 //     //운영기관식별자
 //     .krds-identifier {
 //         .logo {
 //             &.sample {
-//                 background-image: url(#{$url}/../img/logo/logo_saas.png);
+//                 background-image: url(#{$url}/img/logo/logo_saas.png);
 //             }
 //         }
 //     }
@@ -135,7 +135,7 @@ $mode-setting: light;
 //             &.sample {
 //                 @include square(20rem, 4.8rem);
 //                 a {
-//                     background-image: url(#{$url}/../img/logo/logo_saas.png);
+//                     background-image: url(#{$url}/img/logo/logo_saas.png);
 //                 }
 //             }
 //         }
@@ -163,11 +163,11 @@ $mode-setting: light;
 /* ** 페이지 타이틀 ** */
 .page-title-wrap {
     @include flex-layout($d: flex, $fd: column, $ai: normal);
-    margin-bottom: var(--krds-pc-gap-layout-h2-h3);
+    margin-bottom: var(--krds-number-16);
     gap: var(--krds-pc-gap-layout-title-body-large);
 
     @include size-medium {
-        margin-bottom: var(--krds-mobile-gap-layout-h2-h3);
+        margin-bottom: var(--krds-number-12);
         gap: var(--krds-mobile-gap-layout-title-body-large);
     }
     .h-tit {

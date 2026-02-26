@@ -2,7 +2,7 @@
 /* 사이드 버튼 top 버튼 */
 .wrap_side_btn {
   position: fixed;
-  z-index: 10;
+  z-index: 60;
   right: 4rem;
   bottom: 8rem;
   display: flex;
@@ -49,6 +49,7 @@
   padding: 2rem 7rem 2rem 2rem;
   opacity: 0;
   transition: all 0.2s ease;
+  display: none;
 }
 .wrap_side_btn .btn_side_sup:hover p, .wrap_side_btn .btn_side_sup.active p {
   opacity: 1;
@@ -66,6 +67,15 @@
 }
 .wrap_side_btn .btn_side_sup.btn_side_sup03 {
   background: #0f174d;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+.wrap_side_btn .btn_side_sup.btn_side_sup03.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 .wrap_side_btn .btn_side_sup.btn_side_sup03::after {
   background-image: url("../../img/icon/icon_top.svg");

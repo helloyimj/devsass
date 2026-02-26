@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* opacity color */
-/* font color */
-/* Bg, border color */
 .flex_center {
   position: relative;
   display: flex;
@@ -10,7 +7,6 @@
   width: 100%;
 }
 
-/* font size */
 /* 공통 style */
 .m_block {
   display: none;

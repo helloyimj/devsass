@@ -85,17 +85,20 @@
 	font-size: var(--krds-form-chip--pc-font-size-#{$size});
 	color: var(--krds-form-chip--color-text);
 	transition: .4s cubic-bezier(.4, .0, .23, 1);
+
 	@include size-medium {
 		font-size: var(--krds-form-chip--mobile-font-size-#{$size});
+		width: auto;
 	}
+
 }
 //check icon 정의
 @mixin form-chip-check($size, $mode: light) {
 	@include svg-icon($size: var(--krds-form-chip--check-size-#{$size}), $mode: #{$mode});
-	// @include icon-set(ico_checkbox);
-	// background-color: var(--krds-form-chip--color-check);
-	background-color: transparent;
-	// transition: .4s cubic-bezier(.4, .0, .23, 1);
+	@include icon-set(ico_checkbox);
+	background-color: var(--krds-form-chip--color-check);
+	// background-color: transparent;
+	transition: .4s cubic-bezier(.4, .0, .23, 1);
 
 }
 
@@ -114,13 +117,13 @@ $mode-setting: light;
 			align-items: center;
 			position: relative;
 			@include form-chip(#{$size});
-
+			
 
 			&:before {
 				@include pseudo();
 				@include form-chip-check($size: #{$size}, $mode: #{$mode-setting});
-// background-color: transparent;
-// color: transparent;
+				// background-color: transparent;
+				// color: transparent;
 			}
 		}
 		&:disabled {

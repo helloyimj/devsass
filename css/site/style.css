@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* opacity color */
-/* font color */
-/* Bg, border color */
 .flex_center {
   position: relative;
   display: flex;
@@ -10,13 +7,11 @@
   width: 100%;
 }
 
-/* font size */
 /* custom base style */
 html, body {
   margin: 0;
-  color: #111;
-  font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-style: normal;
+  min-width: 100%;
+  overflow-x: hidden;
   white-space: normal;
 }
 
@@ -682,10 +677,6 @@ caption {
 
 /* 769px ~ 1024px 까지 */
 @media all and (max-width: 1024px) {
-  body {
-    height: 100dvh;
-    min-height: 100vh;
-  }
   .only_pc {
     display: none !important;
   }

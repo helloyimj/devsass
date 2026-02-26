@@ -1,138 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>1단계 유형 선택&lt;회원가입&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-  <title>1단계 유형 선택&lt;회원가입&lt;민간 Sass 연계공통기반 통합관리포털</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/output.css" />
 
-  <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../css/output.css" />
+    <!-- script -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/plugin/swiper-bundle.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script defer src="../js/component/ui-script.js"></script>
+    <script defer src="../js/pattern/pattern.js"></script>
+    <script defer src="../js/nav.js"></script>
+    <script defer src="../js/app.js"></script>
+  </head>
 
-  <!-- script -->
-  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-  <script src="../js/plugin/swiper-bundle.min.js"></script>
-  <script src="../js/aos.js"></script>
-  <script defer src="../js/component/ui-script.js"></script>
-  <script defer src="../js/pattern/pattern.js"></script>
-  <script defer src="../js/nav.js"></script>
-  <script defer src="../js/app.js"></script>
+  <body>
+    <div id="wrapper">
+      <!-- 컨테이너 영역 -->
+      <div id="container">
+        <!-- breadcrumb -->
+        <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
+          <ol class="breadcrumb">
+            <li class="home"><a href="main.html" class="txt" target="_self" title="메인 페이지로 이동">홈</a></li>
+          </ol>
+        </nav>
+        <!-- // breadcrumb -->
 
-</head>
-
-<body>
-  <div id="wrapper">
-
-    <!-- 컨테이너 영역 -->
-    <div id="container">
-
-      <!-- breadcrumb -->
-      <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
-        <ol class="breadcrumb">
-          <li class="home"><a href="main.html" class="txt" target="_self" title="메인 페이지로 이동">홈</a></li>
-        </ol>
-      </nav>
-      <!-- // breadcrumb -->
-
-      <!-- 컨텐츠 영역 -->
-      <div class="inner narrow">
-        <!-- 페이지 타이틀 영역 -->
-        <div class="page-title-wrap">
-          <h1 class="h-tit">회원가입</h1>
-        </div>
-        <!-- //페이지 타이틀 영역 -->
-        <div class="page_content page_signup page-step">
-
-          <div class="article_title">
-            <!-- step indicator -->
-            <!-- 스텝 -->
-            <ol class="krds-step-wrap">
-              <li class="active">
-                <span>
-                  <em class="sr-only">현재단계</em>
-                  <i class="step">1단계</i>
-                  <span class="step-tit">유형 선택</span>
-                </span>
-              </li>
-              <li class="step">
-                <span>
-                  <i class="step">2단계</i>
-                  <span class="step-tit">약관 동의</span>
-                </span>
-              </li>
-              <li class="step">
-                <span>
-                  <i class="step">3단계</i>
-                  <span class="step-tit">사전 체크리스트</span>
-                </span>
-              </li>
-              <li class="step">
-                <span>
-                  <i class="step">4단계</i>
-                  <span class="step-tit">정보 입력</span>
-                </span>
-              </li>
-              <li class="step">
-                <span>
-                  <i class="step">5단계</i>
-                  <span class="step-tit">신청 완료</span>
-                </span>
-              </li>
-            </ol>
-            <!-- //스텝 -->
+        <!-- 컨텐츠 영역 -->
+        <div class="inner narrow">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-title-wrap">
+            <h1 class="h-tit">회원가입</h1>
           </div>
+          <!-- //페이지 타이틀 영역 -->
+          <div class="page_content page_signup page-step">
+            <div class="article_title">
+              <!-- step indicator -->
+              <!-- 스텝 -->
+              <ol class="krds-step-wrap">
+                <li class="active">
+                  <span>
+                    <em class="sr-only">현재단계</em>
+                    <i class="step">1단계</i>
+                    <span class="step-tit">유형 선택</span>
+                  </span>
+                </li>
+                <li class="step">
+                  <span>
+                    <i class="step">2단계</i>
+                    <span class="step-tit">약관 동의</span>
+                  </span>
+                </li>
+                <li class="step">
+                  <span>
+                    <i class="step">3단계</i>
+                    <span class="step-tit">사전 체크리스트</span>
+                  </span>
+                </li>
+                <li class="step">
+                  <span>
+                    <i class="step">4단계</i>
+                    <span class="step-tit">정보 입력</span>
+                  </span>
+                </li>
+                <li class="step">
+                  <span>
+                    <i class="step">5단계</i>
+                    <span class="step-tit">신청 완료</span>
+                  </span>
+                </li>
+              </ol>
+              <!-- //스텝 -->
+            </div>
 
-          <!-- 콘텐츠 영역 -->
-          <div class="article_content step-type">
-            <h3 class="sec-tit">
-              <span class="step-now">
-                <strong class="active">1단계</strong>
-                / 5단계
-              </span>
-              유형 선택
-            </h3>
-            <div class="txt-box bg-white">
-              <h4 class="box-tit1">소속되어 있는 기관의 유형을 선택해주세요.</h4>
-              <div class="box-cnt">
-                <div class="box-sec">
-                  <div class="form-group">
-                    <div class="form-conts">
-                      <div class="krds-check-area chk-column">
-                        <div class="krds-form-check large">
-                          <input type="radio" name="rdo_1" id="rdo_1-1">
-                          <label for="rdo_1-1">민간 SaaS 담당자</label>
-                          <div class="krds-form-check-cnt">
-                            <p class="krds-form-check-p">
-                              전자정부 연계 SaaS를 이용하려는 민간 SaaS 기업 담당자
-                            </p>
+            <!-- 콘텐츠 영역 -->
+            <div class="article_content step-type">
+              <h3 class="sec-tit">
+                <span class="step-now">
+                  <strong class="active">1단계</strong>
+                  / 5단계
+                </span>
+                유형 선택
+              </h3>
+              <div class="txt-box bg-white">
+                <h4 class="box-tit1">소속되어 있는 기관의 유형을 선택해주세요.</h4>
+                <div class="box-cnt">
+                  <div class="box-sec">
+                    <div class="form-group">
+                      <div class="form-conts">
+                        <div class="krds-check-area chk-column">
+                          <div class="krds-form-check large">
+                            <input type="radio" name="rdo_1" id="rdo_1-1" />
+                            <label for="rdo_1-1">민간 SaaS 담당자</label>
+                            <div class="krds-form-check-cnt">
+                              <p class="krds-form-check-p">전자정부 연계 API를 이용하려는 민간 SaaS 기업 담당자</p>
+                            </div>
                           </div>
-                        </div>
-                        <div class="krds-form-check large">
-                          <input type="radio" name="rdo_1" id="rdo_1-2">
-                          <label for="rdo_1-2">이용기관 담당자</label>
-                          <div class="krds-form-check-cnt">
-                            <p class="krds-form-check-p">
-                              민간 SaaS를 이용하는 행정·공공기관 담당자
-                            </p>
+                          <div class="krds-form-check large">
+                            <input type="radio" name="rdo_1" id="rdo_1-2" />
+                            <label for="rdo_1-2">이용기관 담당자</label>
+                            <div class="krds-form-check-cnt">
+                              <p class="krds-form-check-p">민간 SaaS를 이용하는 행정·공공기관 담당자</p>
+                            </div>
                           </div>
-                        </div>
-                        <div class="krds-form-check large">
-                          <input type="radio" name="rdo_1" id="rdo_1-3">
-                          <label for="rdo_1-3">정보보유기관 담당자</label>
-                          <div class="krds-form-check-cnt">
-                            <p class="krds-form-check-p">
-                              전자정부 연계 SaaS에 데이터를 제공하는 원천 기관 담당자
-                            </p>
+                          <div class="krds-form-check large">
+                            <input type="radio" name="rdo_1" id="rdo_1-3" />
+                            <label for="rdo_1-3">정보보유기관 담당자</label>
+                            <div class="krds-form-check-cnt">
+                              <p class="krds-form-check-p">전자정부 연계 API에 데이터를 제공하는 원천 기관 담당자</p>
+                            </div>
                           </div>
-                        </div>
-                        <div class="krds-form-check large">
-                          <input type="radio" name="rdo_1" id="rdo_1-4">
-                          <label for="rdo_1-4">CSP 담당자</label>
-                          <div class="krds-form-check-cnt">
-                            <p class="krds-form-check-p">
-                              클라우드 서비스 제공 업체 담당자
-                            </p>
+                          <div class="krds-form-check large">
+                            <input type="radio" name="rdo_1" id="rdo_1-4" />
+                            <label for="rdo_1-4">CSP 담당자</label>
+                            <div class="krds-form-check-cnt">
+                              <p class="krds-form-check-p">클라우드 서비스 제공 업체 담당자</p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -141,23 +129,18 @@
                 </div>
               </div>
             </div>
-
+            <!-- //콘텐츠 영역 -->
+            <!-- 페이지 버튼 영역 -->
+            <div class="page-btn-wrap">
+              <!-- <button type="button" class="krds-btn xlarge primary" onclick="location.href=''" disabled>다음으로</button> -->
+              <button type="button" class="krds-btn xlarge primary" onclick="location.href = '회원가입 2단계 약관 동의.html'">다음으로</button>
+            </div>
+            <!-- //페이지 버튼 영역 -->
           </div>
-          <!-- //콘텐츠 영역 -->
-          <!-- 페이지 버튼 영역 -->
-          <div class="page-btn-wrap">
-            <button type="button" class="krds-btn xlarge primary" onclick="location.href=''" disabled>다음으로</button>
-            <!-- <button type="button" class="krds-btn xlarge primary" onclick="location.href='회원가입 2단계 약관 동의.html'">다음으로</button> -->
-          </div>
-          <!-- //페이지 버튼 영역 -->
         </div>
-
+        <!-- //컨텐츠 영역 -->
       </div>
-      <!-- //컨텐츠 영역 -->
+      <!-- //컨테이너 영역 -->
     </div>
-    <!-- //컨테이너 영역 -->
-  </div>
-
-</body>
-
+  </body>
 </html>

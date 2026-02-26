@@ -46,42 +46,27 @@
                   <div class="login-wrap">
                     <fieldset>
                       <legend>로그인 폼</legend>
+
+                      <!-- <p class="sub_txt">가입하신 휴대폰 번호로 2차 인증 코드가 전송되었습니다.<br>
+                      인증 코드를 입력하세요.</p>
+                    <p class="sub_txt">인증 코드의 유효 시간은 5분 입니다.</p> -->
                       <div class="fieldset">
                         <div class="form-group">
                           <div class="form-tit">
-                            <label for="login_id">아이디&lpar;이메일&rpar;</label>
+                            <label for="login_code"
+                              >가입하신 휴대폰 번호로 2차 인증 코드가 전송되었습니다.<br />
+                              인증 코드를 입력하세요.<br />
+                            </label>
+                            <p class="login_code">인증 코드의 유효 시간은 5분 입니다.</p>
                           </div>
                           <div class="form-conts">
-                            <!-- is-error 클래스를 추가하면 에러 표시가 나타납니다 -->
-                            <input type="text" id="login_id" class="krds-input" autocomplete="on" placeholder="아이디를 입력하세요" />
+                            <input type="number" id="login_code" class="krds-input" autocomplete="on" placeholder="인증 코드 입력" />
                           </div>
+                          <p class="form-hint-invalid">인증 코드를 입력해 주세요.</p>
                         </div>
-                        <!-- [중요] 반드시 확인하시기 바랍니다. -->
-                        <!-- <p class="form-hint-invalid">아이디는 이메일 형식으로 입력해 주세요.</p> -->
-                        <div class="form-group">
-                          <div class="form-tit">
-                            <label for="login_pw">비밀번호</label>
-                            <p class="label_info">8~15자의 영문자, 숫자를 입력해주세요. (대소문자 구분)</p>
-                          </div>
-                          <div class="form-conts btn-ico-wrap">
-                            <input type="password" id="login_pw" class="krds-input" placeholder="비밀번호를 입력하세요" />
-                            <button type="button" class="krds-btn medium icon" aria-pressed="false">
-                              <span class="sr-only">입력한 비밀번호 보기</span>
-                              <i class="svg-icon ico-pw-visible"></i>
-                              <i class="svg-icon ico-pw-visible-on"></i>
-                            </button>
-                          </div>
-                          <p class="form-hint-invalid">비밀번호가 일치하지 않습니다.</p>
-                        </div>
-                        <div class="form-group krds-check-area">
-                          <div class="krds-form-check">
-                            <input type="checkbox" name="save_id" id="save_id" />
-                            <label for="save_id" class="save_id">이메일 기억하기</label>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <!-- [중요] 조건 충족시 버튼이 활성화 -->
-                          <button type="submit" class="krds-btn large primary disabled">로그인</button>
+                        <div class="btn-wrap full">
+                          <button type="button" class="krds-btn xlarge tertiary">이전으로</button>
+                          <button type="button" class="krds-btn xlarge primary">인증하기</button>
                         </div>
                         <div class="form-group">
                           <ul class="link-group">
@@ -95,8 +80,6 @@
                   <div class="login-info-wrap">
                     <ul class="krds-info-list decimal">
                       <li>서비스 이용 후 반드시 로그아웃해주세요.</li>
-                      <li>비밀번호는 주기적으로 변경해주세요.</li>
-                      <li>비밀번호는 영문자, 숫자를 조합한 8~15자입니다. (대소문자 구별)</li>
                     </ul>
                   </div>
                 </div>

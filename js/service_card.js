@@ -1,5 +1,5 @@
 /************************************* 개별 서비스 카드 *************************************/
-/* '자세히 보기'는 각 서비스별 공공용 민간 SaaS 상세 보기 페이지로 연결 */
+/* '자세히 보기'는 각 서비스별 공공부문 민간 SaaS 상세 보기 페이지로 연결 */
 
 /* 카드 공통 컴포넌트 */
 // 상단 뱃지, 로고 사진, 링크
@@ -75,44 +75,32 @@ function createTooltipHTML(t, index) {
 </div>`;
 }
 
-/* $(document).ready(function () {
-  $(".case_card").each(function () {
-    const $card = $(this);
-
-    const key = Object.keys(CARD_DATA).find(k =>
-      $card.hasClass(k)
-    );
-    if (!key) return;
-
-    const html = createCardHTML(CARD_DATA[key]);
-    $card.html(html);
-  });
-
-  // 카드 DOM 생성 후 KRDS 초기화
-  window.krds_contextualHelp?.init?.();
-});
- */
-
 
 /* =========================
    초기화
 ========================= */
-$(document).ready(function () {
-  $(".case_card").each(function () {
-    const $card = $(this);
-    const key = Object.keys(CARD_DATA).find(k => $card.hasClass(k));
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. .case_card 요소들을 모두 선택하여 반복문 실행
+  const caseCards = document.querySelectorAll('.case_card');
+
+  caseCards.forEach((card) => {
+    // 2. CARD_DATA의 키 중 해당 카드가 클래스로 가지고 있는 키 탐색
+    const key = Object.keys(CARD_DATA).find((k) => card.classList.contains(k));
+
     if (!key) return;
 
-    $card.html(createCardHTML(CARD_DATA[key]));
+    // 3. HTML 삽입 (innerHTML 사용)
+    card.innerHTML = createCardHTML(CARD_DATA[key]);
   });
 
-  // 말줄임 + 버튼 표시 판단
-  updateTooltipEllipsis();
+  // 4. 말줄임 + 버튼 표시 판단 함수 실행
+  if (typeof updateTooltipEllipsis === 'function') {
+    updateTooltipEllipsis();
+  }
 
-  // KRDS 툴팁 초기화
+  // 5. KRDS 툴팁 초기화
   window.krds_contextualHelp?.init?.();
 });
-
 
 /* 카드 데이터 */
 
@@ -129,7 +117,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",
-        full: "모바일 공무원증, GPKI",
+        full: "모바일공무원증, GPKI",
         sr: "연계 전체 보기"
       },
       {
@@ -156,7 +144,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",
-        full: "모바일 공무원증, 행정표준코드, LDAP, GPKI",
+        full: "모바일공무원증, 행정표준코드, LDAP, GPKI",
         sr: "연계 전체 보기"
       },
       {
@@ -183,7 +171,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",
-        full: "모바일 공무원증, 행정표준코드, LDAP",
+        full: "모바일공무원증, 행정표준코드, LDAP",
         sr: "연계 전체 보기"
       },
       {
@@ -237,7 +225,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",
-        full: "모바일 공무원증",
+        full: "모바일공무원증",
         sr: "연계 전체 보기"
       },
       {
@@ -264,7 +252,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",
-        full: "모바일 공무원증, 행정표준코드, LDAP, GPKI",
+        full: "모바일공무원증, 행정표준코드, LDAP, GPKI",
         sr: "연계 전체 보기"
       },
       {
@@ -318,7 +306,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",
-        full: "모바일 공무원증, 행정표준코드, LDAP",
+        full: "모바일공무원증, 행정표준코드, LDAP",
         sr: "연계 전체 보기"
       },
       {
@@ -345,7 +333,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",
-        full: "모바일 공무원증, 행정표준코드, LDAP, GPKI",
+        full: "모바일공무원증, 행정표준코드, LDAP, GPKI",
         sr: "연계 전체 보기"
       },
       {
@@ -399,7 +387,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",
-        full: "모바일 공무원증, 행정표준코드, LDAP",
+        full: "모바일공무원증, 행정표준코드, LDAP",
         sr: "연계 전체 보기"
       },
       {
@@ -561,7 +549,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",      
-        full: "모바일 공무원증, LDAP",
+        full: "모바일공무원증, LDAP",
         sr: "연계 전체 보기"
       },
       {
@@ -642,7 +630,7 @@ const CARD_DATA = {
     tooltips: [
       {
         key: "연계",       
-        full: "모바일 공무원증, 행정표준코드, LDAP",
+        full: "모바일공무원증, 행정표준코드, LDAP",
         sr: "연계 전체 보기"
       },
       {
@@ -658,9 +646,6 @@ const CARD_DATA = {
     ]
   },   
 };
-
-
-
 
 /* =========================
   말줄임 여부 체크

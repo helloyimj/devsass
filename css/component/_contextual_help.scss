@@ -42,7 +42,7 @@ $mode-setting: light;
 		@include flex-layout($ai: center);
 		position: relative;
 		.tooltip-btn {
-			@include flex-layout($ai:center);
+			@include flex-layout($ai:center);			
 			border-radius: var(--krds-contextual-help--action-btn-radius);
 			background-color: var(--krds-contextual-help--action-btn-color-background);
 			&:hover {
@@ -53,6 +53,9 @@ $mode-setting: light;
 			}
 			.ico-tooltip {
 				background-color: var(--krds-contextual-help--action-icon-color-information);
+			}
+			&.tooltip-more {
+				justify-content: center;
 			}
 		}
 	}

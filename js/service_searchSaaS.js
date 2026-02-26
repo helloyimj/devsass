@@ -1,7 +1,7 @@
 /************************************* 개별 프로덕트 카드 *************************************/
 
 
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
 
     /* 1 */
     var product_01 = "";
@@ -18,7 +18,7 @@ $(document).ready(function () {
     product_01 += '            </div>';
     product_01 += '            <div class="wrap_name">';
     product_01 += '                <span class="service_category">메일</span>';
-    product_01 += '                <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
+    product_01 += '                <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
     product_01 += '                 <span class="product_name">센스메일 클라우드 (SensMail Cloud)</span>';
     product_01 += '                </a>';
     product_01 += '                <span class="company_name">아이모션</span>';
@@ -37,7 +37,7 @@ $(document).ready(function () {
     product_01 += '                <div class="wrap_govSaas">';
     product_01 += '                    <p>정부 공통시스템 연계</p>';
     product_01 += '                    <div class="govSaas_tag">';
-    product_01 += '                        <span class="tag">모바일 공무원증</span>';
+    product_01 += '                        <span class="tag">모바일공무원증</span>';
     product_01 += '                        <span class="tag">행정표준코드</span>';
     product_01 += '                        <span class="tag">LDAP</span>';
     product_01 += '                        <span class="tag">GPKI</span>';
@@ -100,7 +100,7 @@ $(document).ready(function () {
     product_02 += '            </div>';
     product_02 += '            <div class="wrap_name">';
     product_02 += '                <span class="service_category">성과 관리</span>';
-    product_02 += '                <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
+    product_02 += '                <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
     product_02 += '                 <span class="product_name">StrategyGATE (전략성과관리솔루션)</span>';
     product_02 += '                </a>';
     product_02 += '                <span class="company_name">이즈파크</span>';
@@ -118,7 +118,7 @@ $(document).ready(function () {
     product_02 += '                <div class="wrap_govSaas">';
     product_02 += '                    <p>정부 공통시스템 연계</p>';
     product_02 += '                    <div class="govSaas_tag">';
-    product_02 += '                        <span class="tag">모바일 공무원증</span>';
+    product_02 += '                        <span class="tag">모바일공무원증</span>';
     product_02 += '                        <span class="tag">행정표준코드</span>';
     product_02 += '                        <span class="tag">LDAP</span>';
     product_02 += '                    </div>';
@@ -180,7 +180,7 @@ $(document).ready(function () {
     product_03 += '            </div>';
     product_03 += '            <div class="wrap_name">';
     product_03 += '                <span class="service_category">채용 · 인사 관리</span>';
-    product_03 += '                <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
+    product_03 += '                <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
     product_03 += '                 <span class="product_name">페어리</span>';
     product_03 += '                </a>';
     product_03 += '                <span class="company_name">주식회사 휴스테이션</span>';
@@ -247,7 +247,7 @@ $(document).ready(function () {
     product_04 += '            </div>';
     product_04 += '            <div class="wrap_name">';
     product_04 += '                <span class="service_category">채용 · 인사 관리</span>';
-    product_04 += '                <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
+    product_04 += '                <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
     product_04 += '                 <span class="product_name">ORG Insight (CG)</span>';
     product_04 += '                </a>';
     product_04 += '                <span class="company_name">㈜소프트인</span>';
@@ -313,7 +313,7 @@ $(document).ready(function () {
     product_05 += '            </div>';
     product_05 += '            <div class="wrap_name">';
     product_05 += '                <span class="service_category">출입 관리</span>';
-    product_05 += '                <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
+    product_05 += '                <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
     product_05 += '                 <span class="product_name">엔로비 (nlobby)</span>';
     product_05 += '                </a>';
     product_05 += '                <span class="company_name">엔로비</span>';
@@ -329,7 +329,7 @@ $(document).ready(function () {
     product_05 += '                <div class="wrap_govSaas">';
     product_05 += '                    <p>정부 공통시스템 연계</p>';
     product_05 += '                    <div class="govSaas_tag">';
-    product_05 += '                        <span class="tag">모바일 공무원증</span>';
+    product_05 += '                        <span class="tag">모바일공무원증</span>';
     product_05 += '                        <span class="tag">행정표준코드</span>';
     product_05 += '                    </div>';
     product_05 += '                </div>';
@@ -388,7 +388,7 @@ $(document).ready(function () {
     product_06 += '            </div>';
     product_06 += '            <div class="wrap_name">';
     product_06 += '                <span class="service_category">메일</span>';
-    product_06 += '                <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
+    product_06 += '                <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
     product_06 += '                 <span class="product_name">하이웍스 단독 구축형 웹메일</span>';
     product_06 += '                </a>';
     product_06 += '                <span class="company_name">가비아</span>';
@@ -402,7 +402,7 @@ $(document).ready(function () {
     // product_06 += '                <div class="wrap_govSaas">';
     // product_06 += '                    <p>정부 공통시스템 연계</p>';
     // product_06 += '                    <div class="govSaas_tag">';
-    // product_06 += '                        <span class="tag">모바일 공무원증</span>';
+    // product_06 += '                        <span class="tag">모바일공무원증</span>';
     // product_06 += '                        <span class="tag">행정표준코드</span>';
     // product_06 += '                    </div>';
     // product_06 += '                </div>';
@@ -461,7 +461,7 @@ $(document).ready(function () {
     product_07 += '            </div>';
     product_07 += '            <div class="wrap_name">';
     product_07 += '                <span class="service_category">협업</span>';
-    product_07 += '                <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
+    product_07 += '                <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
     product_07 += '                 <span class="product_name">wehagov (위하고v)</span>';
     product_07 += '                </a>';
     product_07 += '                <span class="company_name">더존비즈온</span>';
@@ -480,7 +480,7 @@ $(document).ready(function () {
     // product_07 += '                <div class="wrap_govSaas">';
     // product_07 += '                    <p>정부 공통시스템 연계</p>';
     // product_07 += '                    <div class="govSaas_tag">';
-    // product_07 += '                        <span class="tag">모바일 공무원증</span>';
+    // product_07 += '                        <span class="tag">모바일공무원증</span>';
     // product_07 += '                        <span class="tag">행정표준코드</span>';
     // product_07 += '                    </div>';
     // product_07 += '                </div>';
@@ -539,7 +539,7 @@ $(document).ready(function () {
     product_08 += '            </div>';
     product_08 += '            <div class="wrap_name">';
     product_08 += '                <span class="service_category">협업</span>';
-    product_08 += '                <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
+    product_08 += '                <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
     product_08 += '                 <span class="product_name">클라우다이크 공공기관용</span>';
     product_08 += '                </a>';
     product_08 += '                <span class="company_name">주식회사 클라우다이크</span>';
@@ -556,7 +556,7 @@ $(document).ready(function () {
     // product_08 += '                <div class="wrap_govSaas">';
     // product_08 += '                    <p>정부 공통시스템 연계</p>';
     // product_08 += '                    <div class="govSaas_tag">';
-    // product_08 += '                        <span class="tag">모바일 공무원증</span>';
+    // product_08 += '                        <span class="tag">모바일공무원증</span>';
     // product_08 += '                        <span class="tag">행정표준코드</span>';
     // product_08 += '                        <span class="tag">LDAP</span>';
     // product_08 += '                    </div>';
@@ -616,7 +616,7 @@ $(document).ready(function () {
     product_09 += '            </div>';
     product_09 += '            <div class="wrap_name">';
     product_09 += '                <span class="service_category">협업</span>';
-    product_09 += '                <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
+    product_09 += '                <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
     product_09 += '                 <span class="product_name">가온누리 (ezEKP365G)</span>';
     product_09 += '                </a>';
     product_09 += '                <span class="company_name">주식회사 가온아이</span>';
@@ -636,7 +636,7 @@ $(document).ready(function () {
     // product_09 += '                <div class="wrap_govSaas">';
     // product_09 += '                    <p>정부 공통시스템 연계</p>';
     // product_09 += '                    <div class="govSaas_tag">';
-    // product_09 += '                        <span class="tag">모바일 공무원증</span>';
+    // product_09 += '                        <span class="tag">모바일공무원증</span>';
     // product_09 += '                        <span class="tag">행정표준코드</span>';
     // product_09 += '                        <span class="tag">LDAP</span>';
     // product_09 += '                    </div>';
@@ -696,7 +696,7 @@ $(document).ready(function () {
     product_10 += '            </div>';
     product_10 += '            <div class="wrap_name">';
     product_10 += '                <span class="service_category">협업</span>';
-    product_10 += '                <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
+    product_10 += '                <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">';
     product_10 += '                 <span class="product_name">올샵(ALL#) ERP</span>';
     product_10 += '                </a>';
     product_10 += '                <span class="company_name">씨앤에프 시스템</span>';
@@ -716,7 +716,7 @@ $(document).ready(function () {
     // product_10 += '                <div class="wrap_govSaas">';
     // product_10 += '                    <p>정부 공통시스템 연계</p>';
     // product_10 += '                    <div class="govSaas_tag">';
-    // product_10 += '                        <span class="tag">모바일 공무원증</span>';
+    // product_10 += '                        <span class="tag">모바일공무원증</span>';
     // product_10 += '                        <span class="tag">행정표준코드</span>';
     // product_10 += '                        <span class="tag">LDAP</span>';
     // product_10 += '                    </div>';

@@ -7,7 +7,6 @@
   width: 100%;
 }
 
-/* font size */
 /* SaaS */
 .m_block {
   display: none;
@@ -317,14 +316,14 @@
 }
 
 .page_centered .article_title .page_title_area {
-  width: 140rem;
+  max-width: 140rem;
   margin: 0 auto;
 }
 .page_centered .wrap_breadcrumb {
   margin-top: 0;
 }
 .page_centered .wrap_breadcrumb .breadcrumbs {
-  width: 140rem;
+  max-width: 140rem;
   margin: 0 auto;
 }
 .page_centered .wrap_article {
@@ -332,7 +331,8 @@
   margin-bottom: 16rem;
 }
 .page_centered .wrap_article .contents_wrap {
-  width: 140rem;
+  width: 100%;
+  max-width: 140rem;
   margin: 0 auto;
 }
 .page_centered .wrap_article:last-of-type {
@@ -347,7 +347,6 @@
 
 .page {
   line-height: 1.5;
-  /*** pagination ***/
 }
 .page .wrap_article, .page .wrap_article_contents {
   width: 100%;
@@ -455,6 +454,9 @@
   background-position: center right 2.2rem;
   background-repeat: no-repeat;
   background-size: 1rem 1.8rem;
+}
+.page {
+  /*** pagination ***/
 }
 .page .swiper-pagination .swiper-pagination-bullet,
 .page .swiper-pagination_ .swiper-pagination-bullet {
@@ -633,7 +635,7 @@
   top: 50%;
   transform: translateY(-50%);
   right: 1.6rem;
-  font-family: "SUITMedium", "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "NotoSansMedium", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1.5rem;
   color: #fff;
 }
@@ -1879,7 +1881,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: var(--krds-padding-7);
+  padding: var(--krds-padding-7) var(--krds-padding-5);
   position: relative;
   min-height: 9rem;
 }
@@ -2088,7 +2090,7 @@
   width: calc((100% - 1.6rem) / 2);
 }
 .page_process .stage_wrap .stage_process .group.has_col_double .col_double .procedure-krds .decimal {
-  padding: 2rem 9rem;
+  padding: 2rem 8rem;
 }
 .page_process .stage_wrap .stage_process .height151 {
   height: 100%;
@@ -2626,7 +2628,6 @@
   margin-top: var(--krds-gap-6);
   flex-shrink: 0;
   position: relative;
-  /*** pagination ***/
 }
 .page_govSaaS .article06 .swiper-indicator .swiper-navigation {
   display: inline-flex;
@@ -2644,6 +2645,9 @@
 .page_govSaaS .article06 .swiper-indicator .swiper-button-next::after {
   right: initial;
   left: initial;
+}
+.page_govSaaS .article06 .swiper-indicator {
+  /*** pagination ***/
 }
 .page_govSaaS .article06 .swiper-indicator .swiper-pagination {
   display: flex;
@@ -2787,6 +2791,11 @@
   height: 5rem;
 }
 
+.page_govSaaS.page_codeSys .contents_wrap .descript {
+  padding-left: var(--krds-padding-7);
+  margin-bottom: var(--krds-padding-9);
+  font-size: var(--krds-pc-font-size-body-large);
+}
 .page_govSaaS.page_codeSys .article01 .contents_wrap::before {
   content: "";
   position: absolute;
@@ -3066,6 +3075,11 @@
   width: 0.6rem;
   height: 0.6rem;
   border-radius: var(--krds-radius-small1);
+}
+.page_govSaaS.page_epki .contents_wrap .descript {
+  padding-left: var(--krds-padding-7);
+  margin-bottom: var(--krds-padding-9);
+  font-size: var(--krds-pc-font-size-body-large);
 }
 
 /****************** 운영지원센터 *******************/
@@ -4116,7 +4130,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 1rem;
-  min-height: 27.4rem;
+  min-height: 22.6rem;
   box-shadow: 0 0 20px rgba(37, 53, 121, 0.1);
 }
 .page_sitemap .article01 .item .box_contents .wrap_text {
@@ -4182,7 +4196,7 @@
   }
   .page_govSaaS .article06 .wrap-slide-box_ .swiper-button-prev::after,
   .page_govSaaS .article06 .wrap-slide-box_ .swiper-button-next::after {
-    font-family: "SUITRegular", "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-size: 2.4rem;
     color: #1953d5;
   }
@@ -4626,7 +4640,7 @@
   .page_user_support .article02 .box_filled {
     margin-top: 3rem;
   }
-  /****************** 공공용 민간 SaaS *******************/
+  /****************** 공공부문 민간 SaaS *******************/
   .page_saas_search .wrap_result_table .box_table_top .wrap_select.count {
     padding-right: 2rem;
   }
@@ -5317,7 +5331,7 @@
   .page_user_support .article01 .wrap_items .box_shadow .wrap_text p {
     width: 100%;
   }
-  /****************** 공공용 민간 SaaS *******************/
+  /****************** 공공부문 민간 SaaS *******************/
   .page_saas_search .wrap_result_table .box_table_top {
     display: none;
   }
@@ -5907,7 +5921,7 @@
     font-family: "NotoSansLight", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
   .wrap_select_box {
-    border-radius: 1rem;
+    border-radius: var(--krds-radius-medium3);
   }
   .wrap_select_box h3 {
     font-size: 1.8rem;
@@ -5944,7 +5958,7 @@
   .page_intro .wrap_graphic .wrap_con .wrap_items .box_shadow .box_title {
     top: -1.8rem;
     width: 26rem;
-    height: 3.6rem;
+    height: 5.1rem;
     border-radius: 1.8rem;
   }
   .page_intro .wrap_graphic .wrap_con .wrap_items .box_shadow .box_title h5 {
@@ -5987,9 +6001,6 @@
   .page_intro .wrap_blue_box > div {
     max-width: 50rem;
     width: 100%;
-  }
-  .page_intro .wrap_blue_box > div .item_title {
-    height: 4rem;
   }
   .page_intro .wrap_blue_box > div .item_title > p {
     font-size: 1.5rem;
@@ -6073,9 +6084,9 @@
     padding: 2rem 1.4rem;
   }
   .page_governanceIntro .box_title, .page_governanceIntro .img_title {
-    height: 3.6rem;
+    height: 5.1rem;
+    line-height: 5.1rem;
     border-radius: 1.8rem;
-    line-height: 3.6rem;
   }
   .page_governanceIntro .box_title h5, .page_governanceIntro .box_title p, .page_governanceIntro .img_title h5, .page_governanceIntro .img_title p {
     font-size: 1.6rem;
@@ -6936,9 +6947,6 @@
     width: 100%;
     min-height: 12.4rem;
   }
-  .page_govSaaS .article03 .wrap_items > div .item_title {
-    height: 4rem;
-  }
   .page_govSaaS .article03 .wrap_items > div .item_txt {
     height: calc(100% - 4rem);
     padding: 1.4rem 2.2rem;
@@ -6980,7 +6988,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 24rem;
-    height: 3.6rem;
+    height: 5.1rem;
     font-size: 1.6rem;
   }
   .page_govSaaS .article03 .wrap_box .box_line_blue {
@@ -7273,6 +7281,7 @@
   .page_govSaaS.page_epki .article03 .wrap_items > div {
     width: 100%;
   }
+  /****************** 운영지원센터 *******************/
   .page_user_support .article_title {
     margin-bottom: 8rem;
   }

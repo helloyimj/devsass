@@ -315,7 +315,8 @@
   --krds-color-high-contrast-graphic-50: #61758f;
   --krds-color-high-contrast-graphic-70: #39506c;
   --krds-color-high-contrast-graphic-90: #223a58;
-  --krds-typo-font-type: Pretendard GOV;
+  /* --krds-typo-font-type: Pretendard GOV; */
+  --krds-typo-font-type: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --krds-typo-font-weight-regular: Regular;
   --krds-typo-font-weight-bold: Bold;
   --krds-typo-letter-spacing-0: 0rem;

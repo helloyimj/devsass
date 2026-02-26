@@ -275,6 +275,7 @@ $mode-setting: light;
         color: var(--krds-structured-list--card-body-color-text);
       }
       .tags {
+        width: 100%;
       display: flex;
       flex-wrap: wrap;
       gap: 8px 8px;
@@ -569,29 +570,6 @@ $mode-setting: light;
     }
   }
 
-  // custom
-  .product_list .product_item_inner {
-    // display: flex;
-    flex-direction: column;
-  }
-  .product_list .product_item_inner .box_logo {
-    width: 100%;
-    img {
-      max-width: 224px;
-    }
-  }
-
-  .b_box {
-    flex-wrap: wrap;
-  }
-  .wrap_link_area {
-    flex-wrap: wrap;
-  }
-
-  .wrap_link_area .link_area {
-    width: 100%;
-    justify-content: space-between;
-  }
 }
 
 //고대비모드

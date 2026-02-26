@@ -13,7 +13,7 @@
 //                               <div class="card-body">
 //                                 <div class="c-text">
 //                                   <div class="c-tit">
-//                                     <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">
+//                                     <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">
 //                                       <span class="product_name">센스메일 클라우드 (SensMail Cloud)</span></a>
 //                                   </div>
 //                                   <p class="company_name">아이모션</p>
@@ -28,7 +28,7 @@
 //                                 <div class="b_box">
 //                                   <p>정부 공통시스템 연계</p>
 //                                   <div class="tags">
-//                                     <span class="tag_gov">모바일 공무원증</span>
+//                                     <span class="tag_gov">모바일공무원증</span>
 //                                     <span class="tag_gov">행정표준코드</span>
 //                                     <span class="tag_gov">LDAP</span>
 //                                     <span class="tag_gov">GPKI</span>
@@ -48,7 +48,7 @@
 //                                 <div class="card-btm">
 //                                   <div class="wrap_link_area">
 //                                     <div class="link_area">
-//                                       <span class="link_label">서비스 공식 사이트</span>
+//                                       <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
 //                                       <a href="javascript:;" target="_blank" class="krds-btn medium tertiary"
 //                                         title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
 //                                     </div>
@@ -85,7 +85,7 @@ function renderProduct01() {
                               <div class="card-body">
                                 <div class="c-text">
                                   <div class="c-tit">
-                                    <a href="공공용 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">
+                                    <a href="공공부문 민간 SaaS_상세.html" target="_self" class="" title="상세 페이지 이동">
                                       <span class="product_name">공공용 계절근로자 관리 플랫폼</span></a>
                                   </div>
                                   <p class="company_name">(주)인조이웍스</p>
@@ -99,7 +99,7 @@ function renderProduct01() {
                                 <div class="b_box">
                                   <p>정부 공통시스템 연계</p>
                                   <div class="tags">
-                                    <span class="tag_gov">모바일 공무원증</span>
+                                    <span class="tag_gov">모바일공무원증</span>
                                     <span class="tag_gov">GPKI</span>
                                   </div>
                                 </div>
@@ -117,7 +117,7 @@ function renderProduct01() {
                                 <div class="card-btm">
                                   <div class="wrap_link_area">
                                     <div class="link_area">
-                                      <span class="link_label">서비스 공식 사이트</span>
+                                      <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                                       <a href="javascript:;" target="_blank" class="krds-btn medium tertiary"
                                         title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                                     </div>
@@ -155,7 +155,7 @@ function renderProduct01() {
 //             <div class="card-body">
 //               <div class="c-text">
 //                 <div class="c-tit">
-//                   <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+//                   <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
 //                     <span class="product_name">StrategyGATE (전략성과관리솔루션)</span>
 //                   </a>
 //                 </div>
@@ -183,7 +183,7 @@ function renderProduct01() {
 //                                 <div class="b_box">
 //                                   <p>정부 공통시스템 연계</p>
 //                                   <div class="tags">
-//                                     <span class="tag_gov">모바일 공무원증</span>
+//                                     <span class="tag_gov">모바일공무원증</span>
 //                                     <span class="tag_gov">행정표준코드</span>
 //                                     <span class="tag_gov">LDAP</span>
 //                                     <span class="tag_gov">GPKI</span>
@@ -196,7 +196,7 @@ function renderProduct01() {
 //             <div class="card-btm">
 //               <div class="wrap_link_area">
 //                 <div class="link_area">
-//                   <span class="link_label">서비스 공식 사이트</span>
+//                   <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
 //                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
 //                 </div>
 //                 <div class="link_area">
@@ -232,7 +232,7 @@ function renderProduct02() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">StrategyGATE (전략성과관리솔루션)</span>
                   </a>
                 </div>
@@ -251,7 +251,7 @@ function renderProduct02() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -291,7 +291,7 @@ function renderProduct02() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -326,7 +326,7 @@ function renderProduct03() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">페어리</span>
                   </a>
                 </div>
@@ -339,7 +339,7 @@ function renderProduct03() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -361,7 +361,7 @@ function renderProduct03() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -396,7 +396,7 @@ function renderProduct04() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">ORG Insight (CG)</span>
                   </a>
                 </div>
@@ -409,7 +409,7 @@ function renderProduct04() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -434,7 +434,7 @@ function renderProduct04() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -469,7 +469,7 @@ function renderProduct05() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">엔로비 (nlobby)</span>
                   </a>
                 </div>
@@ -484,7 +484,7 @@ function renderProduct05() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -509,7 +509,7 @@ function renderProduct05() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -544,7 +544,7 @@ function renderProduct06() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">하이웍스 단독 구축형 웹메일</span>
                   </a>
                 </div>
@@ -557,7 +557,7 @@ function renderProduct06() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -581,7 +581,7 @@ function renderProduct06() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -615,7 +615,7 @@ function renderProduct07() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">wehagov (위하고v)</span>
                   </a>
                 </div>
@@ -633,7 +633,7 @@ function renderProduct07() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -655,7 +655,7 @@ function renderProduct07() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -688,7 +688,7 @@ function renderProduct08() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">클라우다이크 공공기관용</span>
                   </a>
                 </div>
@@ -704,7 +704,7 @@ function renderProduct08() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -726,7 +726,7 @@ function renderProduct08() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -759,7 +759,7 @@ function renderProduct09() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">가온누리 (ezEKP365G)</span>
                   </a>
                 </div>
@@ -778,7 +778,7 @@ function renderProduct09() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -800,7 +800,7 @@ function renderProduct09() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -833,7 +833,7 @@ function renderProduct10() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">올샵(ALL#) ERP</span>
                   </a>
                 </div>
@@ -852,7 +852,7 @@ function renderProduct10() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -874,7 +874,7 @@ function renderProduct10() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -908,7 +908,7 @@ function renderProduct10() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">올샵(ALL#) ERP</span>
                   </a>
                 </div>
@@ -927,7 +927,7 @@ function renderProduct10() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -949,7 +949,7 @@ function renderProduct10() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary" title="새 창 열림 - 공식 홈페이지로 이동">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -983,7 +983,7 @@ function renderProduct11() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">두레이 (nlobby)</span>
                   </a>
                 </div>
@@ -999,7 +999,7 @@ function renderProduct11() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -1023,7 +1023,7 @@ function renderProduct11() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">
@@ -1059,7 +1059,7 @@ function renderProduct12() {
             <div class="card-body">
               <div class="c-text">
                 <div class="c-tit">
-                  <a href="공공용 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                  <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
                     <span class="product_name">공공기관용 ERP서비스(well-formed 공공Erp시스템)</span>
                   </a>
                 </div>
@@ -1075,7 +1075,7 @@ function renderProduct12() {
                 <div class="b_box">
                   <p>정부 공통시스템 연계</p>
                   <div class="tags">
-                    <span class="tag_gov">모바일 공무원증</span>
+                    <span class="tag_gov">모바일공무원증</span>
                     <span class="tag_gov">행정표준코드</span>
                     <span class="tag_gov">LDAP</span>
                     <span class="tag_gov">GPKI</span>
@@ -1099,7 +1099,7 @@ function renderProduct12() {
             <div class="card-btm">
               <div class="wrap_link_area">
                 <div class="link_area">
-                  <span class="link_label">서비스 공식 사이트</span>
+                  <span class="link_label">서비스 <br class="block_480"/>공식 사이트</span>
                   <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                 </div>
                 <div class="link_area">

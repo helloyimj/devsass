@@ -1,6 +1,5 @@
 @import "../token/krds_tokens.css";
 :root {
-  --krds-font-family-base: var(--krds-typo-font-type);
   --krds-font-size-base: 62.5%;
   --krds-line-height-none: 1;
   --krds-line-height-base: 1.5;
@@ -1033,7 +1032,6 @@
 html, body {
   position: relative;
   width: 100%;
-  font-family: var(--krds-font-family-base);
   color: var(--krds-light-color-text-basic);
   font-weight: var(--krds-font-weight-regular);
   line-height: var(--krds-line-height-base);

@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <title>행정전자서명(GPKI)&lt;서비스&lt;민간 Sass 연계공통기반 통합관리포털</title>
+    <title>행정전자서명(EPKI)&lt;서비스&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../css/output.css" />
 
-    <!-- script -->
+    <!-- JS -->
     <script src="../js/jquery-3.6.3/jquery.min.js"></script>
     <script src="../js/plugin/swiper-bundle.min.js"></script>
     <script src="../js/aos.js"></script>
-    <script defer src="../js/component/ui-script.js"></script>
-    <script defer src="../js/pattern/pattern.js"></script>
-    <script defer src="../js/nav.js"></script>
-    <script defer src="../js/app.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/component/ui-script.js"></script>   
     <script defer src="../js/service_card.js"></script>    
     <script defer src="../js/custom-krdsContextualHelp.js"></script>
-    
+
 </head>
 
 <body>
-  <div id="wrapper">
+
+    <div id="wrapper">
       <div id="container">
         <!-- 브레드크럼 -->
         <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
@@ -34,15 +34,15 @@
         </nav> 
 
           <!-- 컨텐츠 영역 -->
-          <div class="page page_centered page_govSaaS page_gpki">
+          <div class="page page_centered page_govSaaS page_codeSys">
               <div class="page_content">
               <!-- 페이지 타이틀 영역 -->
                 <div class="inner">
-                  <div class="page-title-wrap">
-                    <h1 class="h-tit">행정전자서명(GPKI)</h1>
-                    <h2 class="s-tit">민간 SaaS 연계공통기반에서 제공중인<br class="block_768"/> 전자정부공통서비스를 소개합니다.</h2>
+                    <div class="page-title-wrap">
+                        <h1 class="h-tit">행정표준코드</h1>
+                        <h2 class="s-tit">민간 SaaS 연계공통기반에서 제공중인<br class="block_768"/> 전자정부공통서비스를 소개합니다.</h2>
+                    </div>
                   </div>
-                </div>
                 <!-- //페이지 타이틀 영역 -->
                 <!-- 본문 -->
                 <div class="article_content">
@@ -59,13 +59,13 @@
                             </div>
                             <div class="deco_left">
                                 <p>행정전자서명 인증서는 행정전자서명이 진정한 것임을 확인·증명할 수 있도록 하기 위하여 
-                                  행정기관, 보조기관, 보좌기관, 전자문서유통 및 <br class="none_768"/>행정정보 공공이용, 공공기반, 은행 또는 사용자에게 발급하는 전자적 정보를 의미합니다. 
+                                  행정기관, 보조기관, 보좌기관, 전자문서유통 및 행정정보 공공이용, 공공기반, 은행 또는 사용자에게 발급하는 전자적 정보를 의미합니다. 
                                 </p>
                                 <p>
                                   전자거래시 인증서를 사용하면 신원확인, 문서의 위·변조, 거래사실의 부인 방지 등의 효과를 얻을 수 있으며,
-                                  인증서에는 인증서 버전, 인증서 일련번호, <br class="none_768"/>인증서의 유효기간, 발급기관 명 전자서명 알고리즘 정보, 가입자 이름 및 신원확인정보 등이 포함되어 있습니다. <br>
+                                  인증서에는 인증서 버전, 인증서 일련번호, 인증서의 유효기간, 발급기관 명 전자서명 알고리즘 정보, 가입자 이름 및 신원확인정보 등이 포함되어 있습니다.
                                   전자문서 송·수신에 대한 행정기관 및 공무원 신원확인, 전자문서 위·변조 방지 등을 보장하고 전자문서 안정적 유통을 위한 
-                                  정부차원의 정보보호체계 마련을 <br class="none_768"/>위하여 행정전자서명을 보급하고 있습니다.
+                                  정부차원의 정보보호체계 마련을 위하여 행정전자서명을 보급하고 있습니다.
                                 </p>
                             </div>                                 
                         </article>
@@ -78,7 +78,7 @@
                                     제공 기능
                                 </h4>
                             </div>
-                            <p class="descript">행정전자서명 인증서를 활용하여 <br class="block_480"/>다음의 업무를 수행할 수 있습니다.</p>
+                            <p class="descript">행정전자서명 인증서를 활용하여 다음의 업무를 수행할 수 있습니다.</p>
                             <div class="box_shadow">
                                 <div class="wrap_contents">                                           
                                     <div class="wrap_items">
@@ -189,11 +189,10 @@
                 </div>
                 <!-- 본문 end -->
               </div>
-            </div>
-            <!-- 컨텐츠 영역 end -->
+          </div>
       </div>
   </div>
-  
+
     <script>   
 
       document.addEventListener("DOMContentLoaded", function () {
@@ -205,6 +204,7 @@
         });
 
         // Swiper
+        
         var swiper = new Swiper(".wrap_article .swiper", {
           roundLengths: false,
           slidesPerView: 1,
@@ -245,7 +245,6 @@
       });
 
     </script>
-
 </body>
 
 </html>

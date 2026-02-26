@@ -37,7 +37,7 @@
                       <nav class="krds-breadcrumb-wrap" aria-label="현재 경로" id="breadcrumb">
                       	<ol class="breadcrumb breadcrumbs">
                       		<li class="home"><a href="main.html" target="_self" class="txt" title="메인 페이지로 이동">홈</a></li>
-                      		<li><a href="서비스_모바일 공무원증.html" target="_self" class="txt" title="서비스로 페이지 이동">서비스</a></li>
+                      		<li><a href="서비스_모바일공무원증.html" target="_self" class="txt" title="서비스로 페이지 이동">서비스</a></li>
                       	</ol>
                       </nav>
                     </div>
@@ -174,64 +174,59 @@
 
     </div>
 
-    <script>
-        AOS.init();
+    <script>   
 
-        $(document).ready(function() {
-            // 연계공통 기반으로 개발 된 민간 SasS 소개
-            var swiper = new Swiper(".wrap_article .swiper", {
-                roundLengths: 'false',
-                slidesPerView: 1,
-                // slidePerGroup: 1,
-                spaceBetween: 16,
-                mousewheel: {
-                    invert: true,
-                },        
-                autoHeight: true,
-                slidesOffAfter: 120,
-                keyboard: {
-                    enabled: true,
-                },
-                navigation: {
-                    prevEl: '.swiper-button-prev',
-                    nextEl: '.swiper-button-next',
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    type: "fraction",                
-                },
-                // Enable ARIA support
-                a11y: {
-                    prevSlideMessage: '이전 슬라이드',
-                    nextSlideMessage: '다음 슬라이드',
-                    firstSlideMessage: '처음 슬라이드',
-                    lastSlideMessage: '마지막 슬라이드',
-                    paginationBulletMessage: '총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.',
-                },
+      document.addEventListener("DOMContentLoaded", function () {
 
-                breakpoints: {
-                    425: {
-                        slidesPerView: 1,
-                        spaceBetween: 16,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 16,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 16,
-                    },
-                    1420: {
-                        slidesPerView: 4,
-                        spaceBetween: 20,
-                    },
-                    enabled: true,
-                },
-            });
-
+        // AOS 초기화
+        AOS.init({
+          duration: 800,
+          once: true,
         });
+
+        // Swiper
+        
+        var swiper = new Swiper(".wrap_article .swiper", {
+          roundLengths: false,
+          slidesPerView: 1,
+          spaceBetween: 16,
+          mousewheel: { invert: true },
+          autoHeight: true,
+          slidesOffAfter: 120,
+          keyboard: { enabled: true },
+          navigation: {
+            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+          a11y: {
+            prevSlideMessage: "이전 슬라이드",
+            nextSlideMessage: "다음 슬라이드",
+            firstSlideMessage: "처음 슬라이드",
+            lastSlideMessage: "마지막 슬라이드",
+            paginationBulletMessage:
+              "총 {{slidesLength}}장의 슬라이드 중 {{index}}번 슬라이드 입니다.",
+          },
+          breakpoints: {
+            425: { slidesPerView: 1, spaceBetween: 16 },
+            768: { slidesPerView: 2, spaceBetween: 16 },
+            1024: { slidesPerView: 3, spaceBetween: 16 },
+            1420: { slidesPerView: 4, spaceBetween: 20 },
+          },
+        });
+
+        // 레이아웃 변경 후 AOS 재계산
+        setTimeout(function () {
+          AOS.refresh();
+        }, 300);
+
+      });
+
     </script>
+    
 </body>
 
 </html>

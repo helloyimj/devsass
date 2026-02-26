@@ -1,238 +1,230 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>공지사항&lt;운영지원센터&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-  <title>공지사항&lt;운영지원센터&lt;민간 Sass 연계공통기반 통합관리포털</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/output.css" />
 
-  <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../css/output.css" />
+    <!-- script -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/plugin/swiper-bundle.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script defer src="../js/component/ui-script.js"></script>
+    <script defer src="../js/pattern/pattern.js"></script>
+    <script defer src="../js/nav.js"></script>
+    <script defer src="../js/app.js"></script>
+  </head>
 
-  <!-- script -->
-  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-  <script src="../js/plugin/swiper-bundle.min.js"></script>
-  <script src="../js/aos.js"></script>
-  <script defer src="../js/component/ui-script.js"></script>
-  <script defer src="../js/pattern/pattern.js"></script>
-  <script defer src="../js/nav.js"></script>
-  <script defer src="../js/app.js"></script>
-  
-</head>
+  <body>
+    <div id="wrapper">
+      <!-- 컨테이너 영역 -->
+      <div id="container">
+        <!-- breadcrumb -->
+        <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
+          <ol class="breadcrumb">
+            <li class="home"><a href="main.html" class="txt" target="_self" title="메인 페이지로 이동">홈</a></li>
+            <li class=""><a href="운영지원센터_공지사항.html" class="txt" target="_self" title="페이지 이동">운영지원센터</a></li>
+          </ol>
+        </nav>
+        <!-- // breadcrumb -->
 
-<body>
-  <div id="wrapper">
-
-    <!-- 컨테이너 영역 -->
-    <div id="container">
-
-      <!-- breadcrumb -->
-      <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
-        <ol class="breadcrumb">
-          <li class="home"><a href="main.html" class="txt" target="_self" title="메인 페이지로 이동">홈</a></li>
-          <li class=""><a href="운영지원센터_공지사항.html" class="txt" target="_self" title="페이지 이동">운영지원센터</a></li>
-        </ol>
-      </nav>
-      <!-- // breadcrumb -->
-
-      <!-- 컨텐츠 영역 -->
-      <div class="inner">
-        <!-- 페이지 타이틀 영역 -->
-        <div class="page-title-wrap">
-          <h1 class="h-tit">공지사항</h1>
-          <h2 class="s-tit">민간 SaaS 연계공통기반 통합관리포털에서 알려드립니다.</h2>
-        </div>
-        <!-- //페이지 타이틀 영역 -->
-        <div class="page_content page_notice">
-
-          <div class="article_content" data-aos="fade-up">
-
-            <!-- 검색 입력폼 -->
-            <div class="search-top-box">
-              <div class="sch-filter-box">
-                <div class="sch-form-wrap wrap_search_saas">
-                  <div class="search_saas_group select">
-                    <div class="form-tit">
-                      <label for="addr-input1">카테고리</label>
+        <!-- 컨텐츠 영역 -->
+        <div class="inner">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-title-wrap">
+            <h1 class="h-tit">공지사항</h1>
+            <h2 class="s-tit">민간 SaaS 연계공통기반 통합관리포털에서 알려드립니다.</h2>
+          </div>
+          <!-- //페이지 타이틀 영역 -->
+          <div class="page_content page_notice">
+            <div class="article_content" data-aos="fade-up">
+              <!-- 검색 입력폼 -->
+              <div class="search-top-box">
+                <div class="sch-filter-box">
+                  <div class="sch-form-wrap wrap_search_saas">
+                    <div class="search_saas_group select">
+                      <div class="form-tit">
+                        <label for="addr-input1">카테고리</label>
+                      </div>
+                      <div class="group_select_conts">
+                        <select id="input-select-category" class="krds-form-select medium">
+                          <option value="">전체</option>
+                          <option value="">항목1</option>
+                          <option value="">항목2</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="group_select_conts">
-                      <select id="input-select-category" class="krds-form-select medium">
-                        <option value="">전체</option>
-                        <option value="">항목1</option>
-                        <option value="">항목2</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="search_saas_group input">
-                    <div class="form-tit">
-                      <label for="addr-input1">검색어</label>
-                    </div>
-                    <div class="group_input_conts">
-                      <div class="input-group m-column">
-                        <input type="text" class="krds-input medium" placeholder="검색어를 입력해주세요" title="검색어 입력"
-                          id="input-text-search">
-                        <button type="button" class="krds-btn medium primary"><i
-                            class="svg-icon ico-sch"></i>검색</button>
+                    <div class="search_saas_group input">
+                      <div class="form-tit">
+                        <label for="addr-input1">검색어</label>
+                      </div>
+                      <div class="group_input_conts">
+                        <div class="input-group m-column">
+                          <input type="text" class="krds-input medium" placeholder="검색어를 입력해주세요" title="검색어 입력" id="input-text-search" />
+                          <button type="button" class="krds-btn medium primary"><i class="svg-icon ico-sch"></i>검색</button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- //검색 입력폼 -->
+              <!-- //검색 입력폼 -->
 
-            <!-- 검색 결과 -->
-            <div class="">
-              <!-- 검색 결과 : 리스트 상단 -->
-              <div class="search-list-top">
-                <ul class="sch-info" aria-live="polite">
-                  <li>총 <span class="point">18</span>건이 조회되었습니다.</li>
-                </ul>
-                <ul class="sch-sort">
-                  <li>
-                    <strong class="sort-label"><label for="search_result_count">목록 표시 개수</label></strong>
-                    <select class="krds-form-select-sort" id="search_result_count">
-                      <option>10개</option>
-                      <option>20개</option>
-                      <option>30개</option>
-                    </select>
-                  </li>
-                </ul>
-              </div>
-              <!-- //검색 결과 : 리스트 상단 -->
-
-              <!-- 김효진 KRDS table  추가-->
-              <div class="krds-table-wrap">
-                <table class="tbl col data">
-                  <caption>공지사항에 대한 표로 번호, 제목, 첨부파일, 등록일에 대한 내용으로 구성되어 있으며, 번호는 TOP 라벨과 번호로 구성되어 있다.</caption>
-                  <colgroup>
-                    <col style="width: 5%;">
-                    <col>
-                    <col style="width: 7%;">
-                    <col style="width: 14%;">
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th scope="col">번호</th>
-                      <th scope="col">제목</th>
-                      <th scope="col">첨부</th>
-                      <th scope="col">등록일</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><span class="krds-badge bg-primary number">TOP</span></td>
-                      <td data-label="제목" class="title">
-                        <a href="javascript:;">2025 공공 SaaS 도입 성공전략 컨퍼런스</a>
-                      </td>
-                      <td data-label="첨부"></td>
-                      <td data-label="등록일">2025-01-12</td>
-                    </tr>
-                    <tr>
-                      <td><span class="krds-badge bg-primary number">TOP</span></td>
-                      <td data-label="제목" class="title">
-                        <a href="javascript:;">제46차 디지털서비스 심사위원회 선정결과 17건</a>
-                      </td>
-                      <td data-label="첨부"></td>
-                      <td data-label="등록일">2025-01-12</td>
-                    </tr>
-                    <tr>
-                      <td>18</td>
-                      <td data-label="제목" class="title">
-                        <a href="javascript:;">2025년 클라우드 산업발전 유공 표창 공모</a>
-                      </td>
-                      <td data-label="첨부">
-                        <span class="sr-only">첨부파일</span>
-                        <i class="svg-icon ico-attach"></i>
-                      </td>
-                      <td data-label="등록일">2025-01-12</td>
-                    </tr>
-                    <tr>
-                      <td>17</td>
-                      <td data-label="제목" class="title">
-                        <a href="javascript:;">디지털서비스 - 2025년 하반기 혁신제품 지정 신청 안내</a>
-                      </td>
-                      <td data-label="첨부"></td>
-                      <td data-label="등록일">2025-01-12</td>
-                    </tr>
-                    <tr>
-                      <td>16</td>
-                      <td data-label="제목" class="title">
-                        <a href="javascript:;">정부 공통시스템과 민간 SaaS 간 연계 개통식 개최 안내</a>
-                      </td>
-                      <td data-label="첨부">
-                        <span class="sr-only">첨부파일</span>
-                        <i class="svg-icon ico-attach"></i>
-                      </td>
-                      <td data-label="등록일">2025-01-12</td>
-                    </tr>
-                    <tr>
-                      <td>15</td>
-                      <td data-label="제목" class="title">
-                        <a href="javascript:;">제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전</a>
-                      </td>
-                      <td data-label="첨부"></td>
-                      <td data-label="등록일">2025-01-12</td>
-                    </tr>
-                    <tr>
-                      <td>14</td>
-                      <td data-label="제목" class="title">
-                        <a href="운영지원센터_공지사항_상세.html">2025년 클라우드 사업 통합설명회 안내</a>
-                      </td>
-                      <td data-label="첨부"></td>
-                      <td data-label="등록일">2025-01-12</td>
-                    </tr>
-                    <tr>
-                      <td>13</td>
-                      <td data-label="제목" class="title">
-                        <a href="javascript:;">2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내</a>
-                      </td>
-                      <td data-label="첨부">
-                        <span class="sr-only">첨부파일</span>
-                        <i class="svg-icon ico-attach"></i>
-                      </td>
-                      <td data-label="등록일">2025-01-12</td>
-                    </tr>
-                    <tr>
-                      <td>12</td>
-                      <td data-label="제목" class="title">
-                        <a href="javascript:;">서비스 정보변경 기능 제공 안내</a>
-                      </td>
-                      <td data-label="첨부"></td>
-                      <td data-label="등록일">2025-01-12</td>
-                    </tr>
-                    <tr>
-                      <td>11</td>
-                      <td data-label="제목" class="title">
-                        <a href="javascript:;">서비스 정보변경 기능 제공 안내</a>
-                      </td>
-                      <td data-label="첨부"></td>
-                      <td data-label="등록일">2025-01-12</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <!-- //table -->
-              <!-- pagination -->
-              <div class="krds-pagination">
-                <a class="page-navi prev disabled" href="javascript:;">이전</a>
-                <div class="page-links">
-                  <a class="page-link active" href="javascript:;"><span class="sr-only">현재페이지 </span>1</a>
-                  <a class="page-link" href="javascript:;">2</a>
+              <!-- 검색 결과 -->
+              <div class="">
+                <!-- 검색 결과 : 리스트 상단 -->
+                <div class="search-list-top">
+                  <ul class="sch-info" aria-live="polite">
+                    <li>총 <span class="point">18</span>건이 조회되었습니다.</li>
+                  </ul>
+                  <ul class="sch-sort">
+                    <li>
+                      <strong class="sort-label"><label for="search_result_count">목록 표시 개수</label></strong>
+                      <select class="krds-form-select-sort" id="search_result_count">
+                        <option>10개</option>
+                        <option>20개</option>
+                        <option>30개</option>
+                      </select>
+                    </li>
+                  </ul>
                 </div>
-                <a class="page-navi next" href="javascript:;">다음</a>
+                <!-- //검색 결과 : 리스트 상단 -->
+
+                <!-- 김효진 KRDS table  추가-->
+                <div class="krds-table-wrap">
+                  <table class="tbl col data">
+                    <caption>
+                      공지사항에 대한 표로 번호, 제목, 첨부파일, 등록일에 대한 내용으로 구성되어 있으며, 번호는 TOP 라벨과 번호로 구성되어 있다.
+                    </caption>
+                    <colgroup>
+                      <col style="width: 5%" />
+                      <col />
+                      <col style="width: 7%" />
+                      <col style="width: 14%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">번호</th>
+                        <th scope="col">제목</th>
+                        <th scope="col">첨부</th>
+                        <th scope="col">등록일</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><span class="krds-badge bg-primary number">TOP</span></td>
+                        <td data-label="제목" class="title">
+                          <a href="운영지원센터_공지사항_상세.html">2025 공공 SaaS 도입 성공전략 컨퍼런스</a>
+                        </td>
+                        <td data-label="첨부"></td>
+                        <td data-label="등록일">2025-01-12</td>
+                      </tr>
+                      <tr>
+                        <td><span class="krds-badge bg-primary number">TOP</span></td>
+                        <td data-label="제목" class="title">
+                          <a href="운영지원센터_공지사항_상세.html">제46차 디지털서비스 심사위원회 선정결과 17건</a>
+                        </td>
+                        <td data-label="첨부"></td>
+                        <td data-label="등록일">2025-01-12</td>
+                      </tr>
+                      <tr>
+                        <td>18</td>
+                        <td data-label="제목" class="title">
+                          <a href="운영지원센터_공지사항_상세.html">2025년 클라우드 산업발전 유공 표창 공모</a>
+                        </td>
+                        <td data-label="첨부">
+                          <span class="sr-only">첨부파일</span>
+                          <i class="svg-icon ico-attach"></i>
+                        </td>
+                        <td data-label="등록일">2025-01-12</td>
+                      </tr>
+                      <tr>
+                        <td>17</td>
+                        <td data-label="제목" class="title">
+                          <a href="운영지원센터_공지사항_상세.html">디지털서비스 - 2025년 하반기 혁신제품 지정 신청 안내</a>
+                        </td>
+                        <td data-label="첨부"></td>
+                        <td data-label="등록일">2025-01-12</td>
+                      </tr>
+                      <tr>
+                        <td>16</td>
+                        <td data-label="제목" class="title">
+                          <a href="javascript:;">정부 공통시스템과 민간 SaaS 간 연계 개통식 개최 안내</a>
+                        </td>
+                        <td data-label="첨부">
+                          <span class="sr-only">첨부파일</span>
+                          <i class="svg-icon ico-attach"></i>
+                        </td>
+                        <td data-label="등록일">2025-01-12</td>
+                      </tr>
+                      <tr>
+                        <td>15</td>
+                        <td data-label="제목" class="title">
+                          <a href="javascript:;">제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전</a>
+                        </td>
+                        <td data-label="첨부"></td>
+                        <td data-label="등록일">2025-01-12</td>
+                      </tr>
+                      <tr>
+                        <td>14</td>
+                        <td data-label="제목" class="title">
+                          <a href="운영지원센터_공지사항_상세.html">2025년 클라우드 사업 통합설명회 안내</a>
+                        </td>
+                        <td data-label="첨부"></td>
+                        <td data-label="등록일">2025-01-12</td>
+                      </tr>
+                      <tr>
+                        <td>13</td>
+                        <td data-label="제목" class="title">
+                          <a href="javascript:;">2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내</a>
+                        </td>
+                        <td data-label="첨부">
+                          <span class="sr-only">첨부파일</span>
+                          <i class="svg-icon ico-attach"></i>
+                        </td>
+                        <td data-label="등록일">2025-01-12</td>
+                      </tr>
+                      <tr>
+                        <td>12</td>
+                        <td data-label="제목" class="title">
+                          <a href="javascript:;">서비스 정보변경 기능 제공 안내</a>
+                        </td>
+                        <td data-label="첨부"></td>
+                        <td data-label="등록일">2025-01-12</td>
+                      </tr>
+                      <tr>
+                        <td>11</td>
+                        <td data-label="제목" class="title">
+                          <a href="javascript:;">서비스 정보변경 기능 제공 안내</a>
+                        </td>
+                        <td data-label="첨부"></td>
+                        <td data-label="등록일">2025-01-12</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- //table -->
+                <!-- pagination -->
+                <div class="krds-pagination">
+                  <a class="page-navi prev disabled" href="javascript:;">이전</a>
+                  <div class="page-links">
+                    <a class="page-link active" href="javascript:;"><span class="sr-only">현재페이지 </span>1</a>
+                    <a class="page-link" href="javascript:;">2</a>
+                  </div>
+                  <a class="page-navi next" href="javascript:;">다음</a>
+                </div>
+                <!-- //pagination -->
               </div>
-              <!-- //pagination -->
             </div>
           </div>
         </div>
+        <!-- //컨텐츠 영역 -->
       </div>
-      <!-- //컨텐츠 영역 -->
+      <!-- //컨테이너 영역 -->
     </div>
-    <!-- //컨테이너 영역 -->
-  </div>
-
-</body>
-
+  </body>
 </html>

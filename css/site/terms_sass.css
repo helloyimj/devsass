@@ -1,7 +1,4 @@
 @charset "UTF-8";
-/* opacity color */
-/* font color */
-/* Bg, border color */
 .flex_center {
   position: relative;
   display: flex;
@@ -10,7 +7,6 @@
   width: 100%;
 }
 
-/* font size */
 /****************** 페이지 본문 영역 시작 ******************/
 /*******************************************************/
 /*******************************************************/
@@ -18,9 +14,6 @@
 /*******************************************************/
 .page_policy {
   line-height: 1.5;
-  /* 목차 */
-  /* 개인정보처리방침 개별 상세 */
-  /* 테이블 */
 }
 .page_policy .page_title {
   margin-bottom: 5.8rem;
@@ -40,6 +33,9 @@
 .page_policy .txt {
   margin-bottom: 6rem;
   padding: 0 2rem;
+}
+.page_policy {
+  /* 목차 */
 }
 .page_policy .policy_list {
   display: flex;
@@ -84,6 +80,9 @@
 .page_policy .policy_list .policy_item .policy_item_anchor span {
   margin-right: 4px;
   line-height: 1.4;
+}
+.page_policy {
+  /* 개인정보처리방침 개별 상세 */
 }
 .page_policy .policy_detail {
   word-break: keep-all;
@@ -156,6 +155,9 @@
 }
 .page_policy .policy_detail .personal_inner_txt a {
   display: inline;
+}
+.page_policy {
+  /* 테이블 */
 }
 .page_policy .wrap_table {
   margin-top: 1.6rem;
@@ -325,7 +327,6 @@
   /****************** 약관, 정책 본문 *******************/
   .page_policy {
     /* 목차 */
-    /* 테이블 */
   }
   .page_policy .policy_list .policy_item {
     width: 100%;
@@ -335,6 +336,9 @@
   }
   .page_policy .policy_detail .pl30 {
     padding-left: 2rem;
+  }
+  .page_policy {
+    /* 테이블 */
   }
   .page_policy .table th {
     font-size: 1.6rem;
@@ -383,16 +387,16 @@
     width: 2.4rem;
     height: 2.4rem;
   }
-  .page_centered {
-    /*   .page {
-          padding-top: 13rem;
-      } */
-  }
   .page_centered .wrap_article {
     margin-bottom: 8rem;
     /*    &:last-of-type {
            margin-bottom: 10rem;
        } */
+  }
+  .page_centered {
+    /*   .page {
+          padding-top: 13rem;
+      } */
   }
   .page_centered .article_title {
     margin-top: 0;
@@ -412,9 +416,6 @@
     font-family: "NotoSansLight", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
   /****************** 약관, 정책 본문 *******************/
-  .page_policy {
-    /* 테이블 */
-  }
   .page_policy .policy_sub_tit {
     font-size: 2rem;
     margin-bottom: 3rem;
@@ -461,6 +462,9 @@
   }
   .page_policy .policy_detail .policy_list_inner {
     padding-left: 0.6rem;
+  }
+  .page_policy {
+    /* 테이블 */
   }
   .page_policy .table th {
     font-size: 1.4rem;

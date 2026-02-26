@@ -89,31 +89,32 @@ function togglePassword(btnPw) {
 ========================================================= */
 const ui_accordion = {
   init() {
-    const buttons = document.querySelectorAll(".page_answer .btn-accordion");
-    if (!buttons.length) return;
+    const answerButtons = document.querySelectorAll(".page_answer .btn-accordion");
+    if (!answerButtons.length) return;
 
-    buttons.forEach(button => {
+    answerButtons.forEach((button) => {
       button.addEventListener("click", () => {
         const item = button.closest(".accordion-item");
         const container = button.closest(".krds-accordion");
-        const panel = item?.querySelector(".accordion-collapse");
-        if (!item || !container || !panel) return;
-
+        const panel = item.querySelector(".accordion-collapse");
         const isExpanded = button.getAttribute("aria-expanded") === "true";
         const type = container.dataset.type || "singleOpen";
 
+        // singleOpen → 다른 아이템 닫기
         if (type !== "multiOpen" && !isExpanded) {
-          container.querySelectorAll(".accordion-item").forEach(other => {
-            if (other !== item) {
-              other.querySelector(".btn-accordion")
-                ?.setAttribute("aria-expanded", "false");
-              other.classList.remove("active");
-              other.querySelector(".accordion-collapse")
-                ?.classList.remove("active");
+          container.querySelectorAll(".accordion-item").forEach((otherItem) => {
+            if (otherItem !== item) {
+              const otherBtn = otherItem.querySelector(".btn-accordion");
+              const otherPanel = otherItem.querySelector(".accordion-collapse");
+
+              otherBtn.setAttribute("aria-expanded", "false");
+              otherItem.classList.remove("active");
+              otherPanel.classList.remove("active");
             }
           });
         }
 
+        // 현재 아이템 토글
         button.setAttribute("aria-expanded", String(!isExpanded));
         item.classList.toggle("active", !isExpanded);
         panel.classList.toggle("active", !isExpanded);
@@ -121,6 +122,10 @@ const ui_accordion = {
     });
   }
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  ui_accordion.init();
+});
 
 
 /* =========================================================

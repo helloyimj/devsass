@@ -8,19 +8,17 @@
 }
 
 /* 메인페이지 공통 사항  */
-.content {
-  width: 100%;
-}
-
-.section {
-  margin-left: auto;
-}
-
 .page_main {
   width: 100%;
   padding: 0;
   margin: 0;
   background-color: #fff;
+}
+.page_main .content {
+  width: 100%;
+}
+.page_main .section {
+  margin-left: auto;
 }
 .page_main h1,
 .page_main h2,
@@ -91,19 +89,18 @@
 .page_main .only_pc {
   display: block;
 }
-
-/* 스와이퍼 공통사항 */
-.swiper img {
+.page_main {
+  /* 스와이퍼 공통사항 */
+}
+.page_main .swiper img {
   -webkit-user-drag: none;
   -khtml-user-drag: none;
 }
-
-.wrap_swiper_button {
+.page_main .wrap_swiper_button {
   width: 100%;
 }
-
-.swiper-button-prev,
-.swiper-button-next {
+.page_main .swiper-button-prev,
+.page_main .swiper-button-next {
   color: #1953d5;
   box-sizing: border-box;
   width: 4.4rem;
@@ -111,8 +108,8 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.swiper-button-prev::before,
-.swiper-button-next::before {
+.page_main .swiper-button-prev::before,
+.page_main .swiper-button-next::before {
   content: "";
   display: block;
   width: 4.4rem;
@@ -123,35 +120,31 @@
   position: absolute;
   right: 0;
 }
-
-.swiper-button-prev {
+.page_main .swiper-button-prev {
   left: -2.2rem;
 }
-.swiper-button-prev::before {
+.page_main .swiper-button-prev::before {
   right: unset;
 }
-
-.swiper-button-next {
+.page_main .swiper-button-next {
   right: -2.2rem;
 }
-.swiper-button-next::before {
+.page_main .swiper-button-next::before {
   right: unset;
 }
-
-.swiper-button-prev.swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled {
+.page_main .swiper-button-prev.swiper-button-disabled,
+.page_main .swiper-button-next.swiper-button-disabled {
   opacity: 1;
   color: #ccc;
 }
-.swiper-button-prev.swiper-button-disabled::before,
-.swiper-button-next.swiper-button-disabled::before {
+.page_main .swiper-button-prev.swiper-button-disabled::before,
+.page_main .swiper-button-next.swiper-button-disabled::before {
   border-color: #ddd;
 }
-
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after,
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
+.page_main .swiper-button-prev:after,
+.page_main .swiper-rtl .swiper-button-next:after,
+.page_main .swiper-button-next:after,
+.page_main .swiper-rtl .swiper-button-prev:after {
   width: 4.4rem;
   font-size: 21px;
   text-align: center;
@@ -161,41 +154,36 @@
   text-align: center;
   position: absolute;
 }
-
-.swiper-button-prev:after,
-.swiper-rtl .swiper-button-next:after {
+.page_main .swiper-button-prev:after,
+.page_main .swiper-rtl .swiper-button-next:after {
   left: 0;
 }
-
-.swiper-button-next:after,
-.swiper-rtl .swiper-button-prev:after {
+.page_main .swiper-button-next:after,
+.page_main .swiper-rtl .swiper-button-prev:after {
   right: 0;
 }
-
-.swiper-container {
+.page_main .swiper-container {
   width: 100%;
   display: flex;
   line-height: 1.5;
   padding-bottom: 4rem;
 }
-
-.swiper-wrapper {
+.page_main .swiper-wrapper {
   width: 100%;
 }
-.swiper-wrapper .swiper-slide {
+.page_main .swiper-wrapper .swiper-slide {
   height: 100%;
   background-color: #fff;
   box-sizing: border-box;
 }
-
-.swiper-pagination {
+.page_main .swiper-pagination {
   width: 100%;
   height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.swiper-pagination .swiper-pagination-bullet {
+.page_main .swiper-pagination .swiper-pagination-bullet {
   background: #b8bcd5;
   width: 1.2rem;
   height: 1.2rem;
@@ -203,14 +191,13 @@
   opacity: 1;
   transition: all 0.2s;
 }
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.page_main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   width: 6rem;
   border-radius: 6px;
   background: #333c98;
   opacity: 1;
 }
-
-.wrap_section_contents {
+.page_main .wrap_section_contents {
   width: 100%;
   position: relative;
 }
@@ -1368,7 +1355,7 @@
   .slide_enterprise .wrap_swiper {
     margin-bottom: 1.6rem;
   }
-  /* 민간 SaaS 연계공통기반에서 제공 중인 연계 SaaS를 소개합니다. */
+  /* 민간 SaaS 연계공통기반에서 제공 중인 연계 API를 소개합니다. */
   .section_01 .inner {
     padding-bottom: 0;
   }

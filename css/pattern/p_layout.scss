@@ -25,7 +25,7 @@ $mode-setting: light;
 #container {
     flex: 1;
     > .inner {
-        min-height: 60rem;
+        min-height: 54rem;
         &:not(.in-between) {
             padding-bottom: var(--krds-pc-gap-layout-contents-footer);
 

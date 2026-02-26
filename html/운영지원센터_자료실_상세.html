@@ -1,140 +1,130 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <title>자료실&lt;운영지원센터&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-  <title>자료실&lt;운영지원센터&lt;민간 Sass 연계공통기반 통합관리포털</title>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/output.css" />
 
-  <!-- css -->
-  <link rel="stylesheet" type="text/css" href="../css/output.css" />
+    <!-- script -->
+    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script src="../js/plugin/swiper-bundle.min.js"></script>
+    <script src="../js/aos.js"></script>
+    <script defer src="../js/component/ui-script.js"></script>
+    <script defer src="../js/pattern/pattern.js"></script>
+    <script defer src="../js/nav.js"></script>
+    <script defer src="../js/app.js"></script>
+  </head>
 
-  <!-- script -->
-  <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-  <script src="../js/plugin/swiper-bundle.min.js"></script>
-  <script src="../js/aos.js"></script>
-  <script defer src="../js/component/ui-script.js"></script>
-  <script defer src="../js/pattern/pattern.js"></script>
-  <script defer src="../js/nav.js"></script>
-  <script defer src="../js/app.js"></script>
+  <body>
+    <div id="wrapper">
+      <!-- 컨테이너 영역 -->
+      <div id="container">
+        <!-- breadcrumb -->
+        <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
+          <ol class="breadcrumb">
+            <li class="home"><a href="main.html" class="txt" target="_self" title="메인 페이지로 이동">홈</a></li>
+            <li class=""><a href="운영지원센터_공지사항.html" class="txt" target="_self" title="페이지 이동">운영지원센터</a></li>
+            <li class=""><a href="운영지원센터_자료실.html" class="txt" target="_self" title="페이지 이동">자료실</a></li>
+          </ol>
+        </nav>
+        <!-- // breadcrumb -->
 
-</head>
+        <!-- 컨텐츠 영역 -->
+        <div class="inner">
+          <!-- 페이지 타이틀 영역 -->
+          <div class="page-title-wrap">
+            <h1 class="h-tit">자료실</h1>
+            <h2 class="s-tit">
+              민간 SaaS 연계공통기반과 클라우드 정책에 관련된<br class="m_block" />
+              자료를 공유합니다.
+            </h2>
+          </div>
+          <!-- //페이지 타이틀 영역 -->
+          <div class="page_content page_notice_detail">
+            <article class="article_post" data-aos="fade-up" data-aos-delay="300">
+              <h3 class="sr_only">자료실 게시물 상세 페이지</h3>
+              <div class="board_post">
+                <div class="post_head">
+                  <h3 class="tit">민간 SaaS 연계공통기반 이용 가이드</h3>
 
-<body>
-  <div id="wrapper">
-
-    <!-- 컨테이너 영역 -->
-    <div id="container">
-
-      <!-- breadcrumb -->
-      <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
-        <ol class="breadcrumb">
-          <li class="home"><a href="main.html" class="txt" target="_self" title="메인 페이지로 이동">홈</a></li>
-          <li class=""><a href="운영지원센터_공지사항.html" class="txt" target="_self" title="페이지 이동">운영지원센터</a></li>
-          <li class=""><a href="운영지원센터_자료실.html" class="txt" target="_self" title="페이지 이동">자료실</a></li>
-        </ol>
-      </nav>
-      <!-- // breadcrumb -->
-
-      <!-- 컨텐츠 영역 -->
-      <div class="inner">
-        <!-- 페이지 타이틀 영역 -->
-        <div class="page-title-wrap">
-          <h1 class="h-tit">자료실</h1>
-          <h2 class="s-tit">민간 SaaS 연계공통기반과 클라우드 정책에 관련된<br class="m_block"> 자료를 공유합니다.</h2>
-        </div>
-        <!-- //페이지 타이틀 영역 -->
-        <div class="page_content page_notice_detail">
-
-          <article class="article_post" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="sr_only">자료실 게시물 상세 페이지</h3>
-            <div class="board_post">
-              <div class="post_head">
-                <h3 class="tit">민간 SaaS 연계공통기반 이용 가이드</h3>
-
-                <div class="post_info_list">
-                  <ul class="info01">
-                    <li class="post_info_item">
-                      <p>등록일 </p><span>2025-01-12</span>
-                    </li>
-                  </ul>
-                  <ul class="info02">
-                    <li class="post_info_item">
-                      <p>작성자 </p><span>김<em>*</em>계</span>
-                    </li>
-                    <li class="post_info_item">
-                      <p>조회수 </p><span>249</span>
-                    </li>
-                  </ul>
+                  <div class="post_info_list">
+                    <ul class="info01">
+                      <li class="post_info_item">
+                        <p>등록일</p>
+                        <span>2025-01-12</span>
+                      </li>
+                    </ul>
+                    <ul class="info02">
+                      <li class="post_info_item">
+                        <p>작성자</p>
+                        <span>김<em>*</em>계</span>
+                      </li>
+                      <li class="post_info_item">
+                        <p>조회수</p>
+                        <span>249</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="post_body">
+                  <div class="txt">
+                    <p>
+                      '24년 5월 30일(목) 개최한 「정부 공통시스템과 민간 SaaS 간 연계 개통식」의 공공부문 민간 SaaS 발굴·공개 발표 자료 공유드립니다.
+                      <br />자세한 내용은 첨부된 설명회 발표 자료를 참고해 주시기 바랍니다. <br /><br />
+                      감사합니다.
+                    </p>
+                  </div>
+                  <div class="board_attachment">
+                    <span class="text-bold">첨부파일 (<span class="text-point-primary">2</span>)</span>
+                    <ul class="box-group-area">
+                      <li>
+                        <p class="tit">민간 SaaS 연계공통기반 이용 가이드 [PDF,24KB]</p>
+                        <div class="btn-wrap">
+                          <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                          <!-- <button type="button" class="krds-btn medium text">바로보기 <i class="svg-icon ico-link"></i></button> -->
+                        </div>
+                      </li>
+                      <li>
+                        <p class="tit">공공부문 민간 SaaS 활용촉진 성과 및 공공부문 민간 SaaS 발굴 공개 [PDF,141KB]</p>
+                        <div class="btn-wrap">
+                          <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
+                          <!-- <button type="button" class="krds-btn medium text">바로보기 <i class="svg-icon ico-link"></i></button> -->
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div class="post_body">
-                <div class="txt">
-                  <p>
-                    '24년 5월 30일(목) 개최한 「정부 공통시스템과 민간 SaaS 간 연계 개통식」의 공공용 민간 SaaS 발굴·공개 발표 자료 공유드립니다.
-                    <br>자세한 내용은 첨부된 설명회 발표 자료를 참고해 주시기 바랍니다.
-                    <br><br>
-                    감사합니다.
-                </div>
-                <div class="board_attachment">
-                  <span class="text-bold">첨부파일 (<span class="text-point-primary">2</span>)</span>
-                  <ul class="box-group-area">
-                    <li>
-                      <p class="tit">민간 SaaS 연계공통기반 이용 가이드 [PDF,24KB]</p>
-                      <div class="btn-wrap">
-                        <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
-                        <!-- <button type="button" class="krds-btn medium text">바로보기 <i class="svg-icon ico-link"></i></button> -->
-                      </div>
-                    </li>
-                    <li>
-                      <p class="tit">공공부문 민간 SaaS 활용촉진 성과 및 공공용 민간 SaaS 발굴 공개 [PDF,141KB]</p>
-                      <div class="btn-wrap">
-                        <button type="button" class="krds-btn medium text">다운로드 <i class="svg-icon ico-down"></i></button>
-                        <!-- <button type="button" class="krds-btn medium text">바로보기 <i class="svg-icon ico-link"></i></button> -->
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
 
-            <div class="post_prev_next">
-              <dl class="prev">
-                <dt>
-                  <a href="javascript:;" class="krds-btn text">
-                    <i class="svg-icon arrow-top"></i>이전글
-                  </a>
-                </dt>
-                <!-- <dd><span class="tit">이전글이 없습니다.</span></dd> -->
-                <dd><a href="javascript:;" target="_self" title="페이지 이동" class="tit">2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내
-                    2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내2025년
-                    지능정보사회 법제도 포럼 공개세미나 개최 안내2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내</a></dd>
-              </dl>
-              <dl class="next">
-                <dt>
-                  <a href="javascript:;" class="krds-btn medium text">
-                    <i class="svg-icon arrow-down"></i>다음글
-                  </a>
-                </dt>
-                <!-- <dd><span class="tit">다음글이 없습니다.</span></dd> -->
-                <dd><a href="javascript:;" target="_self" title="페이지 이동" class="tit">제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발
-                    아이디어 공모전제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전제8회
-                    개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전제8회 개방형 클라우드
-                    플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전</a></dd>
-              </dl>
-            </div>
-            <div class="wrap_btns">
-              <a href="운영지원센터_자료실.html" target="_self" title="페이지 이동" class="krds-btn xlarge primary">게시글 목록</a>
-            </div>
-          </article>
+              <div class="post_prev_next">
+                <dl class="prev">
+                  <dt>
+                    <a href="javascript:;" class="krds-btn text"> <i class="svg-icon arrow-top"></i>이전글 </a>
+                  </dt>
+                  <!-- <dd><span class="tit">이전글이 없습니다.</span></dd> -->
+                  <dd><a href="javascript:;" target="_self" title="페이지 이동" class="tit">2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내 2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내2025년 지능정보사회 법제도 포럼 공개세미나 개최 안내</a></dd>
+                </dl>
+                <dl class="next">
+                  <dt>
+                    <a href="javascript:;" class="krds-btn medium text"> <i class="svg-icon arrow-down"></i>다음글 </a>
+                  </dt>
+                  <!-- <dd><span class="tit">다음글이 없습니다.</span></dd> -->
+                  <dd><a href="javascript:;" target="_self" title="페이지 이동" class="tit">제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전제8회 개방형 클라우드 플랫폼(K-PaaS) 기반 서비스 개발 아이디어 공모전</a></dd>
+                </dl>
+              </div>
+              <div class="wrap_btns">
+                <a href="운영지원센터_자료실.html" target="_self" title="페이지 이동" class="krds-btn xlarge primary">게시글 목록</a>
+              </div>
+            </article>
+          </div>
         </div>
+        <!-- //컨텐츠 영역 -->
       </div>
-      <!-- //컨텐츠 영역 -->
+      <!-- //컨테이너 영역 -->
     </div>
-    <!-- //컨테이너 영역 -->
-  </div>
-
-</body>
-
+  </body>
 </html>
