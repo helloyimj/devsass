@@ -15,8 +15,8 @@ label {
 }
 
 .chip-wrap {
-	@include flex-layout($jc: space-between,);
-	gap: var(--krds-number-5);
+	// @include flex-layout($jc: space-between,);
+	// gap: var(--krds-number-5);
 	.krds-form-chip {
 		flex: 1;
 		.radio {
@@ -166,7 +166,8 @@ label {
 @mixin form-check-additional-text($size) {
 	padding-left: calc(var(--krds-form-check--button-size-#{$size}) + var(--krds-form-check--gap));
 	.krds-form-check-p {
-		font-size: var(--krds-form-check--additional-text-pc-font-size-#{$size});
+		// font-size: var(--krds-form-check--additional-text-pc-font-size-#{$size});
+		font-size: 18px;
 		@include size-medium {
 			font-size: var(--krds-form-check--additional-text-mobile-font-size-#{$size});
 		}

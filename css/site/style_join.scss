@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-  .wrap_img {
+.wrap_img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,6 +61,11 @@
 
   .krds-info-list {
     gap: 8px;
+  }
+
+  .krds-form-check.large > input[type=radio] ~ label, 
+  .krds-form-check.large > input[type=checkbox] ~ label {
+      font-weight: bold; 
   }
 
   // 라디오 버튼
@@ -131,195 +136,198 @@
     }
   }
 
-// 약관 동의 모달
-.terms-type-modal {
-  .krds-info-list {
-    > li {
-      padding-left: 0;
-    }
+  // 약관 동의 모달
+  .terms-type-modal {
+    .krds-info-list {
+      > li {
+        padding-left: 0;
+      }
 
-    &.circle {
-      padding-left: var(--krds-padding-6);
-    }
-  }
-
-  .agree-t2 {
-    display: block;
-    padding-bottom: var(--krds-padding-2);
-  }
-}
-
-// 3단계 체크리스트
-.terms-type.checklist {
-  .terms-agree-ul {
-    gap: var(--krds-gap-9);
-
-    .terms-agree-ul {
-      margin-top: var(--krds-padding-8);
-      gap: var(--krds-gap-7);
-    }
-  }
-  .agree-box {
-    margin-top: 0;
-
-    > p,
-    > div {
-      font-size: var(--krds-pc-font-size-body-medium);
-      display: flex;
-      gap: var(--krds-gap-2);
-
-      .description {
-        display: block;
-        font-size: var(--krds-pc-font-size-body-small);
-        color: var(--krds-light-color-text-subtle);
-        margin-top: var(--krds-gap-3);
+      &.circle {
+        padding-left: var(--krds-padding-6);
       }
     }
-    .num {
-      min-width: 3.5rem;
+
+    .agree-t2 {
+      display: block;
+      padding-bottom: var(--krds-padding-2);
     }
   }
-}
 
-// 4단계 정보 입력
-.input-type {
-  .txt-box.bg-white {
-    .box-sec {
-      padding-bottom: var(--krds-padding-10);
-      border-bottom: 1px solid var(--krds-light-color-border-gray);
+  // 3단계 체크리스트
+  .terms-type.checklist {
+    .terms-agree-ul {
       gap: var(--krds-gap-9);
 
-      &:last-of-type {
-        padding-bottom: 0;
-        border-bottom: none;
+      .terms-agree-ul {
+        margin-top: var(--krds-padding-8);
+        gap: var(--krds-gap-7);
+      }
+    }
+    .agree-box {
+      margin-top: 0;
+
+      > p,
+      > div {
+        font-size: var(--krds-pc-font-size-body-medium);
+        display: flex;
+        gap: var(--krds-gap-2);
+
+        .description {
+          display: block;
+          font-size: var(--krds-pc-font-size-body-small);
+          color: var(--krds-light-color-text-subtle);
+          margin-top: var(--krds-gap-3);
+        }
+      }
+      .num {
+        min-width: 3.5rem;
+      }
+    }
+  }
+
+  // 4단계 정보 입력
+  .input-type {
+    .txt-box.bg-white {
+      .box-sec {
+        padding-bottom: var(--krds-padding-10);
+        border-bottom: 1px solid var(--krds-light-color-border-gray);
+        gap: var(--krds-gap-9);
+
+        &:last-of-type {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+    }
+    .form-group {
+      input,
+      select {
+        max-width: 39rem;
+      }
+    }
+
+    .krds-file-upload {
+      .krds-info-list {
+        color: var(--krds-color-light-gray-70);
+      }
+      h3.tit {
+        display: inline-block;
+        font-size: var(--krds-pc-font-size-heading-small);
+        font-weight: var(--krds-font-weight-bold);
+        position: relative;
+
+        .required {
+          font-size: var(--krds-pc-font-size-label-small);
+          font-weight: var(--krds-font-weight-regular);
+          color: var(--krds-light-color-text-basic);
+          position: absolute;
+          top: 0.4rem;
+          right: -3.8rem;
+        }
+      }
+
+      .file-upload {
+        gap: var(--krds-gap-7);
+        padding: var(--krds-padding-10);
+      }
+
+      .upload-list {
+        .file-info {
+          .file-name {
+            font-size: var(--krds-pc-font-size-body-medium);
+          }
+        }
+        .file-hint-invalid {
+          font-size: var(--krds-pc-font-size-body-medium);
+        }
       }
     }
   }
   .form-group {
-    input,
-    select {
-      max-width: 39rem;
-    }
-  }
+    .form-tit {
+      label {
+        font-size: var(--krds-pc-font-size-heading-small);
+        font-weight: var(--krds-font-weight-bold);
+        position: relative;
 
-  .krds-file-upload {
-    h3.tit {
-      display: inline-block;
-      font-size: var(--krds-pc-font-size-heading-small);
-      font-weight: var(--krds-font-weight-bold);
-      position: relative;
-
-      .required {
-        font-size: var(--krds-pc-font-size-label-small);
-        font-weight: var(--krds-font-weight-regular);
-        color: var(--krds-light-color-text-basic);
-        position: absolute;
-        top: 0.4rem;
-        right: -3.8rem;
-      }
-    }
-
-    .file-upload {
-      gap: var(--krds-gap-7);
-      padding: var(--krds-padding-10);
-    }
-
-    .upload-list {
-      .file-info {
-        .file-name {
-          font-size: var(--krds-pc-font-size-body-medium);
+        .required {
+          font-size: var(--krds-pc-font-size-label-small);
+          font-weight: var(--krds-font-weight-regular);
+          color: var(--krds-light-color-text-basic);
+          position: absolute;
+          top: 0.4rem;
+          right: -3.8rem;
         }
       }
-      .file-hint-invalid {
-        font-size: var(--krds-pc-font-size-body-medium);
-      }
     }
-  }
-}
-.form-group {
-  .form-tit {
-    label {
-      font-size: var(--krds-pc-font-size-heading-small);
-      font-weight: var(--krds-font-weight-bold);
-      position: relative;
 
-      .required {
+    .form-hint {
+      &.above {
         font-size: var(--krds-pc-font-size-label-small);
-        font-weight: var(--krds-font-weight-regular);
-        color: var(--krds-light-color-text-basic);
-        position: absolute;
-        top: 0.4rem;
-        right: -3.8rem;
+        //color: var(--krds-light-color-text-subtle);
+
+        &::before {
+          content: none;
+        }
+      }
+
+      &.inline {
+        font-size: var(--krds-pc-font-size-label-small);
+        color: var(--krds-light-color-text-subtle);
+
+        &::before {
+          content: none;
+        }
       }
     }
   }
 
-  .form-hint {
-    &.above {
-      font-size: var(--krds-pc-font-size-label-small);
-      //color: var(--krds-light-color-text-subtle);
-
-      &::before {
-        content: none;
+  // 모달 크기
+  .krds-modal {
+    .modal-dialog {
+      .modal-content {
+        &.medium {
+          width: 56rem;
+        }
       }
-    }
 
-    &.inline {
-      font-size: var(--krds-pc-font-size-label-small);
-      color: var(--krds-light-color-text-subtle);
-
-      &::before {
-        content: none;
-      }
-    }
-  }
-}
-
-// 모달 크기
-.krds-modal {
-  .modal-dialog {
-    .modal-content {
-      &.medium {
-        width: 56rem;
-      }
-    }
-
-    .box-sec {
-      display: flex;
-      flex-direction: column;
-      gap: var(--krds-gap-7);
-      padding-top: var(--krds-padding-6);
-    }
-
-    &.modal-search {
       .box-sec {
-        gap: var(--krds-gap-5);
+        display: flex;
+        flex-direction: column;
+        gap: var(--krds-gap-7);
+        padding-top: var(--krds-padding-6);
+      }
+
+      &.modal-search {
+        .box-sec {
+          gap: var(--krds-gap-5);
+        }
       }
     }
   }
-}
 
-// 5단계 신청 완료
-.wrap-comp-info-box {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  border-radius: var(--krds-radius-xlarge1);
-  background-color: var(--krds-light-color-surface-secondary-subtler);
-}
+  // 5단계 신청 완료
+  .wrap-comp-info-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: var(--krds-radius-xlarge1);
+    background-color: var(--krds-light-color-surface-secondary-subtler);
+  }
 
-.step-type {
-  .comp-msg-wrap {
-    h4 {
-      font-size: var(--krds-pc-font-size-heading-medium);
-      margin-bottom: var(--krds-padding-7);
-    }
+  .step-type {
+    .comp-msg-wrap {
+      h4 {
+        font-size: var(--krds-pc-font-size-heading-medium);
+        margin-bottom: var(--krds-padding-7);
+      }
 
-    p {
-      font-size: var(--krds-pc-font-size-body-large);
+      p {
+        font-size: var(--krds-pc-font-size-body-large);
+      }
     }
   }
-}
 }
 
 /* 회원가입 모달 */
@@ -334,7 +342,7 @@
 .structured-item {
   &.case_card {
     padding: var(--krds-padding-8);
-    min-height: 40.1rem;
+    // min-height: 40.1rem;
 
     .in {
       .card-top {
@@ -381,13 +389,13 @@
           gap: var(--krds-gap-3);
           margin-bottom: 0;
         }
-        
+
         .box_tooltip {
           display: flex;
           flex-direction: column;
           gap: var(--krds-gap-5);
         }
-        
+
         .c-company {
           font-size: var(--krds-pc-font-size-body-small);
           color: var(--krds-light-color-element-gray);
@@ -396,8 +404,7 @@
     }
   }
 
-  .wrap-tooltip {   
-
+  .wrap-tooltip {
     .tooltip-txt {
       display: flex;
       width: 100%;
@@ -408,8 +415,8 @@
         flex-shrink: 0;
       }
 
-      .value-wrap {   
-        display: flex; 
+      .value-wrap {
+        display: flex;
         width: calc(100% - 8rem);
         gap: var(--krds-gap-2);
 
@@ -418,13 +425,13 @@
           max-width: 100%;
 
           &.is-ellipsis {
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              -webkit-line-clamp: 1;
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
-              word-break: break-all;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-break: break-all;
           }
         }
       }
@@ -472,23 +479,22 @@
   }
 }
 
-
 @media (max-width: 767px) {
-    /* 회원가입 */
-    .page_signup {
-      // 단계 표시기
-      .krds-step-wrap {
-        li:not(li:last-of-type) {
-          width: 12rem;
-          min-width: initial;
-        }
+  /* 회원가입 */
+  .page_signup {
+    // 단계 표시기
+    .krds-step-wrap {
+      li:not(li:last-of-type) {
+        width: 12rem;
+        min-width: initial;
       }
+    }
 
-      // 테이블
-      .krds-table-wrap {
-        width: 100%;
-      }
-    
+    // 테이블
+    .krds-table-wrap {
+      width: 100%;
+    }
+
     .input-type {
       .form-group {
         input,
@@ -499,4 +505,3 @@
     }
   }
 }
-

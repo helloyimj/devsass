@@ -12,10 +12,10 @@ $breakpoint-xlarge: 1280px !default;
 $breakpoint-xxlarge: 1440px !default;
 
 //TYPO CUSTOM
-$font-family-base: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", "-apple-system", "BlinkMacSystemFont", "Segoe UI", sans-serif !default;
+$font-family-base: "NotoSansRegular", "Apple SD Gothic Neo", "Malgun Gothic", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !default;
+// $font-family-base: "NotoSansRegular", "나눔바른고딕", "NanumBarunGothic", "Apple SD 산돌고딕 Neo", "Apple SD Gothic Neo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !default;
 // $font-family-base: "Pretendard GOV", sans-serif !default;
-$font-size-base: 62.5% !default; //10px 1rem으로 설정
-
+$font-size-base: 62.5% !default; //10px 1rem으로 설정a
 $font-letter-spacings: (
 	none: var(--krds-typo-letter-spacing-0),
 	wide: var(--krds-typo-letter-spacing-1),
@@ -45,10 +45,15 @@ $font-underline-offset-default: 0.3rem !default;
 $url: "../../img" !default;
 
 //TRANSITION
-$transition-base: .4s ease-in-out !default;
+// $transition-base: .4s ease-in-out !default;
+// $transition-fade: opacity .4s linear !default;
+// $transition-collapse: max-height .4s ease !default;
+// $transition-collapse-width: width .4s ease !default;
+
+$transition-base: opacity .4s ease-in-out, transform .4s ease-in-out !default;
 $transition-fade: opacity .4s linear !default;
-$transition-collapse: max-height .4s ease !default;
-$transition-collapse-width: width .4s ease !default;
+$transition-collapse: max-height .4s ease-in-out !default;
+$transition-collapse-width: width .4s ease-in-out !default;
 
 //SVG ICON SIZE
 $icon-sizes: (

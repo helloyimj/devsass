@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>공공부문 민간 SaaS 상세&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="../css/output.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/site/output.css" />
 
     <!-- script -->
-    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-    <script src="../js/plugin/swiper-bundle.min.js"></script>
-    <script src="../js/aos.js"></script>
+    <script defer src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script defer src="../js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="../js/aos.js"></script>
     <script defer src="../js/component/ui-script.js"></script>
     <script defer src="../js/pattern/pattern.js"></script>
     <script defer src="../js/nav.js"></script>
@@ -45,6 +45,75 @@
               <h3 class="sr_only">공공부문 민간 SaaS 게시물 상세</h3>
 
               <ul class="total-search-list product_list krds-structured-list type-full">
+                <!-- 중앙조달계약 없을 경우 + 정부 공통시스템 연계 없을 경우 -->
+                <li class="structured-item product_card" data-aos="fade-up">
+                  <div class="product_item_inner">
+                    <div class="box_logo">
+                      <img src="../img/saas_img/0_common/logo/logo_pr_dooray.svg" alt="두레이 로고" class="viewer" />
+                    </div>
+                    <div class="box_txt">
+                      <div class="box_txt_inner">
+                        <div class="card-top">
+                          <span class="krds-badge">협업도구</span>
+                        </div>
+                        <div class="card-body">
+                          <div class="c-text">
+                            <div class="c-tit">
+                              <span class="product_name">두레이!(Dooray!)</span>
+                            </div>
+                            <p class="company_name">두레이</p>
+                            <div class="tags">
+                              <span class="tag">드라이브</span>
+                              <span class="tag">메일</span>
+                              <span class="tag">메신저</span>
+                              <span class="tag">업무관리</span>
+                              <span class="tag">전자결재</span>
+                            </div>
+                          </div>
+                          <div class="b_box">
+                            <p>정부 공통시스템 연계</p>
+                            <div class="tags">
+                              <span class="tag_gov">해당없음</span>
+                            </div>
+                          </div>
+                          <div class="wrap_detail_info">
+                            <ul class="detail_info_list">
+                              <li class="detail_info_list_item c-date"><strong class="info_tit key">CSAP 인증</strong><span class="info_value value">표준</span></li>
+                              <li class="detail_info_list_item c-date"><strong class="info_tit key">인증 날짜</strong><span class="info_value value">2025.12.11~2029.12.17</span></li>
+                              <li class="detail_info_list_item c-date"><strong class="info_tit key">이용 인프라</strong><span class="info_value value">네이버 클라우드(공공)</span></li>
+                            </ul>
+                          </div>
+                          <div class="b_box">
+                            <p class="before_mark medal_icon">국가정보원 공시 국가공공기관 도입 가능 <span>클라우드 컴퓨팅 서비스</span></p>
+                          </div>
+                        </div>
+                        <div class="card-btm">
+                          <div class="wrap_link_area">
+                            <div class="link_area">
+                              <span class="link_label">서비스 <br class="block_480" />공식 사이트</span>
+                              <a href="javascript:;" target="_blank" class="krds-btn xsmall tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
+                            </div>
+                            <div class="link_area">
+                              <span class="link_label">기관직접계약</span>
+                              <a href="javascript:;" target="_blank" class="krds-btn xsmall tertiary">이용지원시스템 이동<i class="svg-icon ico-go"></i></a>
+                            </div>
+                            <div class="link_area">
+                              <span class="link_label">중앙조달계약</span>
+                              <p>해당 없음</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-btm">
+                          <div class="detail_organization">
+                            <strong class="key">이용 기관</strong>
+                            <span class="value">경기도 구리시, 경기도 하남시, 광주광역시, 충청북도 옥천군, 충청북도 음성군, 충청북도 제천시, 충청북도 증평군, 충청북도 진천군, 충청북도 충주시, 전라남도 장성군</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- 중앙조달계약 계약완료 + 조달청 서비스몰 이동 -->
                 <li class="structured-item product_card" data-aos="fade-up">
                   <div class="product_item_inner">
                     <div class="box_logo">
@@ -83,7 +152,6 @@
                               <li class="detail_info_list_item c-date"><strong class="info_tit key">CSAP 인증</strong><span class="info_value value">표준</span></li>
                               <li class="detail_info_list_item c-date"><strong class="info_tit key">인증 날짜</strong><span class="info_value value">2025.12.11~2029.12.17</span></li>
                               <li class="detail_info_list_item c-date"><strong class="info_tit key">이용 인프라</strong><span class="info_value value">네이버 클라우드(공공)</span></li>
-                              <li class="detail_info_list_item c-date"><strong class="info_tit key">중앙조달계약</strong><span class="info_value value">계약 완료</span></li>
                             </ul>
                           </div>
                           <div class="b_box">
@@ -94,11 +162,15 @@
                           <div class="wrap_link_area">
                             <div class="link_area">
                               <span class="link_label">서비스 <br class="block_480" />공식 사이트</span>
-                              <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
+                              <a href="javascript:;" target="_blank" class="krds-btn xsmall tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                             </div>
                             <div class="link_area">
                               <span class="link_label">기관직접계약</span>
-                              <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">이용지원시스템 이동<i class="svg-icon ico-go"></i></a>
+                              <a href="javascript:;" target="_blank" class="krds-btn xsmall tertiary">이용지원시스템 이동<i class="svg-icon ico-go"></i></a>
+                            </div>
+                            <div class="link_area">
+                              <span class="link_label">중앙조달계약</span>
+                              <a href="javascript:;" target="_blank" class="krds-btn xsmall tertiary">조달청 서비스몰 이동<i class="svg-icon ico-go"></i></a>
                             </div>
                           </div>
                         </div>

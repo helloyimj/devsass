@@ -410,17 +410,17 @@ $mode-setting: light;
 			.svg-icon {
 				background-color: $color;
 			}
-			&.pure {
-				&:hover,
-				&:active,
-				&:focus,
-				&:visited {
-					color: $color;
-					.svg-icon {
-						background-color: $color;
-					}
-				}
-			}
+			// &.pure {
+			// 	&:hover,
+			// 	&:active,
+			// 	&:focus,
+			// 	&:visited {
+			// 		color: $color;
+			// 		.svg-icon {
+			// 			background-color: $color;
+			// 		}
+			// 	}
+			// }
 		}
 		&:hover {
 			$color: var(--krds-#{$mode-setting}-color-link-hover);
@@ -445,18 +445,18 @@ $mode-setting: light;
 				background-color: $color;
 			}
 		}
-		&.pure {
-			&:hover,
-			&:active,
-			&:focus,
-			&:visited {
-				$color: var(--krds-button--color-link-text);
-				color: $color;
-				.svg-icon {
-					background-color: $color;
-				}
-			}
-		}
+		// &.pure {
+		// 	&:hover,
+		// 	&:active,
+		// 	&:focus,
+		// 	&:visited {
+		// 		$color: var(--krds-button--color-link-text);
+		// 		color: $color;
+		// 		.svg-icon {
+		// 			background-color: $color;
+		// 		}
+		// 	}
+		// }
 		.underline {
 			&.hidden-underline {
 				text-decoration-color: var(--krds-#{$mode-setting}-color-border-transparency);
@@ -512,11 +512,11 @@ $mode-setting: light;
 		.svg-icon {
 			background-color: var(--krds-#{$mode-setting}-color-text-basic);
 		}
-		&.pure {
-			.svg-icon {
-				background-color: transparent;
-			}
-		}
+		// &.pure {
+		// 	.svg-icon {
+		// 		background-color: transparent;
+		// 	}
+		// }
 		//새로고침, 토글 등 보더 아이콘 버튼 형태
 		&.border {
 			background-color: var(--krds-#{$mode-setting}-color-background-white);
@@ -569,17 +569,17 @@ $mode-setting: light;
 						background-color: $color;
 					}
 				}
-				&.pure {
-					&:hover,
-					&:active,
-					&:focus,
-					&:visited {
-						color: $color;
-						.svg-icon {
-							background-color: $color;
-						}
-					}
-				}
+				// &.pure {
+				// 	&:hover,
+				// 	&:active,
+				// 	&:focus,
+				// 	&:visited {
+				// 		color: $color;
+				// 		.svg-icon {
+				// 			background-color: $color;
+				// 		}
+				// 	}
+				// }
 			}
 			&:hover {
 				$color: var(--krds-#{$mode-setting}-color-link-hover);
@@ -609,18 +609,18 @@ $mode-setting: light;
 					}
 				}
 			}
-			&.pure {
-				&:hover,
-				&:active,
-				&:focus,
-				&:visited {
-					$color: var(--krds-button--color-link-text);
-					color: $color;
-					.svg-icon {
-						background-color: $color;
-					}
-				}
-			}
+			// &.pure {
+			// 	&:hover,
+			// 	&:active,
+			// 	&:focus,
+			// 	&:visited {
+			// 		$color: var(--krds-button--color-link-text);
+			// 		color: $color;
+			// 		.svg-icon {
+			// 			background-color: $color;
+			// 		}
+			// 	}
+			// }
 			.underline {
 				&.hidden-underline {
 					text-decoration-color: var(--krds-#{$mode-setting}-color-border-transparency);

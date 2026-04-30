@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>공공부문 민간 SaaS&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="../css/output.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/site/output.css" />
 
     <!-- script -->
-    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-    <script src="../js/plugin/swiper-bundle.min.js"></script>
-    <script src="../js/aos.js"></script>
+    <script defer src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script defer src="../js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="../js/aos.js"></script>
     <script defer src="../js/component/ui-script.js"></script>
     <script defer src="../js/pattern/pattern.js"></script>
     <script defer src="../js/nav.js"></script>
@@ -20,14 +20,14 @@
   </head>
 
   <body>
-    <div id="wrapper">
+    <div id="wrapper" class="dvh">
       <!-- 컨테이너 영역 -->
       <div id="container">
         <!-- breadcrumb -->
         <nav class="krds-breadcrumb-wrap" aria-label="현재 경로">
           <ol class="breadcrumb">
             <li class="home"><a href="main.html" class="txt" target="_self" title="메인 페이지로 이동">홈</a></li>
-            <li class=""><a href="운영지원센터_공지사항.html" class="txt" target="_self" title="페이지 이동">운영지원센터</a></li>
+            <li class=""><a href="공공부문 민간 SaaS.html" class="txt" target="_self" title="페이지 이동">공공부문 민간 SaaS</a></li>
           </ol>
         </nav>
         <!-- // breadcrumb -->
@@ -43,7 +43,7 @@
 
           <!-- 페이지 컨텐츠 영역 -->
           <div class="page_content page_product">
-            <div class="article_content" data-aos="fade-up">
+            <div class="article_content">
               <!-- 검색 입력폼 -->
               <div class="search-top-box page_top">
                 <div class="sch-filter-box">
@@ -202,7 +202,7 @@
                             </button>
                           </h3>
                           <div class="accordion-collapse collapse">
-                            <p class="sub-txt">분류를 선택하시면 상세 기능이 표시됩니다.</p>
+                            <!-- <p class="sub-txt">분류를 선택하시면 상세 기능이 표시됩니다.</p> -->
                             <div class="accordion-body">
                               <div class="form-group">
                                 <div class="form-conts">
@@ -226,7 +226,7 @@
                                         <option value="select_cls_facility">시설관리·건설</option>
                                         <option value="select_cls_hr">인사·채용 관리</option>
                                         <!-- </optgroup>
-                                                                  <optgroup label="필터 그룹2"> -->
+                                         <optgroup label="필터 그룹2"> -->
                                         <option value="select_cls_contract">전자계약</option>
                                         <option value="select_cls_light">조명 관제</option>
                                         <option value="select_cls_map">지도·공간분석</option>
@@ -247,11 +247,10 @@
                               </div>
                             </div>
                           </div>
-                          <div class="accordion-collapse collapse" id="filterDetailAccordion">
+                          <!-- <div class="accordion-collapse collapse" id="filterDetailAccordion">
                             <div class="accordion-body">
                               <div class="form-group">
                                 <div class="form-conts">
-                                  <!-- accordion 안에 있어야 함 -->
                                   <label class="form-tit">상세 기능</label>
                                   <ul class="input-group">
                                     <li>
@@ -261,7 +260,7 @@
                                 </div>
                               </div>
                             </div>
-                          </div>
+                          </div> -->
                         </li>
                         <li class="li accordion-item active">
                           <h3 class="accordion-header">
@@ -450,8 +449,72 @@
                   <div class="krds-tab-area layer">
                     <!-- 리스트 -->
                     <ul class="total-search-list product_list krds-structured-list type-full">
-                      <!-- 리스트 서식 -->
-                      <li class="structured-item product_card" data-aos="fade-up">
+                      <!-- 중앙조달계약 없을 경우 + 정부 공통시스템 연계 없을 경우 -->
+                      <li class="structured-item product_card">
+                        <div class="product_item_inner">
+                          <div class="box_logo">
+                            <img src="../img/saas_img/0_common/logo/logo_pr_dooray.svg" alt="두레이 로고" class="viewer" />
+                          </div>
+                          <div class="box_txt">
+                            <div class="box_txt_inner">
+                              <div class="card-top">
+                                <span class="krds-badge">협업도구</span>
+                              </div>
+                              <div class="card-body">
+                                <div class="c-text">
+                                  <div class="c-tit">
+                                    <a href="공공부문 민간 SaaS_상세.html" target="_self" title="상세 페이지 이동">
+                                      <span class="product_name">두레이!(Dooray!)</span>
+                                    </a>
+                                  </div>
+                                  <p class="company_name">두레이</p>
+                                  <div class="tags">
+                                    <span class="tag">드라이브</span>
+                                    <span class="tag">메일</span>
+                                    <span class="tag">메신저</span>
+                                    <span class="tag">업무관리</span>
+                                    <span class="tag">전자결재</span>
+                                  </div>
+                                </div>
+                                <div class="b_box">
+                                  <p>정부 공통시스템 연계</p>
+                                  <div class="tags">
+                                    <span class="tag_gov">해당없음</span>
+                                  </div>
+                                </div>
+                                <div class="wrap_detail_info">
+                                  <ul class="detail_info_list">
+                                    <li class="detail_info_list_item c-date"><strong class="info_tit key">CSAP 인증</strong><span class="info_value value">표준</span></li>
+                                    <li class="detail_info_list_item c-date"><strong class="info_tit key">인증 날짜</strong><span class="info_value value">2025.12.11~2029.12.17</span></li>
+                                    <li class="detail_info_list_item c-date"><strong class="info_tit key">이용 인프라</strong><span class="info_value value">네이버 클라우드(공공)</span></li>
+                                  </ul>
+                                </div>
+                                <div class="b_box">
+                                  <p class="before_mark medal_icon">국가정보원 공시 국가공공기관 도입 가능 <span>클라우드 컴퓨팅 서비스</span></p>
+                                </div>
+                              </div>
+                              <div class="card-btm">
+                                <div class="wrap_link_area">
+                                  <div class="link_area">
+                                    <span class="link_label">서비스 <br class="block_480" />공식 사이트</span>
+                                    <a href="javascript:;" target="_blank" class="krds-btn xsmall tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
+                                  </div>
+                                  <div class="link_area">
+                                    <span class="link_label">기관직접계약</span>
+                                    <a href="javascript:;" target="_blank" class="krds-btn xsmall tertiary">이용지원시스템 이동<i class="svg-icon ico-go"></i></a>
+                                  </div>
+                                  <div class="link_area">
+                                    <span class="link_label">중앙조달계약</span>
+                                    <p>해당 없음</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <!-- 중앙조달계약 계약완료 + 조달청 서비스몰 이동 -->
+                      <li class="structured-item product_card">
                         <div class="product_item_inner">
                           <div class="box_logo">
                             <img src="../img/saas_img/0_common/logo/logo_pr_dooray.svg" alt="두레이 로고" class="viewer" />
@@ -491,7 +554,6 @@
                                     <li class="detail_info_list_item c-date"><strong class="info_tit key">CSAP 인증</strong><span class="info_value value">표준</span></li>
                                     <li class="detail_info_list_item c-date"><strong class="info_tit key">인증 날짜</strong><span class="info_value value">2025.12.11~2029.12.17</span></li>
                                     <li class="detail_info_list_item c-date"><strong class="info_tit key">이용 인프라</strong><span class="info_value value">네이버 클라우드(공공)</span></li>
-                                    <li class="detail_info_list_item c-date"><strong class="info_tit key">중앙조달계약</strong><span class="info_value value">계약 완료</span></li>
                                   </ul>
                                 </div>
                                 <div class="b_box">
@@ -502,11 +564,15 @@
                                 <div class="wrap_link_area">
                                   <div class="link_area">
                                     <span class="link_label">서비스 <br class="block_480" />공식 사이트</span>
-                                    <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
+                                    <a href="javascript:;" target="_blank" class="krds-btn xsmall tertiary">공식 사이트 이동 <i class="svg-icon ico-go"></i></a>
                                   </div>
                                   <div class="link_area">
                                     <span class="link_label">기관직접계약</span>
-                                    <a href="javascript:;" target="_blank" class="krds-btn medium tertiary">이용지원시스템 이동<i class="svg-icon ico-go"></i></a>
+                                    <a href="javascript:;" target="_blank" class="krds-btn xsmall tertiary">이용지원시스템 이동<i class="svg-icon ico-go"></i></a>
+                                  </div>
+                                  <div class="link_area">
+                                    <span class="link_label">중앙조달계약</span>
+                                    <a href="javascript:;" target="_blank" class="krds-btn xsmall tertiary">조달청 서비스몰 이동<i class="svg-icon ico-go"></i></a>
                                   </div>
                                 </div>
                               </div>
@@ -520,21 +586,23 @@
                   <!-- //검색 결과 -->
 
                   <!-- 페이지네이션 영역 -->
-                  <div class="krds-pagination">
-                    <span class="page-navi prev disabled" href="javascript:;">이전</span>
-                    <div class="page-links">
-                      <a class="page-link" href="javascript:;">1</a>
-                      <a class="page-link" href="javascript:;">2</a>
-                      <a class="page-link" href="javascript:;">3</a>
-                      <a class="page-link active" href="javascript:;">4</a>
-                      <a class="page-link" href="javascript:;">5</a>
-                      <a class="page-link" href="javascript:;">6</a>
-                      <a class="page-link" href="javascript:;">7</a>
-                      <a class="page-link" href="javascript:;">8</a>
-                      <span class="page-link link-dot"></span>
-                      <a class="page-link" href="javascript:;">99</a>
+                  <div class="wrap-krds-pagination">
+                    <div class="krds-pagination">
+                      <span class="page-navi prev disabled">이전</span>
+                      <div class="page-links">
+                        <a class="page-link active" href="javascript:;"><span class="sr-only">현재페이지 </span>1</a>
+                        <a class="page-link" href="javascript:;">2</a>
+                        <a class="page-link" href="javascript:;">3</a>
+                        <a class="page-link" href="javascript:;">4</a>
+                        <a class="page-link" href="javascript:;">5</a>
+                        <a class="page-link" href="javascript:;">6</a>
+                        <a class="page-link" href="javascript:;">7</a>
+                        <a class="page-link" href="javascript:;">8</a>
+                        <span class="page-link link-dot"></span>
+                        <a class="page-link" href="javascript:;">99</a>
+                      </div>
+                      <a class="page-navi next" href="javascript:;">다음</a>
                     </div>
-                    <a class="page-navi next" href="javascript:;">다음</a>
                   </div>
                   <!-- //페이지네이션 영역 -->
                 </div>
@@ -566,8 +634,60 @@
             <div class="modal-conts">
               <div class="pop-filter-top">
                 <!-- 적용된 필터가 없을 경우 노출 -->
-                <p class="filter-txt">적용된 필터가 없습니다.<br />검색 필터를 통해 상세한 검색을 해보세요</p>
+                <!-- <p class="filter-txt">적용된 필터가 없습니다.<br />검색 필터를 통해 상세한 검색을 해보세요</p> -->
                 <!-- //적용된 필터가 없을 경우 노출 -->
+                 <!-- 적용된 필터가 있을 경우 노출 -->
+                <div class="filter-tag-wrap">
+                  <button type="button" class="krds-btn large icon border">
+                    <span class="sr-only">새로고침</span>
+                    <i class="svg-icon ico-refresh"></i>
+                  </button>
+                  <div class="chip-wrap krds-tag-wrap medium">
+                    <span class="krds-btn-tag">
+                      행정표준코드
+                      <button type="button" class="btn-delete">
+                        <span class="sr-only">삭제</span>
+                      </button>
+                    </span>
+                    <span class="krds-btn-tag">
+                      GPKI
+                      <button type="button" class="btn-delete">
+                        <span class="sr-only">삭제</span>
+                      </button>
+                    </span>
+                    <span class="krds-btn-tag">
+                      자료
+                      <button type="button" class="btn-delete">
+                        <span class="sr-only">삭제</span>
+                      </button>
+                    </span>
+                    <span class="krds-btn-tag">
+                      인증 종류: 전체
+                      <button type="button" class="btn-delete">
+                        <span class="sr-only">삭제</span>
+                      </button>
+                    </span>
+                    <span class="krds-btn-tag">
+                      인증 현황: 유지
+                      <button type="button" class="btn-delete">
+                        <span class="sr-only">삭제</span>
+                      </button>
+                    </span>
+                    <span class="krds-btn-tag">
+                      서비스 도입 가능 여부: 전체
+                      <button type="button" class="btn-delete">
+                        <span class="sr-only">삭제</span>
+                      </button>
+                    </span>
+                  </div>
+                  <div class="tag-btn">
+                    <button type="button" class="krds-btn large icon border" id="btn-toggle">
+                      <span class="sr-only">열기</span>
+                      <i class="svg-icon ico-angle down"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- //적용된 필터가 있을 경우 노출 -->
               </div>
 
               <ul class="filter-list krds-accordion type-line" data-type="multiOpen">
@@ -581,24 +701,24 @@
                     <div class="accordion-body">
                       <div class="krds-check-area chk-column">
                         <div class="krds-form-check">
-                          <input type="checkbox" id="filter_target_chk_1a" />
-                          <label for="filter_target_chk_1a">모바일공무원증 (1)</label>
+                          <input type="checkbox" id="mob_filter_target_chk_1a" />
+                          <label for="mob_filter_target_chk_1a">모바일공무원증 (1)</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="checkbox" id="filter_target_chk_2a" checked />
-                          <label for="filter_target_chk_2a">행정표준코드 (1)</label>
+                          <input type="checkbox" id="mob_filter_target_chk_2a" checked />
+                          <label for="mob_filter_target_chk_2a">행정표준코드 (1)</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="checkbox" id="filter_target_chk_3a" checked />
-                          <label for="filter_target_chk_3a">GPKI (1)</label>
+                          <input type="checkbox" id="mob_filter_target_chk_3a" checked />
+                          <label for="mob_filter_target_chk_3a">GPKI (1)</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="checkbox" id="filter_target_chk_4a" checked />
-                          <label for="filter_target_chk_4a">자료 (18,201)</label>
+                          <input type="checkbox" id="mob_filter_target_chk_4a" checked />
+                          <label for="mob_filter_target_chk_4a">자료 (18,201)</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="checkbox" id="filter_target_chk_5a" />
-                          <label for="filter_target_chk_5a">LDAP (1)</label>
+                          <input type="checkbox" id="mob_filter_target_chk_5a" />
+                          <label for="mob_filter_target_chk_5a">LDAP (1)</label>
                         </div>
                       </div>
                     </div>
@@ -616,13 +736,13 @@
                         <div class="form-conts calendar-conts">
                           <ul class="input-group range">
                             <li>
-                              <label for="datepicker1a" class="form-tit">시작날짜</label>
-                              <input type="number" class="krds-input datepicker medium" id="datepicker1a" placeholder="" value="20231002" />
+                              <label for="mob_datepicker1a" class="form-tit">시작날짜</label>
+                              <input type="number" class="krds-input datepicker medium" id="mob_datepicker1a" placeholder="" value="20231002" />
                             </li>
                             <li class="mark sm">-</li>
                             <li>
-                              <label for="datepicker2a" class="form-tit">종료날짜</label>
-                              <input type="number" class="krds-input datepicker medium date-end" id="datepicker2a" placeholder="" value="20251202" />
+                              <label for="mob_datepicker2a" class="form-tit">종료날짜</label>
+                              <input type="number" class="krds-input datepicker medium date-end" id="mob_datepicker2a" placeholder="" value="20251202" />
                             </li>
                           </ul>
                         </div>
@@ -642,9 +762,8 @@
                         <div class="form-conts">
                           <ul class="input-group range select">
                             <li>
-                              <label for="input_select_serv" class="form-tit">서비스 유형</label>
-                              <select id="input_select_serv" class="krds-form-select medium">
-                                <!-- <option value="">전체</option> -->
+                              <label for="mob_input_select_serv" class="form-tit">서비스 유형</label>
+                              <select id="mob_input_select_serv" class="krds-form-select medium">
                                 <option value="" disabled selected hidden>서비스 유형을 선택해주세요</option>
                                 <option value="select_serv_edu">교육</option>
                                 <option value="select_serv_groupware">그룹웨어</option>
@@ -687,16 +806,15 @@
                     </button>
                   </h3>
                   <div class="accordion-collapse collapse">
-                    <p class="sub-txt">분류를 선택하시면 상세 기능이 표시됩니다.</p>
+                    <!-- <p class="sub-txt">분류를 선택하시면 상세 기능이 표시됩니다.</p> -->
                     <div class="accordion-body">
                       <div class="form-group">
                         <div class="form-conts">
                           <ul class="input-group range select">
                             <li>
-                              <label for="filterSelectProvide" class="form-tit">분류</label>
-                              <select id="filterSelectProvide" class="krds-form-select medium">
+                              <label for="mob_filterSelectProvide" class="form-tit">분류</label>
+                              <select id="mob_filterSelectProvide" class="krds-form-select medium">
                                 <option value="" disabled selected hidden>분류를 선택해주세요</option>
-                                <!-- <optgroup label="필터 그룹1"> -->
                                 <option value="select_cls_cs">고객응대·자동응답</option>
                                 <option value="select_cls_public">공공사업 발주·관리</option>
                                 <option value="select_cls_tour">관광</option>
@@ -710,8 +828,6 @@
                                 <option value="select_cls_performance">성과관리</option>
                                 <option value="select_cls_facility">시설관리·건설</option>
                                 <option value="select_cls_hr">인사·채용 관리</option>
-                                <!-- </optgroup>
-                                                          <optgroup label="필터 그룹2"> -->
                                 <option value="select_cls_contract">전자계약</option>
                                 <option value="select_cls_light">조명 관제</option>
                                 <option value="select_cls_map">지도·공간분석</option>
@@ -724,7 +840,6 @@
                                 <option value="select_cls_itsm">IT서비스관리</option>
                                 <option value="select_cls_erp">ERP</option>
                                 <option value="select_cls_etc">기타</option>
-                                <!-- </optgroup> -->
                               </select>
                             </li>
                           </ul>
@@ -732,21 +847,20 @@
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-collapse collapse" id="filterDetailAccordion">
+                  <!-- <div class="accordion-collapse collapse" id="mob_filterDetailAccordion">
                     <div class="accordion-body">
                       <div class="form-group">
                         <div class="form-conts">
-                          <!-- accordion 안에 있어야 함 -->
                           <label class="form-tit">상세 기능</label>
                           <ul class="input-group">
                             <li>
-                              <div class="krds-check-area chk-column" id="filterDetailCheck"></div>
+                              <div class="krds-check-area chk-column" id="mob_filterDetailCheck"></div>
                             </li>
                           </ul>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </li>
                 <li class="li accordion-item active">
                   <h3 class="accordion-header">
@@ -758,16 +872,16 @@
                     <div class="accordion-body">
                       <div class="row krds-check-area chk-column">
                         <div class="krds-form-check">
-                          <input type="radio" id="filter_kind_rdo_all" name="filter_kind" />
-                          <label for="filter_kind_rdo_all">전체</label>
+                          <input type="radio" id="mob_filter_kind_rdo_all" name="mob_filter_kind" />
+                          <label for="mob_filter_kind_rdo_all">전체</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="radio" id="filter_kind_rdo_1a" name="filter_kind" />
-                          <label for="filter_kind_rdo_1a">간편</label>
+                          <input type="radio" id="mob_filter_kind_rdo_1a" name="mob_filter_kind" />
+                          <label for="mob_filter_kind_rdo_1a">간편</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="radio" id="filter_kind_rdo_2a" name="filter_kind" />
-                          <label for="filter_kind_rdo_2a">표준</label>
+                          <input type="radio" id="mob_filter_kind_rdo_2a" name="mob_filter_kind" />
+                          <label for="mob_filter_kind_rdo_2a">표준</label>
                         </div>
                       </div>
                     </div>
@@ -783,20 +897,20 @@
                     <div class="accordion-body">
                       <div class="row krds-check-area chk-column">
                         <div class="krds-form-check">
-                          <input type="radio" id="filter_current_rdo_all" name="filter_current" />
-                          <label for="filter_current_rdo_all">전체</label>
+                          <input type="radio" id="mob_filter_current_rdo_all" name="mob_filter_current" />
+                          <label for="mob_filter_current_rdo_all">전체</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="radio" id="filter_current_rdo_1a" name="filter_current" />
-                          <label for="filter_current_rdo_1a">유지</label>
+                          <input type="radio" id="mob_filter_current_rdo_1a" name="mob_filter_current" />
+                          <label for="mob_filter_current_rdo_1a">유지</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="radio" id="filter_current_rdo_2a" name="filter_current" />
-                          <label for="filter_current_rdo_2a">취소</label>
+                          <input type="radio" id="mob_filter_current_rdo_2a" name="mob_filter_current" />
+                          <label for="mob_filter_current_rdo_2a">취소</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="radio" id="filter_current_rdo_3a" name="filter_current" />
-                          <label for="filter_current_rdo_3a">만료</label>
+                          <input type="radio" id="mob_filter_current_rdo_3a" name="mob_filter_current" />
+                          <label for="mob_filter_current_rdo_3a">만료</label>
                         </div>
                       </div>
                     </div>
@@ -812,16 +926,16 @@
                     <div class="accordion-body">
                       <div class="row krds-check-area chk-column">
                         <div class="krds-form-check">
-                          <input type="radio" id="filter_cloud_rdo_all" name="filter_cloud" />
-                          <label for="filter_cloud_rdo_all">전체</label>
+                          <input type="radio" id="mob_filter_cloud_rdo_all" name="mob_filter_cloud" />
+                          <label for="mob_filter_cloud_rdo_all">전체</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="radio" id="filter_cloud_rdo_1a" name="filter_cloud" />
-                          <label for="filter_cloud_rdo_1a">가능</label>
+                          <input type="radio" id="mob_filter_cloud_rdo_1a" name="mob_filter_cloud" />
+                          <label for="mob_filter_cloud_rdo_1a">가능</label>
                         </div>
                         <div class="krds-form-check">
-                          <input type="radio" id="filter_cloud_rdo_2a" name="filter_cloud" />
-                          <label for="filter_cloud_rdo_2a">불가능</label>
+                          <input type="radio" id="mob_filter_cloud_rdo_2a" name="mob_filter_cloud" />
+                          <label for="mob_filter_cloud_rdo_2a">불가능</label>
                         </div>
                       </div>
                     </div>
@@ -882,26 +996,26 @@
         const filterDetailAccordion = document.getElementById("filterDetailAccordion");
         const filterAccordionBody = filterDetailAccordion?.querySelector(".accordion-body");
 
-        // 초기 상태 (선택 전)
-        if (filterDetailAccordion) filterDetailAccordion.style.display = "none";
-        if (filterAccordionBody) filterAccordionBody.style.display = "none";
+        // // 초기 상태 (선택 전)
+        // if (filterDetailAccordion) filterDetailAccordion.style.display = "none";
+        // if (filterAccordionBody) filterAccordionBody.style.display = "none";
 
-        filterSelectBox.addEventListener("change", () => {
-          const filterSelectBoxValue = filterSelectBox.value;
+        // filterSelectBox.addEventListener("change", () => {
+        //   const filterSelectBoxValue = filterSelectBox.value;
 
-          // 분류 선택 전
-          if (!filterSelectBoxValue) {
-            if (filterDetailAccordion) filterDetailAccordion.style.display = "none";
-            if (filterAccordionBody) filterAccordionBody.style.display = "none";
-            filterDetailCheck.innerHTML = "";
-            return;
-          }
+        //   // 분류 선택 전
+        //   if (!filterSelectBoxValue) {
+        //     if (filterDetailAccordion) filterDetailAccordion.style.display = "none";
+        //     if (filterAccordionBody) filterAccordionBody.style.display = "none";
+        //     filterDetailCheck.innerHTML = "";
+        //     return;
+        //   }
 
-          // 분류 선택 후
-          if (filterDetailAccordion) filterDetailAccordion.style.display = "block";
-          if (filterAccordionBody) filterAccordionBody.style.display = "block";
-          renderDetailCheckbox(filterSelectBoxValue);
-        });
+        //   // 분류 선택 후
+        //   if (filterDetailAccordion) filterDetailAccordion.style.display = "block";
+        //   if (filterAccordionBody) filterAccordionBody.style.display = "block";
+        //   // renderDetailCheckbox(filterSelectBoxValue);
+        // });
 
         const checkboxData = {
           select_cls_cs: [
@@ -1753,55 +1867,75 @@
             }
           ]
         };
+        // 2. PC와 모바일의 ID 세트를 배열로 정의
+          const filterConfigs = [
+            {
+              selectId: "filterSelectProvide",      // PC 셀렉트박스
+              accordionId: "filterDetailAccordion", // PC 아코디언
+              containerId: "filterDetailCheck",     // PC 체크박스 컨테이너
+              prefix: "pc"                          // ID 중복 방지 접두어
+            },
+            {
+              selectId: "mob_filterSelectProvide",  // 모바일 셀렉트박스
+              accordionId: "mob_filterDetailAccordion", // 모바일 아코디언
+              containerId: "mob_filterDetailCheck", // 모바일 체크박스 컨테이너
+              prefix: "mo"                          // ID 중복 방지 접두어
+            }
+          ];
 
-        function renderCheckbox(list) {
-          filterDetailCheck.innerHTML = "";
+          // 3. 기능을 부여하는 통합 루프
+          filterConfigs.forEach(config => {
+            const selectEl = document.getElementById(config.selectId);
+            const accordionEl = document.getElementById(config.accordionId);
+            const containerEl = document.getElementById(config.containerId);
+            // 아코디언 내부 바디 (필요한 경우)
+            const accordionBody = accordionEl?.querySelector(".accordion-body");
 
-          list.forEach((item) => {
-            const wrap = document.createElement("div");
-            wrap.className = "krds-form-check";
+            // 요소가 실제 화면(DOM)에 있을 때만 작동하도록
+            if (!selectEl || !accordionEl || !containerEl) return;
 
-            const input = document.createElement("input");
-            input.type = "checkbox";
-            input.id = item.id;
+            // 초기 상태 (숨김)
+            accordionEl.style.display = "none";
+            if (accordionBody) accordionBody.style.display = "none";
 
-            const label = document.createElement("label");
-            label.setAttribute("for", item.id);
-            label.textContent = item.label;
+            selectEl.addEventListener("change", (e) => {
+              const val = e.target.value;
 
-            wrap.appendChild(input);
-            wrap.appendChild(label);
-            filterDetailCheck.appendChild(wrap);
-          });
-        }
+              // 선택값이 없으면 (초기화)
+              if (!val) {
+                accordionEl.style.display = "none";
+                if (accordionBody) accordionBody.style.display = "none";
+                accordionEl.classList.remove("show");
+                containerEl.innerHTML = "";
+                return;
+              }
 
-        filterSelectBox.addEventListener("change", () => {
-          const filterSelectValue = filterSelectBox.value;
-          let result = [];
+              // 데이터가 있을 경우 렌더링
+              const list = checkboxData[val];
+              if (list) {
+                containerEl.innerHTML = list.map(item => `
+                  <div class="krds-form-check">
+                    <input type="checkbox" class="krds-check" id="${config.prefix}_${item.id}">
+                    <label class="krds-form-label" for="${config.prefix}_${item.id}">${item.label}</label>
+                  </div>
+                `).join("");
 
-          // 초기화
-          filterDetailAccordion.classList.remove("show");
-
-          // 전체 선택
-          if (filterSelectValue === "") {
-            Object.values(checkboxData).forEach((arr) => {
-              result = result.concat(arr);
+                // 아코디언 및 바디 표시
+                accordionEl.style.display = "block";
+                if (accordionBody) accordionBody.style.display = "block";
+                
+                setTimeout(() => accordionEl.classList.add("show"), 10);
+              }
             });
-          }
-          // 특정 분류
-          else if (checkboxData[filterSelectValue]) {
-            result = checkboxData[filterSelectValue];
-          }
 
-          if (result.length === 0) return;
+            // 페이지 로드 시 이미 값이 선택되어 있다면 자동으로 실행
+            if (selectEl.value) {
+              selectEl.dispatchEvent(new Event("change"));
+            }
+          });
 
-          renderCheckbox(result);
-          filterDetailAccordion.classList.add("show");
-        });
-
-        // 페이지 진입 시 기본값이 전체라면 바로 실행
-        filterSelectBox.dispatchEvent(new Event("change"));
       });
+
       // 좌측 필터 하단 전체 초기화 버튼
       const filterResetBtn = document.getElementById("filterResetBtn");
       // 칩 영역 새로고침 버튼 (클래스 사용)
@@ -1843,13 +1977,15 @@
         if (filterCountNum) filterCountNum.textContent = "0";
       });
 
-      // 각 칩 삭제 버튼 개별 삭제
-      chipWrap?.querySelectorAll(".btn-delete")?.forEach((btn) => {
-        btn.addEventListener("click", (e) => {
-          const chip = e.currentTarget.closest(".krds-btn-tag");
+      // // 각 칩 삭제 버튼 개별 삭제 (적용된 고급검색 조건)
+      chipWrap?.addEventListener("click", (e) => {
+        const deleteBtn = e.target.closest(".btn-delete");
+        if (deleteBtn) {
+          const chip = deleteBtn.closest(".krds-btn-tag");
           chip?.remove();
-        });
+        }
       });
+
     </script>
   </body>
 </html>

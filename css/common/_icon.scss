@@ -1,3 +1,6 @@
+@charset "UTF-8";
+$img-root: "../../img";
+
 .svg-icon {
 	&.ico-angle { //꺽쇠모양
 		@include icon-set(ico_angle);
@@ -301,7 +304,7 @@
 @include color-mode($mode: high-contrast){
 	.svg-icon {
 		&.ico-help {
-			background-image: url(#{$url}/img/component/icon/ico_help_fill.svg);
+			background-image: url("#{$img-root}/component/icon/ico_help_fill.svg");
 		}
 		
 	}

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <title>로그인</title>
 
-    <!-- css -->
-    <link rel="stylesheet" type="text/css" href="../css/output.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/site/output.css" />
 
     <!-- script -->
-    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-    <script src="../js/plugin/swiper-bundle.min.js"></script>
-    <script src="../js/aos.js"></script>
+    <script defer src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script defer src="../js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="../js/aos.js"></script>
     <script defer src="../js/component/ui-script.js"></script>
     <script defer src="../js/pattern/pattern.js"></script>
     <script defer src="../js/nav.js"></script>
@@ -146,6 +146,71 @@
             <div class="modal-btn btn-wrap">
               <button type="button" class="krds-btn medium tertiary close-modal">닫기</button>
               <button type="button" class="krds-btn medium primary close-modal">인증 메일 전송</button>
+            </div>
+            <!-- //modal btn -->
+            <!-- close button -->
+            <button type="button" class="krds-btn medium icon btn-close close-modal">
+              <span class="sr-only">닫기</span>
+              <i class="svg-icon ico-popup-close"></i>
+            </button>
+            <!-- //close button -->
+          </div>
+        </div>
+        <div class="modal-back in"></div>
+      </section>
+
+      <!-- modal 비밀번호 변경 -->
+      <section id="modal-change-pwd" class="krds-modal modal_login fade in" role="dialog" aria-labelledby="tit-modal-fichangend-pwd">
+        <div class="modal-dialog modal-md">
+          <div class="modal-content">
+            <!-- modal title -->
+            <div class="modal-header">
+              <h2 id="tit-modal-change-pwd" class="modal-title">비밀번호 변경</h2>
+            </div>
+            <!-- //modal title -->
+            <!-- modal contents -->
+            <div class="modal-conts">
+              <div class="conts-area">
+                <div class="box-sec">
+                  <div class="form-group">
+                    <div class="form-tit">
+                      <label for="txt-new-saas">새 비밀번호 입력</label>
+                      <p class="label_info">영문 대소문자/숫자/특수문자 중 3가지 이상 조합 (8자 ~ 12자)</p>
+                    </div>                    
+                    <div class="form-conts btn-ico-wrap">
+                      <input type="text" id="new_pw_r" class="krds-input" autocomplete="on" placeholder="새 비밀번호 입력" />
+                      <button type="button" class="krds-btn medium icon" aria-pressed="false">
+                        <span class="sr-only">입력한 비밀번호 보기</span>
+                        <i class="svg-icon ico-pw-visible"></i>
+                        <i class="svg-icon ico-pw-visible-on"></i>
+                      </button>
+                    </div>
+                    <p class="form-hint-invalid">최소 8자, 최대 12자까지 입력해 주세요.</p>
+                  </div>
+                </div>
+                <div class="box-sec">
+                  <div class="form-group">
+                    <div class="form-tit">
+                      <label for="txt-new-saas">새 비밀번호 확인</label>
+                    </div>
+                    <div class="form-conts btn-ico-wrap">
+                      <input type="text" id="new_pw_rw" class="krds-input" autocomplete="on" placeholder="새 비밀번호 확인" />
+                      <button type="button" class="krds-btn medium icon" aria-pressed="false">
+                        <span class="sr-only">입력한 비밀번호 보기</span>
+                        <i class="svg-icon ico-pw-visible"></i>
+                        <i class="svg-icon ico-pw-visible-on"></i>
+                      </button>
+                    </div>
+                    <p class="form-hint-invalid">입력한 비밀번호와 일치하지 않습니다.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- //modal contents -->
+            <!-- modal btn -->
+            <div class="modal-btn btn-wrap">
+              <button type="button" class="krds-btn medium tertiary close-modal">취소</button>
+              <button type="button" class="krds-btn medium primary close-modal">비밀번호 변경</button>
             </div>
             <!-- //modal btn -->
             <!-- close button -->

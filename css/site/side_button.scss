@@ -1,4 +1,5 @@
 @charset "UTF-8";
+$img-root: "../../img";
 /* 사이드 버튼 top 버튼 */
 .wrap_side_btn {
   position: fixed;
@@ -29,7 +30,7 @@
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      background-image: url("../../img/icon/icon_set.svg");
+      background-image: url("#{$img-root}/icon/icon_set.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: 3.4rem;
@@ -49,9 +50,10 @@
       font-size: 1.8rem;
       border-radius: 3rem;
       color: #111;
-      padding: 2rem 7rem 2rem 2rem;
+      padding: 2rem 6.5rem 2rem 1.8rem;
+      // padding: 2rem 7rem 2rem 2rem;
       opacity: 0;
-      transition: all 0.2s ease;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
       display: none;
     }
 
@@ -67,7 +69,7 @@
       background: linear-gradient(45deg, #1a7395, #0db5bd);
 
       &::after {
-        background-image: url("../../img/icon/icon_ai.svg");
+        background-image: url("#{$img-root}/icon/icon_ai.svg");
       }
 
       p {
@@ -95,7 +97,7 @@
     //     transform: translate(-50%, -50%);
     //     width: 2.6rem;
     //     height: 2.6rem;
-    //     background-image: url("../../img/icon/icon_top.svg");
+    //     background-image: url("#{$img-root}/icon/icon_top.svg");
     //     background-size: contain;
     //     background-repeat: no-repeat;
     //   }
@@ -107,7 +109,7 @@
       opacity: 0;
       visibility: hidden;     
       pointer-events: none;
-      transition: all 0.4s ease;
+      transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 
       &.show {
           opacity: 1;
@@ -116,7 +118,7 @@
         }
 
       &::after {
-        background-image: url("../../img/icon/icon_top.svg");
+        background-image: url("#{$img-root}/icon/icon_top.svg");
         background-size: 2.6rem;        
       }
     }
@@ -172,7 +174,7 @@
         position: absolute;
         width: 4.5rem;
         height: 4.5rem;
-        background-image: url("../../img/icon/icon_top.svg");
+        background-image: url("#{$img-root}/icon/icon_top.svg");
         background-repeat: no-repeat;
         background-position: center;
         background-size: auto;

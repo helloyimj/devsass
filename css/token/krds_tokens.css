@@ -3,10 +3,7 @@
 /* Do not edit directly */
 /* Generated on Mon, Dec 9, 2024, 10:32:10 AM GMT+9 */
 
-
 :root {
-
-
   /* custom */
 
   /* ==========================================================================
@@ -75,27 +72,12 @@
   --mg-gradient-icon-purple-bg: linear-gradient(135deg, #7a2dc2 0%, #3c4bbf 100%);
 
   /* Effects */
-  --mg-effect-shadow-1: 0px 0px 2px rgba(0, 0, 0, 0.05),
-                     0px 1px 2px rgba(0, 0, 0, 0.05);
-  --mg-effect-shadow-2: 0px 4px 8px rgba(0, 0, 0, 0.08),
-                     0px 0px 2px rgba(0, 0, 0, 0.05);
-  --mg-effect-shadow-3: 0px 8px 16px rgba(0, 0, 0, 0.12),
-                     0px 0px 2px rgba(0, 0, 0, 0.08);
-  --mg-effect-shadow-4: 0px 16px 24px rgba(0, 0, 0, 0.12),
-                     0px 0px 2px rgba(0, 0, 0, 0.08);
+  --mg-effect-shadow-1: 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 1px 2px rgba(0, 0, 0, 0.05);
+  --mg-effect-shadow-2: 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 0px 2px rgba(0, 0, 0, 0.05);
+  --mg-effect-shadow-3: 0px 8px 16px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.08);
+  --mg-effect-shadow-4: 0px 16px 24px rgba(0, 0, 0, 0.12), 0px 0px 2px rgba(0, 0, 0, 0.08);
 
-/* //////////////////////////////////////// */
-
-
-/* //////////////////////////////////////// */
-/* //////////////////////////////////////// */
-/* //////////////////////////////////////// */
-/* //////////////////////////////////////// */
-/* //////////////////////////////////////// */
-/* //////////////////////////////////////// */
-/* //////////////////////////////////////// */
-/* //////////////////////////////////////// */
-/* //////////////////////////////////////// */
+  /* //////////////////////////////////////// */
 
   /* // mg */
   --krds-color-light-primary-5: #ecf2fe;
@@ -103,8 +85,8 @@
   --krds-color-light-primary-20: #b1cefb;
   --krds-color-light-primary-30: #86aff9;
   --krds-color-light-primary-40: #4c87f6;
-  
-  --krds-color-light-primary-50: #333C98;
+
+  --krds-color-light-primary-50: #333c98;
   /* --krds-color-light-primary-50: #256ef4; */
 
   --krds-color-light-primary-60: #0b50d0;
@@ -399,7 +381,7 @@
   --krds-light-color-text-disabled: var(--krds-color-light-gray-40);
   --krds-light-color-text-disabled-on: var(--krds-color-light-gray-50);
   /* --krds-light-color-text-primary: var(--krds-color-light-primary-60); */
-  --krds-light-color-text-primary: #0A1142;
+  --krds-light-color-text-primary: #0a1142;
   --krds-light-color-text-secondary: var(--krds-color-light-secondary-80);
   --krds-light-color-text-danger: var(--krds-color-light-danger-60);
   --krds-light-color-text-warning: var(--krds-color-light-warning-60);
@@ -453,12 +435,12 @@
   --krds-light-color-button-secondary-fill-hover: var(--krds-color-light-primary-10);
   --krds-light-color-button-secondary-fill-pressed: var(--krds-color-light-primary-20);
   --krds-light-color-button-secondary-border: var(--krds-color-light-primary-50);
-  
+
   /* --krds-light-color-button-tertiary-fill: var(--krds-color-light-alpha-white0); */
   --krds-light-color-button-tertiary-fill: var(--mg-primary-5);
   --krds-light-color-button-tertiary-fill-hover: var(--krds-color-light-gray-5);
-  --krds-light-color-button-tertiary-fill-pressed: var(--krds-color-light-gray-10);  
-  --krds-light-color-button-tertiary-border: #0A1142;
+  --krds-light-color-button-tertiary-fill-pressed: var(--krds-color-light-gray-10);
+  --krds-light-color-button-tertiary-border: #0a1142;
   /* --krds-light-color-button-tertiary-fill: var(--krds-color-light-alpha-white0);
   --krds-light-color-button-tertiary-fill-hover: var(--krds-color-light-gray-5);
   --krds-light-color-button-tertiary-fill-pressed: var(--krds-color-light-gray-10);  
@@ -766,7 +748,7 @@
   --krds-pc-font-size-body-small: 1.4rem;
   --krds-pc-font-size-body-xsmall: 1.2rem;
   --krds-pc-font-size-label-large: 1.8rem;
-  --krds-pc-font-size-label-medium: 1.6rem;  
+  --krds-pc-font-size-label-medium: 1.6rem;
   --krds-pc-font-size-label-small: 1.4rem;
   --krds-pc-font-size-label-xsmall: 1.2rem;
   --krds-pc-font-size-heading-large: 3.2rem;
@@ -938,5 +920,4 @@
   --krds-radius-xlarge1: var(--krds-number-7);
   --krds-radius-xlarge2: var(--krds-number-7);
   --krds-radius-max: var(--krds-number-max);
-
 }

@@ -1,4 +1,5 @@
 /* 헤더 */
+$img-root: "../../img";
 //사이즈 정의
 @mixin header-size-variable() {
 	--krds-header--utility-gap: var(--krds-gap-4);
@@ -80,7 +81,7 @@ $mode-setting: light;
 			a {
 				display: block;
 				@include square(100%);
-				background-image: url(#{$url}/img/logo/logo_saas.png);
+				background-image: url("#{$img-root}/logo/logo_saas.webp");
 				background-position: center;
 				background-size: contain;
 				background-repeat: no-repeat;
@@ -203,7 +204,7 @@ $mode-setting: light;
 			}
 			.logo {
 				a {
-					background-image: url(#{$url}/img/component/icon/ico_logo_krds_high_contrast.svg);
+					background-image: url("#{$img-root}/component/icon/ico_logo_krds_high_contrast.svg");
 				}
 			}
 		}

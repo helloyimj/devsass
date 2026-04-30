@@ -1,4 +1,5 @@
 @charset "UTF-8";
+$img-root: "../../img";
 
 /* 개인정보처리방침 */
 .none_pc {
@@ -76,7 +77,7 @@
                     display: inline-block;
                     width: 2.4rem;
                     height: 2.4rem;
-                    background: url("../../img/component/icon/ico-popover-help.svg") no-repeat center;
+                    background: url("#{$img-root}/component/icon/ico-popover-help.svg") no-repeat center;
                   }
                 }
               }
@@ -155,7 +156,7 @@
               display: block;
               width: 2.4rem;
               height: 2.6rem;
-              background: url("../../img/icon/icon_chevron_right_blue.svg") no-repeat center;
+              background: url("#{$img-root}/icon/icon_chevron_right_blue.svg") no-repeat center;
               // background-size: 100%;
               transform: translateX(-50%);
             }
@@ -205,7 +206,7 @@
         display: block;
         width: 2.4rem;
         height: 2.4rem;
-        background: url("../../img/icon/icon_chevron_right_blue.svg") no-repeat center;
+        background: url("#{$img-root}/icon/icon_chevron_right_blue.svg") no-repeat center;
         background-size: 1.4rem 2rem;
         transform: translateY(-50%);
       }
@@ -214,7 +215,7 @@
     p {
       margin-bottom: var(--krds-gap-5);
       padding-left: var(--krds-padding-7);
-      font-size: var(--krds-pc-font-size-body-large);
+    color: var(--krds-light-color-text-subtle);
     }
 
     &.detail01 {

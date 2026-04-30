@@ -1,4 +1,6 @@
+
 /* 푸터 */
+$img-root: "../../img";	
 //모드 설정
 $mode-setting: light;
 #krds-footer {
@@ -91,16 +93,16 @@ $mode-setting: light;
 	.f-logo {		
 		@include square(20.4rem, 6.2rem);
 		// @include square(20.4rem, var(--krds-size-height-7));
-		background-image: url(#{$url}/img/logo/logo_min.png);
+		background-image: url("#{$img-root}/logo/logo_min.webp");
 		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
-		@include size-medium {
+		@include size-medium {	
 			@include square(13.4rem, 4rem);
 		}
 		&.nia {
 			width: 35.4rem;
-			background-image: url(#{$url}/img/logo/logo_nia.png);
+			background-image: url("#{$img-root}/logo/logo_nia.webp");
 		@include size-medium {
 			@include square(23.2rem, 4rem);
 		}
@@ -400,7 +402,7 @@ $mode-setting: light;
 		}
 
 		.f-logo {
-			background-image: url(#{$url}/img/component/icon/ico_logo_krds_high_contrast.svg);
+			background-image: url("#{$img-root}/component/icon/ico_logo_krds_high_contrast.svg");
 		}
 	}
 }

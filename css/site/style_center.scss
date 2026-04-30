@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import "../common/mixins/breakpoints";
+@import "mixset";
+$img-root: "../../img";
 
 /* 운영지원센터 */
 
@@ -55,7 +57,7 @@
       //   }
       //   // width: 2.4rem;
       //   // height: 2.4rem;
-      //   // background: url("../../img/component/icon/ico_attach.svg") no-repeat
+      //   // background: url("#{$img-root}/component/icon/ico_attach.svg") no-repeat
       //   //   center;
       //   // background-size: cover;
 
@@ -141,6 +143,13 @@
         align-items: center;
         border-bottom: var(--krds-high-contrast-border-width-static-regular) solid var(--krds-light-color-border-gray-light);
 
+        .tit {
+        font-size: var(--krds-mobile-font-size-label-large);
+        @include size-medium {
+          font-size: var(--krds-pc-font-size-label-medium);
+        }
+        }
+
         dt {
           position: relative;
           width: 10.7rem;
@@ -157,7 +166,7 @@
           }
 
           .krds-btn {
-            font-size: var(--krds-pc-font-size-label-medium);
+            font-size: var(--krds-mobile-font-size-label-large);
 
             .svg-icon {
               margin-right: var(--krds-gap-3);
@@ -167,7 +176,7 @@
               height: 2.4rem;
               background-color: var(--krds-light-color-background-white);
               background-size: cover;
-              background-image: url("../../img/component/icon/ico_arrow-top.svg");
+              background-image: url("#{$img-root}/component/icon/ico_arrow-top.svg");
               background-repeat: no-repeat;
               background-position: center;
             }
@@ -176,7 +185,7 @@
             //   width: 2.4rem;
             //   height: 2.4rem;
             //   background-color: var(--krds-light-color-background-white);
-            //   background: url("../../img/component/icon/ico_arrow-top.svg")
+            //   background: url("#{$img-root}/component/icon/ico_arrow-top.svg")
             //     no-repeat center;
             //   background-size: cover;
             // }
@@ -205,6 +214,7 @@
 
     .board_attachment {
       padding: var(--krds-padding-10) 0;
+      border-top: var(--krds-high-contrast-border-width-static-regular) solid var(--krds-light-color-border-gray-light);
 
       > span {
         display: inline-block;
@@ -314,7 +324,7 @@
       }
 
       .accordion-body {
-        padding: var(--krds-padding-10) 0 var(--krds-padding-10) 14rem;
+        padding: var(--krds-padding-10) 1.6rem var(--krds-padding-10) 14rem;
         background-color: var(--krds-light-color-surface-gray-subtle) !important;
 
         .answer {
@@ -351,11 +361,10 @@
 
 /* 운영지원센터_기술지원 */
 .page_user_support {
-    
   .wrap_article {
-      &:last-of-type {
+    &:last-of-type {
       margin-bottom: 0;
-  }
+    }
   }
 
   .article_title {
@@ -404,7 +413,8 @@
         padding-left: 10rem;
         flex-direction: column;
         justify-content: flex-start;
-        gap: var(--krds-gap-9);
+        gap: var(--krds-gap-6);
+        color: $color_white;
 
         &::before {
           content: "";
@@ -420,7 +430,7 @@
 
         &::after {
           content: "";
-          background: url("../../img/component/icon/ico_box.svg") no-repeat;
+          background: url("#{$img-root}/component/icon/ico_box.svg") no-repeat;
         }
 
         h5 {
@@ -456,24 +466,24 @@
           // &.goto {
           //   background-size: 2rem 2rem;
           //   // background: var(--krds-light-color-element-inverse)
-          //   //   url("../../img/component/icon/ico_arrow-right.svg") no-repeat;
+          //   //   url("#{$img-root}/component/icon/ico_arrow-right.svg") no-repeat;
           //   background-position: 20rem;
           //   background-repeat: no-repeat;
           // background-position: center center;
           // background-size: contain;
-          // background-image: url(../../img/component/icon/ico_arrow-right.svg);
+          // background-image: url(#{$img-root}/component/icon/ico_arrow-right.svg);
 
           // }
 
           // &.openInNew {
           //   background-size: 2rem 2rem;
           //   // background: var(--krds-light-color-element-inverse)
-          //     // url("../../img/component/icon/ico_openInNew_black.svg") no-repeat;
+          //     // url("#{$img-root}/component/icon/ico_openInNew_black.svg") no-repeat;
           //   background-position: 20rem;
           //   background-repeat: no-repeat;
           //   background-position: center center;
           //   background-size: contain;
-          //   background-image: url(../../img/component/icon/ico_openInNew_black.svg);
+          //   background-image: url(#{$img-root}/component/icon/ico_openInNew_black.svg);
           // }
         }
 
@@ -504,7 +514,7 @@
       label {
         font-size: var(--krds-pc-font-size-label-small);
         line-height: 1.8;
-      	color: var(--krds-color-light-gray-70);
+        color: var(--krds-color-light-gray-70);
       }
 
       .label_info {
@@ -513,6 +523,14 @@
         margin-top: 8px;
       }
 
+    }
+  }
+  .article_content .form-group .save_id {
+    color: var(--krds-color-light-gray-95);
+    font-size: var(--krds-pc-font-size-body-medium);
+  }
+}
+    /* 비밀번호 보기아이콘 */
       .form-conts.btn-ico-wrap {
         // position: relative;
         .krds-btn {
@@ -541,12 +559,69 @@
           }
         }
       }
+
+      /* 비밀번호 변경 안내, 변경 페이지*/
+      .page_pw_change {
+
+        .wrap_pw_change {
+        margin: auto;
+        color: #464c53;
+        padding: 0 4rem 2rem;
+        text-align: center;
+
+          h3 {
+            width: 100% !important;
+            font-weight: var(--krds-font-weight-bold);
+            line-height: 1.5;
+            font-size: 1.8rem;
+            color: #111;
+            padding: 2rem 0 2rem;
+            
+            .point {
+              color: #1953d5;
+            }
+          }
+    
+          @include size-medium {
+            padding-bottom: 2rem;
+            h3 {
+              // padding-top: 2rem;
+              font-size: 1.6rem;
+            }
+          }
+
+          .form-tit, label {
+            color: #111;
+            text-align: left;
+          }
+
+          .label_info {
+            text-align: left;
+              margin-top: var(--krds-gap-3);
+              font-size: var(--krds-pc-font-size-body-xsmall);
+          }
+  }
+
+  // .btn-wrap, .comp-btn-wrap, 
+  .page-btn-wrap {    
+    margin: 0 auto;
+        width: 100%;
+        max-width: 33rem;
+        .krds-btn {
+            width: 50%;
+            @include size-medium {
+        width: auto;
+            }
+          }
+    &.m-column {
+      @include size-medium {
+        width: 100%;
+        margin: 0 auto;
+      }
     }
   }
-  .save_id {
-    color: var(--krds-color-light-gray-95);
-  }
 }
+
 /* 로그인 - 2차인증 */
 .page_login {
   .sub_txt {
@@ -559,7 +634,7 @@
     color: var(--krds-color-light-gray-70);
   }
   .btn-wrap.full {
-        display: flex;
+    display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: row;
@@ -569,8 +644,8 @@
       width: stretch;
     }
   }
-
 }
+
 /* 로그인 - 모달 */
 .modal_login {
   .email_id {
@@ -588,7 +663,7 @@
   }
 }
 
- /* 소개 > 민간 SaaS 연계공통기반이란? */
+/* 소개 > 민간 SaaS 연계공통기반이란? */
 .page_governanceIntro {
   .page {
     padding: 0;
@@ -640,7 +715,7 @@
     margin-top: var(--krds-gap-12);
     padding-top: 3.6rem;
     padding-bottom: 0;
-    background-image: url("../../img/saas_img/2_intro/0_common/bg_oval.png");
+    background-image: url("#{$img-root}/saas_img/2_intro/0_common/bg_oval.webp");
     background-repeat: no-repeat;
     background-position: center top 0;
     background-size: 100%;
@@ -653,7 +728,7 @@
       .contents_wrap {
         padding-top: 0;
         padding-bottom: var(--krds-gap-12);
-        // background: url("../../img/saas_img/2_intro/0_common/bg_oval.png") no-repeat;
+        // background: url("#{$img-root}/saas_img/2_intro/0_common/bg_oval.webp") no-repeat;
         .topic_article {
           font-size: var(--krds-pc-font-size-heading-medium);
 
@@ -676,7 +751,7 @@
     .article02 {
       .cont_01 {
         padding-bottom: 22rem;
-        background: url("../../img/saas_img/2_intro/0_common/bg_arrow.png") no-repeat;
+        background: url("#{$img-root}/saas_img/2_intro/0_common/bg_arrow.webp") no-repeat;
         background-position: center bottom 0;
         background-size: 100%;
 
@@ -842,7 +917,7 @@
         margin: var(--krds-gap-12) 0;
         justify-content: center;
         align-items: center;
-        background-image: url("../../img/saas_img/2_intro/1_SaaS/1_sec01_arrow_upDown2.png");
+        background-image: url("#{$img-root}/saas_img/2_intro/1_SaaS/1_sec01_arrow_upDown2.webp");
         background-position: center top 0;
         background-repeat: no-repeat;
         background-size: auto;
@@ -979,7 +1054,7 @@
     .article04 {
       margin-bottom: 10rem;
       padding-bottom: 19rem;
-      background: url("../../img/saas_img/2_intro/0_common/bg_arrow.png") no-repeat center bottom;
+      background: url("#{$img-root}/saas_img/2_intro/0_common/bg_arrow.webp") no-repeat center bottom;
       background-size: 100%;
 
       .wrap_title {
@@ -1093,7 +1168,7 @@
               display: flex;
               width: 100%;
               height: 100%;
-              background: url("../../img/saas_img/2_intro/1_SaaS/2_sec03_arrow.png") no-repeat center;
+              background: url("#{$img-root}/saas_img/2_intro/1_SaaS/2_sec03_arrow.webp") no-repeat center;
               justify-content: center;
 
               p {
@@ -1254,7 +1329,7 @@
     margin-top: var(--krds-gap-12);
     padding-top: 3.6rem;
     padding-bottom: 0;
-    background-image: url("../../img/saas_img/2_intro/0_common/bg_oval.png");
+    background-image: url("#{$img-root}/saas_img/2_intro/0_common/bg_oval.webp");
     background-repeat: no-repeat;
     background-position: center top 0;
     background-size: auto;
@@ -1268,7 +1343,7 @@
         padding-top: 0;
         padding-bottom: 13.4rem;
 
-        // background: url("../../img/saas_img/2_intro/0_common/bg_oval.png") no-repeat;
+        // background: url("#{$img-root}/saas_img/2_intro/0_common/bg_oval.webp") no-repeat;
         .topic_article {
           padding-left: var(--krds-contents-padding-x);
           padding-right: var(--krds-contents-padding-x);
@@ -1576,7 +1651,7 @@
   .article01 {
     padding-bottom: 12rem;
     margin-bottom: 20rem;
-    background-image: url(../../img/saas_img/2_intro/0_common/bg_oval_bt.png);
+    background-image: url(#{$img-root}/saas_img/2_intro/0_common/bg_oval_bt.webp);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: auto;
@@ -1612,7 +1687,7 @@
 
       .box_blue {
         background: #4ca3ec;
-        background: url(../../img/saas_img/2_intro/3_apply/1_sec01_il01.png), linear-gradient(320deg, #124fa4 0%, #4ca3ec 100%);
+        background: url(#{$img-root}/saas_img/2_intro/3_apply/1_sec01_il01.webp), linear-gradient(320deg, #124fa4 0%, #4ca3ec 100%);
         background-repeat: no-repeat, no-repeat;
         background-position:
           center right 4rem,
@@ -1621,7 +1696,7 @@
 
       .box_purple {
         background: #8661d8;
-        background: url(../../img/saas_img/2_intro/3_apply/1_sec01_il02.png), linear-gradient(320deg, #4e3eac 0%, #8661d8 100%);
+        background: url(#{$img-root}/saas_img/2_intro/3_apply/1_sec01_il02.webp), linear-gradient(320deg, #4e3eac 0%, #8661d8 100%);
         background-repeat: no-repeat, no-repeat;
         background-position:
           center right 4rem,
@@ -1783,9 +1858,9 @@
     margin: 0;
     padding-top: 11.4rem;
     text-align: center;
-    background: url("../../img/saas_img/2_intro/3_apply/5_sec05_bg.png") no-repeat;
+    background: url("#{$img-root}/saas_img/2_intro/3_apply/5_sec05_bg.webp") no-repeat;
     background-position: center top;
-    background-size: auto;
+    background-size: 140rem auto;
     .contents_wrap {
       display: flex;
       gap: var(--krds-gap-10);
@@ -1932,7 +2007,10 @@
         }
       }
     }
+     .wrap_article.article05 {
+    background-size: 100% auto;
   }
+    }
 
   ////////// 누리집 안내지도 //////////
   .page_sitemap {
@@ -2171,7 +2249,7 @@
               margin: var(--krds-gap-9) 0;
 
               .img_title {
-                background: url("../../img/saas_img/2_intro/1_SaaS/2_sec03_arrow_mo.svg") no-repeat center;
+                background: url("#{$img-root}/saas_img/2_intro/1_SaaS/2_sec03_arrow_mo.webp") no-repeat center;
                 background-size: 100%;
 
                 p {
@@ -2340,7 +2418,6 @@
     padding: var(--krds-padding-9) var(--krds-padding-8);
     p {
       font-size: var(--krds-mobile-font-size-heading-xsmall);
-      text-align: center;
     }
 
     .wrap_btn {
@@ -2414,7 +2491,7 @@
         dl {
           dt {
             .krds-btn {
-              font-size: var(--krds-mobile-font-size-label-large);
+              font-size: var(--krds-pc-font-size-label-medium);
             }
 
             &::after {
@@ -2574,6 +2651,7 @@
 
         .wrap_text {
           padding-left: 5.7rem;
+          gap: var(--krds-gap-3);
 
           &::before {
             width: 4.5rem;
@@ -2589,7 +2667,7 @@
           }
 
           h5 {
-            font-size: var(--krds-mobile-font-size-heading-small);
+            font-size: var(--krds-mobile-font-size-heading-xsmall);
             font-weight: var(--krds-font-weight-bold);
           }
 
@@ -2605,7 +2683,7 @@
           a {
             width: 100%;
             padding: 0 var(--krds-padding-6);
-            border-radius: .5rem;
+            border-radius: 0.5rem;
           }
 
           // .jump_to {

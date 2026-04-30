@@ -31,21 +31,21 @@ const headerAreaHtml = `
             <div class="header-utility">
               <ul class="utility-list">
                 <li>
-                  <a href="https://saas.go.kr/" class="krds-btn small text cloud">클라우드전문지원센터 <i class="svg-icon ico-go"></i></a>
+                  <a href="https://saas.go.kr/" class="krds-btn small text cloud" aria-label="클라우드전문지원센터">클라우드전문지원센터 <i class="svg-icon ico-go"></i></a>
                 </li>
-                <li><a href="누리집 이용 안내_누리집 안내지도.html" class="krds-btn small text">누리집 안내지도</a></li>
+                <li><a href="누리집 이용 안내_누리집 안내지도.html" class="krds-btn small text" aria-label="누리집 안내지도">누리집 안내지도</a></li>
                 <li>
                   <!-- resize -->
                   <div class="krds-drop-wrap krds-resize" data-adjust="scale">
-                    <button type="button" class="krds-btn small text drop-btn">화면크기 <i class="svg-icon ico-toggle"></i></button>
+                    <button type="button" class="krds-btn small text drop-btn" aria-label="화면크기">화면크기 <i class="svg-icon ico-toggle"></i></button>
                     <div class="drop-menu">
                       <div class="drop-in">
                         <ul class="drop-list">
-                          <li><button type="button" class="item-link sm" data-adjust-scale="sm">작게</button></li>
-                          <li><button type="button" class="item-link md active" data-adjust-scale="md">보통</button></li>
-                          <li><button type="button" class="item-link lg" data-adjust-scale="lg">조금 크게</button></li>
-                          <li><button type="button" class="item-link xlg" data-adjust-scale="xlg">크게</button></li>
-                          <li><button type="button" class="item-link xxlg" data-adjust-scale="xxlg">가장크게</button></li>
+                          <li><button type="button" class="item-link sm" data-adjust-scale="sm" aria-label="작게">작게</button></li>
+                          <li><button type="button" class="item-link md active" data-adjust-scale="md" aria-label="보통">보통</button></li>
+                          <li><button type="button" class="item-link lg" data-adjust-scale="lg" aria-label="조금 크게">조금 크게</button></li>
+                          <li><button type="button" class="item-link xlg" data-adjust-scale="xlg" aria-label="크게">크게</button></li>
+                          <li><button type="button" class="item-link xxlg" data-adjust-scale="xxlg" aria-label="가장크게">가장크게</button></li>
                         </ul>
                         <div class="drop-bottom">
                           <button type="button" class="krds-btn medium text" data-adjust-scale="md"><i class="svg-icon ico-reset"></i> 초기화</button>
@@ -67,7 +67,8 @@ const headerAreaHtml = `
                 <!-- 검색어 입력 폼 -->
                 <div class="sch-form-wrap">
                   <div class="sch-input">
-                    <input type="text" class="krds-input small" id="searchWrd-total" placeholder="검색어를 입력해주세요.">
+                    <label for="searchWrd-total" class="sr-only">검색어 입력</label>
+                    <input type="text" class="krds-input small" id="searchWrd-total" placeholder="검색어를 입력해주세요.">                    
                     <button type="button" class="krds-btn icon small ico-search open-modal btn_search_total" data-target="modal_header_search_none">
                       <span class="sr-only">검색</span>
                       <i class="svg-icon ico-sch"></i>
@@ -75,10 +76,10 @@ const headerAreaHtml = `
                   </div>
                 </div>
                 <!-- //검색어 입력 폼 -->
-                <a href="javascript:;" id="btnTotalSearch" class="btn-navi navi-row sch" aria-expanded="false" aria-controls="totalSearchArea" onclick="openMobileHeaderTotalSearch(event)">통합검색</a>
-                <a href="로그인.html" class="btn-navi navi-row login">로그인</a>
-                <a href="로그인.html" class="btn-navi navi-row logout">로그아웃</a>
-                <a href="회원가입 1단계 유형 선택.html" class="btn-navi navi-row join">회원가입</a>
+                <a href="javascript:;" id="btnTotalSearch" class="btn-navi navi-row sch" aria-expanded="false" aria-controls="totalSearchArea" onclick="openMobileHeaderTotalSearch(event)" aria-label="통합검색">통합검색</a>
+                <a href="로그인.html" class="btn-navi navi-row login" aria-label="로그인">로그인</a>
+                <a href="로그인.html" class="btn-navi navi-row logout" aria-label="로그아웃">로그아웃</a>
+                <a href="회원가입 1단계 유형 선택.html" class="btn-navi navi-row join" aria-label="회원가입">회원가입</a>
                 <div class="krds-drop-wrap my-drop">
                   <button type="button" class="btn-navi navi-row my drop-btn">나의 GOV</button>
                   <div class="drop-menu">
@@ -94,10 +95,10 @@ const headerAreaHtml = `
                         </dl>
                       </div>
                       <ul class="drop-list">
-                        <a href="javascript:;" class="item-link">나의 GOV 홈</a></li>
-                        <a href="javascript:;" class="item-link">나의 신청내역</a></li>
-                        <a href="javascript:;" class="item-link">나의 생활정보</a></li>
-                        <a href="javascript:;" class="item-link">나의 정보관리</a></li>
+                        <a href="javascript:;" class="item-link" aria-label="나의 GOV 홈">나의 GOV 홈</a></li>
+                        <a href="javascript:;" class="item-link" aria-label="나의 신청내역">나의 신청내역</a></li>
+                        <a href="javascript:;" class="item-link" aria-label="나의 생활정보">나의 생활정보</a></li>
+                        <a href="javascript:;" class="item-link" aria-label="나의 정보관리">나의 정보관리</a></li>
                       </ul>
                       <div class="drop-bottom">
                         <button type="button" class="krds-btn medium text open-modal"
@@ -106,7 +107,7 @@ const headerAreaHtml = `
                     </div>
                   </div>
                 </div>
-                <button type="button" class="btn-navi navi-row all" aria-controls="mobile-nav">전체메뉴</button>
+                <button type="button" class="btn-navi navi-row all" aria-controls="mobile-nav" aria-label="전체메뉴">전체메뉴</button>
               </div>
             </div>
           </div>
@@ -685,7 +686,7 @@ let quickBtn = `
     <a href="javascript:;"
        aria-label="챗봇 문의, 검색 바로가기"
        class="btn_side_sup btn_side_sup02">
-      <p>챗봇 문의 · 검색</p>
+      <p>챗봇 문의 &#183; 검색</p>
     </a>
 
     <a href="#wrapper"

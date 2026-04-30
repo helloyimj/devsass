@@ -82,7 +82,7 @@ $mode-setting: light;
 		.accordion-collapse {
 			max-height: 0;
 			overflow: hidden;
-			transition: all .2s cubic-bezier(0, 1, 0, 1);
+			transition: background-color .2s cubic-bezier(0, 1, 0, 1), color .2s cubic-bezier(0, 1, 0, 1), border-color .2s cubic-bezier(0, 1, 0, 1);
 			visibility: hidden;
 		}
 		.accordion-body {
@@ -96,7 +96,7 @@ $mode-setting: light;
 				height: auto;
 				// max-height: 100vh;
 				max-height: unset;
-				transition: all .2s ease-in-out;
+				transition: transform .2s ease-in-out, opacity .2s ease-in-out;
 				visibility: visible;
 			}
 			.accordion-body {

@@ -1,7 +1,1 @@
-.flex_center {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+.flex_center{position:relative;display:flex;justify-content:center;align-items:center;width:100%}

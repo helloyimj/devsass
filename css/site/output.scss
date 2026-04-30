@@ -1,0 +1,12 @@
+@import "total";
+
+//component with common setting file
+@import "../common/common";
+
+//component
+@import "../component/component";
+@import "../pattern/p_content";
+@import "../pattern/p_common";
+@import "../pattern/p_layout";
+@import "../plugin/swiper-bundle.min";
+@import "main";

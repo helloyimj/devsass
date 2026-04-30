@@ -94,13 +94,13 @@ td:focus-visible,
                 //     padding-left: 0;
                 // }
 
-                &.answered {
-                    color: $color_brand_main;
-                }
+                // &.answered {
+                //     color: $color_brand_main;
+                // }
 
-                &.noanswer {
-                    color: $color_red;
-                }
+                // &.noanswer {
+                //     color: $color_red;
+                // }
 
                 // &.status {
                 // }
@@ -668,6 +668,9 @@ caption {
     justify-content: flex-start;
     flex-direction: column;
     min-height: 100%;
+    &.dvh {
+        height: 100dvh;
+    }
 }
 
 .page_content, .page_content_wrap {
@@ -698,10 +701,6 @@ caption {
 .only_mob {
   display: none;
 }
-.mob_board {
-  display: none;
-}
-
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
@@ -731,10 +730,6 @@ caption {
 
   .pc_table {
     display: none !important;
-  }
-
-  .mob_board {
-    display: block !important;
   }
 
 }
@@ -777,5 +772,7 @@ caption {
   .none_480 {
     display: none;
   }
-
+ .wrap_btns .krds-btn.xlarge {
+        width: 100%;
+    }
 }

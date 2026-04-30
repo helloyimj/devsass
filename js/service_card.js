@@ -8,14 +8,14 @@ function createCardHTML(data) {
 <div class="in slide_case_item">
   <div class="card-top">
     <div class="wrap_img">
-      <img src="${data.logo}" alt="${data.logoAlt}" class="viewer"/>
+      <img src="${data.logo}" alt="${data.logoAlt}" class="viewer" width="${data.logoWidth || 230}" height="${data.logoHeight || 80}" />
       <span class="saas-badge bg-light-primary">${data.badge}</span>
     </div>
   </div>
 
   <div class="card-body">
     <div class="wrap_title">
-      <a href="${data.link || '#'}" class="c-text" aria-label="상세 페이지로 이동하기">
+      <a href="${data.link || "#"}" class="c-text" aria-label="상세 페이지로 이동하기">
         <p class="c-tit"><span class="span">${data.title}</span></p>
       </a>
       <p class="c-company">${data.company}</p>
@@ -23,9 +23,7 @@ function createCardHTML(data) {
 
     <div class="box_tooltip">
 
-      ${Array.isArray(data.tooltips)
-      ? data.tooltips.map((t, i) => createTooltipHTML(t, i)).join("")
-    : ""}
+      ${Array.isArray(data.tooltips) ? data.tooltips.map((t, i) => createTooltipHTML(t, i)).join("") : ""}
       
     </div> 
   </div>
@@ -75,13 +73,12 @@ function createTooltipHTML(t, index) {
 </div>`;
 }
 
-
 /* =========================
    초기화
 ========================= */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // 1. .case_card 요소들을 모두 선택하여 반복문 실행
-  const caseCards = document.querySelectorAll('.case_card');
+  const caseCards = document.querySelectorAll(".case_card");
 
   caseCards.forEach((card) => {
     // 2. CARD_DATA의 키 중 해당 카드가 클래스로 가지고 있는 키 탐색
@@ -94,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 4. 말줄임 + 버튼 표시 판단 함수 실행
-  if (typeof updateTooltipEllipsis === 'function') {
+  if (typeof updateTooltipEllipsis === "function") {
     updateTooltipEllipsis();
   }
 
@@ -105,10 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
 /* 카드 데이터 */
 
 const CARD_DATA = {
-
- //공공용 계절근로자 관리 플랫폼
+  //공공용 계절근로자 관리 플랫폼
   card_kollabo: {
     logo: "../img/saas_img/0_common/logo/logo_pr_kollabo.svg",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "콜라보 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000045",
     badge: "문서 관리",
@@ -131,11 +129,13 @@ const CARD_DATA = {
         sr: "이용 기관 전체 보기"
       }
     ]
-  },  
-  
+  },
+
   //두레이
   card_dooray: {
     logo: "../img/saas_img/0_common/logo/logo_pr_dooray.svg",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "두레이 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000077",
     badge: "협업 도구",
@@ -163,6 +163,8 @@ const CARD_DATA = {
   // 디지털 트윈 클라우드
   card_twinCloud: {
     logo: "../img/saas_img/0_common/logo/logo_pr_egis.png",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "주식회사 이지스 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000041",
     badge: "기타",
@@ -190,6 +192,8 @@ const CARD_DATA = {
   //모두싸인 공공용
   card_modusign: {
     logo: "../img/saas_img/0_common/logo/logo_pr_modusign.png",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "모두싸인 공공용 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000011",
     badge: "전자 계약",
@@ -217,6 +221,8 @@ const CARD_DATA = {
   //보이는 원격상담 비디오헬프미
   card_videoHelpMe: {
     logo: "../img/saas_img/0_common/logo/logo_pr_videoHelpMe.png",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "비디오헬프미 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000012",
     badge: "기타",
@@ -244,6 +250,8 @@ const CARD_DATA = {
   // 스트레티지게이트
   card_sgate: {
     logo: "../img/saas_img/0_common/logo/logo_pr_sgate.svg",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "스트레티지게이트 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000028",
     badge: "성과 관리",
@@ -270,7 +278,9 @@ const CARD_DATA = {
 
   //스패로우 클라우드
   card_sparrowCloud: {
-    logo: "../img/saas_img/0_common/logo/logo_pr_sparrowCloud.jpg",
+    logo: "../img/saas_img/0_common/logo/logo_pr_sparrowCloud.webp",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "스패로우 클라우드 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000072",
     badge: "보안",
@@ -298,6 +308,8 @@ const CARD_DATA = {
   //엔로비 - 방문예약시스템 클라우드 서비스
   card_nlobby: {
     logo: "../img/saas_img/0_common/logo/logo_pr_nlobby.png",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "엔로비 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000023",
     badge: "출입 관리",
@@ -324,7 +336,9 @@ const CARD_DATA = {
 
   //엔아이클라우드
   card_niCloud: {
-    logo: "../img/saas_img/0_common/logo/logo_pr_niCloud.jpg",
+    logo: "../img/saas_img/0_common/logo/logo_pr_niCloud.webp",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "엔아이클라우드 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000029",
     badge: "메일",
@@ -337,7 +351,7 @@ const CARD_DATA = {
         sr: "연계 전체 보기"
       },
       {
-        key: "제공 기능",        
+        key: "제공 기능",
         full: "뉴스피드, 드라이브, 메신저, 웹오피스, 캘린더, 파일뷰어, 화상회의 ",
         sr: "제공 기능 전체 보기"
       },
@@ -348,10 +362,12 @@ const CARD_DATA = {
       }
     ]
   },
-    
+
   // 웹 기반 수어 번역 서비스
   card_eq4all: {
-    logo: "../img/saas_img/0_common/logo/logo_pr_eq4all.jpg",
+    logo: "../img/saas_img/0_common/logo/logo_pr_eq4all.webp",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "이큐포올 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000075",
     badge: "기타",
@@ -374,11 +390,13 @@ const CARD_DATA = {
         sr: "이용 기관 전체 보기"
       }
     ]
-  },  
-    
+  },
+
   // 이젠터치/토이
   card_egenTouch: {
-    logo: "../img/saas_img/0_common/logo/logo_pr_egenTouch.png",
+    logo: "../img/saas_img/0_common/logo/logo_pr_egenTouch.webp",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "이젠터치 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000005",
     badge: "기타",
@@ -401,11 +419,13 @@ const CARD_DATA = {
         sr: "이용 기관 전체 보기"
       }
     ]
-  },  
+  },
 
   //이진 아이티에스엠
   card_steg: {
     logo: "../img/saas_img/0_common/logo/logo_pr_steg.jpg",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "에스티이지 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000017",
     badge: "기타",
@@ -428,11 +448,13 @@ const CARD_DATA = {
         sr: "이용 기관 전체 보기"
       }
     ]
-  },  
-  
+  },
+
   // 이체크폼
   card_eCheckForm: {
     logo: "../img/saas_img/0_common/logo/logo_pr_eCheckForm.png",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "솔비텍 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000074",
     badge: "전자행정서식",
@@ -455,11 +477,13 @@ const CARD_DATA = {
         sr: "이용 기관 전체 보기"
       }
     ]
-  },  
+  },
 
   //이폼사인
   card_eFormSign: {
     logo: "../img/saas_img/0_common/logo/logo_pr_eFormSign.svg",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "이폼사인 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000037",
     badge: "전자계약",
@@ -482,11 +506,15 @@ const CARD_DATA = {
         sr: "이용 기관 전체 보기"
       }
     ]
-  },  
-  
+  },
+
   //지능형 능동행정 공공지원사업 매칭 서비스
   card_bizData: {
-    logo: "../img/saas_img/0_common/logo/logo_pr_bizData.png",
+    logo: "../img/saas_img/0_common/logo/logo_pr_bizData.webp",
+    logoWidth: 230,
+    logoHeight: 80,
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "비즈데이터 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000021",
     badge: "기타",
@@ -509,11 +537,13 @@ const CARD_DATA = {
         sr: "이용 기관 전체 보기"
       }
     ]
-  },  
+  },
 
   //케이티 에이아이 컨택트센터
   card_ktAiContact: {
-    logo: "../img/saas_img/0_common/logo/logo_pr_ktAiContact.jpg",
+    logo: "../img/saas_img/0_common/logo/logo_pr_ktAiContact.png",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "케이티 에이아이 컨택트센터 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000069",
     badge: "AI",
@@ -531,16 +561,18 @@ const CARD_DATA = {
         sr: "제공 기능 전체 보기"
       },
       {
-        key: "이용 기관",       
+        key: "이용 기관",
         full: "국립부산과학관, 근로복지공단, 인천광역시중구시설관리공단, 충청북도, 충청북도 충주시, 한국양성평등교육진흥원, 한국체육산업개발주식회사",
         sr: "이용 기관 전체 보기"
       }
     ]
-  },  
+  },
 
   //케이티클라우드 비즈웍스 프로
   card_ktBizworkspro: {
-    logo: "../img/saas_img/0_common/logo/logo_pr_ktBizworkspro.png",
+    logo: "../img/saas_img/0_common/logo/logo_pr_ktBizworkspro.webp",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "케이티클라우드 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000001",
     badge: "협업 도구",
@@ -548,12 +580,12 @@ const CARD_DATA = {
     company: "(주)케이티클라우드",
     tooltips: [
       {
-        key: "연계",      
+        key: "연계",
         full: "모바일공무원증, LDAP",
         sr: "연계 전체 보기"
       },
       {
-        key: "제공 기능",       
+        key: "제공 기능",
         full: "뉴스피드, 드라이브, 메신저, 웹오피스, 캘린더, 화상회의",
         sr: "제공 기능 전체 보기"
       },
@@ -563,11 +595,13 @@ const CARD_DATA = {
         sr: "이용 기관 전체 보기"
       }
     ]
-  },   
-  
+  },
+
   //크리니티 G-Cloud 공공메일
   card_crinityGMail: {
     logo: "../img/saas_img/0_common/logo/logo_pr_crinityGMail.png",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "크리니티 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000030",
     badge: "메일",
@@ -575,26 +609,28 @@ const CARD_DATA = {
     company: "(주)케이티클라우드",
     tooltips: [
       {
-        key: "연계",     
+        key: "연계",
         full: "행정표준코드",
         sr: "연계 전체 보기"
       },
       {
-        key: "제공 기능",     
+        key: "제공 기능",
         full: "게시판, 드라이브, 메일, 아카이빙, 주소록, 캘린더, 화상회의, DLP",
         sr: "제공 기능 전체 보기"
       },
       {
-        key: "이용 기관",       
+        key: "이용 기관",
         full: "경상북도개발공사, (재)양산시복지재단",
         sr: "이용 기관 전체 보기"
       }
     ]
-  },   
+  },
 
-  //G-Cloud 메일솔루션  
+  //G-Cloud 메일솔루션
   card_mailplugGMail: {
     logo: "../img/saas_img/0_common/logo/logo_pr_mailplugGMail.svg",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "메일플러그 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000027",
     badge: "메일",
@@ -602,26 +638,28 @@ const CARD_DATA = {
     company: "(주)메일플러그",
     tooltips: [
       {
-        key: "연계",      
+        key: "연계",
         full: "행정표준코드",
         sr: "연계 전체 보기"
       },
       {
-        key: "제공 기능",       
+        key: "제공 기능",
         full: "게시판, 메일, 아카이빙, 주소록",
         sr: "제공 기능 전체 보기"
       },
       {
-        key: "이용 기관",        
+        key: "이용 기관",
         full: "서울특별시서대문구도시관리공단",
         sr: "이용 기관 전체 보기"
       }
     ]
-  },   
+  },
 
   //Naver Works for 공공용
   card_naverworks: {
     logo: "../img/saas_img/0_common/logo/logo_pr_naverworks.svg",
+    logoWidth: 230,
+    logoHeight: 80,
     logoAlt: "Naver Works for 공공용 로고 이미지",
     link: "https://saas.go.kr/userpage/prvatesaascatalog/prvatesaascatalog/detail/SCID0000000000000043",
     badge: "협업 도구",
@@ -629,29 +667,29 @@ const CARD_DATA = {
     company: "네이버클라우드 주식회사",
     tooltips: [
       {
-        key: "연계",       
+        key: "연계",
         full: "모바일공무원증, 행정표준코드, LDAP",
         sr: "연계 전체 보기"
       },
       {
-        key: "제공 기능",       
+        key: "제공 기능",
         full: "게시판, 메신저, 메일, 모니터링, 보안, 설문, 자동화, 정보 공유, 캘린더, 협업, 화상회의",
         sr: "제공 기능 전체 보기"
       },
       {
-        key: "이용 기관",       
+        key: "이용 기관",
         full: "서울특별시 소방재난본부, 제주특별자치도, 한국농촌경제연구원",
         sr: "이용 기관 전체 보기"
       }
     ]
-  },   
+  }
 };
 
 /* =========================
   말줄임 여부 체크
 ========================= */
 function updateTooltipEllipsis() {
-  document.querySelectorAll(".wrap-tooltip").forEach(wrap => {
+  document.querySelectorAll(".wrap-tooltip").forEach((wrap) => {
     const value = wrap.querySelector(".value");
     const action = wrap.querySelector(".tooltip-action");
 
@@ -675,4 +713,3 @@ function updateTooltipEllipsis() {
     }
   });
 }
-

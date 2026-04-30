@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ui_modal.init();
   initCheckAgree();
   initRadioAgree();
-  initTooltip();
+  // initTooltip();
 
   if (typeof AOS !== "undefined") {
     AOS.init({
@@ -40,7 +40,7 @@ window.addEventListener("scroll", () => {
 
   const btn03 = document.querySelector(".btn_side_sup03");
   if (btn03) {
-    btn03.classList.toggle("show", scrollTop > 600);
+    btn03.classList.toggle("show", scrollTop > 400);
   }
 });
 
@@ -286,112 +286,151 @@ function initRadioAgree() {
 }
 
 
-/* =========================================================
-   툴팁
-========================================================= */
-function initTooltip() {
-  if (typeof krds_contextualTooltip !== "undefined") {
-    krds_contextualTooltip.init();
-  }
-}
+// /* =========================================================
+//    툴팁
+// ========================================================= */
 
 const krds_contextualTooltip = {
-  tooltipButtons: null,
-
   init() {
-    this.tooltipButtons = document.querySelectorAll(
-      ".krds-contextual-help .tooltip-btn"
-    );
-    if (!this.tooltipButtons.length) return;
+    if (window.KRDS_TOOLTIP_READY) return;
+    window.KRDS_TOOLTIP_READY = true;
 
-    this.setupTooltips();
-    this.setupFocusOutEvent();
-  },
+    // 이벤트 캡처링(true)으로 다른 스크립트의 간섭을 먼저 차단합니다.
+    document.addEventListener("click", (e) => {
+      const btn = e.target.closest(".tooltip-btn");
+      const closeBtn = e.target.closest(".tooltip-close");
+      const popoverInContent = e.target.closest(".tooltip-popover");
 
-  setupTooltips() {
-    this.tooltipButtons.forEach(button => {
-      const container = button.closest(".krds-contextual-help");
-      const popover = container.querySelector(".tooltip-popover");
-      const closeBtn = popover.querySelector(".tooltip-close");
+      // 1. 열기 버튼 클릭 시
+      if (btn) {
+        e.preventDefault();
+        e.stopImmediatePropagation(); // KRDS 기본 스크립트 실행 방지
 
-      button.setAttribute("aria-expanded", "false");
-      popover.setAttribute("role", "tooltip");
+        const actionWrap = btn.closest(".tooltip-action");
+        const popover = actionWrap?.querySelector(".tooltip-popover");
 
-      if (container.classList.length === 1) {
-        container.classList.add("top", "left");
+        if (popover) {
+          const isHidden = window.getComputedStyle(popover).display === "none";
+          
+          this.closeAll(); // 기존에 열린 툴팁들 정리
+
+          if (isHidden) {
+            // CSS에서 잡은 위치를 유지하기 위해 display 속성만 제어합니다.
+            popover.style.setProperty("display", "block", "important");
+            btn.setAttribute("aria-expanded", "true");
+            
+            // 접근성: 내부 첫 번째 버튼/링크로 포커스
+            const focusTarget = popover.querySelector("button, a");
+            focusTarget?.focus();
+          }
+        }
+        return;
       }
 
-      button.addEventListener("click", () =>
-        this.toggleTooltip(button, popover, container)
-      );
+      // 2. 닫기 버튼 클릭 시
+      if (closeBtn) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        this.closeAll();
+        return;
+      }
 
-      closeBtn?.addEventListener("click", () =>
-        this.closeAllTooltips()
-      );
+      // 3. 툴팁 내부 클릭 시 (아무것도 안 함)
+      if (popoverInContent) {
+        e.stopPropagation();
+        return;
+      }
 
-      window.addEventListener("resize", () =>
-        this.adjustTooltipPosition(container, popover)
-      );
+      // 4. 바깥 영역 클릭 시 모두 닫기
+      this.closeAll();
+    }, true); 
 
-      document.addEventListener("keydown", e => {
-        if (e.key === "Escape") this.closeAllTooltips();
-      });
+    // ESC 키 대응
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") this.closeAll();
     });
+
   },
 
-  toggleTooltip(button, popover, container) {
-    const isVisible = popover.style.display === "block";
-    this.closeAllTooltips();
-
-    if (!isVisible) {
-      popover.style.display = "block";
-      button.setAttribute("aria-expanded", "true");
-
-      popover
-        .querySelector("a, button, [tabindex='0'], input, textarea, select")
-        ?.focus();
-
-      this.adjustTooltipPosition(container, popover);
-    }
-  },
-
-  closeAllTooltips() {
-    document.querySelectorAll(".tooltip-popover")
-      .forEach(p => (p.style.display = "none"));
-
-    this.tooltipButtons.forEach(btn =>
-      btn.setAttribute("aria-expanded", "false")
-    );
-  },
-
-  adjustTooltipPosition(container, popover) {
-    const isMobile = window.innerWidth <= 768;
-    const action = container.querySelector(".tooltip-action");
-
-    if (isMobile && action) {
-      const rootStyles = getComputedStyle(document.documentElement);
-      const padding = parseFloat(
-        rootStyles.getPropertyValue("--krds-contents-padding-x")
-      );
-
-      const rect = action.getBoundingClientRect();
-      const offsetLeft = rect.left - padding;
-      const width = document.body.clientWidth - padding * 2;
-
-      popover.style.left = `-${offsetLeft}px`;
-      popover.style.width = `${width}px`;
-    } else {
-      popover.style.left = "";
-      popover.style.width = "";
-    }
-  },
-
-  setupFocusOutEvent() {
-    document.addEventListener("click", e => {
-      const inside = e.target.closest(".tooltip-action");
-      if (!inside) {
-        this.closeAllTooltips();
-      }
+  closeAll() {
+    document.querySelectorAll(".tooltip-popover").forEach(p => {
+      p.style.setProperty("display", "none", "important");
+    });
+    document.querySelectorAll(".tooltip-btn").forEach(btn => {
+      btn.setAttribute("aria-expanded", "false");
     });
   }
 };
+
+// 페이지 로드 시 실행
+document.addEventListener("DOMContentLoaded", () => {
+  krds_contextualTooltip.init();
+});
+
+/* GNB 대메뉴 활성화  20260408*/
+
+(function () {
+  // 중복 실행 방지
+  if (window.__gnbSelectedInit) return;
+  window.__gnbSelectedInit = true;
+
+  function normalize(str) {
+    return str.replace(/\s+/g, ' ').trim().toLowerCase();
+  }
+
+  function getBreadcrumbTexts() {
+    const items = document.querySelectorAll('.krds-breadcrumb-wrap .breadcrumb li:not(.home) .txt');
+    return Array.from(items).map(el => normalize(el.textContent));
+  }
+
+  function applySelected() {
+    const breadcrumbTexts = getBreadcrumbTexts();
+    if (breadcrumbTexts.length === 0) return false;
+
+    // PC: .gnb-main-trigger 버튼
+    const pcTriggers = document.querySelectorAll('.gnb-main-trigger');
+    // 모바일: .gnb-sub-trigger 링크
+    const mobileTriggers = document.querySelectorAll('.gnb-sub-trigger');
+
+    // 헤더 요소가 아직 없으면 false 반환 → 계속 대기
+    if (pcTriggers.length === 0 && mobileTriggers.length === 0) return false;
+
+    pcTriggers.forEach(el => {
+      if (breadcrumbTexts.includes(normalize(el.textContent))) {
+        el.classList.add('selected');
+      }
+    });
+
+    mobileTriggers.forEach(el => {
+      if (breadcrumbTexts.includes(normalize(el.textContent))) {
+        el.classList.add('selected');
+      }
+    });
+
+    return true;
+  }
+
+  function observe() {
+    // 이미 헤더가 있으면 바로 실행
+    if (applySelected()) return;
+
+    const observer = new MutationObserver(function (mutations, obs) {
+      // 헤더 요소가 생기면 클래스 추가 후 감지 종료
+      if (applySelected()) {
+        obs.disconnect();
+      }
+    });
+
+    observer.observe(document.body, {
+      childList: true,   // 자식 노드 추가 감지
+      subtree: true      // 하위 모든 노드 감지
+    });
+  }
+
+  // DOM 준비 후 시작
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', observe);
+  } else {
+    observe();
+  }
+})();

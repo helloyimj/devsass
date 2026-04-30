@@ -1,6 +1,6 @@
 @charset "utf=8";
 @import "mixset";
-
+$img-root: "../../img";
 /* 메인페이지 공통 사항  */
 .page_main {
   width: 100%;
@@ -215,7 +215,7 @@
     height: 1.2rem;
     margin: 0 0.6rem;
     opacity: 1;
-    transition: all 0.2s;
+    transition: transform 0.2s, opacity 0.2s, background-color 0.2s, border-color 0.2s;
 
     &.swiper-pagination-bullet-active {
       width: 6rem;
@@ -273,7 +273,7 @@
       width: 66rem;
       right: 0;
       top: 0;
-      background-image: url("../../img/main/visual01.png");
+      background-image: url("#{$img-root}/main/visual01.webp");
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
@@ -326,7 +326,7 @@
         background-color: $color_white;
         color: $color_black;
         border: 1px solid #0f174d;
-        transition: all 0.1s;
+        transition: background-color 0.1s, color 0.1s, border-color 0.1s;
         font-size: 1.6rem;
 
         &.active,
@@ -344,14 +344,14 @@
           width: 3.6rem;
           height: 3.6rem;
           border-radius: 50%;
-          background-image: url("../../img/main/icon_01.svg");
+          background-image: url("#{$img-root}/main/icon_01.svg");
           background-repeat: no-repeat;
           background-size: contain;
         }
 
         &.link_saas02::before {
           // background-color: #fff;
-          background-image: url("../../img/main/icon_02.svg");
+          background-image: url("#{$img-root}/main/icon_02.svg");
         }
 
         &::after {
@@ -362,14 +362,14 @@
           transform: translateY(-50%);
           width: 3.6rem;
           height: 2.6rem;
-          background-image: url("../../img/main/icon_arrow_nv.svg");
+          background-image: url("#{$img-root}/main/icon_arrow_nv.svg");
           background-repeat: no-repeat;
           background-size: contain;
         }
 
         &.active::after,
         &:hover::after {
-          background-image: url("../../img/main/icon_arrow_wt.svg");
+          background-image: url("#{$img-root}/main/icon_arrow_wt.svg");
         }
       }
     }
@@ -423,7 +423,7 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          background-image: url("../../img/icon/icon_chevron_left_navy.svg");
+          background-image: url("#{$img-root}/icon/icon_chevron_left_navy.svg");
           background-repeat: no-repeat;
           background-size: auto;
           background-position: center;
@@ -443,7 +443,7 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          background-image: url("../../img/icon/icon_chevron_right_navy.svg");
+          background-image: url("#{$img-root}/icon/icon_chevron_right_navy.svg");
           background-repeat: no-repeat;
           background-size: auto;
           background-position: center;
@@ -463,8 +463,8 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          // background-image: url("../../img/icon/icon_stop_navy.svg");
-          background-image: url("../../img/icon/icon_pause_navy.png");
+          // background-image: url("#{$img-root}/icon/icon_stop_navy.svg");
+          background-image: url("#{$img-root}/icon/icon_pause_navy.png");
           background-repeat: no-repeat;
           background-size: auto;
           background-position: center;
@@ -475,7 +475,7 @@
             @include bg_after;
             height: 14px;
             width: 14px;
-            background-image: url("../../img/icon/icon_play_navy.svg");
+            background-image: url("#{$img-root}/icon/icon_play_navy.svg");
           }
         }
       }
@@ -491,7 +491,7 @@
           @include bg_after;
           height: 14px;
           width: 14px;
-          background-image: url("../../img/icon/icon_play_navy.svg");
+          background-image: url("#{$img-root}/icon/icon_play_navy.svg");
         }
       }
     }
@@ -534,7 +534,7 @@
         transform: translateY(-50%);
         width: 2.4rem;
         height: 2.1rem;
-        background-image: url("../../img/main/icon_checkbox.svg");
+        background-image: url("#{$img-root}/main/icon_checkbox.svg");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -623,7 +623,7 @@
         top: 0;
         width: 10.2rem;
         height: 100%;
-        background-image: url("../../img/main/bg_func_lt.png");
+        background-image: url("#{$img-root}/main/bg_func_lt.webp");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -637,7 +637,7 @@
         top: 0;
         width: 10.1rem;
         height: 100%;
-        background-image: url("../../img/main/bg_func_rt.png");
+        background-image: url("#{$img-root}/main/bg_func_rt.webp");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -786,7 +786,7 @@
             top: 50%;
             transform: translateY(-50%);
             right: 1rem;
-            background-image: url(../../img/icon/icon_chevron_right_white.svg);
+            background-image: url(#{$img-root}/icon/icon_chevron_right_white.svg);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: 9px 12px;
@@ -876,14 +876,14 @@
       transform: translateY(-50%);
       width: 1rem;
       height: 1.7rem;
-      background-image: url("../../img/icon/icon_chevron_right_white.svg");
+      background-image: url("#{$img-root}/icon/icon_chevron_right_white.svg");
       background-repeat: no-repeat;
       background-size: contain;
     }
 
     &:hover::after,
     &:active::after {
-      background-image: url("../../img/icon/icon_chevron_right_blue.svg");
+      background-image: url("#{$img-root}/icon/icon_chevron_right_blue.svg");
     }
   }
 }
@@ -1271,14 +1271,14 @@
             right: 1rem;
             width: 2.4rem;
             height: 2.4rem;
-            background-image: url("../../img/icon/icon_chevron_right_blue.svg");
+            background-image: url("#{$img-root}/icon/icon_chevron_right_blue.svg");
             background-position: center center;
             background-size: 18px 12px;
           }
 
           &.active::after,
           &:hover::after {
-            background-image: url("../../img/icon/icon_chevron_right_white.svg");
+            background-image: url("#{$img-root}/icon/icon_chevron_right_white.svg");
             background-position: center center;
           }
         }

@@ -34,10 +34,10 @@ $mode-setting: light;
 			}
         }
     }
-	.help-panel-flexible{
-		--krds-contents-wrap-size: calc(79.2rem + var(--krds-contents-padding-x));
-		--krds-help-panel--flexible-padding: calc(var(--krds-help-panel--width) - ((100% - var(--krds-contents-wrap-size)) / 2) + 4.5rem);
-	}
+	// .help-panel-flexible{
+	// 	--krds-contents-wrap-size: calc(79.2rem + var(--krds-contents-padding-x));
+	// 	--krds-help-panel--flexible-padding: calc(var(--krds-help-panel--width) - ((100% - var(--krds-contents-wrap-size)) / 2) + 4.5rem);
+	// }
     > .krds-breadcrumb-wrap {
 		padding-bottom: 0;
         .breadcrumb {

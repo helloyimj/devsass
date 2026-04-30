@@ -6,12 +6,12 @@
     <title>연계한 민간 SaaS&lt;소개&lt;민간 Sass 연계공통기반 통합관리포털</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/output.css" />
+    <link rel="stylesheet" type="text/css" href="../css/site/output.css" />
 
     <!-- script -->
-    <script src="../js/jquery-3.6.3/jquery.min.js"></script>
-    <script src="../js/plugin/swiper-bundle.min.js"></script>
-    <script src="../js/aos.js"></script>
+    <script defer src="../js/jquery-3.6.3/jquery.min.js"></script>
+    <script defer src="../js/plugin/swiper-bundle.min.js"></script>
+    <script defer src="../js/aos.js"></script>
     <script defer src="../js/component/ui-script.js"></script>
     <script defer src="../js/pattern/pattern.js"></script>
     <script defer src="../js/nav.js"></script>
@@ -52,16 +52,21 @@
                 <div class="wrap_article_contents select_area">
                   <article class="contents_wrap">
                     <div class="wrap_select_box">
-                      <h3>전자정부 연계 API별 연계한 민간 SaaS를 찾아보세요</h3>
-                      <label for="select_govSaas_name" class="sr_only">전자정부 연계 API 선택 목록 열기 : </label>
-                      <select name="select_govSaas" id="select_govSaas_name" class="select_govSaas_name">
-                        <option value="all_case" selected>전체</option>
-                        <option value="idCard">모바일공무원증</option>
-                        <option value="ldap">정부디렉터리(LDAP)</option>
-                        <option value="codeSys">행정표준코드</option>
-                        <option value="gpki">행정전자서명(GPKI)</option>
-                        <option value="epki">교육부 행정전자서명(EPKI)</option>
-                      </select>
+                      <h3>전자정부 연계 API별 연계한 민간 <br class="block_768">SaaS를 찾아보세요</h3>
+                      <span class="sr_only">전자정부 연계 API 선택 목록 열기 : </span>
+                      <div class="search_saas_group">
+                        <div class="form-tit">
+                          <label for="select_govSaas_name" class="only_mob">카테고리</label>
+                        </div>
+                        <select name="select_govSaas" id="select_govSaas_name" class="select_govSaas_name krds-form-select large">
+                          <option value="all_case" selected>전체</option>
+                          <option value="idCard">모바일공무원증</option>
+                          <option value="ldap">정부디렉터리(LDAP)</option>
+                          <option value="codeSys">행정표준코드</option>
+                          <option value="gpki">행정전자서명(GPKI)</option>
+                          <option value="epki">교육부 행정전자서명(EPKI)</option>
+                        </select>
+                      </div>
                     </div>
                   </article>
                 </div>
@@ -123,7 +128,41 @@
       </div>
     </div>
     <script>
-      AOS.init();
-    </script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // AOS 초기화
+    AOS.init({
+      duration: 600,
+      once: true    
+    });
+
+    const selectGovSaas = document.getElementById('select_govSaas_name');
+    const serviceList = document.querySelector('.service_list');
+    const caseCards = serviceList.querySelectorAll('.case_card');
+
+    // 필터링 이벤트 리스너
+    selectGovSaas.addEventListener('change', function() {
+      const selectedValue = this.value;
+
+      caseCards.forEach(card => {
+        if (selectedValue === 'all_case') {
+          // 전체 선택 시 모든 카드 표시
+          card.style.display = 'block';
+        } else {
+          // 선택한 밸류값이 클래스에 포함되어 있는지 확인
+          if (card.classList.contains(selectedValue)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+
+      // 필터링 후 AOS 상태 업데이트
+      AOS.refresh();
+    });
+  });
+</script>
+
   </body>
 </html>
